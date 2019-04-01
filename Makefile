@@ -1,6 +1,6 @@
 all: install
 
-install: compile 
+install: target compile 
 	cp -rf metamodel/* target
 
 target:
@@ -17,7 +17,7 @@ clean:
 	git clean -fdx
 	rm -rf zenta-tools
 
-inputs/metamodel.issues.xml: target/metamodel-implementedBehaviours.xml target/metamodel-testcases.xml
+inputs/metamodel.issues.xml: 
 	mkdir -p inputs
 	tools/getGithubIssues kode-konveyor metamodel >inputs/metamodel.issues.xml
 
