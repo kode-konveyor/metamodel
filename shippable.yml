@@ -6,8 +6,6 @@ integrations:
   key:
     - integrationName: kodekonveyor
       type: sshKey
-  generic:
-    - integrationName: kkpipeline
 build:
   ci:
     - tools/script

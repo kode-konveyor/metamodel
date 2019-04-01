@@ -19,7 +19,7 @@ clean:
 
 inputs/metamodel.issues.xml: 
 	mkdir -p inputs
-	tools/getGithubIssues kode-konveyor metamodel >inputs/metamodel.issues.xml
+	touch inputs/metamodel.issues.xml
 
 zentaworkaround:
 	mkdir -p ~/.zenta/.metadata/.plugins/org.eclipse.e4.workbench/
