@@ -1,0 +1,18 @@
+#!/bin/bash
+set -xe
+DEVHOME=${DEVHOME:-~/metamodel-developer-home/}
+DEV_UID=$(id -u)
+DEV_GID=$(id -g)
+IMAGE=${IMAGE:-edemo/pdengine}
+VNCPORT=5900
+PORTMAP="-p $VNCPORT:$VNCPORT"
+if docker ps | grep -q ":$VNCPORT-"
+then
+       # port already taken by other container
+       PORTMAP=""
+fi
+
+docker run --rm $PORTMAP -e PULL_REQUEST=false -e DEVUID=${DEV_UID} -e DEVGID=${DEV_GID} -e ORG_NAME=$(whoami) \
+    -v $(pwd):/build -v $(pwd)/tools/entrypoint:/pdengine/tools/entrypoint  -v $(pwd)/tools/setenv:/pdengine/tools/setenv -v ${DEVHOME}:/home/developer -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -w /build -it ${IMAGE}
+

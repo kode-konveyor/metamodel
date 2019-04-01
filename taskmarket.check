@@ -1,0 +1,19 @@
+<checks>
+<check
+		title="Model Errors"
+      	modelfile="metamodel.rich"
+      	modelbasepath="//error"
+      	modelnamepath="@type"
+      	modelvaluepath="concat(//element[@id=current()/@element]/@name,' ',@name)"
+        modelerrorid="$p1/object/error/@errorID"
+      	inputfile="metamodel.rich"
+      	referencemodel="metamodel.rich"
+      	inputbasepath="//nonexistent"
+      	inputnamepath=""
+      	inputvaluepath=""
+        inputerrorid="$p1"
+        errorURL="concat('http://repo.kodekonveyor.com/metamodel/kode-konveyor/master/index.html#',$p1)"
+        errortitlestring="zenta:modelErrorTitle($p1,$p4)"
+        errordescription="zenta:modelErrorDescription($p1,$p4)"
+      	/>
+</checks>

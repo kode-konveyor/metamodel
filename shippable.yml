@@ -1,0 +1,17 @@
+build_image: edemo/pdengine:latest
+language: python
+python:
+  - 2.7
+integrations:
+  key:
+    - integrationName: kodekonveyor
+      type: sshKey
+  generic:
+    - integrationName: kkpipeline
+build:
+  ci:
+    - tools/script
+  on_success:
+    - tools/publish
+  on_failure:
+    - tools/publish
