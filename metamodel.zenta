@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="ASCII"?>
+<zenta:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="Metamodel v2.0" id="42c1a959-f487-4d93-bb6c-0a8bc5b50fa4" version="2.2.1">
+  <folder name="Metamodel" id="1f86fae8-4cdd-49c1-84c1-150be762912a">
+    <folder name="00. Basic" id="4daeee6d-38cb-4d08-a1ff-1f3203c0a77c">
+      <element xsi:type="zenta:BasicObject" name="Basic Object" id="basicobject"/>
+      <element xsi:type="zenta:BasicRelationship" name="Basic Relation" id="basicrelation" source="basicobject" target="basicobject"/>
+      <element xsi:type="zenta:BasicObject" name="Thing" id="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5" ancestor="basicobject">
+        <documentation>A thing is a thing is a thing</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:ZentaDiagramModel" name="Thing" id="fd08bdb6-a5bc-4599-8dd7-ec21d6192746">
+        <child xsi:type="zenta:DiagramObject" id="9900e52f-73de-4fdf-ac40-22136e12dca6" targetConnections="9af9e52b-5689-444f-9054-e7d6bda9677b" fillColor="#ffffff" elementShape="emptyShape" zentaElement="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+          <bounds x="350" y="92" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="8a2e5464-04b2-47d2-9a3a-67e1aea23802" source="9900e52f-73de-4fdf-ac40-22136e12dca6" target="a842d086-b3a6-4336-9275-a234a79391bf" relationship="4c50cb28-34be-47ea-a534-a0c4de5b8f52">
+            <bendpoint startX="21" startY="139" endX="21" endY="-93"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="ec6de6f4-0ec6-45c8-a432-3dd377c4db5a" lineColor="#eeeeec" source="9900e52f-73de-4fdf-ac40-22136e12dca6" target="a842d086-b3a6-4336-9275-a234a79391bf" lineDecoration="DotSourceDecoration" relationship="44768654-4c42-46a0-988f-6ae09ec86e09">
+            <bendpoint startX="347" startY="96" endX="347" endY="-136"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="c21d0e5f-5356-4eed-8361-af5fea32172f" lineColor="#eeeeec" source="9900e52f-73de-4fdf-ac40-22136e12dca6" target="a842d086-b3a6-4336-9275-a234a79391bf" lineDecoration="BigArrowTargetDecoration SmallEndArrowDecoration" relationship="aa423c4e-b72a-488b-b0c9-541ef165ad1f">
+            <bendpoint startX="506" startY="90" endX="506" endY="-142"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="d04f04e8-2297-49c8-b522-46a82dc5febd" lineColor="#eeeeec" source="9900e52f-73de-4fdf-ac40-22136e12dca6" target="a842d086-b3a6-4336-9275-a234a79391bf" lineDecoration="SmallEndArrowDecoration" relationship="c4affe80-8b23-4fc6-8980-623beff19d7f">
+            <bendpoint startX="704" startY="90" endX="704" endY="-142"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="6f966f88-17b1-42f0-8ce9-995e6d121442" lineColor="#000000" source="9900e52f-73de-4fdf-ac40-22136e12dca6" target="a842d086-b3a6-4336-9275-a234a79391bf" lineDecoration="DiamondSourceDecoration" relationship="3ff0efa5-17a3-4646-9dc2-6977e043d6d5">
+            <bendpoint startX="-195" startY="109" endX="-195" endY="-123"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="47372ad1-a493-45fe-a08c-f75672e91e7c" lineColor="#000000" source="9900e52f-73de-4fdf-ac40-22136e12dca6" target="a842d086-b3a6-4336-9275-a234a79391bf" lineDecoration="DiamondSourceDecoration" relationship="59060d6a-8a79-4eba-aefe-8ecec9031347">
+            <bendpoint startX="-143" startY="110" endX="-143" endY="-122"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="a842d086-b3a6-4336-9275-a234a79391bf" targetConnections="8a2e5464-04b2-47d2-9a3a-67e1aea23802 ec6de6f4-0ec6-45c8-a432-3dd377c4db5a c21d0e5f-5356-4eed-8361-af5fea32172f d04f04e8-2297-49c8-b522-46a82dc5febd 6f966f88-17b1-42f0-8ce9-995e6d121442 47372ad1-a493-45fe-a08c-f75672e91e7c" fillColor="#ffffff" elementShape="emptyShape" zentaElement="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+          <bounds x="350" y="324" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="9af9e52b-5689-444f-9054-e7d6bda9677b" source="a842d086-b3a6-4336-9275-a234a79391bf" target="9900e52f-73de-4fdf-ac40-22136e12dca6" lineDecoration="BigArrowTargetDecoration" relationship="2d458b9c-bcde-4e30-b301-8325ef980212">
+            <bendpoint startX="-40" startY="-146" endX="-40" endY="86"/>
+          </sourceConnection>
+        </child>
+        <property key="Template"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="is a/is descendant of" id="2d458b9c-bcde-4e30-b301-8325ef980212" ancestor="basicrelation" source="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5" target="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="BigArrowTargetDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="is associated with/is associated with" id="4c50cb28-34be-47ea-a534-a0c4de5b8f52" ancestor="basicrelation" source="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5" target="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="structural relationship" id="44768654-4c42-46a0-988f-6ae09ec86e09" ancestor="basicrelation" source="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5" target="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <documentation>The static construction or composition of concepts of the same or different types</documentation>
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="DotSourceDecoration"/>
+        <property key="lineColor" value="#eeeeec"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="dependency relationship" id="aa423c4e-b72a-488b-b0c9-541ef165ad1f" ancestor="basicrelation" source="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5" target="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <documentation>How elements are used to support other elements</documentation>
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="BigArrowTargetDecoration SmallEndArrowDecoration"/>
+        <property key="lineColor" value="#eeeeec"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="dynamic relationship" id="c4affe80-8b23-4fc6-8980-623beff19d7f" ancestor="basicrelation" source="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5" target="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <documentation>Behavioral dependencies between elements</documentation>
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+        <property key="lineColor" value="#eeeeec"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="aggregates" id="3ff0efa5-17a3-4646-9dc2-6977e043d6d5" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5" target="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="DiamondSourceDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="composes" id="59060d6a-8a79-4eba-aefe-8ecec9031347" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5" target="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="DiamondSourceDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+    </folder>
+    <folder name="01. Core" id="459420c1-881b-4c03-ac8f-62f299e7b3f6">
+      <element xsi:type="zenta:ZentaDiagramModel" name="1. Core element tree" id="57366893-47b5-4ef2-9b01-8904a80c0aa4">
+        <child xsi:type="zenta:DiagramObject" id="f597af5c-fdb8-47a6-9bd5-8a7701a3480e" fillColor="#ffffff" elementShape="emptyShape" zentaElement="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+          <bounds x="60" y="36" width="-1" height="-1"/>
+          <child xsi:type="zenta:DiagramObject" id="998386a6-672e-4fd2-9d6d-3af3c3165846" fillColor="#ffffff" elementShape="emptyShape" zentaElement="f89ba55a-533e-4ca7-aacc-68559132557f">
+            <bounds x="528" y="36" width="-1" height="-1"/>
+            <child xsi:type="zenta:DiagramObject" id="b91a030f-570b-48ed-803c-d246f3429827" fillColor="#eeeeec" elementShape="emptyShape" zentaElement="4c6779af-6a95-4935-a23c-70995f71daca">
+              <bounds x="12" y="36" width="-1" height="-1"/>
+              <child xsi:type="zenta:DiagramObject" id="843632fa-ec1b-4ac6-938b-9ed31aebaed2" fillColor="#eeeeec" elementShape="emptyShape" zentaElement="cfacb3bf-8858-42a9-96b1-ef4cc5473d2c">
+                <bounds x="12" y="120" width="-1" height="-1"/>
+              </child>
+              <child xsi:type="zenta:DiagramObject" id="b6434905-2592-497d-bdda-194bfb13d02a" fillColor="#eeeeec" elementShape="emptyShape" zentaElement="1d4685b8-5f9e-4918-8bfb-29e80efdbe92">
+                <bounds x="12" y="48" width="-1" height="-1"/>
+              </child>
+            </child>
+            <child xsi:type="zenta:DiagramObject" id="95ff1fe6-b6c0-4ebc-a7be-c05f25b772af" fillColor="#ffffff" elementShape="emptyShape" zentaElement="d7120886-bb61-41ed-8f33-8b48a4719328">
+              <bounds x="168" y="36" width="-1" height="-1"/>
+              <child xsi:type="zenta:DiagramObject" id="a17bcb7f-86e9-4d3c-8fe7-faffa1f4a581" fillColor="#ffffff" elementShape="roundedRectangleShape" zentaElement="87c53a51-2c10-42f5-92e9-5659c67eaa2d">
+                <bounds x="12" y="36" width="-1" height="-1"/>
+              </child>
+              <child xsi:type="zenta:DiagramObject" id="315b80dc-8e4f-40e4-8300-1f886608c78d" fillColor="#ffffff" elementShape="roundedRectangleShape" zentaElement="7b75fa30-ab03-4f9a-a86b-8777f4962066">
+                <bounds x="12" y="171" width="-1" height="-1"/>
+              </child>
+              <child xsi:type="zenta:DiagramObject" id="dbb28dcd-40ed-4ebc-96ff-99c0453bd75f" fillColor="#ffffff" elementShape="roundedRectangleShape" zentaElement="acc158d3-33ad-471b-b854-dcd85a2d2083">
+                <bounds x="12" y="99" width="-1" height="-1"/>
+              </child>
+            </child>
+            <child xsi:type="zenta:DiagramObject" id="d4d062e2-7400-4c3e-96a7-e0f81662c750" fillColor="#ffffff" elementShape="emptyShape" zentaElement="9cee24c9-0fff-4d16-ad69-5aff3c452813">
+              <bounds x="324" y="36" height="97"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject" id="c55cb99f-6ea1-48b2-91b9-e254dcfebeac" fillColor="#ffffff" elementShape="emptyShape" zentaElement="f4424997-a962-48df-a17d-eddd688fb4d5">
+              <bounds x="456" y="36" height="97"/>
+            </child>
+          </child>
+          <child xsi:type="zenta:DiagramObject" id="02552b34-46ed-417a-9d3e-97c6235bd5e5" fillColor="#ffffff" elementShape="emptyShape" zentaElement="827902d4-ca6b-42a9-85e8-5c237a8f7714">
+            <bounds x="12" y="36" width="-1" height="-1"/>
+            <child xsi:type="zenta:DiagramObject" id="9719cbfa-0e8c-4aa1-897e-4a92fc2fec38" fillColor="#ffffff" elementShape="rectangleElementShape" zentaElement="bcae85c0-40f5-402e-999b-dd35dfc54604">
+              <bounds x="360" y="36" height="73"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject" id="837d5a68-ba33-4183-a132-1758c19a0b69" fillColor="#ffffff" elementShape="emptyShape" zentaElement="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81">
+              <bounds x="180" y="36" width="-1" height="-1"/>
+              <child xsi:type="zenta:DiagramObject" id="916b008e-2d50-4684-a35b-6ceeddf6f689" fillColor="#ffffff" elementShape="emptyShape" zentaElement="48830395-7486-4a45-b678-50f760bf1114">
+                <bounds x="12" y="48" height="73"/>
+              </child>
+              <child xsi:type="zenta:DiagramObject" id="c4781ca4-310c-49d1-bf89-a08da2f9f9c0" fillColor="#ffffff" elementShape="emptyShape" zentaElement="40ceffd1-6542-45fd-b743-a4c2fc22b8f5">
+                <bounds x="12" y="132" width="-1" height="-1"/>
+                <child xsi:type="zenta:DiagramObject" id="2ae34cfb-984e-456d-a267-488317feb37d" fillColor="#ffffff" elementShape="emptyShape" zentaElement="8915696b-d345-4fb6-b75e-7ecd690b769e">
+                  <bounds x="12" y="48" width="-1" height="-1"/>
+                </child>
+              </child>
+            </child>
+            <child xsi:type="zenta:DiagramObject" id="80f964af-f35b-4ad6-8bec-d4c39e6e4698" fillColor="#eeeeec" elementShape="emptyShape" zentaElement="ae15669e-3e57-4fc8-ac33-d8d9980aa5fb">
+              <bounds x="12" y="36" width="-1" height="-1"/>
+              <child xsi:type="zenta:DiagramObject" id="716020d5-0dc1-4bee-b45b-ea60e3ea2e35" fillColor="#eeeeec" elementShape="emptyShape" zentaElement="47184fee-e8e1-4132-8b19-04d4603bd119">
+                <bounds x="24" y="48" width="-1" height="-1"/>
+              </child>
+            </child>
+          </child>
+        </child>
+        <property key="Template"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Structure element" id="827902d4-ca6b-42a9-85e8-5c237a8f7714" ancestor="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <documentation>An object on which behavior is performed.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Behaviour Element" id="f89ba55a-533e-4ca7-aacc-68559132557f" ancestor="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <documentation>A unit of activity performed by one or more active structure elements.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Strategic structure element" id="ae15669e-3e57-4fc8-ac33-d8d9980aa5fb" ancestor="827902d4-ca6b-42a9-85e8-5c237a8f7714">
+        <documentation>Structure element with relevance on strategic planning.</documentation>
+        <property key="fillColor" value="#eeeeec"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Active structure element" id="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81" ancestor="827902d4-ca6b-42a9-85e8-5c237a8f7714">
+        <documentation>An entity that can perform behavior on passive structure elements.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Passive Structure element" id="bcae85c0-40f5-402e-999b-dd35dfc54604" ancestor="827902d4-ca6b-42a9-85e8-5c237a8f7714">
+        <documentation>A passive structure element is a structural element that cannot perform behavior.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="rectangleElementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="External active structure element (Interface)" id="48830395-7486-4a45-b678-50f760bf1114" ancestor="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81">
+        <documentation>A point of access where one or more services are provided to the environment.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Internal active structure element" id="40ceffd1-6542-45fd-b743-a4c2fc22b8f5" ancestor="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81">
+        <documentation>An entity that is capable of performing behavior not meant to accessible from outside.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Resource" id="47184fee-e8e1-4132-8b19-04d4603bd119" ancestor="ae15669e-3e57-4fc8-ac33-d8d9980aa5fb">
+        <documentation>An asset owned or controlled by an individual or organization.</documentation>
+        <property key="fillColor" value="#eeeeec"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Strategic behaviour element" id="4c6779af-6a95-4935-a23c-70995f71daca" ancestor="f89ba55a-533e-4ca7-aacc-68559132557f">
+        <documentation>Behaviour element with relevance on strategic planning.</documentation>
+        <property key="fillColor" value="#eeeeec"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Capability" id="1d4685b8-5f9e-4918-8bfb-29e80efdbe92" ancestor="4c6779af-6a95-4935-a23c-70995f71daca">
+        <documentation>An ability that an active structure element, such as an organization, person, or system, possesses.</documentation>
+        <property key="fillColor" value="#eeeeec"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Course of action" id="cfacb3bf-8858-42a9-96b1-ef4cc5473d2c" ancestor="4c6779af-6a95-4935-a23c-70995f71daca">
+        <documentation>An approach or plan for configuring some capabilities and resources of the enterprise, undertaken to achieve a goal.</documentation>
+        <property key="fillColor" value="#eeeeec"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Internal behaviour element" id="d7120886-bb61-41ed-8f33-8b48a4719328" ancestor="f89ba55a-533e-4ca7-aacc-68559132557f">
+        <documentation> A unit of activity performed by one or more active structure elements.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="External behaviour element (Service)" id="9cee24c9-0fff-4d16-ad69-5aff3c452813" ancestor="f89ba55a-533e-4ca7-aacc-68559132557f">
+        <documentation>An explicitly defined exposed behavior.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Event" id="f4424997-a962-48df-a17d-eddd688fb4d5" ancestor="f89ba55a-533e-4ca7-aacc-68559132557f">
+        <documentation>A behavior element that denotes a state change.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:ZentaDiagramModel" name="2. Core element relationships" id="c722631b-c201-4419-b076-91629a4bdaa3">
+        <child xsi:type="zenta:DiagramObject" id="6e4e68c2-8d2f-418d-840a-bed64d6fe6de" targetConnections="8bb1a0f1-556e-4a03-8a4b-20481a49bce1 9aa48269-9de7-4af7-be4b-e17b0266a3e9" zentaElement="f89ba55a-533e-4ca7-aacc-68559132557f">
+          <bounds x="420" y="192" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="8fa6cf70-7b91-49db-8e9c-d4c0a630b37e" lineColor="#000000" source="6e4e68c2-8d2f-418d-840a-bed64d6fe6de" target="041ef13f-a5d3-4aa5-8bf5-3bcbe718bc22" lineDecoration="SmallEndArrowDecoration" relationship="345a431c-057f-4334-927b-c442e75abda5">
+            <bendpoint startX="-121" startY="-56" endX="117" endY="-65"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="96927530-d194-473a-8c15-1d442258ed33" lineColor="#000000" source="6e4e68c2-8d2f-418d-840a-bed64d6fe6de" target="e7233ceb-de20-433f-aa59-7763c9ae58a5" lineDecoration="SmallEndArrowDecoration" relationship="5c3e2bc9-3b2a-41fd-bd60-4cce0eac01ee">
+            <bendpoint startX="54" startY="-72" endX="54" endY="87"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="20f5e753-0f1b-4db1-9a3b-583a31de6ae3" lineColor="#000000" source="6e4e68c2-8d2f-418d-840a-bed64d6fe6de" target="d36d178f-7c08-4078-be07-168fa05fb86c" lineDecoration="SmallEndArrowDecoration" relationship="626a5f73-9715-4382-a636-df4017053894"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="5ec945c4-5e02-4a05-a14b-74e9bbb0f1ff" targetConnections="9a7a0146-60f6-45af-ab33-de81b97d51a2 bc88c141-4a59-45ab-bd95-edb7e6b5beea" fillColor="#ffffff" zentaElement="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81">
+          <bounds x="648" y="192" height="73"/>
+          <sourceConnection xsi:type="zenta:Connection" id="4ca5173e-5ce3-46de-a64e-a2a0fbfb6d8f" lineColor="#000000" source="5ec945c4-5e02-4a05-a14b-74e9bbb0f1ff" target="e7233ceb-de20-433f-aa59-7763c9ae58a5" lineDecoration="SmallEndArrowDecoration" relationship="cb1b05d8-71ae-459a-88a9-c74b28a3e452">
+            <bendpoint startX="-130" startY="-96" endX="98" endY="72"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="9aa48269-9de7-4af7-be4b-e17b0266a3e9" source="5ec945c4-5e02-4a05-a14b-74e9bbb0f1ff" target="6e4e68c2-8d2f-418d-840a-bed64d6fe6de" lineDecoration="SmallEndArrowDecoration" relationship="a9cce1f3-96e8-44a8-b63f-d2f569ec17b0"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="041ef13f-a5d3-4aa5-8bf5-3bcbe718bc22" targetConnections="8fa6cf70-7b91-49db-8e9c-d4c0a630b37e" elementShape="rectangleElementShape" zentaElement="bcae85c0-40f5-402e-999b-dd35dfc54604">
+          <bounds x="182" y="192" height="73"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="e7233ceb-de20-433f-aa59-7763c9ae58a5" targetConnections="96927530-d194-473a-8c15-1d442258ed33 4ca5173e-5ce3-46de-a64e-a2a0fbfb6d8f" zentaElement="9cee24c9-0fff-4d16-ad69-5aff3c452813">
+          <bounds x="420" y="24" height="73"/>
+          <sourceConnection xsi:type="zenta:Connection" id="8bb1a0f1-556e-4a03-8a4b-20481a49bce1" source="e7233ceb-de20-433f-aa59-7763c9ae58a5" target="6e4e68c2-8d2f-418d-840a-bed64d6fe6de" lineDecoration="DotSourceDecoration" relationship="5a01344e-f9c8-46fc-9fc0-2591a4d4ccaa">
+            <bendpoint startX="-89" startY="64" endX="-89" endY="-95"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="e8279928-b326-43d5-9075-88a329fa7ded" zentaElement="48830395-7486-4a45-b678-50f760bf1114">
+          <bounds x="648" y="24" height="73"/>
+          <sourceConnection xsi:type="zenta:Connection" id="9a7a0146-60f6-45af-ab33-de81b97d51a2" lineColor="#000000" source="e8279928-b326-43d5-9075-88a329fa7ded" target="5ec945c4-5e02-4a05-a14b-74e9bbb0f1ff" lineDecoration="SmallEndArrowDecoration" relationship="d3d0f3c6-07e9-4bde-8a59-cbbdcc2e8571">
+            <bendpoint startX="-51" startY="90" endX="-51" endY="-78"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="bc88c141-4a59-45ab-bd95-edb7e6b5beea" lineColor="#000000" source="e8279928-b326-43d5-9075-88a329fa7ded" target="5ec945c4-5e02-4a05-a14b-74e9bbb0f1ff" lineDecoration="DotSourceDecoration" relationship="5d97b734-0991-41a3-932f-fc3b969cf258">
+            <bendpoint startX="59" startY="86" endX="59" endY="-82"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="d36d178f-7c08-4078-be07-168fa05fb86c" targetConnections="20f5e753-0f1b-4db1-9a3b-583a31de6ae3" zentaElement="f89ba55a-533e-4ca7-aacc-68559132557f">
+          <bounds x="420" y="312" width="-1" height="-1"/>
+        </child>
+        <property key="Template"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Process" id="87c53a51-2c10-42f5-92e9-5659c67eaa2d" ancestor="d7120886-bb61-41ed-8f33-8b48a4719328">
+        <documentation>A sequence of behaviors that achieves a specific outcome.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Function" id="acc158d3-33ad-471b-b854-dcd85a2d2083" ancestor="d7120886-bb61-41ed-8f33-8b48a4719328">
+        <documentation>A collection of behavior based on specific criteria, such as required resources, competences, or location.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Interaction" id="7b75fa30-ab03-4f9a-a86b-8777f4962066" ancestor="d7120886-bb61-41ed-8f33-8b48a4719328">
+        <documentation>A unit of collective behavior performed by (a collaboration of) two or more structure elements.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Collaboration" id="8915696b-d345-4fb6-b75e-7ecd690b769e" ancestor="40ceffd1-6542-45fd-b743-a4c2fc22b8f5">
+        <documentation>An aggregate of two or more active structure elements, working together to perform some collective behavior.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="accesses" id="345a431c-057f-4334-927b-c442e75abda5" ancestor="aa423c4e-b72a-488b-b0c9-541ef165ad1f" source="f89ba55a-533e-4ca7-aacc-68559132557f" target="bcae85c0-40f5-402e-999b-dd35dfc54604">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="is realized by/realizes" id="5a01344e-f9c8-46fc-9fc0-2591a4d4ccaa" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="9cee24c9-0fff-4d16-ad69-5aff3c452813" target="f89ba55a-533e-4ca7-aacc-68559132557f">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="DotSourceDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="uses/serves" id="5c3e2bc9-3b2a-41fd-bd60-4cce0eac01ee" ancestor="aa423c4e-b72a-488b-b0c9-541ef165ad1f" source="f89ba55a-533e-4ca7-aacc-68559132557f" target="9cee24c9-0fff-4d16-ad69-5aff3c452813">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="uses/serves" id="cb1b05d8-71ae-459a-88a9-c74b28a3e452" ancestor="aa423c4e-b72a-488b-b0c9-541ef165ad1f" source="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81" target="9cee24c9-0fff-4d16-ad69-5aff3c452813">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="is assigned to/has an assigned" id="a9cce1f3-96e8-44a8-b63f-d2f569ec17b0" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81" target="f89ba55a-533e-4ca7-aacc-68559132557f">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="uses/serves" id="d3d0f3c6-07e9-4bde-8a59-cbbdcc2e8571" ancestor="aa423c4e-b72a-488b-b0c9-541ef165ad1f" source="48830395-7486-4a45-b678-50f760bf1114" target="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="composes" id="5d97b734-0991-41a3-932f-fc3b969cf258" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="48830395-7486-4a45-b678-50f760bf1114" target="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="DotSourceDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="triggers" id="626a5f73-9715-4382-a636-df4017053894" ancestor="c4affe80-8b23-4fc6-8980-623beff19d7f" source="f89ba55a-533e-4ca7-aacc-68559132557f" target="f89ba55a-533e-4ca7-aacc-68559132557f">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+    </folder>
+    <folder name="02. Motivation" id="02554e72-ff62-4eda-8f49-12236c25d06f">
+      <element xsi:type="zenta:ZentaDiagramModel" name="Motivation element tree" id="675e9c46-c5d5-4997-a424-48037aac63bc">
+        <child xsi:type="zenta:DiagramObject" id="f419dc61-ca01-4ba2-a817-62769550e3b8" fillColor="#ffffff" elementShape="emptyShape" zentaElement="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+          <bounds x="264" y="60" width="-1" height="-1"/>
+          <child xsi:type="zenta:DiagramObject" id="d86fa44d-2c53-48cf-a815-09d3023961d9" fillColor="#729fcf" elementShape="ellipseShape" zentaElement="92b85234-e9d3-494b-8ab7-a0571ae2735c">
+            <bounds x="300" y="108" width="-1" height="-1"/>
+          </child>
+          <child xsi:type="zenta:DiagramObject" id="be8afe64-a712-4060-8e48-3aa59b5b331a" fillColor="#729fcf" elementShape="emptyShape" zentaElement="a5192b0b-4d12-4118-9bcd-b5bb35d46ac6">
+            <bounds x="300" y="36" width="-1" height="-1"/>
+          </child>
+          <child xsi:type="zenta:DiagramObject" id="33cf0b6a-21b0-4252-9668-89af2c52af7b" fillColor="#729fcf" elementShape="emptyShape" zentaElement="de036007-6224-4f3a-b887-52ad655b63a9">
+            <bounds x="12" y="180" width="-1" height="-1"/>
+          </child>
+          <child xsi:type="zenta:DiagramObject" id="4cb1d8d7-92fe-4e3d-a06f-4bc9946cc6d3" fillColor="#729fcf" elementShape="emptyShape" zentaElement="2a8339a2-f5fd-4075-9f3e-4fd4832570e6">
+            <bounds x="12" y="105" width="-1" height="-1"/>
+          </child>
+          <child xsi:type="zenta:DiagramObject" id="180437d7-0bcd-4e48-af65-06abcc9d0ffd" fillColor="#729fcf" elementShape="emptyShape" zentaElement="fd1c26e6-dba9-4916-a829-ea7540b94b18">
+            <bounds x="12" y="36" width="-1" height="-1"/>
+          </child>
+          <child xsi:type="zenta:DiagramObject" id="078dd2eb-1729-432a-a963-0f1f269e709d" fillColor="#729fcf" elementShape="meaningShape" zentaElement="c5f00414-3ccf-43d2-b339-77d9f2933645">
+            <bounds x="300" y="180" width="-1" height="-1"/>
+          </child>
+          <child xsi:type="zenta:DiagramObject" id="aec87bee-51ce-49c7-9acf-d048a4492a12" fillColor="#729fcf" elementShape="emptyShape" zentaElement="8ed4ba86-e7ed-4b49-9934-7902cf38b00d">
+            <bounds x="156" y="36" width="-1" height="-1"/>
+          </child>
+          <child xsi:type="zenta:DiagramObject" id="119f0a86-746d-4465-8ceb-be315812afc2" fillColor="#729fcf" elementShape="emptyShape" zentaElement="c61d875b-62fc-4f2a-b879-7cbc921d0d45">
+            <bounds x="156" y="180" width="-1" height="-1"/>
+          </child>
+          <child xsi:type="zenta:DiagramObject" id="ba2919dd-0011-4367-8be5-4d7bc301c9fd" fillColor="#729fcf" elementShape="emptyShape" zentaElement="8da7ef16-d6c0-4f33-b8ae-7d5625c7b80a">
+            <bounds x="156" y="108" width="-1" height="-1"/>
+          </child>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="7d7da3f2-ff50-4595-a024-311ad632f1c0" zentaElement="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81">
+          <bounds x="60" y="60" width="-1" height="-1"/>
+          <child xsi:type="zenta:DiagramObject" id="f2e91acc-b66e-461e-892d-42944d4ac70a" fillColor="#729fcf" elementShape="emptyShape" zentaElement="432bf4f1-bb4c-4b78-906d-0a9fee6b279b">
+            <bounds x="24" y="48" width="-1" height="-1"/>
+          </child>
+        </child>
+        <property key="Template"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Motivation element" id="c281c4ae-9013-4bb4-956a-43e7b1d675e5" ancestor="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <documentation>An element that provides the context of or reason behind the architecture of an enterprise.</documentation>
+        <property key="fillColor" value="#ffffff"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Stakeholder" id="432bf4f1-bb4c-4b78-906d-0a9fee6b279b" ancestor="c1b66d5f-5e54-47b8-b19b-62dcbf6d5d81">
+        <documentation>The role of an individual, team, or organization (or classes thereof) that represents their interests in the outcome of the architecture.</documentation>
+        <property key="fillColor" value="#729fcf"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Value" id="92b85234-e9d3-494b-8ab7-a0571ae2735c" ancestor="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+        <documentation>The relative worth, utility, or importance of a core element or an outcome.</documentation>
+        <property key="fillColor" value="#729fcf"/>
+        <property key="elementShape" value="ellipseShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Meaning" id="c5f00414-3ccf-43d2-b339-77d9f2933645" ancestor="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+        <documentation>Tthe knowledge or expertise present in, or the interpretation given to, a core element in a particular context.</documentation>
+        <property key="fillColor" value="#729fcf"/>
+        <property key="elementShape" value="meaningShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Driver" id="fd1c26e6-dba9-4916-a829-ea7540b94b18" ancestor="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+        <documentation>An external or internal condition that motivates an organization to define its goals and implement the changes necessary to achieve them.</documentation>
+        <property key="fillColor" value="#729fcf"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Assesment" id="2a8339a2-f5fd-4075-9f3e-4fd4832570e6" ancestor="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+        <documentation>The result of an analysis of the state of affairs of the enterprise with respect to some driver.</documentation>
+        <property key="fillColor" value="#729fcf"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Goal" id="de036007-6224-4f3a-b887-52ad655b63a9" ancestor="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+        <documentation>A high-level statement of intent, direction, or desired end state for an organization and its stakeholders.
+A policy in Common Criteria.</documentation>
+        <property key="fillColor"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Outcome" id="8ed4ba86-e7ed-4b49-9934-7902cf38b00d" ancestor="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+        <documentation>An end result that has been achieved.
+An objective in Common Criteria.</documentation>
+        <property key="fillColor" value="#729fcf"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Principle" id="8da7ef16-d6c0-4f33-b8ae-7d5625c7b80a" ancestor="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+        <documentation>A qualitative statement of intent that should be met by the architecture.</documentation>
+        <property key="fillColor"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Requirement" id="c61d875b-62fc-4f2a-b879-7cbc921d0d45" ancestor="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+        <documentation>A statement of need that must be met by the architecture.</documentation>
+        <property key="fillColor" value="#729fcf"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Constraint" id="a5192b0b-4d12-4118-9bcd-b5bb35d46ac6" ancestor="c61d875b-62fc-4f2a-b879-7cbc921d0d45">
+        <documentation>A factor that prevents or obstructs the realization of goals.</documentation>
+        <property key="fillColor" value="#729fcf"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:ZentaDiagramModel" name="Motivation element relationships" id="186c8af3-dd7d-4f88-8f8a-68f93fbc190d" connectionRouterType="1">
+        <child xsi:type="zenta:DiagramObject" id="8dea2bf6-b80b-4391-ba83-2276414399ea" targetConnections="284374bd-f993-4a78-bb44-8d4a64f442c5" fillColor="#729fcf" elementShape="emptyShape" zentaElement="432bf4f1-bb4c-4b78-906d-0a9fee6b279b">
+          <bounds x="168" y="122" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="ecf18591-246a-4986-babe-c941e99cbc0e" fillColor="#729fcf" elementShape="emptyShape" zentaElement="432bf4f1-bb4c-4b78-906d-0a9fee6b279b">
+          <bounds x="168" y="228" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="284374bd-f993-4a78-bb44-8d4a64f442c5" source="ecf18591-246a-4986-babe-c941e99cbc0e" target="8dea2bf6-b80b-4391-ba83-2276414399ea" relationship="3ab97aed-2263-443e-9e45-ccc4cdc71f3a"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="f7b6efa6-1f7d-4cc1-8a18-1c2011c3c391" targetConnections="ba1d9e55-a2be-442f-9027-e7e5e0e6e41e" zentaElement="de036007-6224-4f3a-b887-52ad655b63a9">
+          <bounds x="436" y="121" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="91be4901-707a-42d9-930d-4e35bd57653c" targetConnections="bdf3813c-11b7-4208-a84d-4080f43a77dc f61bd38b-72b4-4792-aeb3-fb85d0eea6f7" zentaElement="8ed4ba86-e7ed-4b49-9934-7902cf38b00d">
+          <bounds x="436" y="219" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="ba1d9e55-a2be-442f-9027-e7e5e0e6e41e" source="91be4901-707a-42d9-930d-4e35bd57653c" target="f7b6efa6-1f7d-4cc1-8a18-1c2011c3c391" relationship="6f1dafa1-5296-4b76-a9ec-3dcea57ea70c"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="9b8428ad-09de-4a4f-a24e-b13291063ab7" targetConnections="606111d7-cd81-49bb-abb5-3b31e39b2e88" zentaElement="8da7ef16-d6c0-4f33-b8ae-7d5625c7b80a">
+          <bounds x="436" y="312" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="bdf3813c-11b7-4208-a84d-4080f43a77dc" source="9b8428ad-09de-4a4f-a24e-b13291063ab7" target="91be4901-707a-42d9-930d-4e35bd57653c" relationship="0e64bf26-9944-41b8-8c04-94549d22e829"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="cb1c5891-dbfc-40f3-9742-01e8750633e1" targetConnections="260349f5-3597-44d0-8203-3f211c1accd3 46b1cbf4-b6d7-48d7-a88e-605da84fe97f" zentaElement="c61d875b-62fc-4f2a-b879-7cbc921d0d45">
+          <bounds x="436" y="408" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="606111d7-cd81-49bb-abb5-3b31e39b2e88" source="cb1c5891-dbfc-40f3-9742-01e8750633e1" target="9b8428ad-09de-4a4f-a24e-b13291063ab7" relationship="3342c910-de7b-461e-a82a-6dd4dc17fa9c"/>
+          <sourceConnection xsi:type="zenta:Connection" id="f61bd38b-72b4-4792-aeb3-fb85d0eea6f7" source="cb1c5891-dbfc-40f3-9742-01e8750633e1" target="91be4901-707a-42d9-930d-4e35bd57653c" relationship="5e7ab97b-2901-4ce5-bdd2-3bb8caaae5c2">
+            <bendpoint startX="116" endX="116" endY="189"/>
+            <bendpoint startX="114" startY="-187" endX="114" endY="2"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="6aa0e080-37d1-42a7-9506-0138e0aa5c59" targetConnections="4c0afa19-e95b-43aa-a998-a9c271a4651f" fillColor="#ffffff" zentaElement="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+          <bounds x="696" y="121" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="03592827-ab97-4f58-90db-d4d5a8b84922" fillColor="#ffffff" zentaElement="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+          <bounds x="696" y="219" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="4c0afa19-e95b-43aa-a998-a9c271a4651f" source="03592827-ab97-4f58-90db-d4d5a8b84922" target="6aa0e080-37d1-42a7-9506-0138e0aa5c59" relationship="8a1a63b9-087b-44c2-92d7-a1187a1505ea"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="483639dc-4449-45a3-905e-f34b4baf2df4" zentaElement="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+          <bounds x="434" y="516" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="260349f5-3597-44d0-8203-3f211c1accd3" source="483639dc-4449-45a3-905e-f34b4baf2df4" target="cb1c5891-dbfc-40f3-9742-01e8750633e1" relationship="20533f66-34e4-4982-8818-45975c727c42">
+            <bendpoint startX="61" startY="-54" endX="59" endY="54"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="46b1cbf4-b6d7-48d7-a88e-605da84fe97f" source="483639dc-4449-45a3-905e-f34b4baf2df4" target="cb1c5891-dbfc-40f3-9742-01e8750633e1" relationship="de74acdb-3cab-46db-b54d-3240e8476963">
+            <bendpoint startX="-58" startY="-56" endX="-60" endY="52"/>
+          </sourceConnection>
+        </child>
+        <property key="Template"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="influences" id="3ab97aed-2263-443e-9e45-ccc4cdc71f3a" ancestor="aa423c4e-b72a-488b-b0c9-541ef165ad1f" source="432bf4f1-bb4c-4b78-906d-0a9fee6b279b" target="432bf4f1-bb4c-4b78-906d-0a9fee6b279b">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="influences" id="8a1a63b9-087b-44c2-92d7-a1187a1505ea" ancestor="aa423c4e-b72a-488b-b0c9-541ef165ad1f" source="c281c4ae-9013-4bb4-956a-43e7b1d675e5" target="c281c4ae-9013-4bb4-956a-43e7b1d675e5">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="3342c910-de7b-461e-a82a-6dd4dc17fa9c" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="c61d875b-62fc-4f2a-b879-7cbc921d0d45" target="8da7ef16-d6c0-4f33-b8ae-7d5625c7b80a">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="0e64bf26-9944-41b8-8c04-94549d22e829" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="8da7ef16-d6c0-4f33-b8ae-7d5625c7b80a" target="8ed4ba86-e7ed-4b49-9934-7902cf38b00d">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="6f1dafa1-5296-4b76-a9ec-3dcea57ea70c" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="8ed4ba86-e7ed-4b49-9934-7902cf38b00d" target="de036007-6224-4f3a-b887-52ad655b63a9">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="5e7ab97b-2901-4ce5-bdd2-3bb8caaae5c2" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="c61d875b-62fc-4f2a-b879-7cbc921d0d45" target="8ed4ba86-e7ed-4b49-9934-7902cf38b00d">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="20533f66-34e4-4982-8818-45975c727c42" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5" target="c61d875b-62fc-4f2a-b879-7cbc921d0d45">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="influences" id="de74acdb-3cab-46db-b54d-3240e8476963" ancestor="aa423c4e-b72a-488b-b0c9-541ef165ad1f" source="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5" target="c61d875b-62fc-4f2a-b879-7cbc921d0d45">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+    </folder>
+    <folder name="03. Location" id="f32b891d-e12d-4fbe-86a3-98c7de9e7763">
+      <element xsi:type="zenta:ZentaDiagramModel" name="Location" id="f55cd001-85af-4d73-8c0e-50bdfc35d06a">
+        <child xsi:type="zenta:DiagramObject" id="d5e7ad34-3f7f-43df-b3f0-d8eb8e3a9176" zentaElement="084c2450-6414-4f43-bd9a-dae35071660e">
+          <bounds x="434" y="112" width="-1" height="-1"/>
+        </child>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Location" id="084c2450-6414-4f43-bd9a-dae35071660e" ancestor="47184fee-e8e1-4132-8b19-04d4603bd119">
+        <documentation>A place or position where structure elements can be located or behavior can be performed.</documentation>
+      </element>
+    </folder>
+    <folder name="04. Strategy" id="3e10078a-92a9-47d0-8fb4-106a95677a1a">
+      <element xsi:type="zenta:ZentaDiagramModel" name="Strategy element relationships" id="7a094f25-d249-44b5-ac0b-cf884cd3c83c">
+        <child xsi:type="zenta:DiagramObject" id="e3d2d8c2-6628-4608-9e15-5a45ad03da31" targetConnections="671d8bbe-8ec6-4901-9516-996dc1537950 1c142f75-eb2d-42ed-bbc1-b160957dadaf" zentaElement="1d4685b8-5f9e-4918-8bfb-29e80efdbe92">
+          <bounds x="252" y="228" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="7b8bbb45-5893-4a9b-8097-d7583e55a4c2" lineColor="#000000" source="e3d2d8c2-6628-4608-9e15-5a45ad03da31" target="8b44c652-cb31-441c-9adc-8047539593d6" relationship="3b5a0382-c192-4879-9914-4988afa958d1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="8b44c652-cb31-441c-9adc-8047539593d6" targetConnections="7b8bbb45-5893-4a9b-8097-d7583e55a4c2" zentaElement="cfacb3bf-8858-42a9-96b1-ef4cc5473d2c">
+          <bounds x="252" y="144" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="0b932e1f-a9a9-4842-9af2-13a6ddcae6b5" lineColor="#000000" source="8b44c652-cb31-441c-9adc-8047539593d6" target="fc1e4033-9f38-4a27-8bc4-05ad5995e600" relationship="105dd07b-a620-45e4-b297-68f1394834b7">
+            <bendpoint startX="-37" startY="-44" endX="-37" endY="40"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="55d1bd32-699d-47a3-a563-f5a14d3fbaea" lineColor="#000000" source="8b44c652-cb31-441c-9adc-8047539593d6" target="fc1e4033-9f38-4a27-8bc4-05ad5995e600" relationship="1bf726d1-85f0-40bd-b1ec-94810406c541">
+            <bendpoint startX="33" startY="-44" endX="33" endY="40"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="631e9ae5-68ff-4b26-8a74-8424fd6d6a91" targetConnections="2968d139-7698-4c20-a32c-978493af60e7 2b85f7bc-7995-4a65-8989-606637eb64b1" zentaElement="47184fee-e8e1-4132-8b19-04d4603bd119">
+          <bounds x="576" y="228" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="1c142f75-eb2d-42ed-bbc1-b160957dadaf" lineColor="#000000" source="631e9ae5-68ff-4b26-8a74-8424fd6d6a91" target="e3d2d8c2-6628-4608-9e15-5a45ad03da31" relationship="2f0b7bea-a2c8-4bcb-9b21-61b07c9d78e0">
+            <bendpoint startX="-163" startY="-32" endX="161" endY="-32"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="40f78a1e-a1a9-4006-ab2c-8e37c57aa1ba" zentaElement="f89ba55a-533e-4ca7-aacc-68559132557f">
+          <bounds x="252" y="324" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="671d8bbe-8ec6-4901-9516-996dc1537950" lineColor="#000000" source="40f78a1e-a1a9-4006-ab2c-8e37c57aa1ba" target="e3d2d8c2-6628-4608-9e15-5a45ad03da31" relationship="67801912-9e93-47c8-8d15-bc91bbaf9980"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="fc1e4033-9f38-4a27-8bc4-05ad5995e600" targetConnections="0b932e1f-a9a9-4842-9af2-13a6ddcae6b5 55d1bd32-699d-47a3-a563-f5a14d3fbaea" fillColor="#729fcf" elementShape="emptyShape" zentaElement="8ed4ba86-e7ed-4b49-9934-7902cf38b00d">
+          <bounds x="252" y="60" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="3f3acef3-8fe3-47e2-a5c3-7af51cad264d" zentaElement="827902d4-ca6b-42a9-85e8-5c237a8f7714">
+          <bounds x="574" y="335" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="2968d139-7698-4c20-a32c-978493af60e7" lineColor="#000000" source="3f3acef3-8fe3-47e2-a5c3-7af51cad264d" target="631e9ae5-68ff-4b26-8a74-8424fd6d6a91" relationship="eadce5f4-2772-4170-966c-fbfb4b33edd1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="6826bbfc-9ef2-4a38-b830-5e13a5185b0b" zentaElement="084c2450-6414-4f43-bd9a-dae35071660e">
+          <bounds x="734" y="334" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="2b85f7bc-7995-4a65-8989-606637eb64b1" lineColor="#000000" source="6826bbfc-9ef2-4a38-b830-5e13a5185b0b" target="631e9ae5-68ff-4b26-8a74-8424fd6d6a91" relationship="a97f4144-c5c9-4858-a8a3-f7160c036f1a"/>
+        </child>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="105dd07b-a620-45e4-b297-68f1394834b7" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="cfacb3bf-8858-42a9-96b1-ef4cc5473d2c" target="8ed4ba86-e7ed-4b49-9934-7902cf38b00d"/>
+      <element xsi:type="zenta:BasicRelationship" name="influences" id="1bf726d1-85f0-40bd-b1ec-94810406c541" ancestor="aa423c4e-b72a-488b-b0c9-541ef165ad1f" source="cfacb3bf-8858-42a9-96b1-ef4cc5473d2c" target="8ed4ba86-e7ed-4b49-9934-7902cf38b00d"/>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="3b5a0382-c192-4879-9914-4988afa958d1" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="1d4685b8-5f9e-4918-8bfb-29e80efdbe92" target="cfacb3bf-8858-42a9-96b1-ef4cc5473d2c"/>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="67801912-9e93-47c8-8d15-bc91bbaf9980" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="f89ba55a-533e-4ca7-aacc-68559132557f" target="1d4685b8-5f9e-4918-8bfb-29e80efdbe92"/>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="eadce5f4-2772-4170-966c-fbfb4b33edd1" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="827902d4-ca6b-42a9-85e8-5c237a8f7714" target="47184fee-e8e1-4132-8b19-04d4603bd119"/>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="a97f4144-c5c9-4858-a8a3-f7160c036f1a" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="084c2450-6414-4f43-bd9a-dae35071660e" target="47184fee-e8e1-4132-8b19-04d4603bd119"/>
+      <element xsi:type="zenta:BasicRelationship" name="is assigned to/has an assigned" id="2f0b7bea-a2c8-4bcb-9b21-61b07c9d78e0" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="47184fee-e8e1-4132-8b19-04d4603bd119" target="1d4685b8-5f9e-4918-8bfb-29e80efdbe92"/>
+    </folder>
+    <folder name="05. Business Layer" id="2f25f2b1-58c7-40fa-971f-7a53a58c4305">
+      <element xsi:type="zenta:ZentaDiagramModel" name="Business Layer" id="da39d0ea-d901-46e0-847c-5908ee90ffc3">
+        <child xsi:type="zenta:DiagramObject" id="e32e6dba-2b36-44a3-bb8d-85237bf38993" fillColor="#ffffb5" elementShape="roundedRectangleShape" zentaElement="e1dd1064-22ad-49f2-960e-ae05d346eb28">
+          <bounds x="481" y="59" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="0c34749f-2665-49a2-92fd-6bf66704157d" fillColor="#ffffb5" zentaElement="c88d8a36-da36-4a55-923d-fbe35477eb96">
+          <bounds x="688" y="61" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="f345865f-1575-4bce-8cf4-17608647c0b9" fillColor="#ffffb5" zentaElement="b65bbead-06c8-41e8-9832-240488374308">
+          <bounds x="688" y="199" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="c89331e5-d5f4-470e-9811-4189da985d0c" fillColor="#ffffb5" elementShape="emptyShape" zentaElement="7a68b0b7-c37e-4231-a191-2775231fb739">
+          <bounds x="688" y="253" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="5de545c5-412f-4e31-afe7-ca300bf59ac2" fillColor="#ffffb5" elementShape="roundedRectangleShape" zentaElement="29107767-b23d-434c-8d34-a42bee02ea52">
+          <bounds x="481" y="199" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="9e742a6b-3a66-49c6-a749-e072c1c22627" fillColor="#ffffb5" elementShape="roundedRectangleShape" zentaElement="7dec1988-81ca-4a80-adb1-82405626cdaa">
+          <bounds x="481" y="253" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="a51f57c3-508f-4a3a-935b-5c0df004be84" fillColor="#ffffb5" elementShape="roundedRectangleShape" zentaElement="eea0b01f-16c5-487d-8262-fd5a48dbbe43">
+          <bounds x="481" y="307" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="79ac91c3-2ad5-4783-b029-d04791de4d98" fillColor="#ffffb5" elementShape="roundedRectangleShape" zentaElement="c0b11af0-3a59-4592-87ae-3de04f4237bf">
+          <bounds x="481" y="396" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="a9d689f7-f20d-4bcc-8b04-ae85cc2f2acb" targetConnections="32ad3d24-f488-4754-8537-c2e1e8765673" zentaElement="a6584e36-8a42-4175-9358-4b05132cd503">
+          <bounds x="84" y="192" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="a3e19c58-215e-421d-9956-8425cedaff1b" zentaElement="73179cd6-82a6-4081-9a05-e86784ccb3cb">
+          <bounds x="84" y="276" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="5ffdaa2e-5de8-4a4d-b815-cf8d08563690" zentaElement="b463ad63-89f1-46cb-b68c-88199b615078">
+          <bounds x="264" y="192" width="133"/>
+          <sourceConnection xsi:type="zenta:Connection" id="32ad3d24-f488-4754-8537-c2e1e8765673" source="5ffdaa2e-5de8-4a4d-b815-cf8d08563690" target="a9d689f7-f20d-4bcc-8b04-ae85cc2f2acb" relationship="9fe4ef88-77cd-41ff-968a-df707c2b2988"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="ccd7fe1d-1ce5-433f-8da3-b2d0837d5d4e" zentaElement="5312c0df-dcdc-4d0c-af5d-1cc57643accd">
+          <bounds x="271" y="59" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="63426ce0-11b6-40c1-b743-7aa252b1c945" fillColor="#ffffb5" elementShape="emptyShape" zentaElement="0254bea6-b136-404a-b723-fd7f39158c1b">
+          <bounds x="688" y="307" width="-1" height="-1"/>
+        </child>
+        <property key="Template"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Business Service" id="e1dd1064-22ad-49f2-960e-ae05d346eb28" ancestor="9cee24c9-0fff-4d16-ad69-5aff3c452813">
+        <documentation>An explicitly defined exposed business behavior.</documentation>
+        <property key="fillColor" value="#ffffb5"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Business Interface" id="c88d8a36-da36-4a55-923d-fbe35477eb96" ancestor="48830395-7486-4a45-b678-50f760bf1114">
+        <documentation>A point of access where a business service is made available to the environment.</documentation>
+        <property key="fillColor" value="#ffffb5"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Business Role" id="b65bbead-06c8-41e8-9832-240488374308" ancestor="40ceffd1-6542-45fd-b743-a4c2fc22b8f5">
+        <documentation>The responsibility for performing specific behavior, to which an actor can be assigned, or the part an actor plays in a particular action or event.</documentation>
+        <property key="fillColor" value="#ffffb5"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Business Actor" id="7a68b0b7-c37e-4231-a191-2775231fb739" ancestor="40ceffd1-6542-45fd-b743-a4c2fc22b8f5">
+        <documentation>A business entity that is capable of performing behavior.
+</documentation>
+        <property key="fillColor" value="#ffffb5"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Business Process" id="29107767-b23d-434c-8d34-a42bee02ea52" ancestor="d7120886-bb61-41ed-8f33-8b48a4719328">
+        <documentation>A sequence of business behaviors that achieves a specific outcome such as a defined set of products or business services.</documentation>
+        <property key="fillColor" value="#ffffb5"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Business Function" id="7dec1988-81ca-4a80-adb1-82405626cdaa" ancestor="d7120886-bb61-41ed-8f33-8b48a4719328">
+        <documentation>A collection of business behavior based on a chosen set of criteria (typically required business resources and/or competencies), closely aligned to an organization, but not necessarily explicitly governed by the organization.</documentation>
+        <property key="fillColor" value="#ffffb5"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Business Interaction" id="eea0b01f-16c5-487d-8262-fd5a48dbbe43" ancestor="d7120886-bb61-41ed-8f33-8b48a4719328">
+        <documentation>A unit of collective business behavior performed by (a collaboration of) two or more business roles.</documentation>
+        <property key="fillColor" value="#ffffb5"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Business Event" id="c0b11af0-3a59-4592-87ae-3de04f4237bf" ancestor="f4424997-a962-48df-a17d-eddd688fb4d5">
+        <documentation>A business behavior element that denotes an organizational state change. It may originate from and be resolved inside or outside the organization.</documentation>
+        <property key="fillColor" value="#ffffb5"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Business Object" id="a6584e36-8a42-4175-9358-4b05132cd503" ancestor="bcae85c0-40f5-402e-999b-dd35dfc54604">
+        <documentation>A concept used within a particular business domain.</documentation>
+        <property key="fillColor"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Contract" id="73179cd6-82a6-4081-9a05-e86784ccb3cb" ancestor="a6584e36-8a42-4175-9358-4b05132cd503">
+        <documentation>A formal or informal specification of an agreement between a provider and a consumer that specifies the rights and obligations associated with a product and establishes functional and non-functional parameters for interaction.</documentation>
+        <property key="fillColor"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Representation" id="b463ad63-89f1-46cb-b68c-88199b615078" ancestor="bcae85c0-40f5-402e-999b-dd35dfc54604">
+        <documentation>A perceptible form of the information carried by a business object.</documentation>
+        <property key="fillColor"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="9fe4ef88-77cd-41ff-968a-df707c2b2988" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="b463ad63-89f1-46cb-b68c-88199b615078" target="a6584e36-8a42-4175-9358-4b05132cd503">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Product" id="5312c0df-dcdc-4d0c-af5d-1cc57643accd" ancestor="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <documentation>A coherent collection of services and/or passive structure elements, accompanied by a contract/set of agreements, which is offered as a whole to (internal or external) customers.</documentation>
+        <property key="fillColor"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Business Collaboration" id="0254bea6-b136-404a-b723-fd7f39158c1b" ancestor="8915696b-d345-4fb6-b75e-7ecd690b769e">
+        <documentation>An aggregate of two or more business internal active structure elements that work together to perform collective behavior.</documentation>
+        <property key="fillColor" value="#ffffb5"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+    </folder>
+    <folder name="06. Application Layer" id="722a17cb-618a-42ff-b55d-6cd6c2d260eb">
+      <element xsi:type="zenta:ZentaDiagramModel" name="Application Layer" id="48e7b919-e5cd-4fd6-b917-a057f88c4705">
+        <child xsi:type="zenta:DiagramObject" id="ecfbd246-2585-49d9-9948-3f5e6ab81760" fillColor="#78d3f3" zentaElement="94fb4a34-994c-43cf-bc82-150352d24b00">
+          <bounds x="738" y="53" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="b7f423e0-c9af-47ba-aa2f-fd375f72a763" fillColor="#78d3f3" elementShape="applicationShape" zentaElement="e718750f-8e77-40ca-bcca-7ccd241c34c4">
+          <bounds x="738" y="195" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="503d3210-41f9-42eb-978c-863fcc3ab6fb" fillColor="#78d3f3" elementShape="roundedRectangleShape" zentaElement="3a678908-e45d-4a2c-abaf-4cc6c6d79287">
+          <bounds x="479" y="324" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="ef3b0333-fcc7-4e2e-a766-b12f95f781a2" fillColor="#78d3f3" elementShape="roundedRectangleShape" zentaElement="f92b347d-2c65-4b9c-87ac-2e17a421a900">
+          <bounds x="479" y="143" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="cd886b41-aaf6-4b67-a418-ae0e4f8b8632" fillColor="#78d3f3" elementShape="roundedRectangleShape" zentaElement="109b7966-4046-4c3f-b405-54bdc9893769">
+          <bounds x="479" y="195" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="90449f2f-9a11-4aef-b5ca-52d292209ea7" fillColor="#78d3f3" elementShape="roundedRectangleShape" zentaElement="f7e11af8-e809-46c9-a0ae-2355b014e709">
+          <bounds x="479" y="249" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="7dc8722a-a6b7-4644-8632-396d364eea4d" fillColor="#78d3f3" elementShape="roundedRectangleShape" zentaElement="93c4becd-c5a3-4da2-8d3f-66944219b8ac">
+          <bounds x="479" y="53" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="5a76a0bd-cdc1-4245-84ae-d5918393353b" fillColor="#78d3f3" zentaElement="cbdc28af-a25e-4c11-ad49-7ec6068a32c4">
+          <bounds x="228" y="195" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="3a489c28-0102-4b9f-a9cc-960ac34797fd" fillColor="#78d3f3" elementShape="emptyShape" zentaElement="c30e3698-73f2-4f03-904a-debc49563c62">
+          <bounds x="738" y="324" width="-1" height="-1"/>
+        </child>
+        <property key="Template"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Application Interface" id="94fb4a34-994c-43cf-bc82-150352d24b00" ancestor="48830395-7486-4a45-b678-50f760bf1114">
+        <documentation>A point of access where application services are made available to a user, another application component, or a node.</documentation>
+        <property key="fillColor" value="#78d3f3"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Aplication Component" id="e718750f-8e77-40ca-bcca-7ccd241c34c4" ancestor="40ceffd1-6542-45fd-b743-a4c2fc22b8f5">
+        <documentation>An encapsulation of application functionality aligned to implementation structure, which is modular and replaceable. It encapsulates its behavior and data, exposes services, and makes them available through interfaces.</documentation>
+        <property key="fillColor" value="#78d3f3"/>
+        <property key="elementShape" value="applicationShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Application Event" id="3a678908-e45d-4a2c-abaf-4cc6c6d79287" ancestor="f4424997-a962-48df-a17d-eddd688fb4d5">
+        <documentation>An application behavior element that denotes a state change.</documentation>
+        <property key="fillColor" value="#78d3f3"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Application Function" id="f92b347d-2c65-4b9c-87ac-2e17a421a900" ancestor="d7120886-bb61-41ed-8f33-8b48a4719328">
+        <documentation>Automated behavior that can be performed by an application component.</documentation>
+        <property key="fillColor" value="#78d3f3"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Application Process" id="109b7966-4046-4c3f-b405-54bdc9893769" ancestor="d7120886-bb61-41ed-8f33-8b48a4719328">
+        <documentation>A sequence of application behaviors that achieves a specific outcome.</documentation>
+        <property key="fillColor" value="#78d3f3"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Application Interaction" id="f7e11af8-e809-46c9-a0ae-2355b014e709" ancestor="d7120886-bb61-41ed-8f33-8b48a4719328">
+        <documentation>A unit of collective application behavior performed by (a collaboration of) two or more application components.</documentation>
+        <property key="fillColor" value="#78d3f3"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Application Service" id="93c4becd-c5a3-4da2-8d3f-66944219b8ac" ancestor="9cee24c9-0fff-4d16-ad69-5aff3c452813">
+        <documentation>An explicitly defined exposed application behavior.</documentation>
+        <property key="fillColor" value="#78d3f3"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Data Object" id="cbdc28af-a25e-4c11-ad49-7ec6068a32c4" ancestor="bcae85c0-40f5-402e-999b-dd35dfc54604">
+        <documentation>Data structured for automated processing.</documentation>
+        <property key="fillColor" value="#78d3f3"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Application Collaboration" id="c30e3698-73f2-4f03-904a-debc49563c62" ancestor="8915696b-d345-4fb6-b75e-7ecd690b769e">
+        <documentation>An aggregate of two or more application components that work together to perform collective application behavior.</documentation>
+        <property key="fillColor" value="#78d3f3"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+    </folder>
+    <folder name="07. Technology Layer" id="e851066c-9f14-42f3-826d-9475db91a4a1">
+      <element xsi:type="zenta:ZentaDiagramModel" name="Technology Layer" id="09fe61b1-69a4-49a4-87cd-52c0f46fd61e" connectionRouterType="1">
+        <child xsi:type="zenta:DiagramObject" id="b2c3b284-bcd5-4dd1-928f-0299f56dccf0" fillColor="#8ae234" elementShape="emptyShape" zentaElement="75d24045-d0b4-4ec1-b0b5-f58d3ad673f4">
+          <bounds x="564" y="48" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="168b4d71-daf8-4af7-a2ff-0e300d7c84de" targetConnections="f1667a3a-f947-472e-a99c-cdae9179677f" fillColor="#8ae234" elementShape="roundedRectangleShape" zentaElement="7adbc158-7057-4829-8f86-169ed68b89d5">
+          <bounds x="252" y="48" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="ce7eaf47-3540-4eae-a13f-da5c15329765" fillColor="#8ae234" zentaElement="193edb46-146a-4c9a-bf31-b8586c2a5447">
+          <bounds x="252" y="168" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="3e0f9421-666f-4094-ad1b-c7deb40d1446" fillColor="#8ae234" elementShape="roundedRectangleShape" zentaElement="968a9b5f-6a47-47cd-b627-a726becf5741">
+          <bounds x="252" y="222" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="e38aac7c-2e1a-4773-a5fc-6117c25254f8" fillColor="#8ae234" zentaElement="f132d49f-61b7-4ee2-9d17-6b56810ba0fc">
+          <bounds x="252" y="276" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="98c7c545-310f-463f-9c1f-be8ba613ac90" fillColor="#8ae234" elementShape="roundedRectangleShape" zentaElement="01753e02-ecd2-4692-b45d-2a17815865a8">
+          <bounds x="252" y="360" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="f1667a3a-f947-472e-a99c-cdae9179677f" source="98c7c545-310f-463f-9c1f-be8ba613ac90" target="168b4d71-daf8-4af7-a2ff-0e300d7c84de" relationship="d66480a4-8984-4863-883b-ba654cc8b1dd">
+            <bendpoint startX="92" startY="-153" endX="92" endY="159"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="a054797c-4b51-4807-8672-23585f2006d8" fillColor="#8ae234" zentaElement="d578cd3e-9307-45c2-9b42-cd0a9a40e203">
+          <bounds x="27" y="168" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="069a474a-070e-49ee-8647-88455ef2be9e" fillColor="#8ae234" elementShape="emptyShape" zentaElement="9c159d45-c599-4625-8157-7966f400f2d5">
+          <bounds x="27" y="360" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="c2e8c7fb-c1ac-4fd6-bef7-ef46dfc1a2c7" targetConnections="622c8dfe-0e20-4a5b-b99e-cbf3851c8a9a" fillColor="#8ae234" elementShape="nodeShape" zentaElement="67c3b270-25f0-442e-a774-d18d158c4308">
+          <bounds x="564" y="168" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="df517ac8-81d7-4f60-9547-efa3d4ef39d5" targetConnections="81f15ff8-b5e2-4daa-8dd1-38de6c786fe4" fillColor="#8ae234" elementShape="nodeShape" zentaElement="1e199349-0f5b-4254-b9c9-8ed6feefa070">
+          <bounds x="425" y="360" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="979cdaa1-791f-4f55-919b-47c7d49f7a1c" fillColor="#8ae234" elementShape="deviceShape" zentaElement="7405551d-f304-4a2f-b9f0-1f6df316c142">
+          <bounds x="564" y="360" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="81f15ff8-b5e2-4daa-8dd1-38de6c786fe4" lineColor="#000000" source="979cdaa1-791f-4f55-919b-47c7d49f7a1c" target="df517ac8-81d7-4f60-9547-efa3d4ef39d5" relationship="a79650e0-4235-45e4-9fca-20cf025936c0">
+            <bendpoint startX="-75" startY="-59" endX="64" endY="-59"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="57b0b0e5-03ae-4c5d-aad5-6b32e289872a" fillColor="#8ae234" elementShape="emptyShape" zentaElement="5c1e1439-5dfd-4fc5-9110-8eb56ccf124d">
+          <bounds x="708" y="360" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="3824f4b6-e195-4878-a562-5ee4019e5824" targetConnections="e90196b1-2c9f-4691-81d1-514696a170ab" fillColor="#8ae234" elementShape="emptyShape" zentaElement="5fc3f3f5-de84-4e3a-9807-4848c302e077">
+          <bounds x="816" y="168" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="b737c0cb-b4d2-48a9-a7fb-ef90cfea53fc" fillColor="#8ae234" elementShape="meaningShape" zentaElement="6fc7f125-c20e-4b2c-9dfc-97174ec43610">
+          <bounds x="798" y="444" width="156"/>
+          <sourceConnection xsi:type="zenta:Connection" id="e90196b1-2c9f-4691-81d1-514696a170ab" lineColor="#000000" source="b737c0cb-b4d2-48a9-a7fb-ef90cfea53fc" target="3824f4b6-e195-4878-a562-5ee4019e5824" relationship="49722424-2e35-4dfb-981c-9f123ce5b013"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="0e7db5fc-b4b0-47d6-88a8-0468bda0dece" fillColor="#8ae234" elementShape="nodeShape" zentaElement="67c3b270-25f0-442e-a774-d18d158c4308">
+          <bounds x="564" y="252" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="622c8dfe-0e20-4a5b-b99e-cbf3851c8a9a" lineColor="#000000" source="0e7db5fc-b4b0-47d6-88a8-0468bda0dece" target="c2e8c7fb-c1ac-4fd6-bef7-ef46dfc1a2c7" relationship="7cb854bc-cbb0-4942-a730-e21ce6794745"/>
+        </child>
+        <property key="Template"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Technology Interface" id="75d24045-d0b4-4ec1-b0b5-f58d3ad673f4" ancestor="48830395-7486-4a45-b678-50f760bf1114">
+        <documentation>A point of access where technology services offered by a node can be accessed.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Technology Service" id="7adbc158-7057-4829-8f86-169ed68b89d5" ancestor="9cee24c9-0fff-4d16-ad69-5aff3c452813">
+        <documentation>An explicitly defined exposed technology behavior.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Technology Process" id="193edb46-146a-4c9a-bf31-b8586c2a5447" ancestor="87c53a51-2c10-42f5-92e9-5659c67eaa2d">
+        <documentation>A sequence of technology behaviors that achieves a specific outcome.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Technology Function" id="968a9b5f-6a47-47cd-b627-a726becf5741" ancestor="acc158d3-33ad-471b-b854-dcd85a2d2083">
+        <documentation>A collection of technology behavior that can be performed by a node</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Technology Interaction" id="f132d49f-61b7-4ee2-9d17-6b56810ba0fc" ancestor="7b75fa30-ab03-4f9a-a86b-8777f4962066">
+        <documentation>A unit of collective technology behavior performed by (a collaboration of) two or more nodes.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Technology Event" id="01753e02-ecd2-4692-b45d-2a17815865a8" ancestor="f4424997-a962-48df-a17d-eddd688fb4d5">
+        <documentation>A technology behavior element that denotes a state change.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="roundedRectangleShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Technology Object" id="d578cd3e-9307-45c2-9b42-cd0a9a40e203" ancestor="bcae85c0-40f5-402e-999b-dd35dfc54604">
+        <documentation>A passive element that is used or produced by technology behavior.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Artifact" id="9c159d45-c599-4625-8157-7966f400f2d5" ancestor="d578cd3e-9307-45c2-9b42-cd0a9a40e203">
+        <documentation>A piece of data that is used or produced in a software development process, or by deployment and operation of a system.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Node" id="67c3b270-25f0-442e-a774-d18d158c4308" ancestor="40ceffd1-6542-45fd-b743-a4c2fc22b8f5">
+        <documentation> A computational or physical resource that hosts, manipulates, or interacts with other computational or physical resources.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="nodeShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="System Software" id="1e199349-0f5b-4254-b9c9-8ed6feefa070" ancestor="67c3b270-25f0-442e-a774-d18d158c4308">
+        <documentation>Software that provides or contributes to an environment for storing, executing, and using software or data deployed within it.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="nodeShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Device" id="7405551d-f304-4a2f-b9f0-1f6df316c142" ancestor="67c3b270-25f0-442e-a774-d18d158c4308">
+        <documentation>A physical IT resource upon which system software and artifacts may be stored or deployed for execution.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="deviceShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Technology Collaboration" id="5c1e1439-5dfd-4fc5-9110-8eb56ccf124d" ancestor="8915696b-d345-4fb6-b75e-7ecd690b769e">
+        <documentation>An aggregate of two or more nodes that work together to perform collective technology behavior.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Path" id="5fc3f3f5-de84-4e3a-9807-4848c302e077" ancestor="40ceffd1-6542-45fd-b743-a4c2fc22b8f5">
+        <documentation>A link between two or more nodes, through which these nodes can exchange data or material.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Communication Network" id="6fc7f125-c20e-4b2c-9dfc-97174ec43610" ancestor="40ceffd1-6542-45fd-b743-a4c2fc22b8f5">
+        <documentation>A set of structures that connects computer systems or other electronic devices for transmission, routing, and reception of data or data-based communications such as voice and video.</documentation>
+        <property key="fillColor" value="#8ae234"/>
+        <property key="elementShape" value="meaningShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="is assigned to/has an assigned" id="a79650e0-4235-45e4-9fca-20cf025936c0" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="7405551d-f304-4a2f-b9f0-1f6df316c142" target="1e199349-0f5b-4254-b9c9-8ed6feefa070">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="7cb854bc-cbb0-4942-a730-e21ce6794745" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="67c3b270-25f0-442e-a774-d18d158c4308" target="67c3b270-25f0-442e-a774-d18d158c4308">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="49722424-2e35-4dfb-981c-9f123ce5b013" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="6fc7f125-c20e-4b2c-9dfc-97174ec43610" target="5fc3f3f5-de84-4e3a-9807-4848c302e077">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor" value="#000000"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="d66480a4-8984-4863-883b-ba654cc8b1dd" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="01753e02-ecd2-4692-b45d-2a17815865a8" target="7adbc158-7057-4829-8f86-169ed68b89d5">
+        <property key="textPosition" value="1"/>
+        <property key="lineDecoration"/>
+        <property key="lineColor"/>
+        <property key="fontColor"/>
+        <property key="lineWidth" value="1"/>
+        <property key="font"/>
+      </element>
+    </folder>
+    <folder name="08. Physical Layer" id="25188c2b-a271-448a-92d0-b1f58496afcd">
+      <element xsi:type="zenta:ZentaDiagramModel" name="Physical Layer" id="c459997e-2dad-4530-87be-199599a828d8">
+        <child xsi:type="zenta:DiagramObject" id="e35e3127-00ee-4baf-bcc2-e426fdcdd711" fillColor="#73d216" zentaElement="3578cf25-e395-4976-9804-187722904e78">
+          <bounds x="436" y="128" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="c194e79a-375b-40f8-ba99-f5b0098261db" lineColor="#000000" source="e35e3127-00ee-4baf-bcc2-e426fdcdd711" target="dad00ab6-fb15-452a-b8c9-11462325e176" relationship="969aedb9-1ff2-4199-9db8-63e81e2ac0b1">
+            <bendpoint startX="-167" startY="-38" endX="161" endY="-40"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="8a48e56b-44d5-4dc4-b4d0-edd05fb307ef" fillColor="#73d216" zentaElement="64df636a-632e-43fe-b282-83160ff37dc2">
+          <bounds x="607" y="128" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="218692c6-3b1d-438f-b8be-fbe1b480c17c" lineColor="#000000" source="8a48e56b-44d5-4dc4-b4d0-edd05fb307ef" target="43b2ad2c-3061-4ac5-a0ae-60864b53d8c0" relationship="28450fc8-0436-4236-9e8e-e9189510bd08"/>
+          <sourceConnection xsi:type="zenta:Connection" id="c583e076-1931-4268-b3d3-574ef5774e5b" lineColor="#000000" source="8a48e56b-44d5-4dc4-b4d0-edd05fb307ef" target="a1bd609d-5ac6-45d2-b8bc-86852561db4a" relationship="69f9b83e-561d-4d1e-a2b3-d8c21478afe4">
+            <bendpoint startX="-99" startY="-57" endX="72" endY="36"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="928677ba-904a-4791-a232-194b7709e1a6" fillColor="#73d216" zentaElement="909d8aed-a6d6-4950-82d0-512941999cfe">
+          <bounds x="780" y="128" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="0b580c07-df2f-4f28-9275-a89f2bbba49e" lineColor="#000000" source="928677ba-904a-4791-a232-194b7709e1a6" target="9e0f72f0-43d0-4844-b51a-b9ef3f54fcf1" relationship="619174b5-0da2-44e3-9f33-20704c803b5d"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="dad00ab6-fb15-452a-b8c9-11462325e176" targetConnections="c194e79a-375b-40f8-ba99-f5b0098261db" fillColor="#73d216" elementShape="emptyShape" zentaElement="2bddaeeb-8426-4366-8d81-3854de04fb88">
+          <bounds x="108" y="130" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="9e0f72f0-43d0-4844-b51a-b9ef3f54fcf1" targetConnections="0b580c07-df2f-4f28-9275-a89f2bbba49e" zentaElement="5fc3f3f5-de84-4e3a-9807-4848c302e077">
+          <bounds x="783" y="35" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="43b2ad2c-3061-4ac5-a0ae-60864b53d8c0" targetConnections="218692c6-3b1d-438f-b8be-fbe1b480c17c" zentaElement="7a68b0b7-c37e-4231-a191-2775231fb739">
+          <bounds x="607" y="35" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="a1bd609d-5ac6-45d2-b8bc-86852561db4a" targetConnections="c583e076-1931-4268-b3d3-574ef5774e5b" zentaElement="67c3b270-25f0-442e-a774-d18d158c4308">
+          <bounds x="436" y="35" width="-1" height="-1"/>
+        </child>
+        <property key="Template"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Equipment" id="3578cf25-e395-4976-9804-187722904e78" ancestor="67c3b270-25f0-442e-a774-d18d158c4308">
+        <documentation>One or more physical machines, tools, or instruments that can create, use, store, move, or transform materials.</documentation>
+        <property key="fillColor" value="#73d216"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Facility" id="64df636a-632e-43fe-b282-83160ff37dc2" ancestor="67c3b270-25f0-442e-a774-d18d158c4308">
+        <documentation>A physical structure or environment.</documentation>
+        <property key="fillColor" value="#73d216"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Distribution Network" id="909d8aed-a6d6-4950-82d0-512941999cfe" ancestor="5fc3f3f5-de84-4e3a-9807-4848c302e077">
+        <documentation>A physical network used to transport materials or energy.</documentation>
+        <property key="fillColor" value="#73d216"/>
+        <property key="elementShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Material" id="2bddaeeb-8426-4366-8d81-3854de04fb88" ancestor="d578cd3e-9307-45c2-9b42-cd0a9a40e203">
+        <documentation>Tangible physical matter or physical elements.</documentation>
+        <property key="fillColor" value="#73d216"/>
+        <property key="elementShape" value="emptyShape"/>
+        <property key="textAlignment" value="2"/>
+        <property key="fontColor"/>
+        <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="619174b5-0da2-44e3-9f33-20704c803b5d" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="909d8aed-a6d6-4950-82d0-512941999cfe" target="5fc3f3f5-de84-4e3a-9807-4848c302e077"/>
+      <element xsi:type="zenta:BasicRelationship" name="is assigned to/has an assigned" id="28450fc8-0436-4236-9e8e-e9189510bd08" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="64df636a-632e-43fe-b282-83160ff37dc2" target="7a68b0b7-c37e-4231-a191-2775231fb739"/>
+      <element xsi:type="zenta:BasicRelationship" name="is assigned to/has an assigned" id="69f9b83e-561d-4d1e-a2b3-d8c21478afe4" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="64df636a-632e-43fe-b282-83160ff37dc2" target="67c3b270-25f0-442e-a774-d18d158c4308"/>
+      <element xsi:type="zenta:BasicRelationship" name="is assigned to/has an assigned" id="969aedb9-1ff2-4199-9db8-63e81e2ac0b1" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="3578cf25-e395-4976-9804-187722904e78" target="2bddaeeb-8426-4366-8d81-3854de04fb88"/>
+    </folder>
+    <folder name="09. Cross-Layer dependencies" id="cb8402a5-83f2-4607-bdf1-7aa6034153f8">
+      <element xsi:type="zenta:ZentaDiagramModel" name="Cross-Layer dependencies" id="769aa54f-b0f1-45b0-aecb-2affe6968a46"/>
+    </folder>
+    <folder name="10. Implementation and Migration" id="59ae153c-dfb4-4721-9ca4-581839ceb3f3">
+      <element xsi:type="zenta:ZentaDiagramModel" name="Implementation and Migration" id="c075b808-20e0-4f50-b45c-344f17435be1" connectionRouterType="1">
+        <child xsi:type="zenta:DiagramObject" id="8dd4c59f-e8da-49ee-9733-4a703ec3ad4d" targetConnections="51284881-788f-455e-b84b-6f6643c64794" fillColor="#8ae234" elementShape="nodeShape" zentaElement="438ada6f-fc56-4e89-aee8-943fed23754f">
+          <bounds x="180" y="252" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="22b8474d-1966-40e7-b488-c5f876173e45" lineColor="#000000" source="8dd4c59f-e8da-49ee-9733-4a703ec3ad4d" target="628825f7-3477-40d6-bb99-1efc4b3a34fc" relationship="013d7afc-6bcf-40f8-b451-189cbe5deccd">
+            <bendpoint startX="99" startY="133" endX="-441" endY="28"/>
+          </sourceConnection>
+          <sourceConnection xsi:type="zenta:Connection" id="322a5640-c85c-47de-bacd-8143b09f37f2" lineColor="#000000" source="8dd4c59f-e8da-49ee-9733-4a703ec3ad4d" target="c2e04057-371d-4af0-b162-339dabbd93f1" relationship="9745c28c-e259-4296-8004-cdd3a57a8900"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="ae0e1faa-e545-4836-887a-e74f20aabed8" fillColor="#8ae234" elementShape="deliverableShape" zentaElement="3dbe077d-2c85-427d-997e-01959e66eeb1">
+          <bounds x="348" y="252" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="8aac0929-95fb-45f5-be7e-0e594feffdd1" lineColor="#000000" source="ae0e1faa-e545-4836-887a-e74f20aabed8" target="c2e04057-371d-4af0-b162-339dabbd93f1" relationship="8c17522e-f65d-424c-a805-76e2ccbc7a4a"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="c509732f-169b-4358-89dc-959f9c454dbd" targetConnections="f81bea7c-1afe-48de-89f7-38b0a390c0dd" fillColor="#f0bdbd" elementShape="deliverableShape" zentaElement="6e2ba420-0347-458d-804d-a527f765ccca">
+          <bounds x="540" y="252" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="8e1d62fe-990b-4848-9f49-e666f4795cf5" lineColor="#000000" source="c509732f-169b-4358-89dc-959f9c454dbd" target="c2e04057-371d-4af0-b162-339dabbd93f1" relationship="da381e1b-4701-45ed-935c-9d18ddd73a3a"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="01ef18e6-dea7-4040-9f0c-09cf33364627" targetConnections="017c287f-1406-45ae-8bb2-42b9faf167f6" fillColor="#f0bdbd" elementShape="roundedRectangleShape" zentaElement="695f7437-0e3b-4202-a5bc-b5d3b6239ccd">
+          <bounds x="720" y="252" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="f81bea7c-1afe-48de-89f7-38b0a390c0dd" lineColor="#000000" source="01ef18e6-dea7-4040-9f0c-09cf33364627" target="c509732f-169b-4358-89dc-959f9c454dbd" relationship="b5a9bc88-897f-47d2-af5d-3e3db749434f"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="628825f7-3477-40d6-bb99-1efc4b3a34fc" targetConnections="22b8474d-1966-40e7-b488-c5f876173e45 488fbcbe-d1f6-48fb-8b79-a87e5bc36465" fillColor="#f0bdbd" elementShape="roundedRectangleShape" zentaElement="05717af4-63f2-44c4-9808-9d0df288db56">
+          <bounds x="720" y="357" width="157"/>
+          <sourceConnection xsi:type="zenta:Connection" id="51284881-788f-455e-b84b-6f6643c64794" lineColor="#000000" source="628825f7-3477-40d6-bb99-1efc4b3a34fc" target="8dd4c59f-e8da-49ee-9733-4a703ec3ad4d" relationship="620af534-1629-40c9-9f6b-86d31b49bb23">
+            <bendpoint startX="-359" startY="1" endX="181" endY="106"/>
+          </sourceConnection>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="c2e04057-371d-4af0-b162-339dabbd93f1" targetConnections="322a5640-c85c-47de-bacd-8143b09f37f2 8aac0929-95fb-45f5-be7e-0e594feffdd1 8e1d62fe-990b-4848-9f49-e666f4795cf5" zentaElement="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+          <bounds x="428" y="56" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="7f3b9f3d-51c5-42bb-a587-849bb42f7b79" zentaElement="b65bbead-06c8-41e8-9832-240488374308">
+          <bounds x="984" y="306" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="017c287f-1406-45ae-8bb2-42b9faf167f6" lineColor="#000000" source="7f3b9f3d-51c5-42bb-a587-849bb42f7b79" target="01ef18e6-dea7-4040-9f0c-09cf33364627" relationship="601eadeb-3d1e-442f-b12e-c2eb6b738f40"/>
+          <sourceConnection xsi:type="zenta:Connection" id="488fbcbe-d1f6-48fb-8b79-a87e5bc36465" lineColor="#000000" source="7f3b9f3d-51c5-42bb-a587-849bb42f7b79" target="628825f7-3477-40d6-bb99-1efc4b3a34fc" relationship="23659f5e-a640-4927-b401-452fc54ac87c"/>
+        </child>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Plateau" id="438ada6f-fc56-4e89-aee8-943fed23754f" ancestor="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5">
+        <documentation>A relatively stable state of the architecture that exists during a limited period of time.</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Gap" id="3dbe077d-2c85-427d-997e-01959e66eeb1" ancestor="bcae85c0-40f5-402e-999b-dd35dfc54604">
+        <documentation>A statement of difference between two plateaus.</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Deliverable" id="6e2ba420-0347-458d-804d-a527f765ccca" ancestor="bcae85c0-40f5-402e-999b-dd35dfc54604">
+        <documentation>A precisely-defined outcome of a work package.</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Work Package" id="695f7437-0e3b-4202-a5bc-b5d3b6239ccd" ancestor="f89ba55a-533e-4ca7-aacc-68559132557f">
+        <documentation>A series of actions identified and designed to achieve specific results within specified time and resource constraints.</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="Implementation Event" id="05717af4-63f2-44c4-9808-9d0df288db56" ancestor="f4424997-a962-48df-a17d-eddd688fb4d5">
+        <documentation>A behavior element that denotes a state change related to implementation or migration.</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="b5a9bc88-897f-47d2-af5d-3e3db749434f" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="695f7437-0e3b-4202-a5bc-b5d3b6239ccd" target="6e2ba420-0347-458d-804d-a527f765ccca"/>
+      <element xsi:type="zenta:BasicRelationship" name="triggers" id="620af534-1629-40c9-9f6b-86d31b49bb23" ancestor="c4affe80-8b23-4fc6-8980-623beff19d7f" source="05717af4-63f2-44c4-9808-9d0df288db56" target="438ada6f-fc56-4e89-aee8-943fed23754f"/>
+      <element xsi:type="zenta:BasicRelationship" name="triggers" id="013d7afc-6bcf-40f8-b451-189cbe5deccd" ancestor="c4affe80-8b23-4fc6-8980-623beff19d7f" source="438ada6f-fc56-4e89-aee8-943fed23754f" target="05717af4-63f2-44c4-9808-9d0df288db56"/>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="9745c28c-e259-4296-8004-cdd3a57a8900" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="438ada6f-fc56-4e89-aee8-943fed23754f" target="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5"/>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="8c17522e-f65d-424c-a805-76e2ccbc7a4a" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="3dbe077d-2c85-427d-997e-01959e66eeb1" target="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5"/>
+      <element xsi:type="zenta:BasicRelationship" name="realizes" id="da381e1b-4701-45ed-935c-9d18ddd73a3a" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="6e2ba420-0347-458d-804d-a527f765ccca" target="592340d9-b38a-472a-bb8d-bd3f0b6ec6a5"/>
+      <element xsi:type="zenta:BasicRelationship" name="is assigned to/has an assigned" id="601eadeb-3d1e-442f-b12e-c2eb6b738f40" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="b65bbead-06c8-41e8-9832-240488374308" target="695f7437-0e3b-4202-a5bc-b5d3b6239ccd"/>
+      <element xsi:type="zenta:BasicRelationship" name="is assigned to/has an assigned" id="23659f5e-a640-4927-b401-452fc54ac87c" ancestor="44768654-4c42-46a0-988f-6ae09ec86e09" source="b65bbead-06c8-41e8-9832-240488374308" target="05717af4-63f2-44c4-9808-9d0df288db56"/>
+    </folder>
+  </folder>
+</zenta:model>
