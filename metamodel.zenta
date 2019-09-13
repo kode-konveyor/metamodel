@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <zenta:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="metamodel" id="869b1632-0b83-4285-aac7-4d22ef85aac4" version="2.2.1">
-  <folder name="0. Metamodel" id="b43bb9ab-73ed-4ed7-9b86-7ab0d63b5f00">
+  <folder name="0. Metamodel" id="metamodel">
     <folder name="2. Constants" id="72da7aad-cb5e-46f0-a0fa-503d86cd360c">
       <folder name="parameter positions" id="e2bd0fbe-22b5-496e-a56d-bbd515d33c01">
         <element xsi:type="zenta:BasicObject" name="1" id="562506d7-6287-43dd-a9ab-daeca22851d5" ancestor="db86cfb5-35ba-4742-859e-f49d04e74f8c"/>
