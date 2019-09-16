@@ -1,5 +1,0 @@
-#!/bin/bash
-set -xe
-ssh-add -l
-. tools/prepare
-make

@@ -1,7 +1,0 @@
-#!/bin/bash
-set -x
-rsync -e "ssh -p 22022" -ar target/ s${ORG_NAME}@repo.kodekonveyor.com:/var/www/repo/metamodel/${ORG_NAME}/$BUILD_NUMBER
-normalized_branch=$(echo $BRANCH|sed 'sA[/_]A.Ag')
-ln -s $BUILD_NUMBER $normalized_branch
-rsync -e "ssh -p 22022" -a $normalized_branch s${ORG_NAME}@repo.kodekonveyor.com:/var/www/repo/metamodel/${ORG_NAME}
-

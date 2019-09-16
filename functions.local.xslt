@@ -10,14 +10,5 @@
 
 	<xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes" omit-xml-declaration="yes"/>
 
-	<!--xsl:template match="element[@xsi:type='Ada:varlistentry']" mode="elementTitle">
-		<xsl:value-of select="@name"/>
-	</xsl:template>
-
-    <xsl:template match="element[@id='basicobject']|connection[@id='basicrelation']" mode="varlistentry">
-    </xsl:template>
-
-    <xsl:template match="folder[property[@key='display']/@value='hidden']" mode="varlist"/-->
-
 </xsl:stylesheet>
 
