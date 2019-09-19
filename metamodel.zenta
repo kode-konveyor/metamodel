@@ -1485,7 +1485,7 @@ They are brownish in color, to make it </documentation>
       </folder>
     </folder>
     <property key="version" value="0.1"/>
-    <property key="fail below" value="0.1"/>
+    <property key="minimum metamodel version" value="0.1"/>
     <property key="minimum toolchain version" value="0.1"/>
   </folder>
   <property key="documentationMarkup" value="MediaWiki"/>
