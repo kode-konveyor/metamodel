@@ -1484,6 +1484,9 @@ They are brownish in color, to make it </documentation>
         <element xsi:type="zenta:BasicRelationship" id="739a99ec-e3a5-4a71-a1ef-e05d1a166d19" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="58b908ce-ae0d-4226-ac0c-cd1c3c67f159" target="c2f93d99-8bbd-4742-9f73-15937394173d"/>
       </folder>
     </folder>
+    <property key="version" value="0.1"/>
+    <property key="fail below" value="0.1"/>
+    <property key="minimum toolchain version" value="0.1"/>
   </folder>
   <property key="documentationMarkup" value="MediaWiki"/>
 </zenta:model>
