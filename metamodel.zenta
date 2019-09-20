@@ -413,7 +413,7 @@ This is the same as Requirement in Common Criteria.
             <element xsi:type="zenta:BasicObject" name="Belongs to a callable" id="9ec9786e-f8e4-4814-9102-993aa7b7ec56" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
 (
-	count(zenta:neighbours($p1,$p2,'uses,2')[@xsi:type='Callable']) 
+	count(zenta:neighbours($p1,$p2,'uses,2')[@xsi:type='Callable']) +
 	count(zenta:neighbours($p1,$p2,'uses,2')[@xsi:type='Service']) 
 ) = 1</documentation>
             </element>
