@@ -41,16 +41,6 @@ count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Package']) &lt; 2</docum
             <property key="fontColor"/>
             <property key="font"/>
           </element>
-          <element xsi:type="zenta:BasicObject" name="Contained in at most one Process Step" id="e98cad1a-fbc5-4807-b259-5b355cfc8df3" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>analysis|
-count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Process Step']) &lt;2
-</documentation>
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-          </element>
           <element xsi:type="zenta:BasicObject" name="Iterates or contained in at most one Process Step" id="d37aff36-3e8d-4795-a0b6-d7113e3575a5" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
 (
@@ -72,10 +62,6 @@ count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Process Step']) &lt;2
               <bounds x="462" y="312" width="283"/>
               <sourceConnection xsi:type="zenta:Connection" id="f08d0a65-f106-4516-ace0-4ec70af1aa88" source="1a8b5fbd-4b74-438b-bf99-9d7f26367923" target="3b5725d8-27a2-4e72-afe1-33ad3681af09" relationship="6fcfe29e-79a0-47bf-9153-2f884186ad1b"/>
             </child>
-            <child xsi:type="zenta:DiagramObject" id="8097f0cd-b51e-4406-af56-97ac54ca8ee7" zentaElement="e98cad1a-fbc5-4807-b259-5b355cfc8df3">
-              <bounds x="462" y="408" width="283"/>
-              <sourceConnection xsi:type="zenta:Connection" id="db07e36f-0d8f-476e-9e17-910e361e8c65" source="8097f0cd-b51e-4406-af56-97ac54ca8ee7" target="3b5725d8-27a2-4e72-afe1-33ad3681af09" relationship="82408763-fd82-4111-937d-1c91a764c6fb"/>
-            </child>
             <child xsi:type="zenta:DiagramObject" id="7cbfee38-4ee5-4a8b-9b68-b3a77c58c2e2" zentaElement="47d08121-4031-4c7a-b6de-1f70c0bb8095">
               <bounds x="462" y="218" width="283"/>
               <sourceConnection xsi:type="zenta:Connection" id="8b64a2be-d793-4de6-813e-8ee4fbcfcb31" source="7cbfee38-4ee5-4a8b-9b68-b3a77c58c2e2" target="3b5725d8-27a2-4e72-afe1-33ad3681af09" relationship="137c7e37-e684-43ac-be8c-5d1037a742b3"/>
@@ -84,7 +70,7 @@ count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Process Step']) &lt;2
               <bounds x="462" y="516" width="283"/>
               <sourceConnection xsi:type="zenta:Connection" id="73775e0f-1a58-484f-971e-4f159acd691f" source="bf35f7b9-101a-4873-a8c8-3bca96c6bd71" target="3b5725d8-27a2-4e72-afe1-33ad3681af09" relationship="4314e21e-e72a-40b2-823f-e5656b62da86"/>
             </child>
-            <child xsi:type="zenta:DiagramObject" id="3b5725d8-27a2-4e72-afe1-33ad3681af09" targetConnections="8b64a2be-d793-4de6-813e-8ee4fbcfcb31 27000398-902e-4f3f-888a-9dc8d77a5489 f08d0a65-f106-4516-ace0-4ec70af1aa88 db07e36f-0d8f-476e-9e17-910e361e8c65 73775e0f-1a58-484f-971e-4f159acd691f 806cb909-fe27-4d86-8baa-d7e741874828 84801e8a-c510-49a5-a7c8-0e398b68ffe3" zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <child xsi:type="zenta:DiagramObject" id="3b5725d8-27a2-4e72-afe1-33ad3681af09" targetConnections="8b64a2be-d793-4de6-813e-8ee4fbcfcb31 27000398-902e-4f3f-888a-9dc8d77a5489 f08d0a65-f106-4516-ace0-4ec70af1aa88 73775e0f-1a58-484f-971e-4f159acd691f 806cb909-fe27-4d86-8baa-d7e741874828 84801e8a-c510-49a5-a7c8-0e398b68ffe3" zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
               <bounds x="120" y="312" width="-1" height="-1"/>
             </child>
             <child xsi:type="zenta:DiagramObject" id="85677c64-a3b5-4b6e-908d-38477a2ac375" zentaElement="29c601a4-7b1c-47ee-9383-15bebbc45f8a">
@@ -1371,7 +1357,6 @@ They are brownish in color, to make it </documentation>
         </element>
         <element xsi:type="zenta:BasicRelationship" id="caa13d0e-92fe-4452-929f-ed6421391a36" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="d2fd8b99-9f25-4a14-8a84-1ddb6dcdc2bd" target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
         <element xsi:type="zenta:BasicRelationship" id="6fcfe29e-79a0-47bf-9153-2f884186ad1b" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="c9346e32-c89b-4eae-8fd5-549682b2df3e" target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-        <element xsi:type="zenta:BasicRelationship" id="82408763-fd82-4111-937d-1c91a764c6fb" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="e98cad1a-fbc5-4807-b259-5b355cfc8df3" target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
         <element xsi:type="zenta:BasicRelationship" id="4314e21e-e72a-40b2-823f-e5656b62da86" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="d37aff36-3e8d-4795-a0b6-d7113e3575a5" target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
         <element xsi:type="zenta:BasicRelationship" id="621351f7-336b-4ec8-ae35-e147b9eea0a1" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="1a095374-c532-44de-86a7-917a1a011ec9" target="d3d4e39d-09a6-4a0f-a985-be922245d850"/>
         <element xsi:type="zenta:BasicRelationship" id="ead4086e-af11-4f08-9c78-deb3625e9ea6" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="3d43468e-1396-443a-bbf9-806f13e1332d" target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
