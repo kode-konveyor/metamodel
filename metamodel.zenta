@@ -23,6 +23,7 @@
 	count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Package']) +
 	count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='External package']) +
 	count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Process Step'])+ 
+	count(zenta:neighbours($p1,$p2,'triggers,2')[@xsi:type='Process Step'])+ 
 	count(zenta:neighbours($p1,$p2,'iterates,2')[@xsi:type='Process Step'])
 ) > 0 
 </documentation>
