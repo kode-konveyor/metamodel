@@ -1369,12 +1369,20 @@ count(zenta:neighbours($p1,$p2,'contains,1')[@xsi:type='Service']) = 1</document
               <bounds x="285" y="193" width="-1" height="-1"/>
               <sourceConnection xsi:type="zenta:Connection" id="21bceb4e-81b3-4b10-a154-cd729df62abf" source="1a8c577f-8132-497c-9b03-8f5d85bb5a34" target="bc17e74f-1c32-44ef-9348-ba0133952a22" relationship="d8f0be8f-855a-4945-a23c-31c7f63606c9"/>
               <sourceConnection xsi:type="zenta:Connection" id="ef795051-3a08-4c81-ac8b-1367ea2bb909" source="1a8c577f-8132-497c-9b03-8f5d85bb5a34" target="9d2738cc-7406-49ae-b083-3112e3e39076" relationship="6753714e-75b1-4128-8997-4c9eb20bfcba"/>
+              <sourceConnection xsi:type="zenta:Connection" id="e1c11cbb-ac81-4972-b673-2c8da1062823" source="1a8c577f-8132-497c-9b03-8f5d85bb5a34" target="c7b98cd1-087b-4246-9be2-d413aea82b92" relationship="1de45c0c-e1d7-4a8c-b095-909b248b5f34"/>
             </child>
             <child xsi:type="zenta:DiagramObject" id="bc17e74f-1c32-44ef-9348-ba0133952a22" targetConnections="21bceb4e-81b3-4b10-a154-cd729df62abf" elementShape="emptyShape" zentaElement="4757b9bf-92f0-4729-9f62-4306c2ece861">
               <bounds x="532" y="123" width="-1" height="-1"/>
             </child>
             <child xsi:type="zenta:DiagramObject" id="9d2738cc-7406-49ae-b083-3112e3e39076" fontColor="#eeeeec" targetConnections="ef795051-3a08-4c81-ac8b-1367ea2bb909" fillColor="#3465a4" elementShape="emptyShape" zentaElement="a2ecc32a-424f-4d2b-8208-cf89957b0206">
               <bounds x="531" y="259" width="-1" height="-1"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject" id="c7b98cd1-087b-4246-9be2-d413aea82b92" targetConnections="e1c11cbb-ac81-4972-b673-2c8da1062823" fillColor="#e9b96e" elementShape="emptyShape" zentaElement="2cb904ef-0cda-422b-82f6-0509c595b8fd">
+              <bounds x="341" y="71" width="-1" height="-1"/>
+              <sourceConnection xsi:type="zenta:Connection" id="3eacb1ac-aaf7-480d-baa9-62dcfdbd97f4" source="c7b98cd1-087b-4246-9be2-d413aea82b92" target="56291942-48a6-4edc-8332-17417c57fe1e" relationship="1dbe4e90-c411-4b6d-abfa-5f84774a4f69"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject" id="56291942-48a6-4edc-8332-17417c57fe1e" fontColor="#fce94f" targetConnections="3eacb1ac-aaf7-480d-baa9-62dcfdbd97f4" fillColor="#8f5902" elementShape="emptyShape" zentaElement="c201ba78-31ad-4afd-aceb-3104776c134d">
+              <bounds x="564" y="24" width="142"/>
             </child>
             <property key="Template"/>
           </element>
@@ -1401,6 +1409,36 @@ count(zenta:neighbours($p1,$p2,'contains,1')[@xsi:type='Service']) = 1</document
             <property key="font"/>
           </element>
           <element xsi:type="zenta:BasicRelationship" name="uses" id="6753714e-75b1-4128-8997-4c9eb20bfcba" ancestor="basicrelation" source="5491f72b-93ec-4ad5-b6a9-2653fe808a03" target="a2ecc32a-424f-4d2b-8208-cf89957b0206">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+          </element>
+          <element xsi:type="zenta:BasicObject" name="Path" id="2cb904ef-0cda-422b-82f6-0509c595b8fd" ancestor="ebc74a50-0298-4c43-8830-d93ede22576b">
+            <property key="fillColor" value="#e9b96e"/>
+            <property key="elementShape" value="emptyShape"/>
+            <property key="textAlignment" value="2"/>
+            <property key="fontColor"/>
+            <property key="font"/>
+          </element>
+          <element xsi:type="zenta:BasicRelationship" name="published at" id="1de45c0c-e1d7-4a8c-b095-909b248b5f34" ancestor="basicrelation" source="5491f72b-93ec-4ad5-b6a9-2653fe808a03" target="2cb904ef-0cda-422b-82f6-0509c595b8fd">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+          </element>
+          <element xsi:type="zenta:BasicObject" name="Path parameter" id="c201ba78-31ad-4afd-aceb-3104776c134d" ancestor="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="fillColor" value="#8f5902"/>
+            <property key="elementShape" value="emptyShape"/>
+            <property key="textAlignment" value="2"/>
+            <property key="fontColor" value="#fce94f"/>
+            <property key="font"/>
+          </element>
+          <element xsi:type="zenta:BasicRelationship" name="contains" id="1dbe4e90-c411-4b6d-abfa-5f84774a4f69" ancestor="basicrelation" source="2cb904ef-0cda-422b-82f6-0509c595b8fd" target="c201ba78-31ad-4afd-aceb-3104776c134d">
             <property key="textPosition" value="1"/>
             <property key="lineDecoration"/>
             <property key="lineColor"/>
