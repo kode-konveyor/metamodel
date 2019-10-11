@@ -934,13 +934,6 @@ count(zenta:neighbours($p1,$p2,'contains,1')[@xsi:type='Property']) = 0</documen
             <property key="font"/>
             <property key="documentationMarkup" value="verbatim"/>
           </element>
-          <element xsi:type="zenta:BasicObject" name="Test Artifact" id="ffbe5058-5089-4c5a-965d-e996df089f8e" ancestor="ebc74a50-0298-4c43-8830-d93ede22576b">
-            <property key="fillColor" value="#4e9a06"/>
-            <property key="elementShape" value="deliverableShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor" value="#fce94f"/>
-            <property key="font"/>
-          </element>
         </folder>
         <folder name="03. DTO and Factory" id="9774aa69-4364-41a2-88a9-0c75c25a2fc8">
           <folder name="Constraints" id="6a1af9fe-c8aa-4648-beca-2e47c5b6b45b">
@@ -1683,14 +1676,6 @@ They are brownish in color, to make it </documentation>
           <property key="font"/>
         </element>
         <element xsi:type="zenta:BasicRelationship" name="is done by/does" id="2bfa7d6a-a8a3-422a-8c65-ac62aba19957" ancestor="basicrelation" source="83af8497-bfef-451b-9bc6-f00d58c8df6a" target="c2f93d99-8bbd-4742-9f73-15937394173d">
-          <property key="textPosition" value="1"/>
-          <property key="lineDecoration"/>
-          <property key="lineColor"/>
-          <property key="fontColor"/>
-          <property key="lineWidth" value="1"/>
-          <property key="font"/>
-        </element>
-        <element xsi:type="zenta:BasicRelationship" name="is implemented by/implements" id="3dd7b0b1-bd9f-4a13-b5d9-9db0200af5b8" ancestor="basicrelation" source="83af8497-bfef-451b-9bc6-f00d58c8df6a" target="1cbb1bec-b874-44cc-ae59-19f17e58d604">
           <property key="textPosition" value="1"/>
           <property key="lineDecoration"/>
           <property key="lineColor"/>
