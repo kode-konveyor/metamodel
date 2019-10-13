@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <zenta:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="metamodel" id="869b1632-0b83-4285-aac7-4d22ef85aac4" version="2.2.1">
   <folder name="0. Metamodel" id="metamodel">
     <folder name="2. Constants" id="72da7aad-cb5e-46f0-a0fa-503d86cd360c">
@@ -66,7 +65,7 @@
 	count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='External package']) +
 	count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Process Step'])+ 
 	count(zenta:neighbours($p1,$p2,'iterates,2')[@xsi:type='Process Step'])
-) > 0 
+) &gt; 0 
 </documentation>
             <property key="fillColor"/>
             <property key="elementShape"/>
@@ -146,7 +145,7 @@ count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Package']) &lt; 2</docum
             <documentation>analysis|
 (
 	count(zenta:neighbours($p1,$p2,'is done by/does,2')[@xsi:type='Process Step']) 
-) > 0 </documentation>
+) &gt; 0 </documentation>
           </element>
         </folder>
         <element xsi:type="zenta:ZentaDiagramModel" name="Process" id="a07058e1-1161-4886-b417-16186a17ad48" connectionRouterType="1">
@@ -176,18 +175,18 @@ count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Package']) &lt; 2</docum
           <documentation>A behaviour which is carried out by either a role or a service.
 Process steps can contain other process steps, behaviours, Services and DTOs
 
-&lt;doctemplate>
+&lt;doctemplate&gt;
 containing neighbours:
-&lt;xpath>
+&lt;xpath&gt;
 	zenta:itemizedList(zenta:neighbours(/,.,'contains,2'))
-&lt;/xpath>
+&lt;/xpath&gt;
 
 debug
 
-&lt;xpath>
+&lt;xpath&gt;
 .
-&lt;/xpath>
-&lt;doctemplate>
+&lt;/xpath&gt;
+&lt;doctemplate&gt;
 </documentation>
           <property key="fillColor" value="#729fcf"/>
           <property key="elementShape" value="roundedRectangleShape"/>
@@ -261,32 +260,32 @@ else
             <documentation>analysis|
 (
 	count(zenta:neighbours($p1,$p2,'determines,2')[@xsi:type='Objective']) 
-) > 0 </documentation>
+) &gt; 0 </documentation>
           </element>
           <element xsi:type="zenta:BasicObject" name="Determines at least one behaviour or Process Step" id="e836d822-8a95-4482-bcf9-215e752f57d9" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
 (
 	count(zenta:neighbours($p1,$p2,'determines,1')[@xsi:type='Process Step']) +
 	count(zenta:neighbours($p1,$p2,'determines,1')[@xsi:type='Behaviour']) 
-) > 0 </documentation>
+) &gt; 0 </documentation>
           </element>
           <element xsi:type="zenta:BasicObject" name="Drives Objectives" id="6fc0b9df-cfd4-4c18-b3c2-4f5ae70da11f" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
 (
 	count(zenta:neighbours($p1,$p2,'drives,1')[@xsi:type='Objective']) 
-) > 0 </documentation>
+) &gt; 0 </documentation>
           </element>
           <element xsi:type="zenta:BasicObject" name="Driven by at least one Policy" id="7599475e-f3aa-4309-b118-48b7f2dfc92d" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
 (
 	count(zenta:neighbours($p1,$p2,'drives,2')[@xsi:type='Policy']) 
-) > 0 </documentation>
+) &gt; 0 </documentation>
           </element>
           <element xsi:type="zenta:BasicObject" name="Belongs to a Process Step" id="c823a5fc-8adb-4649-a149-26549b0fd7da" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
 (
 	count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Process Step']) 
-) > 0 </documentation>
+) &gt; 0 </documentation>
           </element>
           <element xsi:type="zenta:BasicRelationship" id="a567beb4-c613-4ef1-8ba1-e984dbf013a4" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="c823a5fc-8adb-4649-a149-26549b0fd7da" target="behaviour"/>
           <element xsi:type="zenta:BasicObject" name="is implemented by/implements" id="0f884e27-f833-4ddf-9972-5e6e0d8bf96a" ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
@@ -304,7 +303,7 @@ else
 	then
 		(
 	    	count(value[@ancestorName='is implemented by/implements' and @derived != 'true']) 
-		) > 0 
+		) &gt; 0 
     else
         true()
 </documentation>
@@ -482,7 +481,7 @@ This is the same as Requirement in Common Criteria.
               <documentation>design|
 (
 	count(zenta:neighbours($p1,$p2,'referenced as/references,1')[@xsi:type='Position']) 
-) > 0 </documentation>
+) &gt; 0 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject" name="Is of exactly one Business Object" id="51e66785-8879-47b8-9f6b-a4657ad5b101" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
@@ -621,19 +620,19 @@ zenta:neighboursRun1($p1,$p2,'has an example as/is an example of,2;is of/is type
             </element>
             <element xsi:type="zenta:BasicObject" name="Used by at least one behaviour" id="73d62603-8090-48bb-aaf0-e007cd8c678c" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>analysis|
-count(zenta:neighbours($p1,$p2,'uses,2')[@xsi:type='Behaviour' or @xsi:type='Process Step'])  > 0 </documentation>
+count(zenta:neighbours($p1,$p2,'uses,2')[@xsi:type='Behaviour' or @xsi:type='Process Step'])  &gt; 0 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject" name="Have an example test artifact" id="8b1646fc-8cc0-408c-ab26-d0e92bc37cc1" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
 (
  count(zenta:neighbours($p1,$p2,'has an example as/is an example of,1')[@xsi:type='Test Artifact'])
-)  > 0 </documentation>
+)  &gt; 0 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject" name="Is an example of a Business object" id="09013e90-dc7f-403d-b4fd-6e7ca4f3c4e8" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
 (
  count(zenta:neighbours($p1,$p2,'has an example as/is an example of,2')[@xsi:type='Business Object'])
-)  > 0 </documentation>
+)  &gt; 0 </documentation>
             </element>
           </folder>
           <element xsi:type="zenta:ZentaDiagramModel" name="Data abstractions" id="09f37258-3f04-4b9c-b8d0-86f7a1c8a30b">
@@ -751,7 +750,7 @@ Abstract entities are white, and they are not meant to show up in any model.
               <documentation>design|
 if ($p2/@xsi:type = 'Project')
 then
-  count(zenta:neighbours($p1,$p2,'contains,1')[@xsi:type='Package']) >0
+  count(zenta:neighbours($p1,$p2,'contains,1')[@xsi:type='Package']) &gt;0
 else
   true()</documentation>
               <property key="fillColor"/>
@@ -858,7 +857,7 @@ Projects can contain packages.
             <element xsi:type="zenta:BasicRelationship" id="1e5284b6-e21c-448f-8e39-db47dbee0dca" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="1dec51d2-ac56-4384-aae3-94d4fc1d8e35" target="ffbe5058-5089-4c5a-965d-e996df089f8e"/>
             <element xsi:type="zenta:BasicObject" name="documents the contents of the artifact" id="189dbb19-8dd0-41be-b596-4e29c9210ff9" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
-string-length($p2/documentation) > 0</documentation>
+string-length($p2/documentation) &gt; 0</documentation>
             </element>
             <element xsi:type="zenta:BasicRelationship" id="b7704924-d377-479e-a6d0-18a53679c1c2" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="189dbb19-8dd0-41be-b596-4e29c9210ff9" target="ffbe5058-5089-4c5a-965d-e996df089f8e"/>
           </folder>
@@ -934,14 +933,13 @@ count(zenta:neighbours($p1,$p2,'contains,1')[@xsi:type='Property']) = 0</documen
             <property key="font"/>
             <property key="documentationMarkup" value="verbatim"/>
           </element>
-          <element xsi:type="zenta:BasicObject" name="Test Artifact" id="ffbe5058-5089-4c5a-965d-e996df089f8e" ancestor="ebc74a50-0298-4c43-8830-d93ede22576b">
+        <element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:BasicObject" name="Test Artifact" id="ffbe5058-5089-4c5a-965d-e996df089f8e" ancestor="ebc74a50-0298-4c43-8830-d93ede22576b" parent="7252f99a-6d3f-4f4c-b56f-d0ac99b4e573">
             <property key="fillColor" value="#4e9a06"/>
             <property key="elementShape" value="deliverableShape"/>
             <property key="textAlignment" value="2"/>
             <property key="fontColor" value="#fce94f"/>
             <property key="font"/>
-          </element>
-        </folder>
+         </element></folder>
         <folder name="03. DTO and Factory" id="9774aa69-4364-41a2-88a9-0c75c25a2fc8">
           <folder name="Constraints" id="6a1af9fe-c8aa-4648-beca-2e47c5b6b45b">
             <element xsi:type="zenta:ZentaDiagramModel" name="Constraints" id="05b91807-f65c-490f-bdab-461b578d9a91">
@@ -1105,7 +1103,7 @@ In Python a service have a single public method called “call”, all other met
               <documentation>design|
 (
 	count(zenta:neighbours($p1,$p2,'contributes to/uses,2')[@xsi:type='Service']) 
-) > 0 </documentation>
+) &gt; 0 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject" name="Uses exactly one DTO" id="a6bf1172-55e3-4c19-ab6f-55ef263beda4" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
@@ -1380,7 +1378,33 @@ count(zenta:neighbours($p1,$p2,'contains,1')[@xsi:type='Service']) = 1</document
             </element>
             <element xsi:type="zenta:BasicRelationship" id="cec2df3e-e2eb-4e1a-be03-467cb5c71328" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="8918517c-5b91-451e-9f8e-b85941366c87" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
             <element xsi:type="zenta:BasicRelationship" id="bc7c86dd-d53c-4597-9a4f-3aaf6ff363ef" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="dfa48e70-73bc-41ec-9d59-fa14ae908411" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
-          </folder>
+          <element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:BasicObject" name="Has path" id="0ec99e0e-e766-47ec-8e20-1c94a0a662a4" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f" parent="bad3e8a6-f05e-41f6-bf66-c7a0b90af27c">
+         <documentation>design|
+count(zenta:neighbours($p1,$p2,'published at,1')[@xsi:type='Path']) = 1</documentation>
+      </element><element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:BasicObject" name="Uses HTTP method" id="07fcd486-def7-42ba-8395-806d8721c758" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f" parent="bad3e8a6-f05e-41f6-bf66-c7a0b90af27c">
+         <documentation>design|
+count(zenta:neighbours($p1,$p2,'uses,1')[@xsi:type='HTTP method']) = 1</documentation>
+      </element><element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:BasicRelationship" id="79028f8e-ed0e-4246-bb44-3eb3b3519016" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="0ec99e0e-e766-47ec-8e20-1c94a0a662a4" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03" parent="bad3e8a6-f05e-41f6-bf66-c7a0b90af27c"/><element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:BasicRelationship" id="d9c269ce-ce35-4c75-be1a-a3e639f24441" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="07fcd486-def7-42ba-8395-806d8721c758" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03" parent="bad3e8a6-f05e-41f6-bf66-c7a0b90af27c"/><element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:ZentaDiagramModel" name="Constraints" id="f1074a38-fd7a-4e04-90d1-b4ac46c85a17" parent="bad3e8a6-f05e-41f6-bf66-c7a0b90af27c">
+            <child xsi:type="zenta:DiagramObject" id="456881a2-bf3e-4f84-b968-f60cdd375f8b" zentaElement="dfa48e70-73bc-41ec-9d59-fa14ae908411">
+                <bounds x="503" y="342" width="-1" height="-1"/>
+                <sourceConnection xsi:type="zenta:Connection" id="9d594a78-9b2b-4ea4-a46b-760965af8cad" source="456881a2-bf3e-4f84-b968-f60cdd375f8b" target="46efb074-beff-41ca-9137-4fe7381aeedb" relationship="bc7c86dd-d53c-4597-9a4f-3aaf6ff363ef"/>
+              </child>
+            <child xsi:type="zenta:DiagramObject" id="5149fad9-538e-49d1-9669-e08bd5a50092" zentaElement="8918517c-5b91-451e-9f8e-b85941366c87">
+                <bounds x="324" y="342" width="-1" height="-1"/>
+                <sourceConnection xsi:type="zenta:Connection" id="9cec2983-c733-463f-b176-882c8b4cb42c" source="5149fad9-538e-49d1-9669-e08bd5a50092" target="46efb074-beff-41ca-9137-4fe7381aeedb" relationship="cec2df3e-e2eb-4e1a-be03-467cb5c71328"/>
+              </child>
+            <child xsi:type="zenta:DiagramObject" id="46efb074-beff-41ca-9137-4fe7381aeedb" targetConnections="9cec2983-c733-463f-b176-882c8b4cb42c 9d594a78-9b2b-4ea4-a46b-760965af8cad 8d7893ee-7bff-4dfb-9135-aa13bd315e9b 7d598f94-4989-45cb-8b9d-af19ff1f82f5" zentaElement="5491f72b-93ec-4ad5-b6a9-2653fe808a03">
+                <bounds x="216" y="192" width="157"/>
+              </child>
+            <child xsi:type="zenta:DiagramObject" id="9b418b47-795e-4743-9c2a-c591faeae26c" zentaElement="0ec99e0e-e766-47ec-8e20-1c94a0a662a4">
+                <bounds x="145" y="342" width="-1" height="-1"/>
+                <sourceConnection xsi:type="zenta:Connection" id="8d7893ee-7bff-4dfb-9135-aa13bd315e9b" source="9b418b47-795e-4743-9c2a-c591faeae26c" target="46efb074-beff-41ca-9137-4fe7381aeedb" relationship="79028f8e-ed0e-4246-bb44-3eb3b3519016"/>
+              </child>
+            <child xsi:type="zenta:DiagramObject" id="93341a47-1dc8-4219-82a8-34b94ef62692" zentaElement="07fcd486-def7-42ba-8395-806d8721c758">
+                <bounds x="-36" y="339" height="61"/>
+                <sourceConnection xsi:type="zenta:Connection" id="7d598f94-4989-45cb-8b9d-af19ff1f82f5" source="93341a47-1dc8-4219-82a8-34b94ef62692" target="46efb074-beff-41ca-9137-4fe7381aeedb" relationship="d9c269ce-ce35-4c75-be1a-a3e639f24441"/>
+              </child>
+         </element></folder>
           <element xsi:type="zenta:ZentaDiagramModel" name="Controller" id="5e5e9be4-b7ec-4ccc-8a3f-acadc5f41006">
             <child xsi:type="zenta:DiagramObject" id="1a8c577f-8132-497c-9b03-8f5d85bb5a34" fillColor="#8ae234" elementShape="roundedRectangleShape" zentaElement="5491f72b-93ec-4ad5-b6a9-2653fe808a03">
               <bounds x="285" y="193" width="-1" height="-1"/>
@@ -1515,7 +1539,40 @@ count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Service']) &lt; 0</docum
             <element xsi:type="zenta:BasicRelationship" id="750e3b3a-eaaf-4ce5-ac81-5eba68332bbf" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="4502f061-802d-43e9-b429-deb1bc4ff385" target="537f012f-2ae2-476c-804e-d8d835cd7c54"/>
             <element xsi:type="zenta:BasicRelationship" id="aac513d9-44c3-4ef9-b14d-fa38f5ea164a" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="6e700f59-386b-45f2-9c53-6ba14db35f62" target="537f012f-2ae2-476c-804e-d8d835cd7c54"/>
             <element xsi:type="zenta:BasicRelationship" id="ac439c8a-d826-4967-b9d4-c30b0370aa78" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="75c88dc9-f8b4-4315-8bf4-7989930c2f55" target="537f012f-2ae2-476c-804e-d8d835cd7c54"/>
-          </folder>
+          <element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:BasicObject" name="Entity" id="dc030e1c-7c6c-4479-8030-c001aa814e9d" ancestor="41b4d079-dbd5-4df2-91db-6a596661ab0d" parent="ac65e2e9-896e-4c2c-a4c9-3ac7cb0c49f9"/><element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:BasicObject" name="Only CRUD or existing query operations" id="0fbc4f57-24ed-4896-895e-71a1b8179290" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f" parent="ac65e2e9-896e-4c2c-a4c9-3ac7cb0c49f9">
+         <documentation>design|
+count(zenta:neighbours($p1,$p2,'operates on,2')[@xsi:type='Service']) &gt; 0</documentation>
+      </element><element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:BasicRelationship" id="65d3fd8d-3ff4-4be3-a6ac-11d34616d68f" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="75c88dc9-f8b4-4315-8bf4-7989930c2f55" target="dc030e1c-7c6c-4479-8030-c001aa814e9d" parent="ac65e2e9-896e-4c2c-a4c9-3ac7cb0c49f9"/><element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:BasicRelationship" id="6fc6add6-5074-417d-90c9-f5df3b949fc9" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="0fbc4f57-24ed-4896-895e-71a1b8179290" target="dc030e1c-7c6c-4479-8030-c001aa814e9d" parent="ac65e2e9-896e-4c2c-a4c9-3ac7cb0c49f9"/><element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:ZentaDiagramModel" name="Constraints" id="70c8e074-8f51-4272-92c6-d8e3fc7558f9" parent="ac65e2e9-896e-4c2c-a4c9-3ac7cb0c49f9">
+            <child xsi:type="zenta:DiagramObject" id="8597a225-efc4-4f6e-a5d7-db0a5724cdfe" zentaElement="4502f061-802d-43e9-b429-deb1bc4ff385">
+                <bounds x="212" y="324" width="149" height="73"/>
+                <sourceConnection xsi:type="zenta:Connection" id="fcbb39e2-2050-4aac-ab39-ff9ec2976dd3" source="8597a225-efc4-4f6e-a5d7-db0a5724cdfe" target="43c5cb60-d1f6-4117-9653-a25512f9c5c6" relationship="ae87d38e-7095-4977-a718-586dbf84ebe4"/>
+                <sourceConnection xsi:type="zenta:Connection" id="4631972a-7930-4cf5-9641-a823ce41e203" source="8597a225-efc4-4f6e-a5d7-db0a5724cdfe" target="b8e14a33-baec-4272-9301-fe09ade8baff" relationship="750e3b3a-eaaf-4ce5-ac81-5eba68332bbf"/>
+              </child>
+            <child xsi:type="zenta:DiagramObject" id="4344e2a2-0bef-4cff-a549-af98e30d383e" zentaElement="6e700f59-386b-45f2-9c53-6ba14db35f62">
+                <bounds x="422" y="325" width="131" height="72"/>
+                <sourceConnection xsi:type="zenta:Connection" id="5135ffdd-52bb-45fb-8ea0-0652639cb11b" source="4344e2a2-0bef-4cff-a549-af98e30d383e" target="b8e14a33-baec-4272-9301-fe09ade8baff" relationship="aac513d9-44c3-4ef9-b14d-fa38f5ea164a"/>
+              </child>
+            <child xsi:type="zenta:DiagramObject" id="17ff90e2-6981-406f-9ebc-16c75b15bfa3" zentaElement="75c88dc9-f8b4-4315-8bf4-7989930c2f55">
+                <bounds x="612" y="325" width="121" height="72"/>
+                <sourceConnection xsi:type="zenta:Connection" id="48cd6d04-2b0d-4f9b-8a2f-6ac2bb6bde66" source="17ff90e2-6981-406f-9ebc-16c75b15bfa3" target="388578c1-0e0e-4725-8b6c-563cf268ebd8" relationship="65d3fd8d-3ff4-4be3-a6ac-11d34616d68f"/>
+              </child>
+            <child xsi:type="zenta:DiagramObject" id="43c5cb60-d1f6-4117-9653-a25512f9c5c6" targetConnections="fcbb39e2-2050-4aac-ab39-ff9ec2976dd3" zentaElement="e6913ab1-73c3-424a-9724-72196f6f3327">
+                <bounds x="227" y="144" width="-1" height="-1"/>
+              </child>
+            <child xsi:type="zenta:DiagramObject" id="b8e14a33-baec-4272-9301-fe09ade8baff" targetConnections="4631972a-7930-4cf5-9641-a823ce41e203 5135ffdd-52bb-45fb-8ea0-0652639cb11b" zentaElement="537f012f-2ae2-476c-804e-d8d835cd7c54">
+                <bounds x="516" y="144" width="-1" height="-1"/>
+              </child>
+            <child xsi:type="zenta:DiagramObject" id="388578c1-0e0e-4725-8b6c-563cf268ebd8" targetConnections="48cd6d04-2b0d-4f9b-8a2f-6ac2bb6bde66 85de2cf7-e4ce-4e6c-8f1d-e4453e23da04" zentaElement="dc030e1c-7c6c-4479-8030-c001aa814e9d">
+                <bounds x="876" y="144" width="-1" height="-1"/>
+              </child>
+            <child xsi:type="zenta:DiagramObject" id="6cec2481-33c0-4929-b00c-fed9c5ab5161" zentaElement="0fbc4f57-24ed-4896-895e-71a1b8179290">
+                <bounds x="876" y="333" height="88"/>
+                <sourceConnection xsi:type="zenta:Connection" id="85de2cf7-e4ce-4e6c-8f1d-e4453e23da04" source="6cec2481-33c0-4929-b00c-fed9c5ab5161" target="388578c1-0e0e-4725-8b6c-563cf268ebd8" relationship="6fc6add6-5074-417d-90c9-f5df3b949fc9"/>
+              </child>
+         </element><element xmlns:html="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xsi:type="zenta:BasicObject" name="Called by at least 1 Service" id="75c88dc9-f8b4-4315-8bf4-7989930c2f55" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f" parent="ac65e2e9-896e-4c2c-a4c9-3ac7cb0c49f9">
+            <documentation>design|
+count(zenta:neighbours($p1,$p2,'operates on,2')[@xsi:type='Service']) &gt; 0</documentation>
+         </element></folder>
           <element xsi:type="zenta:ZentaDiagramModel" name="Repository" id="8187a3d8-75e1-45ad-a867-2668bdf23cca">
             <child xsi:type="zenta:DiagramObject" id="d40e0899-0313-4982-8411-74f96b04d205" targetConnections="13e38d10-13f4-4ff3-a7fc-d7e94cd73122" fillColor="#729fcf" elementShape="roundedRectangleShape" zentaElement="2bbbf382-654f-48ce-954d-38c6821e67dd">
               <bounds x="657" y="70" width="-1" height="-1"/>
@@ -1683,14 +1740,6 @@ They are brownish in color, to make it </documentation>
           <property key="font"/>
         </element>
         <element xsi:type="zenta:BasicRelationship" name="is done by/does" id="2bfa7d6a-a8a3-422a-8c65-ac62aba19957" ancestor="basicrelation" source="83af8497-bfef-451b-9bc6-f00d58c8df6a" target="c2f93d99-8bbd-4742-9f73-15937394173d">
-          <property key="textPosition" value="1"/>
-          <property key="lineDecoration"/>
-          <property key="lineColor"/>
-          <property key="fontColor"/>
-          <property key="lineWidth" value="1"/>
-          <property key="font"/>
-        </element>
-        <element xsi:type="zenta:BasicRelationship" name="is implemented by/implements" id="3dd7b0b1-bd9f-4a13-b5d9-9db0200af5b8" ancestor="basicrelation" source="83af8497-bfef-451b-9bc6-f00d58c8df6a" target="1cbb1bec-b874-44cc-ae59-19f17e58d604">
           <property key="textPosition" value="1"/>
           <property key="lineDecoration"/>
           <property key="lineColor"/>
