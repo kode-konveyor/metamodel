@@ -17,6 +17,9 @@ metamodel.rich
 metamodel.richescape
 metamodel.tabled.docbook
 metamodel.tabled.html
+metamodel.interfaces
+metamodel.stubs
+metamodel.testdata
 /metamodel/
 issuesReport.json
 zentaworkaround
