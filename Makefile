@@ -26,4 +26,4 @@ zentaworkaround:
 
 shippable: metamodel.compiled
 	mkdir -p shippable
-	cp metamodel shippable
+	mv metamodel shippable
