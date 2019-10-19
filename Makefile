@@ -4,7 +4,8 @@ export GITHUB_ORGANIZATION=kode-konveyor
 export SONAR_ORG=$(GITHUB_ORGANIZATION)
 export LANGUAGE=java
 
-all: metamodel.compiled
+install: target zentaworkaround compile 
+	cp -rf metamodel/* target
 
 inputs/metamodel.issues.xml:
 	mkdir -p inputs
@@ -14,3 +15,13 @@ include /usr/share/zenta-tools/model.rules
 
 clean:
 	git clean -fdx
+
+inputs/metamodel.issues.xml: 
+	mkdir -p inputs
+	touch inputs/metamodel.issues.xml
+
+zentaworkaround:
+	mkdir -p ~/.zenta/.metadata/.plugins/org.eclipse.e4.workbench/
+	cp /usr/local/toolchain/etc/workbench.xmi ~/.zenta/.metadata/.plugins/org.eclipse.e4.workbench/
+	touch zentaworkaround
+

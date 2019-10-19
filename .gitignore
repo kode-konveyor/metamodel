@@ -25,3 +25,6 @@ issuesReport.json
 zentaworkaround
 /build/
 /inputs
+metamodel.interfaces
+metamodel.stubs
+metamodel.testdata
