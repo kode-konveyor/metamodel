@@ -4,7 +4,7 @@ export GITHUB_ORGANIZATION=kode-konveyor
 export SONAR_ORG=$(GITHUB_ORGANIZATION)
 export LANGUAGE=java
 
-install: zentaworkaround compile shippable
+install: zentaworkaround metamodel.compiled shippable
 
 inputs/metamodel.issues.xml:
 	mkdir -p inputs
@@ -24,6 +24,6 @@ zentaworkaround:
 	cp /usr/local/toolchain/etc/workbench.xmi ~/.zenta/.metadata/.plugins/org.eclipse.e4.workbench/
 	touch zentaworkaround
 
-shippable:
+shippable: metamodel.compiled
 	mkdir -p shippable
 	cp metamodel shippable
