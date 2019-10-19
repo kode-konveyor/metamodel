@@ -23,6 +23,6 @@ inputs/metamodel.issues.xml:
 
 zentaworkaround:
 	mkdir -p ~/.zenta/.metadata/.plugins/org.eclipse.e4.workbench/
-	cp workbench.xmi ~/.zenta/.metadata/.plugins/org.eclipse.e4.workbench/
+	cp /usr/local/toolchain/etc/workbench.xmi ~/.zenta/.metadata/.plugins/org.eclipse.e4.workbench/
 	touch zentaworkaround
 
