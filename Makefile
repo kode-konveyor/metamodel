@@ -1,6 +1,6 @@
 all: install
 
-install: target compile 
+install: target zentaworkaround compile 
 	cp -rf metamodel/* target
 
 target:
