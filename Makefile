@@ -1,21 +1,19 @@
-all: install
+export MODEL_BASENAME=metamodel
+export REPO_NAME=metamodel
+export GITHUB_ORGANIZATION=kode-konveyor
+export SONAR_ORG=$(GITHUB_ORGANIZATION)
+export LANGUAGE=java
 
-install: target zentaworkaround compile 
-	cp -rf metamodel/* target
+install: zentaworkaround metamodel.compiled shippable
 
-target:
-	mkdir -p target
-
-compile: zentaworkaround metamodel.compiled 
+inputs/metamodel.issues.xml:
+	mkdir -p inputs
+	touch inputs/metamodel.issues.xml
 
 include /usr/share/zenta-tools/model.rules
 
-testenv:
-	./tools/testenv
-
 clean:
 	git clean -fdx
-	rm -rf zenta-tools
 
 inputs/metamodel.issues.xml: 
 	mkdir -p inputs
@@ -26,3 +24,6 @@ zentaworkaround:
 	cp /usr/local/toolchain/etc/workbench.xmi ~/.zenta/.metadata/.plugins/org.eclipse.e4.workbench/
 	touch zentaworkaround
 
+shippable: metamodel.compiled
+	mkdir -p shippable
+	mv metamodel shippable
