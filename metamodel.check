@@ -2,7 +2,7 @@
 <check
 		title="Model Errors"
       	modelfile="metamodel.rich"
-      	modelbasepath="//error"
+      	modelbasepath="//error[stage/@value='analysis']"
       	modelnamepath="@type"
       	modelvaluepath="concat(//element[@id=current()/@element]/@name,' ',@name)"
         modelerrorid="$p1/object/error/@errorID"
@@ -14,6 +14,6 @@
         inputerrorid="$p1"
         errorURL="concat('http://repo.kodekonveyor.com/metamodel/kode-konveyor/master/index.html#',$p1)"
         errortitlestring="zenta:modelErrorTitle($p1,$p4)"
-        errordescription="zenta:modelErrorDescription($p1,$p4)"
+        errordescription="zenta:modelErrorDescription($p1,$p4,$p5)"
       	/>
 </checks>
