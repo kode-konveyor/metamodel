@@ -467,7 +467,7 @@ count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Constant Provider' or @x
         </folder>
         <folder name="1. Thing, Constraint and Derived Relation" id="946a1207-2823-4f26-99be-885337df20bc">
           <element xsi:type="zenta:ZentaDiagramModel" name="Thing and Constraint" id="5c552d2e-6871-4ab8-88e3-41a127bffc0b">
-            <child xsi:type="zenta:DiagramObject" id="a20ec03b-1bcb-49ad-aa7a-0476f1529faf" targetConnections="37c14725-8ac6-4e1f-82fe-17880d638d9d b3f54516-2608-4555-a870-d78baacd955f 1264743d-ab07-48ef-b8f7-94ae63c89ecd" zentaElement="thing">
+            <child xsi:type="zenta:DiagramObject" id="a20ec03b-1bcb-49ad-aa7a-0476f1529faf" targetConnections="37c14725-8ac6-4e1f-82fe-17880d638d9d b3f54516-2608-4555-a870-d78baacd955f 1264743d-ab07-48ef-b8f7-94ae63c89ecd b7f74039-a428-4303-8c0b-c4d388737eb8" zentaElement="thing">
               <bounds x="158" y="56" width="-1" height="-1"/>
             </child>
             <child xsi:type="zenta:DiagramObject" id="457298f6-0030-4f95-aadf-3a4057864668" zentaElement="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
@@ -485,6 +485,10 @@ count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Constant Provider' or @x
             </child>
             <child xsi:type="zenta:DiagramObject" id="2517393a-6a18-4dac-b5af-764636755696" targetConnections="6e5031be-c87a-4ee4-a92c-3a17449e8175" zentaElement="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
               <bounds x="377" y="398" width="-1" height="-1"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject" id="029687a2-ddfc-4d15-aa2b-3e4ad6aef4ff" zentaElement="behaviour">
+              <bounds x="93" y="317" width="-1" height="-1"/>
+              <sourceConnection xsi:type="zenta:Connection" id="b7f74039-a428-4303-8c0b-c4d388737eb8" source="029687a2-ddfc-4d15-aa2b-3e4ad6aef4ff" target="a20ec03b-1bcb-49ad-aa7a-0476f1529faf" relationship="85fe4cc6-d5d4-44a1-b927-5a0795d410ae"/>
             </child>
             <property key="Template"/>
           </element>
@@ -527,6 +531,14 @@ count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Constant Provider' or @x
           <element xsi:type="zenta:BasicRelationship" name="contains" id="f9bf6994-4d9c-4c50-b9ad-e2e11b94ff2e" ancestor="basicrelation" source="36a15a23-a4a0-40b5-901b-310f3a1df0c7" target="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
             <property key="textPosition" value="1"/>
             <property key="lineDecoration" value="DiamondSourceDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+          </element>
+          <element xsi:type="zenta:BasicRelationship" name="concerns" id="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" ancestor="basicrelation" source="behaviour" target="thing">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration"/>
             <property key="lineColor"/>
             <property key="fontColor"/>
             <property key="lineWidth" value="1"/>
@@ -678,6 +690,10 @@ $p2/@xsi:type='External type' or
             </child>
             <child xsi:type="zenta:DiagramObject" id="74594b41-cc36-4655-bdce-bc77110ce240" targetConnections="8bbf7764-85c6-4378-a596-7ffcf9b8c049 43adb9d4-c63c-4c18-a854-a76036537676" zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
               <bounds x="756" y="84" width="-1" height="-1"/>
+              <sourceConnection xsi:type="zenta:Connection" id="e75308c8-e681-43d5-8569-0c507c467961" source="74594b41-cc36-4655-bdce-bc77110ce240" target="438e1796-5630-4826-bb2a-2b49f5b2b22a" lineDecoration="SmallEndArrowDecoration" relationship="e11d172b-16d0-4a7c-bb81-15e02cb53724"/>
+              <sourceConnection xsi:type="zenta:Connection" id="d5aa67f5-e3c1-41a5-a855-d3b529525905" source="74594b41-cc36-4655-bdce-bc77110ce240" target="438e1796-5630-4826-bb2a-2b49f5b2b22a" lineDecoration="DiamondSourceDecoration SmallEndArrowDecoration" relationship="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42">
+                <bendpoint startX="106" startY="-11" endX="-155" endY="-112"/>
+              </sourceConnection>
             </child>
             <child xsi:type="zenta:DiagramObject" id="2f9471c1-0494-4e0a-8c31-8685fd309546" targetConnections="7b429b8f-341a-4ec2-b452-fbb52d1d0dbe 1c21be6b-1718-49b7-b286-187ce89fbc1a" fillColor="#fcaf3e" elementShape="emptyShape" zentaElement="dto">
               <bounds x="444" y="192" width="-1" height="-1"/>
@@ -707,6 +723,9 @@ $p2/@xsi:type='External type' or
               <bounds x="864" y="408" width="-1" height="-1"/>
               <sourceConnection xsi:type="zenta:Connection" id="b67273ca-9c7f-4d51-89d0-54a9ee55942d" source="17559dd5-a156-43d5-afa6-9132b756868d" target="7b7bcf4b-18a3-4b9e-8a7d-d45e8851deb9" relationship="4d965db2-a259-46c7-8432-e0a8ace6901e"/>
             </child>
+            <child xsi:type="zenta:DiagramObject" id="438e1796-5630-4826-bb2a-2b49f5b2b22a" targetConnections="e75308c8-e681-43d5-8569-0c507c467961 d5aa67f5-e3c1-41a5-a855-d3b529525905" zentaElement="thing">
+              <bounds x="1017" y="185" width="-1" height="-1"/>
+            </child>
             <property key="Template"/>
           </element>
           <element xsi:type="zenta:BasicObject" name="Business Object" id="267f4d47-e1e6-4af4-8677-3cf65fc8db86" ancestor="thing">
@@ -723,18 +742,7 @@ It does not have implementation, but tightly coupled with a type which has.
           <element xsi:type="zenta:BasicObject" name="DTO" id="dto" ancestor="type">
             <documentation>DTO is used to hold a data object. It is transparent and have no business logic.
 
-A DTO is placed in a data subpackage in the production code hierarchy
 
-In java it is a class with no methods, just private fields, and Lombok @Getter, @Setter and possibly @EqualsAndHashCode annotations. A DTO have no explicit constructor, its constructor should not be used, except in its factory. A DTO is placed in the package designated by the architect.
-
-A DTO have an associated factory responsible for creating it. A creation of a DTO instance in production code should only be initiated using its factory.
-
-As all aspects of the DTO is determined by the architect, it is good practice to generate it.
-
-invariants hashcode, toString and equals may be implemented in a subclass. In this case that subclass should be used throughout the rest of the code. This rule 
-may change later as more experience is gathered, as this breaks the rule that a DTO should not have logic.
-
-In python a DTO is a class with @DTO decorator, and propery type-annotated fields, initialized as None. No methods, not even __init__.
 </documentation>
             <property key="fillColor" value="#fcaf3e"/>
             <property key="elementShape" value="emptyShape"/>
@@ -750,6 +758,7 @@ In python a DTO is a class with @DTO decorator, and propery type-annotated field
             <property key="font"/>
           </element>
           <element xsi:type="zenta:BasicObject" name="Entity" id="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2" ancestor="dto">
+            <documentation>An Entity is a data object which is persisted</documentation>
             <property key="fillColor" value="#f57900"/>
             <property key="elementShape" value="emptyShape"/>
             <property key="textAlignment" value="2"/>
@@ -774,6 +783,22 @@ In python a DTO is a class with @DTO decorator, and propery type-annotated field
           <element xsi:type="zenta:BasicRelationship" name="is a/is the type of" id="2c93b411-5f2f-4488-a34b-1b7d60e67b32" ancestor="basicrelation" source="ffbe5058-5089-4c5a-965d-e996df089f8e" target="type">
             <property key="textPosition" value="1"/>
             <property key="lineDecoration" value="BigArrowSourceDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+          </element>
+          <element xsi:type="zenta:BasicRelationship" name="has" id="e11d172b-16d0-4a7c-bb81-15e02cb53724" ancestor="basicrelation" source="267f4d47-e1e6-4af4-8677-3cf65fc8db86" target="thing">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+          </element>
+          <element xsi:type="zenta:BasicRelationship" name="aggregates" id="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" ancestor="basicrelation" source="267f4d47-e1e6-4af4-8677-3cf65fc8db86" target="thing">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DiamondSourceDecoration SmallEndArrowDecoration"/>
             <property key="lineColor"/>
             <property key="fontColor"/>
             <property key="lineWidth" value="1"/>
@@ -840,6 +865,8 @@ count(zenta:neighbours($p1,$p2,'contains,2')) = 1</documentation>
             <property key="font"/>
           </element>
           <element xsi:type="zenta:BasicObject" name="Enum" id="833d959e-228d-4954-a74f-90c355ac36a3" ancestor="type">
+            <documentation>An enum holds constants denoting a limited set of choices.
+</documentation>
             <property key="fillColor" value="#e9b96e"/>
             <property key="elementShape" value="meaningShape"/>
             <property key="textAlignment" value="2"/>
@@ -1009,29 +1036,9 @@ count(zenta:neighbours($p1,$p2,'contains,1')[@xsi:type='Property']) = 0</documen
             <property key="fontColor"/>
             <property key="font"/>
           </element>
-          <element xsi:type="zenta:BasicObject" name="TestData" id="9ec42823-7056-4e73-b1f4-600a066c8d88" ancestor="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a">
-            <documentation>modeled
-
-A set of constants for testing.
-
-Test data contains the test artifacts. This is the set of inputs and corresponding outputs which pins the contract of the services. Test artifacts can be stubs describing the behaviour of parameters or actual data.
-
-The test data for basic non-error behaviour should be provided by architects, and each data which is an easy conversation of another data should be defined using the conversation. This improves integration consistency.
-
-Dependencies between test data units should be noncircular. Test data is placed in the same subsystem in the test hierarchy as the corresponding Service.
-Test data should not reference production code in any way. If the constant is needed, it should be copied over to test data.
-
-In Java: 
-* it is a class
-* The test artifacts are in public fields
-* The functions generating the test artifacts are private methods.
-* DTOs and other test data units are instantiated using new.
-
-In Python:
-
-* test data units are classes ending as TestData, and beginning with the name of the package or service they are related.
-* all methods of test data units are private (start with ‘_’)
-* other test data units are instantiated in the constructor by “calling them”
+          <element xsi:type="zenta:BasicObject" name="Test Data" id="9ec42823-7056-4e73-b1f4-600a066c8d88" ancestor="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a">
+            <documentation>Test data contains the test artifacts. This is the set of inputs and corresponding outputs which pins the contract of the services.
+Test artifacts are actual data in case of DTOs and Entities, and actual data or mocks describing the behaviour in case of legacy objects.
 </documentation>
             <property key="fillColor" value="#8ae234"/>
             <property key="elementShape" value="meaningShape"/>
@@ -1109,11 +1116,6 @@ count(zenta:neighbours($p1,$p2,'results,2')[@xsi:type='Repository']) = 1</docume
           <element xsi:type="zenta:BasicObject" name="Factory" id="c5f0762f-8e64-4005-afbc-dfd30b91926a" ancestor="thing">
             <documentation>A factory is a special kind of service solely responsible to create default instances of a DTO or Delegate.
 
-A Factory is placed in a data subpackage in the production code hierarchy
-
-In java it is a class annotated as @Service extending FactoryBean, and resides in the data subpackage of the created object’s package. In Python, factories should be created only for implemented DTOs, for all others we consider types.SimpleNamespace to be the factory.
-
-As it is fully boilerplate, it is a good practice to generate it.
 </documentation>
             <property key="fillColor" value="#fcaf3e"/>
             <property key="elementShape" value="nodeShape"/>
@@ -1129,6 +1131,8 @@ As it is fully boilerplate, it is a good practice to generate it.
             <property key="font"/>
           </element>
           <element xsi:type="zenta:BasicObject" name="Repository" id="ff41556c-9dff-435c-8870-09733ed86067" ancestor="thing">
+            <documentation>A repository is managing the persistence of entities.
+</documentation>
             <property key="fillColor" value="#ad7fa8"/>
             <property key="elementShape" value="roundedRectangleShape"/>
             <property key="textAlignment" value="2"/>
@@ -1209,9 +1213,9 @@ else true()
             <property key="Template"/>
           </element>
           <element xsi:type="zenta:BasicObject" name="Service" id="4dce3f0a-a681-447a-896b-d0ca2c1585fe" ancestor="1cbb1bec-b874-44cc-ae59-19f17e58d604">
-            <documentation>A service is a unit implementing some logic. In java it is a class and an interface. In Python it is a class, using the Java naming convention, including the one class one module rule.
+            <documentation>A service is a unit implementing some logic which is testable with unit tests.
 
-A service do not have any state. In java that means that the service only have fields for constants and the management of its dependencies (see below), no other fields. In python dependencies and constants are static: they are created in the module before the class definition.
+A service do not have any state.
 
 A service does one thing. Therefore it either have one public function, or more public functions with different types of parameters where those functions do the same.
 
@@ -1219,15 +1223,7 @@ In polymorphic languages all the functions of the service therefore have to have
 
 A service references its dependencies in an abstract way, using dependency inversion. If there is a dependency injection mechanism for the language, that mechanism should be used. In java by default we use Spring, which means that the class is marked as @Service, and the dependencies are fields referencing the interface of the dependent service using @Autowired. In Python by default we use winterboot. Python services are marked with the @Service annotation, and referenced as serviceName = Autowired(‘servicename’). When the wider framework uses other DI mechanisms, their use should be modelled after this as closely as possible. 
 
-The service is placed in the production code hierarchy in a way which is related to its place in the business logic, and makes it easy to find it. In java this means that both the interface and implementation should be placed in the same package, the interface name ending in Service, the implementation name ending with ServiceImpl. In Python the class name (hence the module basename) ends with ‘Service’. In Python the service class should be descendant of object. The interface have one method called “call”.
-
-If the need to break down the functionality of a package arises driven by programming activities (e.g. because of exceeding code complexity measures), the programmer’s responsibility is to notify the architect. The process of the resolution of the issue is left at the architect’s discretion until the need arises to further clarify it.
-
 In java and python Services should not have static methods except when the needs of a Delegate dictate it.
-
-In java all interface methods should have an @Override annotation in the implementation class. Other methods should be private.
-
-In Python a service have a single public method called “call”, all other methods should start with ‘_’ to make them private. At least the call method should be properly annotated with the types of both the parameters and return value.
 </documentation>
             <property key="fillColor" value="#fcaf3e"/>
             <property key="elementShape" value="roundedRectangleShape"/>
@@ -1283,14 +1279,7 @@ In Python a service have a single public method called “call”, all other met
 
 The state is delegated to a DTO
 
-The business logic is delegated to one or more Services
-
-In Java:
-
-* The DI bootstrapping is delegated to a static void method with sole parameter of this in an interface of the underlying service.
-* The state of a delegate is stored in a DTO, referenced in a field annotated with @Delegate and if the integration tests need it, @Getter annotation.
-* The underlying services are referenced using @Autowire -d fields using the interface
-* The methods use the delegate pattern, with this as an extra parameter in the delegated call.
+The business logic is delegated to Services
 
 </documentation>
             <property key="fillColor" value="#fcaf3e"/>
@@ -1378,7 +1367,7 @@ The only content of the class is:
         </folder>
         <folder name="09. Not modeled but implemented" id="24f06a22-aa37-4138-ab12-6ac2ad626af7">
           <folder name="1. Unit test" id="3d00aaaf-948a-4bf0-a7d7-0bacbd7f50f2">
-            <element xsi:type="zenta:ZentaDiagramModel" name="Unit test" id="5ddc8bbe-ac16-45d5-b9ba-5d86201c11c2">
+            <element xsi:type="zenta:ZentaDiagramModel" name="Unit test" id="5ddc8bbe-ac16-45d5-b9ba-5d86201c11c2" connectionRouterType="1">
               <child xsi:type="zenta:DiagramObject" id="a39ed7bc-83f5-498e-b794-e8eec0572287" targetConnections="414be5c5-5022-4c5b-b52f-30ff43c0afc2" zentaElement="f77378e6-2ef5-4e91-8a94-47ca7fc25c27">
                 <bounds x="194" y="174" width="-1" height="-1"/>
               </child>
@@ -1388,6 +1377,7 @@ The only content of the class is:
                 <sourceConnection xsi:type="zenta:Connection" id="43249a65-bedf-4ece-9844-82fe54e2de15" source="3311486a-ff0d-4197-bb5a-70db447034ea" target="a13d321d-c441-4092-8270-ef4efa249a66" relationship="53ccffc5-831f-4605-8766-37c3d41d9d1f"/>
                 <sourceConnection xsi:type="zenta:Connection" id="8db5621e-02e7-414b-9575-932bd5f29ba7" source="3311486a-ff0d-4197-bb5a-70db447034ea" target="2916eee0-b662-4e71-993d-4e8ef16e3dea" relationship="31be804c-b9ba-4edc-8035-27e20217dac1"/>
                 <sourceConnection xsi:type="zenta:Connection" id="d172a211-3e37-4d76-9c52-b6cf432baccc" source="3311486a-ff0d-4197-bb5a-70db447034ea" target="d83d7b00-737f-40c8-97b1-155d21af0b29" relationship="0d4055eb-a9a1-4694-a14a-dc15a0289f4c"/>
+                <sourceConnection xsi:type="zenta:Connection" id="caf43b1d-37c7-4ec5-94dc-38fa161dcd1e" source="3311486a-ff0d-4197-bb5a-70db447034ea" target="eaf56674-8496-476d-8f98-0f01b1d53ac8" relationship="44801b30-bd93-4598-953c-10798a4ab445"/>
               </child>
               <child xsi:type="zenta:DiagramObject" id="a13d321d-c441-4092-8270-ef4efa249a66" targetConnections="43249a65-bedf-4ece-9844-82fe54e2de15" zentaElement="9ec42823-7056-4e73-b1f4-600a066c8d88">
                 <bounds x="408" y="177" width="-1" height="-1"/>
@@ -1397,6 +1387,9 @@ The only content of the class is:
               </child>
               <child xsi:type="zenta:DiagramObject" id="d83d7b00-737f-40c8-97b1-155d21af0b29" targetConnections="d172a211-3e37-4d76-9c52-b6cf432baccc" fillColor="#8ae234" elementShape="deliverableShape" zentaElement="a65fe384-2ef4-4f98-b51d-4e6eadb55055">
                 <bounds x="865" y="144" width="-1" height="-1"/>
+              </child>
+              <child xsi:type="zenta:DiagramObject" id="eaf56674-8496-476d-8f98-0f01b1d53ac8" targetConnections="caf43b1d-37c7-4ec5-94dc-38fa161dcd1e" fillColor="#8ae234" elementShape="nodeShape" zentaElement="66218839-41bf-442d-b629-32e4e1ad2076">
+                <bounds x="256" y="327" width="-1" height="-1"/>
               </child>
               <property key="Template"/>
             </element>
@@ -1413,33 +1406,8 @@ Not modeled.
               <property key="fontColor"/>
               <property key="font"/>
             </element>
-            <element xsi:type="zenta:BasicObject" name="Unit Test" id="bde80e23-f840-49c8-b167-ec430e7d9800" ancestor="thing">
-              <documentation>Not modeled
-
-A unit test is a code testing (a part of) the implementation of a Service. If there is a TCDD (temporary name) framework for the given language, that should be used instead of unit tests.
-
-Only services implemented by the project should be tested.
-
-A unit test is placed in the same subsystem in the test hierarchy as the service in the production code hierarchy
-
-The unit test references the implementation class of the service, but must avoid calling methods not contained in the interface.
-
-The unit test otherwise uses the standard practices for unit testing in the given language.
-
-The unit tests names/descriptions are used to generate low level documentation of the project. Therefore they should be a full declarative sentence, using whatever ways the language offers: method names, annotations, and even comments may be used. If not method names are used, then naming is left to the discretion of the programmer, with minimal language-specific rules. In the face of it this is against the clean code principles, but checking that the description is indeed covers the functionality checked by the unit test is a central element of the review process, and if there is other descriptive element, then actual method names do not matter.
-
-All behaviours should be tested in at least one unit referencing the behaviour in its name and an appropriate way in the source code (annotation or comment, if annotations are not available in the language). Separating the tests to further units (e.g. because code complexity constraints) is the responsibility of the programmer. Separation should be made in a way that minimizes boilerplate.
-
-The unit tests should not contain constants, stubs, or helper functions
-constants should be used from test data units. No constants in production code should be used.
-
-stubs describing behaviour of production code or external dependencies should be put to stub providers
-
-stubs describing behaviour of parameters should be put to test data units
-
-helper functions should be put to test helpers
-
-setup can be used to actually call the tested service, and leave only the assertions to the test cases
+            <element xsi:type="zenta:BasicObject" name="Test" id="bde80e23-f840-49c8-b167-ec430e7d9800" ancestor="thing">
+              <documentation>A unit test is a code testing (a part of) the implementation of a Service or Controller. If there is a TCDD (temporary name) framework for the given language, that should be used instead of unit tests.
 </documentation>
               <property key="fillColor" value="#8ae234"/>
               <property key="elementShape" value="emptyShape"/>
@@ -1448,13 +1416,7 @@ setup can be used to actually call the tested service, and leave only the assert
               <property key="font"/>
             </element>
             <element xsi:type="zenta:BasicObject" name="Test Helper" id="975c6b8d-ea09-4095-81df-9fda225ced95" ancestor="thing">
-              <documentation>not modeled
-
-The test helpers contain the methods helping assertions: assertion methods, and methods to make easier to write assertions. 
-
-In Java a testhelper contains static methods.
-
-In python the module directly contains the methods.
+              <documentation>The test helpers contain the methods helping assertions: assertion methods, and methods to make easier to write assertions. 
 </documentation>
               <property key="fillColor" value="#4e9a06"/>
               <property key="elementShape" value="emptyShape"/>
@@ -1462,32 +1424,54 @@ In python the module directly contains the methods.
               <property key="fontColor"/>
               <property key="font"/>
             </element>
-            <element xsi:type="zenta:BasicObject" name="Stub provider" id="a65fe384-2ef4-4f98-b51d-4e6eadb55055" ancestor="thing">
-              <documentation>not modeled
-
-stub providers provide the stubs describing the service behaviours using the test artifacts. There are two kinds of stubs:
+            <element xsi:type="zenta:BasicObject" name="Stub Provider" id="a65fe384-2ef4-4f98-b51d-4e6eadb55055" ancestor="thing">
+              <documentation>stub providers provide the stubs describing the service behaviours using the test artifacts. There are two kinds of stubs:
 * stubs describing the behaviour of the service with respect to some external state (e.g. the role of the logged in user). These are context stubs.
 * stubs describing the service behaviour which is independent of external states: behaviour stubs
-
-Stub providers are placed in the test hierarchy in the subsystem of the described service, with a name referencing the service described. Stubs for external dependencies go to a subsystem dedicated to that. In java, the package name is the package name of the external dependency, in python it is the “externalstubs” package in the test hierarchy.
-
-If the need arises to place stub providers into more units, it is the responsibility of the programmer.
-
-In java 
-* stub providers are interfaces named [service name]Stubs, for example ContractRunnerStubs for ContractRunnerService
-* the stubs are created in static void methods with no parameters
-* the static void behaviour() method uses all behaviour stubs to provide the whole contract of a given service.
-* if the need arises to use additional interfaces for the same service (e.g. due to code complexity constraints), the additional code should be placed in interfaces with names starting with the name of the service, and ending with Stubs, e.g. ContractRunnerReturningContractsStubs. The additional services should extend the default-named interface so it is enough to reference that in tests. In case of multiple interfaces, it is good practice to keep only the behaviour() method in the default one.
-
-In Python
-* stub providers are modules named [service name]StubProvider
-* stubs are defined in methods. the service to be stubbed is obtained with Autowired(). At the phase the stub services are called, this will result in a mock object.
 </documentation>
               <property key="fillColor" value="#8ae234"/>
               <property key="elementShape" value="deliverableShape"/>
               <property key="textAlignment" value="2"/>
               <property key="fontColor"/>
               <property key="font"/>
+            </element>
+            <element xsi:type="zenta:BasicObject" name="Test Base" id="66218839-41bf-442d-b629-32e4e1ad2076" ancestor="thing">
+              <documentation>A Test Base contains constructs building the unit under test, injecting the mocks of its dependencies, and calls to behaviour stubs of the dependencies
+</documentation>
+              <property key="fillColor" value="#8ae234"/>
+              <property key="elementShape" value="nodeShape"/>
+              <property key="textAlignment" value="2"/>
+              <property key="fontColor"/>
+              <property key="font"/>
+            </element>
+            <element xsi:type="zenta:BasicRelationship" name="uses" id="44801b30-bd93-4598-953c-10798a4ab445" ancestor="basicrelation" source="bde80e23-f840-49c8-b167-ec430e7d9800" target="66218839-41bf-442d-b629-32e4e1ad2076">
+              <property key="textPosition" value="1"/>
+              <property key="lineDecoration"/>
+              <property key="lineColor"/>
+              <property key="fontColor"/>
+              <property key="lineWidth" value="1"/>
+              <property key="font"/>
+            </element>
+          </folder>
+          <folder name="2. Utility class" id="9b75631d-3911-4e18-ac17-c3284d007ca2">
+            <element xsi:type="zenta:BasicObject" name="Utility Class" id="3c4d5358-9776-4954-a912-5d8c45183628" ancestor="thing">
+              <documentation>A utility class holds code implementing behaviour, which is either
+
+- overflown from Service or Controller units due to code complexity constraints, or
+- used by more Controllers, Services ot Utility classes, and
+- can be tested through the interface of Controller and Service units, therefore no need to crete their own Service.
+</documentation>
+              <property key="fillColor" value="#fcaf3e"/>
+              <property key="elementShape" value="rectangleElementShape"/>
+              <property key="textAlignment" value="2"/>
+              <property key="fontColor"/>
+              <property key="font"/>
+            </element>
+            <element xsi:type="zenta:ZentaDiagramModel" name="Utility Class" id="fc75aa8d-dfb2-40d4-9fa4-9df78e6d4c37">
+              <child xsi:type="zenta:DiagramObject" id="e7f49bac-e5d5-4d89-aa4d-f1076f3e0c65" fillColor="#fcaf3e" elementShape="rectangleElementShape" zentaElement="3c4d5358-9776-4954-a912-5d8c45183628">
+                <bounds x="342" y="313" width="-1" height="-1"/>
+              </child>
+              <property key="Template"/>
             </element>
           </folder>
         </folder>
@@ -2122,7 +2106,7 @@ This is the same as Requirement in Common Criteria.
             <property key="font"/>
           </element>
         </folder>
-        <folder name="2. Process Step, Role" id="44ceef6a-62b9-434f-a3f2-fa9770958244">
+        <folder name="2. Process Step. Role" id="44ceef6a-62b9-434f-a3f2-fa9770958244">
           <folder name="constraints" id="914f42cc-47e0-47a3-b724-48586ddedda8">
             <property key="documentationMarkup" value="verbatim"/>
             <element xsi:type="zenta:BasicObject" name="contained in a Package or a process step" id="d2fd8b99-9f25-4a14-8a84-1ddb6dcdc2bd" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
@@ -2272,7 +2256,7 @@ sum(
             <element xsi:type="zenta:BasicRelationship" id="a160eed0-0d16-44a0-90eb-e45ea733b2bb" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="c016b942-98e7-48c4-8fbb-09e5986af6bb" target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
             <element xsi:type="zenta:BasicRelationship" id="d6ab0591-700e-4e9a-8854-c157d089d697" ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" source="532e3ba9-e59b-4019-82e5-3fbf8595e53f" target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
           </folder>
-          <element xsi:type="zenta:ZentaDiagramModel" name="Process" id="a07058e1-1161-4886-b417-16186a17ad48" connectionRouterType="1">
+          <element xsi:type="zenta:ZentaDiagramModel" name="Process Step, Role" id="a07058e1-1161-4886-b417-16186a17ad48" connectionRouterType="1">
             <child xsi:type="zenta:DiagramObject" id="bf2f9836-0ddf-43d1-956d-b1060936bf89" targetConnections="61c531aa-584b-45f6-842f-b58a43649e5a" fillColor="#729fcf" elementShape="roundedRectangleShape" zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
               <bounds x="222" y="78" width="-1" height="-1"/>
               <sourceConnection xsi:type="zenta:Connection" id="d68915d9-ae85-4e97-bf58-3c67e498b659" source="bf2f9836-0ddf-43d1-956d-b1060936bf89" target="a43083d7-d4ba-48d3-8e17-940af9147fe0" lineDecoration="DashedLineDecoration SmallEndArrowDecoration" relationship="f53d0fd7-db6a-4b40-886b-55c0b3e7a8dd">
@@ -2886,8 +2870,12 @@ A role is assigned to human(s).
           <child xsi:type="zenta:DiagramObject" id="57a3be35-2496-4dac-9d0e-6ffd65405b53" targetConnections="fee25c66-1b6f-4bfe-989d-ee47185333c5" zentaElement="f260e47e-3686-41cb-a415-31fc1d03fcd2">
             <bounds x="1397" y="542" width="-1" height="-1"/>
           </child>
-          <child xsi:type="zenta:DiagramObject" id="2cf751bc-07b7-4fb6-b01e-1ab8215a8b1c" targetConnections="5c98ce55-fddc-41b7-9833-1cbc82a2f6ed" zentaElement="734c31bd-5729-4e95-bddf-c649160740df">
+          <child xsi:type="zenta:DiagramObject" id="2cf751bc-07b7-4fb6-b01e-1ab8215a8b1c" targetConnections="5c98ce55-fddc-41b7-9833-1cbc82a2f6ed adeb4f8e-fe0f-4cd7-bf57-1042b57a0ff1" zentaElement="734c31bd-5729-4e95-bddf-c649160740df">
             <bounds x="1547" y="542" width="-1" height="-1"/>
+          </child>
+          <child xsi:type="zenta:DiagramObject" id="47a5f66e-b631-4377-a7fd-6e294feb37b6" zentaElement="eee962ae-e529-4297-9a0f-28e31dbc0f45">
+            <bounds x="1317" y="673" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection" id="adeb4f8e-fe0f-4cd7-bf57-1042b57a0ff1" source="47a5f66e-b631-4377-a7fd-6e294feb37b6" target="2cf751bc-07b7-4fb6-b01e-1ab8215a8b1c" relationship="252ac34e-708f-4bf4-8c3f-d5f47cf4ce39"/>
           </child>
         </element>
         <element xsi:type="zenta:BasicObject" name="development" id="3c906b54-06e0-4886-ab95-677d24fc3bd0" ancestor="d3d4e39d-09a6-4a0f-a985-be922245d850"/>
@@ -2980,6 +2968,586 @@ A role is assigned to human(s).
       </element>
       <element xsi:type="zenta:BasicRelationship" id="1b80b4e0-2d8b-48e7-a93e-142ffc591acd" ancestor="8e65d98a-577b-419b-863b-e023eb12d940" source="a649c2fe-9f7f-4ce1-943e-8bb70469e2d4" target="3c906b54-06e0-4886-ab95-677d24fc3bd0"/>
       <element xsi:type="zenta:BasicRelationship" id="8b48b7e7-a818-496f-8a73-5c7f888eec76" ancestor="bbe8d388-6c76-4351-8e81-83f144f7bc9e" source="3c906b54-06e0-4886-ab95-677d24fc3bd0" target="03df57af-c2bf-4f66-a31a-a3cbc57910f9"/>
+    </folder>
+    <folder name="3. Coding rules" id="338ba8b5-ce67-41d5-8998-eea16ca03219">
+      <element xsi:type="zenta:ZentaDiagramModel" name="Coding rules" id="77539947-08c2-4b67-adfc-a6d62f41003d" connectionRouterType="1">
+        <child xsi:type="zenta:DiagramObject" id="003ca221-42b7-43bc-b244-36a8b1cde69c" zentaElement="3d926f54-d9a6-4cf4-b89d-a96ba68f1144">
+          <bounds x="660" y="-240" width="-1" height="-1"/>
+          <sourceConnection xsi:type="zenta:Connection" id="e4bb12b1-b7ac-42a4-b67d-c99f836accb1" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="f9ac4ea8-0edf-4fc7-8dee-6c51fb4ea6b0" relationship="a066742c-e7ae-4a77-b752-28c5740580ac"/>
+          <sourceConnection xsi:type="zenta:Connection" id="3d3debab-a176-4e56-b445-d77f0f4a242a" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="8808bf1d-3561-4720-8d8b-7cd8f9d5c7d1" relationship="52a593c6-faa0-42dd-84fb-9f0ee1a079ce"/>
+          <sourceConnection xsi:type="zenta:Connection" id="f76ba0a0-f967-4817-9c13-41eecaffb481" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="8b3ce28d-abb3-40da-a0ff-ff035685b14e" relationship="8d3710e3-0ab2-4ccf-95fb-099f0ab34d99"/>
+          <sourceConnection xsi:type="zenta:Connection" id="b0dd92bc-d27b-4362-9d59-338b82c93a04" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="88b456d9-904f-4548-a3b5-3a8a88525e2a" relationship="4f4a61e5-e0a2-4905-995b-ce79f73b2e5b"/>
+          <sourceConnection xsi:type="zenta:Connection" id="a79c7c3c-4f9e-4cbd-86e3-bd0dd7afa281" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="3faa0b45-96cf-4f35-b5e8-6afe5a50050c" relationship="22ee66c9-5bf7-4b1d-8fdd-59b2ae4c34a9"/>
+          <sourceConnection xsi:type="zenta:Connection" id="4eb9bcd7-dbba-42f0-a31f-ec213c17c2b0" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="7651bf63-0dea-4f33-ae36-3e2a7fb4ae4a" relationship="67629dc9-9c18-4f8e-9575-675eba093de4"/>
+          <sourceConnection xsi:type="zenta:Connection" id="c8f941c9-9e04-43cf-a353-4ab34f57ef95" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="4a24649c-8fe3-490d-ae11-19a51b67d1aa" relationship="c34e1bbf-d96a-4fa6-9f06-2db3056e1fc4"/>
+          <sourceConnection xsi:type="zenta:Connection" id="eff6ceef-4eb8-46a9-b902-4d8c72bfb7e4" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="444bd334-5a70-451b-b3a2-14a6250ef8ea" relationship="fd4be4ea-d367-49bc-ae7a-8099746f993b"/>
+          <sourceConnection xsi:type="zenta:Connection" id="d270b903-4000-4724-a13d-73d5d07e223a" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="67a1b97f-c371-45a0-afc7-cfc4f8bf2df7" relationship="9e3a9f93-36df-4c8d-b5ee-001bdac55f89"/>
+          <sourceConnection xsi:type="zenta:Connection" id="114ae1e9-a323-411a-bdb6-b2649b6e87d1" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="ec4e36e5-fe09-453a-a9ce-e30b5d60e313" relationship="3e1e64f1-4179-4f58-9d01-549f7978908d"/>
+          <sourceConnection xsi:type="zenta:Connection" id="6edb96ae-7842-445e-988e-f15dcaf17db1" source="003ca221-42b7-43bc-b244-36a8b1cde69c" target="3b06c447-741b-4c4f-9854-8a5fecd709a5" relationship="a4953b12-b3ff-4be2-997a-507ea9807898"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="8b3ce28d-abb3-40da-a0ff-ff035685b14e" targetConnections="f76ba0a0-f967-4817-9c13-41eecaffb481" zentaElement="6a6a5f4e-be42-4cad-bf72-be0116b8817e">
+          <bounds x="162" y="-149" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="7651bf63-0dea-4f33-ae36-3e2a7fb4ae4a" targetConnections="4eb9bcd7-dbba-42f0-a31f-ec213c17c2b0" zentaElement="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8">
+          <bounds x="-75" y="-114" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="4a24649c-8fe3-490d-ae11-19a51b67d1aa" targetConnections="c8f941c9-9e04-43cf-a353-4ab34f57ef95" zentaElement="b585a667-63bb-4bb8-8a20-2e574b874ed0">
+          <bounds x="154" y="-21" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="88b456d9-904f-4548-a3b5-3a8a88525e2a" targetConnections="b0dd92bc-d27b-4362-9d59-338b82c93a04" zentaElement="3ee0f35c-5723-4ae7-958d-f8351e1d023f">
+          <bounds x="352" y="-92" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="ec4e36e5-fe09-453a-a9ce-e30b5d60e313" targetConnections="114ae1e9-a323-411a-bdb6-b2649b6e87d1" zentaElement="26b4d7af-073d-426b-8d83-13d989d00602">
+          <bounds x="-162" y="-37" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="3b06c447-741b-4c4f-9854-8a5fecd709a5" targetConnections="6edb96ae-7842-445e-988e-f15dcaf17db1" zentaElement="6cd0ac90-c94f-4779-afe5-c704590846d8">
+          <bounds x="-30" y="21" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="8808bf1d-3561-4720-8d8b-7cd8f9d5c7d1" targetConnections="3d3debab-a176-4e56-b445-d77f0f4a242a" zentaElement="2a9d2132-6761-4332-90ef-5867fc9d6096">
+          <bounds x="-222" y="-167" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="67a1b97f-c371-45a0-afc7-cfc4f8bf2df7" targetConnections="d270b903-4000-4724-a13d-73d5d07e223a" zentaElement="5397f74e-8346-4361-a715-1118727df296">
+          <bounds x="384" y="120" width="160" height="101"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="3faa0b45-96cf-4f35-b5e8-6afe5a50050c" targetConnections="a79c7c3c-4f9e-4cbd-86e3-bd0dd7afa281" zentaElement="64212f41-f899-4fd7-be73-e15d12dd3f0a">
+          <bounds x="471" y="-8" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="f9ac4ea8-0edf-4fc7-8dee-6c51fb4ea6b0" targetConnections="e4bb12b1-b7ac-42a4-b67d-c99f836accb1" zentaElement="059291b1-c79f-464a-8433-bb7a83f1fb79">
+          <bounds x="-264" y="-281" width="-1" height="-1"/>
+        </child>
+        <child xsi:type="zenta:DiagramObject" id="444bd334-5a70-451b-b3a2-14a6250ef8ea" targetConnections="eff6ceef-4eb8-46a9-b902-4d8c72bfb7e4" zentaElement="b2541c3c-8b1d-4fdb-be03-22b2975b4216">
+          <bounds x="246" y="46" width="-1" height="-1"/>
+        </child>
+      </element>
+      <element xsi:type="zenta:BasicObject" name="PMD check" id="dbe47f33-a46a-4165-aa22-c32364bb17bf" ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicRelationship" id="b7601008-ea92-428b-973a-ea2858c3cef6" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="b9bb2ffe-82cd-4159-b319-c03f1f5cd829" target="dbe47f33-a46a-4165-aa22-c32364bb17bf"/>
+      <element xsi:type="zenta:BasicObject" name="modeled placement" id="6a6a5f4e-be42-4cad-bf72-be0116b8817e" ancestor="behaviour">
+        <documentation>First-class production code units are placed in the production code hierarchy under the package designated by the design
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="e86ecddd-61e6-4f11-8c8b-b8b42d014343" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="6a6a5f4e-be42-4cad-bf72-be0116b8817e"/>
+      <element xsi:type="zenta:BasicRelationship" id="22d2df08-5a6d-46fc-8588-671d93c4345a" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a6a5f4e-be42-4cad-bf72-be0116b8817e" target="4dce3f0a-a681-447a-896b-d0ca2c1585fe"/>
+      <element xsi:type="zenta:BasicRelationship" id="2a7db064-37ab-47ec-8f32-0a26f8800315" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a6a5f4e-be42-4cad-bf72-be0116b8817e" target="dto"/>
+      <element xsi:type="zenta:BasicRelationship" id="dc461ca0-f0de-455e-87ee-d6b5e3ffba4e" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a6a5f4e-be42-4cad-bf72-be0116b8817e" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
+      <element xsi:type="zenta:BasicRelationship" id="00fe5079-266c-44ea-a216-5b5f71e2b397" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a6a5f4e-be42-4cad-bf72-be0116b8817e" target="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2"/>
+      <element xsi:type="zenta:BasicObject" name="ancillary unit" id="75d5962e-721a-497b-932e-9a6dbe058d81" ancestor="behaviour">
+        <documentation>Ancillary units are put to the same package as the unit they support.
+
+- If the design or needs of testing mandates it, a DTO may have a Factory
+- an Entity must have a Repository
+- all DTO, Entity, Service and Controller units must have a Test Data
+- all Service and Controller units must have a Test Base
+- all Service and Controller units must have a Stub Provider
+- a legacy object may have a Factory and/or a Stub Provider and/or a Test Data. Those should be put in a package named 'legacy' under the main package of the project.
+
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="6ced6c5f-0751-4fc7-9896-dff69dd049c9" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="75d5962e-721a-497b-932e-9a6dbe058d81"/>
+      <element xsi:type="zenta:BasicRelationship" id="d99b1d32-c605-48b2-9ccd-56f41eca9c3c" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="75d5962e-721a-497b-932e-9a6dbe058d81" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicRelationship" id="52a91325-93d9-4de6-b7b6-ea6fc7b66398" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="75d5962e-721a-497b-932e-9a6dbe058d81" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="19e45b52-b07e-49bc-8232-b1493dc74443" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="75d5962e-721a-497b-932e-9a6dbe058d81" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicRelationship" id="4f9691e0-89cf-4f27-a185-64b032372284" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="75d5962e-721a-497b-932e-9a6dbe058d81" target="c5f0762f-8e64-4005-afbc-dfd30b91926a"/>
+      <element xsi:type="zenta:BasicRelationship" id="7f7e0304-641d-4f03-a9ca-339f4ed0f474" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="75d5962e-721a-497b-932e-9a6dbe058d81" target="ff41556c-9dff-435c-8870-09733ed86067"/>
+      <element xsi:type="zenta:BasicRelationship" id="e7ab4f42-ed6d-4be6-9eac-8b2078a5d052" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="4dce3f0a-a681-447a-896b-d0ca2c1585fe"/>
+      <element xsi:type="zenta:BasicRelationship" id="d510abea-66cc-4f69-bf4b-d77ddc9a7c5b" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="dto"/>
+      <element xsi:type="zenta:BasicRelationship" id="ec40f5e8-f5c7-4903-8f7c-07c050d119b2" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2"/>
+      <element xsi:type="zenta:BasicRelationship" id="f0ce7fea-4f96-4a7b-881b-b45279c53000" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
+      <element xsi:type="zenta:BasicRelationship" id="28da6c1a-ae22-4755-a54e-5ea0c4b3150c" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="3c4d5358-9776-4954-a912-5d8c45183628"/>
+      <element xsi:type="zenta:BasicRelationship" id="c80d57d2-0177-4e17-9c17-c811ea2b25ed" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicRelationship" id="f3eebff8-81f3-4c2c-b7e7-311a10f29b4a" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicRelationship" id="4a899243-b521-46e2-9c10-8eb3ed8069e2" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="705bd382-9dde-4870-a8a8-5a7e8a155a01" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicRelationship" id="b42c665a-0a7d-41ab-8dfb-e581a5a6503c" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a"/>
+      <element xsi:type="zenta:BasicRelationship" id="62167632-7c21-485c-b1b9-b95486b1c750" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="804cfcd0-5c82-4776-8f40-d16c3d5b870e"/>
+      <element xsi:type="zenta:BasicRelationship" id="f9da3f22-ad07-4949-846d-4d583c60d238" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="c5f0762f-8e64-4005-afbc-dfd30b91926a"/>
+      <element xsi:type="zenta:BasicRelationship" id="c575509a-b782-4ff6-9ef4-6b196adb9149" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="ff41556c-9dff-435c-8870-09733ed86067"/>
+      <element xsi:type="zenta:BasicRelationship" id="5fe06dbf-7887-4336-aff3-00556a4d4960" ancestor="1e5ae9c5-cdb5-455e-a95a-c283e4a6da42" source="cbf84f8e-1037-42bd-9a08-81550eb48ee7" target="aac49409-16ea-44e9-8a2e-24ef1876c7ab"/>
+      <element xsi:type="zenta:BasicRelationship" id="90684546-a655-4090-ad2b-89d0aaf0a899" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a6a5f4e-be42-4cad-bf72-be0116b8817e" target="aac49409-16ea-44e9-8a2e-24ef1876c7ab"/>
+      <element xsi:type="zenta:BasicObject" name="helper" id="a83b3a77-8854-44b0-977e-037c7864d052" ancestor="behaviour">
+        <documentation>- Helpers are put to the same package as the code they support.
+- If the supported units are in different packages, then the helper is put to the lowest common superpackage.
+- A helper unit is created by the coder if code complexity constraints or duplicate avoidance makes it necessary.
+
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="b933bb3d-6a0a-4e84-bfab-68a5be736667" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="a83b3a77-8854-44b0-977e-037c7864d052"/>
+      <element xsi:type="zenta:BasicRelationship" id="39019a71-72ee-49b6-8844-a345661c83aa" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a83b3a77-8854-44b0-977e-037c7864d052" target="3c4d5358-9776-4954-a912-5d8c45183628"/>
+      <element xsi:type="zenta:BasicRelationship" id="68ba7e2d-2c43-498d-bdf5-377bf272bd3e" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a83b3a77-8854-44b0-977e-037c7864d052" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicObject" name="test code" id="1278c3f4-2609-4490-876c-95ea4cf2b811" ancestor="behaviour">
+        <documentation>units used for test are put into the test hierarchy</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="26040813-b5f8-4060-b759-bbfbd0913aef" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="1278c3f4-2609-4490-876c-95ea4cf2b811"/>
+      <element xsi:type="zenta:BasicRelationship" id="c602935f-5e3e-4e1e-876e-aa5fe4ae71ae" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="1278c3f4-2609-4490-876c-95ea4cf2b811" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicRelationship" id="07adfb5a-2115-43d7-8066-f62b53d0a997" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="1278c3f4-2609-4490-876c-95ea4cf2b811" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicRelationship" id="f8fe5f07-ccad-467a-962b-047e1789b43b" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="1278c3f4-2609-4490-876c-95ea4cf2b811" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="9eac624b-5dde-4a59-b049-047f58e59d6c" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="1278c3f4-2609-4490-876c-95ea4cf2b811" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicObject" name="production code" id="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" ancestor="behaviour">
+        <documentation>production units are placed in the production code hierarchy
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="59cfe881-08a2-4cc1-b754-926691cd845e" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8"/>
+      <element xsi:type="zenta:BasicRelationship" id="d45533f4-25fc-407b-83b4-95a232d01285" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="aac49409-16ea-44e9-8a2e-24ef1876c7ab"/>
+      <element xsi:type="zenta:BasicRelationship" id="00e4a89e-3503-440a-8287-55075afa2fe6" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="c5f0762f-8e64-4005-afbc-dfd30b91926a"/>
+      <element xsi:type="zenta:BasicRelationship" id="40b4a009-16b4-41a0-bf70-0e3dfc75637a" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="ff41556c-9dff-435c-8870-09733ed86067"/>
+      <element xsi:type="zenta:BasicRelationship" id="ce47e95a-e17b-4c02-ba51-b12d0f7c1183" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a"/>
+      <element xsi:type="zenta:BasicRelationship" id="cc217afd-6ece-4df5-8db1-353a8b58cf0c" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="804cfcd0-5c82-4776-8f40-d16c3d5b870e"/>
+      <element xsi:type="zenta:BasicRelationship" id="1fcfb452-acd7-4739-8670-24ea71b342d9" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="dto"/>
+      <element xsi:type="zenta:BasicRelationship" id="a0104f9a-fa94-4287-9046-ce35c0ea2e4d" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2"/>
+      <element xsi:type="zenta:BasicRelationship" id="a01309b4-2e71-4e21-abb5-8595c3a1e7a0" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a6a5f4e-be42-4cad-bf72-be0116b8817e" target="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a"/>
+      <element xsi:type="zenta:BasicRelationship" id="5cb717d4-2e85-4f58-b80c-2387874d7594" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="4dce3f0a-a681-447a-896b-d0ca2c1585fe"/>
+      <element xsi:type="zenta:BasicRelationship" id="21b7afc9-6684-4d30-b0e3-9a8e14bf9bae" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
+      <element xsi:type="zenta:BasicRelationship" id="2e161f1a-04eb-4124-8ccf-477da1887c96" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="3c4d5358-9776-4954-a912-5d8c45183628"/>
+      <element xsi:type="zenta:BasicRelationship" id="7298a00b-532f-4c9a-8a2a-8a20605a487c" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="75d5962e-721a-497b-932e-9a6dbe058d81" target="66218839-41bf-442d-b629-32e4e1ad2076"/>
+      <element xsi:type="zenta:BasicObject" name="not modeled" id="24a87938-be71-4bc5-b7af-a6613caad024" ancestor="behaviour">
+        <documentation>Ancillary units which do not need additional design decisions (already available from the model) are not modeled.
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="05b87ad4-979d-4fb4-9624-f67c0ebef2c9" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="24a87938-be71-4bc5-b7af-a6613caad024"/>
+      <element xsi:type="zenta:BasicRelationship" id="161facc7-6e0a-43b8-bfb4-4d6603ab5724" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="24a87938-be71-4bc5-b7af-a6613caad024" target="3c4d5358-9776-4954-a912-5d8c45183628"/>
+      <element xsi:type="zenta:BasicRelationship" id="2fa0a446-5a5e-484d-a6ce-75c85ddad3b5" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="24a87938-be71-4bc5-b7af-a6613caad024" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicRelationship" id="b9c60a5f-3e9f-4c38-8f36-f7bc018e582f" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="24a87938-be71-4bc5-b7af-a6613caad024" target="66218839-41bf-442d-b629-32e4e1ad2076"/>
+      <element xsi:type="zenta:BasicRelationship" id="8dce3fb7-e95d-4946-9050-c7ba21a2a8a0" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="24a87938-be71-4bc5-b7af-a6613caad024" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicRelationship" id="09c4e712-efac-40ad-bce9-83c6ffcab826" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="24a87938-be71-4bc5-b7af-a6613caad024" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="76d1e2b8-585a-4bfa-acf9-43eaf57036e7" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="24a87938-be71-4bc5-b7af-a6613caad024" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicObject" name="code unit" id="478609a9-ef96-4d4b-b328-f982f1d0860d" ancestor="behaviour">
+        <documentation>code units do not contain data structures and constants
+those are in data structure and constant units</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="07d95e7b-1a65-4df1-a3e0-3548864afc2c" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="478609a9-ef96-4d4b-b328-f982f1d0860d"/>
+      <element xsi:type="zenta:BasicRelationship" id="841a2127-1225-4844-a9bc-32b3021a7e01" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="478609a9-ef96-4d4b-b328-f982f1d0860d" target="4dce3f0a-a681-447a-896b-d0ca2c1585fe"/>
+      <element xsi:type="zenta:BasicRelationship" id="bcb9152e-67b4-4ca4-8006-66c5fcc79214" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="478609a9-ef96-4d4b-b328-f982f1d0860d" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
+      <element xsi:type="zenta:BasicRelationship" id="138b09e8-c0a5-4e2e-87c3-64beccc4d837" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="478609a9-ef96-4d4b-b328-f982f1d0860d" target="3c4d5358-9776-4954-a912-5d8c45183628"/>
+      <element xsi:type="zenta:BasicRelationship" id="b329f65e-c706-45a0-9135-1ecd221003de" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="478609a9-ef96-4d4b-b328-f982f1d0860d" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicRelationship" id="39801c3c-efe4-4d18-9a55-f0ab18a54935" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="478609a9-ef96-4d4b-b328-f982f1d0860d" target="66218839-41bf-442d-b629-32e4e1ad2076"/>
+      <element xsi:type="zenta:BasicRelationship" id="90d825d9-3dd1-4314-ad42-bd499599ee73" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="478609a9-ef96-4d4b-b328-f982f1d0860d" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicRelationship" id="cb0f01f7-c1d8-4c47-8193-0ed6ea34d50b" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="478609a9-ef96-4d4b-b328-f982f1d0860d" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicRelationship" id="fb4c269c-ecc7-47aa-b2eb-f8691b162e28" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="478609a9-ef96-4d4b-b328-f982f1d0860d" target="ff41556c-9dff-435c-8870-09733ed86067"/>
+      <element xsi:type="zenta:BasicRelationship" id="a5df4b19-2e9d-4794-ae69-8ae32cdbf577" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="478609a9-ef96-4d4b-b328-f982f1d0860d" target="c5f0762f-8e64-4005-afbc-dfd30b91926a"/>
+      <element xsi:type="zenta:BasicObject" name="data structure unit" id="b585a667-63bb-4bb8-8a20-2e574b874ed0" ancestor="behaviour">
+        <documentation>data structures are defined in DTOs. And Entity is a special kind of DTO.
+data structure units do not have behaviours (no methods)
+
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="05c96cae-c819-4057-9a75-943f95d25af8" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="b585a667-63bb-4bb8-8a20-2e574b874ed0"/>
+      <element xsi:type="zenta:BasicRelationship" id="8343c470-69ba-4ca8-9a0e-b1cf2885723e" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="b585a667-63bb-4bb8-8a20-2e574b874ed0" target="dto"/>
+      <element xsi:type="zenta:BasicRelationship" id="59e1191b-9004-4864-8bd6-0bacc5dff6a5" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="b585a667-63bb-4bb8-8a20-2e574b874ed0" target="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2"/>
+      <element xsi:type="zenta:BasicObject" name="constant provider" id="861fcab2-587d-45f1-8587-1979180ee4f6" ancestor="behaviour">
+        <documentation>- constants can only be in constant provider units; move them there from other units
+- configuration provider and TestData units are special constant providers
+- simple constants are public static final fields in SCREAMING_SNAKE_CASE
+- in the production code there are no constants with complex structures
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="6d214b82-7201-463e-aff3-e6ba0f7da324" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="861fcab2-587d-45f1-8587-1979180ee4f6"/>
+      <element xsi:type="zenta:BasicRelationship" id="dffee623-fdfd-4001-afff-95ce2e4fcce4" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="861fcab2-587d-45f1-8587-1979180ee4f6" target="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a"/>
+      <element xsi:type="zenta:BasicRelationship" id="ce140898-3924-4d35-b6f6-6ea522533af6" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="861fcab2-587d-45f1-8587-1979180ee4f6" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicObject" name="generated" id="35eddd23-6029-42b8-9bb9-b763e46976e3" ancestor="behaviour">
+        <documentation>- Where all the information necessary to write a unit exists in the model, the unit will be generated in the long term
+- If such a unit is missing, it is the responsibility of the coder to create it.
+
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="86bdd473-068f-462a-bd38-0d55aae54910" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="35eddd23-6029-42b8-9bb9-b763e46976e3"/>
+      <element xsi:type="zenta:BasicRelationship" id="4f8b481d-fd94-4331-ab9e-877005ce0460" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="35eddd23-6029-42b8-9bb9-b763e46976e3" target="66218839-41bf-442d-b629-32e4e1ad2076"/>
+      <element xsi:type="zenta:BasicRelationship" id="a130ae02-ae6d-4fe7-90df-c5411d751986" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="35eddd23-6029-42b8-9bb9-b763e46976e3" target="dto"/>
+      <element xsi:type="zenta:BasicRelationship" id="423f53cb-3e49-4f8d-b4f1-ebd5aa40cdeb" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="35eddd23-6029-42b8-9bb9-b763e46976e3" target="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2"/>
+      <element xsi:type="zenta:BasicRelationship" id="229a0c12-9fc7-4716-b4be-a6a6fb28f90b" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="35eddd23-6029-42b8-9bb9-b763e46976e3" target="ff41556c-9dff-435c-8870-09733ed86067"/>
+      <element xsi:type="zenta:BasicRelationship" id="8db81e54-88f4-4c51-a1eb-7bfca6e3c9c2" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="35eddd23-6029-42b8-9bb9-b763e46976e3" target="aac49409-16ea-44e9-8a2e-24ef1876c7ab"/>
+      <element xsi:type="zenta:BasicRelationship" id="8d703335-2d34-43fb-a7b9-1d8f5d1b312a" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="35eddd23-6029-42b8-9bb9-b763e46976e3" target="c5f0762f-8e64-4005-afbc-dfd30b91926a"/>
+      <element xsi:type="zenta:BasicObject" name="static class" id="3ee0f35c-5723-4ae7-958d-f8351e1d023f" ancestor="behaviour">
+        <documentation>The java implementation of units which do not need instantiation contain only public static final fields and public static methods.
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="fa4c8048-17be-4c4a-aaee-772fa454d388" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="3ee0f35c-5723-4ae7-958d-f8351e1d023f"/>
+      <element xsi:type="zenta:BasicRelationship" id="f606e8b7-f40f-4811-b12f-92e3825e0d18" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="3ee0f35c-5723-4ae7-958d-f8351e1d023f" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicRelationship" id="a7c2969a-ebf1-4871-9085-d2fb61b06c85" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="3ee0f35c-5723-4ae7-958d-f8351e1d023f" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicRelationship" id="7840a08b-a6c5-45c1-ab84-13e73e430464" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="3ee0f35c-5723-4ae7-958d-f8351e1d023f" target="3c4d5358-9776-4954-a912-5d8c45183628"/>
+      <element xsi:type="zenta:BasicRelationship" id="bbbddcab-d16f-4f39-8e04-eb3ab3194d39" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="3ee0f35c-5723-4ae7-958d-f8351e1d023f" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="36d3ee4f-725e-43d4-802c-b86716bc29c9" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="3ee0f35c-5723-4ae7-958d-f8351e1d023f" target="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a"/>
+      <element xsi:type="zenta:BasicObject" name="complex constants and collections" id="8c8f5643-e1c9-4ca7-a18a-74b2ccf5cf99" ancestor="behaviour">
+        <documentation>- constants with complex structures (test Entity and DTO instances and mocks for legacy objects) and constant collections of constants are created by methods without parameters
+- these methods create a new instance of the constant every time they are called, using their constructor (not the factory)
+- the name of a method creating a complex constant should start with 'get'
+- the name of the method creating a collection of constants should start with the type of the collection, e.g. 'list'
+- the name of the method giving back a default instance ( a fully built instance meant to be used in the positive test case) is 'get()'
+- the name of the method giving back a collection containing only the default instance should be the name of the collection type, e.g. 'list()'
+- other methods must directly or indirectly use the get() method to deliver other instances by modifying the default instance.
+- the non-default methods must contain the name of the (most important) field modified right after the 'get' part, and the way of the modification. For example the method giving back an Entity with a zero id would be called getIdUninitialized()</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="122c979f-e031-40cc-9da6-0b96c8d31923" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="8c8f5643-e1c9-4ca7-a18a-74b2ccf5cf99"/>
+      <element xsi:type="zenta:BasicRelationship" id="c9086e53-a30d-49d6-97ef-031a6d5c5cf0" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="8c8f5643-e1c9-4ca7-a18a-74b2ccf5cf99" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicObject" name="Unit naming" id="26b4d7af-073d-426b-8d83-13d989d00602" ancestor="behaviour">
+        <documentation>- Units have CamelCase names
+- The units have the following names:
+  - Service names are adjective + 'Service', mandated by the design. E.g. RegistrationService
+  - Controller names are adjective +'Controller', mandated by the design. E.g. RegistratorController
+  - DTO names are nouns + 'DTO', mandated by the design. E.g. WorkItemDTO
+  - Entity names are nouns + 'Entity', mandated by the design. E.g. WorkItemEntity
+  - Constant providers are nouns + 'Constants', mandated by the design. E.g. WorkSpaceConstants
+  - Enum names are nouns + 'Enum', mandated by the design. E.g. WorkTypeEnum
+  - Utility Class names are adjectives + 'Util'. The adjective should reflect the concern the Utility Class implements, e.g. RegistratorValidatorUtil
+  - Unit Test names are the combination of the name of the unit they test, the tested behaviour and 'Test'. E.g. RegistrationServiceValidationTest
+  - Integration test names are the combination of the controller they test, the tested behaviour and 'IT&quot;. E.g. RegistratorControllerValidationIT
+  - End-to-end test names are the name of the process and the circumstances they test, and 'E2E'. E.g. RegistrationThroughGitHubE2E
+  - Test Base names are the combination of the tested unit + 'TestBase'. E.g. RegistrationServiceTestBase
+  - Test Helper names are adjectives + 'TestHelper'. The adjective should reflect the concern the Test Helper implements, e.g. RegistrationAssertionsTestHelper
+  - Test Data names are the name of the DTO/Entity they provide + 'TestData'. E.g. WorkItemDTOTestData
+  - Stub Provider names are the name of the Service/Controller they implement without the postfix, and 'Stubs'. E.g. RegistratorStubs
+  - Factory names are the name of the DTO without the postfix + 'Factory'. E.g. WorkItemFactory
+  - Repository names are the name of the Entity without the postfix + 'Repository'. E.g. WorkItemRepository
+
+
+
+
+  </documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="16825c5f-5c9a-4f02-bb3d-9171f584bc99" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="26b4d7af-073d-426b-8d83-13d989d00602"/>
+      <element xsi:type="zenta:BasicRelationship" id="d4b4677d-d02e-44f5-8150-ef89f818b27e" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a6a5f4e-be42-4cad-bf72-be0116b8817e" target="833d959e-228d-4954-a74f-90c355ac36a3"/>
+      <element xsi:type="zenta:BasicRelationship" id="68054f98-0b13-463c-8af0-1edbe05a58b1" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="35eddd23-6029-42b8-9bb9-b763e46976e3" target="833d959e-228d-4954-a74f-90c355ac36a3"/>
+      <element xsi:type="zenta:BasicRelationship" id="655b03dc-0cf4-4663-8064-85382cff473a" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8" target="833d959e-228d-4954-a74f-90c355ac36a3"/>
+      <element xsi:type="zenta:BasicRelationship" id="e159cb0a-ea31-4048-99ec-2e8e54169aa7" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="861fcab2-587d-45f1-8587-1979180ee4f6" target="833d959e-228d-4954-a74f-90c355ac36a3"/>
+      <element xsi:type="zenta:BasicRelationship" id="b85fdeda-1b70-49df-847c-c4715db2d9bb" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="35eddd23-6029-42b8-9bb9-b763e46976e3" target="833d959e-228d-4954-a74f-90c355ac36a3"/>
+      <element xsi:type="zenta:BasicRelationship" id="571ebac8-d701-4518-8fca-2a3e13bfb8ec" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="4dce3f0a-a681-447a-896b-d0ca2c1585fe"/>
+      <element xsi:type="zenta:BasicRelationship" id="9ea12899-87f2-4595-8ff0-9f9a10b013a9" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
+      <element xsi:type="zenta:BasicRelationship" id="ae84a920-e3d3-4836-9b4e-80d105284be2" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="dto"/>
+      <element xsi:type="zenta:BasicRelationship" id="cb2f3e9d-f262-4fb6-ae4d-65be0ac5b4df" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2"/>
+      <element xsi:type="zenta:BasicRelationship" id="7c5955e4-3374-43b2-b312-34657bdd7889" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a"/>
+      <element xsi:type="zenta:BasicObject" name="framework specific" id="6cd0ac90-c94f-4779-afe5-c704590846d8" ancestor="behaviour">
+        <documentation>Configuration is provided by means specific to the framework used.
+For example in Java Spring projects the SpringConfig Class contains the configuration variables as fields.
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="5649f01c-6e2e-4d44-a820-7717388a0c3c" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="6cd0ac90-c94f-4779-afe5-c704590846d8"/>
+      <element xsi:type="zenta:BasicRelationship" id="14f5d273-af3e-456c-997b-7f1c441a4879" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6cd0ac90-c94f-4779-afe5-c704590846d8" target="804cfcd0-5c82-4776-8f40-d16c3d5b870e"/>
+      <element xsi:type="zenta:BasicRelationship" id="6861b1ab-1b04-46bd-9389-c3b5f1dcdb0e" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="3c4d5358-9776-4954-a912-5d8c45183628"/>
+      <element xsi:type="zenta:BasicRelationship" id="34677318-c711-45d0-8ec0-13dccbd5bb67" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicRelationship" id="2eeaef60-f8ac-4748-a89a-b33190ea63c8" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="66218839-41bf-442d-b629-32e4e1ad2076"/>
+      <element xsi:type="zenta:BasicRelationship" id="ecb65e88-0134-4a7c-9f34-1315712c9858" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicRelationship" id="465529c2-d673-48b3-bb8b-2fc4d5e20d66" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="e4a79f01-26a0-4628-9f37-1de93f01fed8" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicRelationship" id="c133ef4e-da80-441c-b6ef-55e8ccd516a7" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="833d959e-228d-4954-a74f-90c355ac36a3"/>
+      <element xsi:type="zenta:BasicRelationship" id="3ec62392-b02b-412d-971c-4007c1a1b3b8" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="c5f0762f-8e64-4005-afbc-dfd30b91926a"/>
+      <element xsi:type="zenta:BasicRelationship" id="10801a10-3081-4a4c-a4e1-1546d2976da7" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26b4d7af-073d-426b-8d83-13d989d00602" target="ff41556c-9dff-435c-8870-09733ed86067"/>
+      <element xsi:type="zenta:BasicObject" name="interface class" id="2a9d2132-6761-4332-90ef-5867fc9d6096" ancestor="behaviour">
+        <documentation>- Units without naming convention (Delegate, Configuration provider, and units which part of the boilerplate needed with the frameworks used) should have an @InterfaceClass annotation, denoting the lack of naming convention applicable.</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="76dbad51-edf7-4670-8c89-a6d0e28fe194" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="2a9d2132-6761-4332-90ef-5867fc9d6096"/>
+      <element xsi:type="zenta:BasicRelationship" id="e041c92a-c191-4b08-a1e2-02e3f29a8d62" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="2a9d2132-6761-4332-90ef-5867fc9d6096" target="aac49409-16ea-44e9-8a2e-24ef1876c7ab"/>
+      <element xsi:type="zenta:BasicRelationship" id="8c5570f0-ac2c-4f74-8fcf-bf3cfa494dc9" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="2a9d2132-6761-4332-90ef-5867fc9d6096" target="804cfcd0-5c82-4776-8f40-d16c3d5b870e"/>
+      <element xsi:type="zenta:BasicObject" name="No reference to production code constants" id="5397f74e-8346-4361-a715-1118727df296" ancestor="behaviour">
+        <documentation>Test units must not reference constants in production code in any way. If a constant is needed, it should be provided by test data.</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="3c7348a2-c3ec-48fc-8ce2-851b176370ad" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="5397f74e-8346-4361-a715-1118727df296"/>
+      <element xsi:type="zenta:BasicRelationship" id="966b0454-1575-434f-ad0c-9c88a5f4639d" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5397f74e-8346-4361-a715-1118727df296" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicRelationship" id="c1fdb5f3-2eb6-4ad1-bc6a-cffede4e7816" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5397f74e-8346-4361-a715-1118727df296" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="09df97d8-bb7c-454b-9b7d-c08f7c6f76e3" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5397f74e-8346-4361-a715-1118727df296" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicRelationship" id="d3b21db2-b97c-483a-b321-a14271adc0ee" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5397f74e-8346-4361-a715-1118727df296" target="66218839-41bf-442d-b629-32e4e1ad2076"/>
+      <element xsi:type="zenta:BasicRelationship" id="aaaf93a2-e69f-4e74-bcd5-2fc579b6e72c" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5397f74e-8346-4361-a715-1118727df296" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicObject" name="class" id="6a2e8d68-a732-4bc4-b833-b0bded3be810" ancestor="behaviour">
+        <documentation>The java implementation of the unit is a class
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="9a2b1b86-b60c-42d8-b816-f55789c60e25" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="6a2e8d68-a732-4bc4-b833-b0bded3be810"/>
+      <element xsi:type="zenta:BasicRelationship" id="d15db9a6-1567-40a1-a015-e1ee8b41737b" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicRelationship" id="db775a85-284c-4882-9e70-511c11214887" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="c3312c30-9bd4-4772-9ed6-249eb3ca5602" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicRelationship" id="ad849e89-8a0e-4a9c-8fbb-245d4321b460" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="66218839-41bf-442d-b629-32e4e1ad2076"/>
+      <element xsi:type="zenta:BasicRelationship" id="500523ed-fd79-4540-8c49-66d14bb483d0" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicRelationship" id="f89c2474-b6b6-46b8-ac1c-4d02b660f9b3" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="4dce3f0a-a681-447a-896b-d0ca2c1585fe"/>
+      <element xsi:type="zenta:BasicRelationship" id="ed59dff2-6e54-4c0a-8ff6-ec940ca99943" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
+      <element xsi:type="zenta:BasicRelationship" id="4c774506-61bf-428d-a174-ae3094d4a841" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="3c4d5358-9776-4954-a912-5d8c45183628"/>
+      <element xsi:type="zenta:BasicRelationship" id="d5901fa6-0d04-4636-831f-625fd1402d43" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="dto"/>
+      <element xsi:type="zenta:BasicRelationship" id="d94b2666-4fc3-4c77-a880-2f18f6f72f2c" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2"/>
+      <element xsi:type="zenta:BasicRelationship" id="f8175e3c-0cf6-45a1-8f59-7ee72f1aecec" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a"/>
+      <element xsi:type="zenta:BasicRelationship" id="059d50d2-bb7b-4daa-bc6d-58d89729d6cc" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="c5f0762f-8e64-4005-afbc-dfd30b91926a"/>
+      <element xsi:type="zenta:BasicRelationship" id="8934531d-91b2-4412-b199-64f1d201f2ba" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="aac49409-16ea-44e9-8a2e-24ef1876c7ab"/>
+      <element xsi:type="zenta:BasicRelationship" id="c3b98b39-2fad-4603-b873-8cb63cde8b2f" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="6a2e8d68-a732-4bc4-b833-b0bded3be810" target="804cfcd0-5c82-4776-8f40-d16c3d5b870e"/>
+      <element xsi:type="zenta:BasicObject" name="enum" id="92500fdd-fc33-404e-9ad8-f9749be34f86" ancestor="behaviour">
+        <documentation>The java implementation of an Enum is an enum, with SCREAMING_SNEAK_CASE constant names
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="ab0e5b6b-dc68-47c5-bed4-8e1256924724" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="92500fdd-fc33-404e-9ad8-f9749be34f86" target="833d959e-228d-4954-a74f-90c355ac36a3"/>
+      <element xsi:type="zenta:BasicObject" name="repository" id="64212f41-f899-4fd7-be73-e15d12dd3f0a" ancestor="behaviour">
+        <documentation>- The java implementation of a repository is an interface extending PagingAndSortingRepository&lt;EntityType, Long>, where EntityType is the name of the Entity unit it handles.
+- A method name of the Repository can start with find. It returns List&lt;EntityType>
+- A method name of the repository can start with get. It returns Optional&lt;EntityType>
+- The repository have the methods defined as Queryes contained by the repository. All the method names directly define a query as described in https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details
+ </documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="5862d888-b73e-45bb-9314-16296431a199" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="64212f41-f899-4fd7-be73-e15d12dd3f0a" target="ff41556c-9dff-435c-8870-09733ed86067"/>
+      <element xsi:type="zenta:BasicObject" name="module" id="1b11b59b-e6eb-4b64-a208-b3a5db8d7c12" ancestor="behaviour">
+        <documentation>The python implementation of the unit is a module directly containing the methods/constants.</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="d61198b1-9681-4100-abf2-d1c09e514bdf" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="1b11b59b-e6eb-4b64-a208-b3a5db8d7c12" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="6c54f61a-c975-4f0d-ad81-30ee6abfc49f" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="1b11b59b-e6eb-4b64-a208-b3a5db8d7c12" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicRelationship" id="e5416c82-5321-4ac7-bbf9-eca39af2bfee" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="1b11b59b-e6eb-4b64-a208-b3a5db8d7c12" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicRelationship" id="6a1eb112-ab79-4022-bdd5-ba4000730c3f" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="1b11b59b-e6eb-4b64-a208-b3a5db8d7c12" target="3c4d5358-9776-4954-a912-5d8c45183628"/>
+      <element xsi:type="zenta:BasicRelationship" id="98214829-b4b2-40c7-b628-1e962ebedaa1" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="1b11b59b-e6eb-4b64-a208-b3a5db8d7c12" target="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a"/>
+      <element xsi:type="zenta:BasicObject" name="Java implementation" id="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" ancestor="behaviour"/>
+      <element xsi:type="zenta:BasicRelationship" id="f3a7245a-012e-4372-8db1-4aa1b0e30684" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="90c9ea7a-fbdb-486f-8bb2-414ae673ba49"/>
+      <element xsi:type="zenta:BasicRelationship" id="0dc645f6-2a45-4be1-96a8-a56a34415460" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="92500fdd-fc33-404e-9ad8-f9749be34f86"/>
+      <element xsi:type="zenta:BasicRelationship" id="31dee11d-b227-48dc-b1bc-ee188f89d477" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="6a2e8d68-a732-4bc4-b833-b0bded3be810"/>
+      <element xsi:type="zenta:BasicRelationship" id="94db704d-6bc0-4da0-b32f-97471ed87f8c" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="3ee0f35c-5723-4ae7-958d-f8351e1d023f"/>
+      <element xsi:type="zenta:BasicObject" name="python implementation" id="a075cf36-a702-4ec4-9921-7df4e66b12df" ancestor="behaviour"/>
+      <element xsi:type="zenta:BasicRelationship" id="9bd5458f-c0f6-4643-95e8-4ced89dcf011" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="a075cf36-a702-4ec4-9921-7df4e66b12df"/>
+      <element xsi:type="zenta:BasicRelationship" id="62e4af59-9914-4e7e-a7c7-7165d709c995" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="a075cf36-a702-4ec4-9921-7df4e66b12df" target="1b11b59b-e6eb-4b64-a208-b3a5db8d7c12"/>
+      <element xsi:type="zenta:BasicRelationship" id="37c7c1d9-c5b1-4f3b-a5d4-096d52a5963b" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="64212f41-f899-4fd7-be73-e15d12dd3f0a"/>
+      <element xsi:type="zenta:BasicObject" name="Test Data fields and methods" id="26320259-ca58-4f0d-8ab5-c98641585f12" ancestor="behaviour">
+        <documentation>- test artifacts for fields go to the Test Data of the corresponding Entity or DTO as a constant. In case of a field belonging to both an Entity and DTO, the Test Data of the Entity contains the artifacts.
+- other simple test artifacts of legacy or primitive objects without behaviour go to the Test Data of the corresponding Controller or Entity as constant.
+- complex test data or test data mocks (with behaviour) of legacy objects go to the test Data of the corresponding legacy object</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="b6dd6549-c3e4-45de-a32e-dd686c0fb941" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="26320259-ca58-4f0d-8ab5-c98641585f12"/>
+      <element xsi:type="zenta:BasicRelationship" id="fc40af61-7e46-4d8e-bc80-519905f50772" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="26320259-ca58-4f0d-8ab5-c98641585f12" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicObject" name="stub methods" id="09e6371f-a016-4564-bb13-e2738204933f" ancestor="behaviour">
+        <documentation>- there are zero or one behaviour stubs in a stub provider, implemented as a method named 'behaviour' with the Service/Controller/Legacy object as the parameter, without return value.
+- there are zero or more context stubs in a stub provider without parameter and return value. The method name is a sentence describing the state.
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="0109e0ad-9c8f-4984-9015-c77b45e61bfc" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="09e6371f-a016-4564-bb13-e2738204933f"/>
+      <element xsi:type="zenta:BasicRelationship" id="8b57698b-3ee2-4b1e-87b2-930873d627cb" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="09e6371f-a016-4564-bb13-e2738204933f" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicObject" name="Test case descriptions" id="51c84caa-de59-4851-8821-705803797a4f" ancestor="behaviour">
+        <documentation>Test cases are methods of the Test unit.
+
+The tests descriptions are used to generate low level documentation of the project. Therefore they should be a full declarative sentence.
+
+Checking that the description is indeed covers the functionality checked by the unit test is a central element of the review process.
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="d2733de8-44a8-4bac-abf2-5eff77c651f2" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="51c84caa-de59-4851-8821-705803797a4f"/>
+      <element xsi:type="zenta:BasicRelationship" id="ddc8a213-14a5-4a9e-9463-a4db6c5679a8" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="51c84caa-de59-4851-8821-705803797a4f" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicObject" name="Unit test annotations and naming" id="98e905d4-8282-4ae7-bf1a-5d7eaa5f29fa" ancestor="behaviour">
+        <documentation>Java implementations of unit Test units have the following annotations on the test class:
+
+- basic annotations:
+  - @ExtendWith(MockitoExtension.class)
+  - @MockitoSettings(strictness = Strictness.LENIENT)
+  - @RunWith(MockitoJUnitRunner.class)
+- @TestedBehaviour and @TestedService annotations mandated by the task description, denoting the behaviour and code unit under test.
+
+if there is a setUp and/or tearDown method, they should be called such, and have the corresponding Junit 5 annotations: @BeforeEach and @AfterEach
+
+test cases have the following annotations:
+
+- @Test
+- @Displayname
+
+the parameter of the @Displayname annotation contains the test description
+
+The test case method names must start with 'test', and the rest of the name do not matter as the @Displayname annotation conveys the information about their function.
+
+All of the methods and fields of the unit test are package protected.</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="a87963a7-7863-4caf-b211-b37325aa21b6" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="98e905d4-8282-4ae7-bf1a-5d7eaa5f29fa"/>
+      <element xsi:type="zenta:BasicObject" name="based on Test Base" id="b0dfa46a-2e3f-4745-af13-3df7567c678a" ancestor="behaviour">
+        <documentation>- Unit test of a Service/Controller must be children of the Test Base unit orresponding to the tested Service/Controller.
+- In case of legacy objects a Test Base unit may be created, based on the decision of the coder.
+- If a Test Base object is created, it should be used by all the corresponding unit tests.
+- The setUp method of unit tests (if exist) must call the setUp method of the superclass as its first instruction.
+- unit tests can reference the tested code unit, as it is brought into the namespace by the Test base
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="4d218205-c73d-4bd3-9f0d-e8de6705c2d8" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="b0dfa46a-2e3f-4745-af13-3df7567c678a"/>
+      <element xsi:type="zenta:BasicRelationship" id="11cd968d-5afb-437f-a0f7-971190d7b106" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="b0dfa46a-2e3f-4745-af13-3df7567c678a" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicObject" name="basic naming conventions" id="059291b1-c79f-464a-8433-bb7a83f1fb79" ancestor="behaviour">
+        <documentation>- modules are files named with CamelCase, with the language-specific extension (e.g. RegistrationController.java or RegistrationController.py)
+- non-module units (classes, interfaces and enums) are named with CamelCase. There is only one unit in a module.
+- methods are named with lowerCaseCamelCase, as a verb
+- parameters, fields and local variables are named with lowerCaseCamelCase as a noun
+- constants are named with SNEAK_CASE as a noun
+- references to code units must be named after the name of the code unit with the first letter in lowercase, eg registrationController
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="62b40a44-34f2-4087-947d-c9e4e1593db5" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="059291b1-c79f-464a-8433-bb7a83f1fb79"/>
+      <element xsi:type="zenta:BasicRelationship" id="d4689d77-4161-4dd9-9955-9850ab3f9ef8" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="aac49409-16ea-44e9-8a2e-24ef1876c7ab"/>
+      <element xsi:type="zenta:BasicRelationship" id="be1d028c-06e2-49ae-b212-3bfaa0a7ecff" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="c5f0762f-8e64-4005-afbc-dfd30b91926a"/>
+      <element xsi:type="zenta:BasicRelationship" id="358e4dfd-91ea-457a-9e74-d4e11873f8d6" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a"/>
+      <element xsi:type="zenta:BasicRelationship" id="ae74c553-73cc-447b-923c-e9cf0d406874" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="dto"/>
+      <element xsi:type="zenta:BasicRelationship" id="4cf4644b-ccfb-48a9-96d7-1e8fae7090af" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="4dce3f0a-a681-447a-896b-d0ca2c1585fe"/>
+      <element xsi:type="zenta:BasicRelationship" id="da44d3b8-9139-41e3-ba0c-c7dae74dce16" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicRelationship" id="23bef7ed-f81a-465e-8660-00038e01b4d4" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="12c52318-3ee9-44e2-acec-51c4ee64b784" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicRelationship" id="5cd20d31-d057-469e-8430-bc9c228459d0" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="ff41556c-9dff-435c-8870-09733ed86067"/>
+      <element xsi:type="zenta:BasicRelationship" id="bcc4e116-e6bf-4253-91f2-cebc43219a58" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="804cfcd0-5c82-4776-8f40-d16c3d5b870e"/>
+      <element xsi:type="zenta:BasicRelationship" id="bea5e002-9db7-486f-b9e0-073d4db534d9" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2"/>
+      <element xsi:type="zenta:BasicRelationship" id="62ac79e6-d553-4137-9ba0-b715a53f538d" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
+      <element xsi:type="zenta:BasicRelationship" id="7ec15158-e920-4fcd-a6c8-13a4c7063bc7" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="66218839-41bf-442d-b629-32e4e1ad2076"/>
+      <element xsi:type="zenta:BasicRelationship" id="4cec58d0-3157-408c-af5a-7d756ffacf2d" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="833d959e-228d-4954-a74f-90c355ac36a3"/>
+      <element xsi:type="zenta:BasicRelationship" id="c978e1fd-5e3c-4907-ae2f-05498138f285" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="3c4d5358-9776-4954-a912-5d8c45183628"/>
+      <element xsi:type="zenta:BasicRelationship" id="539da5b8-394c-416e-895a-9cbe13ce71f1" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="059291b1-c79f-464a-8433-bb7a83f1fb79" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicRelationship" id="e79f0c6f-f9ac-4207-8f48-53a0f5371043" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="98e905d4-8282-4ae7-bf1a-5d7eaa5f29fa" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicObject" name="separation of test concerns" id="5b588fe9-1aea-46d3-b8d6-2e6e8d276dc1" ancestor="behaviour">
+        <documentation>Test code, test artifacts, stubs and test helper methods should be strictly separated.
+
+- The Test units must contain only test functions, and possibly setUp and tearDown methods with setup and teardown of locally used mechanisms.
+- Stub Providers must contain only stubs describing behaviour of production code or external dependencies
+- Test Data units must contain only Test Artifacts, including mocks describing behaviour of parameters
+- Test Helpers must contain only helper functions supporting the test cases
+- Test Bases must contain only constructs building the unit under test, injecting the mocks of its dependencies, and calls to behaviour stubs of the dependencies
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="3058f961-1b6a-45a2-940f-ef65a606bde1" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="5b588fe9-1aea-46d3-b8d6-2e6e8d276dc1"/>
+      <element xsi:type="zenta:BasicRelationship" id="32e48a96-4d2f-42bc-8a96-2b412eeab050" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5b588fe9-1aea-46d3-b8d6-2e6e8d276dc1" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicRelationship" id="82692670-ccf8-475f-8089-a066ccf12df4" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5b588fe9-1aea-46d3-b8d6-2e6e8d276dc1" target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicRelationship" id="f0695ea4-e4fa-4da0-8126-5262c2a6511e" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5b588fe9-1aea-46d3-b8d6-2e6e8d276dc1" target="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+      <element xsi:type="zenta:BasicRelationship" id="0e525653-8242-4951-a3c1-004f0f494c2a" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5b588fe9-1aea-46d3-b8d6-2e6e8d276dc1" target="66218839-41bf-442d-b629-32e4e1ad2076"/>
+      <element xsi:type="zenta:BasicRelationship" id="3c04cf1e-8d34-41f4-81c1-9ea47601b335" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5b588fe9-1aea-46d3-b8d6-2e6e8d276dc1" target="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+      <element xsi:type="zenta:BasicObject" name="Test Base annotations and naming" id="5925e94d-c59e-4269-a096-0e18ff743961" ancestor="behaviour">
+        <documentation>The test Base have fields for the code unit under test and its dependencies, and a setUp method.
+
+All the fields and methods are package protected.
+
+The field for the code unit under test is annotated with @InjectMocks
+
+The fields for dependencies are annotated with @Mock
+
+The setUp method is annotated with @BeforeEach
+
+There are no other fields or methods.
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="6643a415-8a9c-41b8-8c86-ebd59053d42e" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="5925e94d-c59e-4269-a096-0e18ff743961"/>
+      <element xsi:type="zenta:BasicRelationship" id="789dcc2a-eefe-4078-a421-3b21e393a8b0" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5925e94d-c59e-4269-a096-0e18ff743961" target="66218839-41bf-442d-b629-32e4e1ad2076"/>
+      <element xsi:type="zenta:BasicObject" name="Test approach and scope" id="5f45a4b2-9963-41ab-807d-5fb5aeec823b" ancestor="behaviour">
+        <documentation>- Unit tests must test public interfaces of Service and Controller units and legacy objects. They must not call Utility Class functions.
+- The unit tests together must provide full unit- and mutation test coverage for all of the Service, Controller and Utility Class units.
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="ab033500-c070-41a6-89ae-486c491ee004" ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123" source="eee962ae-e529-4297-9a0f-28e31dbc0f45" target="5f45a4b2-9963-41ab-807d-5fb5aeec823b"/>
+      <element xsi:type="zenta:BasicRelationship" id="691e74c3-a5d0-4254-bc93-4a69fbb84634" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="5f45a4b2-9963-41ab-807d-5fb5aeec823b" target="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+      <element xsi:type="zenta:BasicObject" name="DTO annotations and naming" id="8f57cca4-c506-4800-95c5-642258d5b2f7" ancestor="behaviour">
+        <documentation>In Java
+
+- a DTO have a @Data annotation and private non-static fields.
+- no methods, and no explicit constructors
+
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="9d243601-8865-4819-835e-e5fd10705f72" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="8f57cca4-c506-4800-95c5-642258d5b2f7" target="dto"/>
+      <element xsi:type="zenta:BasicObject" name="Entity annotations and naming" id="b2541c3c-8b1d-4fdb-be03-22b2975b4216" ancestor="behaviour">
+        <documentation>In java
+
+- the class must have an @Entity annotation
+- the class must have a @Data annotation
+- the class may have a @Table annotation with the name of the sql table
+- the id field is of type Long, and must have   @Id and  @GeneratedValue(strategy = GenerationType.IDENTITY) annotations
+- the fields may have @Column annotations denoting the sql column
+- the fields referencing aggregates of other entities have the following annotations in the side marked as &quot;owning&quot; the relation
+
+    @ManyToMany(
+      fetch = FetchType.LAZY,
+      cascade = {
+          CascadeType.ALL
+      }
+    )
+   @JoinTable(
+      name = &quot;&lt;name of join table>&quot;,
+      joinColumns = {
+          @JoinColumn(name = &quot;&lt;name of column  referring to this entity in the join table>&quot;)
+      },
+      inverseJoinColumns = {
+          @JoinColumn(name = &quot;&lt;name of column referring to the other entity in the join table>&quot;)
+      }
+   )
+   @EqualsAndHashCode.Exclude
+
+- the fields referencing aggregates of other entities have the following annotation in the &quot;slave&quot; side:
+
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = &quot;&lt;name of the table of the owning entity>&quot;)
+    @EqualsAndHashCode.Exclude
+
+- the fields referencing the aggregate of other entities are initialized using 'new HashSet&lt;>()'
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="70ec27a2-23fb-4ad2-88c5-8a1ae644479e" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="b2541c3c-8b1d-4fdb-be03-22b2975b4216"/>
+      <element xsi:type="zenta:BasicRelationship" id="a308c60c-fb52-4abe-827f-4443d18d1936" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="8f57cca4-c506-4800-95c5-642258d5b2f7"/>
+      <element xsi:type="zenta:BasicRelationship" id="daef8864-25f1-477c-bb77-9e743ac1159d" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="b2541c3c-8b1d-4fdb-be03-22b2975b4216" target="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2"/>
+      <element xsi:type="zenta:BasicObject" name="Factory annotations and naming" id="c23c70ff-3e4e-43bf-8d7d-07caa5006308" ancestor="behaviour">
+        <documentation>In java a Factory is a class annotated as @Service extending FactoryBean.</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="d344fd6e-46de-4281-9df0-e6e3e4256a6c" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="c23c70ff-3e4e-43bf-8d7d-07caa5006308"/>
+      <element xsi:type="zenta:BasicRelationship" id="23021207-281f-4ee2-b663-31a02294d8ed" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="c23c70ff-3e4e-43bf-8d7d-07caa5006308" target="c5f0762f-8e64-4005-afbc-dfd30b91926a"/>
+      <element xsi:type="zenta:BasicObject" name="Delegate rules" id="fe319972-e893-4bad-bc83-71532ff015ac" ancestor="behaviour">
+        <documentation>In Java:
+
+* The DI bootstrapping is delegated to a static void method with sole parameter of this in an interface of the underlying service.
+* The state of a delegate is stored in a DTO, referenced in a field annotated with @Delegate and if the integration tests need it, @Getter annotation.
+* The underlying services are referenced using @Autowire -d fields using the interface
+* The methods use the delegate pattern, with this as an extra parameter in the delegated call.
+
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="7157f218-3a40-4f9f-a17c-122ae8d2617f" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="fe319972-e893-4bad-bc83-71532ff015ac"/>
+      <element xsi:type="zenta:BasicRelationship" id="0a2b192f-981d-46ab-a510-c0028c8a42e5" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="fe319972-e893-4bad-bc83-71532ff015ac" target="aac49409-16ea-44e9-8a2e-24ef1876c7ab"/>
+      <element xsi:type="zenta:BasicObject" name="Service annotations and naming" id="ee85f5ad-0c1f-419e-bf2d-f35643363494" ancestor="behaviour">
+        <documentation>In java
+
+- The class must have a @Service annotation
+
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="10c5e34f-808d-4d44-936e-8fd21e78f4f5" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="ee85f5ad-0c1f-419e-bf2d-f35643363494"/>
+      <element xsi:type="zenta:BasicRelationship" id="e36f8b9b-eaf0-45f3-b4be-d2405fdf8ca7" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="ee85f5ad-0c1f-419e-bf2d-f35643363494" target="4dce3f0a-a681-447a-896b-d0ca2c1585fe"/>
+      <element xsi:type="zenta:BasicObject" name="Public interface and dependencies" id="f6b8267f-7210-4b56-ae96-383a6dc022f7" ancestor="behaviour">
+        <documentation>in Java
+
+- The public interface is a public function named 'call'
+- It may have other entry points, provided that it does the same thing with different kind of parameters. The name of the other entry points must also be 'call' in polimorphic languages as long as the paameters can differrentiate between the different versions. In other cases the name of other entry points should start with 'call'
+- all other methods should be private
+- The services it depends on should be referenced with private fields with @Autowired annotation
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="b52072a2-088d-4ee2-bb1d-8daa2dfb70ea" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="f6b8267f-7210-4b56-ae96-383a6dc022f7"/>
+      <element xsi:type="zenta:BasicRelationship" id="b0111bb3-0316-45ec-a130-0cce139e66a7" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="f6b8267f-7210-4b56-ae96-383a6dc022f7" target="4dce3f0a-a681-447a-896b-d0ca2c1585fe"/>
+      <element xsi:type="zenta:BasicRelationship" id="d397c945-6b0a-410c-a6ed-448b49db93e1" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="f6b8267f-7210-4b56-ae96-383a6dc022f7" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
+      <element xsi:type="zenta:BasicObject" name="Controller annotations and naming" id="adc7c595-d583-4ec1-b75b-6a5bb378da81" ancestor="behaviour">
+        <documentation>In java
+
+- the class must have a @RestController annotation
+- the interface methods must be annotated with @GetMapping or @PostMapping annotations according to the HTTP method and url path associated with the controller
+- the interface parameters should be annotated with @RequestBody annotation if that is mandated by the design and the request type is not x-www-form-urlencoded
+- the parameters according to path parameters should be annotated with @PathParam
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship" id="dfb5adf9-a489-4f86-b440-027c630ea0ab" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="90c9ea7a-fbdb-486f-8bb2-414ae673ba49" target="adc7c595-d583-4ec1-b75b-6a5bb378da81"/>
+      <element xsi:type="zenta:BasicRelationship" id="3f2bd5a0-c8e3-4466-b0b3-621f34e17c31" ancestor="85fe4cc6-d5d4-44a1-b927-5a0795d410ae" source="adc7c595-d583-4ec1-b75b-6a5bb378da81" target="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
+      <element xsi:type="zenta:BasicRelationship" id="8f860df4-b378-4e75-bc8c-1eb39f9ccd34" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="5925e94d-c59e-4269-a096-0e18ff743961"/>
+      <element xsi:type="zenta:BasicRelationship" id="92081f92-82da-4460-bcbb-ffe6558b684a" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="98e905d4-8282-4ae7-bf1a-5d7eaa5f29fa"/>
+      <element xsi:type="zenta:BasicRelationship" id="dfc77b24-a531-40b0-b6e5-bf4c083acb0a" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="09e6371f-a016-4564-bb13-e2738204933f"/>
+      <element xsi:type="zenta:BasicRelationship" id="31935bed-e043-4f33-a8ce-4eff9547a4e8" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="5f45a4b2-9963-41ab-807d-5fb5aeec823b"/>
+      <element xsi:type="zenta:BasicRelationship" id="9bbd1a8e-5947-4fcc-a1a3-3e64a488023f" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="51c84caa-de59-4851-8821-705803797a4f"/>
+      <element xsi:type="zenta:BasicRelationship" id="a393b7eb-11b7-4c89-8330-65f19b6eba8a" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="26320259-ca58-4f0d-8ab5-c98641585f12"/>
+      <element xsi:type="zenta:BasicRelationship" id="679300c1-7956-4863-9005-ecb196e9b486" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="5b588fe9-1aea-46d3-b8d6-2e6e8d276dc1"/>
+      <element xsi:type="zenta:BasicRelationship" id="c1b3f6c3-fc68-4a73-bef4-aa1adf721e93" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="6a2e8d68-a732-4bc4-b833-b0bded3be810"/>
+      <element xsi:type="zenta:BasicRelationship" id="171d468c-76f7-4447-82ae-d8b343b1dc73" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="8f57cca4-c506-4800-95c5-642258d5b2f7"/>
+      <element xsi:type="zenta:BasicRelationship" id="6cb09f8e-2017-4929-97f8-e7281f70b810" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="92500fdd-fc33-404e-9ad8-f9749be34f86"/>
+      <element xsi:type="zenta:BasicRelationship" id="f33ba3f7-5515-48fe-9412-6f3e2c1bc42a" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="ee85f5ad-0c1f-419e-bf2d-f35643363494"/>
+      <element xsi:type="zenta:BasicRelationship" id="a3671b7e-33da-41c4-a7a3-081ec020291b" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="f6b8267f-7210-4b56-ae96-383a6dc022f7"/>
+      <element xsi:type="zenta:BasicRelationship" id="68f4ac24-a30f-4cfa-852e-ae6ef09c8e11" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="adc7c595-d583-4ec1-b75b-6a5bb378da81"/>
+      <element xsi:type="zenta:BasicRelationship" id="dadbca44-e9a7-4c67-8d9f-0953b42d9883" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="fe319972-e893-4bad-bc83-71532ff015ac"/>
+      <element xsi:type="zenta:BasicRelationship" id="932db418-2c7d-498a-bd6c-3d140204caba" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="c23c70ff-3e4e-43bf-8d7d-07caa5006308"/>
+      <element xsi:type="zenta:BasicRelationship" id="da1cd218-a1c3-4ac0-876c-c5e0a40f1a1f" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="24a87938-be71-4bc5-b7af-a6613caad024"/>
+      <element xsi:type="zenta:BasicRelationship" id="606355cc-337c-4d02-ad16-decb53b7a4df" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="b0dfa46a-2e3f-4745-af13-3df7567c678a"/>
+      <element xsi:type="zenta:BasicRelationship" id="2b04a96f-1771-4cb3-a155-ee9984ec18b2" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="8c8f5643-e1c9-4ca7-a18a-74b2ccf5cf99"/>
+      <element xsi:type="zenta:BasicRelationship" id="d26ce9c9-4afb-4011-ad00-b140acded8f2" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="75d5962e-721a-497b-932e-9a6dbe058d81"/>
+      <element xsi:type="zenta:BasicRelationship" id="251ab597-6800-41fa-afd4-c2f08c0f0681" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="35eddd23-6029-42b8-9bb9-b763e46976e3"/>
+      <element xsi:type="zenta:BasicRelationship" id="fa5fb968-1826-4e1d-ad89-4e8f6452f972" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="1b11b59b-e6eb-4b64-a208-b3a5db8d7c12"/>
+      <element xsi:type="zenta:BasicRelationship" id="448a7b7d-6386-4488-91b9-2ec3e4758040" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="1278c3f4-2609-4490-876c-95ea4cf2b811"/>
+      <element xsi:type="zenta:BasicRelationship" id="cd4ac63f-2ea2-49e8-b7c8-dbbe12dc0caf" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="861fcab2-587d-45f1-8587-1979180ee4f6"/>
+      <element xsi:type="zenta:BasicRelationship" id="09dfa6ec-a06a-4e63-ab37-e8bf6d81656c" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="a83b3a77-8854-44b0-977e-037c7864d052"/>
+      <element xsi:type="zenta:BasicRelationship" id="58e2fc24-4347-4053-8b40-ec790d6fc681" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="478609a9-ef96-4d4b-b328-f982f1d0860d"/>
+      <element xsi:type="zenta:BasicRelationship" id="a066742c-e7ae-4a77-b752-28c5740580ac" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="059291b1-c79f-464a-8433-bb7a83f1fb79"/>
+      <element xsi:type="zenta:BasicRelationship" id="52a593c6-faa0-42dd-84fb-9f0ee1a079ce" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="2a9d2132-6761-4332-90ef-5867fc9d6096"/>
+      <element xsi:type="zenta:BasicRelationship" id="8d3710e3-0ab2-4ccf-95fb-099f0ab34d99" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="6a6a5f4e-be42-4cad-bf72-be0116b8817e"/>
+      <element xsi:type="zenta:BasicRelationship" id="4f4a61e5-e0a2-4905-995b-ce79f73b2e5b" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="3ee0f35c-5723-4ae7-958d-f8351e1d023f"/>
+      <element xsi:type="zenta:BasicRelationship" id="22ee66c9-5bf7-4b1d-8fdd-59b2ae4c34a9" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="64212f41-f899-4fd7-be73-e15d12dd3f0a"/>
+      <element xsi:type="zenta:BasicRelationship" id="67629dc9-9c18-4f8e-9575-675eba093de4" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8"/>
+      <element xsi:type="zenta:BasicRelationship" id="c34e1bbf-d96a-4fa6-9f06-2db3056e1fc4" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="b585a667-63bb-4bb8-8a20-2e574b874ed0"/>
+      <element xsi:type="zenta:BasicRelationship" id="fd4be4ea-d367-49bc-ae7a-8099746f993b" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="b2541c3c-8b1d-4fdb-be03-22b2975b4216"/>
+      <element xsi:type="zenta:BasicRelationship" id="9e3a9f93-36df-4c8d-b5ee-001bdac55f89" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="5397f74e-8346-4361-a715-1118727df296"/>
+      <element xsi:type="zenta:BasicRelationship" id="3e1e64f1-4179-4f58-9d01-549f7978908d" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="26b4d7af-073d-426b-8d83-13d989d00602"/>
+      <element xsi:type="zenta:BasicRelationship" id="a4953b12-b3ff-4be2-997a-507ea9807898" ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a" source="3d926f54-d9a6-4cf4-b89d-a96ba68f1144" target="6cd0ac90-c94f-4779-afe5-c704590846d8"/>
     </folder>
   </folder>
   <property key="documentationMarkup" value="MediaWiki"/>
