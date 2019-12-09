@@ -1,4 +1,4 @@
-build_image: kodekonveyor/toolchain:0.1.4alpha8
+build_image: kodekonveyor/toolchain:0.1.4alpha19
 language: python
 python:
   - 2.7
