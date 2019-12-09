@@ -289,13 +289,13 @@
               <documentation>design|
 $p2 = $p1//folder[@name='2. Metamodel Constants']//element</documentation>
             </element>
-            <element xsi:type="zenta:BasicObject" name="have a type" id="51e66785-8879-47b8-9f6b-a4657ad5b101" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <element xsi:type="zenta:BasicObject" name="has a type" id="51e66785-8879-47b8-9f6b-a4657ad5b101" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
 (
 	count(zenta:neighbours($p1,$p2,'is a/is the type of,1')) 
 ) = 1</documentation>
             </element>
-            <element xsi:type="zenta:BasicObject" name="have an example test artifact" id="cb25880d-bfa1-406f-b5c6-2cad8d9754bd" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <element xsi:type="zenta:BasicObject" name="has an example test artifact" id="cb25880d-bfa1-406f-b5c6-2cad8d9754bd" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
 (
 	count(zenta:neighbours($p1,$p2,'has an example as/is an example of,1')) +
@@ -534,7 +534,7 @@ count(zenta:neighbours($p1,$p2,'contains,2')[@xsi:type='Constant Provider' or @x
                 <sourceConnection xsi:type="zenta:Connection" id="417159b9-363e-46c8-85ce-a4208d0da827" source="36f89e83-8f3f-421a-98d7-f858b5f1ed7d" target="24ca3a99-4fae-4352-9e97-a33d2df9088c" relationship="aec8fbe0-3e7a-43b6-8694-c14d964ddfed"/>
               </child>
             </element>
-            <element xsi:type="zenta:BasicObject" name="have a test artifact" id="75d1a80c-ebf6-4a04-bea8-0bacd900bd24" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <element xsi:type="zenta:BasicObject" name="has a test artifact" id="75d1a80c-ebf6-4a04-bea8-0bacd900bd24" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
 $p2/@xsi:type='External type' or
 (
@@ -730,11 +730,11 @@ It does not have implementation, but tightly coupled with a type which has.
                 <sourceConnection xsi:type="zenta:Connection" id="4a06b6c4-df0e-46dd-acf5-64f5aa8e2027" source="7df75de0-f43a-41f2-aac7-fc87f48991b5" target="9e57b4df-a9fd-4729-9e5b-bfd4b4a7b455" relationship="1a56b92f-d44c-4d4d-a497-ae7f983ebd43"/>
               </child>
             </element>
-            <element xsi:type="zenta:BasicObject" name="have constants" id="f3782afe-d0f6-4cd2-8fa9-ec2a07f363a1" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <element xsi:type="zenta:BasicObject" name="has constants" id="f3782afe-d0f6-4cd2-8fa9-ec2a07f363a1" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
 count(zenta:neighbours($p1,$p2,'contains,1')) > 0</documentation>
             </element>
-            <element xsi:type="zenta:BasicObject" name="have a package" id="eb4d6f6b-9719-450f-8958-f00245434167" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <element xsi:type="zenta:BasicObject" name="has a package" id="eb4d6f6b-9719-450f-8958-f00245434167" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
 count(zenta:neighbours($p1,$p2,'contains,2')) = 1</documentation>
             </element>
@@ -977,7 +977,7 @@ Test artifacts are actual data in case of DTOs and Entities, and actual data or 
               <documentation>design|
 count(zenta:neighbours($p1,$p2,'results,1')[@xsi:type='Entity']) = 1</documentation>
             </element>
-            <element xsi:type="zenta:BasicObject" name="have a Repository" id="00210fb5-1f96-4e96-9da7-77b1fab7b2a2" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <element xsi:type="zenta:BasicObject" name="has a Repository" id="00210fb5-1f96-4e96-9da7-77b1fab7b2a2" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
 count(zenta:neighbours($p1,$p2,'results,2')[@xsi:type='Repository']) = 1</documentation>
             </element>
@@ -1059,7 +1059,7 @@ count(zenta:neighbours($p1,$p2,'is implemented by/implements,2')[@xsi:type='Proc
               <property key="font"/>
               <property key="documentationMarkup" value="verbatim"/>
             </element>
-            <element xsi:type="zenta:BasicObject" name="have an output type" id="f495ac3b-b382-4e2d-9da4-98db9a03fa74" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <element xsi:type="zenta:BasicObject" name="has an output type" id="f495ac3b-b382-4e2d-9da4-98db9a03fa74" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
               <documentation>design|
 count(zenta:neighbours($p1,$p2,'results,1')) = 1</documentation>
             </element>
@@ -1097,9 +1097,9 @@ else true()
           <element xsi:type="zenta:BasicObject" name="Service" id="4dce3f0a-a681-447a-896b-d0ca2c1585fe" ancestor="1cbb1bec-b874-44cc-ae59-19f17e58d604">
             <documentation>A service is a unit implementing some logic which is testable with unit tests.
 
-A service do not have any state.
+A service does not have any state.
 
-A service does one thing. Therefore it either have one public function, or more public functions with different types of parameters where those functions do the same.
+A service does one thing. Therefore it either has one public function, or more public functions with different types of parameters where those functions do the same.
 
 In polymorphic languages all the functions of the service therefore have to have the same name (“call”) as a rule. An exception of the rule when the compiler/interpreter cannot reliably determine the correct function to use.
 
@@ -1289,7 +1289,7 @@ Not modeled.
               <property key="font"/>
             </element>
             <element xsi:type="zenta:BasicObject" name="Test" id="bde80e23-f840-49c8-b167-ec430e7d9800" ancestor="thing">
-              <documentation>A unit test is a code testing (a part of) the implementation of a Service or Controller. If there is a TCDD (temporary name) framework for the given language, that should be used instead of unit tests.
+              <documentation>A unit test is a code testing (a part of) the implementation of a Service or Controller, or a legacy class. If there is a TCDD (temporary name) framework for the given language, that should be used instead of unit tests.
 </documentation>
               <property key="fillColor" value="#8ae234"/>
               <property key="elementShape" value="emptyShape"/>
@@ -2132,7 +2132,7 @@ This is the same as Requirement in Common Criteria.
             <property key="font"/>
           </element>
         </folder>
-        <folder name="2. Process Step. Role" id="44ceef6a-62b9-434f-a3f2-fa9770958244">
+        <folder name="2. Process Step, Role" id="44ceef6a-62b9-434f-a3f2-fa9770958244">
           <folder name="constraints" id="914f42cc-47e0-47a3-b724-48586ddedda8">
             <property key="documentationMarkup" value="verbatim"/>
             <element xsi:type="zenta:BasicObject" name="contained in a Package or a process step" id="d2fd8b99-9f25-4a14-8a84-1ddb6dcdc2bd" ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
@@ -2436,7 +2436,7 @@ A role is assigned to human(s).
               <bounds x="948" y="270" width="193"/>
             </child>
           </element>
-          <element xsi:type="zenta:BasicObject" name="Each step have standards for its deliverables" id="58ed3b1d-6619-4674-a36c-e70b89250f2d" ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
+          <element xsi:type="zenta:BasicObject" name="Each steps have standards for its deliverables" id="58ed3b1d-6619-4674-a36c-e70b89250f2d" ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
           <element xsi:type="zenta:BasicObject" name="Standardized and simple interfaces" id="36bef80f-911f-44cb-8da1-86586c9d33e3" ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
           <element xsi:type="zenta:BasicObject" name="The process is helped by automated tools" id="2f344828-473d-4b6e-9a11-e38a63189c3e" ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
           <element xsi:type="zenta:BasicObject" name="Each step needs exactly one skillset" id="f744db66-8aa9-47d6-80dd-e1fe0d88f0d9" ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
@@ -2644,7 +2644,7 @@ A role is assigned to human(s).
             <documentation>* Focus on API rather than patterns.
 * First, write down the API for perfect scenario, observe how it feels, then jump to coding and make it work.
 * If it helps understanding, extract expressions to local variables and/or methods.
-* Tell, don't ask.</documentation>
+* Tell, don't ask. As Uncle Bob puts it: &quot;Tell-Don't-Ask is a principle that helps people remember that object-orientation is about bundling data with the functions that operate on that data. It reminds us that rather than asking an object for data and acting on that data, we should instead tell an object what to do. This encourages to move behavior into an object to go with the data.&quot; see https://martinfowler.com/bliki/TellDontAsk.html for more details</documentation>
           </element>
           <element xsi:type="zenta:BasicObject" name="No comments" id="55d0f60c-ceb7-456a-88ba-31fe434b6b4f" ancestor="behaviour">
             <documentation>* If you need to write comments to explain your code, it means you need to put it in a new method.
@@ -2676,7 +2676,7 @@ A role is assigned to human(s).
           <element xsi:type="zenta:BasicObject" name="KISS" id="a554b350-a076-44e8-96bb-083ca197c1fd" ancestor="behaviour">
             <documentation>Keep it simple, stupid.
 * Extract the complex logic to other method.
-* Avoid the use of else.
+* Avoid the use of else. (see https://softwareengineering.stackexchange.com/questions/206816/clarification-of-avoid-if-else-advice ) for clarifications.
 * Return early
 * Throw exception
 * One method should do one thing and one thing well
@@ -2707,7 +2707,7 @@ A role is assigned to human(s).
 ** use callbacks instead of polling
 ** if the only way is polling, set the poll frequency low, and time out after a reasonable number of attempts.
 *  If the test needs an interface for observing the actual state then create an interface for it.
-* If the behaviour is time-dependent, then dependency inject the clock
+* If the behaviour is time-dependent, then dependency inject a mocked clock
 </documentation>
           </element>
           <element xsi:type="zenta:BasicObject" name="Test behaviours" id="e1557de0-91d3-4134-8e60-0ab9b1f838e4" ancestor="behaviour">
@@ -2753,9 +2753,9 @@ using the CI mechanisms for gaining unauthorized access, or for any other purpos
           <element xsi:type="zenta:BasicObject" name="grammar-based naming conventions" id="519bd2fd-3152-496d-8895-23925fea3614" ancestor="behaviour">
             <documentation>All names are descriptive.
 
-* module, unit, parameter, field,  and local variable names are nouns
+* module, unit, parameter, field, and local variable names are nouns
 * code unit names refer to the activity/process they support
-* method names are verbs, except
+* method names are verbs, except context stub method names, see below
 * context stub method names are sentences describing the state
 * the non-default methods of Test Data must contain the name of the (most important) field modified right after the 'get' part, and the way of the modification. For example the method giving back an Entity with a zero id would be called getIdUninitialized()</documentation>
           </element>
@@ -3059,7 +3059,11 @@ Checking that the description is indeed covers the functionality checked by the 
               <documentation>* The java implementation of a repository is an interface extending PagingAndSortingRepository&lt;EntityType, Long>, where EntityType is the name of the Entity unit it handles.
 * A method name of the Repository can start with find. It returns List&lt;EntityType>
 * A method name of the repository can start with get. It returns Optional&lt;EntityType>
+* A method name of the repository can start with delete. It returns void
+* A method name of the repository can start with count. It returns long
+* A method name of the repository can start with exist. It returns boolean
 * The repository have the methods defined as Queryes contained by the repository. All the method names directly define a query as described in https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details
+* The default repository methods can be used as prescribed in the model
  </documentation>
             </element>
             <element xsi:type="zenta:BasicObject" name="Service annotations and naming" id="ee85f5ad-0c1f-419e-bf2d-f35643363494" ancestor="behaviour">
@@ -3397,8 +3401,8 @@ All of the methods and fields of the unit test are package protected.</documenta
             </child>
           </element>
         </folder>
-        <folder name="6. Implementation rules make easy to understand and continue the code" id="bc0c74f2-ec26-4a36-9bef-2b314a840c52">
-          <element xsi:type="zenta:ZentaDiagramModel" name="Implementation rules make easy to understand and continue the code" id="3771b3be-6d47-461b-af6b-3ee37e5d7a8b">
+        <folder name="6. Implementation rules make easy to understand, maintain and continue the code" id="bc0c74f2-ec26-4a36-9bef-2b314a840c52">
+          <element xsi:type="zenta:ZentaDiagramModel" name="Implementation rules make easy to understand, maintain and continue the code" id="3771b3be-6d47-461b-af6b-3ee37e5d7a8b">
             <child xsi:type="zenta:DiagramObject" id="13888b96-0a44-4377-914a-3098e636069d" zentaElement="0a4ffc1e-7728-4dd6-a67a-211d70be292d">
               <bounds x="636" y="120" width="301"/>
             </child>
