@@ -28,3 +28,5 @@ zentaworkaround
 metamodel.interfaces
 metamodel.stubs
 metamodel.testdata
+codedocs
+shippable/

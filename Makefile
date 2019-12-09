@@ -1,29 +1,12 @@
 export MODEL_BASENAME=metamodel
 export REPO_NAME=metamodel
 export GITHUB_ORGANIZATION=kode-konveyor
-export SONAR_ORG=$(GITHUB_ORGANIZATION)
 export LANGUAGE=java
+export JAVA_TARGET=none
+export CONSISTENCY_INPUTS=metamodel.rich inputs/issues.xml
+export AFTER_COMPILE=shippable/codingrules.html
 
-install: zentaworkaround metamodel.compiled shippable
+include /usr/local/toolchain/rules.zenta
 
-inputs/metamodel.issues.xml:
-	mkdir -p inputs
-	touch inputs/metamodel.issues.xml
-
-include /usr/share/zenta-tools/model.rules
-
-clean:
-	git clean -fdx
-
-inputs/metamodel.issues.xml: 
-	mkdir -p inputs
-	touch inputs/metamodel.issues.xml
-
-zentaworkaround:
-	mkdir -p ~/.zenta/.metadata/.plugins/org.eclipse.e4.workbench/
-	cp /usr/local/toolchain/etc/workbench.xmi ~/.zenta/.metadata/.plugins/org.eclipse.e4.workbench/
-	touch zentaworkaround
-
-shippable: metamodel.compiled
-	mkdir -p shippable
-	mv metamodel shippable
+shippable/codingrules.docbook: metamodel.richescape
+	zenta-xslt-runner -xsl:codingrules.xslt -s:metamodel.richescape -o:shippable/codingrules.docbook
