@@ -3,6 +3,7 @@
 /target
 *.class
 .*.swp
+metamodel.zenta
 metamodel.zenta.bak
 metamodel.compiled
 metamodel.consistency.stderr
