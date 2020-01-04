@@ -1,0 +1,5 @@
+<sources>
+	<source name="metamodel_git" type="git" uri="https://github.com/kode-konveyor/metamodel.git" branch="develop"/>
+	<source name="metamodel" type="folder" uri="metamodel"/>
+	<source name="frontend" type="folder" uri="model"/>
+</sources>
