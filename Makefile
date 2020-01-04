@@ -17,3 +17,5 @@ delink:
 $(MODEL_BASENAME).zenta:
 	zenta-xslt-runner -xsl:xslt/delink.xslt -o:$(MODEL_BASENAME).zenta -s:modelparts/$(MODEL_BASENAME).zentapart -im:link
 
+publish_release:
+
