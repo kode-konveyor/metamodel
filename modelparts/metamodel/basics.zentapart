@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="0. Basics" id="basicsFolder"><folder name="0. Basics" id="fd8eac3c-3983-4fae-b86f-7ce35213bc23">
-          <property key="display" value="hidden"/>
-          <element xsi:type="zenta:BasicObject" name="Basic Object" id="basicobject"/>
-          <element xsi:type="zenta:BasicRelationship" name="Basic Relation" id="basicrelation" source="basicobject" target="basicobject"/>
-          <element xsi:type="zenta:BasicRelationship" name="constrains" id="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" ancestor="basicrelation" source="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f" target="thing"/>
-          <element xsi:type="zenta:BasicRelationship" name="expands" id="64981f96-11a3-4631-b4f8-dd38993cec60" ancestor="basicrelation" source="188f9954-0501-432b-8022-6a49fd1cc83c" target="thing">
-            <property key="textPosition" value="1"/>
-            <property key="lineDecoration"/>
-            <property key="lineColor"/>
-            <property key="fontColor"/>
-            <property key="lineWidth" value="1"/>
-            <property key="font"/>
-          </element>
-        </folder><folder name="1. Thing, Constraint and Derived Relation" id="946a1207-2823-4f26-99be-885337df20bc">
-          <element xsi:type="zenta:ZentaDiagramModel" name="Thing and Constraint" id="5c552d2e-6871-4ab8-88e3-41a127bffc0b">
-            <child xsi:type="zenta:DiagramObject" id="a20ec03b-1bcb-49ad-aa7a-0476f1529faf" targetConnections="37c14725-8ac6-4e1f-82fe-17880d638d9d b3f54516-2608-4555-a870-d78baacd955f" zentaElement="thing">
-              <bounds x="158" y="56" width="-1" height="-1"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject" id="457298f6-0030-4f95-aadf-3a4057864668" elementShape="meaningShape" zentaElement="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-              <bounds x="444" y="56" width="-1" height="-1"/>
-              <sourceConnection xsi:type="zenta:Connection" id="37c14725-8ac6-4e1f-82fe-17880d638d9d" source="457298f6-0030-4f95-aadf-3a4057864668" target="a20ec03b-1bcb-49ad-aa7a-0476f1529faf" relationship="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject" id="bc453dbd-56f9-4657-913e-22fe95ee16d6" zentaElement="188f9954-0501-432b-8022-6a49fd1cc83c">
-              <bounds x="434" y="169" width="-1" height="-1"/>
-              <sourceConnection xsi:type="zenta:Connection" id="b3f54516-2608-4555-a870-d78baacd955f" source="bc453dbd-56f9-4657-913e-22fe95ee16d6" target="a20ec03b-1bcb-49ad-aa7a-0476f1529faf" relationship="64981f96-11a3-4631-b4f8-dd38993cec60"/>
-            </child>
-            <property key="Template"/>
-          </element>
-          <element xsi:type="zenta:BasicObject" name="Thing" id="thing" ancestor="basicobject">
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-          </element>
-          <element xsi:type="zenta:BasicObject" name="Constraint" id="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f" ancestor="behaviour">
-            <property key="fillColor"/>
-            <property key="elementShape" value="meaningShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-          </element>
-          <element xsi:type="zenta:BasicObject" name="Derived Relation" id="188f9954-0501-432b-8022-6a49fd1cc83c" ancestor="basicobject">
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-          </element>
-        </folder><property key="source" value="metamodel/basics"/></folder>
+            <property key="display" value="hidden"/>
+            <element xsi:type="zenta:BasicObject" name="Basic Object" id="basicobject"/>
+            <element xsi:type="zenta:BasicRelationship" name="Basic Relation" id="basicrelation" source="basicobject" target="basicobject"/>
+            <element xsi:type="zenta:BasicRelationship" name="constrains" id="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2" ancestor="basicrelation" source="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f" target="thing"/>
+            <element xsi:type="zenta:BasicRelationship" name="expands" id="64981f96-11a3-4631-b4f8-dd38993cec60" ancestor="basicrelation" source="188f9954-0501-432b-8022-6a49fd1cc83c" target="thing">
+              <property key="textPosition" value="1"/>
+              <property key="lineDecoration"/>
+              <property key="lineColor"/>
+              <property key="fontColor"/>
+              <property key="lineWidth" value="1"/>
+              <property key="font"/>
+            </element>
+          </folder><folder name="1. Thing, Constraint and Derived Relation" id="946a1207-2823-4f26-99be-885337df20bc">
+            <element xsi:type="zenta:ZentaDiagramModel" name="Thing and Constraint" id="5c552d2e-6871-4ab8-88e3-41a127bffc0b">
+              <child xsi:type="zenta:DiagramObject" id="a20ec03b-1bcb-49ad-aa7a-0476f1529faf" targetConnections="37c14725-8ac6-4e1f-82fe-17880d638d9d b3f54516-2608-4555-a870-d78baacd955f" zentaElement="thing">
+                <bounds x="158" y="56" width="-1" height="-1"/>
+              </child>
+              <child xsi:type="zenta:DiagramObject" id="457298f6-0030-4f95-aadf-3a4057864668" elementShape="meaningShape" zentaElement="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+                <bounds x="444" y="56" width="-1" height="-1"/>
+                <sourceConnection xsi:type="zenta:Connection" id="37c14725-8ac6-4e1f-82fe-17880d638d9d" source="457298f6-0030-4f95-aadf-3a4057864668" target="a20ec03b-1bcb-49ad-aa7a-0476f1529faf" relationship="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"/>
+              </child>
+              <child xsi:type="zenta:DiagramObject" id="bc453dbd-56f9-4657-913e-22fe95ee16d6" zentaElement="188f9954-0501-432b-8022-6a49fd1cc83c">
+                <bounds x="434" y="169" width="-1" height="-1"/>
+                <sourceConnection xsi:type="zenta:Connection" id="b3f54516-2608-4555-a870-d78baacd955f" source="bc453dbd-56f9-4657-913e-22fe95ee16d6" target="a20ec03b-1bcb-49ad-aa7a-0476f1529faf" relationship="64981f96-11a3-4631-b4f8-dd38993cec60"/>
+              </child>
+              <property key="Template"/>
+            </element>
+            <element xsi:type="zenta:BasicObject" name="Thing" id="thing" ancestor="basicobject">
+              <property key="fillColor"/>
+              <property key="elementShape"/>
+              <property key="textAlignment" value="2"/>
+              <property key="fontColor"/>
+              <property key="font"/>
+            </element>
+            <element xsi:type="zenta:BasicObject" name="Constraint" id="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f" ancestor="behaviour">
+              <property key="fillColor"/>
+              <property key="elementShape" value="meaningShape"/>
+              <property key="textAlignment" value="2"/>
+              <property key="fontColor"/>
+              <property key="font"/>
+            </element>
+            <element xsi:type="zenta:BasicObject" name="Derived Relation" id="188f9954-0501-432b-8022-6a49fd1cc83c" ancestor="basicobject">
+              <property key="fillColor"/>
+              <property key="elementShape"/>
+              <property key="textAlignment" value="2"/>
+              <property key="fontColor"/>
+              <property key="font"/>
+            </element>
+          </folder><property key="source" value="metamodel/basics"/></folder>
