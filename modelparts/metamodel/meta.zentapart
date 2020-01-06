@@ -41,4 +41,5 @@
             <bendpoint startX="39" startY="90" endX="27" endY="-71"/>
           </sourceConnection>
         </child>
+        <property key="Template"/>
       </element></folder>
