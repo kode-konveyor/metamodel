@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="3. Design shunt" id="0f445d68-fca3-4655-83a7-9cc9c9549f70"><property key="source" value="metamodel/design_shunt"/><element xsi:type="zenta:ZentaDiagramModel" name="design shunt" id="3e1ceef9-be9e-4421-a345-c9bccb70cfd5">
+<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="3. Design shunt" id="0f445d68-fca3-4655-83a7-9cc9c9549f70"><element xsi:type="zenta:ZentaDiagramModel" name="design shunt" id="3e1ceef9-be9e-4421-a345-c9bccb70cfd5">
             <child xsi:type="zenta:DiagramObject" id="641818ea-d520-48dd-9589-a66779d88769" targetConnections="054bb436-14ae-4eaa-845e-1c26c9b4c271" zentaElement="b9deedbc-997d-417d-8282-4da0f08107b7">
               <bounds x="148" y="212" width="-1" height="-1"/>
             </child>

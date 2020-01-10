@@ -21,4 +21,4 @@ The only content of the class is:
       </folder><folder name="00. python specific relations" id="eaab3376-3b6a-4d6a-a336-9fddad0300b8">
         <property key="display" value="hidden"/>
         <element xsi:type="zenta:BasicRelationship" name="aliases" id="e49b4b29-4289-4fab-b683-a17a62a0d045" ancestor="basicrelation" source="688c1a40-6058-4ade-ab5c-8ed901643bc4" target="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
-      </folder><property key="source" value="metamodel/python"/></folder>
+      </folder></folder>

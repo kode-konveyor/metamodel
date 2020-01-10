@@ -43,9 +43,6 @@
 	<xsl:template match="folder[property/@key='source']" mode="delink">
 		<xsl:variable name="outputfile" select="concat($targetdir,'/modelparts/',property[@key='source']/@value,'.zentapart')"/>
 		<xsl:message select="$outputfile"/>
-		<xsl:copy>
-			<xsl:copy-of select="@*|./property"/>
-		</xsl:copy>
 		<xsl:result-document href="{$outputfile}">
 			<xsl:copy>
 				<xsl:apply-templates select="./(@*|*)" mode="delink"/>
@@ -53,15 +50,41 @@
 		</xsl:result-document>
 	</xsl:template>
 
-	<xsl:template match="folder[property/@key='source']" mode="link">
-		<xsl:variable name="outputfile" select="zenta:makeUrlFromSource(property[@key='source']/@value)"/>
-		<xsl:apply-templates select="document($outputfile)" mode="linkfirst"/>
-		<xsl:message select="concat(property[@key='source']/@value,':',$outputfile)"/>
+	<xsl:template match="property[@key='source']" mode="delink"/>
+
+	<xsl:template match="*[property/@key='modelDependency']" mode="link">
+		<xsl:variable name="dependencies">
+			<xsl:for-each select="property[@key='modelDependency']/@value">
+				<xsl:variable name="outputfile" select="zenta:makeUrlFromSource(.)"/>
+				<xsl:apply-templates select="document($outputfile)" mode="linkfirst">
+					<xsl:with-param name="source" select="."/>
+				</xsl:apply-templates>
+				<xsl:message select="concat(.,':',$outputfile)"/>
+			</xsl:for-each>
+		</xsl:variable>
+		<xsl:variable name="providedIds" select="tokenize(string-join($dependencies//@id|.//@id,' '),' ')"/>
+		<xsl:variable name="requiredIds" select="tokenize(string-join(.//(@source|@target|@relationship|@zentaElement|@ancestor),' '),' ')"/>
+		<xsl:variable name="notProvided" select="for $required in $requiredIds return if($required = $providedIds) then () else $required"/>
+		<xsl:message select="count($providedIds)"/>
+		<xsl:message select="count($requiredIds)"/>
+		<xsl:message select="count($notProvided)"/>
+		<xsl:if test="count($notProvided) != 0">
+			<xsl:message terminate="no">
+				<xsl:text>No dependency is provided for the following ids: </xsl:text>
+				<xsl:value-of select="$notProvided"/>
+			</xsl:message>
+		</xsl:if>
+		<xsl:copy>
+			<xsl:apply-templates select="*|@*|text()" mode="link"/>
+			<xsl:apply-templates select="$dependencies" mode="link"/>
+		</xsl:copy>
 	</xsl:template>
 
 	<xsl:template match="folder" mode="linkfirst">
+		<xsl:param name="source"/>
 		<xsl:copy>
 			<xsl:apply-templates select="./(@*|*)" mode="link"/>
+			<property key="source" value="{$source}"/>
 		</xsl:copy>
 	</xsl:template>
 

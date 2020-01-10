@@ -1412,4 +1412,4 @@ In a model view it is a good practice to grey out elements which are outside of 
               <property key="lineWidth" value="1"/>
               <property key="font"/>
             </element>
-          </folder><property key="source" value="metamodel/design_base"/></folder>
+	  </folder></folder>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="Analysis shunt" id="6c04bf8b-bd67-491d-8323-ad929b72ae62"><property key="source" value="metamodel/analysis_shunt"/><element xsi:type="zenta:ZentaDiagramModel" name="analysis shunt" id="d9fb63c8-813e-49b1-ad50-29125e920045">
+<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="Analysis shunt" id="6c04bf8b-bd67-491d-8323-ad929b72ae62"><element xsi:type="zenta:ZentaDiagramModel" name="analysis shunt" id="d9fb63c8-813e-49b1-ad50-29125e920045">
           <child xsi:type="zenta:DiagramObject" id="56d35e2b-0db5-410e-8db1-da2c71ccaf0c" zentaElement="fc8b0d3b-23b2-463f-a053-5dc66229e488">
             <bounds x="284" y="196" width="-1" height="-1"/>
             <sourceConnection xsi:type="zenta:Connection" id="3daea011-1caf-4c57-9e6f-6e0973486cc9" source="56d35e2b-0db5-410e-8db1-da2c71ccaf0c" target="b5091602-3099-494a-8776-52d2ee5219b3" relationship="9a970d83-58f1-40b4-a82c-5fa5f108ade3"/>

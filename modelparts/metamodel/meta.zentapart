@@ -24,7 +24,7 @@
           <property key="lineWidth" value="1"/>
           <property key="font"/>
         </element>
-      </folder><property key="source" value="metamodel/meta"/><element xsi:type="zenta:ZentaDiagramModel" name="Meta Meta" id="27b596af-68fc-4ba8-8513-192d1fcbad0b">
+      </folder><element xsi:type="zenta:ZentaDiagramModel" name="Meta Meta" id="27b596af-68fc-4ba8-8513-192d1fcbad0b">
         <child xsi:type="zenta:DiagramObject" id="06088c4c-ad88-43d5-9fef-76ec7e621268" targetConnections="bd03b103-3e77-49ad-9b0f-4d440549e432 94a38d21-a516-4e55-8086-8a746068d8b4 3f4a200a-5d74-497d-9e12-688aa3eb6d69" zentaElement="thing">
           <bounds x="300" y="269" width="-1" height="-1"/>
         </child>

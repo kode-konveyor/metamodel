@@ -572,4 +572,4 @@ In java and python Services should not have static methods except when the needs
             <property key="fontColor"/>
             <property key="font"/>
           </element>
-        </folder><folder name="0. Basics" id="basicsFolder"><property key="source" value="metamodel/basics"/></folder><property key="source" value="metamodel/analysis_base"/></folder>
+	</folder><property key="modelDependency" value="metamodel/basics"/></folder>
