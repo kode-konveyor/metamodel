@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="0. Basics" id="basicsFolder"><folder name="0. Basics" id="fd8eac3c-3983-4fae-b86f-7ce35213bc23">
+<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xhtml="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="0. Basics" id="basicsFolder"><folder name="0. Basics" id="fd8eac3c-3983-4fae-b86f-7ce35213bc23">
             <property key="display" value="hidden"/>
             <element xsi:type="zenta:BasicObject" name="Basic Object" id="basicobject"/>
             <element xsi:type="zenta:BasicRelationship" name="Basic Relation" id="basicrelation" source="basicobject" target="basicobject"/>

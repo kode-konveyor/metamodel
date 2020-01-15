@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="0. Analysis metamodel base" id="analysisFolder"><folder name="1. Policy, Objective, Behaviour" id="2d67383b-63b4-4840-af7c-9fce310e9f7b">
+<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xhtml="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="0. Analysis metamodel base" id="analysisFolder"><folder name="1. Policy, Objective, Behaviour" id="2d67383b-63b4-4840-af7c-9fce310e9f7b">
           <folder name="constraints" id="f2e4fa84-d300-46e2-8472-173933a4350e">
             <element xsi:type="zenta:ZentaDiagramModel" name="Constraints" id="d79b4351-c674-4746-b92d-7bcca01307fe">
               <child xsi:type="zenta:DiagramObject" id="6c0e61da-c437-46af-9f0f-82b2cbaaa6f1" zentaElement="64549231-bb38-44ff-89c4-224ed36d6d20">
@@ -558,6 +558,14 @@ In java and python Services should not have static methods except when the needs
             <property key="fontColor"/>
             <property key="font"/>
           </element>
+          <element xsi:type="zenta:BasicObject" name="Callable" id="callable" ancestor="thing">
+            <documentation>A Callable is an abstraction for anything which can be called.</documentation>
+            <property key="fillColor"/>
+            <property key="elementShape"/>
+            <property key="textAlignment" value="2"/>
+            <property key="fontColor"/>
+            <property key="font"/>
+          </element>
         </folder><folder name="External objective" id="8c06f27f-cc88-442a-8494-41d493060d3f">
           <element xsi:type="zenta:ZentaDiagramModel" name="external objectve" id="d02d87ed-729c-4f5f-bd02-cb5cf5bcd958">
             <child xsi:type="zenta:DiagramObject" id="469c3efc-fb76-4ac1-8862-11680ee18793" fillColor="#d3d7cf" elementShape="ellipseShape" zentaElement="09407896-919e-4388-9e20-427696f9fbbc">
@@ -572,4 +580,4 @@ In java and python Services should not have static methods except when the needs
             <property key="fontColor"/>
             <property key="font"/>
           </element>
-	</folder><property key="modelDependency" value="metamodel/basics"/></folder>
+        </folder><property key="modelDependency" value="metamodel/basics"/></folder>

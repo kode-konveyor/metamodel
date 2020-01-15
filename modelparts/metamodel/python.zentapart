@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="B. Python specific" id="pythonFolder"><folder name="Type alias" id="fc66b72c-0f99-483a-bc75-5049c3b4047b">
+<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xhtml="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="B. Python specific" id="pythonFolder">
+	<property key="modelDependency" value="metamodel/design"/>
+	<folder name="Type alias" id="fc66b72c-0f99-483a-bc75-5049c3b4047b">
         <element xsi:type="zenta:ZentaDiagramModel" name="Type definition" id="5193ff6e-08bc-4c57-8083-e91f595c8097">
           <child xsi:type="zenta:DiagramObject" id="bb9c8426-0235-44f6-8964-ac5a201b4475" targetConnections="0c1e07b5-9af2-45a0-bf52-935be6d2fefb" zentaElement="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d">
             <bounds x="301" y="276" width="-1" height="-1"/>

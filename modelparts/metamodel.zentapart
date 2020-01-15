@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><zenta:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="metamodel" id="869b1632-0b83-4285-aac7-4d22ef85aac4" version="2.2.1">
   <folder name="0. Metamodel" id="metamodel">
-	  <property key="modelDependency" value="metamodel/infrastructure"/>
-	  <property key="modelDependency" value="metamodel/analysis"/>
-	  <property key="modelDependency" value="metamodel/design"/>
-	  <property key="modelDependency" value="metamodel/python"/>
-	  <property key="modelDependency" value="metamodel/meta"/>
-	  <property key="modelDependency" value="metamodel/coding"/>
-	  <property key="version" value="0.2"/>
-	  <property key="version" value="0.1"/>
-	  <property key="minimum metamodel version" value="0.1"/>
-	  <property key="minimum toolchain version" value="0.1"/>
-	  <property key="modelDependency" value="codingrules/rules"/>
+	<property key="modelDependency" value="metamodel/infrastructure"/>
+	<property key="modelDependency" value="metamodel/analysis"/>
+	<property key="modelDependency" value="metamodel/python"/>
+	<property key="modelDependency" value="metamodel/design"/>
+	<property key="modelDependency" value="codingrules/rules"/>
+	<property key="version" value="0.2"/>
+	<property key="version" value="0.1"/>
+	<property key="minimum metamodel version" value="0.1"/>
+	<property key="minimum toolchain version" value="0.1"/>
   </folder>
   <property key="documentationMarkup" value="MediaWiki"/>
 </zenta:model>
