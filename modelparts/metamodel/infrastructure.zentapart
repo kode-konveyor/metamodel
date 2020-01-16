@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="A. infrastructure" id="infrastructureFolder"><folder name="host, infrastructure service, infrastructure interface" id="c16025aa-8288-4fd9-b0c9-123e4127c5a7">
+<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xhtml="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="A. infrastructure" id="infrastructureFolder">
+	<property key="modelDependency" value="metamodel/analysis"/>
+	<folder name="host, infrastructure service, infrastructure interface" id="c16025aa-8288-4fd9-b0c9-123e4127c5a7">
         <element xsi:type="zenta:ZentaDiagramModel" name="host, infrastructure service, interface" id="06cd9d34-5f04-47f8-a51e-fe851425d8d1" connectionRouterType="1">
           <child xsi:type="zenta:DiagramObject" id="3fabe9be-6b62-4d8b-8e79-9c0219c9a53f" targetConnections="1ab7bc91-0910-4dce-8740-355bd8bf7b34" fillColor="#e9b96e" elementShape="deviceShape" zentaElement="ce1942e1-cf73-4110-9577-48911af86da3">
             <bounds x="165" y="115" width="-1" height="-1"/>
@@ -146,4 +148,4 @@
           <property key="lineWidth" value="1"/>
           <property key="font"/>
         </element>
-      </folder><property key="source" value="metamodel/infrastructure"/></folder>
+      </folder></folder>
