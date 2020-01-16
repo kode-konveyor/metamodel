@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="3. Coding" id="417615be-3a7b-4440-b84e-9ff624123628"><folder name="01. Unit test" id="3d00aaaf-948a-4bf0-a7d7-0bacbd7f50f2">
+<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xhtml="http://www.w3.org/TR/xhtml1/transitional" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="3. Coding" id="417615be-3a7b-4440-b84e-9ff624123628">
+	<property key="modelDependency" value="metamodel/meta"/>
+	<folder name="01. Unit test" id="3d00aaaf-948a-4bf0-a7d7-0bacbd7f50f2">
         <element xsi:type="zenta:ZentaDiagramModel" name="Unit test" id="5ddc8bbe-ac16-45d5-b9ba-5d86201c11c2" connectionRouterType="1">
           <child xsi:type="zenta:DiagramObject" id="a39ed7bc-83f5-498e-b794-e8eec0572287" targetConnections="414be5c5-5022-4c5b-b52f-30ff43c0afc2" zentaElement="f77378e6-2ef5-4e91-8a94-47ca7fc25c27">
             <bounds x="194" y="174" width="-1" height="-1"/>
@@ -157,4 +159,4 @@ Not modeled.
           </child>
           <property key="Template"/>
         </element>
-      </folder><property key="source" value="metamodel/coding"/></folder>
+      </folder></folder>
