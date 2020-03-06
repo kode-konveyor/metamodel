@@ -1,16 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?><folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:zenta="http://magwas.rulez.org/zenta" name="B. Python specific" id="pythonFolder">
-        <folder name="Type alias" id="fc66b72c-0f99-483a-bc75-5049c3b4047b">
-          <element xsi:type="zenta:ZentaDiagramModel" name="Type definition" id="5193ff6e-08bc-4c57-8083-e91f595c8097">
-            <child xsi:type="zenta:DiagramObject" id="bb9c8426-0235-44f6-8964-ac5a201b4475" targetConnections="0c1e07b5-9af2-45a0-bf52-935be6d2fefb" zentaElement="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d">
-              <bounds x="301" y="276" width="-1" height="-1"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject" id="0511a6f9-4d18-4301-bc53-053b63a53959" fontColor="#ffffff" fillColor="#f57900" elementShape="emptyShape" zentaElement="688c1a40-6058-4ade-ab5c-8ed901643bc4">
-              <bounds x="301" y="144" width="-1" height="-1"/>
-              <sourceConnection xsi:type="zenta:Connection" id="0c1e07b5-9af2-45a0-bf52-935be6d2fefb" source="0511a6f9-4d18-4301-bc53-053b63a53959" target="bb9c8426-0235-44f6-8964-ac5a201b4475" relationship="e49b4b29-4289-4fab-b683-a17a62a0d045"/>
-            </child>
-          </element>
-          <element xsi:type="zenta:BasicObject" name="Type Alias" id="688c1a40-6058-4ade-ab5c-8ed901643bc4" ancestor="type">
-            <documentation>A class descending from types in the typing package.
+<folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:zenta="http://magwas.rulez.org/zenta"
+        name="B. Python specific"
+        id="pythonFolder">
+   <folder name="Type alias" id="fc66b72c-0f99-483a-bc75-5049c3b4047b">
+      <element xsi:type="zenta:ZentaDiagramModel"
+               name="Type definition"
+               id="5193ff6e-08bc-4c57-8083-e91f595c8097">
+         <child xsi:type="zenta:DiagramObject"
+                id="bb9c8426-0235-44f6-8964-ac5a201b4475"
+                targetConnections="0c1e07b5-9af2-45a0-bf52-935be6d2fefb"
+                zentaElement="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d">
+            <bounds x="301" y="276" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="0511a6f9-4d18-4301-bc53-053b63a53959"
+                fontColor="#ffffff"
+                fillColor="#f57900"
+                elementShape="emptyShape"
+                zentaElement="688c1a40-6058-4ade-ab5c-8ed901643bc4">
+            <bounds x="301" y="144" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="0c1e07b5-9af2-45a0-bf52-935be6d2fefb"
+                              source="0511a6f9-4d18-4301-bc53-053b63a53959"
+                              target="bb9c8426-0235-44f6-8964-ac5a201b4475"
+                              relationship="e49b4b29-4289-4fab-b683-a17a62a0d045"/>
+         </child>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Type Alias"
+               id="688c1a40-6058-4ade-ab5c-8ed901643bc4"
+               ancestor="type">
+         <documentation>A class descending from types in the typing package.
 
 It is technically needed when a complex type annotation cannot be carried out using an external type.
 
@@ -18,12 +38,17 @@ The only content of the class is:
 
   __slots__ = ()
 </documentation>
-          </element>
-        </folder>
-        <folder name="00. python specific relations" id="eaab3376-3b6a-4d6a-a336-9fddad0300b8">
-          <property key="display" value="hidden"/>
-          <element xsi:type="zenta:BasicRelationship" name="aliases" id="e49b4b29-4289-4fab-b683-a17a62a0d045" ancestor="basicrelation" source="688c1a40-6058-4ade-ab5c-8ed901643bc4" target="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
-        </folder>
-        
-        <property key="modelDependency" value="metamodel/design"/>
-      </folder>
+      </element>
+   </folder>
+   <folder name="00. python specific relations"
+           id="eaab3376-3b6a-4d6a-a336-9fddad0300b8">
+      <property key="display" value="hidden"/>
+      <element xsi:type="zenta:BasicRelationship"
+               name="aliases"
+               id="e49b4b29-4289-4fab-b683-a17a62a0d045"
+               ancestor="basicrelation"
+               source="688c1a40-6058-4ade-ab5c-8ed901643bc4"
+               target="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
+   </folder>
+   <property key="modelDependency" value="metamodel/design"/>
+</folder>

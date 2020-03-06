@@ -1,5 +1,6 @@
 /.idea
 *.iml
+*.identity.xml
 /target
 *.class
 .*.swp
