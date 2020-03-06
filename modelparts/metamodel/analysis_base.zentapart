@@ -692,6 +692,10 @@ A role is assigned to human(s).
          <property key="fontColor" value="#ffffff"/>
          <property key="font"/>
       </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Future"
+               id="f3657ecd-b9b7-432b-bb41-04b1859dc51f"
+               ancestor="36a15a23-a4a0-40b5-901b-310f3a1df0c7"/>
    </folder>
    <folder name="00. Analysis relations" id="23dea549-9ef0-4512-9430-5d6fe364dbde">
       <property key="display" value="hidden"/>
