@@ -85,6 +85,11 @@
                            source="56d35e2b-0db5-410e-8db1-da2c71ccaf0c"
                            target="c38aadf8-78c1-416b-ae6d-177ecb201e7a"
                            relationship="978f959d-78b6-4ede-9251-29bf7e0c4d16"/>
+         <sourceConnection xsi:type="zenta:Connection"
+                           id="fed7bde5-e59c-46c1-92ad-04a2125dcadc"
+                           source="56d35e2b-0db5-410e-8db1-da2c71ccaf0c"
+                           target="ce65fa3c-7a5f-45cd-9e5d-8b2c854c65b6"
+                           relationship="7d35d91d-a9f9-42f7-83a8-dda873b6ed61"/>
       </child>
       <child xsi:type="zenta:DiagramObject"
              id="b5091602-3099-494a-8776-52d2ee5219b3"
@@ -160,13 +165,13 @@
       </child>
       <child xsi:type="zenta:DiagramObject"
              id="f5c8cf95-2e8f-4e6e-b4eb-8aed4c447613"
-             targetConnections="4f274450-340b-416e-9ae7-c4a7c8d517f3"
+             targetConnections="4f274450-340b-416e-9ae7-c4a7c8d517f3 db99cd6d-dbdb-4ae0-b807-f6b3f54cfdc6"
              zentaElement="be4d636f-b7ed-4366-96f1-7104d8848c63">
          <bounds x="564" y="192" width="-1" height="-1"/>
       </child>
       <child xsi:type="zenta:DiagramObject"
              id="38f25f4f-22ed-45ad-85a5-8a94974963fb"
-             targetConnections="e9a48844-ca1a-4ed3-bb12-5431132d2c8d"
+             targetConnections="e9a48844-ca1a-4ed3-bb12-5431132d2c8d 892cac2c-4e74-4b78-83bc-87f2edf991b5"
              zentaElement="ff8b430c-46a5-49e6-8401-aefd398ff2d9">
          <bounds x="625" y="118" width="-1" height="-1"/>
       </child>
@@ -175,6 +180,22 @@
              targetConnections="639a1d0a-ca5e-4159-8695-5a14f6ae7340"
              zentaElement="24c89149-0040-426d-9104-ffcf2cd3aedf">
          <bounds x="649" y="428" width="-1" height="-1"/>
+      </child>
+      <child xsi:type="zenta:DiagramObject"
+             id="ce65fa3c-7a5f-45cd-9e5d-8b2c854c65b6"
+             targetConnections="fed7bde5-e59c-46c1-92ad-04a2125dcadc"
+             zentaElement="7c7328cc-2963-49c6-a6e3-c22067cffa0f">
+         <bounds x="156" y="67" width="-1" height="-1"/>
+         <sourceConnection xsi:type="zenta:Connection"
+                           id="892cac2c-4e74-4b78-83bc-87f2edf991b5"
+                           source="ce65fa3c-7a5f-45cd-9e5d-8b2c854c65b6"
+                           target="38f25f4f-22ed-45ad-85a5-8a94974963fb"
+                           relationship="e6fe9be9-2f50-4de1-b4b0-3d0e0788ebc9"/>
+         <sourceConnection xsi:type="zenta:Connection"
+                           id="db99cd6d-dbdb-4ae0-b807-f6b3f54cfdc6"
+                           source="ce65fa3c-7a5f-45cd-9e5d-8b2c854c65b6"
+                           target="f5c8cf95-2e8f-4e6e-b4eb-8aed4c447613"
+                           relationship="04506147-d4b9-47c2-a192-e334494a6aed"/>
       </child>
    </element>
    <element xsi:type="zenta:BasicRelationship"
@@ -264,4 +285,23 @@
             ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
             source="fc8b0d3b-23b2-463f-a053-5dc66229e488"
             target="24c89149-0040-426d-9104-ffcf2cd3aedf"/>
+   <element xsi:type="zenta:BasicObject"
+            name="Dummy process step"
+            id="7c7328cc-2963-49c6-a6e3-c22067cffa0f"
+            ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+   <element xsi:type="zenta:BasicRelationship"
+            id="e6fe9be9-2f50-4de1-b4b0-3d0e0788ebc9"
+            ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"
+            source="7c7328cc-2963-49c6-a6e3-c22067cffa0f"
+            target="ff8b430c-46a5-49e6-8401-aefd398ff2d9"/>
+   <element xsi:type="zenta:BasicRelationship"
+            id="04506147-d4b9-47c2-a192-e334494a6aed"
+            ancestor="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"
+            source="7c7328cc-2963-49c6-a6e3-c22067cffa0f"
+            target="be4d636f-b7ed-4366-96f1-7104d8848c63"/>
+   <element xsi:type="zenta:BasicRelationship"
+            id="7d35d91d-a9f9-42f7-83a8-dda873b6ed61"
+            ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
+            source="fc8b0d3b-23b2-463f-a053-5dc66229e488"
+            target="7c7328cc-2963-49c6-a6e3-c22067cffa0f"/>
 </folder>
