@@ -47,14 +47,14 @@ $element/@xsi:type='External type' or
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
-                     name="is in a DTO or Entity"
+                     name="is in a DTO or Entity or configuration Provider"
                      id="a589f660-0277-44c1-95b1-de1b5d11cf0b"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
 $element/@xsi:type='External type' or
 (
-	count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='DTO' or @xsi:type='Entity']) +
-	count(zenta:neighbours($doc,$element,'aggregates,2')[@xsi:type='DTO' or @xsi:type='Entity']) 
+	count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider']) +
+	count(zenta:neighbours($doc,$element,'aggregates,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider']) 
 ) &gt; 0
 </documentation>
             </element>
@@ -751,6 +751,16 @@ count(zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Property']) = 0</d
                   id="804cfcd0-5c82-4776-8f40-d16c3d5b870e"
                   ancestor="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a">
             <documentation>A set of constants provided by the user to parametrize the behaviour of the product.
+
+In Java it is a public field with @Value annotation, where the annotation have the full symbolic name of the configuration as parameter.
+
+The symbolic name contains the starting package name of the project.
+
+Example:
+
+      @Value("${com.kodekonveyor.market.jdbcUri}")
+      public String jdbcUri;
+
 </documentation>
             <property key="fillColor" value="#babdb6"/>
             <property key="elementShape" value="meaningShape"/>
