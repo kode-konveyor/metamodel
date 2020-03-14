@@ -2032,10 +2032,18 @@ In a model view it is a good practice to grey out elements which are outside of 
                                  relationship="1b194939-2048-46eb-b6b0-2ab83ed71d1f">
                   <bendpoint startX="186" startY="60" endX="186" endY="-96"/>
                </sourceConnection>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="83408a85-6176-40ba-b782-51afd073bb9c"
+                                 source="1ca0a9dc-7319-474e-aa20-9f7ef955b2a3"
+                                 target="9e28e460-f75d-47fc-87a7-3d09a042325a"
+                                 lineDecoration="DiamondSourceDecoration"
+                                 relationship="d91147b9-0984-4cf8-8e4e-19065441f083">
+                  <bendpoint startX="-57" startY="105" endX="-57" endY="-51"/>
+               </sourceConnection>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="9e28e460-f75d-47fc-87a7-3d09a042325a"
-                   targetConnections="f458bf28-60a3-4819-b9b7-8d67522bc00a 63738bb7-229e-4730-8131-4dab43b8960b"
+                   targetConnections="f458bf28-60a3-4819-b9b7-8d67522bc00a 63738bb7-229e-4730-8131-4dab43b8960b 83408a85-6176-40ba-b782-51afd073bb9c"
                    zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
                <bounds x="381" y="264" width="-1" height="-1"/>
             </child>
@@ -2053,6 +2061,19 @@ In a model view it is a good practice to grey out elements which are outside of 
                   ancestor="basicrelation"
                   source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
                   target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="contains"
+                  id="e8aaca73-c4e6-4698-a16d-7df79fbe62ab"
+                  ancestor="basicrelation"
+                  source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+                  target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DiamondSourceDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
       </folder>
    </folder>
    <folder name="Constants" id="72da7aad-cb5e-46f0-a0fa-503d86cd360c">
