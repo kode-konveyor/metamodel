@@ -999,7 +999,12 @@ count(zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type
                      id="f495ac3b-b382-4e2d-9da4-98db9a03fa74"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'results,1')) = 1</documentation>
+if($element/@xsi:type='Process Step')
+then
+	count(zenta:neighbours($doc,$element,'results,1')) = 1
+else
+	true()
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="accesses DTO using only CRUD or existing query operations"
@@ -1916,7 +1921,7 @@ count(zenta:neighbours($doc,$element,'contains,2')) = 1</documentation>
                   id="0f884e27-f833-4ddf-9972-5e6e0d8bf96a"
                   ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
             <documentation>1|
-if (not(zenta:neighboursRun1($doc,$element,'is implemented by/implements,1')))
+if ($element/@xsi:type='Behaviour' and not(zenta:neighboursRun1($doc,$element,'is implemented by/implements,1')))
 then
 	(zenta:neighboursRun1($doc,$element,'iterates,2;is implemented by/implements,1') |
 	zenta:neighboursRun1($doc,$element,'contains,2;is implemented by/implements,1') )
@@ -2032,10 +2037,18 @@ In a model view it is a good practice to grey out elements which are outside of 
                                  relationship="1b194939-2048-46eb-b6b0-2ab83ed71d1f">
                   <bendpoint startX="186" startY="60" endX="186" endY="-96"/>
                </sourceConnection>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="83408a85-6176-40ba-b782-51afd073bb9c"
+                                 source="1ca0a9dc-7319-474e-aa20-9f7ef955b2a3"
+                                 target="9e28e460-f75d-47fc-87a7-3d09a042325a"
+                                 lineDecoration="DiamondSourceDecoration"
+                                 relationship="e8aaca73-c4e6-4698-a16d-7df79fbe62ab">
+                  <bendpoint startX="-57" startY="105" endX="-57" endY="-51"/>
+               </sourceConnection>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="9e28e460-f75d-47fc-87a7-3d09a042325a"
-                   targetConnections="f458bf28-60a3-4819-b9b7-8d67522bc00a 63738bb7-229e-4730-8131-4dab43b8960b"
+                   targetConnections="f458bf28-60a3-4819-b9b7-8d67522bc00a 63738bb7-229e-4730-8131-4dab43b8960b 83408a85-6176-40ba-b782-51afd073bb9c"
                    zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
                <bounds x="381" y="264" width="-1" height="-1"/>
             </child>
@@ -2053,6 +2066,19 @@ In a model view it is a good practice to grey out elements which are outside of 
                   ancestor="basicrelation"
                   source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
                   target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="contains"
+                  id="e8aaca73-c4e6-4698-a16d-7df79fbe62ab"
+                  ancestor="basicrelation"
+                  source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+                  target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DiamondSourceDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
       </folder>
    </folder>
    <folder name="Constants" id="72da7aad-cb5e-46f0-a0fa-503d86cd360c">

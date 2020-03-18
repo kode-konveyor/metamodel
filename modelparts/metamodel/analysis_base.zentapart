@@ -1006,7 +1006,7 @@ A role is assigned to human(s).
       <element xsi:type="zenta:BasicObject"
                name="UI element"
                id="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
-               ancestor="service">
+               ancestor="thing">
          <property key="fillColor" value="#ffffff"/>
          <property key="elementShape" value="emptyShape"/>
          <property key="textAlignment" value="2"/>
