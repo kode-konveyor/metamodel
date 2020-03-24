@@ -92,8 +92,8 @@
                   id="64549231-bb38-44ff-89c4-224ed36d6d20"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-	count(zenta:neighbours($doc,$element,'determines,2')[@xsi:type='Objective' or @xsi:type='External Objective'], 
-	count(zenta:neighbours($doc,$element,'contains,2;determines,2')[@xsi:type='Objective']
+	zenta:neighbours($doc,$element,'determines,2')[@xsi:type='Objective' or @xsi:type='External Objective'], 
+	zenta:neighbours($doc,$element,'contains,2;determines,2')[@xsi:type='Objective']
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
