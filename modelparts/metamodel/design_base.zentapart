@@ -518,7 +518,7 @@ return
   if count($stuff)=0
   then
     'no repository found'
-  else if count($stuff) = 1
+  else if (count($stuff) = 1)
      then ()
      else $stuff
 </documentation>
