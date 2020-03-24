@@ -513,7 +513,7 @@ if($element/@xsi:type='External type')
                      id="00210fb5-1f96-4e96-9da7-77b1fab7b2a2"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-for $stuff in count(zenta:neighbours($doc,$element,'results,2')[@xsi:type='Repository']
+let $stuff := zenta:neighbours($doc,$element,'results,2')[@xsi:type='Repository']
 return
   if count($stuff)=0
   then
