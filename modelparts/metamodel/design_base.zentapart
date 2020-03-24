@@ -2121,6 +2121,10 @@ In a model view it is a good practice to grey out elements which are outside of 
                   name="String"
                   id="b0b9e3d0-389f-4989-941a-e97aeb77bdbc"
                   ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="Array"
+                  id="6cd2b009-714f-485d-ae14-6b2e081daf18"
+                  ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
       </folder>
       <folder name="parameter positions" id="e2bd0fbe-22b5-496e-a56d-bbd515d33c01">
          <element xsi:type="zenta:BasicObject"
@@ -2207,6 +2211,11 @@ In a model view it is a good practice to grey out elements which are outside of 
                 id="f05ec2c8-b40c-4f6a-9902-ae5eb8c9de14"
                 zentaElement="81320af1-db53-4357-98e8-b11c7248e2be">
             <bounds x="972" y="360" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="1fe316f6-ed13-4f3a-a4a2-5e1a7eb994d3"
+                zentaElement="6cd2b009-714f-485d-ae14-6b2e081daf18">
+            <bounds x="972" y="444" width="-1" height="-1"/>
          </child>
       </element>
    </folder>
