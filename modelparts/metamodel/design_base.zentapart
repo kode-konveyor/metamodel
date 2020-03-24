@@ -40,22 +40,29 @@
                      id="b9deedbc-997d-417d-8282-4da0f08107b7"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-$element/@xsi:type='External type' or
-(
-	count(zenta:neighbours($doc,$element,'is a/is the type of,1')) 
-) = 1
+if ($element/@xsi:type='External type')
+then
+  ()
+else
+	zenta:exactlyOne(
+		zenta:neighbours($doc,$element,'is a/is the type of,1'),
+		'no type found'
+	) 
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
-                     name="is in a DTO or Entity or configuration Provider"
+                     name="is in a DTO, Entity or configuration Provider"
                      id="a589f660-0277-44c1-95b1-de1b5d11cf0b"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-$element/@xsi:type='External type' or
-(
-	count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider']) +
-	count(zenta:neighbours($doc,$element,'aggregates,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider']) 
-) &gt; 0
+if (
+	$element/@xsi:type='External type' or
+	count((
+		zenta:neighbours($doc,$element,'contains,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider'], 
+		zenta:neighbours($doc,$element,'aggregates,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider'] 
+	) &gt; 0 ))
+then ()
+else 'no DTO, Entity or configuration Provider found'
 </documentation>
             </element>
          </folder>
@@ -169,7 +176,11 @@ $element/@xsi:type='External type' or
                      id="3d43468e-1396-443a-bbf9-806f13e1332d"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-  count(zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Package']) &gt;0
+if(count(
+	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Package']
+) = 0)
+then 'no package found'
+else ()
 </documentation>
                <property key="fillColor"/>
                <property key="elementShape"/>
@@ -183,11 +194,11 @@ $element/@xsi:type='External type' or
                      id="1a095374-c532-44de-86a7-917a1a011ec9"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-(
-  count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='External Project']) +
-  count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Project']) +
-  count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'])
-) = 1</documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='External Project' or @xsi:type='Project' or @xsi:type='Package'],
+	'no containing project or package found'
+	)
+</documentation>
                <property key="fillColor"/>
                <property key="elementShape"/>
                <property key="textAlignment" value="2"/>
@@ -419,27 +430,38 @@ Projects can contain packages.
                      id="75d1a80c-ebf6-4a04-bea8-0bacd900bd24"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-$element/@xsi:type='External type' or
-(
-	count(zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Artifact']) 
-) &gt; 0
+if($element/@xsi:type='External type')
+then ()
+else
+	if(count(
+		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Artifact'] 
+	) &gt; 0)
+	then ()
+	else 'no test artifact found'
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="belongs to a TestData"
                      id="1dec51d2-ac56-4384-aae3-94d4fc1d8e35"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-               <documentation>design|(
-	count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data'])
-) = 1</documentation>
+               <documentation>design|
+zenta:exactlyOne(
+    zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data'],
+    'no Test Data found')
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="documents the contents of the artifact or constructable based on the DTO"
                      id="189dbb19-8dd0-41be-b596-4e29c9210ff9"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-string-length($element/documentation) &gt; 0 or
-zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Parameter']
+if (
+   string-length($element/documentation) &gt; 0 or
+   zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Parameter'] or
+   zenta:neighbours($doc,$element,'is based on/is base of,1')[@xsi:type='Test Artifact'] 
+)
+then ()
+else 'cannot construct it'
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
@@ -472,27 +494,38 @@ zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2')[@xsi:
                      id="cd077259-127c-4997-82ae-f9808af60668"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-(
-	count(zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Field' or @xsi:type='Parameter']) 
-) &gt; 0</documentation>
+if ( count(zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Field' or @xsi:type='Parameter'])  &gt; 0)
+then ()
+else 'no reason found'
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="is a composite of fields"
                      id="8d10f521-d690-468c-900f-889b6069510a"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-$element/@xsi:type='External type' or
-count(zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Field'])  &gt; 0</documentation>
+if(
+	$element/@xsi:type='External type' or
+	count((
+		zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Field'],
+		zenta:neighbours($doc,$element,'aggregates,1')[@xsi:type='Field']
+	)) &gt; 0
+)
+then ()
+else 'no member field found'
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="is in a package"
                      id="d9e976b8-6794-4c5e-9eaa-37da4c84585b"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-$element/@xsi:type='External type' or
-(
-	count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package']) 
-) &gt; 0
+if(not($element/@xsi:type='External type'))
+then
+	zenta:exactlyOne(
+		zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'],
+		'no package found')
+else ()
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
@@ -500,7 +533,10 @@ $element/@xsi:type='External type' or
                      id="00210fb5-1f96-4e96-9da7-77b1fab7b2a2"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'results,2')[@xsi:type='Repository']) = 1</documentation>
+zenta:exactlyOne(
+    zenta:neighbours($doc,$element,'results,2')[@xsi:type='Repository'],
+    'no repository found')
+</documentation>
             </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
@@ -695,16 +731,18 @@ count(zenta:neighbours($doc,$element,'results,2')[@xsi:type='Repository']) = 1</
                      name="belongs to a package"
                      id="883e08c5-3c2f-4713-b7c2-4c7be941126c"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-               <documentation>design|(
-	count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'])
-) = 1</documentation>
+               <documentation>design|
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'],
+	'no package found')
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="can contain only constants"
                      id="c2098a4f-3068-4d87-b7f5-9235ae887455"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Property']) = 0</documentation>
+zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Property']</documentation>
                <property key="fillColor"/>
                <property key="elementShape"/>
                <property key="textAlignment" value="2"/>
@@ -717,7 +755,7 @@ count(zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Property']) = 0</d
                      id="fc553e5a-f627-4e67-8aab-ced929767da8"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Property']) = 0</documentation>
+zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Property']</documentation>
                <property key="fillColor"/>
                <property key="elementShape"/>
                <property key="textAlignment" value="2"/>
@@ -832,16 +870,19 @@ Test artifacts are actual data in case of DTOs and Entities, and actual data or 
                      id="dd7546bf-3454-416e-881c-ef56be07560a"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-(
-	count(zenta:neighbours($doc,$element,'is created by/creates,2')[@xsi:type='DTO']) 
-) = 1</documentation>
+zenta:exactlyOne(
+    zenta:neighbours($doc,$element,'is created by/creates,2')[@xsi:type='DTO'], 
+    'no DTO created')
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="results an Entity"
                      id="6e700f59-386b-45f2-9c53-6ba14db35f62"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'results,1')[@xsi:type='Entity']) = 1</documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'results,1')[@xsi:type='Entity'],
+	'no Entity found')</documentation>
             </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
@@ -986,7 +1027,10 @@ count(zenta:neighbours($doc,$element,'results,1')[@xsi:type='Entity']) = 1</docu
                      id="c5831b41-a8f7-4f8e-ac46-8913914adfc7"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type='Process Step']) = 1</documentation>
+zenta:exactlyOne(
+    zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type='Process Step'],
+    'no Process Step found')
+</documentation>
                <property key="fillColor"/>
                <property key="elementShape"/>
                <property key="textAlignment" value="2"/>
@@ -1001,9 +1045,11 @@ count(zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type
                <documentation>design|
 if($element/@xsi:type='Process Step')
 then
-	count(zenta:neighbours($doc,$element,'results,1')) = 1
+	zenta:exactlyOne(
+		zenta:neighbours($doc,$element,'results,1'),
+		'no output type')
 else
-	true()
+	()
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
@@ -1013,16 +1059,18 @@ else
                <documentation>design|
 if ($element/value[@ancestorName='operates on'])
 then
-min(
-for $rel in $element/value[@ancestorName='operates on'] return
- $rel/@relationName = 'creates' or
- $rel/@relationName = 'findAll' or
- $rel/@relationName = 'findById' or
- $rel/@relationName = 'updates' or
- $rel/@relationName = 'deletes' or
- zenta:neighbours($doc, $doc//element[@id=$rel/@target], 'aggregates,2;contains,1')[@xsi:type='Query']/string(@name) = $rel/@relationName
-)
-else true()
+if(min(
+  for $rel in $element/value[@ancestorName='operates on'] return
+   $rel/@relationName = 'creates' or
+   $rel/@relationName = 'findAll' or
+   $rel/@relationName = 'findById' or
+   $rel/@relationName = 'updates' or
+   $rel/@relationName = 'deletes' or
+   zenta:neighbours($doc, $doc//element[@id=$rel/@target], 'aggregates,2;contains,1')[@xsi:type='Query']/string(@name) = $rel/@relationName
+  ))
+  then ()
+  else $element/value[@ancestorName='operates on']
+else ()
 </documentation>
             </element>
          </folder>
@@ -1156,21 +1204,27 @@ else true()
                      id="dfa48e70-73bc-41ec-9d59-fa14ae908411"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type='Process Step']) = 1</documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type='Process Step'],
+	'no Process Step found')</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="has path"
                      id="0ec99e0e-e766-47ec-8e20-1c94a0a662a4"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'published at,1')[@xsi:type='Path']) = 1</documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'published at,1')[@xsi:type='Path'],
+	'no path')</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="uses HTTP method"
                      id="07fcd486-def7-42ba-8395-806d8721c758"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'uses,1')[@xsi:type='HTTP method']) = 1</documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'uses,1')[@xsi:type='HTTP method'],
+	'no HTTP method')</documentation>
             </element>
             <element xsi:type="zenta:BasicRelationship"
                      id="aaa28e61-8fcc-4c26-9e3d-a41974f39ba5"
@@ -1298,18 +1352,18 @@ count(zenta:neighbours($doc,$element,'uses,1')[@xsi:type='HTTP method']) = 1</do
                      id="71523e2c-fced-4db6-907e-f0917e91c771"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-(
-	count(zenta:neighbours($doc,$element,'contributes to/uses,2')[@xsi:type='Service']) 
-) &gt; 0 </documentation>
+	zenta:neighbours($doc,$element,'contributes to/uses,2')[@xsi:type='Service'] 
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="uses exactly one DTO"
                      id="a6bf1172-55e3-4c19-ab6f-55ef263beda4"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-(
-	count(zenta:neighbours($doc,$element,'uses,1')[@xsi:type='DTO']) 
-) = 1</documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'uses,1')[@xsi:type='DTO'],
+	'no DTO found') 
+</documentation>
             </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
@@ -1410,18 +1464,25 @@ The business logic is delegated to Services
                      id="73d62603-8090-48bb-aaf0-e007cd8c678c"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>analysis|
-if(@xsi:type = 'Constant')
-then
-  count(zenta:neighbours($doc,$element,'uses,2')[@xsi:type='Behaviour' or @xsi:type='Process Step'])  &gt; 0 
-else
-  true()</documentation>
+if(
+	@xsi:type = 'Constant' and 
+	count(zenta:neighbours($doc,$element,'uses,2')[@xsi:type='Behaviour' or @xsi:type='Process Step']) = 0
+) 
+then 'no behaviour found'
+else ()
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="is in a Constant Provider"
                      id="61875014-c293-4601-b2ca-1cfc496549b9"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Constant Provider' or @xsi:type='Test Data' or @xsi:type='Enum']) = 1 </documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'contains,2')[
+		@xsi:type='Constant Provider' or
+		@xsi:type='Test Data' or
+		@xsi:type='Enum'],
+	'no Constant Provider found') </documentation>
             </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
@@ -1563,45 +1624,56 @@ count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Constant Provider'
                      id="9ec9786e-f8e4-4814-9102-993aa7b7ec56"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-(
-	count(zenta:neighbours($doc,$element,'uses,2')[@xsi:type='Callable' or @xsi:type='Service'] or @xsi:type='Controller' ) 
-) = 1</documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'uses,2')[
+		@xsi:type='Callable' or
+		@xsi:type='Service' or
+		@xsi:type='Controller'],
+	'no callable found' ) 
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="has a position"
                      id="8e3e56d6-5e02-41d3-906a-dc64435c8c85"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-(
-	count(zenta:neighbours($doc,$element,'referenced as/references,1')[@xsi:type='Position']) 
-) = 1</documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'referenced as/references,1')[@xsi:type='Position'],
+	'no position found')
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="is defined by metamodel constants"
                      id="dab04779-9424-445f-b398-1f71368922fb"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-$element = $doc//folder[contains(@name,'metamodel')]//element</documentation>
+if($element = $doc//folder[contains(@name,'metamodel')]//element)
+then ()
+else concat('no metamodel folder: ', $element/../@name)</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="has a type"
                      id="51e66785-8879-47b8-9f6b-a4657ad5b101"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-(
-	count(zenta:neighbours($doc,$element,'is a/is the type of,1')) 
-) = 1</documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'is a/is the type of,1'),
+	'no type found') 
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="has an example test artifact"
                      id="cb25880d-bfa1-406f-b5c6-2cad8d9754bd"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-(
-	count(zenta:neighbours($doc,$element,'has an example as/is an example of,1')) +
-	count(zenta:neighbours($doc,$element,'is a/is the type of,1;has an example as/is an example of,1')) +
-    count(zenta:neighbours($doc,$element,'is a/is the type of,1')[@xsi:type='Enum'])
-) = 1</documentation>
+zenta:exactlyOne(
+  (
+	zenta:neighbours($doc,$element,'has an example as/is an example of,1'),
+	zenta:neighbours($doc,$element,'is a/is the type of,1;has an example as/is an example of,1'),
+	zenta:neighbours($doc,$element,'is a/is the type of,1')[@xsi:type='Enum']
+  ),
+  'no test artifact'
+)</documentation>
             </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
@@ -1772,21 +1844,26 @@ $element = $doc//folder[contains(@name,'metamodel')]//element</documentation>
                      id="f3782afe-d0f6-4cd2-8fa9-ec2a07f363a1"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'contains,1')) &gt; 0</documentation>
+if(count(zenta:neighbours($doc,$element,'contains,1')) &gt; 0)
+then ()
+else 'no onstants found'</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="has a package"
                      id="eb4d6f6b-9719-450f-8958-f00245434167"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'contains,2')) = 1</documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'contains,2'),
+	'no package found'
+)</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="belongs to an Enum"
                      id="9d6a05b6-6a75-4ead-8464-1752ec009650"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-count(zenta:neighbours($doc,$element,'contains,2')) = 1</documentation>
+zenta:exactlyOne(zenta:neighbours($doc,$element,'contains,2'),'no Enum found')</documentation>
             </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
