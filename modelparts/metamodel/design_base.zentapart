@@ -515,7 +515,7 @@ if($element/@xsi:type='External type')
                <documentation>design|
 let $stuff := zenta:neighbours($doc,$element,'results,2')[@xsi:type='Repository']
 return
-  if count($stuff)=0
+  if (count($stuff)=0)
   then
     'no repository found'
   else if (count($stuff) = 1)
