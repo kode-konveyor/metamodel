@@ -429,10 +429,10 @@ else
                      id="1dec51d2-ac56-4384-aae3-94d4fc1d8e35"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-if count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data'])=0
+if (count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data'])=0)
   then
     'no Test Data found'
-  else if count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data']) = 1
+  else if (count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data']) = 1)
      then ()
      else zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data']
 </documentation>
