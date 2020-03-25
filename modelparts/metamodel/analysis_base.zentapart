@@ -114,7 +114,7 @@ else
                   id="6fc0b9df-cfd4-4c18-b3c2-4f5ae70da11f"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-zenta:exactlyone(
+zenta:exactlyOne(
     zenta:neighbours($doc,$element,'drives,1')[@xsi:type='Objective'],
     'no Objective found'
 )
@@ -276,7 +276,9 @@ Policy, Threat, and Assumption of Common Criteria are modeled with a Policy.
                   id="c9346e32-c89b-4eae-8fd5-549682b2df3e"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>design|
-count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package']) = 1 </documentation>
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'],
+	'no package found')</documentation>
             <property key="fillColor"/>
             <property key="elementShape"/>
             <property key="textAlignment" value="2"/>
@@ -385,9 +387,13 @@ count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package']) = 1 </d
                   id="47d08121-4031-4c7a-b6de-1f70c0bb8095"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>design|(
-	count(zenta:neighbours($doc,$element,'is done by/does,1')) + 
-	count(zenta:neighbours($doc,$element,'is implemented by/implements,1')) 
-) = 1</documentation>
+zenta:exactlyOne(
+    (
+	zenta:neighbours($doc,$element,'is done by/does,1'), 
+	zenta:neighbours($doc,$element,'is implemented by/implements,1')
+    ),
+    'no user or Callable found')
+</documentation>
             <property key="fillColor"/>
             <property key="elementShape"/>
             <property key="textAlignment" value="2"/>
@@ -399,9 +405,8 @@ count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package']) = 1 </d
                   id="58b908ce-ae0d-4226-ac0c-cd1c3c67f159"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-(
-	count(zenta:neighbours($doc,$element,'is done by/does,2')[@xsi:type='Process Step']) 
-) &gt; 0 </documentation>
+	zenta:neighbours($doc,$element,'is done by/does,2')[@xsi:type='Process Step'] 
+</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
                   name="delivers a Business Object"
@@ -410,7 +415,9 @@ count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package']) = 1 </d
             <documentation>analysis|
 if (count(zenta:neighbours($doc,$element,'preceeds,1')[@xsi:type='Process Step']) &gt; 0)
 then
-  count(zenta:neighbours($doc,$element,'modifies,1')[@xsi:type='Business Object']) &gt; 0
+  if(count(zenta:neighbours($doc,$element,'modifies,1')[@xsi:type='Business Object']) &gt; 0)
+  then ()
+  else ('following process step but no business object modified', zenta:neighbours($doc,$element,'preceeds,1')[@xsi:type='Process Step'])
 else
   true()
 </documentation>
@@ -422,7 +429,9 @@ else
             <documentation>analysis|
 if (count(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']) &gt; 0)
 then
-  count(zenta:neighbours($doc,$element,'reads,1')[@xsi:type='Business Object']) &gt; 0
+  if(count(zenta:neighbours($doc,$element,'reads,1')[@xsi:type='Business Object']) &gt; 0)
+  then ()
+  else ('previous process step but no business object read', zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step'])
 else
   true()</documentation>
          </element>
@@ -431,7 +440,7 @@ else
                   id="532e3ba9-e59b-4019-82e5-3fbf8595e53f"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-not(
+('foo',not(
  (
 	count(zenta:neighbours($doc,$element,'preceeds,2')) + 
   	count(zenta:neighbours($doc,$element,'is parallel to/is parallel to,2')) + 
@@ -453,7 +462,7 @@ not(
       1
     else
       0
- ) &gt; 1
+ ) &gt; 1)
 )</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
