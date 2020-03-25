@@ -114,15 +114,10 @@ else
                   id="6fc0b9df-cfd4-4c18-b3c2-4f5ae70da11f"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-for $stuff in zenta:neighbours($doc,$element,'drives,1')[@xsi:type='Objective']
-return
-  if count($stuff)=0
-  then
+zenta:exactlyone(
+    zenta:neighbours($doc,$element,'drives,1')[@xsi:type='Objective'],
     'no Objective found'
-  else if count($stuff) = 1
-     then ()
-     else $stuff
-
+)
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
