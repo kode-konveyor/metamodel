@@ -1829,7 +1829,7 @@ else 'no onstants found'</documentation>
                <documentation>design|
 zenta:exactlyOne(
 	zenta:neighbours($doc,$element,'contains,2'),
-	'no package found
+	'no package found'
 )</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
