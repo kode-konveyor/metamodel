@@ -1598,7 +1598,7 @@ zenta:exactlyOne(
                      id="9ec9786e-f8e4-4814-9102-993aa7b7ec56"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-zenta:exactlyone(
+zenta:exactlyOne(
 	zenta:neighbours($doc,$element,'uses,2')[
 		@xsi:type='Callable' or
 		@xsi:type='Service' or
