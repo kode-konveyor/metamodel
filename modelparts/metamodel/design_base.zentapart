@@ -1631,7 +1631,7 @@ else concat('no metamodel folder: ', $element/../@name)</documentation>
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
 zenta:exactlyOne(
-	zenta:neighbours($doc,$element,'is a/is the type of,1')
+	zenta:neighbours($doc,$element,'is a/is the type of,1'),
 	'no type found') 
 </documentation>
             </element>
