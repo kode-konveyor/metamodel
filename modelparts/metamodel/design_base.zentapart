@@ -430,7 +430,7 @@ else
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
 zenta:exactlyOne(
-    count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data'])=0),
+    zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data'],
     'no Test Data found')
 </documentation>
             </element>
