@@ -477,7 +477,7 @@ zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2')[@xsi:
                      id="cd077259-127c-4997-82ae-f9808af60668"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-if ( count(zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Field' or @xsi:type='Parameter']) ) &gt; 0)
+if ( count(zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Field' or @xsi:type='Parameter'])  &gt; 0)
 then ()
 else 'no reason found'
 </documentation>
