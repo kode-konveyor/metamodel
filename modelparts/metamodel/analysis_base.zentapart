@@ -386,7 +386,7 @@ zenta:exactlyOne(
                   name="is done by a user or implemented by a Callable"
                   id="47d08121-4031-4c7a-b6de-1f70c0bb8095"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>design|(
+            <documentation>design|
 zenta:exactlyOne(
     (
 	zenta:neighbours($doc,$element,'is done by/does,1'), 
