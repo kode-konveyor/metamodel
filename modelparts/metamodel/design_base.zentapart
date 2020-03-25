@@ -1630,7 +1630,7 @@ else concat('no metamodel folder: ', $element/../@name)</documentation>
                      id="51e66785-8879-47b8-9f6b-a4657ad5b101"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-zenta:exactlyone(
+zenta:exactlyOne(
 	zenta:neighbours($doc,$element,'is a/is the type of,1')
 	'no type found') 
 </documentation>
@@ -1837,7 +1837,7 @@ zenta:exactlyOne(
                      id="9d6a05b6-6a75-4ead-8464-1752ec009650"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-zenta:exactlyone(zenta:neighbours($doc,$element,'contains,2'),'no Enum found')</documentation>
+zenta:exactlyOne(zenta:neighbours($doc,$element,'contains,2'),'no Enum found')</documentation>
             </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
