@@ -44,7 +44,10 @@ if ($element/@xsi:type='External type')
 then
   ()
 else
-	zenta:neighbours($doc,$element,'is a/is the type of,1') 
+	zenta:exactlyOne(
+		zenta:neighbours($doc,$element,'is a/is the type of,1'),
+		'no type found'
+	) 
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
