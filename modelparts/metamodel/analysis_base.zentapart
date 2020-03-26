@@ -427,7 +427,7 @@ then
   then ()
   else ('following process step but no business object modified', zenta:neighbours($doc,$element,'preceeds,1')[@xsi:type='Process Step'])
 else
-  true()
+  ()
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
