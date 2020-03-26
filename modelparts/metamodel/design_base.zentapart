@@ -507,10 +507,12 @@ else 'no member field found'
                      id="d9e976b8-6794-4c5e-9eaa-37da4c84585b"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-if($element/@xsi:type='External type')
- then ()
- else
-	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'] 
+if(not($element/@xsi:type='External type'))
+then
+	zenta:exactlyOne(
+		zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'],
+		'no package found')
+else ()
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
