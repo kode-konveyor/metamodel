@@ -93,7 +93,7 @@
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
 if(count(
-	zenta:neighbours($doc,$element,'determines,2')[@xsi:type='Objective' or @xsi:type='External Objective'], 
+	zenta:neighbours($doc,$element,'determines,2')[@xsi:type='Objective' or @xsi:type='External Objective'] +
 	zenta:neighbours($doc,$element,'contains,2;determines,2')[@xsi:type='Objective']
 ) > 0)
 then ()
