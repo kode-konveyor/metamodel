@@ -146,8 +146,8 @@ then
 	if(count(
 		zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Process Step'] 
 	)=0)
-	then ()
-	else 'no process step or sub-behaviour found'
+	then 'no process step or sub-behaviour found'
+	else ()
 else
    ()</documentation>
          </element>
