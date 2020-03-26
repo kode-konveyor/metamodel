@@ -421,7 +421,11 @@ Projects can contain packages.
 if($element/@xsi:type='External type')
 then ()
 else
-	zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Artifact'] 
+	if(count(
+		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Artifact'] 
+	) > 0)
+	then ()
+	else 'no test artifact found'
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
