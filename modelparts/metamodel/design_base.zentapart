@@ -1457,11 +1457,12 @@ The business logic is delegated to Services
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>analysis|
 if(
-	@xsi:type = 'Constant' or 
-	count(zenta:neighbours($doc,$element,'uses,2')[@xsi:type='Behaviour' or @xsi:type='Process Step'])  &gt; 0
+	@xsi:type = 'Constant' and 
+	count(zenta:neighbours($doc,$element,'uses,2')[@xsi:type='Behaviour' or @xsi:type='Process Step']) = 0
 ) 
-then ()
-else 'no behaviour found'</documentation>
+then 'no behaviour found'
+else ()
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="is in a Constant Provider"
