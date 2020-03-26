@@ -491,10 +491,16 @@ else 'no reason found'
                      id="8d10f521-d690-468c-900f-889b6069510a"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-if($element/@xsi:type='External type')
+if(
+	$element/@xsi:type='External type' or
+	count((
+		zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Field'],
+		zenta:neighbours($doc,$element,'aggregates,1')[@xsi:type='Field']
+	)) > 0
+)
 then ()
-else
- zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Field']</documentation>
+else 'no member field found'
+</documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="is in a package"
