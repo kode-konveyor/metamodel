@@ -51,16 +51,18 @@ else
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
-                     name="is in a DTO or Entity or configuration Provider"
+                     name="is in a DTO, Entity or configuration Provider"
                      id="a589f660-0277-44c1-95b1-de1b5d11cf0b"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-if ($element/@xsi:type='External type')
-then
-  ()
-else
-	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider'], 
-	zenta:neighbours($doc,$element,'aggregates,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider'] 
+if (
+	$element/@xsi:type='External type' or
+	count((
+		zenta:neighbours($doc,$element,'contains,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider'], 
+		zenta:neighbours($doc,$element,'aggregates,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider'] 
+	) > 0 ))
+then ()
+else 'no DTO, Entity or configuration Provider found'
 </documentation>
             </element>
          </folder>
