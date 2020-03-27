@@ -500,11 +500,15 @@ not(
 )</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="have at least one behaviour"
+                  name="have at least one behaviour or substep"
                   id="24c89149-0040-426d-9104-ffcf2cd3aedf"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-count(zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Behaviour' or @xsi:type='Process Step']) &gt; 0
+if (count(
+	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Behaviour' or @xsi:type='Process Step']
+   ) &gt; 0)
+then ()
+else 'no behaviour or substep found'
 </documentation>
          </element>
          <element xsi:type="zenta:BasicRelationship"
