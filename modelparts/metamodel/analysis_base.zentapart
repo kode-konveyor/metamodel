@@ -474,30 +474,26 @@ else zentatools:let('initials',
                   id="c016b942-98e7-48c4-8fbb-09e5986af6bb"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-not(
- (
-	count(zenta:neighbours($doc,$element,'preceeds,1')) + 
-  	count(zenta:neighbours($doc,$element,'is parallel to/is parallel to,2')) + 
-  	count(zenta:neighbours($doc,$element,'is parallel to/is parallel to,1'))
- ) = 0
- and
- sum(
-  for $parent in zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Process Step' or @xsi:type='Project'],
-  $step in zenta:neighbours($doc,$parent,'contains,1')
-  return
-    if (
-		(
-			count(zenta:neighbours($doc,$step,'preceeds,1')) +
-			count(zenta:neighbours($doc,$step,'is parallel to/is parallel to,2')) +
-			count(zenta:neighbours($doc,$step,'is parallel to/is parallel to,1')) 
-		) = 0
-	)
-    then
-      1
-    else
-      0
- ) &gt; 1
-)</documentation>
+if (count((
+	zenta:neighbours($doc,$element,'preceeds,1'),
+  	zenta:neighbours($doc,$element,'is parallel to/is parallel to,2'),
+  	zenta:neighbours($doc,$element,'is parallel to/is parallel to,1')
+ )) > 0 )
+then ()
+else zentatools:let('initials',
+	' 	for
+			$parent in zenta:neighbours($doc,$element,''contains,2'')[@xsi:type=''Process Step'' or @xsi:type=''Project''],
+			$step in zenta:neighbours($doc,$parent,''contains,1'')
+		return
+			if ( count((
+				zenta:neighbours($doc,$step,''preceeds,1''),
+				zenta:neighbours($doc,$step,''is parallel to/is parallel to,2''),
+				zenta:neighbours($doc,$step,''is parallel to/is parallel to,1'') 
+		 	      )) = 0)
+    			then $step
+    			else () ',
+	'zenta:exactlyOne($initials,''no parent step or project'')')
+</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
                   name="have at least one behaviour or substep"
