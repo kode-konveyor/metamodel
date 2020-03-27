@@ -467,7 +467,7 @@ else zentatools:let('initials',
     			then $step
     			else () ',
 	'zenta:exactlyOne($step,''internal error'')')
-)</documentation>
+</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
                   name="only one final step of a process"
