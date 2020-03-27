@@ -131,11 +131,14 @@ zenta:exactlyOne(
                   id="7599475e-f3aa-4309-b118-48b7f2dfc92d"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-if($element/@xsi:type!='Objective')
+if(
+	$element/@xsi:type!='Objective' or
+	(count((
+		zenta:neighbours($doc,$element,'drives,2')[@xsi:type='Policy'],
+		zenta:neighbours($doc,$element,'drives,2;drives,2')[@xsi:type='Policy']
+	)) > 0))
 then ()
-else
-	zenta:neighbours($doc,$element,'drives,2')[@xsi:type='Policy'],
-	zenta:neighbours($doc,$element,'drives,2;drives,2')[@xsi:type='Policy']
+else 'no policy found'
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
