@@ -441,7 +441,7 @@ then
   then ()
   else ('previous process step but no business object read', zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step'])
 else
-  true()</documentation>
+  ()</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
                   name="only one initial step for a process"
