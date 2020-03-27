@@ -190,7 +190,10 @@ else 'no DTO, Entity or configuration Provider found'
                      id="1a095374-c532-44de-86a7-917a1a011ec9"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-  zenta:neighbours($doc,$element,'contains,2')[@xsi:type='External Project' or @xsi:type='Project' or @xsi:type='Package']
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='External Project' or @xsi:type='Project' or @xsi:type='Package'],
+	'no containing project or package found'
+	)
 </documentation>
                <property key="fillColor"/>
                <property key="elementShape"/>
