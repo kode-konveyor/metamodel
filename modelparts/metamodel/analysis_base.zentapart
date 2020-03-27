@@ -466,7 +466,7 @@ else zentatools:let('initials',
 		 	      )) = 0)
     			then $step
     			else () ',
-	'zenta:exactlyOne($initials,''internal error'')')
+	'zenta:exactlyOne($initials,''no parent step or project'')')
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
