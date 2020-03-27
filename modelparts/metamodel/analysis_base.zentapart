@@ -106,11 +106,11 @@ else 'no objective found'
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
 if ($element/@xsi:type!='Objective' or 
-    count(
+    count((
 	zenta:neighbours($doc,$element,'determines,1')[@xsi:type='Process Step' or @xsi:type='Behaviour'],
 	zenta:neighbours($doc,$element,'contains,1;determines,1')[@xsi:type='Process Step' or @xsi:type='Behaviour'],
 	zenta:neighbours($doc,$element,'drives,1;determines,1')[@xsi:type='Process Step' or @xsi:type='Behaviour'] 
-     ) > 0)
+     )) > 0)
 then ()
 else 'no behaviour or process step found'
 </documentation>
