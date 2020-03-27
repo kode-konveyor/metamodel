@@ -176,7 +176,11 @@ else 'no DTO, Entity or configuration Provider found'
                      id="3d43468e-1396-443a-bbf9-806f13e1332d"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-  zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Package']
+if(count(
+	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Package']
+) = 0)
+then 'no package found'
+else ()
 </documentation>
                <property key="fillColor"/>
                <property key="elementShape"/>
