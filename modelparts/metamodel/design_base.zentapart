@@ -457,7 +457,8 @@ zenta:exactlyOne(
                <documentation>design|
 if (
    string-length($element/documentation) &gt; 0 or
-   zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Parameter']
+   zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Parameter'] or
+   zenta:neighbours($doc,$element,'is based on/is base of')[@xsi:type='Test Artifact'] 
 )
 then ()
 else 'cannot construct it'
