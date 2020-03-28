@@ -95,7 +95,7 @@
 if(count(
 	(zenta:neighbours($doc,$element,'determines,2')[@xsi:type='Objective' or @xsi:type='External Objective'], 
 	zenta:neighbours($doc,$element,'contains,2;determines,2')[@xsi:type='Objective'])
-) > 0)
+) &gt; 0)
 then ()
 else 'no objective found'
 </documentation>
@@ -110,7 +110,7 @@ if ($element/@xsi:type!='Objective' or
 	zenta:neighbours($doc,$element,'determines,1')[@xsi:type='Process Step' or @xsi:type='Behaviour'],
 	zenta:neighbours($doc,$element,'contains,1;determines,1')[@xsi:type='Process Step' or @xsi:type='Behaviour'],
 	zenta:neighbours($doc,$element,'drives,1;determines,1')[@xsi:type='Process Step' or @xsi:type='Behaviour'] 
-     )) > 0)
+     )) &gt; 0)
 then ()
 else 'no behaviour or process step found'
 </documentation>
@@ -135,7 +135,7 @@ if(
 	(count((
 		zenta:neighbours($doc,$element,'drives,2')[@xsi:type='Policy'],
 		zenta:neighbours($doc,$element,'drives,2;drives,2')[@xsi:type='Policy']
-	)) > 0))
+	)) &gt; 0))
 then ()
 else 'no policy found'
 </documentation>
@@ -323,7 +323,7 @@ zenta:exactlyOne(
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="3b5725d8-27a2-4e72-afe1-33ad3681af09"
-                   targetConnections="8b64a2be-d793-4de6-813e-8ee4fbcfcb31 f08d0a65-f106-4516-ace0-4ec70af1aa88 db431501-aa35-4bd5-a27f-288dc149d065 5363a191-8ab1-4095-a810-6a38358c57b6 9cdfb42b-8298-47c0-8174-9eb509defbbe a5cd2c76-37cf-473b-b4b4-a6bceb938f23 d5a1e233-6178-443d-8a70-b1ae9d56b48a"
+                   targetConnections="8b64a2be-d793-4de6-813e-8ee4fbcfcb31 f08d0a65-f106-4516-ace0-4ec70af1aa88 db431501-aa35-4bd5-a27f-288dc149d065 5363a191-8ab1-4095-a810-6a38358c57b6 d5a1e233-6178-443d-8a70-b1ae9d56b48a"
                    zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
                <bounds x="120" y="312" width="-1" height="-1"/>
             </child>
@@ -362,26 +362,6 @@ zenta:exactlyOne(
                                  source="e4262bc6-fd48-4a4a-8288-ef5a7033ff3e"
                                  target="3b5725d8-27a2-4e72-afe1-33ad3681af09"
                                  relationship="dcd3590e-06b4-42b5-9864-37de50d422ce"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="cdc86524-35d5-4534-b325-0f19bc679f98"
-                   zentaElement="532e3ba9-e59b-4019-82e5-3fbf8595e53f">
-               <bounds x="420" y="636" width="248"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="a5cd2c76-37cf-473b-b4b4-a6bceb938f23"
-                                 source="cdc86524-35d5-4534-b325-0f19bc679f98"
-                                 target="3b5725d8-27a2-4e72-afe1-33ad3681af09"
-                                 relationship="d6ab0591-700e-4e9a-8854-c157d089d697"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="28ecd1cf-1865-4c95-ab1b-5c670c31ea8d"
-                   zentaElement="c016b942-98e7-48c4-8fbb-09e5986af6bb">
-               <bounds x="452" y="727" width="281"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="9cdfb42b-8298-47c0-8174-9eb509defbbe"
-                                 source="28ecd1cf-1865-4c95-ab1b-5c670c31ea8d"
-                                 target="3b5725d8-27a2-4e72-afe1-33ad3681af09"
-                                 relationship="a160eed0-0d16-44a0-90eb-e45ea733b2bb"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="3cdd102c-965e-4d74-9038-e831b0499c6c"
@@ -446,58 +426,6 @@ then
   else ('previous process step but no business object read', zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step'])
 else
   ()</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="only one initial step for a process"
-                  id="532e3ba9-e59b-4019-82e5-3fbf8595e53f"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>analysis|
-if (count((
-	zenta:neighbours($doc,$element,'preceeds,2'),
-  	zenta:neighbours($doc,$element,'is parallel to/is parallel to,2'),
-  	zenta:neighbours($doc,$element,'is parallel to/is parallel to,1')
- )) > 0 )
-then ()
-else zentatools:let('initials',
-	' 	for
-			$parent in zenta:neighbours($doc,$element,''contains,2'')[@xsi:type=''Process Step'' or @xsi:type=''Project''],
-			$step in zenta:neighbours($doc,$parent,''contains,1'')
-		return
-			if ( count((
-				zenta:neighbours($doc,$step,''preceeds,2''),
-				zenta:neighbours($doc,$step,''is parallel to/is parallel to,2''),
-				zenta:neighbours($doc,$step,''is parallel to/is parallel to,1'') 
-		 	      )) = 0)
-    			then $step
-    			else () ',
-	'zenta:exactlyOne($initials,''no parent step or project'')')
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="only one final step of a process"
-                  id="c016b942-98e7-48c4-8fbb-09e5986af6bb"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>analysis|
-if (count((
-	zenta:neighbours($doc,$element,'preceeds,1'),
-  	zenta:neighbours($doc,$element,'is parallel to/is parallel to,2'),
-  	zenta:neighbours($doc,$element,'is parallel to/is parallel to,1')
- )) > 0 )
-then ()
-else zentatools:let('initials',
-	' 	for
-			$parent in zenta:neighbours($doc,$element,''contains,2'')[@xsi:type=''Process Step'' or @xsi:type=''Project''],
-			$step in zenta:neighbours($doc,$parent,''contains,1'')
-		return
-			if ( count((
-				zenta:neighbours($doc,$step,''preceeds,1''),
-				zenta:neighbours($doc,$step,''is parallel to/is parallel to,2''),
-				zenta:neighbours($doc,$step,''is parallel to/is parallel to,1'') 
-		 	      )) = 0)
-    			then $step
-    			else () ',
-	'zenta:exactlyOne($initials,''no parent step or project'')')
-</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
                   name="have at least one behaviour or substep"
@@ -823,16 +751,6 @@ A role is assigned to human(s).
                id="dcd3590e-06b4-42b5-9864-37de50d422ce"
                ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                source="0c6daa63-b33e-482c-8610-d9c56a516cdb"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="a160eed0-0d16-44a0-90eb-e45ea733b2bb"
-               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-               source="c016b942-98e7-48c4-8fbb-09e5986af6bb"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="d6ab0591-700e-4e9a-8854-c157d089d697"
-               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-               source="532e3ba9-e59b-4019-82e5-3fbf8595e53f"
                target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
       <element xsi:type="zenta:BasicRelationship"
                name="aggregates"

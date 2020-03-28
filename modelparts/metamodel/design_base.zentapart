@@ -60,7 +60,7 @@ if (
 	count((
 		zenta:neighbours($doc,$element,'contains,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider'], 
 		zenta:neighbours($doc,$element,'aggregates,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider'] 
-	) > 0 ))
+	) &gt; 0 ))
 then ()
 else 'no DTO, Entity or configuration Provider found'
 </documentation>
@@ -435,7 +435,7 @@ then ()
 else
 	if(count(
 		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Artifact'] 
-	) > 0)
+	) &gt; 0)
 	then ()
 	else 'no test artifact found'
 </documentation>
@@ -508,7 +508,7 @@ if(
 	count((
 		zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Field'],
 		zenta:neighbours($doc,$element,'aggregates,1')[@xsi:type='Field']
-	)) > 0
+	)) &gt; 0
 )
 then ()
 else 'no member field found'
