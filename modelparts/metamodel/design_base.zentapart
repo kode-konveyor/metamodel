@@ -461,7 +461,7 @@ if (
    zenta:neighbours($doc,$element,'is based on/is base of,1')[@xsi:type='Test Artifact'] 
 )
 then ()
-else 'cannot construct it'
+else ('cannot construct it', zenta:neighbours($doc,$element,'is based on/is base of,1'))
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
