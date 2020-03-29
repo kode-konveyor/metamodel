@@ -397,7 +397,9 @@ zenta:exactlyOne(
                   id="58b908ce-ae0d-4226-ac0c-cd1c3c67f159"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-	zenta:neighbours($doc,$element,'is done by/does,2')[@xsi:type='Process Step'] 
+if(count(zenta:neighbours($doc,$element,'is done by/does,2')[@xsi:type='Process Step'] ) >0)
+then ()
+else 'no process step found'
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
