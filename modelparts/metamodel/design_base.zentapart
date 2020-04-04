@@ -1627,6 +1627,7 @@ zenta:exactlyOne(
 zenta:exactlyOne(
 	zenta:neighbours($doc,$element,'uses,2')[
 		@xsi:type='Callable' or
+		@xsi:type='External Service under DI framework' or
 		@xsi:type='Service' or
 		@xsi:type='Controller'],
 	'no callable found' ) 
