@@ -2768,7 +2768,7 @@ In a model view it is a good practice to grey out elements which are outside of 
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="results"
+               name="results old"
                id="a66389d6-4758-45da-8d36-a802bdc6a0c9"
                ancestor="basicrelation"
                source="callable"
