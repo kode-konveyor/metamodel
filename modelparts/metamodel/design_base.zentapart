@@ -116,8 +116,8 @@ else 'no DTO, Entity or configuration Provider found'
                   ancestor="thing">
             <documentation>This is an abstract entity used for anything which is either usually implemented as a class, or have some kind of property.
 </documentation>
-            <property key="fillColor" value="#ffffff"/>
-            <property key="elementShape" value="emptyShape"/>
+            <property key="fillColor"/>
+            <property key="elementShape"/>
             <property key="textAlignment" value="2"/>
             <property key="fontColor"/>
             <property key="font"/>
@@ -1273,6 +1273,11 @@ zenta:exactlyOne(
                    elementShape="emptyShape"
                    zentaElement="c201ba78-31ad-4afd-aceb-3104776c134d">
                <bounds x="564" y="24" width="142"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="65972395-96ec-463b-8adf-2c95b1d0920c"
+                                 source="56291942-48a6-4edc-8332-17417c57fe1e"
+                                 target="e7f8bf34-3e78-4740-ab27-242ca133299a"
+                                 relationship="41114d10-4359-4f01-9a6a-264c5b16f3fc"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="0011e373-a36d-4bf1-ab92-c0a22b7522b7"
@@ -1281,6 +1286,14 @@ zenta:exactlyOne(
                    elementShape="emptyShape"
                    zentaElement="5f361cfb-f5bf-4f2e-8ef3-1abdf181f1d8">
                <bounds x="474" y="276" width="-1" height="-1"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="e7f8bf34-3e78-4740-ab27-242ca133299a"
+                   targetConnections="65972395-96ec-463b-8adf-2c95b1d0920c"
+                   fillColor="#ffffff"
+                   elementShape="emptyShape"
+                   zentaElement="type">
+               <bounds x="626" y="146" width="-1" height="-1"/>
             </child>
             <property key="Template"/>
          </element>
@@ -1312,6 +1325,19 @@ zenta:exactlyOne(
             <property key="elementShape" value="emptyShape"/>
             <property key="textAlignment" value="2"/>
             <property key="fontColor"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is a/is type of"
+                  id="41114d10-4359-4f01-9a6a-264c5b16f3fc"
+                  ancestor="basicrelation"
+                  source="c201ba78-31ad-4afd-aceb-3104776c134d"
+                  target="type">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
             <property key="font"/>
          </element>
       </folder>
@@ -1627,7 +1653,6 @@ zenta:exactlyOne(
 zenta:exactlyOne(
 	zenta:neighbours($doc,$element,'uses,2')[
 		@xsi:type='Callable' or
-		@xsi:type='External Service under DI framework' or
 		@xsi:type='Service' or
 		@xsi:type='Controller'],
 	'no callable found' ) 
@@ -1703,6 +1728,12 @@ zenta:exactlyOne(
                                  source="ae9e3687-9499-48ae-a1f0-8c7ccd27746e"
                                  target="baa4499e-645b-4ec0-b8bf-b0f21d1bdb76"
                                  relationship="01dfbf60-b584-4c46-9d1b-c7c88dc040f5"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="3fe7500f-3ea8-4d44-a6c3-6af3b7a6620f"
+                                 source="ae9e3687-9499-48ae-a1f0-8c7ccd27746e"
+                                 target="349ddd7b-373c-413d-8a2c-489b8c1cb14e"
+                                 lineDecoration="SmallEndArrowDecoration"
+                                 relationship="019bd6d8-fcc4-4de1-9704-50c332e34749"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="bc9e8602-8e13-42ed-874d-cfc338ce0d28"
@@ -1760,7 +1791,7 @@ zenta:exactlyOne(
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="349ddd7b-373c-413d-8a2c-489b8c1cb14e"
-                   targetConnections="bd885a27-0f34-453d-b0ee-05f38365b816"
+                   targetConnections="bd885a27-0f34-453d-b0ee-05f38365b816 3fe7500f-3ea8-4d44-a6c3-6af3b7a6620f"
                    fillColor="#ffffff"
                    elementShape="emptyShape"
                    zentaElement="type">
@@ -1789,6 +1820,19 @@ zenta:exactlyOne(
             <property key="elementShape" value="ellipseShape"/>
             <property key="textAlignment" value="2"/>
             <property key="fontColor"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="results"
+                  id="019bd6d8-fcc4-4de1-9704-50c332e34749"
+                  ancestor="basicrelation"
+                  source="callable"
+                  target="type">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
             <property key="font"/>
          </element>
       </folder>
