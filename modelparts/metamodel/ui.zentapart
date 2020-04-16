@@ -54,11 +54,6 @@
                               relationship="e542d690-c5ef-48c6-a6e1-1a25c9cc6b2f"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
-                id="d79ec7c9-a106-4a80-909a-061ea71c2630"
-                zentaElement="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2">
-            <bounds x="632" y="332" width="-1" height="-1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
                 id="a75197eb-75c2-4c1e-a0ed-9dd011621d16"
                 targetConnections="bdff2e9a-5e28-493d-beb2-5477744f536a"
                 zentaElement="service">
