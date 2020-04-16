@@ -19,6 +19,11 @@
                                     source="99bee88c-1b59-49cd-904f-4fef05e13a6c"
                                     target="75fe9fad-6e9c-4d73-8b98-0f60598bd3b4"
                                     relationship="a7bb4902-c031-4ba0-bb7d-4725a169903f"/>
+                  <sourceConnection xsi:type="zenta:Connection"
+                                    id="2c28ce33-0447-4148-85f3-1f24f8be6d61"
+                                    source="99bee88c-1b59-49cd-904f-4fef05e13a6c"
+                                    target="7205f786-c827-4c8a-a881-e15f53850f8c"
+                                    relationship="54f98f95-7320-4488-a463-8ae42ca8e266"/>
                </child>
                <child xsi:type="zenta:DiagramObject"
                       id="75fe9fad-6e9c-4d73-8b98-0f60598bd3b4"
@@ -48,11 +53,46 @@
                       zentaElement="eee962ae-e529-4297-9a0f-28e31dbc0f45">
                   <bounds x="578" y="247" width="167"/>
                </child>
+               <child xsi:type="zenta:DiagramObject"
+                      id="7205f786-c827-4c8a-a881-e15f53850f8c"
+                      targetConnections="2c28ce33-0447-4148-85f3-1f24f8be6d61"
+                      zentaElement="d31f4f69-b720-4fd3-a17b-ea42d62e2590">
+                  <bounds x="288" y="96" width="159" height="80"/>
+                  <sourceConnection xsi:type="zenta:Connection"
+                                    id="56b69321-7d49-435e-9e24-3a2b5e2ede86"
+                                    source="7205f786-c827-4c8a-a881-e15f53850f8c"
+                                    target="330724ad-f178-415f-ae78-9184b839d4ef"
+                                    relationship="ba0bf669-dae0-4876-83f3-e3ec0a28dd54"/>
+               </child>
+               <child xsi:type="zenta:DiagramObject"
+                      id="330724ad-f178-415f-ae78-9184b839d4ef"
+                      targetConnections="56b69321-7d49-435e-9e24-3a2b5e2ede86"
+                      zentaElement="791d2739-d27d-4fd4-bec3-d3c3ff046701">
+                  <bounds x="498" y="60" width="175" height="70"/>
+               </child>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="Dependencies are decoupled and/or minimized"
                      id="d22f46d5-4d4f-4d88-a3ad-e3ba516a07d7"
                      ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
+            <element xsi:type="zenta:BasicObject"
+                     name="No one can block others"
+                     id="d31f4f69-b720-4fd3-a17b-ea42d62e2590"
+                     ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
+            <element xsi:type="zenta:BasicRelationship"
+                     id="54f98f95-7320-4488-a463-8ae42ca8e266"
+                     ancestor="1a16ba6a-0441-4e7d-8f9c-f6394fcdd10b"
+                     source="7ffccec8-4951-41e7-b548-f68b34ec3c16"
+                     target="d31f4f69-b720-4fd3-a17b-ea42d62e2590"/>
+            <element xsi:type="zenta:BasicObject"
+                     name="1 task at a time"
+                     id="791d2739-d27d-4fd4-bec3-d3c3ff046701"
+                     ancestor="behaviour"/>
+            <element xsi:type="zenta:BasicRelationship"
+                     id="ba0bf669-dae0-4876-83f3-e3ec0a28dd54"
+                     ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
+                     source="d31f4f69-b720-4fd3-a17b-ea42d62e2590"
+                     target="791d2739-d27d-4fd4-bec3-d3c3ff046701"/>
          </folder>
          <folder name="Easy to do, continue and maintain the implementation"
                  id="2be622e5-a52d-4ba5-a461-66a8198b5bf3">
