@@ -2900,6 +2900,33 @@ In a model view it is a good practice to grey out elements which are outside of 
          <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is a/is the type of"
+               id="4b948721-228b-4152-8e7d-f01be2c7bbc8"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="type">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="BigArrowSourceDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="results"
+               id="5771c318-786f-45df-bf1c-04137f464a22"
+               ancestor="basicrelation"
+               source="ff41556c-9dff-435c-8870-09733ed86067"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+
    </folder>
    <property key="modelDependency" value="metamodel/analysis_base"/>
 </folder>
