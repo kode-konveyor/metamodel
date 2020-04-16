@@ -643,27 +643,6 @@ else 'no behaviour or substep found'
                               lineDecoration="BigArrowSourceDecoration"
                               relationship="4b948721-228b-4152-8e7d-f01be2c7bbc8"/>
          </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="3e819956-2534-4f48-a9bf-c867d43deffc"
-                targetConnections="754f6efc-1840-4b09-89d8-66404dd444a2"
-                fillColor="#ffffff"
-                elementShape="emptyShape"
-                zentaElement="type">
-            <bounds x="741" y="496" width="-1" height="-1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="9cbfb010-0931-496d-b1d0-3e728fc6f487"
-                fillColor="#fcaf3e"
-                elementShape="applicationShape"
-                zentaElement="ff41556c-9dff-435c-8870-09733ed86067">
-            <bounds x="771" y="254" width="-1" height="-1"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="98ae6e70-9b76-49de-9bf5-ea2c265b9754"
-                              source="9cbfb010-0931-496d-b1d0-3e728fc6f487"
-                              target="881ba185-2147-4fff-851a-9573fd9ddd81"
-                              lineDecoration="SmallEndArrowDecoration"
-                              relationship="5771c318-786f-45df-bf1c-04137f464a22"/>
-         </child>
          <documentation>Things which have business relevance but not implemented as is are colored blueish.
 </documentation>
          <property key="Template"/>
@@ -749,12 +728,6 @@ A role is assigned to human(s).
          <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="is a/is the type of"
-               id="4b948721-228b-4152-8e7d-f01be2c7bbc8"
-               ancestor="basicrelation"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="type">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration" value="BigArrowSourceDecoration"/>
          <property key="lineColor"/>
@@ -762,12 +735,6 @@ A role is assigned to human(s).
          <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="results"
-               id="5771c318-786f-45df-bf1c-04137f464a22"
-               ancestor="basicrelation"
-               source="ff41556c-9dff-435c-8870-09733ed86067"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration" value="SmallEndArrowDecoration"/>
          <property key="lineColor"/>
