@@ -636,12 +636,6 @@ else 'no behaviour or substep found'
                               relationship="8aa62b50-ef2a-41ed-99b8-4d853a945d86">
                <bendpoint startX="50" startY="-90" endX="50" endY="83"/>
             </sourceConnection>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="754f6efc-1840-4b09-89d8-66404dd444a2"
-                              source="80ebd5a4-7258-4c3e-8417-587d09168aa2"
-                              target="3e819956-2534-4f48-a9bf-c867d43deffc"
-                              lineDecoration="BigArrowSourceDecoration"
-                              relationship="4b948721-228b-4152-8e7d-f01be2c7bbc8"/>
          </child>
          <documentation>Things which have business relevance but not implemented as is are colored blueish.
 </documentation>
@@ -1169,6 +1163,20 @@ In java and python Services should not have static methods except when the needs
          <property key="fontColor"/>
          <property key="font"/>
       </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is done by/does"
+               id="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"
+               ancestor="basicrelation"
+               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+               target="c2f93d99-8bbd-4742-9f73-15937394173d">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+
    </folder>
    <property key="modelDependency" value="metamodel/basics"/>
 </folder>
