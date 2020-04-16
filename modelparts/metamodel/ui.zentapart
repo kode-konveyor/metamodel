@@ -59,6 +59,11 @@
                               target="31173117-8864-4276-bb6a-2dd3b4375691"
                               lineDecoration="BigArrowSourceDecoration DottedLineDecoration"
                               relationship="07d7b5ab-c6ab-48c2-b631-44e3ce85fbce"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="035bef51-3e68-4c63-9494-74e946b5798d"
+                              source="9b97f34e-e909-4896-8c78-a32e9929a1b3"
+                              target="af70d275-939c-4922-aded-8b18bd08ed66"
+                              relationship="e542d690-c5ef-48c6-a6e1-1a25c9cc6b2f"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="d79ec7c9-a106-4a80-909a-061ea71c2630"
@@ -144,6 +149,12 @@
                 zentaElement="type">
             <bounds x="763" y="428" width="-1" height="-1"/>
          </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="af70d275-939c-4922-aded-8b18bd08ed66"
+                targetConnections="035bef51-3e68-4c63-9494-74e946b5798d"
+                zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <bounds x="540" y="492" width="-1" height="-1"/>
+         </child>
          <property key="Template" value="true"/>
       </element>
       <element xsi:type="zenta:BasicObject"
@@ -193,7 +204,7 @@
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="is a/used by"
+               name="is a used by deprecated"
                id="bea242b8-05dc-4ac0-9b89-641682edbda5"
                ancestor="basicrelation"
                source="44d3e3c7-5434-4b39-ad2f-b6157804f83b"
@@ -313,7 +324,7 @@
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="is a/used by"
+               name="is a used by deprecated"
                id="07d7b5ab-c6ab-48c2-b631-44e3ce85fbce"
                ancestor="basicrelation"
                source="44d3e3c7-5434-4b39-ad2f-b6157804f83b"
@@ -321,6 +332,19 @@
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"
                    value="BigArrowSourceDecoration DottedLineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is a/used by"
+               id="e542d690-c5ef-48c6-a6e1-1a25c9cc6b2f"
+               ancestor="basicrelation"
+               source="44d3e3c7-5434-4b39-ad2f-b6157804f83b"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
