@@ -611,7 +611,7 @@ else 'no behaviour or substep found'
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="881ba185-2147-4fff-851a-9573fd9ddd81"
-                targetConnections="c568d719-9a4c-470b-a35b-bca58f8a8ca3 ea4877b8-2e4b-495b-94e0-6c29780ad797 14763427-16bb-4515-9cb5-475731e77a04 98ae6e70-9b76-49de-9bf5-ea2c265b9754 3003de27-7c85-4f66-834e-0fffaa918e20 e61485b7-a970-45bc-bb65-74c622241d35"
+                targetConnections="c568d719-9a4c-470b-a35b-bca58f8a8ca3 ea4877b8-2e4b-495b-94e0-6c29780ad797 14763427-16bb-4515-9cb5-475731e77a04 3003de27-7c85-4f66-834e-0fffaa918e20 e61485b7-a970-45bc-bb65-74c622241d35"
                 fillColor="#729fcf"
                 zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
             <bounds x="525" y="247" width="-1" height="-1"/>
@@ -650,7 +650,7 @@ It is in most cases carries the business meaning of something which is result of
 It does not have implementation, but tightly coupled with a type which has.
 </documentation>
          <property key="fillColor" value="#729fcf"/>
-         <property key="elementShape" value="rectangleElementShape"/>
+         <property key="elementShape"/>
          <property key="textAlignment" value="2"/>
          <property key="fontColor"/>
          <property key="font"/>
@@ -1176,7 +1176,6 @@ In java and python Services should not have static methods except when the needs
          <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
-
    </folder>
    <property key="modelDependency" value="metamodel/basics"/>
 </folder>
