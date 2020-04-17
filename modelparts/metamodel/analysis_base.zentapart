@@ -69,7 +69,7 @@
             <child xsi:type="zenta:DiagramObject"
                    id="bedeeb61-a433-4668-90d0-b3d04828eb97"
                    zentaElement="c823a5fc-8adb-4649-a149-26549b0fd7da">
-               <bounds x="167" y="330" width="-1" height="-1"/>
+               <bounds x="167" y="330" width="194" height="103"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="99ad540a-6326-444d-a329-0a2fbc4383a8"
                                  source="bedeeb61-a433-4668-90d0-b3d04828eb97"
@@ -366,7 +366,7 @@ zenta:exactlyOne(
             <child xsi:type="zenta:DiagramObject"
                    id="3cdd102c-965e-4d74-9038-e831b0499c6c"
                    zentaElement="24c89149-0040-426d-9104-ffcf2cd3aedf">
-               <bounds x="840" y="543" width="-1" height="-1"/>
+               <bounds x="840" y="543" width="181" height="101"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="d5a1e233-6178-443d-8a70-b1ae9d56b48a"
                                  source="3cdd102c-965e-4d74-9038-e831b0499c6c"
@@ -1054,35 +1054,31 @@ A role is assigned to human(s).
                id="04b81a30-cf0a-4fa7-b487-6fb4e0a76303">
          <child xsi:type="zenta:DiagramObject"
                 id="bf9f531d-dd15-49e3-95f9-3dfeccac9ae8"
+                targetConnections="e58624fd-407d-45b6-ab67-03ee1bf58237 af3fa037-c33f-414a-bbb4-c92dd058ddd7"
                 fillColor="#ffffff"
                 elementShape="emptyShape"
                 zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
             <bounds x="468" y="360" width="-1" height="-1"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
-                id="1e9e76e5-465e-43db-93a4-664526483da8"
-                fillColor="#8ae234"
-                elementShape="roundedRectangleShape"
-                zentaElement="5491f72b-93ec-4ad5-b6a9-2653fe808a03">
-            <bounds x="324" y="360" width="-1" height="-1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="43e1a6af-8281-42c2-9776-cf31910ec1cd"
-                fillColor="#fcaf3e"
-                elementShape="roundedRectangleShape"
-                zentaElement="service">
-            <bounds x="672" y="264" width="-1" height="-1"/>
+                id="931f5d41-c461-47a8-9643-33f5a5b52f45"
+                fillColor="#ffffff"
+                elementShape="emptyShape"
+                zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+            <bounds x="454" y="188" width="-1" height="-1"/>
             <sourceConnection xsi:type="zenta:Connection"
-                              id="f78e3568-9d10-40a6-b3be-1a291996dabb"
-                              source="43e1a6af-8281-42c2-9776-cf31910ec1cd"
-                              target="29738660-3615-48c7-b4ac-25b6631963b6"
-                              relationship="160ffafa-bbed-47e8-8c9a-5797d18b38c6"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="29738660-3615-48c7-b4ac-25b6631963b6"
-                targetConnections="f78e3568-9d10-40a6-b3be-1a291996dabb"
-                zentaElement="service">
-            <bounds x="408" y="264" width="-1" height="-1"/>
+                              id="e58624fd-407d-45b6-ab67-03ee1bf58237"
+                              source="931f5d41-c461-47a8-9643-33f5a5b52f45"
+                              target="bf9f531d-dd15-49e3-95f9-3dfeccac9ae8"
+                              relationship="e8aaca73-c4e6-4698-a16d-7df79fbe62ab">
+               <bendpoint startX="-82" startY="82" endX="-96" endY="-90"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="af3fa037-c33f-414a-bbb4-c92dd058ddd7"
+                              source="931f5d41-c461-47a8-9643-33f5a5b52f45"
+                              target="bf9f531d-dd15-49e3-95f9-3dfeccac9ae8"
+                              lineDecoration="DiamondSourceDecoration SmallEndArrowDecoration"
+                              relationship="a0371f87-301a-4ba0-a9a8-716bd16c6762"/>
          </child>
          <property key="Template"/>
       </element>
@@ -1137,6 +1133,33 @@ In java and python Services should not have static methods except when the needs
          <property key="elementShape"/>
          <property key="textAlignment" value="2"/>
          <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="aggregates"
+               id="a0371f87-301a-4ba0-a9a8-716bd16c6762"
+               ancestor="basicrelation"
+               source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+               target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"
+                   value="DiamondSourceDecoration SmallEndArrowDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="contains"
+               id="e8aaca73-c4e6-4698-a16d-7df79fbe62ab"
+               ancestor="basicrelation"
+               source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+               target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="DiamondSourceDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
    </folder>

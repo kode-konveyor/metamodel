@@ -78,12 +78,6 @@ else 'no DTO, Entity or configuration Provider found'
                    zentaElement="type">
                <bounds x="156" y="72" width="-1" height="-1"/>
                <sourceConnection xsi:type="zenta:Connection"
-                                 id="9182f2ef-b135-4673-a088-47dbc0d613f8"
-                                 source="d81ba3ca-49b8-4696-be13-8b8c7cf00f29"
-                                 target="d64ff740-b1ec-4180-8eef-24cc0e691cc1"
-                                 lineDecoration="DiamondSourceDecoration"
-                                 relationship="281ab2dd-336e-42f6-9b60-2897ee8806cc"/>
-               <sourceConnection xsi:type="zenta:Connection"
                                  id="560cbd2e-9023-4c76-95ac-1d6b5b4cb48d"
                                  source="d81ba3ca-49b8-4696-be13-8b8c7cf00f29"
                                  target="d64ff740-b1ec-4180-8eef-24cc0e691cc1"
@@ -95,7 +89,7 @@ else 'no DTO, Entity or configuration Provider found'
             <child xsi:type="zenta:DiagramObject"
                    id="d64ff740-b1ec-4180-8eef-24cc0e691cc1"
                    fontColor="#ffffff"
-                   targetConnections="9182f2ef-b135-4673-a088-47dbc0d613f8 560cbd2e-9023-4c76-95ac-1d6b5b4cb48d"
+                   targetConnections="560cbd2e-9023-4c76-95ac-1d6b5b4cb48d"
                    fillColor="#f57900"
                    elementShape="ellipseShape"
                    zentaElement="field">
@@ -320,8 +314,7 @@ Projects can contain packages.
             <property key="font"/>
          </element>
       </folder>
-      <folder name="02.  DTO, Entity, Test Artifact, Field"
-              id="a6546244-5edf-4f14-91d4-7bbce336c93e">
+      <folder name="02. Test Artifact" id="a6546244-5edf-4f14-91d4-7bbce336c93e">
          <folder name="Constraints" id="46f10fd7-864d-4473-8b3a-3cac430fad27">
             <element xsi:type="zenta:ZentaDiagramModel"
                      name="Constraints"
@@ -445,13 +438,13 @@ else 'no reason found'
             </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
-                  name=" DTO, Entity, Test Artifact, Field"
+                  name="Test Artifact"
                   id="c6cbca6a-8664-4b9c-9c6f-a4a60367da10">
             <child xsi:type="zenta:DiagramObject"
                    id="2c52e401-c51c-476a-a870-f7df5b238ad7"
                    fillColor="#729fcf"
                    zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-               <bounds x="444" y="84" width="-1" height="-1"/>
+               <bounds x="276" y="288" width="-1" height="-1"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="ecef8528-40f8-45ac-bedf-844054774972"
                                  source="2c52e401-c51c-476a-a870-f7df5b238ad7"
@@ -492,18 +485,6 @@ else 'no reason found'
                    targetConnections="3d7d9063-1e25-453d-820f-5c7b68cc4338"
                    zentaElement="type">
                <bounds x="624" y="408" width="-1" height="-1"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="de0c1bbd-d542-42ea-b963-6a5fd80dea3b"
-                   fillColor="#fcaf3e"
-                   elementShape="applicationShape"
-                   zentaElement="d3d4e39d-09a6-4a0f-a985-be922245d850">
-               <bounds x="264" y="84" width="-1" height="-1"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="17559dd5-a156-43d5-afa6-9132b756868d"
-                   zentaElement="field">
-               <bounds x="864" y="408" width="-1" height="-1"/>
             </child>
             <property key="Template"/>
          </element>
@@ -943,13 +924,6 @@ else ()
                    zentaElement="field">
                <bounds x="229" y="381" width="-1" height="-1"/>
             </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="7d47840e-418d-4b81-8cf1-fdcb7cd211ba"
-                   fillColor="#729fcf"
-                   elementShape="rectangleElementShape"
-                   zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-               <bounds x="58" y="444" width="-1" height="-1"/>
-            </child>
             <property key="Template"/>
          </element>
          <element xsi:type="zenta:BasicRelationship"
@@ -1386,15 +1360,14 @@ zenta:exactlyOne(
             <property key="font"/>
          </element>
       </folder>
-      <folder name="06. Callable, Parameter, Position"
-              id="54c16072-4bc8-4831-add6-e87fbf6c32b6">
+      <folder name="06. Callable" id="54c16072-4bc8-4831-add6-e87fbf6c32b6">
          <folder name="Constraints" id="827c3c4a-b378-4d0e-9d2c-86de9d5547ed">
             <element xsi:type="zenta:ZentaDiagramModel"
                      name="Constraints"
                      id="09236b01-801d-43b2-8c3e-700844016339"/>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
-                  name="Callable, Parameter, Position"
+                  name="Callable"
                   id="9222960f-e925-405b-bf01-1fa3c6fd0c0c"
                   connectionRouterType="1">
             <child xsi:type="zenta:DiagramObject"
@@ -1422,24 +1395,12 @@ zenta:exactlyOne(
                </sourceConnection>
             </child>
             <child xsi:type="zenta:DiagramObject"
-                   id="92a07cc7-37a8-4ecf-949c-583392e8bfd7"
-                   zentaElement="ebc74a50-0298-4c43-8830-d93ede22576b">
-               <bounds x="25" y="312" width="-1" height="-1"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
                    id="baa4499e-645b-4ec0-b8bf-b0f21d1bdb76"
                    targetConnections="21091146-58a4-4a88-826d-2a142f4114bd"
                    fillColor="#8ae234"
                    elementShape="deliverableShape"
                    zentaElement="ffbe5058-5089-4c5a-965d-e996df089f8e">
                <bounds x="828" y="312" width="-1" height="-1"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="349ddd7b-373c-413d-8a2c-489b8c1cb14e"
-                   fillColor="#ffffff"
-                   elementShape="emptyShape"
-                   zentaElement="type">
-               <bounds x="169" y="441" width="-1" height="-1"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="97fcf714-a73f-453d-bddc-0ed0a0f37aa0"
@@ -1615,10 +1576,9 @@ zenta:exactlyOne(zenta:neighbours($doc,$element,'contains,2'),'no Enum found')</
             <property key="font"/>
          </element>
       </folder>
-      <folder name="0. behaviour and design"
-              id="570e1688-613f-4876-a4f9-6986da683ff6">
+      <folder name="0. behaviour" id="570e1688-613f-4876-a4f9-6986da683ff6">
          <element xsi:type="zenta:ZentaDiagramModel"
-                  name="behaviour and design"
+                  name="behaviour"
                   id="7f3329d6-b49a-4cb8-b0e4-3a3c2f55e61d">
             <child xsi:type="zenta:DiagramObject"
                    id="a58ce651-ce36-4a74-8962-61f86585eecf"
@@ -1800,18 +1760,10 @@ In a model view it is a good practice to grey out elements which are outside of 
                                  relationship="1b194939-2048-46eb-b6b0-2ab83ed71d1f">
                   <bendpoint startX="186" startY="60" endX="186" endY="-96"/>
                </sourceConnection>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="83408a85-6176-40ba-b782-51afd073bb9c"
-                                 source="1ca0a9dc-7319-474e-aa20-9f7ef955b2a3"
-                                 target="9e28e460-f75d-47fc-87a7-3d09a042325a"
-                                 lineDecoration="DiamondSourceDecoration"
-                                 relationship="e8aaca73-c4e6-4698-a16d-7df79fbe62ab">
-                  <bendpoint startX="-57" startY="105" endX="-57" endY="-51"/>
-               </sourceConnection>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="9e28e460-f75d-47fc-87a7-3d09a042325a"
-                   targetConnections="f458bf28-60a3-4819-b9b7-8d67522bc00a 63738bb7-229e-4730-8131-4dab43b8960b 83408a85-6176-40ba-b782-51afd073bb9c"
+                   targetConnections="f458bf28-60a3-4819-b9b7-8d67522bc00a 63738bb7-229e-4730-8131-4dab43b8960b"
                    zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
                <bounds x="381" y="264" width="-1" height="-1"/>
             </child>
@@ -1829,19 +1781,6 @@ In a model view it is a good practice to grey out elements which are outside of 
                   ancestor="basicrelation"
                   source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
                   target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  name="contains"
-                  id="e8aaca73-c4e6-4698-a16d-7df79fbe62ab"
-                  ancestor="basicrelation"
-                  source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
-                  target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
-            <property key="textPosition" value="1"/>
-            <property key="lineDecoration" value="DiamondSourceDecoration"/>
-            <property key="lineColor"/>
-            <property key="fontColor"/>
-            <property key="lineWidth" value="1"/>
-            <property key="font"/>
-         </element>
       </folder>
    </folder>
    <folder name="Constants" id="72da7aad-cb5e-46f0-a0fa-503d86cd360c">
@@ -1995,19 +1934,6 @@ In a model view it is a good practice to grey out elements which are outside of 
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"
                    value="DiamondSourceDecoration SmallEndArrowDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="contains"
-               id="281ab2dd-336e-42f6-9b60-2897ee8806cc"
-               ancestor="basicrelation"
-               source="type"
-               target="field">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="DiamondSourceDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>

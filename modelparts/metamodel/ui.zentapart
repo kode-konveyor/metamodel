@@ -80,14 +80,6 @@
                               relationship="bf4763eb-8b85-44d9-90b9-f44135263e89"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
-                id="470025cd-2aee-4652-adc0-6e9d7244986f"
-                fontColor="#ffffff"
-                fillColor="#f57900"
-                elementShape="ellipseShape"
-                zentaElement="field">
-            <bounds x="918" y="244" width="-1" height="-1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
                 id="cca5f40f-1d29-4b7e-bc7d-d9c23c9bcff9"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="341" y="57" width="-1" height="-1"/>
@@ -97,11 +89,6 @@
                               target="f3ca1e82-023d-4613-b294-65339c002211"
                               lineDecoration="DashedLineDecoration"
                               relationship="aaea75b0-b480-4f6c-a884-1cb5547d2514"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="31173117-8864-4276-bb6a-2dd3b4375691"
-                zentaElement="type">
-            <bounds x="763" y="428" width="-1" height="-1"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="af70d275-939c-4922-aded-8b18bd08ed66"
