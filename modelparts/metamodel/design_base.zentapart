@@ -27,7 +27,7 @@
                <child xsi:type="zenta:DiagramObject"
                       id="7475d73a-71ff-422a-a9be-41fce2f121dd"
                       zentaElement="a589f660-0277-44c1-95b1-de1b5d11cf0b">
-                  <bounds x="400" y="264" width="-1" height="-1"/>
+                  <bounds x="400" y="264" height="97"/>
                   <sourceConnection xsi:type="zenta:Connection"
                                     id="96159aa5-0eaa-43a5-aeaa-acf6a5c1f189"
                                     source="7475d73a-71ff-422a-a9be-41fce2f121dd"
@@ -44,25 +44,31 @@ if ($element/@xsi:type='External type')
 then
   ()
 else
-	zenta:exactlyOne(
-		zenta:neighbours($doc,$element,'is a/is the type of,1'),
+  if(count((
+		  zenta:neighbours($doc,$element,'is a/is the type of,1'),
+		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;has,1'),
+		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;aggregates,1'),
+		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;is a/is the type of,1')
+        )) &gt; 0)
+   then
+        ()
+   else
 		'no type found'
-	) 
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
-                     name="is in a DTO, Entity or configuration Provider"
+                     name="is in a Configuration Provider"
                      id="a589f660-0277-44c1-95b1-de1b5d11cf0b"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
 if (
 	$element/@xsi:type='External type' or
 	count((
-		zenta:neighbours($doc,$element,'contains,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider'], 
-		zenta:neighbours($doc,$element,'aggregates,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Configuration provider'] 
+		zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Configuration provider'], 
+		zenta:neighbours($doc,$element,'aggregates,2')[@xsi:type='Configuration provider'] 
 	) &gt; 0 ))
 then ()
-else 'no DTO, Entity or configuration Provider found'
+else 'no Configuration Provider found'
 </documentation>
             </element>
          </folder>
@@ -277,7 +283,7 @@ zenta:exactlyOne(
                   id="d3d4e39d-09a6-4a0f-a985-be922245d850"
                   ancestor="thing">
             <documentation>A set of code contributing to a functionality of a product.
-Packages contain process steps, and the code units (Services, DTOs, and other packages) implementing those process steps.
+Packages contain process steps, and the code units (Services, Controllers, and other packages) implementing those process steps.
 </documentation>
             <property key="fillColor" value="#fcaf3e"/>
             <property key="elementShape" value="applicationShape"/>
@@ -349,7 +355,7 @@ Projects can contain packages.
                <child xsi:type="zenta:DiagramObject"
                       id="af051b60-765a-4bc8-91f6-6e6d12832120"
                       zentaElement="cd077259-127c-4997-82ae-f9808af60668">
-                  <bounds x="516" y="336" width="157"/>
+                  <bounds x="456" y="336" width="217" height="73"/>
                   <sourceConnection xsi:type="zenta:Connection"
                                     id="0cabdd5a-a3d7-493f-964f-6478eaa217aa"
                                     source="af051b60-765a-4bc8-91f6-6e6d12832120"
@@ -376,6 +382,32 @@ Projects can contain packages.
                                     target="24ca3a99-4fae-4352-9e97-a33d2df9088c"
                                     relationship="b7704924-d377-479e-a6d0-18a53679c1c2"/>
                </child>
+               <child xsi:type="zenta:DiagramObject"
+                      id="044c2055-e305-49cd-a177-404f4ded48c0"
+                      targetConnections="6ba2da0a-1ce0-4923-8967-e383d9e92c3d 6bd32ec8-4c4d-4c68-a015-ea87afa2d609"
+                      zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+                  <bounds x="119" y="120" width="-1" height="-1"/>
+               </child>
+               <child xsi:type="zenta:DiagramObject"
+                      id="6f8e0de6-8f48-4484-b9e8-94c22e5ae427"
+                      zentaElement="0c9d9b82-d935-42cc-a70e-1090814374f1">
+                  <bounds x="125" y="271" width="-1" height="-1"/>
+                  <sourceConnection xsi:type="zenta:Connection"
+                                    id="6ba2da0a-1ce0-4923-8967-e383d9e92c3d"
+                                    source="6f8e0de6-8f48-4484-b9e8-94c22e5ae427"
+                                    target="044c2055-e305-49cd-a177-404f4ded48c0"
+                                    relationship="e1c0d1c5-0c94-4d1d-a3af-0979a56c382f"/>
+               </child>
+               <child xsi:type="zenta:DiagramObject"
+                      id="ec4100af-533b-41a7-9f00-40e338b7da7d"
+                      zentaElement="3d7efa2f-a0c5-4568-b100-196bb6a671e3">
+                  <bounds x="328" y="208" width="-1" height="-1"/>
+                  <sourceConnection xsi:type="zenta:Connection"
+                                    id="6bd32ec8-4c4d-4c68-a015-ea87afa2d609"
+                                    source="ec4100af-533b-41a7-9f00-40e338b7da7d"
+                                    target="044c2055-e305-49cd-a177-404f4ded48c0"
+                                    relationship="2019bf48-1c8b-4d4b-bd1c-8e7a189b05f8"/>
+               </child>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="belongs to a TestData"
@@ -388,13 +420,13 @@ zenta:exactlyOne(
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
-                     name="documents the contents of the artifact or constructable based on the DTO"
+                     name="documents the contents of the artifact or constructable based on the Business Object"
                      id="189dbb19-8dd0-41be-b596-4e29c9210ff9"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
 if (
    string-length($element/documentation) &gt; 0 or
-   zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Parameter'] or
+   zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='Business Object' or @xsi:type='Parameter'] or
    zenta:neighbours($doc,$element,'is based on/is base of,1')[@xsi:type='Test Artifact'] 
 )
 then ()
@@ -418,8 +450,8 @@ zenta:neighboursRun1($doc,$element,'is based on/is base of,2;has an example as/i
                      id="6a695c67-0831-40a7-9efa-513c1524f3ca"
                      ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
                <documentation>1|
-zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2;is a/is the type of,1')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Type'  or@xsi:type='External type']| 
-zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Type'  or @xsi:type='External type']</documentation>
+zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2;is a/is the type of,1')[@xsi:type='Business Object' or @xsi:type='Type'  or@xsi:type='External type']| 
+zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2')[@xsi:type='Business Object' or @xsi:type='Type'  or @xsi:type='External type']</documentation>
                <property key="fillColor"/>
                <property key="elementShape"/>
                <property key="textAlignment" value="2"/>
@@ -427,21 +459,53 @@ zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2')[@xsi:
                <property key="font"/>
             </element>
             <element xsi:type="zenta:BasicObject"
-                     name="is an example of a DTO, Entity, Field or parameter"
+                     name="is an example of a Business Object Field or parameter"
                      id="cd077259-127c-4997-82ae-f9808af60668"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-if ( count(zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='DTO' or @xsi:type='Entity' or @xsi:type='Field' or @xsi:type='Parameter' or @xsi:type='Path parameter'])  &gt; 0)
+if ( count(zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='Business Object'  or @xsi:type='Field' or @xsi:type='Parameter' or @xsi:type='Path parameter'])  &gt; 0)
 then ()
 else 'no reason found'
 </documentation>
             </element>
+            <element xsi:type="zenta:BasicObject"
+                     name="Has a test artifact"
+                     id="0c9d9b82-d935-42cc-a70e-1090814374f1"
+                     ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+               <documentation>design|
+if ( count(zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Artifact'])  &gt; 0)
+then ()
+else 'no test artifact found'</documentation>
+            </element>
+            <element xsi:type="zenta:BasicRelationship"
+                     id="e1c0d1c5-0c94-4d1d-a3af-0979a56c382f"
+                     ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+                     source="0c9d9b82-d935-42cc-a70e-1090814374f1"
+                     target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
+            <element xsi:type="zenta:BasicObject"
+                     name="Has a type"
+                     id="3d7efa2f-a0c5-4568-b100-196bb6a671e3"
+                     ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+               <documentation>design|
+zenta:exactlyOne((
+        zenta:neighbours($doc,$element,'is a/is the type of,1'),
+        zenta:neighbours($doc,$element,'returns,2;is implemented by/implements,1;returns type/is returned by,1')
+    ),
+    'no type found')
+</documentation>
+            </element>
+            <element xsi:type="zenta:BasicRelationship"
+                     id="2019bf48-1c8b-4d4b-bd1c-8e7a189b05f8"
+                     ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+                     source="3d7efa2f-a0c5-4568-b100-196bb6a671e3"
+                     target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
                   name="Test Artifact"
                   id="c6cbca6a-8664-4b9c-9c6f-a4a60367da10">
             <child xsi:type="zenta:DiagramObject"
                    id="2c52e401-c51c-476a-a870-f7df5b238ad7"
+                   targetConnections="97a90bf5-5391-46b2-bcb6-9b093bffa71a"
                    fillColor="#729fcf"
                    zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
                <bounds x="276" y="288" width="-1" height="-1"/>
@@ -470,6 +534,15 @@ else 'no reason found'
                                  target="ff43d46d-7285-4f73-a70b-6328e9885d57"
                                  lineDecoration="BigArrowSourceDecoration"
                                  relationship="2c93b411-5f2f-4488-a34b-1b7d60e67b32"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="97a90bf5-5391-46b2-bcb6-9b093bffa71a"
+                                 lineColor="#d3d7cf"
+                                 source="e132c76c-3331-4eef-a304-5c195e1b5fc7"
+                                 target="2c52e401-c51c-476a-a870-f7df5b238ad7"
+                                 lineDecoration="DottedLineDecoration"
+                                 relationship="beaef484-0c2e-4a4f-8aaf-d036a9c8808f">
+                  <bendpoint startX="-163" startY="-52" endX="187" endY="-38"/>
+               </sourceConnection>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="7b7bcf4b-18a3-4b9e-8a7d-d45e8851deb9"
@@ -507,6 +580,19 @@ else 'no reason found'
             <property key="textPosition" value="1"/>
             <property key="lineDecoration"/>
             <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is a/is the type of"
+                  id="beaef484-0c2e-4a4f-8aaf-d036a9c8808f"
+                  ancestor="basicrelation"
+                  source="ffbe5058-5089-4c5a-965d-e996df089f8e"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor" value="#d3d7cf"/>
             <property key="fontColor"/>
             <property key="lineWidth" value="1"/>
             <property key="font"/>
@@ -650,7 +736,7 @@ Example:
                   id="9ec42823-7056-4e73-b1f4-600a066c8d88"
                   ancestor="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a">
             <documentation>Test data contains the test artifacts. This is the set of inputs and corresponding outputs which pins the contract of the services.
-Test artifacts are actual data in case of DTOs and Entities, and actual data or mocks describing the behaviour in case of legacy objects.
+Test artifacts are actual data in case of Business Objects, and actual data or mocks describing the behaviour in case of legacy objects.
 </documentation>
             <property key="fillColor" value="#8ae234"/>
             <property key="elementShape" value="meaningShape"/>
@@ -705,23 +791,23 @@ Test artifacts are actual data in case of DTOs and Entities, and actual data or 
                </child>
             </element>
             <element xsi:type="zenta:BasicObject"
-                     name="creates a DTO"
+                     name="creates a Delegate or external type"
                      id="dd7546bf-3454-416e-881c-ef56be07560a"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
 zenta:exactlyOne(
-    zenta:neighbours($doc,$element,'is created by/creates,2')[@xsi:type='DTO'], 
-    'no DTO created')
+    zenta:neighbours($doc,$element,'is created by/creates,2')[@xsi:type='External type'], 
+    'no External type created')
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
-                     name="results an Entity"
+                     name="results a Business Object"
                      id="6e700f59-386b-45f2-9c53-6ba14db35f62"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
 zenta:exactlyOne(
-	zenta:neighbours($doc,$element,'results,1')[@xsi:type='Entity'],
-	'no Entity found')</documentation>
+	zenta:neighbours($doc,$element,'results,1')[@xsi:type='Business Object'],
+	'no Business Object found')</documentation>
             </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
@@ -759,7 +845,7 @@ zenta:exactlyOne(
                   name="Factory"
                   id="c5f0762f-8e64-4005-afbc-dfd30b91926a"
                   ancestor="thing">
-            <documentation>A factory is a special kind of service solely responsible to create default instances of a DTO or Delegate.
+            <documentation>A factory is a special kind of service solely responsible to create default instances of a Delegate.
 
 </documentation>
             <property key="fillColor" value="#fcaf3e"/>
@@ -865,7 +951,7 @@ else
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
-                     name="accesses DTO using only CRUD or existing query operations"
+                     name="accesses entity using only CRUD or existing query operations"
                      id="0fbc4f57-24ed-4896-895e-71a1b8179290"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
@@ -1155,13 +1241,13 @@ zenta:neighboursRun1($doc,$element,'contains,2;published at,2')</documentation>
 </documentation>
             </element>
             <element xsi:type="zenta:BasicObject"
-                     name="uses exactly one DTO"
+                     name="uses exactly one Business Object"
                      id="a6bf1172-55e3-4c19-ab6f-55ef263beda4"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
 zenta:exactlyOne(
-	zenta:neighbours($doc,$element,'uses,1')[@xsi:type='DTO'],
-	'no DTO found') 
+	zenta:neighbours($doc,$element,'uses,1')[@xsi:type='Business Object'],
+	'no Business Object found') 
 </documentation>
             </element>
          </folder>
@@ -1210,7 +1296,7 @@ zenta:exactlyOne(
                   ancestor="type">
             <documentation>Delegates are to implement classes containing both state and business logic, and/or when the DI framework needs to be manually bootstrapped.
 
-The state is delegated to a DTO
+The state is delegated to a DTO (modeled by a Business Object)
 
 The business logic is delegated to Services
 

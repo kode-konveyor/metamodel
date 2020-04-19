@@ -410,12 +410,44 @@
                               source="e388280b-0230-4682-bf47-58d12ba5f76c"
                               target="3e329985-75a6-4ef3-9494-68b5659af04e"
                               relationship="3ccbcdef-1338-4710-87f5-fb73ebc3244a"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="6e29b404-cf66-4ce1-bb97-2ae4e1b28265"
+                              source="e388280b-0230-4682-bf47-58d12ba5f76c"
+                              target="47f5d8cb-e214-46e2-a85f-6e56e8ebe041"
+                              relationship="d2efb165-29ed-43a4-952f-02c77d22a586"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="9740437a-7348-46f2-a95e-0a36da1c43c8"
+                              source="e388280b-0230-4682-bf47-58d12ba5f76c"
+                              target="aae48d72-f63d-4ee6-8ea6-645d39bf5b56"
+                              relationship="b0a1a38d-ae34-4985-99d6-7a126f43e507"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="47f5d8cb-e214-46e2-a85f-6e56e8ebe041"
+                targetConnections="6e29b404-cf66-4ce1-bb97-2ae4e1b28265"
+                zentaElement="0c9d9b82-d935-42cc-a70e-1090814374f1">
+            <bounds x="316" y="67" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="aae48d72-f63d-4ee6-8ea6-645d39bf5b56"
+                targetConnections="9740437a-7348-46f2-a95e-0a36da1c43c8"
+                zentaElement="3d7efa2f-a0c5-4568-b100-196bb6a671e3">
+            <bounds x="139" y="92" width="-1" height="-1"/>
          </child>
       </element>
       <element xsi:type="zenta:BasicObject"
                name="dumy design objective"
                id="ea494738-f723-4478-8775-b15e325ffa72"
                ancestor="09407896-919e-4388-9e20-427696f9fbbc"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="d2efb165-29ed-43a4-952f-02c77d22a586"
+               ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
+               source="ea494738-f723-4478-8775-b15e325ffa72"
+               target="0c9d9b82-d935-42cc-a70e-1090814374f1"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="b0a1a38d-ae34-4985-99d6-7a126f43e507"
+               ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
+               source="ea494738-f723-4478-8775-b15e325ffa72"
+               target="3d7efa2f-a0c5-4568-b100-196bb6a671e3"/>
    </folder>
    <property key="modelDependency" value="metamodel/design_base"/>
 </folder>

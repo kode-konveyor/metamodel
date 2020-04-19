@@ -660,7 +660,7 @@ It does not have implementation, but tightly coupled with a type which has.
                id="83af8497-bfef-451b-9bc6-f00d58c8df6a"
                ancestor="behaviour">
          <documentation>A behaviour which is carried out by either a role or a service.
-Process steps can contain other process steps, behaviours, Services and DTOs
+Process steps can contain other process steps, behaviours, Services or Controllers
 
 </documentation>
          <property key="fillColor" value="#729fcf"/>
