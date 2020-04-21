@@ -384,7 +384,7 @@ Projects can contain packages.
                </child>
                <child xsi:type="zenta:DiagramObject"
                       id="044c2055-e305-49cd-a177-404f4ded48c0"
-                      targetConnections="6ba2da0a-1ce0-4923-8967-e383d9e92c3d 6bd32ec8-4c4d-4c68-a015-ea87afa2d609"
+                      targetConnections="6ba2da0a-1ce0-4923-8967-e383d9e92c3d 6bd32ec8-4c4d-4c68-a015-ea87afa2d609 a475d623-4b9b-42f5-b50a-458e727fc04a"
                       zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
                   <bounds x="119" y="120" width="-1" height="-1"/>
                </child>
@@ -407,6 +407,16 @@ Projects can contain packages.
                                     source="ec4100af-533b-41a7-9f00-40e338b7da7d"
                                     target="044c2055-e305-49cd-a177-404f4ded48c0"
                                     relationship="2019bf48-1c8b-4d4b-bd1c-8e7a189b05f8"/>
+               </child>
+               <child xsi:type="zenta:DiagramObject"
+                      id="1b669339-1299-4525-bde4-e2e3253428ab"
+                      zentaElement="05f5c95a-6781-4d95-a90b-9e9aede97472">
+                  <bounds x="250" y="411" width="-1" height="-1"/>
+                  <sourceConnection xsi:type="zenta:Connection"
+                                    id="a475d623-4b9b-42f5-b50a-458e727fc04a"
+                                    source="1b669339-1299-4525-bde4-e2e3253428ab"
+                                    target="044c2055-e305-49cd-a177-404f4ded48c0"
+                                    relationship="c4d4660f-0952-458d-9b20-d40a2eda7073"/>
                </child>
             </element>
             <element xsi:type="zenta:BasicObject"
@@ -487,10 +497,8 @@ else 'no test artifact found'</documentation>
                      id="3d7efa2f-a0c5-4568-b100-196bb6a671e3"
                      ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
                <documentation>design|
-zenta:exactlyOne((
-        zenta:neighbours($doc,$element,'is a/is the type of,1'),
-        zenta:neighbours($doc,$element,'returns,2;is implemented by/implements,1;returns type/is returned by,1')
-    ),
+zenta:exactlyOne(
+    zenta:neighbours($doc,$element,'is a/is the type of,1'),
     'no type found')
 </documentation>
             </element>
@@ -498,6 +506,37 @@ zenta:exactlyOne((
                      id="2019bf48-1c8b-4d4b-bd1c-8e7a189b05f8"
                      ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                      source="3d7efa2f-a0c5-4568-b100-196bb6a671e3"
+                     target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
+            <element xsi:type="zenta:BasicObject"
+                     name="is a/is the type of"
+                     id="05f5c95a-6781-4d95-a90b-9e9aede97472"
+                     ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
+               <documentation>1|
+zentatools:let(
+	'direct',
+	'zenta:neighboursRun1($doc,$element,''is a/is the type of,1'')',
+	'if(count($direct)&gt;0)
+		then
+			$direct
+		else if(count((zenta:neighboursRun1($doc,$element,''has,1''),zenta:neighboursRun1($doc,$element,''aggregates,1''))) &gt; 0)
+			then
+				$element
+			else zentatools:let(
+				''implicitlytyped'',
+				''zenta:neighboursRun1($doc,$element,''''returns,2;is implemented by/implements,1;returns type/is returned by,1'''')'',
+				''if(count($implicitlytyped) &gt; 0)
+					then
+						$implicitlytyped
+					else
+						()''
+             )'
+)
+</documentation>
+            </element>
+            <element xsi:type="zenta:BasicRelationship"
+                     id="c4d4660f-0952-458d-9b20-d40a2eda7073"
+                     ancestor="64981f96-11a3-4631-b4f8-dd38993cec60"
+                     source="05f5c95a-6781-4d95-a90b-9e9aede97472"
                      target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
@@ -514,6 +553,13 @@ zenta:exactlyOne((
                                  source="2c52e401-c51c-476a-a870-f7df5b238ad7"
                                  target="e132c76c-3331-4eef-a304-5c195e1b5fc7"
                                  relationship="d422da0f-0a3c-4bee-a969-37260d27808d"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="df17a2d2-71b4-4985-bf6d-d5f20939f281"
+                                 lineColor="#d3d7cf"
+                                 source="2c52e401-c51c-476a-a870-f7df5b238ad7"
+                                 target="96b1517b-ee27-43bc-8968-6fc1cb22bf7a"
+                                 lineDecoration="DottedLineDecoration"
+                                 relationship="553f01d7-aebb-45b2-98cf-566b7868c606"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="e132c76c-3331-4eef-a304-5c195e1b5fc7"
@@ -559,6 +605,13 @@ zenta:exactlyOne((
                    zentaElement="type">
                <bounds x="624" y="408" width="-1" height="-1"/>
             </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="96b1517b-ee27-43bc-8968-6fc1cb22bf7a"
+                   targetConnections="df17a2d2-71b4-4985-bf6d-d5f20939f281"
+                   fillColor="#729fcf"
+                   zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+               <bounds x="270" y="405" width="-1" height="-1"/>
+            </child>
             <property key="Template"/>
          </element>
          <element xsi:type="zenta:BasicObject"
@@ -589,6 +642,19 @@ zenta:exactlyOne((
                   id="beaef484-0c2e-4a4f-8aaf-d036a9c8808f"
                   ancestor="basicrelation"
                   source="ffbe5058-5089-4c5a-965d-e996df089f8e"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor" value="#d3d7cf"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is a/is the type of"
+                  id="553f01d7-aebb-45b2-98cf-566b7868c606"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
                   target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
             <property key="textPosition" value="1"/>
             <property key="lineDecoration" value="DottedLineDecoration"/>
@@ -838,6 +904,19 @@ zenta:exactlyOne(
                                  source="4244fdf2-c698-4c43-9d25-8473dbfcf9f0"
                                  target="acb6ea24-0e43-4e57-a9fc-b7e70fa59f6d"
                                  relationship="94c0a421-ffbe-458d-8f6f-46a669b10549"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="0a70e405-7847-407e-a4f2-7acb03570a24"
+                                 source="4244fdf2-c698-4c43-9d25-8473dbfcf9f0"
+                                 target="d8d493ca-aa7f-4117-b4f1-edcbf030c881"
+                                 lineDecoration="SmallEndArrowDecoration"
+                                 relationship="5771c318-786f-45df-bf1c-04137f464a22"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="d8d493ca-aa7f-4117-b4f1-edcbf030c881"
+                   targetConnections="0a70e405-7847-407e-a4f2-7acb03570a24"
+                   fillColor="#729fcf"
+                   zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+               <bounds x="556" y="52" width="-1" height="-1"/>
             </child>
             <property key="Template"/>
          </element>
