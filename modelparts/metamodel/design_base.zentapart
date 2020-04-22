@@ -148,7 +148,8 @@ else 'no Configuration Provider found'
          <folder name="Constraints" id="8fd916c6-e2b0-4d7a-a496-b545e0e2c1ae">
             <element xsi:type="zenta:ZentaDiagramModel"
                      name="Constraints"
-                     id="890df861-3edb-4578-ac94-1975693de261">
+                     id="890df861-3edb-4578-ac94-1975693de261"
+                     connectionRouterType="1">
                <child xsi:type="zenta:DiagramObject"
                       id="0fb2138a-b102-4ad3-a802-d2ed6d25f0d4"
                       zentaElement="3d43468e-1396-443a-bbf9-806f13e1332d">
@@ -216,6 +217,46 @@ zenta:exactlyOne(
                <property key="fontColor"/>
                <property key="font"/>
                <property key="documentationMarkup" value="verbatim"/>
+            </element>
+            <element xsi:type="zenta:BasicObject"
+                     name="There is business analysis in the model"
+                     id="d827c3f9-b093-4ea3-bc9d-fc4a0d18d5ee"
+                     ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+               <documentation>analysis|
+zenta:exactlyOne(
+	$doc//folder[@name='1. Analysis'],
+	'no analysis folder'
+)</documentation>
+            </element>
+            <element xsi:type="zenta:BasicObject"
+                     name="The analysis contains policies and objectives"
+                     id="5863abc4-16f0-4980-a6c2-1fcb47ddc4c6"
+                     ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+               <documentation>analysis|
+zenta:exactlyOne(
+	$doc//folder[@name='1. Analysis']/folder[@name='1. Policies and Objectives'],
+	'no policies and objectives folder'
+)</documentation>
+            </element>
+            <element xsi:type="zenta:BasicObject"
+                     name="Policies are inside the policies folder"
+                     id="2bd3b516-7b67-46c2-95f7-6a6d3a8e0c90"
+                     ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+               <documentation>analysis|
+if($element/ancestor::folder[@name='1. Policies and Objectives'])
+	then ()
+	else $element
+</documentation>
+            </element>
+            <element xsi:type="zenta:BasicObject"
+                     name="Objectives are inside the folder for their most important policy"
+                     id="d5b2fb34-85b5-4ffa-8ecf-44e278d5d279"
+                     ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+               <documentation>analysis|
+	if($element/@xsi:type != 'Objective' or $element/ancestor::folder/@name=zenta:neighbours($doc,$element,'drives,2')/@name)
+	then ()
+	else $element
+</documentation>
             </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
@@ -287,21 +328,6 @@ Packages contain process steps, and the code units (Services, Controllers, and o
 </documentation>
             <property key="fillColor" value="#fcaf3e"/>
             <property key="elementShape" value="applicationShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Project"
-                  id="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
-                  ancestor="thing">
-            <documentation>A set of code and documentation which is bundled together as a shippable unit useable for its intended audience (also known as product),
-or the complete procedure of software development from requirement gathering to testing and maintenance, carried out according to the execution methodologies, in a specified period of time to deliver the product.
-
-Projects can contain packages.
-</documentation>
-            <property key="fillColor" value="#fcaf3e"/>
-            <property key="elementShape" value="deliverableShape"/>
             <property key="textAlignment" value="2"/>
             <property key="fontColor"/>
             <property key="font"/>
