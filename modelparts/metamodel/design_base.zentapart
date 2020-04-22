@@ -218,46 +218,6 @@ zenta:exactlyOne(
                <property key="font"/>
                <property key="documentationMarkup" value="verbatim"/>
             </element>
-            <element xsi:type="zenta:BasicObject"
-                     name="There is business analysis in the model"
-                     id="d827c3f9-b093-4ea3-bc9d-fc4a0d18d5ee"
-                     ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-               <documentation>analysis|
-zenta:exactlyOne(
-	$doc//folder[@name='1. Analysis'],
-	'no analysis folder'
-)</documentation>
-            </element>
-            <element xsi:type="zenta:BasicObject"
-                     name="The analysis contains policies and objectives"
-                     id="5863abc4-16f0-4980-a6c2-1fcb47ddc4c6"
-                     ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-               <documentation>analysis|
-zenta:exactlyOne(
-	$doc//folder[@name='1. Analysis']/folder[@name='1. Policies and Objectives'],
-	'no policies and objectives folder'
-)</documentation>
-            </element>
-            <element xsi:type="zenta:BasicObject"
-                     name="Policies are inside the policies folder"
-                     id="2bd3b516-7b67-46c2-95f7-6a6d3a8e0c90"
-                     ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-               <documentation>analysis|
-if($element/ancestor::folder[@name='1. Policies and Objectives'])
-	then ()
-	else $element
-</documentation>
-            </element>
-            <element xsi:type="zenta:BasicObject"
-                     name="Objectives are inside the folder for their most important policy"
-                     id="d5b2fb34-85b5-4ffa-8ecf-44e278d5d279"
-                     ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-               <documentation>analysis|
-	if($element/@xsi:type != 'Objective' or $element/ancestor::folder/@name=zenta:neighbours($doc,$element,'drives,2')/@name)
-	then ()
-	else $element
-</documentation>
-            </element>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
                   name="Project, Package"
