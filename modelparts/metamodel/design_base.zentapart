@@ -1049,6 +1049,7 @@ else ()
                <bounds x="108" y="132" width="-1" height="-1"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="dd1faad6-565c-4b82-a50c-5d78327d5730"
+                                 lineColor="#d3d7cf"
                                  source="b917fcb3-a337-4538-ab58-730c29dfee76"
                                  target="df09e44e-a845-43cf-955b-3d3c9a50e30b"
                                  lineDecoration="DottedLineDecoration SmallStartArrowDecoration"
@@ -1059,6 +1060,12 @@ else ()
                                  target="2c978316-14f3-4a07-8246-2c2ddb37d1c4"
                                  lineDecoration="DottedLineDecoration SmallStartArrowDecoration"
                                  relationship="7ce9c659-2492-49ef-8a66-6b21139496d6"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="0d8ad31d-1066-4192-a216-20416a2618b7"
+                                 source="b917fcb3-a337-4538-ab58-730c29dfee76"
+                                 target="09a27015-06d7-4d06-81d6-77fa42759823"
+                                 lineDecoration="DottedLineDecoration SmallStartArrowDecoration"
+                                 relationship="d315f87b-88fa-406a-a777-c14fac0ff133"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="df09e44e-a845-43cf-955b-3d3c9a50e30b"
@@ -1075,6 +1082,12 @@ else ()
                    zentaElement="field">
                <bounds x="229" y="381" width="-1" height="-1"/>
             </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="09a27015-06d7-4d06-81d6-77fa42759823"
+                   targetConnections="0d8ad31d-1066-4192-a216-20416a2618b7"
+                   zentaElement="callable">
+               <bounds x="553" y="155" width="-1" height="-1"/>
+            </child>
             <property key="Template"/>
          </element>
          <element xsi:type="zenta:BasicRelationship"
@@ -1083,6 +1096,20 @@ else ()
                   ancestor="basicrelation"
                   source="service"
                   target="field">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration"
+                      value="DottedLineDecoration SmallStartArrowDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="uses"
+                  id="d315f87b-88fa-406a-a777-c14fac0ff133"
+                  ancestor="basicrelation"
+                  source="service"
+                  target="callable">
             <property key="textPosition" value="1"/>
             <property key="lineDecoration"
                       value="DottedLineDecoration SmallStartArrowDecoration"/>
