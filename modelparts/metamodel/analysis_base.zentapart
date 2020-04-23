@@ -990,12 +990,13 @@ else ()</documentation>
                   name="Complex business objects have their own folder"
                   id="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>if(matches($element/@name,'^[A-Z]'))
+            <documentation>analysis|
+if(matches($element/@name,'^[A-Z]'))
 then
 	if ($element/../@name=$element/@name)
-	return ()
+	then ()
 	else concat($element/@name,' is not in its folder')
-else if(zenta:neighbours($doc,$element,'contains,2')/@name = $element/../@name)
+else if(matches(zenta:neighbours($doc,$element,'contains,2')/@name,$element/../@name))
 	then ()
 	else concat($element/@name,' is not in folder for ', zenta:neighbours($doc,$element,'contains,2')/@name)
 </documentation>
