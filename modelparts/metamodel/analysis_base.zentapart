@@ -727,7 +727,7 @@ zenta:exactlyOne(
             <child xsi:type="zenta:DiagramObject"
                    id="f8ab56d5-b9db-41c4-a16d-fecadcd06022"
                    zentaElement="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf">
-               <bounds x="1476" y="681" width="188" height="88"/>
+               <bounds x="1476" y="681" width="205" height="140"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="38d1afcf-b8c8-486b-b873-f7c868161b3d"
                                  source="f8ab56d5-b9db-41c4-a16d-fecadcd06022"
@@ -987,19 +987,31 @@ else ()</documentation>
                   source="24e9ea84-415c-4aaf-aa92-b45eb7c33c8c"
                   target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
          <element xsi:type="zenta:BasicObject"
-                  name="Complex business objects have their own folder"
+                  name="Complex business objects have their own folder, and their fields are also there. Simple objects without parent go to others folder."
                   id="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
 if(matches($element/@name,'^[A-Z]'))
 then
-	if ($element/../@name=$element/@name)
+	if (matches($element/../@name,$element/@name))
 	then ()
 	else concat($element/@name,' is not in its folder')
-else if(matches(zenta:neighbours($doc,$element,'contains,2')/@name,$element/../@name))
-	then ()
-	else concat($element/@name,' is not in folder for ', zenta:neighbours($doc,$element,'contains,2')/@name)
-</documentation>
+else
+	zentatools:let(
+			'parent',
+			'(
+				zenta:neighbours($doc,$element,''has,2''),
+				zenta:neighbours($doc,$element,''aggregates,2'')
+			)',
+			'if($parent)
+				then if(matches($element/../@name,$parent/@name))
+					then ()
+					else concat($element/@name,'' is not in folder for '', string-join($parent/@name,'',''))
+				else if($element/../@name=''others'')
+					then ()
+					else concat($element/@name, ''is not in others folder'')
+			'
+	)	</documentation>
          </element>
          <element xsi:type="zenta:BasicRelationship"
                   id="07d5cbcd-8425-407c-9228-79b487a87b35"
