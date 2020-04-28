@@ -186,7 +186,7 @@ else 'no objective found'
                   id="6fc0b9df-cfd4-4c18-b3c2-4f5ae70da11f"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-if(count(zenta:neighbours($doc,$element,'drives,1')[@xsi:type='Objective'])=0)
+if(count(zenta:neighbours($doc,$element,'drives,1')[@xsi:type='Objective' or @xsi:type='External Objective'])=0)
 then 'no Objective found'
 else ()
 </documentation>
