@@ -8,7 +8,7 @@
                id="5b79cc2d-260f-42b3-8e7d-63272b432135">
          <child xsi:type="zenta:DiagramObject"
                 id="f3ca1e82-023d-4613-b294-65339c002211"
-                targetConnections="50c77a00-987e-48d4-bf08-93840a64a2a6 753eca65-da88-4ab2-80a6-5e122a42c2bf 19d3250d-1d7f-4186-8072-fd15e2daf86e"
+                targetConnections="50c77a00-987e-48d4-bf08-93840a64a2a6 753eca65-da88-4ab2-80a6-5e122a42c2bf"
                 fillColor="#ffffff"
                 elementShape="emptyShape"
                 zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
@@ -42,29 +42,16 @@
          <child xsi:type="zenta:DiagramObject"
                 id="9b97f34e-e909-4896-8c78-a32e9929a1b3"
                 fontColor="#ffffff"
-                targetConnections="404a3dad-4eec-467c-b908-8bcd9256681d 1faacf0e-8337-4f41-963d-80a268835a1d 1cce3d80-0563-469c-afbe-2a88b88d3bdc 75cd8777-b359-494b-95a1-4a3cb7b16dbd"
+                targetConnections="404a3dad-4eec-467c-b908-8bcd9256681d 1faacf0e-8337-4f41-963d-80a268835a1d 1cce3d80-0563-469c-afbe-2a88b88d3bdc"
                 fillColor="#f57900"
                 elementShape="roundedRectangleShape"
                 zentaElement="44d3e3c7-5434-4b39-ad2f-b6157804f83b">
             <bounds x="680" y="178" width="-1" height="-1"/>
             <sourceConnection xsi:type="zenta:Connection"
-                              id="cdb7ff00-9dce-424e-82f6-8493026a3061"
+                              id="035bef51-3e68-4c63-9494-74e946b5798d"
                               source="9b97f34e-e909-4896-8c78-a32e9929a1b3"
-                              target="d79ec7c9-a106-4a80-909a-061ea71c2630"
-                              lineDecoration="DottedLineDecoration BigArrowSourceDecoration"
-                              relationship="bea242b8-05dc-4ac0-9b89-641682edbda5"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="2ce6092e-952c-4fb2-a47b-7b7de2cef5d2"
-                              source="9b97f34e-e909-4896-8c78-a32e9929a1b3"
-                              target="31173117-8864-4276-bb6a-2dd3b4375691"
-                              lineDecoration="BigArrowSourceDecoration DottedLineDecoration"
-                              relationship="07d7b5ab-c6ab-48c2-b631-44e3ce85fbce"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="d79ec7c9-a106-4a80-909a-061ea71c2630"
-                targetConnections="cdb7ff00-9dce-424e-82f6-8493026a3061"
-                zentaElement="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2">
-            <bounds x="632" y="332" width="-1" height="-1"/>
+                              target="af70d275-939c-4922-aded-8b18bd08ed66"
+                              relationship="e542d690-c5ef-48c6-a6e1-1a25c9cc6b2f"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="a75197eb-75c2-4c1e-a0ed-9dd011621d16"
@@ -93,41 +80,6 @@
                               relationship="bf4763eb-8b85-44d9-90b9-f44135263e89"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
-                id="7917d3f0-5efa-4977-b9a7-cd88a9496fd6"
-                fontColor="#000000"
-                fillColor="#fcaf3e"
-                elementShape="ellipseShape"
-                zentaElement="7a959e3d-31b1-491f-82dc-57838b15ce59">
-            <bounds x="809" y="322" width="-1" height="-1"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="75cd8777-b359-494b-95a1-4a3cb7b16dbd"
-                              source="7917d3f0-5efa-4977-b9a7-cd88a9496fd6"
-                              target="9b97f34e-e909-4896-8c78-a32e9929a1b3"
-                              lineDecoration="SmallStartArrowDecoration"
-                              relationship="86b0f4eb-8551-4bc5-bc10-517b2962d9f9"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="315b2684-9a4e-4b19-90bf-af27ef9481fe"
-                              source="7917d3f0-5efa-4977-b9a7-cd88a9496fd6"
-                              target="470025cd-2aee-4652-adc0-6e9d7244986f"
-                              lineDecoration="SmallStartArrowDecoration"
-                              relationship="09cce0fd-e2ee-45d6-9435-b49f2c648131"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="19d3250d-1d7f-4186-8072-fd15e2daf86e"
-                              source="7917d3f0-5efa-4977-b9a7-cd88a9496fd6"
-                              target="f3ca1e82-023d-4613-b294-65339c002211"
-                              lineDecoration="DottedLineDecoration"
-                              relationship="7672657c-3a15-44c3-bd3e-cbe8a79fbb1a"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="470025cd-2aee-4652-adc0-6e9d7244986f"
-                fontColor="#ffffff"
-                targetConnections="315b2684-9a4e-4b19-90bf-af27ef9481fe"
-                fillColor="#f57900"
-                elementShape="ellipseShape"
-                zentaElement="field">
-            <bounds x="918" y="244" width="-1" height="-1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
                 id="cca5f40f-1d29-4b7e-bc7d-d9c23c9bcff9"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="341" y="57" width="-1" height="-1"/>
@@ -139,10 +91,10 @@
                               relationship="aaea75b0-b480-4f6c-a884-1cb5547d2514"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
-                id="31173117-8864-4276-bb6a-2dd3b4375691"
-                targetConnections="2ce6092e-952c-4fb2-a47b-7b7de2cef5d2"
-                zentaElement="type">
-            <bounds x="763" y="428" width="-1" height="-1"/>
+                id="af70d275-939c-4922-aded-8b18bd08ed66"
+                targetConnections="035bef51-3e68-4c63-9494-74e946b5798d"
+                zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <bounds x="540" y="492" width="-1" height="-1"/>
          </child>
          <property key="Template" value="true"/>
       </element>
@@ -193,20 +145,6 @@
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="is a/used by"
-               id="bea242b8-05dc-4ac0-9b89-641682edbda5"
-               ancestor="basicrelation"
-               source="44d3e3c7-5434-4b39-ad2f-b6157804f83b"
-               target="f6bb89a3-1ea8-4647-972b-c2308c9ab6e2">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="DottedLineDecoration BigArrowSourceDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="sets/is set by"
                id="59eb6d0a-e58e-49bd-9c9e-8fe872845784"
                ancestor="basicrelation"
@@ -225,32 +163,6 @@
                ancestor="basicrelation"
                source="service"
                target="44d3e3c7-5434-4b39-ad2f-b6157804f83b">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="SmallStartArrowDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="uses/is used by"
-               id="86b0f4eb-8551-4bc5-bc10-517b2962d9f9"
-               ancestor="basicrelation"
-               source="7a959e3d-31b1-491f-82dc-57838b15ce59"
-               target="44d3e3c7-5434-4b39-ad2f-b6157804f83b">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="SmallStartArrowDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="uses/is used by"
-               id="09cce0fd-e2ee-45d6-9435-b49f2c648131"
-               ancestor="basicrelation"
-               source="7a959e3d-31b1-491f-82dc-57838b15ce59"
-               target="field">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration" value="SmallStartArrowDecoration"/>
          <property key="lineColor"/>
@@ -300,27 +212,13 @@
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="uses"
-               id="7672657c-3a15-44c3-bd3e-cbe8a79fbb1a"
-               ancestor="basicrelation"
-               source="7a959e3d-31b1-491f-82dc-57838b15ce59"
-               target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="DottedLineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="is a/used by"
-               id="07d7b5ab-c6ab-48c2-b631-44e3ce85fbce"
+               id="e542d690-c5ef-48c6-a6e1-1a25c9cc6b2f"
                ancestor="basicrelation"
                source="44d3e3c7-5434-4b39-ad2f-b6157804f83b"
-               target="type">
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
          <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="BigArrowSourceDecoration DottedLineDecoration"/>
+         <property key="lineDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
@@ -450,7 +348,7 @@
       </element>
       <element xsi:type="zenta:BasicRelationship"
                id="c8ee108e-92b4-4c4b-b0da-77c81eb56db7"
-               ancestor="07d7b5ab-c6ab-48c2-b631-44e3ce85fbce"
+               ancestor="basicrelation"
                source="5ded5d25-6c00-4b84-bcbf-70f7d4891b60"
                target="b0b9e3d0-389f-4989-941a-e97aeb77bdbc"/>
    </folder>
