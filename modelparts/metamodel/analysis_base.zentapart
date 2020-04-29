@@ -501,7 +501,10 @@ Projects can contain packages.
                id="e2b9113d-6051-4b65-9b68-f859bc0aff33"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>analysis|
-	if($element/@xsi:type != 'Behaviour' or $element/../@id=$doc//element[@id=zenta:neighbours($doc,$element,'determines,2')/@id]/../@id)
+	if(
+		$element/@xsi:type != 'Behaviour' or 
+		count(zenta:neighbours($doc,$element,'determines,2')) = 0 or
+		$element/../@id=$doc//element[@id=zenta:neighbours($doc,$element,'determines,2')/@id]/../@id)
 	then ()
 	else concat(
 		string-join($element/../@name,','),
@@ -532,7 +535,10 @@ else 'no behaviour or process step found'
                id="d5b2fb34-85b5-4ffa-8ecf-44e278d5d279"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>analysis|
-	if($element/@xsi:type != 'Objective' or $element/ancestor::folder/@name=zenta:neighbours($doc,$element,'drives,2')/@name)
+	if(
+		$element/@xsi:type != 'Objective' or
+		count(zenta:neighbours($doc,$element,'drives,2')[@xsi:type='Policy']) = 0 or
+		$element/ancestor::folder/@name=zenta:neighbours($doc,$element,'drives,2')/@name)
 	then ()
 	else $element
 </documentation>
@@ -785,6 +791,7 @@ zenta:exactlyOne(
 if(
   count(
     (
+       zenta:neighbours($doc,$element,'is done by/does,2')|
        zenta:neighbours($doc,$element,'clicks when/does not input from,1')|
        zenta:neighbours($doc,$element,'provides data data in/inputs from,1')
      )[@xsi:type='Process Step']
@@ -918,9 +925,11 @@ if($element/ancestor::folder[@name='2. Business Objects'])
                   id="c91c92da-78ea-47b2-9db8-10fc10e0274f"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
-if(matches($element/@name,'^[a-z ]*$'))
+if ($element/@template='true')
+then ()
+else if(matches($element/@name,'^[a-z ]*$'))
 then
-	if (
+	if (  
 		count(zenta:neighbours($doc,$element,'has,1')) &gt; 0 or
 		count(zenta:neighbours($doc,$element,'aggregates,1')) &gt; 0
 	)
@@ -1031,9 +1040,9 @@ else
 				zenta:neighbours($doc,$element,''aggregates,2'')
 			)',
 			'if($parent)
-				then if(matches($element/../@name,$parent/@name))
+				then if(contains(string-join($parent/@name,''''),$element/../@name))
 					then ()
-					else concat($element/@name,'' is not in folder for '', string-join($parent/@name,'',''))
+					else concat($element/@name,'' is not in folder for any of'', string-join($parent/@name,'',''))
 				else if($element/../@name=''others'')
 					then ()
 					else concat($element/@name, ''is not in others folder'')
