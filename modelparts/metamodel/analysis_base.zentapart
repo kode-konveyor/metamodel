@@ -1040,9 +1040,11 @@ else
 				zenta:neighbours($doc,$element,''aggregates,2'')
 			)',
 			'if($parent)
-				then if(contains(string-join($parent/@name,''''),$element/../@name))
+				then if(
+						(for $p in $parent return contains($element/../@name,$parent/@name))=true()
+					)
 					then ()
-					else concat($element/@name,'' is not in folder for any of'', string-join($parent/@name,'',''))
+					else concat($element/@name,''('',$element/../@name,'') is not in folder for any of '', string-join($parent/@name,'',''))
 				else if($element/../@name=''others'')
 					then ()
 					else concat($element/@name, ''is not in others folder'')
