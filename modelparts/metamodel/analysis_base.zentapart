@@ -1041,7 +1041,7 @@ else
 			)',
 			'if($parent)
 				then if(
-						(for $p in $parent return contains($element/../@name,$parent/@name))=true()
+						(for $p in $parent return contains($element/../@name,$p/@name))=true()
 					)
 					then ()
 					else concat($element/@name,''('',$element/../@name,'') is not in folder for any of '', string-join($parent/@name,'',''))
