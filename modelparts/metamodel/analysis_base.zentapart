@@ -1176,10 +1176,16 @@ else
                               relationship="c8c86cdc-63e3-434a-b04a-0c950867855b">
                <bendpoint startX="-34" startY="77" endX="-34" endY="-96"/>
             </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="88f08470-3f47-4a9b-94ba-9c2af51bf1bc"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="80ebd5a4-7258-4c3e-8417-587d09168aa2"
+                              lineDecoration="DiamondSourceDecoration"
+                              relationship="ef682279-bf45-4ddd-bf50-3b1a79f16837"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="80ebd5a4-7258-4c3e-8417-587d09168aa2"
-                targetConnections="d841641a-8efb-4613-b725-bf33253ad93d"
+                targetConnections="d841641a-8efb-4613-b725-bf33253ad93d 88f08470-3f47-4a9b-94ba-9c2af51bf1bc"
                 fillColor="#729fcf"
                 zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
             <bounds x="525" y="420" width="-1" height="-1"/>
@@ -1313,6 +1319,20 @@ A role is assigned to human(s).
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"
                    value="SmallEndArrowDecoration SparseDashedLineDecoration DottedLineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="lists"
+               id="ef682279-bf45-4ddd-bf50-3b1a79f16837"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <documentation>one object have more objects, with the order of contained element persisted. It is represented by a list.</documentation>
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="DiamondSourceDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
@@ -1486,6 +1506,7 @@ A role is assigned to human(s).
                ancestor="basicrelation"
                source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
                target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <documentation>one object have more objects, with no order. It is represented by a set.</documentation>
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"
                    value="DiamondSourceDecoration SmallEndArrowDecoration"/>
