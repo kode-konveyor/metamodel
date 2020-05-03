@@ -66,16 +66,6 @@
                               source="56d35e2b-0db5-410e-8db1-da2c71ccaf0c"
                               target="c38aadf8-78c1-416b-ae6d-177ecb201e7a"
                               relationship="978f959d-78b6-4ede-9251-29bf7e0c4d16"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="0b43f4a3-4845-4056-b0c5-1fb32e741e77"
-                              source="56d35e2b-0db5-410e-8db1-da2c71ccaf0c"
-                              target="64a4c126-627f-45d2-aa59-c0ea4c77e870"
-                              relationship="5efb2502-08d3-4212-aad2-1583d2da4e8f"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="177b128e-ee3b-4fbc-b2d0-4b1a0fd115fe"
-                              source="56d35e2b-0db5-410e-8db1-da2c71ccaf0c"
-                              target="6319eed5-32fc-49d7-b8d8-9785949124aa"
-                              relationship="ea6cfe6c-1188-4267-b8d6-e099c473c4cf"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="afe26d97-7df5-4809-a948-e36bb3beffd1"
@@ -291,18 +281,6 @@
                 zentaElement="24e9ea84-415c-4aaf-aa92-b45eb7c33c8c">
             <bounds x="878" y="82" width="-1" height="-1"/>
          </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="64a4c126-627f-45d2-aa59-c0ea4c77e870"
-                targetConnections="0b43f4a3-4845-4056-b0c5-1fb32e741e77"
-                zentaElement="2b021f89-41bb-48e3-bd50-142e94718a58">
-            <bounds x="268" y="58" width="-1" height="-1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="6319eed5-32fc-49d7-b8d8-9785949124aa"
-                targetConnections="177b128e-ee3b-4fbc-b2d0-4b1a0fd115fe"
-                zentaElement="e4ba625d-1164-4f6b-bad8-90f99f31386c">
-            <bounds x="102" y="120" width="-1" height="-1"/>
-         </child>
       </element>
       <element xsi:type="zenta:BasicRelationship"
                id="40961c63-4eae-4d4b-bdd8-a0ba8fe60c68"
@@ -432,16 +410,6 @@
                ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
                source="96bf31ef-da6e-43a9-9b47-9a2bbf8d1147"
                target="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="5efb2502-08d3-4212-aad2-1583d2da4e8f"
-               ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
-               source="fc8b0d3b-23b2-463f-a053-5dc66229e488"
-               target="2b021f89-41bb-48e3-bd50-142e94718a58"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="ea6cfe6c-1188-4267-b8d6-e099c473c4cf"
-               ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
-               source="fc8b0d3b-23b2-463f-a053-5dc66229e488"
-               target="e4ba625d-1164-4f6b-bad8-90f99f31386c"/>
    </folder>
    <property key="modelDependency" value="metamodel/analysis_base"/>
 </folder>

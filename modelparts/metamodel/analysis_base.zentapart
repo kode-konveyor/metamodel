@@ -618,7 +618,7 @@ zenta:exactlyOne(
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="3b5725d8-27a2-4e72-afe1-33ad3681af09"
-                   targetConnections="8b64a2be-d793-4de6-813e-8ee4fbcfcb31 f08d0a65-f106-4516-ace0-4ec70af1aa88 db431501-aa35-4bd5-a27f-288dc149d065 5363a191-8ab1-4095-a810-6a38358c57b6 d5a1e233-6178-443d-8a70-b1ae9d56b48a c0644fc5-d441-4ef0-a68f-fbfbb78c37dc 485397d2-d43f-4cbb-9c4a-4090ef2c050e a0630b28-df92-46ff-aa18-1d2fea810bb0 506dab19-71ee-4245-96de-7111cf394a33 66e4ef30-2bdf-415a-bd19-93c2ed1cb3e8 19da2835-bdf5-4345-9d43-c7719d0f686a"
+                   targetConnections="8b64a2be-d793-4de6-813e-8ee4fbcfcb31 f08d0a65-f106-4516-ace0-4ec70af1aa88 db431501-aa35-4bd5-a27f-288dc149d065 5363a191-8ab1-4095-a810-6a38358c57b6 d5a1e233-6178-443d-8a70-b1ae9d56b48a c0644fc5-d441-4ef0-a68f-fbfbb78c37dc 485397d2-d43f-4cbb-9c4a-4090ef2c050e 19da2835-bdf5-4345-9d43-c7719d0f686a a0630b28-df92-46ff-aa18-1d2fea810bb0 506dab19-71ee-4245-96de-7111cf394a33"
                    zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
                <bounds x="120" y="312" width="-1" height="-1"/>
             </child>
@@ -764,16 +764,6 @@ zenta:exactlyOne(
                                  target="b8c9a898-d01b-4dd9-9b43-c0f8be91e9c3"
                                  relationship="07d5cbcd-8425-407c-9228-79b487a87b35"/>
             </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="0b060ed6-9bd3-491e-ab5f-59b269900e88"
-                   zentaElement="2b021f89-41bb-48e3-bd50-142e94718a58">
-               <bounds x="407" y="112" width="290"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="66e4ef30-2bdf-415a-bd19-93c2ed1cb3e8"
-                                 source="0b060ed6-9bd3-491e-ab5f-59b269900e88"
-                                 target="3b5725d8-27a2-4e72-afe1-33ad3681af09"
-                                 relationship="31424544-9b90-443f-b543-47fe71d09d87"/>
-            </child>
          </element>
          <element xsi:type="zenta:BasicObject"
                   name="is done by a user or implemented by a Callable"
@@ -895,16 +885,19 @@ else 'no behaviour or substep found'
                   id="539c6e8a-27b1-46a5-8906-bf1c4225e905"
                   ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
             <documentation>2|
-for $parentproc in zenta:neighboursRun1($doc,$element,'contains,2')[@xsi:type='Process Step']
-	return
-		if(zenta:neighboursRun1($doc,$parentproc,'implements,2')[@xsi:type='Milestone'])
-		then zenta:neighboursRun1($doc,$parentproc,'implements,2')[@xsi:type='Milestone']
-		else
-for $grantparent in zenta:neighboursRun1($doc,$parentproc,'contains,2')[@xsi:type='Process Step']
-	return
-		if(zenta:neighboursRun1($doc,$grantparent,'implements,2')[@xsi:type='Milestone'])
-		then zenta:neighboursRun1($doc,$grantparent,'implements,2')[@xsi:type='Milestone']
-		else ()
+zentatools:let(
+	'milestone',
+	'zenta:neighboursRun1($doc,$element,''contains,2;implements,2'')[@xsi:type=''Milestone'']',
+	'if(count($milestone)&gt;0)
+		then $milestone
+		else zentatools:let(
+			''secondParent'',
+			''zenta:neighboursRun1($doc,$element,''''contains,2;contains,2;implements,2'''')[@xsi:type=''''Milestone'''']'',
+			''if(count($secondParent)&gt;0)
+				then $secondParent
+				else zenta:neighboursRun1($doc,$element,''''contains,2;contains,2;contains,2;implements,2'''')[@xsi:type=''''Milestone'''']''
+		)'
+)
 </documentation>
          </element>
          <element xsi:type="zenta:BasicRelationship"
@@ -964,7 +957,7 @@ else concat('business object with strange name: ', $element/@name)
             <documentation>analysis|
 if($element/ancestor::folder[@name='3. Process'])
 	then ()
-	else string-join($element/ancestor::folder/@name,'/')
+	else $element
 </documentation>
          </element>
          <element xsi:type="zenta:BasicRelationship"
@@ -1063,21 +1056,6 @@ else
                   ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                   source="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf"
                   target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
-         <element xsi:type="zenta:BasicObject"
-                  name="belongs to a milestone"
-                  id="2b021f89-41bb-48e3-bd50-142e94718a58"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>analysis|
-if (count(zenta:neighbours($doc,$element,'implements,2')[@xsi:type='Milestone'])=0)
-then 'no milestone'
-else ()
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="31424544-9b90-443f-b543-47fe71d09d87"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="2b021f89-41bb-48e3-bd50-142e94718a58"
-                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Process Step, Business Object, Role"
@@ -1342,49 +1320,11 @@ A role is assigned to human(s).
       </element>
    </folder>
    <folder name="3. Milestone" id="59754629-93c7-4f4d-bc97-79f579465409">
-      <folder name="Milestone constraints" id="5319f617-0902-4b43-9dfd-3307d2102326">
-         <element xsi:type="zenta:ZentaDiagramModel"
-                  name="Milestone constraints"
-                  id="2ac31129-7855-43c3-8d6a-fc62042d8473">
-            <child xsi:type="zenta:DiagramObject"
-                   id="becbd9de-8622-495d-af97-656b5c9b43f4"
-                   targetConnections="e4809d45-b55e-489d-acb0-f42af873fdd8"
-                   zentaElement="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
-               <bounds x="200" y="124" width="-1" height="-1"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="ddc2a637-67e5-4c81-88e2-c93bde7007e3"
-                   zentaElement="e4ba625d-1164-4f6b-bad8-90f99f31386c">
-               <bounds x="330" y="246" width="235"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="e4809d45-b55e-489d-acb0-f42af873fdd8"
-                                 source="ddc2a637-67e5-4c81-88e2-c93bde7007e3"
-                                 target="becbd9de-8622-495d-af97-656b5c9b43f4"
-                                 relationship="3a2f9540-f053-42c1-a5d9-908d11086948"/>
-            </child>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Future milestone is deprecated"
-                  id="e4ba625d-1164-4f6b-bad8-90f99f31386c"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>analysis|
-if($element/@name='Future')
-then ('future constraint is deprecated')
-else ()
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="3a2f9540-f053-42c1-a5d9-908d11086948"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="e4ba625d-1164-4f6b-bad8-90f99f31386c"
-                  target="36a15a23-a4a0-40b5-901b-310f3a1df0c7"/>
-      </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Milestone"
                id="15154133-7738-44db-8e84-1ad03b1c9589">
          <child xsi:type="zenta:DiagramObject"
                 id="f77767ac-7418-4c6e-ade3-e312452f5200"
-                targetConnections="f1357a6a-1357-46cf-94cd-efb1d5e19a1b"
                 fillColor="#e9b96e"
                 elementShape="nodeShape"
                 zentaElement="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
@@ -1414,44 +1354,22 @@ else ()
                 zentaElement="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
             <bounds x="209" y="324" width="-1" height="-1"/>
          </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="a96cd021-5197-4970-9918-de9a2846d2f1"
-                fillColor="#fcaf3e"
-                elementShape="deliverableShape"
-                zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
-            <bounds x="126" y="67" width="-1" height="-1"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="f1357a6a-1357-46cf-94cd-efb1d5e19a1b"
-                              source="a96cd021-5197-4970-9918-de9a2846d2f1"
-                              target="f77767ac-7418-4c6e-ade3-e312452f5200"
-                              lineDecoration="DiamondSourceDecoration"
-                              relationship="f062189d-e43e-4f83-98a8-9f013b94756c"/>
-         </child>
          <property key="Template"/>
       </element>
       <element xsi:type="zenta:BasicObject"
                name="Milestone"
                id="36a15a23-a4a0-40b5-901b-310f3a1df0c7"
-               ancestor="thing">
+               ancestor="basicobject">
          <property key="fillColor" value="#8f5902"/>
          <property key="elementShape" value="nodeShape"/>
          <property key="textAlignment" value="2"/>
          <property key="fontColor" value="#ffffff"/>
          <property key="font"/>
       </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="contains"
-               id="f062189d-e43e-4f83-98a8-9f013b94756c"
-               ancestor="basicrelation"
-               source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
-               target="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="DiamondSourceDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Future"
+               id="f3657ecd-b9b7-432b-bb41-04b1859dc51f"
+               ancestor="36a15a23-a4a0-40b5-901b-310f3a1df0c7"/>
    </folder>
    <folder name="00. Analysis relations" id="23dea549-9ef0-4512-9430-5d6fe364dbde">
       <property key="display" value="hidden"/>
