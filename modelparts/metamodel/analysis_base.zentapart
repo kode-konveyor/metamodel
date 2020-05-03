@@ -1290,6 +1290,9 @@ A role is assigned to human(s).
          <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
+	<element xsi:type="zenta:BasicRelationship" name="inputs as DTO" id="9c7060f6-02ef-407c-b30b-d7ac51079ddd" ancestor="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1" source="83af8497-bfef-451b-9bc6-f00d58c8df6a" target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+	<element xsi:type="zenta:BasicRelationship" name="returns as DTO" id="2c9f3d81-cea1-4d36-b0de-5b42d0e3f293" ancestor="fcd1200e-2225-4b4f-914e-0846e429cf1a" source="83af8497-bfef-451b-9bc6-f00d58c8df6a" target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+	<element xsi:type="zenta:BasicRelationship" name="validated by" id="6de4df6c-5b7c-4bf0-80b5-42a5fa3d4868" ancestor="basicrelation" source="267f4d47-e1e6-4af4-8677-3cf65fc8db86" target="behaviour">
       <element xsi:type="zenta:BasicRelationship"
                name="inputs"
                id="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
