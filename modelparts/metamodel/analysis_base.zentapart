@@ -816,7 +816,7 @@ if (
 then
   if(count(zenta:neighbours($doc,$element,'modifies,1')[@xsi:type='Business Object']) &gt; 0)
   then ()
-  else ('following process step but no business object modified', zenta:neighbours($doc,$element,'preceeds,1')[@xsi:type='Process Step'])
+  else ('following process step but no business object modified', string-join(zenta:neighbours($doc,$element,'preceeds,1')[@xsi:type='Process Step']/concat(@name,': ',@id),','))
 else
   ()
 </documentation>
@@ -837,7 +837,10 @@ if (
 then
   if(count(zenta:neighbours($doc,$element,'reads,1')[@xsi:type='Business Object']) &gt; 0)
   then ()
-  else ('previous process step but no business object read', zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step'])
+  else (
+	'previous process step but no business object read: ', 
+	string-join(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']/concat(@name,',',@id))
+	)
 else
   ()</documentation>
          </element>
@@ -885,20 +888,19 @@ else 'no behaviour or substep found'
                   id="539c6e8a-27b1-46a5-8906-bf1c4225e905"
                   ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
             <documentation>2|
-zentatools:let(
-	'milestone',
-	'zenta:neighboursRun1($doc,$element,''contains,2;implements,2'')[@xsi:type=''Milestone'']',
-	'if(count($milestone)&gt;0)
-		then $milestone
-		else zentatools:let(
-			''secondParent'',
-			''zenta:neighboursRun1($doc,$element,''''contains,2;contains,2;implements,2'''')[@xsi:type=''''Milestone'''']'',
-			''if(count($secondParent)&gt;0)
-				then $secondParent
-				else zenta:neighboursRun1($doc,$element,''''contains,2;contains,2;contains,2;implements,2'''')[@xsi:type=''''Milestone'''']''
-		)'
-)
-</documentation>
+if(not(zenta:neighboursRun1($doc,$element,'implements,2')[@xsi:type='Milestone']))
+then 
+	zentatools:let(
+		'parentmilestones',
+		'for $parent in zenta:neighboursRun1($doc,$element,''contains,2'')[@xsi:type=''Process Step'']
+			return zenta:neighboursRun1($doc,$parent,''implements,2'')[@xsi:type=''Milestone'']',
+		'if($parentmilestones)
+		then $parentmilestones
+		else 
+			for $grandparent in zenta:neighboursRun1($doc,$element,''contains,2;contains,2'')[@xsi:type=''Process Step'']
+				return zenta:neighboursRun1($doc,$grandparent,''implements,2'')[@xsi:type=''Milestone'']'
+	)
+else ()</documentation>
          </element>
          <element xsi:type="zenta:BasicRelationship"
                   id="dd1680ef-99be-48e7-9a3e-77d3cfefc91f"
@@ -957,7 +959,7 @@ else concat('business object with strange name: ', $element/@name)
             <documentation>analysis|
 if($element/ancestor::folder[@name='3. Process'])
 	then ()
-	else $element
+	else string-join($element/ancestor::folder/@name,' , ')
 </documentation>
          </element>
          <element xsi:type="zenta:BasicRelationship"
@@ -1291,6 +1293,61 @@ A role is assigned to human(s).
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
+               name="inputs as DTO"
+               id="9c7060f6-02ef-407c-b30b-d7ac51079ddd"
+               ancestor="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
+               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"
+                   value="SparseDashedLineDecoration SmallStartArrowDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="returns as DTO"
+               id="2c9f3d81-cea1-4d36-b0de-5b42d0e3f293"
+               ancestor="fcd1200e-2225-4b4f-914e-0846e429cf1a"
+               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"
+                   value="SparseDashedLineDecoration SmallEndArrowDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="validated by"
+               id="6de4df6c-5b7c-4bf0-80b5-42a5fa3d4868"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="behaviour">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="DotTargetDecoration DotSourceDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="represented by"
+               id="8561c513-fa8c-4087-87fb-a4d6a460a00d"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="behaviour">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"
+                   value=" SmallEndArrowDecoration DottedLineDecoration DashedLineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
                name="inputs"
                id="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
                ancestor="basicrelation"
@@ -1360,16 +1417,12 @@ A role is assigned to human(s).
                name="Milestone"
                id="36a15a23-a4a0-40b5-901b-310f3a1df0c7"
                ancestor="basicobject">
-         <property key="fillColor" value="#8f5902"/>
+         <property key="fillColor" value="#e9b96e"/>
          <property key="elementShape" value="nodeShape"/>
          <property key="textAlignment" value="2"/>
-         <property key="fontColor" value="#ffffff"/>
+         <property key="fontColor"/>
          <property key="font"/>
       </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Future"
-               id="f3657ecd-b9b7-432b-bb41-04b1859dc51f"
-               ancestor="36a15a23-a4a0-40b5-901b-310f3a1df0c7"/>
    </folder>
    <folder name="00. Analysis relations" id="23dea549-9ef0-4512-9430-5d6fe364dbde">
       <property key="display" value="hidden"/>
