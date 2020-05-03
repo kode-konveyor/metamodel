@@ -477,19 +477,6 @@ Projects can contain packages.
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="contains"
-               id="f062189d-e43e-4f83-98a8-9f013b94756c"
-               ancestor="basicrelation"
-               source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
-               target="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="DiamondSourceDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                id="7c804bbd-91b4-407e-bde5-561996077352"
                ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                source="2bd3b516-7b67-46c2-95f7-6a6d3a8e0c90"
@@ -1430,16 +1417,12 @@ A role is assigned to human(s).
                name="Milestone"
                id="36a15a23-a4a0-40b5-901b-310f3a1df0c7"
                ancestor="basicobject">
-         <property key="fillColor" value="#8f5902"/>
+         <property key="fillColor" value="#e9b96e"/>
          <property key="elementShape" value="nodeShape"/>
          <property key="textAlignment" value="2"/>
-         <property key="fontColor" value="#ffffff"/>
+         <property key="fontColor"/>
          <property key="font"/>
       </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Future"
-               id="f3657ecd-b9b7-432b-bb41-04b1859dc51f"
-               ancestor="36a15a23-a4a0-40b5-901b-310f3a1df0c7"/>
    </folder>
    <folder name="00. Analysis relations" id="23dea549-9ef0-4512-9430-5d6fe364dbde">
       <property key="display" value="hidden"/>

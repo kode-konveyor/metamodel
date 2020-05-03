@@ -255,6 +255,11 @@ zenta:exactlyOne(
                                  target="32d370d2-e422-4318-a5aa-11e9ce30d49c"
                                  lineDecoration="DiamondSourceDecoration"
                                  relationship="eea967e3-428c-466e-8688-bd375885e288"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="8218432e-ea2d-465c-b61a-0239a2a6cf3d"
+                                 source="29972c20-4991-48ba-941a-3d10f1b5b1b6"
+                                 target="b169c048-8d48-47ef-bf80-0e6210275618"
+                                 relationship="f062189d-e43e-4f83-98a8-9f013b94756c"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="c31cc027-6a84-49b6-b3e2-9adca3d6afa1"
@@ -277,6 +282,12 @@ zenta:exactlyOne(
                    zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
                <bounds x="65" y="354" width="-1" height="-1"/>
             </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="b169c048-8d48-47ef-bf80-0e6210275618"
+                   targetConnections="8218432e-ea2d-465c-b61a-0239a2a6cf3d"
+                   zentaElement="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
+               <bounds x="245" y="181" width="-1" height="-1"/>
+            </child>
             <property key="Template"/>
          </element>
          <element xsi:type="zenta:BasicObject"
@@ -298,6 +309,19 @@ Packages contain process steps, and the code units (Services, Controllers, and o
                   ancestor="basicrelation"
                   source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
                   target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DiamondSourceDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="contains"
+                  id="f062189d-e43e-4f83-98a8-9f013b94756c"
+                  ancestor="basicrelation"
+                  source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
+                  target="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
             <property key="textPosition" value="1"/>
             <property key="lineDecoration" value="DiamondSourceDecoration"/>
             <property key="lineColor"/>
