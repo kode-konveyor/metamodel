@@ -793,7 +793,7 @@ if(
     (
        zenta:neighbours($doc,$element,'is done by/does,2')|
        zenta:neighbours($doc,$element,'clicks when/does not input from,1')|
-       zenta:neighbours($doc,$element,'provides data data in/inputs from,1')
+       zenta:neighbours($doc,$element,'provides data in/inputs from,1')
      )[@xsi:type='Process Step']
   ) &gt;0)
 then ()
@@ -835,7 +835,14 @@ if (
     count(zenta:neighbours($doc,$element,'contains,1')) = 0
 )
 then
-  if(count(zenta:neighbours($doc,$element,'reads,1')[@xsi:type='Business Object']) &gt; 0)
+  if(count(
+	(
+		zenta:neighbours($doc,$element,'reads,1'),
+		zenta:neighbours($doc,$element,'inputs,1'),
+		zenta:neighbours($doc,$element,'inputs as DTO,1'),
+		zenta:neighbours($doc,$element,'inputs id of,1')
+	)[@xsi:type='Business Object']
+    ) &gt; 0)
   then ()
   else (
 	'previous process step but no business object read: ', 
@@ -845,13 +852,14 @@ else
   ()</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="have at least one behaviour or substep"
+                  name="have description, behaviour or substep"
                   id="24c89149-0040-426d-9104-ffcf2cd3aedf"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>analysis|
 if (count(
 	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Behaviour' or @xsi:type='Process Step']
-   ) &gt; 0)
+   ) &gt; 0 or
+   $element/documentation/text())
 then ()
 else 'no behaviour or substep found'
 </documentation>
@@ -979,7 +987,9 @@ else
 	then 
 		if($doc//element[@id=zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Process Step']/@id]/../@name = $element/../@name)
 		then ()
-		else (
+		else if(zenta:neighbours($doc,$element,'contains,1') and $element/../@name = $element/@name)
+			then ()
+			else (
 			concat(
 				'not in story folder: ',$element/@name,
 				'(',$element/../@name,') should be in:',
@@ -1169,6 +1179,11 @@ else
                               target="881ba185-2147-4fff-851a-9573fd9ddd81"
                               lineDecoration="SmallStartArrowDecoration SparseDashedLineDecoration"
                               relationship="5d914d47-54f3-47a0-a4c6-81a9f73c9fa2"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="cb4c55eb-5fe6-47cf-9e4c-c82c11ef89f1"
+                              source="bf2f9836-0ddf-43d1-956d-b1060936bf89"
+                              target="65b8770d-c764-4068-a432-9754d6ef6bdc"
+                              relationship="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="a43083d7-d4ba-48d3-8e17-940af9147fe0"
@@ -1177,9 +1192,15 @@ else
                 elementShape="roundedRectangleShape"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="528" y="78" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="0c50819d-4582-4224-b60b-5562495887de"
+                              source="a43083d7-d4ba-48d3-8e17-940af9147fe0"
+                              target="65b8770d-c764-4068-a432-9754d6ef6bdc"
+                              relationship="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="65b8770d-c764-4068-a432-9754d6ef6bdc"
+                targetConnections="cb4c55eb-5fe6-47cf-9e4c-c82c11ef89f1 0c50819d-4582-4224-b60b-5562495887de"
                 fillColor="#729fcf"
                 elementShape="serviceShape"
                 zentaElement="c2f93d99-8bbd-4742-9f73-15937394173d">
@@ -1468,6 +1489,19 @@ A role is assigned to human(s).
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"
                    value="SmallStartArrowDecoration SparseDashedLineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is done by/does"
+               id="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"
+               ancestor="basicrelation"
+               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+               target="c2f93d99-8bbd-4742-9f73-15937394173d">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
@@ -1903,19 +1937,6 @@ In java and python Services should not have static methods except when the needs
          <property key="elementShape" value="ellipseShape"/>
          <property key="textAlignment" value="2"/>
          <property key="fontColor"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="is done by/does"
-               id="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"
-               ancestor="basicrelation"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="c2f93d99-8bbd-4742-9f73-15937394173d">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
    </folder>
