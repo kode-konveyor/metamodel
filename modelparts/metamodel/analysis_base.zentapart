@@ -431,6 +431,20 @@ This is the same as Requirement in Common Criteria.
          <property key="fontColor"/>
          <property key="font"/>
       </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="depends on"
+               id="b6f9974a-1393-4848-a6f1-febcd90c0de1"
+               ancestor="basicrelation"
+               source="behaviour"
+               target="behaviour">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"
+                   value="BigArrowSourceDecoration DottedLineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
       <element xsi:type="zenta:BasicObject"
                name="Objective"
                id="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"
