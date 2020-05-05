@@ -936,7 +936,8 @@ else ()</documentation>
             <documentation>analysis|
 if($element/ancestor::folder[@name='2. Business Objects'])
 	then ()
-	else $element
+	else string-join($element/ancestor::folder/concat(@name,':',@id),'/')
+
 </documentation>
          </element>
          <element xsi:type="zenta:BasicRelationship"
@@ -1242,7 +1243,7 @@ else
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="881ba185-2147-4fff-851a-9573fd9ddd81"
-                targetConnections="c568d719-9a4c-470b-a35b-bca58f8a8ca3 ea4877b8-2e4b-495b-94e0-6c29780ad797 14763427-16bb-4515-9cb5-475731e77a04 3003de27-7c85-4f66-834e-0fffaa918e20 e61485b7-a970-45bc-bb65-74c622241d35 ddaa2c53-59af-4a55-9898-e38ee60b05de 4c73f645-24af-4e4a-9235-0188facc6a13 8e1ffffb-ded9-47e7-a86e-3033099ae784 93cbf583-7917-491e-b87b-ac9f94be7679 eae85d68-7796-4e74-9fce-04a23dcf3ecf"
+                targetConnections="c568d719-9a4c-470b-a35b-bca58f8a8ca3 ea4877b8-2e4b-495b-94e0-6c29780ad797 3003de27-7c85-4f66-834e-0fffaa918e20 e61485b7-a970-45bc-bb65-74c622241d35 ddaa2c53-59af-4a55-9898-e38ee60b05de 4c73f645-24af-4e4a-9235-0188facc6a13 8e1ffffb-ded9-47e7-a86e-3033099ae784 93cbf583-7917-491e-b87b-ac9f94be7679 eae85d68-7796-4e74-9fce-04a23dcf3ecf"
                 fillColor="#729fcf"
                 zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
             <bounds x="525" y="247" width="-1" height="-1"/>
@@ -1263,20 +1264,50 @@ else
                               source="881ba185-2147-4fff-851a-9573fd9ddd81"
                               target="a43a1aa3-2d2c-42f9-adee-9c123e94ad73"
                               relationship="8561c513-fa8c-4087-87fb-a4d6a460a00d"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="d5e045ee-e8b0-4888-bc91-935ba6b146d0"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="80ebd5a4-7258-4c3e-8417-587d09168aa2"
+                              lineDecoration=" DiamondSourceDecoration DotTargetDecoration"
+                              relationship="34522347-9adf-4a30-b8da-8f21fd4a02c8"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="1809ff68-917d-46e3-974d-494c8d1642a2"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="80ebd5a4-7258-4c3e-8417-587d09168aa2"
+                              relationship="8aa62b50-ef2a-41ed-99b8-4d853a945d86">
+               <bendpoint startX="47" startY="79" endX="47" endY="-94"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="8629da64-0c81-4d8c-a491-5d52d115bbb6"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="80ebd5a4-7258-4c3e-8417-587d09168aa2"
+                              lineDecoration="SparseDashedLineDecoration SmallEndArrowDecoration"
+                              relationship="cb0bf7bb-cbdb-4f7c-acea-9353a7cfe1b8">
+               <bendpoint startX="96" startY="80" endX="96" endY="-93"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="0f2cdf5f-3c49-4492-90ff-5b2f22c6b2a5"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="80ebd5a4-7258-4c3e-8417-587d09168aa2"
+                              lineDecoration="SparseDashedLineDecoration SmallEndArrowDecoration DiamondSourceDecoration"
+                              relationship="beb54302-3c50-4aa2-a759-7d70a97f8c97">
+               <bendpoint startX="154" startY="103" endX="154" endY="-70"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="249bf0e1-de22-485b-8322-5fadbf65b680"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="80ebd5a4-7258-4c3e-8417-587d09168aa2"
+                              lineDecoration="SparseDashedLineDecoration DiamondSourceDecoration"
+                              relationship="9b0b78a0-3fe8-4ec3-83fb-ac176b29ab18">
+               <bendpoint startX="188" startY="81" endX="188" endY="-92"/>
+            </sourceConnection>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="80ebd5a4-7258-4c3e-8417-587d09168aa2"
-                targetConnections="d841641a-8efb-4613-b725-bf33253ad93d"
+                targetConnections="d841641a-8efb-4613-b725-bf33253ad93d d5e045ee-e8b0-4888-bc91-935ba6b146d0 1809ff68-917d-46e3-974d-494c8d1642a2 8629da64-0c81-4d8c-a491-5d52d115bbb6 0f2cdf5f-3c49-4492-90ff-5b2f22c6b2a5 249bf0e1-de22-485b-8322-5fadbf65b680"
                 fillColor="#729fcf"
                 zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
             <bounds x="525" y="420" width="-1" height="-1"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="14763427-16bb-4515-9cb5-475731e77a04"
-                              source="80ebd5a4-7258-4c3e-8417-587d09168aa2"
-                              target="881ba185-2147-4fff-851a-9573fd9ddd81"
-                              relationship="8aa62b50-ef2a-41ed-99b8-4d853a945d86">
-               <bendpoint startX="50" startY="-90" endX="50" endY="83"/>
-            </sourceConnection>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="a43a1aa3-2d2c-42f9-adee-9c123e94ad73"
@@ -1516,6 +1547,62 @@ A role is assigned to human(s).
                target="c2f93d99-8bbd-4742-9f73-15937394173d">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="lists"
+               id="34522347-9adf-4a30-b8da-8f21fd4a02c8"
+               ancestor="c8c86cdc-63e3-434a-b04a-0c950867855b"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"
+                   value=" DiamondSourceDecoration DotTargetDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="references"
+               id="cb0bf7bb-cbdb-4f7c-acea-9353a7cfe1b8"
+               ancestor="8aa62b50-ef2a-41ed-99b8-4d853a945d86"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"
+                   value="SparseDashedLineDecoration SmallEndArrowDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="aggregates references to"
+               id="beb54302-3c50-4aa2-a759-7d70a97f8c97"
+               ancestor="c8c86cdc-63e3-434a-b04a-0c950867855b"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"
+                   value="SparseDashedLineDecoration SmallEndArrowDecoration DiamondSourceDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="lists references to"
+               id="9b0b78a0-3fe8-4ec3-83fb-ac176b29ab18"
+               ancestor="34522347-9adf-4a30-b8da-8f21fd4a02c8"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"
+                   value="SparseDashedLineDecoration DiamondSourceDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
