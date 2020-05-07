@@ -834,7 +834,13 @@ if (
      count(zenta:neighbours($doc,$element,'contains,1')) = 0
 )
 then
-  if(count(zenta:neighbours($doc,$element,'modifies,1')[@xsi:type='Business Object']) &gt; 0)
+  if(count((
+		zenta:neighbours($doc,$element,'modifies,1'),
+		zenta:neighbours($doc,$element,'returns,1'),
+		zenta:neighbours($doc,$element,'returns as DTO,1'),
+		zenta:neighbours($doc,$element,'returns set,1'),
+		zenta:neighbours($doc,$element,'returns set as DTO,1')
+	)[@xsi:type='Business Object']) &gt; 0)
   then ()
   else ('following process step but no business object modified', string-join(zenta:neighbours($doc,$element,'preceeds,1')[@xsi:type='Process Step']/concat(@name,': ',@id),','))
 else
@@ -961,15 +967,27 @@ then ()
 else if(matches($element/@name,'^[a-z ]*$'))
 then
 	if (  
-		count(zenta:neighbours($doc,$element,'has,1')) &gt; 0 or
-		count(zenta:neighbours($doc,$element,'aggregates,1')) &gt; 0
+		count((
+			zenta:neighbours($doc,$element,'has,1'),
+			zenta:neighbours($doc,$element,'aggregates,1'),
+			zenta:neighbours($doc,$element,'lists,1'),
+			zenta:neighbours($doc,$element,'references,1'),
+			zenta:neighbours($doc,$element,'lists references to,1'),
+			zenta:neighbours($doc,$element,'aggregates references to,1')
+		)) &gt; 0 
 	)
 	then concat('complex business object with simple name: ', $element/@name)
 	else ()
 else if(matches($element/@name,'^[A-Z]'))
 	then if (
-				count(zenta:neighbours($doc,$element,'has,1')) = 0 and
-				count(zenta:neighbours($doc,$element,'aggregates,1')) = 0
+				count((
+			zenta:neighbours($doc,$element,'has,1'),
+			zenta:neighbours($doc,$element,'aggregates,1'),
+			zenta:neighbours($doc,$element,'lists,1'),
+			zenta:neighbours($doc,$element,'references,1'),
+			zenta:neighbours($doc,$element,'lists references to,1'),
+			zenta:neighbours($doc,$element,'aggregates references to,1')
+				)) = 0 
 			)
 			then concat('simple business object with complex name: ', $element/@name)
 			else ()
@@ -1096,7 +1114,7 @@ else
                connectionRouterType="1">
          <child xsi:type="zenta:DiagramObject"
                 id="bf2f9836-0ddf-43d1-956d-b1060936bf89"
-                targetConnections="bf69701d-3d61-4072-84bf-b0e7c69758f1 614e46a7-8cf3-4e65-9e92-c8d370e3095b 8ce73b64-6b89-44ce-b16d-0660c90208c8"
+                targetConnections="bf69701d-3d61-4072-84bf-b0e7c69758f1 614e46a7-8cf3-4e65-9e92-c8d370e3095b 8ce73b64-6b89-44ce-b16d-0660c90208c8 7a6e7bea-720f-4e22-bf98-d3b781bb5019 1e6a32bf-4981-4fec-969b-42a6f0008aff f789cb94-db4f-4f9d-80dd-208e5fe7cfe8 6e1886ea-58a9-4708-9243-e705d5793951 a85a7fcd-e9ed-4037-8b30-24937ac219db d6fe575f-dfef-4bd2-8db0-b21211981918 fe28621d-b0c1-4306-90be-8a96b6dd04dd"
                 fillColor="#729fcf"
                 elementShape="roundedRectangleShape"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
@@ -1129,7 +1147,7 @@ else
                               target="881ba185-2147-4fff-851a-9573fd9ddd81"
                               lineDecoration="SmallEndArrowDecoration"
                               relationship="64fbbfdf-420d-4756-821b-54fab6e7a8d2">
-               <bendpoint startX="177" startY="75" endX="-126" endY="-94"/>
+               <bendpoint startX="451" startY="53" endX="148" endY="-116"/>
             </sourceConnection>
             <sourceConnection xsi:type="zenta:Connection"
                               id="43330f4a-c63e-4403-a222-14200183c1cd"
@@ -1199,7 +1217,9 @@ else
                               source="bf2f9836-0ddf-43d1-956d-b1060936bf89"
                               target="881ba185-2147-4fff-851a-9573fd9ddd81"
                               lineDecoration="SmallStartArrowDecoration SparseDashedLineDecoration"
-                              relationship="5d914d47-54f3-47a0-a4c6-81a9f73c9fa2"/>
+                              relationship="5d914d47-54f3-47a0-a4c6-81a9f73c9fa2">
+               <bendpoint startX="-45" startY="216" endX="-348" endY="47"/>
+            </sourceConnection>
             <sourceConnection xsi:type="zenta:Connection"
                               id="cb4c55eb-5fe6-47cf-9e4c-c82c11ef89f1"
                               source="bf2f9836-0ddf-43d1-956d-b1060936bf89"
@@ -1306,6 +1326,55 @@ else
                               lineDecoration="SparseDashedLineDecoration DiamondSourceDecoration"
                               relationship="9b0b78a0-3fe8-4ec3-83fb-ac176b29ab18">
                <bendpoint startX="188" startY="81" endX="188" endY="-92"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="7a6e7bea-720f-4e22-bf98-d3b781bb5019"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="bf2f9836-0ddf-43d1-956d-b1060936bf89"
+                              relationship="33cf3872-ef5a-4e29-8e4a-c2faf73f68a8">
+               <bendpoint startX="353" startY="-51" endX="656" endY="118"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="1e6a32bf-4981-4fec-969b-42a6f0008aff"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="bf2f9836-0ddf-43d1-956d-b1060936bf89"
+                              relationship="933bdec9-7751-434c-bcf0-b3a0f2c9bceb">
+               <bendpoint startX="380" startY="-91" endX="683" endY="78"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="f789cb94-db4f-4f9d-80dd-208e5fe7cfe8"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="bf2f9836-0ddf-43d1-956d-b1060936bf89"
+                              relationship="d0ce1c85-c11c-4f6c-a1a5-d2486d0b5640">
+               <bendpoint startX="405" startY="-21" endX="708" endY="148"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="6e1886ea-58a9-4708-9243-e705d5793951"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="bf2f9836-0ddf-43d1-956d-b1060936bf89"
+                              relationship="2c3ed86a-bf90-436c-8fc5-636a222e1ee9">
+               <bendpoint startX="418" startY="32" endX="721" endY="201"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="a85a7fcd-e9ed-4037-8b30-24937ac219db"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="bf2f9836-0ddf-43d1-956d-b1060936bf89"
+                              relationship="732d9c95-0250-4bca-8ee4-53b356374ff5">
+               <bendpoint startX="470" startY="95" endX="773" endY="264"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="d6fe575f-dfef-4bd2-8db0-b21211981918"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="bf2f9836-0ddf-43d1-956d-b1060936bf89"
+                              relationship="470cad66-a4f2-46f1-95ed-71b6da29063b">
+               <bendpoint startX="497" startY="149" endX="800" endY="318"/>
+            </sourceConnection>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="fe28621d-b0c1-4306-90be-8a96b6dd04dd"
+                              source="881ba185-2147-4fff-851a-9573fd9ddd81"
+                              target="bf2f9836-0ddf-43d1-956d-b1060936bf89"
+                              relationship="8a69600f-ae51-4ccc-b0df-90719aee5a7b">
+               <bendpoint startX="488" startY="233" endX="791" endY="402"/>
             </sourceConnection>
          </child>
          <child xsi:type="zenta:DiagramObject"
@@ -1609,6 +1678,99 @@ A role is assigned to human(s).
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"
                    value="SparseDashedLineDecoration DiamondSourceDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is presented by"
+               id="33cf3872-ef5a-4e29-8e4a-c2faf73f68a8"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+         <documentation>rest read
+</documentation>
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="rest create"
+               id="933bdec9-7751-434c-bcf0-b3a0f2c9bceb"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="rest delete"
+               id="d0ce1c85-c11c-4f6c-a1a5-d2486d0b5640"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="rest update"
+               id="2c3ed86a-bf90-436c-8fc5-636a222e1ee9"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="rest list"
+               id="732d9c95-0250-4bca-8ee4-53b356374ff5"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="rest mass create"
+               id="470cad66-a4f2-46f1-95ed-71b6da29063b"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="rest mass update"
+               id="8a69600f-ae51-4ccc-b0df-90719aee5a7b"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>

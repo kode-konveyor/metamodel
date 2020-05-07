@@ -91,11 +91,17 @@ else 'no Configuration Provider found'
                                  relationship="cf322057-2e5b-476b-b32e-207044fb130d">
                   <bendpoint startX="84" startY="119" endX="84" endY="-121"/>
                </sourceConnection>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="f9b1aee0-c126-4349-b6f9-304c20e55d81"
+                                 source="d81ba3ca-49b8-4696-be13-8b8c7cf00f29"
+                                 target="d64ff740-b1ec-4180-8eef-24cc0e691cc1"
+                                 lineDecoration="SmallEndArrowDecoration"
+                                 relationship="86577fc2-31f5-426e-9ee6-8b09b1a15c82"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="d64ff740-b1ec-4180-8eef-24cc0e691cc1"
                    fontColor="#ffffff"
-                   targetConnections="560cbd2e-9023-4c76-95ac-1d6b5b4cb48d"
+                   targetConnections="560cbd2e-9023-4c76-95ac-1d6b5b4cb48d f9b1aee0-c126-4349-b6f9-304c20e55d81"
                    fillColor="#f57900"
                    elementShape="ellipseShape"
                    zentaElement="field">
@@ -141,6 +147,19 @@ else 'no Configuration Provider found'
             <property key="elementShape" value="ellipseShape"/>
             <property key="textAlignment" value="2"/>
             <property key="fontColor" value="#ffffff"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="has"
+                  id="86577fc2-31f5-426e-9ee6-8b09b1a15c82"
+                  ancestor="basicrelation"
+                  source="type"
+                  target="field">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
             <property key="font"/>
          </element>
       </folder>
