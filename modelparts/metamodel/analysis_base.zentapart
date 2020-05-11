@@ -321,23 +321,6 @@ pull request name = issue name + issue number
          </child>
          <property key="Template"/>
       </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Behaviour"
-               id="behaviour"
-               ancestor="thing">
-         <documentation>A specific, implementable, testable statement about the behaviour of the software.
-The set of behaviours should fully define the workings of the callable (in most cases Service) implementing them.
-
-The behaviour is the work unit offered for coding.
-
-This is the same as Requirement in Common Criteria.
-</documentation>
-         <property key="fillColor" value="#fce94f"/>
-         <property key="elementShape" value="meaningShape"/>
-         <property key="textAlignment" value="2"/>
-         <property key="fontColor"/>
-         <property key="font"/>
-      </element>
       <element xsi:type="zenta:BasicRelationship"
                name="depends on"
                id="b6f9974a-1393-4848-a6f1-febcd90c0de1"
@@ -2022,16 +2005,6 @@ A role is assigned to human(s).
          <property key="Template"/>
       </element>
       <element xsi:type="zenta:BasicObject"
-               name="UI element"
-               id="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
-               ancestor="thing">
-         <property key="fillColor" value="#ffffff"/>
-         <property key="elementShape" value="emptyShape"/>
-         <property key="textAlignment" value="2"/>
-         <property key="fontColor"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicObject"
                name="Service"
                id="service"
                ancestor="callable">
@@ -3183,6 +3156,46 @@ else 'not in folder view'
                ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                source="eb88fe97-984c-4fd8-b44e-2964f3654fde"
                target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+      <element xsi:type="zenta:BasicObject"
+               name="UI element"
+               id="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+               ancestor="thing">
+         <property key="fillColor" value="#ffffff"/>
+         <property key="elementShape" value="emptyShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Behaviour"
+               id="behaviour"
+               ancestor="thing">
+         <documentation>A specific, implementable, testable statement about the behaviour of the software.
+The set of behaviours should fully define the workings of the callable (in most cases Service) implementing them.
+
+The behaviour is the work unit offered for coding.
+
+This is the same as Requirement in Common Criteria.
+</documentation>
+         <property key="fillColor" value="#fce94f"/>
+         <property key="elementShape" value="meaningShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="uses"
+               id="aaea75b0-b480-4f6c-a884-1cb5547d2514"
+               ancestor="basicrelation"
+               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+               target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
    </folder>
    <property key="modelDependency" value="metamodel/basics"/>
 </folder>
