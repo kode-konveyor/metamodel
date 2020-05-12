@@ -3,6 +3,18 @@
         name="3. Design shunt"
         id="0f445d68-fca3-4655-83a7-9cc9c9549f70">
    <folder name="design shunt" id="19850a16-eb0e-4217-8047-2834ca70ed1c">
+      <folder name="5. Low level requirements"
+              id="e238f533-8cd1-4b60-98c3-c51446e8e4d1">
+         <element xsi:type="zenta:ZentaDiagramModel"
+                  name="dumy design objective"
+                  id="bc38760c-9cd9-4d52-87a0-f1c139143f2f">
+            <child xsi:type="zenta:DiagramObject"
+                   id="7ca359d0-8d13-40e8-adde-80dec418b08a"
+                   zentaElement="ea494738-f723-4478-8775-b15e325ffa72">
+               <bounds x="49" y="30" width="-1" height="-1"/>
+            </child>
+         </element>
+      </folder>
       <element xsi:type="zenta:BasicRelationship"
                id="887c2322-ed56-4dc3-b8e2-b13757eb8215"
                ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
