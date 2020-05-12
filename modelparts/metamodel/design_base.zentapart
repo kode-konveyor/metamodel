@@ -404,7 +404,7 @@ Packages contain process steps, and the code units (Services, Controllers, and o
                <child xsi:type="zenta:DiagramObject"
                       id="c7298fc6-1c67-438e-aef9-78600420ce98"
                       zentaElement="189dbb19-8dd0-41be-b596-4e29c9210ff9">
-                  <bounds x="516" y="432" width="361"/>
+                  <bounds x="516" y="432" width="361" height="73"/>
                   <sourceConnection xsi:type="zenta:Connection"
                                     id="67d6200f-1d58-40b4-aa4f-3caa3671bb3d"
                                     source="c7298fc6-1c67-438e-aef9-78600420ce98"
@@ -1328,7 +1328,7 @@ zenta:neighboursRun1($doc,$element,'contains,2;published at,2')</documentation>
                <child xsi:type="zenta:DiagramObject"
                       id="6943e405-a80e-4883-97c2-83edc21affa2"
                       zentaElement="a6bf1172-55e3-4c19-ab6f-55ef263beda4">
-                  <bounds x="288" y="252" width="-1" height="-1"/>
+                  <bounds x="288" y="252" height="73"/>
                   <sourceConnection xsi:type="zenta:Connection"
                                     id="55ba2e6b-20cc-46da-9245-ee9cf49302a2"
                                     source="6943e405-a80e-4883-97c2-83edc21affa2"
