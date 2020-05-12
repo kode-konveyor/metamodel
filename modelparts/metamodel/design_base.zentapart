@@ -1824,23 +1824,6 @@ zenta:exactlyOne(zenta:neighbours($doc,$element,'contains,2'),'no Enum found')</
                <bounds x="786" y="165" width="-1" height="-1"/>
             </child>
          </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="41c56cf6-5924-4b88-9ece-ba8b9753328f"
-                  ancestor="64981f96-11a3-4631-b4f8-dd38993cec60"
-                  source="0f884e27-f833-4ddf-9972-5e6e0d8bf96a"
-                  target="behaviour"/>
-         <element xsi:type="zenta:BasicObject"
-                  name="is implemented by/implements"
-                  id="0f884e27-f833-4ddf-9972-5e6e0d8bf96a"
-                  ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
-            <documentation>1|
-if ($element/@xsi:type='Behaviour' and not(zenta:neighboursRun1($doc,$element,'is implemented by/implements,1')))
-then
-	(zenta:neighboursRun1($doc,$element,'iterates,2;is implemented by/implements,1') |
-	zenta:neighboursRun1($doc,$element,'contains,2;is implemented by/implements,1') )
-else
-	()</documentation>
-         </element>
       </folder>
       <folder name="11. External units" id="7d3da920-7ab0-495d-9351-e38c5bb92f34">
          <documentation>External units are implemented outside of the project, hence they are all grey.
