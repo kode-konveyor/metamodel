@@ -2449,5 +2449,271 @@ In a model view it is a good practice to grey out elements which are outside of 
          <property key="font"/>
       </element>
    </folder>
+   <folder name="6. Implementation details"
+           id="9081c37a-9645-4bbf-8b44-6fba90e72eb0">
+      <element xsi:type="zenta:ZentaDiagramModel"
+               name="Implementation details"
+               id="ba5f4fe6-4bf2-4571-a790-5a7e194f33d2">
+         <child xsi:type="zenta:DiagramObject"
+                id="cbc49edc-cbf1-49c6-916a-39922b871bbd"
+                zentaElement="callable">
+            <bounds x="137" y="82" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="2819ec82-753e-47b1-84b5-f281dc011563"
+                zentaElement="5491f72b-93ec-4ad5-b6a9-2653fe808a03">
+            <bounds x="132" y="266" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="243ae264-8781-41cb-abac-3d48fc2650c4"
+                zentaElement="service">
+            <bounds x="132" y="180" width="-1" height="-1"/>
+         </child>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Callable"
+               id="callable"
+               ancestor="thing">
+         <documentation>A Callable is an abstraction for anything which can be called.</documentation>
+         <property key="fillColor" value="#ffffff"/>
+         <property key="elementShape" value="roundedRectangleShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Service"
+               id="service"
+               ancestor="callable">
+         <documentation>A service is a unit implementing some logic which is testable with unit tests.
+
+A service does not have any state.
+
+A service does one thing. Therefore it either has one public function, or more public functions with different types of parameters where those functions do the same.
+
+In polymorphic languages all the functions of the service therefore have to have the same name (“call”) as a rule. An exception of the rule when the compiler/interpreter cannot reliably determine the correct function to use.
+
+A service references its dependencies in an abstract way, using dependency inversion. If there is a dependency injection mechanism for the language, that mechanism should be used. In java by default we use Spring, which means that the class is marked as @Service, and the dependencies are fields referencing the interface of the dependent service using @Autowired. In Python by default we use winterboot. Python services are marked with the @Service annotation, and referenced as serviceName = Autowired(‘servicename’). When the wider framework uses other DI mechanisms, their use should be modelled after this as closely as possible. 
+
+In java and python Services should not have static methods except when the needs of a Delegate dictate it.
+</documentation>
+         <property key="fillColor" value="#fcaf3e"/>
+         <property key="elementShape" value="roundedRectangleShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Controller"
+               id="5491f72b-93ec-4ad5-b6a9-2653fe808a03"
+               ancestor="service">
+         <property key="fillColor" value="#8ae234"/>
+         <property key="elementShape" value="roundedRectangleShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:ZentaDiagramModel"
+               name="Implementation details constraints"
+               id="ec785bf8-86bd-4eca-ab5c-d473d4a93dd5">
+         <child xsi:type="zenta:DiagramObject"
+                id="60b4b136-cc65-4d41-bc77-ee629ea86a7f"
+                zentaElement="5491f72b-93ec-4ad5-b6a9-2653fe808a03">
+            <bounds x="268" y="128" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="c81cdcd7-9521-4d9c-8f7e-1e762c81496b"
+                zentaElement="service">
+            <bounds x="468" y="128" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="72c1a840-da73-4ccb-aea8-e616ed30c6da"
+                zentaElement="c9346e32-c89b-4eae-8fd5-549682b2df3e">
+            <bounds x="734" y="288" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="ca814e39-ea7c-4c91-8f15-da551792a94b"
+                              source="72c1a840-da73-4ccb-aea8-e616ed30c6da"
+                              target="a755f55f-f669-4689-9005-4ea82030c4c3"
+                              relationship="6fcfe29e-79a0-47bf-9153-2f884186ad1b"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="40809d43-c713-4cd3-87b6-d778771ce557"
+                zentaElement="539c6e8a-27b1-46a5-8906-bf1c4225e905">
+            <bounds x="1032" y="192" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="92c5a302-eee9-4271-aaf6-2de5564486a9"
+                              source="40809d43-c713-4cd3-87b6-d778771ce557"
+                              target="a755f55f-f669-4689-9005-4ea82030c4c3"
+                              relationship="dd1680ef-99be-48e7-9a3e-77d3cfefc91f"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="cd2bc290-dea2-490b-9169-691a2de0ce97"
+                zentaElement="47d08121-4031-4c7a-b6de-1f70c0bb8095">
+            <bounds x="900" y="288" width="145" height="97"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="fc7de414-3fd0-4e52-8d48-aeec36769355"
+                              source="cd2bc290-dea2-490b-9169-691a2de0ce97"
+                              target="a755f55f-f669-4689-9005-4ea82030c4c3"
+                              relationship="137c7e37-e684-43ac-be8c-5d1037a742b3"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="a755f55f-f669-4689-9005-4ea82030c4c3"
+                targetConnections="ca814e39-ea7c-4c91-8f15-da551792a94b fc7de414-3fd0-4e52-8d48-aeec36769355 92c5a302-eee9-4271-aaf6-2de5564486a9"
+                zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <bounds x="853" y="121" width="-1" height="-1"/>
+         </child>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="contained in a Package"
+               id="c9346e32-c89b-4eae-8fd5-549682b2df3e"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>design|
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'],
+	'no package found')</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="implements"
+               id="539c6e8a-27b1-46a5-8906-bf1c4225e905"
+               ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
+         <documentation>2|
+if(not(zenta:neighboursRun1($doc,$element,'implements,2')[@xsi:type='Milestone']))
+then 
+	zentatools:let(
+		'parentmilestones',
+		'for $parent in zenta:neighboursRun1($doc,$element,''contains,2'')[@xsi:type=''Process Step'']
+			return zenta:neighboursRun1($doc,$parent,''implements,2'')[@xsi:type=''Milestone'']',
+		'if($parentmilestones)
+		then $parentmilestones
+		else 
+			for $grandparent in zenta:neighboursRun1($doc,$element,''contains,2;contains,2'')[@xsi:type=''Process Step'']
+				return zenta:neighboursRun1($doc,$grandparent,''implements,2'')[@xsi:type=''Milestone'']'
+	)
+else ()</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="is done by a user or implemented by a Callable"
+               id="47d08121-4031-4c7a-b6de-1f70c0bb8095"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>design|
+zenta:exactlyOne(
+    (
+	zenta:neighbours($doc,$element,'is done by/does,1'), 
+	zenta:neighbours($doc,$element,'is implemented by/implements,1')
+    ),
+    'no user or Callable found')
+</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="6fcfe29e-79a0-47bf-9153-2f884186ad1b"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="c9346e32-c89b-4eae-8fd5-549682b2df3e"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="137c7e37-e684-43ac-be8c-5d1037a742b3"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="47d08121-4031-4c7a-b6de-1f70c0bb8095"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="dd1680ef-99be-48e7-9a3e-77d3cfefc91f"
+               ancestor="64981f96-11a3-4631-b4f8-dd38993cec60"
+               source="539c6e8a-27b1-46a5-8906-bf1c4225e905"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+   </folder>
+   <folder name="5. Clarifications" id="4a539546-237d-4637-a4a0-e13de8d1777a">
+      <element xsi:type="zenta:ZentaDiagramModel"
+               name="Clarifications"
+               id="b64d15b6-4f9c-404d-93f2-ac9609782a6b">
+         <child xsi:type="zenta:DiagramObject"
+                id="8c87bf27-52e1-4e79-ad28-a0a1eba808ca"
+                zentaElement="24c89149-0040-426d-9104-ffcf2cd3aedf">
+            <bounds x="168" y="192" width="148" height="89"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="13fb26d8-e826-4cc0-a46b-ba4a6a99b27f"
+                              source="8c87bf27-52e1-4e79-ad28-a0a1eba808ca"
+                              target="19d26e2f-886b-4111-97a9-7d814f40b7fa"
+                              relationship="9e77deec-88d0-4544-85d7-c142594dbcb4"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="19d26e2f-886b-4111-97a9-7d814f40b7fa"
+                targetConnections="13fb26d8-e826-4cc0-a46b-ba4a6a99b27f cae851c5-d56c-4c02-b4fb-b0a804f5e2a7"
+                zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <bounds x="177" y="37" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="ae7d352b-eefd-4d06-8ea1-ce072bf609c5"
+                zentaElement="0c6daa63-b33e-482c-8610-d9c56a516cdb">
+            <bounds x="408" y="190" width="169" height="99"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="cae851c5-d56c-4c02-b4fb-b0a804f5e2a7"
+                              source="ae7d352b-eefd-4d06-8ea1-ce072bf609c5"
+                              target="19d26e2f-886b-4111-97a9-7d814f40b7fa"
+                              relationship="dcd3590e-06b4-42b5-9864-37de50d422ce"/>
+         </child>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="have description, behaviour or substep"
+               id="24c89149-0040-426d-9104-ffcf2cd3aedf"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>clarifications|
+if (count(
+	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Behaviour' or @xsi:type='Process Step']
+   ) &gt; 0 or
+   $element/documentation/text())
+then ()
+else 'no behaviour or substep found'
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="uses the Business Objects from preceeding steps"
+               id="0c6daa63-b33e-482c-8610-d9c56a516cdb"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>clarifications|
+if (
+    count(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']) &gt; 0 and 
+    count(
+       zenta:neighbours($doc,$element,'clicks when/does not input from,2')|
+       zenta:neighbours($doc,$element,'provides data in/inputs from,2')
+     ) =0 and
+    count(zenta:neighbours($doc,$element,'contains,1')) = 0
+)
+then
+  if(count(
+	(
+		zenta:neighbours($doc,$element,'reads,1'),
+		zenta:neighbours($doc,$element,'inputs,1'),
+		zenta:neighbours($doc,$element,'inputs as DTO,1'),
+		zenta:neighbours($doc,$element,'inputs id of,1')
+	)[@xsi:type='Business Object']
+    ) &gt; 0)
+  then ()
+  else (
+	'previous process step but no business object read: ', 
+	string-join(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']/concat(@name,',',@id))
+	)
+else
+  ()</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="dcd3590e-06b4-42b5-9864-37de50d422ce"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="0c6daa63-b33e-482c-8610-d9c56a516cdb"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="9e77deec-88d0-4544-85d7-c142594dbcb4"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="24c89149-0040-426d-9104-ffcf2cd3aedf"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+   </folder>
    <property key="modelDependency" value="metamodel/analysis_base"/>
 </folder>

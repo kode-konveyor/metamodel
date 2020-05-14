@@ -81,6 +81,8 @@
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="cca5f40f-1d29-4b7e-bc7d-d9c23c9bcff9"
+                fillColor="#729fcf"
+                elementShape="roundedRectangleShape"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="341" y="57" width="-1" height="-1"/>
             <sourceConnection xsi:type="zenta:Connection"
