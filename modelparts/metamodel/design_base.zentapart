@@ -2629,6 +2629,20 @@ zenta:exactlyOne(
                ancestor="64981f96-11a3-4631-b4f8-dd38993cec60"
                source="539c6e8a-27b1-46a5-8906-bf1c4225e905"
                target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicRelationship"
+               name="uses deprecated"
+               id="160ffafa-bbed-47e8-8c9a-5797d18b38c6"
+               ancestor="basicrelation"
+               source="service"
+               target="service">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"
+                   value="DottedLineDecoration SmallStartArrowDecoration"/>
+         <property key="lineColor" value="#d3d7cf"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
    </folder>
    <folder name="5. Clarifications" id="4a539546-237d-4637-a4a0-e13de8d1777a">
       <element xsi:type="zenta:ZentaDiagramModel"

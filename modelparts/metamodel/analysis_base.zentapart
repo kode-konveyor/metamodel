@@ -365,20 +365,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="uses deprecated"
-               id="160ffafa-bbed-47e8-8c9a-5797d18b38c6"
-               ancestor="basicrelation"
-               source="service"
-               target="service">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="DottedLineDecoration SmallStartArrowDecoration"/>
-         <property key="lineColor" value="#d3d7cf"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="aggregates references to"
                id="beb54302-3c50-4aa2-a759-7d70a97f8c97"
                ancestor="c8c86cdc-63e3-434a-b04a-0c950867855b"
