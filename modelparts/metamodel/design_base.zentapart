@@ -1129,7 +1129,7 @@ else 'not in its folder'</documentation>
          <child xsi:type="zenta:DiagramObject"
                 id="0f6f1a8a-a4ce-412d-8c0e-6765627830bc"
                 zentaElement="05f5c95a-6781-4d95-a90b-9e9aede97472">
-            <bounds x="612" y="468" width="-1" height="-1"/>
+            <bounds x="596" y="492" width="-1" height="-1"/>
             <sourceConnection xsi:type="zenta:Connection"
                               id="b13c7b6b-72a6-4816-b23e-e12d9455f18b"
                               source="0f6f1a8a-a4ce-412d-8c0e-6765627830bc"
