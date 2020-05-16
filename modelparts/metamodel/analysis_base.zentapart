@@ -2109,6 +2109,19 @@ A role is assigned to human(s).
          <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="reads"
+               id="d9f4a80e-d07b-4767-ad0a-aa86988783f8"
+               ancestor="basicrelation"
+               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="SmallStartArrowDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
    </folder>
    <folder name="4. Low level requirements"
            id="8be8472c-ea68-4fb2-b274-676917399d03">

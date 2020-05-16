@@ -2832,19 +2832,6 @@ In a model view it is a good practice to grey out elements which are outside of 
             <property key="font"/>
          </element>
          <element xsi:type="zenta:BasicRelationship"
-                  name="reads"
-                  id="d9f4a80e-d07b-4767-ad0a-aa86988783f8"
-                  ancestor="basicrelation"
-                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-            <property key="textPosition" value="1"/>
-            <property key="lineDecoration" value="SmallStartArrowDecoration"/>
-            <property key="lineColor"/>
-            <property key="fontColor"/>
-            <property key="lineWidth" value="1"/>
-            <property key="font"/>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
                   name="references deprecated"
                   id="cb0bf7bb-cbdb-4f7c-acea-9353a7cfe1b8"
                   ancestor="8aa62b50-ef2a-41ed-99b8-4d853a945d86"
