@@ -1311,16 +1311,6 @@ else 'not in its folder'</documentation>
          <property key="Template"/>
       </element>
       <element xsi:type="zenta:BasicObject"
-               name="Test Artifact"
-               id="ffbe5058-5089-4c5a-965d-e996df089f8e"
-               ancestor="ebc74a50-0298-4c43-8830-d93ede22576b">
-         <property key="fillColor" value="#8ae234"/>
-         <property key="elementShape" value="deliverableShape"/>
-         <property key="textAlignment" value="2"/>
-         <property key="fontColor"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicObject"
                name="Test Data"
                id="9ec42823-7056-4e73-b1f4-600a066c8d88"
                ancestor="dd0a88e6-cef6-4a83-85d0-44fd58ccd79a">

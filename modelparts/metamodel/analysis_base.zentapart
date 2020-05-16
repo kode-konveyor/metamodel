@@ -2801,6 +2801,19 @@ This is the same as Requirement in Common Criteria.
             <property key="font"/>
          </element>
       </folder>
+      <folder name="dependencies of Deprecated"
+              id="a8d67489-78d8-423d-a40d-0fbf35bba546">
+         <element xsi:type="zenta:BasicObject"
+                  name="Test Artifact"
+                  id="ffbe5058-5089-4c5a-965d-e996df089f8e"
+                  ancestor="ebc74a50-0298-4c43-8830-d93ede22576b">
+            <property key="fillColor" value="#8ae234"/>
+            <property key="elementShape" value="deliverableShape"/>
+            <property key="textAlignment" value="2"/>
+            <property key="fontColor"/>
+            <property key="font"/>
+         </element>
+      </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="deprecation"
                id="af42470b-0e22-47a2-89ba-1d6df8daa398">
