@@ -2892,36 +2892,6 @@ return
                ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                source="58c88955-d879-44ec-aa28-f1c2698a37ea"
                target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="c915d0eb-99a3-4706-aea8-c698d4f4b845"
-               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
-               source="0738c144-55cf-42b1-9675-ba91d9e99f67"
-               target="02f0b9c7-d63c-419e-91e0-17987354ed4e"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="03a2da7f-38ca-4664-9576-5db6b8ff90f9"
-               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
-               source="93653260-0c4b-47bd-9da8-c019432b1551"
-               target="bb9a0f33-e989-4f81-aeff-afdb98e1ce0d"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="3b7dd286-f6ad-4101-a105-dfc1aec4b2f4"
-               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
-               source="1d815232-2850-4d80-8997-7191e3d68cd9"
-               target="4c39fdb3-0b40-4f11-b3bf-e2ffd93b1bf8"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="5a2c2f37-8fc9-4a2c-bf4c-a360c61b8611"
-               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
-               source="0936ffd3-9032-43c8-a3f0-b0ad1e859a60"
-               target="cc509ca3-93be-4d2f-9dce-55d2c1dff9c7"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="207dac75-b106-4754-8b40-219bd7c88a10"
-               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
-               source="7ccd8a6d-793c-4591-bb9e-635ac0a41ef9"
-               target="4c39fdb3-0b40-4f11-b3bf-e2ffd93b1bf8"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="216eca9d-377d-4bcd-a32a-cd8e79e81154"
-               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
-               source="51d96ed3-2df2-410a-ab8d-9e81ab737084"
-               target="4c39fdb3-0b40-4f11-b3bf-e2ffd93b1bf8"/>
    </folder>
    <property key="modelDependency" value="metamodel/basics"/>
    <element xsi:type="zenta:BasicObject"
