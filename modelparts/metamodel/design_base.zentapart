@@ -509,17 +509,6 @@
          </child>
          <property key="Template"/>
       </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Callable"
-               id="callable"
-               ancestor="thing">
-         <documentation>A Callable is an abstraction for anything which can be called.</documentation>
-         <property key="fillColor"/>
-         <property key="elementShape"/>
-         <property key="textAlignment" value="2"/>
-         <property key="fontColor"/>
-         <property key="font"/>
-      </element>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Implementation details constraints"
                id="ec785bf8-86bd-4eca-ab5c-d473d4a93dd5">
@@ -689,6 +678,39 @@ for $step in zenta:neighbours($doc,$element,'is implemented by/implements,2')
                ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                source="210d8d73-81ca-40e1-ad53-659345d80518"
                target="service"/>
+      <element xsi:type="zenta:BasicObject"
+               name="Callable"
+               id="callable"
+               ancestor="thing">
+         <documentation>A Callable is an abstraction for anything which can be called.</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Service"
+               id="service"
+               ancestor="callable">
+         <documentation>A service is a unit implementing some logic which is testable with unit tests.
+
+A service does not have any state.
+
+A service does one thing. Therefore it either has one public function, or more public functions with different types of parameters where those functions do the same.
+
+In polymorphic languages all the functions of the service therefore have to have the same name (“call”) as a rule. An exception of the rule when the compiler/interpreter cannot reliably determine the correct function to use.
+
+A service references its dependencies in an abstract way, using dependency inversion. If there is a dependency injection mechanism for the language, that mechanism should be used. In java by default we use Spring, which means that the class is marked as @Service, and the dependencies are fields referencing the interface of the dependent service using @Autowired. In Python by default we use winterboot. Python services are marked with the @Service annotation, and referenced as serviceName = Autowired(‘servicename’). When the wider framework uses other DI mechanisms, their use should be modelled after this as closely as possible. 
+
+In java and python Services should not have static methods except when the needs of a Delegate dictate it.
+</documentation>
+         <property key="fillColor" value="#fcaf3e"/>
+         <property key="elementShape" value="roundedRectangleShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
    </folder>
    <folder name="09. Clarifications" id="4a539546-237d-4637-a4a0-e13de8d1777a">
       <element xsi:type="zenta:ZentaDiagramModel"
@@ -1717,6 +1739,16 @@ zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Property']</documentatio
          <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Test Artifact"
+               id="ffbe5058-5089-4c5a-965d-e996df089f8e"
+               ancestor="ebc74a50-0298-4c43-8830-d93ede22576b">
+         <property key="fillColor" value="#8ae234"/>
+         <property key="elementShape" value="deliverableShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
    </folder>
    <folder name="08. Constants, Configuration, Enums"
            id="7354c7b5-79dc-4bec-90cd-365255f74f2e">
@@ -1965,6 +1997,18 @@ else 'no onstants found'</documentation>
          <property key="elementShape" value="ellipseShape"/>
          <property key="textAlignment" value="2"/>
          <property key="fontColor" value="#000000"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Constant"
+               id="ebc74a50-0298-4c43-8830-d93ede22576b"
+               ancestor="thing">
+         <documentation>Constant is a special property. Its value is predetermined and never changes.
+</documentation>
+         <property key="fillColor" value="#ce5c00"/>
+         <property key="elementShape" value="ellipseShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor" value="#ffffff"/>
          <property key="font"/>
       </element>
    </folder>
@@ -2375,28 +2419,6 @@ zenta:neighboursRun1($doc,$element,'contains,2;published at,2')</documentation>
          <property key="fontColor"/>
          <property key="font"/>
       </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Service"
-               id="service"
-               ancestor="callable">
-         <documentation>A service is a unit implementing some logic which is testable with unit tests.
-
-A service does not have any state.
-
-A service does one thing. Therefore it either has one public function, or more public functions with different types of parameters where those functions do the same.
-
-In polymorphic languages all the functions of the service therefore have to have the same name (“call”) as a rule. An exception of the rule when the compiler/interpreter cannot reliably determine the correct function to use.
-
-A service references its dependencies in an abstract way, using dependency inversion. If there is a dependency injection mechanism for the language, that mechanism should be used. In java by default we use Spring, which means that the class is marked as @Service, and the dependencies are fields referencing the interface of the dependent service using @Autowired. In Python by default we use winterboot. Python services are marked with the @Service annotation, and referenced as serviceName = Autowired(‘servicename’). When the wider framework uses other DI mechanisms, their use should be modelled after this as closely as possible. 
-
-In java and python Services should not have static methods except when the needs of a Delegate dictate it.
-</documentation>
-         <property key="fillColor" value="#fcaf3e"/>
-         <property key="elementShape" value="roundedRectangleShape"/>
-         <property key="textAlignment" value="2"/>
-         <property key="fontColor"/>
-         <property key="font"/>
-      </element>
       <element xsi:type="zenta:BasicRelationship"
                name="contains"
                id="2acdcaf1-8d2d-4444-94ed-69e0d0050e9b"
@@ -2687,6 +2709,430 @@ In a model view it is a good practice to grey out elements which are outside of 
          <property key="fontColor"/>
          <property key="font"/>
       </element>
+   </folder>
+   <folder name="0. deprecation" id="23fb97f5-0b38-40ce-9653-8cfaa7ec1076">
+      <folder name="Deprecated objects" id="94b88447-b75b-4f3b-97ec-a957028960be">
+         <element xsi:type="zenta:BasicRelationship"
+                  name="contains deprecated"
+                  id="eea967e3-428c-466e-8688-bd375885e288"
+                  ancestor="basicrelation"
+                  source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="foooo deprecated"
+                  id="732d9c95-0250-4bca-8ee4-53b356374ff5"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="inputs as DTO deprecated"
+                  id="9c7060f6-02ef-407c-b30b-d7ac51079ddd"
+                  ancestor="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="inputs id of deprecated"
+                  id="5d914d47-54f3-47a0-a4c6-81a9f73c9fa2"
+                  ancestor="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is a/is the type of deprecated"
+                  id="beaef484-0c2e-4a4f-8aaf-d036a9c8808f"
+                  ancestor="basicrelation"
+                  source="ffbe5058-5089-4c5a-965d-e996df089f8e"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is based on/is base of deprecated"
+                  id="e8891b80-9f9e-414e-be21-759d58d3035e"
+                  ancestor="basicrelation"
+                  source="ffbe5058-5089-4c5a-965d-e996df089f8e"
+                  target="ffbe5058-5089-4c5a-965d-e996df089f8e">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is presented by deprecated"
+                  id="33cf3872-ef5a-4e29-8e4a-c2faf73f68a8"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <documentation>rest read
+</documentation>
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="lists deprecated"
+                  id="34522347-9adf-4a30-b8da-8f21fd4a02c8"
+                  ancestor="c8c86cdc-63e3-434a-b04a-0c950867855b"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="lists references to deprecated"
+                  id="9b0b78a0-3fe8-4ec3-83fb-ac176b29ab18"
+                  ancestor="34522347-9adf-4a30-b8da-8f21fd4a02c8"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="reads"
+                  id="d9f4a80e-d07b-4767-ad0a-aa86988783f8"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SmallStartArrowDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="references deprecated"
+                  id="cb0bf7bb-cbdb-4f7c-acea-9353a7cfe1b8"
+                  ancestor="8aa62b50-ef2a-41ed-99b8-4d853a945d86"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="rest create deprecated"
+                  id="933bdec9-7751-434c-bcf0-b3a0f2c9bceb"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="rest mass create deprecated"
+                  id="470cad66-a4f2-46f1-95ed-71b6da29063b"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="rest mass update deprecated"
+                  id="8a69600f-ae51-4ccc-b0df-90719aee5a7b"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="rest update deprecated"
+                  id="2c3ed86a-bf90-436c-8fc5-636a222e1ee9"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="returns as DTO deprecated"
+                  id="2c9f3d81-cea1-4d36-b0de-5b42d0e3f293"
+                  ancestor="fcd1200e-2225-4b4f-914e-0846e429cf1a"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="returns set as DTO deprecated"
+                  id="21d9c9f0-30f8-40ae-af67-4fc72567ef0c"
+                  ancestor="2c9f3d81-cea1-4d36-b0de-5b42d0e3f293"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="2"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="returns set deprecated"
+                  id="59baca2a-e8ba-49e9-932f-ac0b759d23a1"
+                  ancestor="fcd1200e-2225-4b4f-914e-0846e429cf1a"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="3"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="uses deprecated"
+                  id="efd0c5af-cdd1-4db0-b91e-e1ce0b8ec5d2"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <documentation>Use 'depends on' instead.</documentation>
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="uses deprecated"
+                  id="160ffafa-bbed-47e8-8c9a-5797d18b38c6"
+                  ancestor="basicrelation"
+                  source="service"
+                  target="service">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="est delete deprecated"
+                  id="d0ce1c85-c11c-4f6c-a1a5-d2486d0b5640"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="inputs deprecated"
+                  id="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="returns deprecated"
+                  id="fcd1200e-2225-4b4f-914e-0846e429cf1a"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="aggregates references to deprecated"
+                  id="beb54302-3c50-4aa2-a759-7d70a97f8c97"
+                  ancestor="c8c86cdc-63e3-434a-b04a-0c950867855b"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is parallel to/is parallel to deprecated"
+                  id="e0643d14-cce3-46c4-ae49-715d09f47917"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration"
+                      value="SmallStartArrowDecoration SmallEndArrowDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+      </folder>
+      <element xsi:type="zenta:ZentaDiagramModel"
+               name="deprecation"
+               id="af42470b-0e22-47a2-89ba-1d6df8daa398">
+         <child xsi:type="zenta:DiagramObject"
+                id="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                targetConnections="1488eb7a-deee-4232-ab5f-f7a13d62bfae 02ea5ac8-aa1e-40a9-8bcc-057790088e5d 498ee8de-68f1-4250-8694-779ffddf7dc5"
+                zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
+            <bounds x="240" y="48" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="033b866a-8c31-407a-a6f7-cc4dee1b01fa"
+                zentaElement="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d">
+            <bounds x="301" y="188" width="241" height="84"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="1488eb7a-deee-4232-ab5f-f7a13d62bfae"
+                              source="033b866a-8c31-407a-a6f7-cc4dee1b01fa"
+                              target="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                              relationship="e1e7b150-a8e3-40a2-96d4-b3ceb451ee1b"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="ac4de418-1cde-4f85-a311-ddbf09216cde"
+                zentaElement="58c88955-d879-44ec-aa28-f1c2698a37ea">
+            <bounds x="614" y="151" width="192" height="121"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="498ee8de-68f1-4250-8694-779ffddf7dc5"
+                              source="ac4de418-1cde-4f85-a311-ddbf09216cde"
+                              target="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                              relationship="0a3fc59b-e39c-4229-ba22-e6a1e35734ea"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="8a5389b6-61a1-40ed-b72d-2d4bf8e71fb5"
+                zentaElement="952a7b72-30f1-484d-84dc-fb246309d058">
+            <bounds x="106" y="188" width="160" height="96"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="02ea5ac8-aa1e-40a9-8bcc-057790088e5d"
+                              source="8a5389b6-61a1-40ed-b72d-2d4bf8e71fb5"
+                              target="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                              relationship="4dfbd43b-5aa0-4e4a-85a0-9217a7821eb1"/>
+         </child>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Deprecated metamodel objects are in their folder"
+               id="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')]
+return
+	if ($deprecated/../@name='Deprecated objects')
+	then ()
+	else concat($deprecated/@name,codepoints-to-string(10))
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="e1e7b150-a8e3-40a2-96d4-b3ceb451ee1b"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
+               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
+      <element xsi:type="zenta:BasicObject"
+               name="no elements should be inherited from Deprecated ones"
+               id="58c88955-d879-44ec-aa28-f1c2698a37ea"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')],
+	$child in $doc//*[(name()='connection' or name()='element') and @ancestor=$deprecated/@id]
+return
+	if ($child/..[@name!='Deprecated objects'])
+	then concat($child/@name,'(',$child/@id,':',$doc//element[@id=$child/@source]/@name,'-}',$doc//element[@id=$child/@target]/@name, '):',$deprecated/@name,' in ', string-join($child/ancestor::folder/@name,'/'),codepoints-to-string(10))
+	else ()
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Deprecated objects should not be in any view"
+               id="952a7b72-30f1-484d-84dc-fb246309d058"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')],
+	$view in $doc//element[.//@zentaElement=$deprecated/@id or .//@relationship=$deprecated/@id]
+return
+	concat($view/@name,'(',$view/@id,'):',$deprecated/@name,' in ', string-join($view/ancestor::folder/@name,'/'),codepoints-to-string(10))
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="4dfbd43b-5aa0-4e4a-85a0-9217a7821eb1"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="952a7b72-30f1-484d-84dc-fb246309d058"
+               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="0a3fc59b-e39c-4229-ba22-e6a1e35734ea"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="58c88955-d879-44ec-aa28-f1c2698a37ea"
+               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
    </folder>
    <property key="modelDependency" value="metamodel/analysis_base"/>
    <element xsi:type="zenta:BasicRelationship"
