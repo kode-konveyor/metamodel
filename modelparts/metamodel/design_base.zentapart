@@ -469,7 +469,7 @@
          <property key="font"/>
       </element>
    </folder>
-   <folder name="09. Services" id="9081c37a-9645-4bbf-8b44-6fba90e72eb0">
+   <folder name="07. Services" id="9081c37a-9645-4bbf-8b44-6fba90e72eb0">
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Implementation details"
                id="ba5f4fe6-4bf2-4571-a790-5a7e194f33d2">
@@ -507,14 +507,15 @@
                               target="cbc49edc-cbf1-49c6-916a-39922b871bbd"
                               relationship="3dd7b0b1-bd9f-4a13-b5d9-9db0200af5b8"/>
          </child>
+         <property key="Template"/>
       </element>
       <element xsi:type="zenta:BasicObject"
                name="Callable"
                id="callable"
                ancestor="thing">
          <documentation>A Callable is an abstraction for anything which can be called.</documentation>
-         <property key="fillColor" value="#ffffff"/>
-         <property key="elementShape" value="roundedRectangleShape"/>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
          <property key="textAlignment" value="2"/>
          <property key="fontColor"/>
          <property key="font"/>
@@ -549,11 +550,30 @@
             <bounds x="853" y="121" width="-1" height="-1"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
-                id="f210ba16-adf6-48d6-84cf-2e1dd656b249"
-                fillColor="#ffffff"
-                elementShape="roundedRectangleShape"
-                zentaElement="callable">
-            <bounds x="243" y="119" width="-1" height="-1"/>
+                id="d615bd83-94a8-47e7-aeb7-2b4d73b0f5ac"
+                targetConnections="e446090e-9220-4875-b1cc-c723822dbc73 cc2a54d8-d0b3-48fc-9269-99475824339f"
+                zentaElement="service">
+            <bounds x="252" y="121" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="796b9102-83ad-42f2-a166-e27580195395"
+                zentaElement="a7530ab8-0497-48b7-a9f9-92847f4b5e7b">
+            <bounds x="226" y="304" width="219" height="69"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="e446090e-9220-4875-b1cc-c723822dbc73"
+                              source="796b9102-83ad-42f2-a166-e27580195395"
+                              target="d615bd83-94a8-47e7-aeb7-2b4d73b0f5ac"
+                              relationship="eec192ca-e7b5-4d38-9f60-ee0cfaca1dcd"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="55c000b6-d016-47ad-b2da-e4562ecb596f"
+                zentaElement="210d8d73-81ca-40e1-ad53-659345d80518">
+            <bounds x="524" y="344" width="173" height="137"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="cc2a54d8-d0b3-48fc-9269-99475824339f"
+                              source="55c000b6-d016-47ad-b2da-e4562ecb596f"
+                              target="d615bd83-94a8-47e7-aeb7-2b4d73b0f5ac"
+                              relationship="076a9195-64ac-42fd-a9a9-156f6a6a312f"/>
          </child>
       </element>
       <element xsi:type="zenta:BasicObject"
@@ -579,7 +599,7 @@ else ()</documentation>
                name="is done by a user or implemented by a Callable"
                id="47d08121-4031-4c7a-b6de-1f70c0bb8095"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>design|
+         <documentation>services|
 zenta:exactlyOne(
     (
 	zenta:neighbours($doc,$element,'is done by/does,1'), 
@@ -621,8 +641,56 @@ zenta:exactlyOne(
          <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
+      <element xsi:type="zenta:BasicObject"
+               name="is in its folder and view in the package folder"
+               id="a7530ab8-0497-48b7-a9f9-92847f4b5e7b"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+if(
+	$doc//
+		folder[@name=zenta:neighbours($doc,$element,'is implemented by/implements,2;contains,2')/@name]/
+		folder[@name=$element/@name]//@zentaElement=$element/@id
+)
+then ()
+else 
+	concat(
+		'at ', 
+		string-join($element/ancestor::folder/@name,'/'),
+		' should be at ', 
+		zenta:neighbours($doc,$element,'is implemented by/implements,2;contains,2')[@xsi:type='Package']/@name
+	)
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="eec192ca-e7b5-4d38-9f60-ee0cfaca1dcd"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="a7530ab8-0497-48b7-a9f9-92847f4b5e7b"
+               target="service"/>
+      <element xsi:type="zenta:BasicObject"
+               name="Its view contains the process step and its neighbourhood"
+               id="210d8d73-81ca-40e1-ad53-659345d80518"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+for $step in zenta:neighbours($doc,$element,'is implemented by/implements,2')
+	return
+		if ($doc//element[@name=$element/@name]//@zentaElement=$step/@id)
+		then 
+			for $bo in  $doc//element[@id=$step//value[not(@derived="true")]/@target]
+			return
+				if ( $doc//element[@name=$element/@name]//@zentaElement=$bo/@id )
+					then ()
+					else concat('not in view: ',$bo/@name)
+			
+			else concat('not in view: ',$step/@name)
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="076a9195-64ac-42fd-a9a9-156f6a6a312f"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="210d8d73-81ca-40e1-ad53-659345d80518"
+               target="service"/>
    </folder>
-   <folder name="05. Clarifications" id="4a539546-237d-4637-a4a0-e13de8d1777a">
+   <folder name="09. Clarifications" id="4a539546-237d-4637-a4a0-e13de8d1777a">
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Clarifications"
                id="b64d15b6-4f9c-404d-93f2-ac9609782a6b">
@@ -711,7 +779,7 @@ else
                id="41280d46-b2d3-435a-8d55-2cd78e913eb0">
          <child xsi:type="zenta:DiagramObject"
                 id="f51068bf-5853-497b-8cb2-03e86b727eef"
-                targetConnections="033131f3-3c48-4e38-abf6-9652f18883e3 b8198cf6-8cfc-4620-9976-4b85b43dc898"
+                targetConnections="033131f3-3c48-4e38-abf6-9652f18883e3 b8198cf6-8cfc-4620-9976-4b85b43dc898 8b32a780-d959-42c9-b155-0633b483c201"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="371" y="108" width="-1" height="-1"/>
          </child>
@@ -751,6 +819,16 @@ else
                               target="f51068bf-5853-497b-8cb2-03e86b727eef"
                               relationship="011fb25d-fa82-4caa-959e-fdf3a62e3645"/>
          </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="5bf2a311-edfb-465a-9377-df97805e0844"
+                zentaElement="2a22742e-fba4-4c39-abff-73c2debab480">
+            <bounds x="143" y="391" width="206" height="90"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="8b32a780-d959-42c9-b155-0633b483c201"
+                              source="5bf2a311-edfb-465a-9377-df97805e0844"
+                              target="f51068bf-5853-497b-8cb2-03e86b727eef"
+                              relationship="c37f84d8-d6a4-4632-b966-6cdf7f597b99"/>
+         </child>
       </element>
       <element xsi:type="zenta:BasicRelationship"
                id="97d1bbc1-5ec0-4ee6-ad61-e5170956e20f"
@@ -765,7 +843,7 @@ else
 Those connections can have modifiers in their name separated using ','
 'I' or 'S' means that the object is part of the interface (parameter or return value), or reached as a side effect (through a repository)
 'R', 'E' or 'D' means that the object is passed by reference or directly as an Entity or DTO
-'O', 'L', or 'S' means that the operation uses one object, an ordered list, or an unordered set
+'O', 'L', or 'U' means that the operation uses one object, an ordered list, or an unordered set
 any other string is the name
 
 </documentation>
@@ -807,8 +885,24 @@ return if (contains($conn/@name,'I') or contains($conn/@name,'S'))
                ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                source="de5d9eab-d800-4c8d-a1c1-4ed90e570b9a"
                target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicObject"
+               name="Process step to business object connections should use one, list or set"
+               id="2a22742e-fba4-4c39-abff-73c2debab480"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>clarifications|
+for $conn in $doc//connection[@source=$element/@id and (@ancestorName='reads' or @ancestorName='modifies')]
+return if (contains($conn/@name,'O') or contains($conn/@name,'L') or contains($conn/@name,'U') )
+	then ()
+	else concat('no O/L/U qualifier for ', $doc//element[@id=$conn/@source]/@name, ' -} ', $doc//element[@id=$conn/@target]/@name,codepoints-to-string(10))
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="c37f84d8-d6a4-4632-b966-6cdf7f597b99"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="2a22742e-fba4-4c39-abff-73c2debab480"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
    </folder>
-   <folder name="06. Application structure"
+   <folder name="05. Application structure"
            id="d5f34b2e-b7d9-4350-8a51-c95350fd683b">
       <element xsi:type="zenta:BasicObject"
                name="Package"
@@ -1084,7 +1178,7 @@ else 'not in its folder'</documentation>
                source="768e7503-e491-4d74-827c-198eb4bfe40d"
                target="d3d4e39d-09a6-4a0f-a985-be922245d850"/>
    </folder>
-   <folder name="07. Data Structures" id="34ea2275-855f-470e-b479-baf6738ddb0a">
+   <folder name="06. Data Structures" id="34ea2275-855f-470e-b479-baf6738ddb0a">
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Data Structures constraints"
                id="7722981f-5617-47a3-939c-9dcf810f1057">
