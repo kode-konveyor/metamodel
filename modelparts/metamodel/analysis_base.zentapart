@@ -2813,6 +2813,32 @@ This is the same as Requirement in Common Criteria.
             <property key="fontColor"/>
             <property key="font"/>
          </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="Constant"
+                  id="ebc74a50-0298-4c43-8830-d93ede22576b"
+                  ancestor="thing">
+            <documentation>Constant is a special property. Its value is predetermined and never changes.
+</documentation>
+            <property key="fillColor" value="#ce5c00"/>
+            <property key="elementShape" value="ellipseShape"/>
+            <property key="textAlignment" value="2"/>
+            <property key="fontColor" value="#ffffff"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:ZentaDiagramModel"
+                  name="dependencies"
+                  id="24ec1059-cb2e-4fe5-8aa8-5916cee9af86">
+            <child xsi:type="zenta:DiagramObject"
+                   id="c92ee533-effd-46d1-924d-28013b20d043"
+                   zentaElement="ebc74a50-0298-4c43-8830-d93ede22576b">
+               <bounds x="220" y="68" width="-1" height="-1"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="d49bf94a-dc7c-40b5-92dd-9d2d86fcf311"
+                   zentaElement="ffbe5058-5089-4c5a-965d-e996df089f8e">
+               <bounds x="370" y="68" width="-1" height="-1"/>
+            </child>
+         </element>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="deprecation"
