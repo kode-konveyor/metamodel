@@ -176,6 +176,19 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
                ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                source="4d15738c-09e8-4971-820d-c254a5e99d06"
                target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
+      <element xsi:type="zenta:BasicRelationship"
+               name="contains"
+               id="f062189d-e43e-4f83-98a8-9f013b94756c"
+               ancestor="basicrelation"
+               source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
+               target="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="DiamondSourceDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
    </folder>
    <folder name="00. Analysis relations" id="23dea549-9ef0-4512-9430-5d6fe364dbde">
       <property key="display" value="hidden"/>
@@ -271,20 +284,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="is parallel to/is parallel to"
-               id="e0643d14-cce3-46c4-ae49-715d09f47917"
-               ancestor="basicrelation"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SmallStartArrowDecoration SmallEndArrowDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="iterates"
                id="81dfb065-1d6a-4ee5-8385-14cf7c6ed956"
                ancestor="basicrelation"
@@ -326,19 +325,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="reads"
-               id="d9f4a80e-d07b-4767-ad0a-aa86988783f8"
-               ancestor="basicrelation"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="SmallStartArrowDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="contains"
                id="f9bf6994-4d9c-4c50-b9ad-e2e11b94ff2e"
                ancestor="basicrelation"
@@ -365,20 +351,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="aggregates references to"
-               id="beb54302-3c50-4aa2-a759-7d70a97f8c97"
-               ancestor="c8c86cdc-63e3-434a-b04a-0c950867855b"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SparseDashedLineDecoration SmallEndArrowDecoration DiamondSourceDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="clicks when/does not input from"
                id="0d91630c-d35b-41fa-8066-fee32e155fd2"
                ancestor="basicrelation"
@@ -386,74 +358,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
                target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration" value="DotTargetDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="est delete"
-               id="d0ce1c85-c11c-4f6c-a1a5-d2486d0b5640"
-               ancestor="basicrelation"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="foooo"
-               id="732d9c95-0250-4bca-8ee4-53b356374ff5"
-               ancestor="basicrelation"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="inputs"
-               id="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
-               ancestor="basicrelation"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SmallStartArrowDecoration DottedLineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="inputs as DTO"
-               id="9c7060f6-02ef-407c-b30b-d7ac51079ddd"
-               ancestor="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SparseDashedLineDecoration SmallStartArrowDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="inputs id of"
-               id="5d914d47-54f3-47a0-a4c6-81a9f73c9fa2"
-               ancestor="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SmallStartArrowDecoration SparseDashedLineDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
@@ -487,48 +391,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="is presented by"
-               id="33cf3872-ef5a-4e29-8e4a-c2faf73f68a8"
-               ancestor="basicrelation"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <documentation>rest read
-</documentation>
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="lists"
-               id="34522347-9adf-4a30-b8da-8f21fd4a02c8"
-               ancestor="c8c86cdc-63e3-434a-b04a-0c950867855b"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value=" DiamondSourceDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="lists references to"
-               id="9b0b78a0-3fe8-4ec3-83fb-ac176b29ab18"
-               ancestor="34522347-9adf-4a30-b8da-8f21fd4a02c8"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SparseDashedLineDecoration DiamondSourceDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="provides data in/inputs from"
                id="dade9df1-08e7-45f0-9ac7-458729815864"
                ancestor="basicrelation"
@@ -536,20 +398,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
                target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration" value="SmallEndArrowDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="references"
-               id="cb0bf7bb-cbdb-4f7c-acea-9353a7cfe1b8"
-               ancestor="8aa62b50-ef2a-41ed-99b8-4d853a945d86"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SparseDashedLineDecoration SmallEndArrowDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
@@ -564,128 +412,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"
                    value=" SmallEndArrowDecoration DottedLineDecoration DashedLineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="rest create"
-               id="933bdec9-7751-434c-bcf0-b3a0f2c9bceb"
-               ancestor="basicrelation"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="rest mass create"
-               id="470cad66-a4f2-46f1-95ed-71b6da29063b"
-               ancestor="basicrelation"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="rest mass update"
-               id="8a69600f-ae51-4ccc-b0df-90719aee5a7b"
-               ancestor="basicrelation"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="rest update"
-               id="2c3ed86a-bf90-436c-8fc5-636a222e1ee9"
-               ancestor="basicrelation"
-               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="returns"
-               id="fcd1200e-2225-4b4f-914e-0846e429cf1a"
-               ancestor="basicrelation"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="DottedLineDecoration SmallEndArrowDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="returns as DTO"
-               id="2c9f3d81-cea1-4d36-b0de-5b42d0e3f293"
-               ancestor="fcd1200e-2225-4b4f-914e-0846e429cf1a"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SparseDashedLineDecoration SmallEndArrowDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="returns set"
-               id="59baca2a-e8ba-49e9-932f-ac0b759d23a1"
-               ancestor="fcd1200e-2225-4b4f-914e-0846e429cf1a"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SmallEndArrowDecoration DottedLineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="3"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="returns set as DTO"
-               id="21d9c9f0-30f8-40ae-af67-4fc72567ef0c"
-               ancestor="2c9f3d81-cea1-4d36-b0de-5b42d0e3f293"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SmallEndArrowDecoration SparseDashedLineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="2"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="uses"
-               id="efd0c5af-cdd1-4db0-b91e-e1ce0b8ec5d2"
-               ancestor="basicrelation"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SmallEndArrowDecoration SparseDashedLineDecoration DottedLineDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
@@ -834,11 +560,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
                id="07d5cbcd-8425-407c-9228-79b487a87b35"
                ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                source="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf"
-               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="c4d4660f-0952-458d-9b20-d40a2eda7073"
-               ancestor="64981f96-11a3-4631-b4f8-dd38993cec60"
-               source="05f5c95a-6781-4d95-a90b-9e9aede97472"
                target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
       <element xsi:type="zenta:BasicRelationship"
                id="ab3cf1ff-0b92-450f-a9a7-f9b73cc2ba8f"
@@ -1563,32 +1284,6 @@ if($element/ancestor::folder[@name='2. Business Objects'])
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="is a/is the type of"
-                  id="05f5c95a-6781-4d95-a90b-9e9aede97472"
-                  ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
-            <documentation>1|
-zentatools:let(
-	'direct',
-	'zenta:neighboursRun1($doc,$element,''is a/is the type of,1'')',
-	'if(count($direct)&gt;0)
-		then
-			$direct
-		else if(count((zenta:neighboursRun1($doc,$element,''has,1''),zenta:neighboursRun1($doc,$element,''aggregates,1''))) &gt; 0)
-			then
-				$element
-			else zentatools:let(
-				''implicitlytyped'',
-				''zenta:neighboursRun1($doc,$element,''''returns,2;is implemented by/implements,1;returns type/is returned by,1'''')'',
-				''if(count($implicitlytyped) &gt; 0)
-					then
-						$implicitlytyped
-					else
-						()''
-             )'
-)
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
                   name="is inside the process folder"
                   id="519c2ea9-eb09-463b-9001-c2eeb01a3d72"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
@@ -1805,7 +1500,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
                   connectionRouterType="1">
             <child xsi:type="zenta:DiagramObject"
                    id="89403412-f003-4065-86f4-8347ca8f2703"
-                   targetConnections="fe81afc7-79ac-4049-90a3-024efc756d44 9d7791fe-0394-4695-abaf-b16316ed2a11 d78acb10-b987-4a1e-928a-ca82d0d0ff07 8aa7a8a8-1d3d-45bf-894b-9441028e2b76 a7d07507-62bd-44fa-a1a7-fafee1ef8975 54e0287a-e4b3-4b7e-8ede-196ba1bdf178"
+                   targetConnections="fe81afc7-79ac-4049-90a3-024efc756d44 9d7791fe-0394-4695-abaf-b16316ed2a11 d78acb10-b987-4a1e-928a-ca82d0d0ff07 8aa7a8a8-1d3d-45bf-894b-9441028e2b76 54e0287a-e4b3-4b7e-8ede-196ba1bdf178 460c1286-7714-4f14-ab53-739e135ec5bb"
                    zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
                <bounds x="876" y="42" width="-1" height="-1"/>
             </child>
@@ -1866,10 +1561,10 @@ if($element/ancestor::folder[@name='4. User Interface'])
                    zentaElement="05f5c95a-6781-4d95-a90b-9e9aede97472">
                <bounds x="876" y="144" width="-1" height="-1"/>
                <sourceConnection xsi:type="zenta:Connection"
-                                 id="a7d07507-62bd-44fa-a1a7-fafee1ef8975"
+                                 id="460c1286-7714-4f14-ab53-739e135ec5bb"
                                  source="2a9d9ee3-589a-4eef-a2d3-6ef33a7b163d"
                                  target="89403412-f003-4065-86f4-8347ca8f2703"
-                                 relationship="c4d4660f-0952-458d-9b20-d40a2eda7073"/>
+                                 relationship="f1764cb5-9a75-4efd-8b78-a288afeb033c"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="fb10cbf3-3fa8-4e72-9263-4b1397d12be8"
@@ -2088,9 +1783,15 @@ if(zenta:neighbours(
 		zenta:neighbours($doc,$element,'preceeds,1'),
 		'contains,2')[@xsi:type='Process Step']/@id
 	!=
-	zenta:neighbours($doc,$element,'contains,2')/@id
+	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Process Step']/@id
 )
-then 'continued in another story'
+then concat('continued in another story:', string-join(
+	for $next in zenta:neighbours($doc,$element,'preceeds,1')
+		return
+			for $story in  zenta:neighbours($doc,$next,'contains,2')
+			return concat('through ', $next/@name, ' to ', $story/@name)
+	,
+	', '))
 else ()
 </documentation>
          </element>
@@ -2184,20 +1885,15 @@ else 'no process step found'
                               id="b5f30599-762b-47bf-a7f5-b9f496f5153e"
                               source="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
                               target="24682047-e093-4311-80b8-8caa007d6595"
-                              relationship="d9f4a80e-d07b-4767-ad0a-aa86988783f8"/>
+                              relationship="d9f4a80e-d07b-4767-ad0a-aa86988783f8">
+               <bendpoint startX="-112" startY="21" endX="56" endY="-75"/>
+            </sourceConnection>
             <sourceConnection xsi:type="zenta:Connection"
                               id="ced474f9-b46a-4489-ba8f-ca439742186d"
                               source="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
                               target="067abdce-df93-45db-98ee-414122e331ff"
                               lineDecoration="DottedLineDecoration DotTargetDecoration DotSourceDecoration"
                               relationship="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="f859851f-7b0c-4c70-979a-aa9258d367a7"
-                              source="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
-                              target="60005ade-f1f4-4732-ac75-89fde794e9e0"
-                              relationship="efd0c5af-cdd1-4db0-b91e-e1ce0b8ec5d2">
-               <bendpoint startX="103" startY="84" endX="97" endY="-128"/>
-            </sourceConnection>
             <sourceConnection xsi:type="zenta:Connection"
                               id="266ba68e-899b-43be-9c3f-7b7bc2bfaa43"
                               source="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
@@ -2210,6 +1906,13 @@ else 'no process step found'
                               target="5e325f21-c925-43f4-8174-38f79d497dd5"
                               lineDecoration="SmallEndArrowDecoration DashedLineDecoration"
                               relationship="7f4abeb0-d9a3-4b44-9dcd-ba8d1970f419"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="29547e74-4535-4063-819b-a5a8d06d0907"
+                              source="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
+                              target="60005ade-f1f4-4732-ac75-89fde794e9e0"
+                              relationship="f53d0fd7-db6a-4b40-886b-55c0b3e7a8dd">
+               <bendpoint startX="40" startY="89" endX="34" endY="-123"/>
+            </sourceConnection>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="48b523e2-1e13-44cd-89af-538a3395f9b2"
@@ -2255,21 +1958,10 @@ else 'no process step found'
                               relationship="8aa62b50-ef2a-41ed-99b8-4d853a945d86">
                <bendpoint startX="73" startY="121" endX="74" endY="-144"/>
             </sourceConnection>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="116303d8-c236-481f-9b02-9bbf8443cf88"
-                              source="24682047-e093-4311-80b8-8caa007d6595"
-                              target="c663a906-e0b7-43f9-9071-88a0971c7f02"
-                              lineDecoration=" DiamondSourceDecoration"
-                              relationship="34522347-9adf-4a30-b8da-8f21fd4a02c8"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="0c2f4504-4116-4620-b3e7-363a400025d9"
-                              source="24682047-e093-4311-80b8-8caa007d6595"
-                              target="60005ade-f1f4-4732-ac75-89fde794e9e0"
-                              relationship="732d9c95-0250-4bca-8ee4-53b356374ff5"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="60005ade-f1f4-4732-ac75-89fde794e9e0"
-                targetConnections="60f1d6b9-5556-4579-a32f-1243c3a7645f f859851f-7b0c-4c70-979a-aa9258d367a7 0c2f4504-4116-4620-b3e7-363a400025d9"
+                targetConnections="60f1d6b9-5556-4579-a32f-1243c3a7645f 29547e74-4535-4063-819b-a5a8d06d0907"
                 fillColor="#729fcf"
                 elementShape="roundedRectangleShape"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
@@ -2277,7 +1969,7 @@ else 'no process step found'
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="c663a906-e0b7-43f9-9071-88a0971c7f02"
-                targetConnections="2dba4880-bfbc-4c65-8f3f-37e9936f0174 57312d68-4d36-40c1-94f6-ff654081f93c 116303d8-c236-481f-9b02-9bbf8443cf88"
+                targetConnections="2dba4880-bfbc-4c65-8f3f-37e9936f0174 57312d68-4d36-40c1-94f6-ff654081f93c"
                 fillColor="#729fcf"
                 zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
             <bounds x="203" y="421" width="-1" height="-1"/>
@@ -2330,7 +2022,7 @@ else 'no process step found'
          <property key="fillColor" value="#ef2929"/>
          <property key="elementShape" value="deliverableShape"/>
          <property key="textAlignment" value="2"/>
-         <property key="fontColor" value="#eeeeec"/>
+         <property key="fontColor" value="#ffffff"/>
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicObject"
@@ -2786,6 +2478,460 @@ This is the same as Requirement in Common Criteria.
          <property key="fontColor"/>
          <property key="font"/>
       </element>
+   </folder>
+   <folder name="0. deprecation" id="23fb97f5-0b38-40ce-9653-8cfaa7ec1076">
+      <folder name="Deprecated objects" id="94b88447-b75b-4f3b-97ec-a957028960be">
+         <element xsi:type="zenta:BasicRelationship"
+                  name="contains deprecated"
+                  id="eea967e3-428c-466e-8688-bd375885e288"
+                  ancestor="basicrelation"
+                  source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="foooo deprecated"
+                  id="732d9c95-0250-4bca-8ee4-53b356374ff5"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="inputs as DTO deprecated"
+                  id="9c7060f6-02ef-407c-b30b-d7ac51079ddd"
+                  ancestor="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="inputs id of deprecated"
+                  id="5d914d47-54f3-47a0-a4c6-81a9f73c9fa2"
+                  ancestor="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is a/is the type of deprecated"
+                  id="beaef484-0c2e-4a4f-8aaf-d036a9c8808f"
+                  ancestor="basicrelation"
+                  source="ffbe5058-5089-4c5a-965d-e996df089f8e"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is based on/is base of deprecated"
+                  id="e8891b80-9f9e-414e-be21-759d58d3035e"
+                  ancestor="basicrelation"
+                  source="ffbe5058-5089-4c5a-965d-e996df089f8e"
+                  target="ffbe5058-5089-4c5a-965d-e996df089f8e">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is presented by deprecated"
+                  id="33cf3872-ef5a-4e29-8e4a-c2faf73f68a8"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <documentation>rest read
+</documentation>
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="lists deprecated"
+                  id="34522347-9adf-4a30-b8da-8f21fd4a02c8"
+                  ancestor="c8c86cdc-63e3-434a-b04a-0c950867855b"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="lists references to deprecated"
+                  id="9b0b78a0-3fe8-4ec3-83fb-ac176b29ab18"
+                  ancestor="34522347-9adf-4a30-b8da-8f21fd4a02c8"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="reads"
+                  id="d9f4a80e-d07b-4767-ad0a-aa86988783f8"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SmallStartArrowDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="references deprecated"
+                  id="cb0bf7bb-cbdb-4f7c-acea-9353a7cfe1b8"
+                  ancestor="8aa62b50-ef2a-41ed-99b8-4d853a945d86"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="rest create deprecated"
+                  id="933bdec9-7751-434c-bcf0-b3a0f2c9bceb"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="rest mass create deprecated"
+                  id="470cad66-a4f2-46f1-95ed-71b6da29063b"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="rest mass update deprecated"
+                  id="8a69600f-ae51-4ccc-b0df-90719aee5a7b"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="rest update deprecated"
+                  id="2c3ed86a-bf90-436c-8fc5-636a222e1ee9"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="returns as DTO deprecated"
+                  id="2c9f3d81-cea1-4d36-b0de-5b42d0e3f293"
+                  ancestor="fcd1200e-2225-4b4f-914e-0846e429cf1a"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="returns set as DTO deprecated"
+                  id="21d9c9f0-30f8-40ae-af67-4fc72567ef0c"
+                  ancestor="2c9f3d81-cea1-4d36-b0de-5b42d0e3f293"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="2"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="returns set deprecated"
+                  id="59baca2a-e8ba-49e9-932f-ac0b759d23a1"
+                  ancestor="fcd1200e-2225-4b4f-914e-0846e429cf1a"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="3"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="uses deprecated"
+                  id="efd0c5af-cdd1-4db0-b91e-e1ce0b8ec5d2"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <documentation>Use 'depends on' instead.</documentation>
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="uses deprecated"
+                  id="160ffafa-bbed-47e8-8c9a-5797d18b38c6"
+                  ancestor="basicrelation"
+                  source="service"
+                  target="service">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="est delete deprecated"
+                  id="d0ce1c85-c11c-4f6c-a1a5-d2486d0b5640"
+                  ancestor="basicrelation"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="inputs deprecated"
+                  id="a4e8d76c-ea15-4af4-8450-fc29f8c43fc1"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="returns deprecated"
+                  id="fcd1200e-2225-4b4f-914e-0846e429cf1a"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="aggregates references to deprecated"
+                  id="beb54302-3c50-4aa2-a759-7d70a97f8c97"
+                  ancestor="c8c86cdc-63e3-434a-b04a-0c950867855b"
+                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+            <property key="lineColor" value="#aaaaaa"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="is parallel to/is parallel to deprecated"
+                  id="e0643d14-cce3-46c4-ae49-715d09f47917"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration"
+                      value="SmallStartArrowDecoration SmallEndArrowDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+      </folder>
+      <element xsi:type="zenta:ZentaDiagramModel"
+               name="deprecation"
+               id="af42470b-0e22-47a2-89ba-1d6df8daa398">
+         <child xsi:type="zenta:DiagramObject"
+                id="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                targetConnections="1488eb7a-deee-4232-ab5f-f7a13d62bfae 02ea5ac8-aa1e-40a9-8bcc-057790088e5d 498ee8de-68f1-4250-8694-779ffddf7dc5"
+                zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
+            <bounds x="240" y="48" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="033b866a-8c31-407a-a6f7-cc4dee1b01fa"
+                zentaElement="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d">
+            <bounds x="301" y="188" width="241" height="84"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="1488eb7a-deee-4232-ab5f-f7a13d62bfae"
+                              source="033b866a-8c31-407a-a6f7-cc4dee1b01fa"
+                              target="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                              relationship="e1e7b150-a8e3-40a2-96d4-b3ceb451ee1b"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="ac4de418-1cde-4f85-a311-ddbf09216cde"
+                zentaElement="58c88955-d879-44ec-aa28-f1c2698a37ea">
+            <bounds x="614" y="151" width="192" height="121"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="498ee8de-68f1-4250-8694-779ffddf7dc5"
+                              source="ac4de418-1cde-4f85-a311-ddbf09216cde"
+                              target="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                              relationship="0a3fc59b-e39c-4229-ba22-e6a1e35734ea"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="8a5389b6-61a1-40ed-b72d-2d4bf8e71fb5"
+                zentaElement="952a7b72-30f1-484d-84dc-fb246309d058">
+            <bounds x="106" y="188" width="160" height="96"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="02ea5ac8-aa1e-40a9-8bcc-057790088e5d"
+                              source="8a5389b6-61a1-40ed-b72d-2d4bf8e71fb5"
+                              target="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                              relationship="4dfbd43b-5aa0-4e4a-85a0-9217a7821eb1"/>
+         </child>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Deprecated metamodel objects are in their folder"
+               id="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')]
+return
+	if ($deprecated/../@name='Deprecated objects')
+	then ()
+	else concat($deprecated/@name,codepoints-to-string(10))
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="e1e7b150-a8e3-40a2-96d4-b3ceb451ee1b"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
+               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
+      <element xsi:type="zenta:BasicObject"
+               name="no elements should be inherited from Deprecated ones"
+               id="58c88955-d879-44ec-aa28-f1c2698a37ea"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')],
+	$child in $doc//*[(name()='connection' or name()='element') and @ancestor=$deprecated/@id]
+return
+	if ($child/..[@name!='Deprecated objects'])
+	then concat($child/@name,'(',$child/@id,':',$doc//element[@id=$child/@source]/@name,'-}',$doc//element[@id=$child/@target]/@name, '):',$deprecated/@name,' in ', string-join($child/ancestor::folder/@name,'/'),codepoints-to-string(10))
+	else ()
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Deprecated objects should not be in any view"
+               id="952a7b72-30f1-484d-84dc-fb246309d058"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')],
+	$view in $doc//element[.//@zentaElement=$deprecated/@id or .//@relationship=$deprecated/@id]
+return
+	concat($view/@name,'(',$view/@id,'):',$deprecated/@name,' in ', string-join($view/ancestor::folder/@name,'/'),codepoints-to-string(10))
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="4dfbd43b-5aa0-4e4a-85a0-9217a7821eb1"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="952a7b72-30f1-484d-84dc-fb246309d058"
+               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="0a3fc59b-e39c-4229-ba22-e6a1e35734ea"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="58c88955-d879-44ec-aa28-f1c2698a37ea"
+               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="c915d0eb-99a3-4706-aea8-c698d4f4b845"
+               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
+               source="0738c144-55cf-42b1-9675-ba91d9e99f67"
+               target="02f0b9c7-d63c-419e-91e0-17987354ed4e"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="03a2da7f-38ca-4664-9576-5db6b8ff90f9"
+               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
+               source="93653260-0c4b-47bd-9da8-c019432b1551"
+               target="bb9a0f33-e989-4f81-aeff-afdb98e1ce0d"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="3b7dd286-f6ad-4101-a105-dfc1aec4b2f4"
+               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
+               source="1d815232-2850-4d80-8997-7191e3d68cd9"
+               target="4c39fdb3-0b40-4f11-b3bf-e2ffd93b1bf8"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="5a2c2f37-8fc9-4a2c-bf4c-a360c61b8611"
+               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
+               source="0936ffd3-9032-43c8-a3f0-b0ad1e859a60"
+               target="cc509ca3-93be-4d2f-9dce-55d2c1dff9c7"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="207dac75-b106-4754-8b40-219bd7c88a10"
+               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
+               source="7ccd8a6d-793c-4591-bb9e-635ac0a41ef9"
+               target="4c39fdb3-0b40-4f11-b3bf-e2ffd93b1bf8"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="216eca9d-377d-4bcd-a32a-cd8e79e81154"
+               ancestor="b6f9974a-1393-4848-a6f1-febcd90c0de1"
+               source="51d96ed3-2df2-410a-ab8d-9e81ab737084"
+               target="4c39fdb3-0b40-4f11-b3bf-e2ffd93b1bf8"/>
    </folder>
    <property key="modelDependency" value="metamodel/basics"/>
    <element xsi:type="zenta:BasicObject"
