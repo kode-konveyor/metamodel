@@ -1500,7 +1500,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
                   connectionRouterType="1">
             <child xsi:type="zenta:DiagramObject"
                    id="89403412-f003-4065-86f4-8347ca8f2703"
-                   targetConnections="fe81afc7-79ac-4049-90a3-024efc756d44 9d7791fe-0394-4695-abaf-b16316ed2a11 d78acb10-b987-4a1e-928a-ca82d0d0ff07 8aa7a8a8-1d3d-45bf-894b-9441028e2b76 54e0287a-e4b3-4b7e-8ede-196ba1bdf178 460c1286-7714-4f14-ab53-739e135ec5bb"
+                   targetConnections="fe81afc7-79ac-4049-90a3-024efc756d44 9d7791fe-0394-4695-abaf-b16316ed2a11 d78acb10-b987-4a1e-928a-ca82d0d0ff07 8aa7a8a8-1d3d-45bf-894b-9441028e2b76 54e0287a-e4b3-4b7e-8ede-196ba1bdf178"
                    zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
                <bounds x="876" y="42" width="-1" height="-1"/>
             </child>
@@ -1555,16 +1555,6 @@ if($element/ancestor::folder[@name='4. User Interface'])
                                  source="16fc2b6b-a96b-484e-85d1-033fd96e6631"
                                  target="89403412-f003-4065-86f4-8347ca8f2703"
                                  relationship="07d5cbcd-8425-407c-9228-79b487a87b35"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
-                   id="2a9d9ee3-589a-4eef-a2d3-6ef33a7b163d"
-                   zentaElement="05f5c95a-6781-4d95-a90b-9e9aede97472">
-               <bounds x="876" y="144" width="-1" height="-1"/>
-               <sourceConnection xsi:type="zenta:Connection"
-                                 id="460c1286-7714-4f14-ab53-739e135ec5bb"
-                                 source="2a9d9ee3-589a-4eef-a2d3-6ef33a7b163d"
-                                 target="89403412-f003-4065-86f4-8347ca8f2703"
-                                 relationship="f1764cb5-9a75-4efd-8b78-a288afeb033c"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="fb10cbf3-3fa8-4e72-9263-4b1397d12be8"
