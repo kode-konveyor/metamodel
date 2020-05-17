@@ -198,11 +198,6 @@
                                  target="1f1f9ba5-c27b-4eb9-8744-1513d99a0ab2"
                                  relationship="cc80e80e-dadd-42de-acf4-16010730ff84"/>
                <sourceConnection xsi:type="zenta:Connection"
-                                 id="7cb506a7-1dd0-4705-ad03-0c187ad7cc2b"
-                                 source="7ca359d0-8d13-40e8-adde-80dec418b08a"
-                                 target="f95d9ff9-f61c-406e-8808-3b846f285a4b"
-                                 relationship="0c499a7d-2ee6-4513-b3a7-557d0ed20d98"/>
-               <sourceConnection xsi:type="zenta:Connection"
                                  id="b003b48f-796e-4787-bb5f-6acb59e18b8f"
                                  source="7ca359d0-8d13-40e8-adde-80dec418b08a"
                                  target="944c047a-9101-4718-8761-e69c777a2aad"
@@ -456,12 +451,6 @@
                <bounds x="102" y="487" width="151" height="114"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
-                   id="f95d9ff9-f61c-406e-8808-3b846f285a4b"
-                   targetConnections="7cb506a7-1dd0-4705-ad03-0c187ad7cc2b"
-                   zentaElement="de5d9eab-d800-4c8d-a1c1-4ed90e570b9a">
-               <bounds x="1109" y="753" width="272" height="100"/>
-            </child>
-            <child xsi:type="zenta:DiagramObject"
                    id="944c047a-9101-4718-8761-e69c777a2aad"
                    targetConnections="b003b48f-796e-4787-bb5f-6acb59e18b8f"
                    zentaElement="a7530ab8-0497-48b7-a9f9-92847f4b5e7b">
@@ -548,11 +537,6 @@
                   ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
                   source="ea494738-f723-4478-8775-b15e325ffa72"
                   target="735b2b89-6ec4-42e9-b7e4-8548a9048b2e"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="0c499a7d-2ee6-4513-b3a7-557d0ed20d98"
-                  ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
-                  source="ea494738-f723-4478-8775-b15e325ffa72"
-                  target="de5d9eab-d800-4c8d-a1c1-4ed90e570b9a"/>
          <element xsi:type="zenta:BasicRelationship"
                   id="7d75f014-8c2e-43a1-a711-f160fa817ce0"
                   ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
