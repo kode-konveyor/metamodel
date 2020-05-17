@@ -2109,7 +2109,7 @@ for $conn in (
 It is in most cases carries the business meaning of something which is result of one service and input of another one.
 It does not have implementation, but tightly coupled with a type which has.
 </documentation>
-         <property key="fillColor" value="#729fcf"/>
+         <property key="fillColor"/>
          <property key="elementShape"/>
          <property key="textAlignment" value="2"/>
          <property key="fontColor"/>
