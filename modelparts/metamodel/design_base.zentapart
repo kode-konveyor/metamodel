@@ -3042,6 +3042,32 @@ In a model view it is a good practice to grey out elements which are outside of 
             <property key="lineWidth" value="1"/>
             <property key="font"/>
          </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="has template parameter/is template parameter of deprecated"
+                  id="aa791e3c-d996-47b5-913b-abf0877e331a"
+                  ancestor="basicrelation"
+                  source="callable"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="returns type/is returned by deprecated"
+                  id="9c2880a5-aad2-4a3b-aa80-70fb386234cb"
+                  ancestor="basicrelation"
+                  source="callable"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="deprecation"
@@ -3148,30 +3174,4 @@ return
             ancestor="basicrelation"
             source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
             target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
-   <element xsi:type="zenta:BasicRelationship"
-            name="has template parameter/is template parameter of deprecated"
-            id="aa791e3c-d996-47b5-913b-abf0877e331a"
-            ancestor="basicrelation"
-            source="callable"
-            target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-      <property key="textPosition" value="1"/>
-      <property key="lineDecoration"/>
-      <property key="lineColor"/>
-      <property key="fontColor"/>
-      <property key="lineWidth" value="1"/>
-      <property key="font"/>
-   </element>
-   <element xsi:type="zenta:BasicRelationship"
-            name="returns type/is returned by deprecated"
-            id="9c2880a5-aad2-4a3b-aa80-70fb386234cb"
-            ancestor="basicrelation"
-            source="callable"
-            target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-      <property key="textPosition" value="1"/>
-      <property key="lineDecoration"/>
-      <property key="lineColor"/>
-      <property key="fontColor"/>
-      <property key="lineWidth" value="1"/>
-      <property key="font"/>
-   </element>
 </folder>
