@@ -81,6 +81,8 @@
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="cca5f40f-1d29-4b7e-bc7d-d9c23c9bcff9"
+                fillColor="#729fcf"
+                elementShape="roundedRectangleShape"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="341" y="57" width="-1" height="-1"/>
             <sourceConnection xsi:type="zenta:Connection"
@@ -171,19 +173,6 @@
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="uses"
-               id="aaea75b0-b480-4f6c-a884-1cb5547d2514"
-               ancestor="basicrelation"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="DashedLineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="triggers"
                id="8130dc45-33bb-4914-b1f9-7b0a4ce50cce"
                ancestor="basicrelation"
@@ -225,49 +214,148 @@
          <property key="font"/>
       </element>
    </folder>
-   <folder name="UI element templates" id="538a2878-0fdc-4b17-b6ab-d48b4190b6da">
-      <element xsi:type="zenta:BasicObject"
-               name="Form"
-               id="27d97202-87a4-47ca-bde4-1c96ff39dc7e"
-               ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
-      <element xsi:type="zenta:BasicObject"
-               name="button"
-               id="94d6f057-5da5-461d-af0f-1571494c090e"
-               ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
-      <element xsi:type="zenta:BasicObject"
-               name="page"
-               id="af1a9693-a9ef-4d5d-886f-08d9d12e8c6b"
-               ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
-      <element xsi:type="zenta:BasicObject"
-               name="TabledList"
-               id="c7027ac1-cbd4-49c0-a352-ea7f2dc3a362"
-               ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
-      <element xsi:type="zenta:BasicObject"
-               name="textentry"
-               id="ea8de17a-5e6f-45ee-b699-bfb2a4493fce"
-               ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
-      <element xsi:type="zenta:BasicObject"
-               name="onClick"
-               id="12868e25-44bd-40b4-90cd-b80b00352802"
-               ancestor="ce463be5-f361-41a2-8316-23093e59bfe6"/>
+   <folder name="4. User Interface" id="538a2878-0fdc-4b17-b6ab-d48b4190b6da">
+      <folder name="Form" id="13d00412-2500-465e-8a58-b74506349cb9">
+         <element xsi:type="zenta:BasicObject"
+                  name="Form"
+                  id="27d97202-87a4-47ca-bde4-1c96ff39dc7e"
+                  ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+         <element xsi:type="zenta:ZentaDiagramModel"
+                  name="Form"
+                  id="d169ff40-e790-49f0-8adc-d56a97371619">
+            <child xsi:type="zenta:DiagramObject"
+                   id="a1bfbb39-2ca3-4fa0-9a78-30c80ba15f34"
+                   zentaElement="27d97202-87a4-47ca-bde4-1c96ff39dc7e">
+               <bounds x="304" y="173" width="-1" height="-1"/>
+            </child>
+         </element>
+      </folder>
+      <folder name="button" id="b7775406-f3ce-493e-873e-8bf82520d5b6">
+         <element xsi:type="zenta:ZentaDiagramModel"
+                  name="button"
+                  id="819d4507-fbf5-41b9-a687-9ca0a33bf724">
+            <child xsi:type="zenta:DiagramObject"
+                   id="f0c3dcca-c90e-4d5e-8145-2ae797001aac"
+                   zentaElement="94d6f057-5da5-461d-af0f-1571494c090e">
+               <bounds x="96" y="68" width="-1" height="-1"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="56761c4c-2e99-4d00-81d7-e6c857ce8968"
+                                 source="f0c3dcca-c90e-4d5e-8145-2ae797001aac"
+                                 target="bdc3efb0-2503-4f84-b74b-308b59b12228"
+                                 relationship="22c0d603-4a40-403c-83bd-9a3b4ca9dd9f"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="bdc3efb0-2503-4f84-b74b-308b59b12228"
+                   targetConnections="56761c4c-2e99-4d00-81d7-e6c857ce8968"
+                   zentaElement="12868e25-44bd-40b4-90cd-b80b00352802">
+               <bounds x="368" y="171" width="-1" height="-1"/>
+            </child>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="button"
+                  id="94d6f057-5da5-461d-af0f-1571494c090e"
+                  ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="onClick"
+                  id="12868e25-44bd-40b4-90cd-b80b00352802"
+                  ancestor="ce463be5-f361-41a2-8316-23093e59bfe6"/>
+      </folder>
+      <folder name="page" id="66de9ee0-f898-4289-8649-f7145aa1538b">
+         <element xsi:type="zenta:ZentaDiagramModel"
+                  name="page"
+                  id="aff53a5f-c391-4c7a-916c-8c388d5f220c">
+            <child xsi:type="zenta:DiagramObject"
+                   id="a2baf073-1e3e-4ab7-805c-c512f8a0a594"
+                   zentaElement="af1a9693-a9ef-4d5d-886f-08d9d12e8c6b">
+               <bounds x="282" y="149" width="-1" height="-1"/>
+            </child>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="page"
+                  id="af1a9693-a9ef-4d5d-886f-08d9d12e8c6b"
+                  ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+      </folder>
+      <folder name="TabledList" id="d6ca363d-82bc-402d-a52d-45d26f1e85a1">
+         <element xsi:type="zenta:ZentaDiagramModel"
+                  name="TabledList"
+                  id="9411d131-97fa-4cab-849b-5931b3257003">
+            <child xsi:type="zenta:DiagramObject"
+                   id="a747f1c1-934b-4369-8cf9-0dfca82248eb"
+                   zentaElement="c7027ac1-cbd4-49c0-a352-ea7f2dc3a362">
+               <bounds x="329" y="109" width="-1" height="-1"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="7a552066-d752-46cc-9290-fc4131f7311e"
+                                 source="a747f1c1-934b-4369-8cf9-0dfca82248eb"
+                                 target="c0d5d124-ecd4-46cd-9eb9-7381222457a0"
+                                 relationship="f6ec7546-3c30-4137-92ce-bb7af676f162"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="c0d5d124-ecd4-46cd-9eb9-7381222457a0"
+                   targetConnections="7a552066-d752-46cc-9290-fc4131f7311e"
+                   zentaElement="f44285e4-2324-4887-9d2b-9934832a5361">
+               <bounds x="510" y="344" width="-1" height="-1"/>
+            </child>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="onSelect"
+                  id="f44285e4-2324-4887-9d2b-9934832a5361"
+                  ancestor="ce463be5-f361-41a2-8316-23093e59bfe6"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="TabledList"
+                  id="c7027ac1-cbd4-49c0-a352-ea7f2dc3a362"
+                  ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+      </folder>
+      <folder name="textentry" id="987c40ee-3fd8-4e86-8f38-f9593bef288e">
+         <element xsi:type="zenta:ZentaDiagramModel"
+                  name="textentry"
+                  id="24bd08dc-fd80-40da-ac4d-421653db47ee">
+            <child xsi:type="zenta:DiagramObject"
+                   id="c6c3f5de-9059-475d-9a3e-bac27985a0fa"
+                   zentaElement="ea8de17a-5e6f-45ee-b699-bfb2a4493fce">
+               <bounds x="408" y="136" width="-1" height="-1"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="9067e1df-9d13-4534-9dbf-7a80868eb8ce"
+                                 source="c6c3f5de-9059-475d-9a3e-bac27985a0fa"
+                                 target="218441ef-9fe3-4307-b416-4b0c52263d3a"
+                                 relationship="f32c6797-e49a-45ec-84d3-813a2e8cd903"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="218441ef-9fe3-4307-b416-4b0c52263d3a"
+                   targetConnections="9067e1df-9d13-4534-9dbf-7a80868eb8ce"
+                   zentaElement="5ded5d25-6c00-4b84-bcbf-70f7d4891b60">
+               <bounds x="673" y="136" width="-1" height="-1"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="23fae75c-1b56-4132-8d23-6904a7633c3f"
+                                 source="218441ef-9fe3-4307-b416-4b0c52263d3a"
+                                 target="2876702f-f9be-4006-ba1c-3acb3107446c"
+                                 relationship="c8ee108e-92b4-4c4b-b0da-77c81eb56db7"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="2876702f-f9be-4006-ba1c-3acb3107446c"
+                   targetConnections="23fae75c-1b56-4132-8d23-6904a7633c3f"
+                   zentaElement="b0b9e3d0-389f-4989-941a-e97aeb77bdbc">
+               <bounds x="902" y="138" width="-1" height="-1"/>
+            </child>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="textentry"
+                  id="ea8de17a-5e6f-45ee-b699-bfb2a4493fce"
+                  ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="value"
+                  id="5ded5d25-6c00-4b84-bcbf-70f7d4891b60"
+                  ancestor="44d3e3c7-5434-4b39-ad2f-b6157804f83b"/>
+      </folder>
       <element xsi:type="zenta:BasicRelationship"
                id="22c0d603-4a40-403c-83bd-9a3b4ca9dd9f"
                ancestor="7d169f7b-5f22-457f-b063-622f0617b771"
                source="94d6f057-5da5-461d-af0f-1571494c090e"
                target="12868e25-44bd-40b4-90cd-b80b00352802"/>
-      <element xsi:type="zenta:BasicObject"
-               name="onSelect"
-               id="f44285e4-2324-4887-9d2b-9934832a5361"
-               ancestor="ce463be5-f361-41a2-8316-23093e59bfe6"/>
       <element xsi:type="zenta:BasicRelationship"
                id="f6ec7546-3c30-4137-92ce-bb7af676f162"
                ancestor="7d169f7b-5f22-457f-b063-622f0617b771"
                source="c7027ac1-cbd4-49c0-a352-ea7f2dc3a362"
                target="f44285e4-2324-4887-9d2b-9934832a5361"/>
-      <element xsi:type="zenta:BasicObject"
-               name="value"
-               id="5ded5d25-6c00-4b84-bcbf-70f7d4891b60"
-               ancestor="44d3e3c7-5434-4b39-ad2f-b6157804f83b"/>
       <element xsi:type="zenta:BasicRelationship"
                id="f32c6797-e49a-45ec-84d3-813a2e8cd903"
                ancestor="f3d4422b-2b19-4a30-922b-1af0890504a3"
