@@ -8,6 +8,7 @@
                id="15154133-7738-44db-8e84-1ad03b1c9589">
          <child xsi:type="zenta:DiagramObject"
                 id="f77767ac-7418-4c6e-ade3-e312452f5200"
+                targetConnections="2f5eef10-1f0c-4c33-819c-cb84842c1221"
                 fillColor="#e9b96e"
                 elementShape="nodeShape"
                 zentaElement="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
@@ -36,6 +37,19 @@
                 elementShape="nodeShape"
                 zentaElement="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
             <bounds x="209" y="324" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="a9f209b6-777e-4ce5-8fdf-cca63a8ceebf"
+                fillColor="#fcaf3e"
+                elementShape="deliverableShape"
+                zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
+            <bounds x="209" y="72" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="2f5eef10-1f0c-4c33-819c-cb84842c1221"
+                              source="a9f209b6-777e-4ce5-8fdf-cca63a8ceebf"
+                              target="f77767ac-7418-4c6e-ade3-e312452f5200"
+                              lineDecoration="DiamondSourceDecoration"
+                              relationship="f062189d-e43e-4f83-98a8-9f013b94756c"/>
          </child>
          <property key="Template"/>
       </element>
@@ -2109,7 +2123,7 @@ for $conn in (
 It is in most cases carries the business meaning of something which is result of one service and input of another one.
 It does not have implementation, but tightly coupled with a type which has.
 </documentation>
-         <property key="fillColor"/>
+         <property key="fillColor" value="#729fcf"/>
          <property key="elementShape"/>
          <property key="textAlignment" value="2"/>
          <property key="fontColor"/>
