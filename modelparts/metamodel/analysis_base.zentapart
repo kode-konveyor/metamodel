@@ -1057,7 +1057,8 @@ if(
 	$element/@xsi:type!='Objective' or
 	(count((
 		zenta:neighbours($doc,$element,'drives,2')[@xsi:type='Policy'],
-		zenta:neighbours($doc,$element,'drives,2;drives,2')[@xsi:type='Policy']
+		zenta:neighbours($doc,$element,'drives,2;drives,2')[@xsi:type='Policy'],
+		zenta:neighbours($doc,$element,'drives,2;drives,2;drives,2')[@xsi:type='Policy']
 	)) &gt; 0))
 then ()
 else 'no policy found'
