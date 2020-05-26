@@ -706,6 +706,7 @@
                   source="96bf31ef-da6e-43a9-9b47-9a2bbf8d1147"
                   target="4d15738c-09e8-4971-820d-c254a5e99d06"/>
       </folder>
+      <property key="display" value="hidden"/>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="analysis shunt"
                id="d9fb63c8-813e-49b1-ad50-29125e920045">
