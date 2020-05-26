@@ -945,6 +945,78 @@ else ()</documentation>
                   ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                   source="865a75be-ee52-4d44-98a3-6f413c70f1fb"
                   target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="Business object to business object connections"
+                  id="d6dbc559-2d93-4f37-bf3c-e6474c7919cc"
+                  ancestor="thing">
+            <documentation>A business object can have or aggregate other business objects.
+Those connections can have qualifiers in their name after a ';' separated by ',':
+Must have one of 'Reference' or 'Direct'
+aggregate must have one of  'Ordered' or 'Unordered'
+can have 'Virtual:'&lt;name&gt;, meaning that the corresponding field is only in Entities, and it is volatile: not stored, but computed from the reverse connection named.
+</documentation>
+            <property key="fillColor"/>
+            <property key="elementShape"/>
+            <property key="textAlignment" value="2"/>
+            <property key="fontColor"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="have description, behaviour or substep"
+                  id="24c89149-0040-426d-9104-ffcf2cd3aedf"
+                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <documentation>clarifications|
+if (count(
+	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Behaviour' or @xsi:type='Process Step']
+   ) &gt; 0 or
+   $element/documentation/text())
+then ()
+else 'no behaviour or substep found'
+</documentation>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="Process Step to Business Object Connections"
+                  id="90dc2514-fbd3-464e-a959-cbc305756493"
+                  ancestor="thing">
+            <documentation>A process step can read or modify business objects.
+Those connections can have modifiers in their name after ';', separated using ','
+must have one of 'Interface' or 'Repo'
+if not Repo:
+	must have one of 'Reference', 'Entity' or 'DTO'
+	must have one of 'One', 'Ordered' or 'Unordered'
+
+</documentation>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="uses the Business Objects from preceeding steps"
+                  id="0c6daa63-b33e-482c-8610-d9c56a516cdb"
+                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <documentation>clarifications|
+if (
+    count(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']) &gt; 0 and 
+    count(
+       zenta:neighbours($doc,$element,'clicks when/does not input from,2')|
+       zenta:neighbours($doc,$element,'provides data in/inputs from,2')
+     ) =0 and
+    count(zenta:neighbours($doc,$element,'contains,1')) = 0
+)
+then
+  if(count(
+	(
+		zenta:neighbours($doc,$element,'reads,1'),
+		zenta:neighbours($doc,$element,'inputs,1'),
+		zenta:neighbours($doc,$element,'inputs as DTO,1'),
+		zenta:neighbours($doc,$element,'inputs id of,1')
+	)[@xsi:type='Business Object']
+    ) &gt; 0)
+  then ()
+  else (
+	'previous process step but no business object read: ', 
+	string-join(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']/concat(@name,',',@id))
+	)
+else
+  ()</documentation>
+         </element>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Clarifications"
@@ -976,55 +1048,12 @@ else ()</documentation>
                               relationship="dcd3590e-06b4-42b5-9864-37de50d422ce"/>
          </child>
       </element>
-      <element xsi:type="zenta:BasicObject"
-               name="have description, behaviour or substep"
-               id="24c89149-0040-426d-9104-ffcf2cd3aedf"
-               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>clarifications|
-if (count(
-	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Behaviour' or @xsi:type='Process Step']
-   ) &gt; 0 or
-   $element/documentation/text())
-then ()
-else 'no behaviour or substep found'
-</documentation>
-      </element>
-      <element xsi:type="zenta:BasicObject"
-               name="uses the Business Objects from preceeding steps"
-               id="0c6daa63-b33e-482c-8610-d9c56a516cdb"
-               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>clarifications|
-if (
-    count(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']) &gt; 0 and 
-    count(
-       zenta:neighbours($doc,$element,'clicks when/does not input from,2')|
-       zenta:neighbours($doc,$element,'provides data in/inputs from,2')
-     ) =0 and
-    count(zenta:neighbours($doc,$element,'contains,1')) = 0
-)
-then
-  if(count(
-	(
-		zenta:neighbours($doc,$element,'reads,1'),
-		zenta:neighbours($doc,$element,'inputs,1'),
-		zenta:neighbours($doc,$element,'inputs as DTO,1'),
-		zenta:neighbours($doc,$element,'inputs id of,1')
-	)[@xsi:type='Business Object']
-    ) &gt; 0)
-  then ()
-  else (
-	'previous process step but no business object read: ', 
-	string-join(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']/concat(@name,',',@id))
-	)
-else
-  ()</documentation>
-      </element>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Clarification constraints"
                id="41280d46-b2d3-435a-8d55-2cd78e913eb0">
          <child xsi:type="zenta:DiagramObject"
                 id="f51068bf-5853-497b-8cb2-03e86b727eef"
-                targetConnections="033131f3-3c48-4e38-abf6-9652f18883e3 8b32a780-d959-42c9-b155-0633b483c201"
+                targetConnections="033131f3-3c48-4e38-abf6-9652f18883e3 8b32a780-d959-42c9-b155-0633b483c201 0fe887ef-049d-42db-a888-e3018841ea24 8a18e6f2-76f5-4231-8434-e0387f4390fc"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="371" y="108" width="-1" height="-1"/>
          </child>
@@ -1074,36 +1103,27 @@ else
                               target="b3121666-7442-4f78-b898-c3d4aefc220a"
                               relationship="8572b538-c7ec-45e4-83c8-1dd645d4c2ee"/>
          </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="49e9f35b-86de-47ec-8b3d-0f81e284bf43"
+                zentaElement="24c89149-0040-426d-9104-ffcf2cd3aedf">
+            <bounds x="384" y="624" width="217" height="97"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="0fe887ef-049d-42db-a888-e3018841ea24"
+                              source="49e9f35b-86de-47ec-8b3d-0f81e284bf43"
+                              target="f51068bf-5853-497b-8cb2-03e86b727eef"
+                              relationship="9e77deec-88d0-4544-85d7-c142594dbcb4"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="0992ab98-c78b-4d32-bedd-c37e74454b82"
+                zentaElement="0c6daa63-b33e-482c-8610-d9c56a516cdb">
+            <bounds x="749" y="660" width="151" height="100"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="8a18e6f2-76f5-4231-8434-e0387f4390fc"
+                              source="0992ab98-c78b-4d32-bedd-c37e74454b82"
+                              target="f51068bf-5853-497b-8cb2-03e86b727eef"
+                              relationship="dcd3590e-06b4-42b5-9864-37de50d422ce"/>
+         </child>
          <property key="display" value="hidden"/>
-      </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Process Step to Business Object Connections"
-               id="90dc2514-fbd3-464e-a959-cbc305756493"
-               ancestor="thing">
-         <documentation>A process step can read or modify business objects.
-Those connections can have modifiers in their name after ';', separated using ','
-must have one of 'Interface' or 'Repo'
-if not Repo:
-	must have one of 'Reference', 'Entity' or 'DTO'
-	must have one of 'One', 'Ordered' or 'Unordered'
-
-</documentation>
-      </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Business object to business object connections"
-               id="d6dbc559-2d93-4f37-bf3c-e6474c7919cc"
-               ancestor="thing">
-         <documentation>A business object can have or aggregate other business objects.
-Those connections can have qualifiers in their name after a ';' separated by ',':
-Must have one of 'Reference' or 'Direct'
-aggregate must have one of  'Ordered' or 'Unordered'
-can have 'Virtual:'&lt;name&gt;, meaning that the corresponding field is only in Entities, and it is volatile: not stored, but computed from the reverse connection named.
-</documentation>
-         <property key="fillColor"/>
-         <property key="elementShape"/>
-         <property key="textAlignment" value="2"/>
-         <property key="fontColor"/>
-         <property key="font"/>
       </element>
    </folder>
    <folder name="05. Application structure"
