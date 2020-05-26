@@ -2288,6 +2288,7 @@ Example:
       <folder name="05. Factory, Repository, Query"
               id="9774aa69-4364-41a2-88a9-0c75c25a2fc8">
          <folder name="Constraints" id="6a1af9fe-c8aa-4648-beca-2e47c5b6b45b">
+            <property key="display" value="hidden"/>
             <element xsi:type="zenta:ZentaDiagramModel"
                      name="Constraints"
                      id="05b91807-f65c-490f-bdab-461b578d9a91"
@@ -2680,6 +2681,45 @@ In a model view it is a good practice to grey out elements which are outside of 
    </folder>
    <folder name="0. deprecation" id="23fb97f5-0b38-40ce-9653-8cfaa7ec1076">
       <folder name="Deprecated objects" id="94b88447-b75b-4f3b-97ec-a957028960be"/>
+      <folder name="constraints" id="df31193d-bf2f-4d1f-a6aa-70087fa471af">
+         <property key="display" value="hidden"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="Deprecated metamodel objects are in their folder"
+                  id="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
+                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <documentation>deprecation|
+for $deprecated in $doc//(element|connection)[contains(@name,'deprecated')]
+return
+	if ($deprecated/../@name='Deprecated objects')
+	then ()
+	else concat($deprecated/@name,codepoints-to-string(10))
+</documentation>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="Deprecated objects should not be in any view"
+                  id="952a7b72-30f1-484d-84dc-fb246309d058"
+                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')],
+	$view in $doc//element[.//@zentaElement=$deprecated/@id or .//@relationship=$deprecated/@id]
+return
+	concat($view/@name,'(',$view/@id,'):',$deprecated/@name,' in ', string-join($view/ancestor::folder/@name,'/'),codepoints-to-string(10))
+</documentation>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="no elements should be inherited from Deprecated ones"
+                  id="58c88955-d879-44ec-aa28-f1c2698a37ea"
+                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')],
+	$child in $doc//*[(name()='connection' or name()='element') and @ancestor=$deprecated/@id]
+return
+	if ($child/..[@name!='Deprecated objects'])
+	then concat($child/@name,'(',$child/@id,':',$doc//element[@id=$child/@source]/@name,'-}',$doc//element[@id=$child/@target]/@name, '):',$deprecated/@name,' in ', string-join($child/ancestor::folder/@name,'/'),codepoints-to-string(10))
+	else ()
+</documentation>
+         </element>
+      </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="deprecation"
                id="af42470b-0e22-47a2-89ba-1d6df8daa398">
@@ -2719,42 +2759,6 @@ In a model view it is a good practice to grey out elements which are outside of 
                               target="21139821-ee50-4eaf-b2dc-1c6b843e5838"
                               relationship="4dfbd43b-5aa0-4e4a-85a0-9217a7821eb1"/>
          </child>
-      </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Deprecated metamodel objects are in their folder"
-               id="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
-               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>deprecation|
-for $deprecated in $doc//(element|connection)[contains(@name,'deprecated')]
-return
-	if ($deprecated/../@name='Deprecated objects')
-	then ()
-	else concat($deprecated/@name,codepoints-to-string(10))
-</documentation>
-      </element>
-      <element xsi:type="zenta:BasicObject"
-               name="no elements should be inherited from Deprecated ones"
-               id="58c88955-d879-44ec-aa28-f1c2698a37ea"
-               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>deprecation|
-for $deprecated in $doc//*[contains(@name,'deprecated')],
-	$child in $doc//*[(name()='connection' or name()='element') and @ancestor=$deprecated/@id]
-return
-	if ($child/..[@name!='Deprecated objects'])
-	then concat($child/@name,'(',$child/@id,':',$doc//element[@id=$child/@source]/@name,'-}',$doc//element[@id=$child/@target]/@name, '):',$deprecated/@name,' in ', string-join($child/ancestor::folder/@name,'/'),codepoints-to-string(10))
-	else ()
-</documentation>
-      </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Deprecated objects should not be in any view"
-               id="952a7b72-30f1-484d-84dc-fb246309d058"
-               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>deprecation|
-for $deprecated in $doc//*[contains(@name,'deprecated')],
-	$view in $doc//element[.//@zentaElement=$deprecated/@id or .//@relationship=$deprecated/@id]
-return
-	concat($view/@name,'(',$view/@id,'):',$deprecated/@name,' in ', string-join($view/ancestor::folder/@name,'/'),codepoints-to-string(10))
-</documentation>
       </element>
    </folder>
    <property key="modelDependency" value="metamodel/analysis_base"/>
