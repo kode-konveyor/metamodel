@@ -372,252 +372,9 @@
          <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
-      <element xsi:type="zenta:BasicRelationship"
-               id="e1e7b150-a8e3-40a2-96d4-b3ceb451ee1b"
-               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-               source="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
-               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="4dfbd43b-5aa0-4e4a-85a0-9217a7821eb1"
-               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-               source="952a7b72-30f1-484d-84dc-fb246309d058"
-               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="0a3fc59b-e39c-4229-ba22-e6a1e35734ea"
-               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-               source="58c88955-d879-44ec-aa28-f1c2698a37ea"
-               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
-      <element xsi:type="zenta:BasicRelationship"
-               name="builds on template/is a template for"
-               id="299a71b1-61d7-4be0-aa8d-f5994a6c9e5e"
-               ancestor="basicrelation"
-               source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
-               target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
-      <element xsi:type="zenta:BasicRelationship"
-               name="parametrizes template with/is used as template parameter by"
-               id="1b194939-2048-46eb-b6b0-2ab83ed71d1f"
-               ancestor="basicrelation"
-               source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
-               target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
    </folder>
    <folder name="07. Implementation details"
            id="9081c37a-9645-4bbf-8b44-6fba90e72eb0">
-      <folder name="constraints" id="e7cc583c-febd-4f49-9e06-574f08279499">
-         <property key="display" value="hidden"/>
-         <element xsi:type="zenta:BasicObject"
-                  name="has path"
-                  id="0ec99e0e-e766-47ec-8e20-1c94a0a662a4"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>services|
-zenta:exactlyOne(
-	zenta:neighbours($doc,$element,'published at,1')[@xsi:type='Path'],
-	'no path')</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="if there are path variables, the path contains them"
-                  id="ff6d4084-4dd3-417d-859d-4275dec9f6fa"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>services|
-for $chunk in tokenize($element/documentation,'\{')[contains(.,'}')]
-return
-	if(zenta:neighbours($doc,$element,'contains,1')/value[
-			@direction=2 and
-			@ancestorName='reads' and
-			contains(@relationName,tokenize($chunk,'}')[1])
-		]
-	)
-	then ()
-	else concat(tokenize($chunk,'}')[1],' is not contained', codepoints-to-string(10))
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="implements"
-                  id="539c6e8a-27b1-46a5-8906-bf1c4225e905"
-                  ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
-            <documentation>2|
-if(not(zenta:neighboursRun1($doc,$element,'implements,2')[@xsi:type='Milestone']))
-then 
-	zentatools:let(
-		'parentmilestones',
-		'for $parent in zenta:neighboursRun1($doc,$element,''contains,2'')[@xsi:type=''Process Step'']
-			return zenta:neighboursRun1($doc,$parent,''implements,2'')[@xsi:type=''Milestone'']',
-		'if($parentmilestones)
-		then $parentmilestones
-		else 
-			for $grandparent in zenta:neighboursRun1($doc,$element,''contains,2;contains,2'')[@xsi:type=''Process Step'']
-				return zenta:neighboursRun1($doc,$grandparent,''implements,2'')[@xsi:type=''Milestone'']'
-	)
-else ()</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="implements a Process Step"
-                  id="dfa48e70-73bc-41ec-9d59-fa14ae908411"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>services|
-zenta:exactlyOne(
-	zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type='Process Step'],
-	'no Process Step found')</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Implements a Process Step"
-                  id="c5831b41-a8f7-4f8e-ac46-8913914adfc7"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>services|
-zenta:exactlyOne(
-    zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type='Process Step'],
-    'no Process Step found')
-</documentation>
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-            <property key="documentationMarkup" value="verbatim"/>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="is done by a user or implemented by a Callable"
-                  id="47d08121-4031-4c7a-b6de-1f70c0bb8095"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>services|
-zenta:exactlyOne(
-    (
-	zenta:neighbours($doc,$element,'is done by/does,1'), 
-	zenta:neighbours($doc,$element,'is implemented by/implements,1')
-    ),
-    'no user or Callable found')
-</documentation>
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="is in its folder and view in the package folder"
-                  id="a7530ab8-0497-48b7-a9f9-92847f4b5e7b"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>services|
-if(
-	$doc//
-		folder[@name=zenta:neighbours($doc,$element,'is implemented by/implements,2;contains,2')/@name]/
-		folder[@name=$element/@name]//@zentaElement=$element/@id
-)
-then ()
-else 
-	concat(
-		'at ', 
-		string-join($element/ancestor::folder/@name,'/'),
-		' should be at ', 
-		zenta:neighbours($doc,$element,'is implemented by/implements,2;contains,2')[@xsi:type='Package']/@name
-	)
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="its view contains its neighbourhood"
-                  id="875f18f3-6284-4fcf-a9fa-2ab06e2bfb24"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>services|
-for $bo in  $doc//element[@id=$element//value[not(@derived="true")]/@target]
-return
-	if ( $doc//element[@name=$element/@name]//@zentaElement=$bo/@id )
-		then ()
-		else concat('not in view: ',$bo/@name)
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Its view contains the process step and its neighbourhood"
-                  id="210d8d73-81ca-40e1-ad53-659345d80518"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>services|
-for $step in zenta:neighbours($doc,$element,'is implemented by/implements,2')
-	return
-		if ($doc//element[@name=$element/@name]//@zentaElement=$step/@id)
-		then 
-			for $bo in  $doc//element[@id=$step//value[not(@derived="true")]/@target]
-			return
-				if ( $doc//element[@name=$element/@name]//@zentaElement=$bo/@id )
-					then ()
-					else concat('not in view: ',$bo/@name)
-			
-			else concat('not in view: ',$step/@name)
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="uses HTTP method"
-                  id="07fcd486-def7-42ba-8395-806d8721c758"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>services|
-zenta:exactlyOne(
-	zenta:neighbours($doc,$element,'uses,1')[@xsi:type='HTTP method'],
-	'no HTTP method')</documentation>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="6fcfe29e-79a0-47bf-9153-2f884186ad1b"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="c9346e32-c89b-4eae-8fd5-549682b2df3e"
-                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="137c7e37-e684-43ac-be8c-5d1037a742b3"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="47d08121-4031-4c7a-b6de-1f70c0bb8095"
-                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="dd1680ef-99be-48e7-9a3e-77d3cfefc91f"
-                  ancestor="64981f96-11a3-4631-b4f8-dd38993cec60"
-                  source="539c6e8a-27b1-46a5-8906-bf1c4225e905"
-                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="eec192ca-e7b5-4d38-9f60-ee0cfaca1dcd"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="a7530ab8-0497-48b7-a9f9-92847f4b5e7b"
-                  target="service"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="076a9195-64ac-42fd-a9a9-156f6a6a312f"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="210d8d73-81ca-40e1-ad53-659345d80518"
-                  target="service"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="0e757478-c7e6-4497-90a3-63627d5108fe"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="dfa48e70-73bc-41ec-9d59-fa14ae908411"
-                  target="service"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="ad1f0b88-54e1-4395-8294-a4f4fbddf46f"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="875f18f3-6284-4fcf-a9fa-2ab06e2bfb24"
-                  target="service"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="07e71bfe-d19e-4b86-b3f0-fd8a4ffc1165"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="ff6d4084-4dd3-417d-859d-4275dec9f6fa"
-                  target="2cb904ef-0cda-422b-82f6-0509c595b8fd"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  name="contains"
-                  id="2acdcaf1-8d2d-4444-94ed-69e0d0050e9b"
-                  ancestor="basicrelation"
-                  source="2cb904ef-0cda-422b-82f6-0509c595b8fd"
-                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-            <property key="textPosition" value="1"/>
-            <property key="lineDecoration" value="DiamondSourceDecoration"/>
-            <property key="lineColor"/>
-            <property key="fontColor"/>
-            <property key="lineWidth" value="1"/>
-            <property key="font"/>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  name="is implemented by/implements"
-                  id="3dd7b0b1-bd9f-4a13-b5d9-9db0200af5b8"
-                  ancestor="basicrelation"
-                  source="behaviour"
-                  target="callable">
-            <property key="textPosition" value="1"/>
-            <property key="lineDecoration"/>
-            <property key="lineColor"/>
-            <property key="fontColor"/>
-            <property key="lineWidth" value="1"/>
-            <property key="font"/>
-         </element>
-      </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Implementation details"
                id="ba5f4fe6-4bf2-4571-a790-5a7e194f33d2">
@@ -825,6 +582,119 @@ zenta:exactlyOne(
          </child>
       </element>
       <element xsi:type="zenta:BasicObject"
+               name="implements"
+               id="539c6e8a-27b1-46a5-8906-bf1c4225e905"
+               ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
+         <documentation>2|
+if(not(zenta:neighboursRun1($doc,$element,'implements,2')[@xsi:type='Milestone']))
+then 
+	zentatools:let(
+		'parentmilestones',
+		'for $parent in zenta:neighboursRun1($doc,$element,''contains,2'')[@xsi:type=''Process Step'']
+			return zenta:neighboursRun1($doc,$parent,''implements,2'')[@xsi:type=''Milestone'']',
+		'if($parentmilestones)
+		then $parentmilestones
+		else 
+			for $grandparent in zenta:neighboursRun1($doc,$element,''contains,2;contains,2'')[@xsi:type=''Process Step'']
+				return zenta:neighboursRun1($doc,$grandparent,''implements,2'')[@xsi:type=''Milestone'']'
+	)
+else ()</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="is done by a user or implemented by a Callable"
+               id="47d08121-4031-4c7a-b6de-1f70c0bb8095"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+zenta:exactlyOne(
+    (
+	zenta:neighbours($doc,$element,'is done by/does,1'), 
+	zenta:neighbours($doc,$element,'is implemented by/implements,1')
+    ),
+    'no user or Callable found')
+</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="6fcfe29e-79a0-47bf-9153-2f884186ad1b"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="c9346e32-c89b-4eae-8fd5-549682b2df3e"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="137c7e37-e684-43ac-be8c-5d1037a742b3"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="47d08121-4031-4c7a-b6de-1f70c0bb8095"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="dd1680ef-99be-48e7-9a3e-77d3cfefc91f"
+               ancestor="64981f96-11a3-4631-b4f8-dd38993cec60"
+               source="539c6e8a-27b1-46a5-8906-bf1c4225e905"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is implemented by/implements"
+               id="3dd7b0b1-bd9f-4a13-b5d9-9db0200af5b8"
+               ancestor="basicrelation"
+               source="behaviour"
+               target="callable">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="is in its folder and view in the package folder"
+               id="a7530ab8-0497-48b7-a9f9-92847f4b5e7b"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+if(
+	$doc//
+		folder[@name=zenta:neighbours($doc,$element,'is implemented by/implements,2;contains,2')/@name]/
+		folder[@name=$element/@name]//@zentaElement=$element/@id
+)
+then ()
+else 
+	concat(
+		'at ', 
+		string-join($element/ancestor::folder/@name,'/'),
+		' should be at ', 
+		zenta:neighbours($doc,$element,'is implemented by/implements,2;contains,2')[@xsi:type='Package']/@name
+	)
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="eec192ca-e7b5-4d38-9f60-ee0cfaca1dcd"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="a7530ab8-0497-48b7-a9f9-92847f4b5e7b"
+               target="service"/>
+      <element xsi:type="zenta:BasicObject"
+               name="Its view contains the process step and its neighbourhood"
+               id="210d8d73-81ca-40e1-ad53-659345d80518"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+for $step in zenta:neighbours($doc,$element,'is implemented by/implements,2')
+	return
+		if ($doc//element[@name=$element/@name]//@zentaElement=$step/@id)
+		then 
+			for $bo in  $doc//element[@id=$step//value[not(@derived="true")]/@target]
+			return
+				if ( $doc//element[@name=$element/@name]//@zentaElement=$bo/@id )
+					then ()
+					else concat('not in view: ',$bo/@name)
+			
+			else concat('not in view: ',$step/@name)
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="076a9195-64ac-42fd-a9a9-156f6a6a312f"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="210d8d73-81ca-40e1-ad53-659345d80518"
+               target="service"/>
+      <element xsi:type="zenta:BasicObject"
                name="Callable"
                id="callable"
                ancestor="thing">
@@ -887,137 +757,108 @@ In java and python Services should not have static methods except when the needs
          <property key="fontColor"/>
          <property key="font"/>
       </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="0e757478-c7e6-4497-90a3-63627d5108fe"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="dfa48e70-73bc-41ec-9d59-fa14ae908411"
+               target="service"/>
+      <element xsi:type="zenta:BasicObject"
+               name="its view contains its neighbourhood"
+               id="875f18f3-6284-4fcf-a9fa-2ab06e2bfb24"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+for $bo in  $doc//element[@id=$element//value[not(@derived="true")]/@target]
+return
+	if ( $doc//element[@name=$element/@name]//@zentaElement=$bo/@id )
+		then ()
+		else concat('not in view: ',$bo/@name)
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="ad1f0b88-54e1-4395-8294-a4f4fbddf46f"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="875f18f3-6284-4fcf-a9fa-2ab06e2bfb24"
+               target="service"/>
+      <element xsi:type="zenta:BasicObject"
+               name="if there are path variables, the path contains them"
+               id="ff6d4084-4dd3-417d-859d-4275dec9f6fa"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+for $chunk in tokenize($element/documentation,'\{')[contains(.,'}')]
+return
+	if(zenta:neighbours($doc,$element,'contains,1')/value[
+			@direction=2 and
+			@ancestorName='reads' and
+			contains(@relationName,tokenize($chunk,'}')[1])
+		]
+	)
+	then ()
+	else concat(tokenize($chunk,'}')[1],' is not contained', codepoints-to-string(10))
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="07e71bfe-d19e-4b86-b3f0-fd8a4ffc1165"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="ff6d4084-4dd3-417d-859d-4275dec9f6fa"
+               target="2cb904ef-0cda-422b-82f6-0509c595b8fd"/>
+      <element xsi:type="zenta:BasicObject"
+               name="has path"
+               id="0ec99e0e-e766-47ec-8e20-1c94a0a662a4"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'published at,1')[@xsi:type='Path'],
+	'no path')</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="implements a Process Step"
+               id="dfa48e70-73bc-41ec-9d59-fa14ae908411"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type='Process Step'],
+	'no Process Step found')</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="uses HTTP method"
+               id="07fcd486-def7-42ba-8395-806d8721c758"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'uses,1')[@xsi:type='HTTP method'],
+	'no HTTP method')</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Implements a Process Step"
+               id="c5831b41-a8f7-4f8e-ac46-8913914adfc7"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>services|
+zenta:exactlyOne(
+    zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type='Process Step'],
+    'no Process Step found')
+</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+         <property key="documentationMarkup" value="verbatim"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="contains"
+               id="2acdcaf1-8d2d-4444-94ed-69e0d0050e9b"
+               ancestor="basicrelation"
+               source="2cb904ef-0cda-422b-82f6-0509c595b8fd"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="DiamondSourceDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
    </folder>
    <folder name="09. Clarifications" id="4a539546-237d-4637-a4a0-e13de8d1777a">
-      <folder name="constraints" id="924c5ab4-c5bb-4963-9d83-de75f7e52275">
-         <property key="display" value="hidden"/>
-         <element xsi:type="zenta:BasicObject"
-                  name="Business object to business object connections should specify representation, and for aggregates orderedness"
-                  id="865a75be-ee52-4d44-98a3-6f413c70f1fb"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>clarifications|
-(for $bo in $element/value[not(@derived='true') and (@ancestorName='has' or @ancestorName='aggregates') and @direction=1]
-	return
-		zenta:checkBoToBoName($doc,$bo)
-	)[.!='pass']
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Process step to business object connections should specify whether interface or repo, cardinality, and representation"
-                  id="2a22742e-fba4-4c39-abff-73c2debab480"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>clarifications|
-if (zenta:neighbours($doc,$element,'is implemented by/implements,1'))
-then
-	(for $bo in $element/value[not(@derived='true') and (@ancestorName='reads' or @ancestorName='modifies')]
-		return
-			zenta:checkStepToBoName($doc,$bo)
-	)[.!='pass']
-else ()</documentation>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="dcd3590e-06b4-42b5-9864-37de50d422ce"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="0c6daa63-b33e-482c-8610-d9c56a516cdb"
-                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="9e77deec-88d0-4544-85d7-c142594dbcb4"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="24c89149-0040-426d-9104-ffcf2cd3aedf"
-                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="97d1bbc1-5ec0-4ee6-ad61-e5170956e20f"
-                  ancestor="basicrelation"
-                  source="90dc2514-fbd3-464e-a959-cbc305756493"
-                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="6f36f539-5cd7-44f5-82aa-314419636818"
-                  ancestor="basicrelation"
-                  source="d6dbc559-2d93-4f37-bf3c-e6474c7919cc"
-                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="c37f84d8-d6a4-4632-b966-6cdf7f597b99"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="2a22742e-fba4-4c39-abff-73c2debab480"
-                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="8572b538-c7ec-45e4-83c8-1dd645d4c2ee"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="865a75be-ee52-4d44-98a3-6f413c70f1fb"
-                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
-         <element xsi:type="zenta:BasicObject"
-                  name="Business object to business object connections"
-                  id="d6dbc559-2d93-4f37-bf3c-e6474c7919cc"
-                  ancestor="thing">
-            <documentation>A business object can have or aggregate other business objects.
-Those connections can have qualifiers in their name after a ';' separated by ',':
-Must have one of 'Reference' or 'Direct'
-aggregate must have one of  'Ordered' or 'Unordered'
-can have 'Virtual:'&lt;name&gt;, meaning that the corresponding field is only in Entities, and it is volatile: not stored, but computed from the reverse connection named.
-</documentation>
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="have description, behaviour or substep"
-                  id="24c89149-0040-426d-9104-ffcf2cd3aedf"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>clarifications|
-if (count(
-	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Behaviour' or @xsi:type='Process Step']
-   ) &gt; 0 or
-   $element/documentation/text())
-then ()
-else 'no behaviour or substep found'
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Process Step to Business Object Connections"
-                  id="90dc2514-fbd3-464e-a959-cbc305756493"
-                  ancestor="thing">
-            <documentation>A process step can read or modify business objects.
-Those connections can have modifiers in their name after ';', separated using ','
-must have one of 'Interface' or 'Repo'
-if not Repo:
-	must have one of 'Reference', 'Entity' or 'DTO'
-	must have one of 'One', 'Ordered' or 'Unordered'
-
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="uses the Business Objects from preceeding steps"
-                  id="0c6daa63-b33e-482c-8610-d9c56a516cdb"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>clarifications|
-if (
-    count(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']) &gt; 0 and 
-    count(
-       zenta:neighbours($doc,$element,'clicks when/does not input from,2')|
-       zenta:neighbours($doc,$element,'provides data in/inputs from,2')
-     ) =0 and
-    count(zenta:neighbours($doc,$element,'contains,1')) = 0
-)
-then
-  if(count(
-	(
-		zenta:neighbours($doc,$element,'reads,1'),
-		zenta:neighbours($doc,$element,'inputs,1'),
-		zenta:neighbours($doc,$element,'inputs as DTO,1'),
-		zenta:neighbours($doc,$element,'inputs id of,1')
-	)[@xsi:type='Business Object']
-    ) &gt; 0)
-  then ()
-  else (
-	'previous process step but no business object read: ', 
-	string-join(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']/concat(@name,',',@id))
-	)
-else
-  ()</documentation>
-         </element>
-      </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Clarifications"
                id="b64d15b6-4f9c-404d-93f2-ac9609782a6b">
@@ -1048,12 +889,65 @@ else
                               relationship="dcd3590e-06b4-42b5-9864-37de50d422ce"/>
          </child>
       </element>
+      <element xsi:type="zenta:BasicObject"
+               name="have description, behaviour or substep"
+               id="24c89149-0040-426d-9104-ffcf2cd3aedf"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>clarifications|
+if (count(
+	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Behaviour' or @xsi:type='Process Step']
+   ) &gt; 0 or
+   $element/documentation/text())
+then ()
+else 'no behaviour or substep found'
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="uses the Business Objects from preceeding steps"
+               id="0c6daa63-b33e-482c-8610-d9c56a516cdb"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>clarifications|
+if (
+    count(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']) &gt; 0 and 
+    count(
+       zenta:neighbours($doc,$element,'clicks when/does not input from,2')|
+       zenta:neighbours($doc,$element,'provides data in/inputs from,2')
+     ) =0 and
+    count(zenta:neighbours($doc,$element,'contains,1')) = 0
+)
+then
+  if(count(
+	(
+		zenta:neighbours($doc,$element,'reads,1'),
+		zenta:neighbours($doc,$element,'inputs,1'),
+		zenta:neighbours($doc,$element,'inputs as DTO,1'),
+		zenta:neighbours($doc,$element,'inputs id of,1')
+	)[@xsi:type='Business Object']
+    ) &gt; 0)
+  then ()
+  else (
+	'previous process step but no business object read: ', 
+	string-join(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']/concat(@name,',',@id))
+	)
+else
+  ()</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="dcd3590e-06b4-42b5-9864-37de50d422ce"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="0c6daa63-b33e-482c-8610-d9c56a516cdb"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="9e77deec-88d0-4544-85d7-c142594dbcb4"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="24c89149-0040-426d-9104-ffcf2cd3aedf"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Clarification constraints"
                id="41280d46-b2d3-435a-8d55-2cd78e913eb0">
          <child xsi:type="zenta:DiagramObject"
                 id="f51068bf-5853-497b-8cb2-03e86b727eef"
-                targetConnections="033131f3-3c48-4e38-abf6-9652f18883e3 8b32a780-d959-42c9-b155-0633b483c201 0fe887ef-049d-42db-a888-e3018841ea24 8a18e6f2-76f5-4231-8434-e0387f4390fc"
+                targetConnections="033131f3-3c48-4e38-abf6-9652f18883e3 8b32a780-d959-42c9-b155-0633b483c201"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="371" y="108" width="-1" height="-1"/>
          </child>
@@ -1103,140 +997,83 @@ else
                               target="b3121666-7442-4f78-b898-c3d4aefc220a"
                               relationship="8572b538-c7ec-45e4-83c8-1dd645d4c2ee"/>
          </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="49e9f35b-86de-47ec-8b3d-0f81e284bf43"
-                zentaElement="24c89149-0040-426d-9104-ffcf2cd3aedf">
-            <bounds x="384" y="624" width="217" height="97"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="0fe887ef-049d-42db-a888-e3018841ea24"
-                              source="49e9f35b-86de-47ec-8b3d-0f81e284bf43"
-                              target="f51068bf-5853-497b-8cb2-03e86b727eef"
-                              relationship="9e77deec-88d0-4544-85d7-c142594dbcb4"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="0992ab98-c78b-4d32-bedd-c37e74454b82"
-                zentaElement="0c6daa63-b33e-482c-8610-d9c56a516cdb">
-            <bounds x="749" y="660" width="151" height="100"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="8a18e6f2-76f5-4231-8434-e0387f4390fc"
-                              source="0992ab98-c78b-4d32-bedd-c37e74454b82"
-                              target="f51068bf-5853-497b-8cb2-03e86b727eef"
-                              relationship="dcd3590e-06b4-42b5-9864-37de50d422ce"/>
-         </child>
-         <property key="display" value="hidden"/>
       </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="97d1bbc1-5ec0-4ee6-ad61-e5170956e20f"
+               ancestor="4da47d8e-6cb9-4985-b393-84bfa09c742e"
+               source="90dc2514-fbd3-464e-a959-cbc305756493"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicObject"
+               name="Process Step to Business Object Connections"
+               id="90dc2514-fbd3-464e-a959-cbc305756493"
+               ancestor="35ade6d3-e52e-449c-bfc5-3a5a6f4e4f58">
+         <documentation>A process step can read or modify business objects.
+Those connections can have modifiers in their name after ';', separated using ','
+must have one of 'Interface' or 'Repo'
+if not Repo:
+	must have one of 'Reference', 'Entity' or 'DTO'
+	must have one of 'One', 'Ordered' or 'Unordered'
+
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="6f36f539-5cd7-44f5-82aa-314419636818"
+               ancestor="4da47d8e-6cb9-4985-b393-84bfa09c742e"
+               source="d6dbc559-2d93-4f37-bf3c-e6474c7919cc"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
+      <element xsi:type="zenta:BasicObject"
+               name="Business object to business object connections"
+               id="d6dbc559-2d93-4f37-bf3c-e6474c7919cc"
+               ancestor="35ade6d3-e52e-449c-bfc5-3a5a6f4e4f58">
+         <documentation>A business object can have or aggregate other business objects.
+Those connections can have qualifiers in their name after a ';' separated by ',':
+Must have one of 'Reference' or 'Direct'
+aggregate must have one of  'Ordered' or 'Unordered'
+can have 'Virtual:'&lt;name&gt;, meaning that the corresponding field is only in Entities, and it is volatile: not stored, but computed from the reverse connection named.
+</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Process step to business object connections should specify whether interface or repo, cardinality, and representation"
+               id="2a22742e-fba4-4c39-abff-73c2debab480"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>clarifications|
+if (zenta:neighbours($doc,$element,'is implemented by/implements,1'))
+then
+	(for $bo in $element/value[not(@derived='true') and (@ancestorName='reads' or @ancestorName='modifies')]
+		return
+			zenta:checkStepToBoName($doc,$bo)
+	)[.!='pass']
+else ()</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="c37f84d8-d6a4-4632-b966-6cdf7f597b99"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="2a22742e-fba4-4c39-abff-73c2debab480"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+      <element xsi:type="zenta:BasicObject"
+               name="Business object to business object connections should specify representation, and for aggregates orderedness"
+               id="865a75be-ee52-4d44-98a3-6f413c70f1fb"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>clarifications|
+(for $bo in $element/value[not(@derived='true') and (@ancestorName='has' or @ancestorName='aggregates') and @direction=1]
+	return
+		zenta:checkBoToBoName($doc,$bo)
+	)[.!='pass']
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="8572b538-c7ec-45e4-83c8-1dd645d4c2ee"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="865a75be-ee52-4d44-98a3-6f413c70f1fb"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
    </folder>
    <folder name="05. Application structure"
            id="d5f34b2e-b7d9-4350-8a51-c95350fd683b">
-      <folder name="constraints" id="a9f91f18-3f2f-4e96-9d2d-fbae4aa6c04a">
-         <property key="display" value="hidden"/>
-         <element xsi:type="zenta:BasicObject"
-                  name="appears in Application Structure view"
-                  id="6549c67a-dd03-40b7-bfe7-bed4e631d323"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>application_structure|
-if($doc//folder[@name='6. Low Level Design']/element[@name='Application Structure']//@zentaElement=$element/@id)
-then ()
-else 'not in the view'</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="contained in a Package"
-                  id="c9346e32-c89b-4eae-8fd5-549682b2df3e"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>application_structure|
-zenta:exactlyOne(
-	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'],
-	'no package found')</documentation>
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="contains at least one package"
-                  id="3d43468e-1396-443a-bbf9-806f13e1332d"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>application_structure|
-if(count(
-	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Package']
-) = 0)
-then 'no package found'
-else ()
-</documentation>
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-            <property key="documentationMarkup" value="verbatim"/>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="In exactly one Project or Package"
-                  id="1a095374-c532-44de-86a7-917a1a011ec9"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>application_structure|
-zenta:exactlyOne(
-	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='External Project' or @xsi:type='Project' or @xsi:type='Package'],
-	'no containing project or package found'
-	)
-</documentation>
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-            <property key="documentationMarkup" value="verbatim"/>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="In its view in its folder within 6. Low Level Design with all its contents"
-                  id="768e7503-e491-4d74-827c-198eb4bfe40d"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>application_structure|
-if(
-	$doc//folder[@name='6. Low Level Design']//folder[@name=$element/@name and element/@id=$element/@id]//@zentaElement = $element/@id
-)
-then for $content in zenta:neighbours($doc,$element,'contains,1')
-	return
-		if ($doc//folder[@name='6. Low Level Design']//element[@name=$element/@name]//@zentaElement=$content/@id)
-		then ()
-		else concat($content/@name,' not in the view ')
-else 'not in its folder'</documentation>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="ba7db1d5-9bab-4f02-a507-05e283b64740"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="c9346e32-c89b-4eae-8fd5-549682b2df3e"
-                  target="ce48c832-65e0-456b-a0c1-8f6cd62fd74b"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="efa8795e-2b62-49df-a4a7-df98d3ae9fea"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="6549c67a-dd03-40b7-bfe7-bed4e631d323"
-                  target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="37bb96fc-dac5-48cb-be1b-7285e3f283a4"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="6549c67a-dd03-40b7-bfe7-bed4e631d323"
-                  target="d3d4e39d-09a6-4a0f-a985-be922245d850"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="0ced1bc4-6efc-4b70-849a-f131f242faac"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="768e7503-e491-4d74-827c-198eb4bfe40d"
-                  target="d3d4e39d-09a6-4a0f-a985-be922245d850"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  name="contains"
-                  id="da5669f6-b6a4-4008-8cf7-22ea95ec5eff"
-                  ancestor="basicrelation"
-                  source="d3d4e39d-09a6-4a0f-a985-be922245d850"
-                  target="ce48c832-65e0-456b-a0c1-8f6cd62fd74b">
-            <property key="textPosition" value="1"/>
-            <property key="lineDecoration" value="DiamondSourceDecoration"/>
-            <property key="lineColor"/>
-            <property key="fontColor"/>
-            <property key="lineWidth" value="1"/>
-            <property key="font"/>
-         </element>
-      </folder>
       <element xsi:type="zenta:BasicObject"
                name="Package"
                id="d3d4e39d-09a6-4a0f-a985-be922245d850"
@@ -1404,312 +1241,114 @@ Packages contain process steps, and the code units (Services, Controllers, and o
                               relationship="0ced1bc4-6efc-4b70-849a-f131f242faac"/>
          </child>
       </element>
-   </folder>
-   <folder name="06. Data Structures" id="34ea2275-855f-470e-b479-baf6738ddb0a">
-      <folder name="constraints" id="4bc7ed6c-1a5b-4f74-8b64-48ca0b44bb83">
-         <property key="display" value="hidden"/>
-         <element xsi:type="zenta:BasicObject"
-                  name="belongs to a TestData"
-                  id="1dec51d2-ac56-4384-aae3-94d4fc1d8e35"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-zenta:exactlyOne(
-    zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data'],
-    'no Test Data found')
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="contains only Test Artifacts"
-                  id="fc553e5a-f627-4e67-8aab-ced929767da8"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Property']</documentation>
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-            <property key="documentationMarkup" value="verbatim"/>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="documents the contents of the artifact or constructable based on the Business Object"
-                  id="189dbb19-8dd0-41be-b596-4e29c9210ff9"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-if (
-   string-length($element/documentation) &gt; 0 or
-   zenta:neighbours($doc,$element,'has an example as/is an example of,2')[
-		(@xsi:type='Business Object' and matches(@name,'[A-Z]')) or @xsi:type='Parameter'] 
-)
-then ()
-else 'cannot construct it'
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="has an example as/is an example of"
-                  id="bcc57284-8ee7-4c8b-be30-2c47d0773dde"
-                  ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
-            <documentation>2|
-zenta:neighboursRun1($doc,$element,'is based on/is base of,2;has an example as/is an example of,2')</documentation>
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Has a test artifact or test data with name derived from the Business Object name"
-                  id="0c9d9b82-d935-42cc-a70e-1090814374f1"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-if ( matches($element/@name,'^[a-z ]*$'))
-	then if(
-		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Artifact' and @name=zenta:capitalSneakCase($element/@name)]
-	)
-	then ()
-		else concat('no test artifact named ', zenta:capitalSneakCase($element/@name))
-else if(
-		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Data' and @name=zenta:testDataName($element/@name)]
-	)
-	then ()
-	else concat('no test data', zenta:testDataName($element/@name))
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="has a type"
-                  id="b9deedbc-997d-417d-8282-4da0f08107b7"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-if ($element/@xsi:type='External type')
-then
-  ()
-else
-  if(count((
-		  zenta:neighbours($doc,$element,'is a/is the type of,1'),
-		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;has,1'),
-		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;aggregates,1'),
-		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;is a/is the type of,1')
-        )) &gt; 0)
-   then
-        ()
-   else
-		'no type found'
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Has a type"
-                  id="3d7efa2f-a0c5-4568-b100-196bb6a671e3"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-zenta:exactlyOne(
-    zenta:neighbours($doc,$element,'is a/is the type of,1'),
-    'no type found')
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Have its folder with view in 6. Low Level Design, containing it. its test artifacts, supported Business Objects and their type"
-                  id="bace4199-1f09-47f6-91ad-d374b6acecbc"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-if(
-	$element/..[
-		@name=$element/@name and 
-		ancestor::folder[@name='6. Low Level Design'] and
-       ../@name=zenta:neighbours($doc,$element,'contains,2')/@name
-	]/element[@name=$element/@name]//@zentaElement=$element/@id
-)
-then for $artifact in (
-		zenta:neighbours($doc,$element,'contains,1'),
-		zenta:neighbours($doc,$element,'has an example as/is an example of,2'),
-		zenta:neighbours($doc,$element,'contains,1;has an example as/is an example of,2;is a/is the type of,1'),
-		zenta:neighbours($doc,$element,'contains,1;has an example as/is an example of,2')
-	)
-	return if ($element/../element[@name=$element/@name]//@zentaElement = $artifact/@id)
-		then ()
-		else concat(' not in the view: ',$artifact/@name,'; ') 
-else concat('folder: ',string-join($element/ancestor::folder/@name,'/'))
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="is a/is the type of"
-                  id="05f5c95a-6781-4d95-a90b-9e9aede97472"
-                  ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
-            <documentation>1|
-zentatools:let(
-	'direct',
-	'zenta:neighboursRun1($doc,$element,''is a/is the type of,1'')',
-	'if(count($direct)&gt;0)
-		then
-			$direct
-		else if(count((
-			zenta:neighboursRun1($doc,$element,''has,1''),
-			zenta:neighboursRun1($doc,$element,''references,1''),
-			zenta:neighboursRun1($doc,$element,''lists,1''),
-			zenta:neighboursRun1($doc,$element,''lists references to,1''),
-			zenta:neighboursRun1($doc,$element,''aggregates references to,1''),
-			zenta:neighboursRun1($doc,$element,''aggregates,1'')
-		)) &gt; 0)
-			then
-				$element
-			else zentatools:let(
-				''implicitlytyped'',
-				''zenta:neighboursRun1($doc,$element,''''returns,2;is implemented by/implements,1;returns type/is returned by,1'''')'',
-				''if(count($implicitlytyped) &gt; 0)
-					then
-						$implicitlytyped
-					else
-						()''
-             )'
-)
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="is a/is the type of"
-                  id="6a695c67-0831-40a7-9efa-513c1524f3ca"
-                  ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
-            <documentation>1|
-zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2;is a/is the type of,1')[@xsi:type='Type'  or@xsi:type='External type']| 
-zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2')[@xsi:type='Type'  or @xsi:type='External type']</documentation>
-            <property key="fillColor"/>
-            <property key="elementShape"/>
-            <property key="textAlignment" value="2"/>
-            <property key="fontColor"/>
-            <property key="font"/>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="is an example of a Business Object Field or parameter"
-                  id="cd077259-127c-4997-82ae-f9808af60668"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-if ( count(zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='Business Object'  or @xsi:type='Field' or @xsi:type='Parameter' or @xsi:type='Path parameter'])  &gt; 0)
-then ()
-else 'no reason found'
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="is in the same folder as its test data"
-                  id="735b2b89-6ec4-42e9-b7e4-8548a9048b2e"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-if($element/../element/@id = zenta:neighbours($doc,$element,'contains,2')/@id)
-then ()
-else concat('in ',string-join($element/ancestor::folder/@name,'/'))</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="its view contains all dependents of its Business Object"
-                  id="061e0984-74fa-4df0-8ed1-07337c95fbab"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-for $artifact in (
-		zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='Business Object']
-	), 
-	$dependent in (
-			zenta:neighbours($doc,$artifact,'has,1'),
-			zenta:neighbours($doc,$artifact,'references,1'),
-			zenta:neighbours($doc,$artifact,'lists,1'),
-			zenta:neighbours($doc,$artifact,'lists references to,1'),
-			zenta:neighbours($doc,$artifact,'aggregates references to,1'),
-			zenta:neighbours($doc,$artifact,'aggregates,1')
-	)
-	return if ($element/../element[@name=$element/@name]//@zentaElement = $dependent/@id)
-		then ()
-		else concat(' not in the view: ',$dependent/@name,'; ') 
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Its view contains the package of it"
-                  id="871e8704-32b1-4c9a-b9ed-972852185088"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
-if ($element/../element[@name=$element/@name]//@zentaElement = zenta:neighbours($doc,$element,'contains,2')/@id)
-then ()
-else concat('not in view ', $element/@name,': ', string-join(zenta:neighbours($doc,$element,'contains,2')/@name,', '))</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="belongs to a package"
-                  id="883e08c5-3c2f-4713-b7c2-4c7be941126c"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>data_structures|
+      <element xsi:type="zenta:BasicRelationship"
+               name="contains"
+               id="da5669f6-b6a4-4008-8cf7-22ea95ec5eff"
+               ancestor="basicrelation"
+               source="d3d4e39d-09a6-4a0f-a985-be922245d850"
+               target="ce48c832-65e0-456b-a0c1-8f6cd62fd74b">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="DiamondSourceDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="ba7db1d5-9bab-4f02-a507-05e283b64740"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="c9346e32-c89b-4eae-8fd5-549682b2df3e"
+               target="ce48c832-65e0-456b-a0c1-8f6cd62fd74b"/>
+      <element xsi:type="zenta:BasicObject"
+               name="contained in a Package"
+               id="c9346e32-c89b-4eae-8fd5-549682b2df3e"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>application_structure|
 zenta:exactlyOne(
 	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'],
-	'no package found')
+	'no package found')</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="contains at least one package"
+               id="3d43468e-1396-443a-bbf9-806f13e1332d"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>application_structure|
+if(count(
+	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Package']
+) = 0)
+then 'no package found'
+else ()
 </documentation>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="f1764cb5-9a75-4efd-8b78-a288afeb033c"
-                  ancestor="64981f96-11a3-4631-b4f8-dd38993cec60"
-                  source="05f5c95a-6781-4d95-a90b-9e9aede97472"
-                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="d9f8c2a9-91c8-4e50-8794-4e3a6a789aee"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="bace4199-1f09-47f6-91ad-d374b6acecbc"
-                  target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="f3e918f6-7d1f-4660-9a95-22677d76b9ff"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="061e0984-74fa-4df0-8ed1-07337c95fbab"
-                  target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="bd0a9eaf-25c1-4896-9b17-6733a4011d27"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="871e8704-32b1-4c9a-b9ed-972852185088"
-                  target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="96bb8157-ebf1-43db-a7e7-0998366a1453"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="735b2b89-6ec4-42e9-b7e4-8548a9048b2e"
-                  target="ffbe5058-5089-4c5a-965d-e996df089f8e"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="e1c0d1c5-0c94-4d1d-a3af-0979a56c382f"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="0c9d9b82-d935-42cc-a70e-1090814374f1"
-                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  id="2019bf48-1c8b-4d4b-bd1c-8e7a189b05f8"
-                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
-                  source="3d7efa2f-a0c5-4568-b100-196bb6a671e3"
-                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
-         <element xsi:type="zenta:BasicRelationship"
-                  name="has an example as/is an example of"
-                  id="d44a66e2-43d7-4016-8971-1ca2873b76b8"
-                  ancestor="basicrelation"
-                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-                  target="9ec42823-7056-4e73-b1f4-600a066c8d88">
-            <property key="textPosition" value="1"/>
-            <property key="lineDecoration"/>
-            <property key="lineColor"/>
-            <property key="fontColor"/>
-            <property key="lineWidth" value="1"/>
-            <property key="font"/>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  name="has an example as/is an example of"
-                  id="d422da0f-0a3c-4bee-a969-37260d27808d"
-                  ancestor="basicrelation"
-                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-                  target="ffbe5058-5089-4c5a-965d-e996df089f8e">
-            <property key="textPosition" value="1"/>
-            <property key="lineDecoration"/>
-            <property key="lineColor"/>
-            <property key="fontColor"/>
-            <property key="lineWidth" value="1"/>
-            <property key="font"/>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  name="is a/is the type of"
-                  id="553f01d7-aebb-45b2-98cf-566b7868c606"
-                  ancestor="basicrelation"
-                  source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
-                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-            <property key="textPosition" value="1"/>
-            <property key="lineDecoration" value="DottedLineDecoration"/>
-            <property key="lineColor" value="#d3d7cf"/>
-            <property key="fontColor"/>
-            <property key="lineWidth" value="1"/>
-            <property key="font"/>
-         </element>
-      </folder>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+         <property key="documentationMarkup" value="verbatim"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="In exactly one Project or Package"
+               id="1a095374-c532-44de-86a7-917a1a011ec9"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>application_structure|
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='External Project' or @xsi:type='Project' or @xsi:type='Package'],
+	'no containing project or package found'
+	)
+</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+         <property key="documentationMarkup" value="verbatim"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="appears in Application Structure view"
+               id="6549c67a-dd03-40b7-bfe7-bed4e631d323"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>application_structure|
+if($doc//folder[@name='6. Low Level Design']/element[@name='Application Structure']//@zentaElement=$element/@id)
+then ()
+else 'not in the view'</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="efa8795e-2b62-49df-a4a7-df98d3ae9fea"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="6549c67a-dd03-40b7-bfe7-bed4e631d323"
+               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
+      <element xsi:type="zenta:BasicObject"
+               name="In its view in its folder within 6. Low Level Design with all its contents"
+               id="768e7503-e491-4d74-827c-198eb4bfe40d"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>application_structure|
+if(
+	$doc//folder[@name='6. Low Level Design']//folder[@name=$element/@name and element/@id=$element/@id]//@zentaElement = $element/@id
+)
+then for $content in zenta:neighbours($doc,$element,'contains,1')
+	return
+		if ($doc//folder[@name='6. Low Level Design']//element[@name=$element/@name]//@zentaElement=$content/@id)
+		then ()
+		else concat($content/@name,' not in the view ')
+else 'not in its folder'</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="37bb96fc-dac5-48cb-be1b-7285e3f283a4"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="6549c67a-dd03-40b7-bfe7-bed4e631d323"
+               target="d3d4e39d-09a6-4a0f-a985-be922245d850"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="0ced1bc4-6efc-4b70-849a-f131f242faac"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="768e7503-e491-4d74-827c-198eb4bfe40d"
+               target="d3d4e39d-09a6-4a0f-a985-be922245d850"/>
+   </folder>
+   <folder name="06. Data Structures" id="34ea2275-855f-470e-b479-baf6738ddb0a">
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Data Structures constraints"
                id="7722981f-5617-47a3-939c-9dcf810f1057">
@@ -1943,6 +1582,297 @@ Test artifacts are actual data in case of Business Objects, and actual data or m
          <property key="fontColor"/>
          <property key="font"/>
       </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="has an example as/is an example of"
+               id="d44a66e2-43d7-4016-8971-1ca2873b76b8"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="9ec42823-7056-4e73-b1f4-600a066c8d88">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="f1764cb5-9a75-4efd-8b78-a288afeb033c"
+               ancestor="64981f96-11a3-4631-b4f8-dd38993cec60"
+               source="05f5c95a-6781-4d95-a90b-9e9aede97472"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
+      <element xsi:type="zenta:BasicObject"
+               name="Have its folder with view in 6. Low Level Design, containing it. its test artifacts, supported Business Objects and their type"
+               id="bace4199-1f09-47f6-91ad-d374b6acecbc"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+if(
+	$element/..[
+		@name=$element/@name and 
+		ancestor::folder[@name='6. Low Level Design'] and
+       ../@name=zenta:neighbours($doc,$element,'contains,2')/@name
+	]/element[@name=$element/@name]//@zentaElement=$element/@id
+)
+then for $artifact in (
+		zenta:neighbours($doc,$element,'contains,1'),
+		zenta:neighbours($doc,$element,'has an example as/is an example of,2'),
+		zenta:neighbours($doc,$element,'contains,1;has an example as/is an example of,2;is a/is the type of,1'),
+		zenta:neighbours($doc,$element,'contains,1;has an example as/is an example of,2')
+	)
+	return if ($element/../element[@name=$element/@name]//@zentaElement = $artifact/@id)
+		then ()
+		else concat(' not in the view: ',$artifact/@name,'; ') 
+else concat('folder: ',string-join($element/ancestor::folder/@name,'/'))
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="d9f8c2a9-91c8-4e50-8794-4e3a6a789aee"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="bace4199-1f09-47f6-91ad-d374b6acecbc"
+               target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicObject"
+               name="its view contains all dependents of its Business Object"
+               id="061e0984-74fa-4df0-8ed1-07337c95fbab"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+for $artifact in (
+		zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='Business Object']
+	), 
+	$dependent in (
+			zenta:neighbours($doc,$artifact,'has,1'),
+			zenta:neighbours($doc,$artifact,'references,1'),
+			zenta:neighbours($doc,$artifact,'lists,1'),
+			zenta:neighbours($doc,$artifact,'lists references to,1'),
+			zenta:neighbours($doc,$artifact,'aggregates references to,1'),
+			zenta:neighbours($doc,$artifact,'aggregates,1')
+	)
+	return if ($element/../element[@name=$element/@name]//@zentaElement = $dependent/@id)
+		then ()
+		else concat(' not in the view: ',$dependent/@name,'; ') 
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="f3e918f6-7d1f-4660-9a95-22677d76b9ff"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="061e0984-74fa-4df0-8ed1-07337c95fbab"
+               target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicObject"
+               name="Its view contains the package of it"
+               id="871e8704-32b1-4c9a-b9ed-972852185088"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+if ($element/../element[@name=$element/@name]//@zentaElement = zenta:neighbours($doc,$element,'contains,2')/@id)
+then ()
+else concat('not in view ', $element/@name,': ', string-join(zenta:neighbours($doc,$element,'contains,2')/@name,', '))</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="bd0a9eaf-25c1-4896-9b17-6733a4011d27"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="871e8704-32b1-4c9a-b9ed-972852185088"
+               target="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+      <element xsi:type="zenta:BasicObject"
+               name="is in the same folder as its test data"
+               id="735b2b89-6ec4-42e9-b7e4-8548a9048b2e"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+if($element/../element/@id = zenta:neighbours($doc,$element,'contains,2')/@id)
+then ()
+else concat('in ',string-join($element/ancestor::folder/@name,'/'))</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="96bb8157-ebf1-43db-a7e7-0998366a1453"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="735b2b89-6ec4-42e9-b7e4-8548a9048b2e"
+               target="ffbe5058-5089-4c5a-965d-e996df089f8e"/>
+      <element xsi:type="zenta:BasicObject"
+               name="is a/is the type of"
+               id="05f5c95a-6781-4d95-a90b-9e9aede97472"
+               ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
+         <documentation>1|
+zentatools:let(
+	'direct',
+	'zenta:neighboursRun1($doc,$element,''is a/is the type of,1'')',
+	'if(count($direct)&gt;0)
+		then
+			$direct
+		else if(count((
+			zenta:neighboursRun1($doc,$element,''has,1''),
+			zenta:neighboursRun1($doc,$element,''references,1''),
+			zenta:neighboursRun1($doc,$element,''lists,1''),
+			zenta:neighboursRun1($doc,$element,''lists references to,1''),
+			zenta:neighboursRun1($doc,$element,''aggregates references to,1''),
+			zenta:neighboursRun1($doc,$element,''aggregates,1'')
+		)) &gt; 0)
+			then
+				$element
+			else zentatools:let(
+				''implicitlytyped'',
+				''zenta:neighboursRun1($doc,$element,''''returns,2;is implemented by/implements,1;returns type/is returned by,1'''')'',
+				''if(count($implicitlytyped) &gt; 0)
+					then
+						$implicitlytyped
+					else
+						()''
+             )'
+)
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="has a type"
+               id="b9deedbc-997d-417d-8282-4da0f08107b7"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+if ($element/@xsi:type='External type')
+then
+  ()
+else
+  if(count((
+		  zenta:neighbours($doc,$element,'is a/is the type of,1'),
+		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;has,1'),
+		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;aggregates,1'),
+		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;is a/is the type of,1')
+        )) &gt; 0)
+   then
+        ()
+   else
+		'no type found'
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="belongs to a TestData"
+               id="1dec51d2-ac56-4384-aae3-94d4fc1d8e35"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+zenta:exactlyOne(
+    zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Test Data'],
+    'no Test Data found')
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="documents the contents of the artifact or constructable based on the Business Object"
+               id="189dbb19-8dd0-41be-b596-4e29c9210ff9"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+if (
+   string-length($element/documentation) &gt; 0 or
+   zenta:neighbours($doc,$element,'has an example as/is an example of,2')[
+		(@xsi:type='Business Object' and matches(@name,'[A-Z]')) or @xsi:type='Parameter'] 
+)
+then ()
+else 'cannot construct it'
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="has an example as/is an example of"
+               id="bcc57284-8ee7-4c8b-be30-2c47d0773dde"
+               ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
+         <documentation>2|
+zenta:neighboursRun1($doc,$element,'is based on/is base of,2;has an example as/is an example of,2')</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Has a test artifact or test data with name derived from the Business Object name"
+               id="0c9d9b82-d935-42cc-a70e-1090814374f1"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+if ( matches($element/@name,'^[a-z ]*$'))
+	then if(
+		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Artifact' and @name=zenta:capitalSneakCase($element/@name)]
+	)
+	then ()
+		else concat('no test artifact named ', zenta:capitalSneakCase($element/@name))
+else if(
+		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Data' and @name=zenta:testDataName($element/@name)]
+	)
+	then ()
+	else concat('no test data', zenta:testDataName($element/@name))
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Has a type"
+               id="3d7efa2f-a0c5-4568-b100-196bb6a671e3"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+zenta:exactlyOne(
+    zenta:neighbours($doc,$element,'is a/is the type of,1'),
+    'no type found')
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="is a/is the type of"
+               id="6a695c67-0831-40a7-9efa-513c1524f3ca"
+               ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
+         <documentation>1|
+zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2;is a/is the type of,1')[@xsi:type='Type'  or@xsi:type='External type']| 
+zenta:neighboursRun1($doc,$element,'has an example as/is an example of,2')[@xsi:type='Type'  or @xsi:type='External type']</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="is an example of a Business Object Field or parameter"
+               id="cd077259-127c-4997-82ae-f9808af60668"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+if ( count(zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='Business Object'  or @xsi:type='Field' or @xsi:type='Parameter' or @xsi:type='Path parameter'])  &gt; 0)
+then ()
+else 'no reason found'
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="contains only Test Artifacts"
+               id="fc553e5a-f627-4e67-8aab-ced929767da8"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>data_structures|
+zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Property']</documentation>
+         <property key="fillColor"/>
+         <property key="elementShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+         <property key="documentationMarkup" value="verbatim"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="e1c0d1c5-0c94-4d1d-a3af-0979a56c382f"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="0c9d9b82-d935-42cc-a70e-1090814374f1"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="2019bf48-1c8b-4d4b-bd1c-8e7a189b05f8"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="3d7efa2f-a0c5-4568-b100-196bb6a671e3"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
+      <element xsi:type="zenta:BasicRelationship"
+               name="has an example as/is an example of"
+               id="d422da0f-0a3c-4bee-a969-37260d27808d"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="ffbe5058-5089-4c5a-965d-e996df089f8e">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is a/is the type of"
+               id="553f01d7-aebb-45b2-98cf-566b7868c606"
+               ancestor="basicrelation"
+               source="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="DottedLineDecoration"/>
+         <property key="lineColor" value="#d3d7cf"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
       <element xsi:type="zenta:BasicObject"
                name="Test Artifact"
                id="ffbe5058-5089-4c5a-965d-e996df089f8e"
@@ -1969,7 +1899,6 @@ Test artifacts are actual data in case of Business Objects, and actual data or m
    <folder name="08. Constants, Configuration, Enums"
            id="7354c7b5-79dc-4bec-90cd-365255f74f2e">
       <folder name="Constraints" id="bde2b59f-2ca7-4b70-8440-503f679c52bf">
-         <property key="display" value="hidden"/>
          <element xsi:type="zenta:ZentaDiagramModel"
                   name="Enum, Configuration Provider Constraints"
                   id="1914d145-5cb0-46e4-a1de-545501bb9461">
@@ -2170,6 +2099,16 @@ else concat('folder: ',string-join($element/ancestor::folder/@name,'/'))
                   ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                   source="c2098a4f-3068-4d87-b7f5-9235ae887455"
                   target="833d959e-228d-4954-a74f-90c355ac36a3"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="belongs to a package"
+                  id="883e08c5-3c2f-4713-b7c2-4c7be941126c"
+                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <documentation>data_structures|
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'],
+	'no package found')
+</documentation>
+         </element>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Enum, Configuration Provider"
@@ -2288,7 +2227,6 @@ Example:
       <folder name="05. Factory, Repository, Query"
               id="9774aa69-4364-41a2-88a9-0c75c25a2fc8">
          <folder name="Constraints" id="6a1af9fe-c8aa-4648-beca-2e47c5b6b45b">
-            <property key="display" value="hidden"/>
             <element xsi:type="zenta:ZentaDiagramModel"
                      name="Constraints"
                      id="05b91807-f65c-490f-bdab-461b578d9a91"
@@ -2472,7 +2410,6 @@ zenta:exactlyOne(
    </folder>
    <folder name="11. Delegate" id="cc2165d5-18ad-4983-bd0a-8d68383f71b9">
       <folder name="Constraints" id="fe856463-7bbb-45e1-b259-43d2e75f122e">
-         <property key="display" value="hidden"/>
          <element xsi:type="zenta:ZentaDiagramModel"
                   name="Delegate constraints"
                   id="5b7bba3b-f7cb-4357-b7a6-254073e3c8af">
@@ -2520,19 +2457,6 @@ zenta:exactlyOne(
 	zenta:neighbours($doc,$element,'uses,1')[@xsi:type='Business Object'],
 	'no Business Object found') 
 </documentation>
-         </element>
-         <element xsi:type="zenta:BasicRelationship"
-                  name="uses"
-                  id="174c404c-c84a-4edd-bdf8-bf0efb674e87"
-                  ancestor="basicrelation"
-                  source="aac49409-16ea-44e9-8a2e-24ef1876c7ab"
-                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-            <property key="textPosition" value="1"/>
-            <property key="lineDecoration" value="BigArrowTargetDecoration"/>
-            <property key="lineColor"/>
-            <property key="fontColor"/>
-            <property key="lineWidth" value="1"/>
-            <property key="font"/>
          </element>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
@@ -2590,6 +2514,19 @@ The business logic is delegated to Services
          <property key="elementShape" value="applicationShape"/>
          <property key="textAlignment" value="2"/>
          <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="uses"
+               id="174c404c-c84a-4edd-bdf8-bf0efb674e87"
+               ancestor="basicrelation"
+               source="aac49409-16ea-44e9-8a2e-24ef1876c7ab"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="BigArrowTargetDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
    </folder>
@@ -2681,45 +2618,6 @@ In a model view it is a good practice to grey out elements which are outside of 
    </folder>
    <folder name="0. deprecation" id="23fb97f5-0b38-40ce-9653-8cfaa7ec1076">
       <folder name="Deprecated objects" id="94b88447-b75b-4f3b-97ec-a957028960be"/>
-      <folder name="constraints" id="df31193d-bf2f-4d1f-a6aa-70087fa471af">
-         <property key="display" value="hidden"/>
-         <element xsi:type="zenta:BasicObject"
-                  name="Deprecated metamodel objects are in their folder"
-                  id="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>deprecation|
-for $deprecated in $doc//(element|connection)[contains(@name,'deprecated')]
-return
-	if ($deprecated/../@name='Deprecated objects')
-	then ()
-	else concat($deprecated/@name,codepoints-to-string(10))
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="Deprecated objects should not be in any view"
-                  id="952a7b72-30f1-484d-84dc-fb246309d058"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>deprecation|
-for $deprecated in $doc//*[contains(@name,'deprecated')],
-	$view in $doc//element[.//@zentaElement=$deprecated/@id or .//@relationship=$deprecated/@id]
-return
-	concat($view/@name,'(',$view/@id,'):',$deprecated/@name,' in ', string-join($view/ancestor::folder/@name,'/'),codepoints-to-string(10))
-</documentation>
-         </element>
-         <element xsi:type="zenta:BasicObject"
-                  name="no elements should be inherited from Deprecated ones"
-                  id="58c88955-d879-44ec-aa28-f1c2698a37ea"
-                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-            <documentation>deprecation|
-for $deprecated in $doc//*[contains(@name,'deprecated')],
-	$child in $doc//*[(name()='connection' or name()='element') and @ancestor=$deprecated/@id]
-return
-	if ($child/..[@name!='Deprecated objects'])
-	then concat($child/@name,'(',$child/@id,':',$doc//element[@id=$child/@source]/@name,'-}',$doc//element[@id=$child/@target]/@name, '):',$deprecated/@name,' in ', string-join($child/ancestor::folder/@name,'/'),codepoints-to-string(10))
-	else ()
-</documentation>
-         </element>
-      </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="deprecation"
                id="af42470b-0e22-47a2-89ba-1d6df8daa398">
@@ -2760,6 +2658,69 @@ return
                               relationship="4dfbd43b-5aa0-4e4a-85a0-9217a7821eb1"/>
          </child>
       </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Deprecated metamodel objects are in their folder"
+               id="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>deprecation|
+for $deprecated in $doc//(element|connection)[contains(@name,'deprecated')]
+return
+	if ($deprecated/../@name='Deprecated objects')
+	then ()
+	else concat($deprecated/@name,codepoints-to-string(10))
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="e1e7b150-a8e3-40a2-96d4-b3ceb451ee1b"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
+               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
+      <element xsi:type="zenta:BasicObject"
+               name="no elements should be inherited from Deprecated ones"
+               id="58c88955-d879-44ec-aa28-f1c2698a37ea"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')],
+	$child in $doc//*[(name()='connection' or name()='element') and @ancestor=$deprecated/@id]
+return
+	if ($child/..[@name!='Deprecated objects'])
+	then concat($child/@name,'(',$child/@id,':',$doc//element[@id=$child/@source]/@name,'-}',$doc//element[@id=$child/@target]/@name, '):',$deprecated/@name,' in ', string-join($child/ancestor::folder/@name,'/'),codepoints-to-string(10))
+	else ()
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Deprecated objects should not be in any view"
+               id="952a7b72-30f1-484d-84dc-fb246309d058"
+               ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+         <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')],
+	$view in $doc//element[.//@zentaElement=$deprecated/@id or .//@relationship=$deprecated/@id]
+return
+	concat($view/@name,'(',$view/@id,'):',$deprecated/@name,' in ', string-join($view/ancestor::folder/@name,'/'),codepoints-to-string(10))
+</documentation>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               id="4dfbd43b-5aa0-4e4a-85a0-9217a7821eb1"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="952a7b72-30f1-484d-84dc-fb246309d058"
+               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
+      <element xsi:type="zenta:BasicRelationship"
+               id="0a3fc59b-e39c-4229-ba22-e6a1e35734ea"
+               ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+               source="58c88955-d879-44ec-aa28-f1c2698a37ea"
+               target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
    </folder>
    <property key="modelDependency" value="metamodel/analysis_base"/>
+   <element xsi:type="zenta:BasicRelationship"
+            name="builds on template/is a template for"
+            id="299a71b1-61d7-4be0-aa8d-f5994a6c9e5e"
+            ancestor="basicrelation"
+            source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+            target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+   <element xsi:type="zenta:BasicRelationship"
+            name="parametrizes template with/is used as template parameter by"
+            id="1b194939-2048-46eb-b6b0-2ab83ed71d1f"
+            ancestor="basicrelation"
+            source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+            target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
 </folder>
