@@ -95,6 +95,7 @@
          <child xsi:type="zenta:DiagramObject"
                 id="af70d275-939c-4922-aded-8b18bd08ed66"
                 targetConnections="035bef51-3e68-4c63-9494-74e946b5798d"
+                fillColor="#729fcf"
                 zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
             <bounds x="540" y="492" width="-1" height="-1"/>
          </child>
