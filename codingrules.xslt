@@ -39,6 +39,13 @@
 					<para>
 						<xsl:copy-of select="documentation/(text()|*)"/>
 					</para>
+					<xsl:for-each select="zenta:neighbours($doc,$doc//element[@id=current()/@id],'aggregates,1')">
+				<section>
+					<xsl:copy-of select="@id"/>
+					<title><xsl:value-of select="@name"/></title>
+					<para>
+						<xsl:copy-of select="documentation/(text()|*)"/>
+					</para>
 					<para>
 					Rules:
 						<variablelist>
@@ -54,6 +61,8 @@
 							</xsl:for-each>
 						</variablelist>
 					</para>
+				</section>
+				</xsl:for-each>
 				</section>
 			</xsl:for-each>
 		</section>
