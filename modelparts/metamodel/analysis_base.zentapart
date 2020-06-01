@@ -871,7 +871,7 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
                name="Policies are inside the high level requirement folder"
                id="2bd3b516-7b67-46c2-95f7-6a6d3a8e0c90"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/ancestor::folder[@name='1. High level requirements'])
 	then ()
 	else concat($element/@name, ' is in ', string-join($element/ancestor::folder/@name, '/'))
@@ -881,7 +881,7 @@ if($element/ancestor::folder[@name='1. High level requirements'])
                name="Policies are in the High level requirements view"
                id="cd2a10f5-5a5b-4e45-b427-d9c97180423d"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($doc//element[@name='High level requirements' and @xsi:type='zenta:ZentaDiagramModel']//@zentaElement = $element/@id)
 	then ()
 	else concat($element/@name, ' is not in the High level requirements view')
@@ -921,7 +921,7 @@ Projects can contain packages.
                name="Supports a project"
                id="dac92ee6-2f6d-4e4c-977d-118f2d83d9b3"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if(not(zenta:neighbours($doc,$element,'is supported by,2')))
 then concat($element/@name, ' does not support any project')
 else ()
@@ -931,7 +931,7 @@ else ()
                name="The analysis contains High level requirements folder"
                id="5863abc4-16f0-4980-a6c2-1fcb47ddc4c6"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 zenta:exactlyOne(
 	$doc//folder[@name='1. Analysis']/folder[@name='1. High level requirements'],
 	'no policies and objectives folder'
@@ -941,7 +941,7 @@ zenta:exactlyOne(
                name="The high level requirements folder contains a 'High level requirements' view"
                id="a9e4282e-ea93-44fd-a5bd-12c17fd6f9c1"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/..[@name='1. High level requirements']/element[@name='High level requirements' and @xsi:type='zenta:ZentaDiagramModel'])
 	then ()
 	else 'no High level requirements view in the high level requirements folder'
@@ -951,7 +951,7 @@ if($element/..[@name='1. High level requirements']/element[@name='High level req
                name="The project is in the High level requirements folder"
                id="b91e12e3-10bd-4e4f-b826-1645a8a4f6e5"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/../@name='1. High level requirements')
 then ()
 else concat($element/@name, ' in ', string-join($element/ancestor::folder/@name, '/'))
@@ -963,7 +963,7 @@ else concat($element/@name, ' in ', string-join($element/ancestor::folder/@name,
                name="The project is in the high level requirements view"
                id="276f83f9-d734-42db-926e-9670d4773509"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/../element[@name='High level requirements' and @xsi:type='zenta:ZentaDiagramModel']//@zentaElement=$element/@id)
 	then ()
 	else concat($element/@name, ' is not in the High level requirements view')
@@ -973,7 +973,7 @@ if($element/../element[@name='High level requirements' and @xsi:type='zenta:Zent
                name="There is business analysis in the model"
                id="d827c3f9-b093-4ea3-bc9d-fc4a0d18d5ee"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 zenta:exactlyOne(
 	$doc//folder[@name='1. Analysis'],
 	'no analysis folder'
@@ -997,7 +997,7 @@ if($doc//folder[@name='1. High level requirements']/folder[contains(@name,$eleme
                name="The policy is in its policy view"
                id="33411319-451d-4e1d-9d24-b6758dec786a"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>hugh_level_requirements|
 if($doc//element[@name=$element/@name and @xsi:type='zenta:ZentaDiagramModel']//@zentaElement=$element/@id)
 	then ()
 	else concat($element/@name, ' is not in its policy view')</documentation>
