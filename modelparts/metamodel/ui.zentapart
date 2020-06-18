@@ -42,7 +42,7 @@
          <child xsi:type="zenta:DiagramObject"
                 id="9b97f34e-e909-4896-8c78-a32e9929a1b3"
                 fontColor="#ffffff"
-                targetConnections="404a3dad-4eec-467c-b908-8bcd9256681d 1faacf0e-8337-4f41-963d-80a268835a1d 1cce3d80-0563-469c-afbe-2a88b88d3bdc"
+                targetConnections="404a3dad-4eec-467c-b908-8bcd9256681d 1faacf0e-8337-4f41-963d-80a268835a1d 1cce3d80-0563-469c-afbe-2a88b88d3bdc a0c15f67-4e6d-410b-b0d8-04a8c8760406"
                 fillColor="#f57900"
                 elementShape="roundedRectangleShape"
                 zentaElement="44d3e3c7-5434-4b39-ad2f-b6157804f83b">
@@ -91,6 +91,12 @@
                               target="f3ca1e82-023d-4613-b294-65339c002211"
                               lineDecoration="DashedLineDecoration"
                               relationship="aaea75b0-b480-4f6c-a884-1cb5547d2514"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="a0c15f67-4e6d-410b-b0d8-04a8c8760406"
+                              source="cca5f40f-1d29-4b7e-bc7d-d9c23c9bcff9"
+                              target="9b97f34e-e909-4896-8c78-a32e9929a1b3"
+                              lineDecoration="SmallEndArrowDecoration"
+                              relationship="e73feece-b68d-4776-8a57-197d475f930b"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="af70d275-939c-4922-aded-8b18bd08ed66"
@@ -209,6 +215,19 @@
                target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="modifies"
+               id="e73feece-b68d-4776-8a57-197d475f930b"
+               ancestor="basicrelation"
+               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+               target="44d3e3c7-5434-4b39-ad2f-b6157804f83b">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="SmallEndArrowDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>

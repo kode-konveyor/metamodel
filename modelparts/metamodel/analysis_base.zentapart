@@ -365,19 +365,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="clicks when/does not input from"
-               id="0d91630c-d35b-41fa-8066-fee32e155fd2"
-               ancestor="basicrelation"
-               source="c2f93d99-8bbd-4742-9f73-15937394173d"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="DotTargetDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="is done by/does"
                id="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"
                ancestor="basicrelation"
@@ -386,32 +373,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"
                    value="DottedLineDecoration DotTargetDecoration DotSourceDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="is informed when/informs"
-               id="35cd050a-d4ec-4d56-8c7c-dd46cdb4b486"
-               ancestor="basicrelation"
-               source="c2f93d99-8bbd-4742-9f73-15937394173d"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="provides data in/inputs from"
-               id="dade9df1-08e7-45f0-9ac7-458729815864"
-               ancestor="basicrelation"
-               source="c2f93d99-8bbd-4742-9f73-15937394173d"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="SmallEndArrowDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
@@ -1330,15 +1291,16 @@ else
 	)</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="modifies Business Object, fills in UI element, makes decision or effectuate side effect"
+                  name="modifies state, fills in UI element, makes decision, orchestrates a process or effectuate side effect"
                   id="8c949a6c-39ed-43e5-839f-39e9518fc42a"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
 if (
-    zenta:neighbours($doc,$element,'modifies,1')[@xsi:type='Business Object'] or
+    zenta:neighbours($doc,$element,'modifies,1') or
     zenta:neighbours($doc,$element,'effectuate,1') or
-    count(zenta:neighbours($doc,$element,'preceeds,1')) &gt; 1 or
-    zenta:neighbours($doc,$element,'fills in,1')[@xsi:type='UI element'] 
+    zenta:neighbours($doc,$element,'preceeds,1') or
+    zenta:neighbours($doc,$element,'depends on,1') or
+    zenta:neighbours($doc,$element,'fills in,1')
 )
 then ()
 else 'does not modify'
@@ -1382,13 +1344,14 @@ else
 	</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="reads a Business Oject, done by a role or used by another step"
+                  name="reads a Business Oject, done by a role, have a side effect or used by another step"
                   id="a6f28a9d-1957-41f8-8009-e2589b15aa3f"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
 if (
     zenta:neighbours($doc,$element,'reads,1')[@xsi:type='Business Object'] or
     zenta:neighbours($doc,$element,'is done by/does,1')[@xsi:type='Role'] or
+    zenta:neighbours($doc,$element,'effectuate,1') or
     zenta:neighbours($doc,$element,'uses,2')[@xsi:type='Process Step'] 
 )
 then ()
@@ -1885,7 +1848,7 @@ else 'no process step found'
 for $conn in (
 	$element/value[(@ancestorName='has' or @ancestorName='aggregates') and @direction=1]
 ) return
-	if($doc//connection[@id=$conn/@id]/..[@name=$element/@name])
+	if($doc//connection[@id=$conn/@id]/..[@name=$element/ancestor::folder/@name])
 	then ()
 	else concat(
 		$conn/@relationName,
@@ -2057,7 +2020,9 @@ for $conn in (
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="067abdce-df93-45db-98ee-414122e331ff"
-                targetConnections="ced474f9-b46a-4489-ba8f-ca439742186d"
+                targetConnections="ced474f9-b46a-4489-ba8f-ca439742186d 2c2275bd-e496-44df-9718-782b544ec98f"
+                fillColor="#729fcf"
+                elementShape="serviceShape"
                 zentaElement="c2f93d99-8bbd-4742-9f73-15937394173d">
             <bounds x="767" y="56" width="-1" height="-1"/>
          </child>
@@ -2083,6 +2048,18 @@ for $conn in (
                 targetConnections="15e7b7bd-1d8e-4fed-a977-db8d24cff194 9d5d7579-c30b-41f8-8821-ce7f8698aa08"
                 zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
             <bounds x="1116" y="156" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="9ded5ff9-6a5e-4406-8422-f3f2fbf8d87a"
+                fillColor="#729fcf"
+                zentaElement="c2f93d99-8bbd-4742-9f73-15937394173d">
+            <bounds x="1320" y="56" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="2c2275bd-e496-44df-9718-782b544ec98f"
+                              source="9ded5ff9-6a5e-4406-8422-f3f2fbf8d87a"
+                              target="067abdce-df93-45db-98ee-414122e331ff"
+                              lineDecoration="DiamondSourceDecoration"
+                              relationship="edd27181-eaa2-4f2f-9079-51e2c22fbb34"/>
          </child>
          <property key="Template"/>
       </element>
@@ -2208,6 +2185,19 @@ A role is assigned to human(s).
                target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration" value="SmallStartArrowDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="contains"
+               id="edd27181-eaa2-4f2f-9079-51e2c22fbb34"
+               ancestor="basicrelation"
+               source="c2f93d99-8bbd-4742-9f73-15937394173d"
+               target="c2f93d99-8bbd-4742-9f73-15937394173d">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="DiamondSourceDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
