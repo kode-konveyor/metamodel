@@ -832,7 +832,7 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
                name="Policies are inside the high level requirement folder"
                id="2bd3b516-7b67-46c2-95f7-6a6d3a8e0c90"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/ancestor::folder[@name='1. High level requirements'])
 	then ()
 	else concat($element/@name, ' is in ', string-join($element/ancestor::folder/@name, '/'))
@@ -842,7 +842,7 @@ if($element/ancestor::folder[@name='1. High level requirements'])
                name="Policies are in the High level requirements view"
                id="cd2a10f5-5a5b-4e45-b427-d9c97180423d"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($doc//element[@name='High level requirements' and @xsi:type='zenta:ZentaDiagramModel']//@zentaElement = $element/@id)
 	then ()
 	else concat($element/@name, ' is not in the High level requirements view')
@@ -882,7 +882,7 @@ Projects can contain packages.
                name="Supports a project"
                id="dac92ee6-2f6d-4e4c-977d-118f2d83d9b3"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if(not(zenta:neighbours($doc,$element,'is supported by,2')))
 then concat($element/@name, ' does not support any project')
 else ()
@@ -892,7 +892,7 @@ else ()
                name="The analysis contains High level requirements folder"
                id="5863abc4-16f0-4980-a6c2-1fcb47ddc4c6"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 zenta:exactlyOne(
 	$doc//folder[@name='1. Analysis']/folder[@name='1. High level requirements'],
 	'no policies and objectives folder'
@@ -902,7 +902,7 @@ zenta:exactlyOne(
                name="The high level requirements folder contains a 'High level requirements' view"
                id="a9e4282e-ea93-44fd-a5bd-12c17fd6f9c1"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/..[@name='1. High level requirements']/element[@name='High level requirements' and @xsi:type='zenta:ZentaDiagramModel'])
 	then ()
 	else 'no High level requirements view in the high level requirements folder'
@@ -912,7 +912,7 @@ if($element/..[@name='1. High level requirements']/element[@name='High level req
                name="The project is in the High level requirements folder"
                id="b91e12e3-10bd-4e4f-b826-1645a8a4f6e5"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/../@name='1. High level requirements')
 then ()
 else concat($element/@name, ' in ', string-join($element/ancestor::folder/@name, '/'))
@@ -924,7 +924,7 @@ else concat($element/@name, ' in ', string-join($element/ancestor::folder/@name,
                name="The project is in the high level requirements view"
                id="276f83f9-d734-42db-926e-9670d4773509"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/../element[@name='High level requirements' and @xsi:type='zenta:ZentaDiagramModel']//@zentaElement=$element/@id)
 	then ()
 	else concat($element/@name, ' is not in the High level requirements view')
@@ -934,7 +934,7 @@ if($element/../element[@name='High level requirements' and @xsi:type='zenta:Zent
                name="There is business analysis in the model"
                id="d827c3f9-b093-4ea3-bc9d-fc4a0d18d5ee"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 zenta:exactlyOne(
 	$doc//folder[@name='1. Analysis'],
 	'no analysis folder'
@@ -958,7 +958,7 @@ if($doc//folder[@name='1. High level requirements']/folder[contains(@name,$eleme
                name="The policy is in its policy view"
                id="33411319-451d-4e1d-9d24-b6758dec786a"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>hugh_level_requirements|
 if($doc//element[@name=$element/@name and @xsi:type='zenta:ZentaDiagramModel']//@zentaElement=$element/@id)
 	then ()
 	else concat($element/@name, ' is not in its policy view')</documentation>
@@ -1465,7 +1465,8 @@ if($element/ancestor::folder[@name='4. User Interface'])
 	then if(
 		contains($element/../@name,$element/@name) or
 		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2')/@name) or
-		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2;contains,2')/@name)
+		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2;contains,2')/@name) or
+		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2;contains,2;contains,2')/@name)
 	)
 		then ()
 		else concat('not in its own or parents folder ', string-join($element/ancestor::folder/concat(@name,':',@id),'/'))
@@ -1507,7 +1508,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="5e568596-6e2b-46a8-93a9-b7f79f2e999a"
                    zentaElement="c91c92da-78ea-47b2-9db8-10fc10e0274f">
-               <bounds x="864" y="264" width="191" height="158"/>
+               <bounds x="864" y="264" width="191" height="181"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="9d7791fe-0394-4695-abaf-b16316ed2a11"
                                  source="5e568596-6e2b-46a8-93a9-b7f79f2e999a"
@@ -1567,7 +1568,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="98fcf55d-de0e-4526-b905-d27e7d449153"
                    zentaElement="89163bc3-1a7e-4d0a-9963-d765ea90d643">
-               <bounds x="191" y="492" width="194" height="166"/>
+               <bounds x="191" y="492" width="194" height="193"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="b05b84cc-b4ed-4a7a-a70b-890104cbb585"
                                  source="98fcf55d-de0e-4526-b905-d27e7d449153"
@@ -1577,7 +1578,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="ebcee676-0313-4021-9c60-3f9319057a9c"
                    zentaElement="a6f28a9d-1957-41f8-8009-e2589b15aa3f">
-               <bounds x="24" y="264" width="301" height="64"/>
+               <bounds x="60" y="798" width="301" height="91"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="4f2ddf3d-6da1-48db-9f18-de8527a31f47"
                                  source="ebcee676-0313-4021-9c60-3f9319057a9c"
@@ -1617,7 +1618,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="e889874c-509c-4ee4-b644-43ad78a9e1b2"
                    zentaElement="8c949a6c-39ed-43e5-839f-39e9518fc42a">
-               <bounds x="348" y="265" width="237" height="83"/>
+               <bounds x="348" y="240" width="325" height="108"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="43cfbad2-ef92-43aa-981b-1a6014aeafa8"
                                  source="e889874c-509c-4ee4-b644-43ad78a9e1b2"
@@ -1657,7 +1658,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="3fe38dc9-92f5-4f97-b3b8-7c6101f1b2ff"
                    zentaElement="eb88fe97-984c-4fd8-b44e-2964f3654fde">
-               <bounds x="1368" y="180" width="145" height="145"/>
+               <bounds x="1368" y="180" width="145" height="168"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="7b334d8d-0b6c-41e9-b0b3-a16062deb5d6"
                                  source="3fe38dc9-92f5-4f97-b3b8-7c6101f1b2ff"
@@ -1713,7 +1714,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="b64fa056-eaf0-4896-a19b-d809864779d8"
                    zentaElement="b11c8827-dd17-42e7-bc28-02cd1b5bccca">
-               <bounds x="942" y="730" height="99"/>
+               <bounds x="942" y="730" width="139" height="123"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="2976cd8f-e067-4abb-ad0d-dcce98d901c3"
                                  source="b64fa056-eaf0-4896-a19b-d809864779d8"
@@ -1760,6 +1761,11 @@ if($element/ancestor::folder[@name='4. User Interface'])
                                  target="19c7799d-6d58-4520-9c1e-e171364362ba"
                                  relationship="e7e06bec-502b-40e8-be66-caa6389d6639"/>
             </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="02bbe789-d0d9-4145-b604-571d1967e0f2"
+                   zentaElement="1f0aded9-f3a9-49f0-ae0a-51ed79e2b4ea">
+               <bounds x="778" y="876" width="-1" height="-1"/>
+            </child>
          </element>
          <element xsi:type="zenta:BasicObject"
                   name="No flow between steps in different stories"
@@ -1784,15 +1790,16 @@ else ()
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="Each role have its own view"
+                  name="Each role have its own folder and view"
                   id="c4acc242-a0ae-4550-a82e-d606471a2fa7"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
 if(
-	$element/../*[.//@zentaElement=$element/@id and @name=$element/@name]
+	$element/../*[.//@zentaElement=$element/@id and @name=$element/@name] and
+   contains($element/../@name,$element/@name)
 )
 	then ()
-	else 'have no view'
+	else 'have no view and/or folder'
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
@@ -1809,11 +1816,14 @@ if(
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="the role view contains all steps done by the role"
+                  name="the role view contains all neighbours of the role"
                   id="df5e5857-45f4-450d-8c05-0b002b7e41c8"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-for $step in zenta:neighbours($doc,$element,'is done by/does,2')
+for $step in (
+	zenta:neighbours($doc,$element,'is done by/does,2')|
+	zenta:neighbours($doc,$element,'contains,2')
+   )
 return
 	if(
 		$element/../*[@name = $element/@name]//@zentaElement = $step/@id
@@ -1832,8 +1842,7 @@ if(
   count(
     (
        zenta:neighbours($doc,$element,'is done by/does,2')|
-       zenta:neighbours($doc,$element,'clicks when/does not input from,1')|
-       zenta:neighbours($doc,$element,'provides data in/inputs from,1')
+       zenta:neighbours($doc,$element,'contains,2;is done by/does,2')
      )[@xsi:type='Process Step']
   ) &gt;0)
 then ()
@@ -1896,6 +1905,10 @@ for $conn in (
                   ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                   source="ff848335-3f6c-478e-8323-9f92f4f93d84"
                   target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="Constraint"
+                  id="1f0aded9-f3a9-49f0-ae0a-51ed79e2b4ea"
+                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f"/>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="User Journey"

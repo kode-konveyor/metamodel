@@ -469,7 +469,7 @@
          <child xsi:type="zenta:DiagramObject"
                 id="cd2bc290-dea2-490b-9169-691a2de0ce97"
                 zentaElement="47d08121-4031-4c7a-b6de-1f70c0bb8095">
-            <bounds x="900" y="288" width="145" height="97"/>
+            <bounds x="900" y="288" width="157" height="121"/>
             <sourceConnection xsi:type="zenta:Connection"
                               id="fc7de414-3fd0-4e52-8d48-aeec36769355"
                               source="cd2bc290-dea2-490b-9169-691a2de0ce97"
@@ -955,7 +955,7 @@ else
                 id="b3121666-7442-4f78-b898-c3d4aefc220a"
                 targetConnections="08442a9e-c87e-4269-a530-54a8a1a36dbd f237f0f5-fab0-4660-94ea-349521758979"
                 zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
-            <bounds x="816" y="108" width="-1" height="-1"/>
+            <bounds x="816" y="108" height="73"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="b09044b1-07a9-4be3-b243-ff8b82cfa767"
