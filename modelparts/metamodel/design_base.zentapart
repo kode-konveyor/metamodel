@@ -1233,7 +1233,7 @@ Packages contain process steps, and the code units (Services, Controllers, and o
          <child xsi:type="zenta:DiagramObject"
                 id="a2fc8be6-6974-42d9-9bf8-09b86b4a9901"
                 zentaElement="768e7503-e491-4d74-827c-198eb4bfe40d">
-            <bounds x="84" y="475" width="211" height="93"/>
+            <bounds x="84" y="475" width="217" height="138"/>
             <sourceConnection xsi:type="zenta:Connection"
                               id="d8eb36f8-2995-420b-a663-a4e9c1b6c492"
                               source="a2fc8be6-6974-42d9-9bf8-09b86b4a9901"
@@ -1313,7 +1313,7 @@ zenta:exactlyOne(
                id="6549c67a-dd03-40b7-bfe7-bed4e631d323"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>application_structure|
-if($doc//folder[@name='6. Low Level Design']/element[@name='Application Structure']//@zentaElement=$element/@id)
+if($doc//folder[@name='7. Low Level Design']/element[@name='Application Structure']//@zentaElement=$element/@id)
 then ()
 else 'not in the view'</documentation>
       </element>
@@ -1323,16 +1323,16 @@ else 'not in the view'</documentation>
                source="6549c67a-dd03-40b7-bfe7-bed4e631d323"
                target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
       <element xsi:type="zenta:BasicObject"
-               name="In its view in its folder within 6. Low Level Design with all its contents"
+               name="In its view in its folder within 7. Low Level Design with all its contents"
                id="768e7503-e491-4d74-827c-198eb4bfe40d"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>application_structure|
 if(
-	$doc//folder[@name='6. Low Level Design']//folder[@name=$element/@name and element/@id=$element/@id]//@zentaElement = $element/@id
+	$doc//folder[@name='7. Low Level Design']//folder[@name=$element/@name and element/@id=$element/@id]//@zentaElement = $element/@id
 )
 then for $content in zenta:neighbours($doc,$element,'contains,1')
 	return
-		if ($doc//folder[@name='6. Low Level Design']//element[@name=$element/@name]//@zentaElement=$content/@id)
+		if ($doc//folder[@name='7. Low Level Design']//element[@name=$element/@name]//@zentaElement=$content/@id)
 		then ()
 		else concat($content/@name,' not in the view ')
 else 'not in its folder'</documentation>
@@ -1601,14 +1601,14 @@ Test artifacts are actual data in case of Business Objects, and actual data or m
                source="05f5c95a-6781-4d95-a90b-9e9aede97472"
                target="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
       <element xsi:type="zenta:BasicObject"
-               name="Have its folder with view in 6. Low Level Design, containing it. its test artifacts, supported Business Objects and their type"
+               name="Have its folder with view in 7. Low Level Design, containing it. its test artifacts, supported Business Objects and their type"
                id="bace4199-1f09-47f6-91ad-d374b6acecbc"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>data_structures|
 if(
 	$element/..[
 		@name=$element/@name and 
-		ancestor::folder[@name='6. Low Level Design'] and
+		ancestor::folder[@name='7. Low Level Design'] and
        ../@name=zenta:neighbours($doc,$element,'contains,2')/@name
 	]/element[@name=$element/@name]//@zentaElement=$element/@id
 )
@@ -2062,14 +2062,14 @@ else 'no constants'
                   source="dc5f0c92-8e08-41f4-b7d3-7157d021676b"
                   target="804cfcd0-5c82-4776-8f40-d16c3d5b870e"/>
          <element xsi:type="zenta:BasicObject"
-                  name="Have its folder with view in 6. Low Level Design, containing it, its constants and package"
+                  name="Have its folder with view in 7. Low Level Design, containing it, its constants and package"
                   id="9993c34d-65a2-4e3e-8ad4-998e5fc78f78"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>data_structures|
 if(
 	$element/..[
 		@name=$element/@name and 
-		ancestor::folder[@name='6. Low Level Design'] and
+		ancestor::folder[@name='7. Low Level Design'] and
        ../@name=zenta:neighbours($doc,$element,'contains,2')/@name
 	]/element[@name=$element/@name]//@zentaElement=$element/@id
 )
