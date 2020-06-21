@@ -35,10 +35,6 @@
                   id="81320af1-db53-4357-98e8-b11c7248e2be"
                   ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
          <element xsi:type="zenta:BasicObject"
-                  name="String"
-                  id="b0b9e3d0-389f-4989-941a-e97aeb77bdbc"
-                  ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
-         <element xsi:type="zenta:BasicObject"
                   name="Array"
                   id="6cd2b009-714f-485d-ae14-6b2e081daf18"
                   ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
@@ -47,8 +43,16 @@
                   id="faa5e1b5-f0f6-4930-a0f9-cb17ff08ce4d"
                   ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
          <element xsi:type="zenta:BasicObject"
+                  name="String"
+                  id="b0b9e3d0-389f-4989-941a-e97aeb77bdbc"
+                  ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
+         <element xsi:type="zenta:BasicObject"
                   name="Object"
                   id="fb9d813f-9900-455a-bfa5-5448fd383251"
+                  ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="Any"
+                  id="e6942112-d548-4bf8-8c7e-0925e876b96b"
                   ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
@@ -75,11 +79,6 @@
             <bounds x="648" y="385" width="-1" height="-1"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
-                id="eedfe6d4-eee8-4e88-b559-cc629b1521d4"
-                zentaElement="b0b9e3d0-389f-4989-941a-e97aeb77bdbc">
-            <bounds x="972" y="144" width="-1" height="-1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
                 id="e20e409c-bb6a-480f-965b-8b9610053a0d"
                 zentaElement="4f3f2228-4c09-4876-aabb-722db7b7fd4d">
             <bounds x="972" y="212" width="-1" height="-1"/>
@@ -103,6 +102,21 @@
                 id="60ce76bc-5850-4827-966a-1456ca6953a1"
                 zentaElement="fb9d813f-9900-455a-bfa5-5448fd383251">
             <bounds x="972" y="528" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="fac34b64-1cf2-4017-a103-c98f6f9fbf42"
+                zentaElement="faa5e1b5-f0f6-4930-a0f9-cb17ff08ce4d">
+            <bounds x="965" y="121" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="302bf14b-a443-4cb6-83d7-6436e0e7d8b1"
+                zentaElement="b0b9e3d0-389f-4989-941a-e97aeb77bdbc">
+            <bounds x="971" y="611" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="25e8d23a-de0c-46c0-a918-e1b073d6e5b4"
+                zentaElement="e6942112-d548-4bf8-8c7e-0925e876b96b">
+            <bounds x="970" y="718" width="-1" height="-1"/>
          </child>
       </element>
    </folder>
@@ -2712,15 +2726,19 @@ return
    </folder>
    <property key="modelDependency" value="metamodel/analysis_base"/>
    <element xsi:type="zenta:BasicRelationship"
-            name="builds on template/is a template for"
+            name="is a/is a template for"
             id="299a71b1-61d7-4be0-aa8d-f5994a6c9e5e"
             ancestor="basicrelation"
             source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
-            target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+            target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+      <property key="lineDecoration" value=" BigArrowSourceDecoration"/>
+   </element>
    <element xsi:type="zenta:BasicRelationship"
-            name="parametrizes template with/is used as template parameter by"
+            name="parametrizes template with/is used as template parameter by deprecated"
             id="1b194939-2048-46eb-b6b0-2ab83ed71d1f"
             ancestor="basicrelation"
             source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
-            target="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+            target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+      <property key="lineDecoration" value="DashedLineDecoration"/>
+   </element>
 </folder>
