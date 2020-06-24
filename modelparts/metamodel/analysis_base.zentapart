@@ -1123,7 +1123,9 @@ zentatools:let(
                   id="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-if(matches($element/@name,'^[A-Z]'))
+if($element/ancestor::folder[@name='Frontend framework'])
+then ()
+else if(matches($element/@name,'^[A-Z]'))
 then
 	if (matches($element/../@name,$element/@name))
 	then ()
@@ -1251,7 +1253,7 @@ else
                   id="8019b11c-e5fc-47df-b103-82a913cf409a"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-if($element/ancestor::folder[@name='2. Business Objects'])
+if($element/ancestor::folder[@name='2. Business Objects'] or $element/ancestor::folder[@name='Frontend framework'])
 	then ()
 	else string-join($element/ancestor::folder/concat(@name,':',@id),'/')
 </documentation>
@@ -1427,7 +1429,9 @@ else 'not in folder view'
                   id="24e9ea84-415c-4aaf-aa92-b45eb7c33c8c"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-if(matches($element/@name,'^[A-Z]'))
+if($element/ancestor::folder[@name='Frontend framework'])
+then ()
+else if(matches($element/@name,'^[A-Z]'))
 then
 	zentatools:let(
 		'view',
