@@ -487,20 +487,6 @@ if($doc//folder[@name='6. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="fills in"
-               id="d51f6cea-67c1-416a-b111-d0134f83795c"
-               ancestor="aaea75b0-b480-4f6c-a884-1cb5547d2514"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SmallEndArrowDecoration SparseDashedLineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="uses"
                id="aaea75b0-b480-4f6c-a884-1cb5547d2514"
                ancestor="basicrelation"
@@ -1955,12 +1941,6 @@ for $conn in (
                               lineDecoration="DottedLineDecoration DotTargetDecoration DotSourceDecoration"
                               relationship="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"/>
             <sourceConnection xsi:type="zenta:Connection"
-                              id="266ba68e-899b-43be-9c3f-7b7bc2bfaa43"
-                              source="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
-                              target="48b523e2-1e13-44cd-89af-538a3395f9b2"
-                              lineDecoration="SmallEndArrowDecoration SparseDashedLineDecoration"
-                              relationship="d51f6cea-67c1-416a-b111-d0134f83795c"/>
-            <sourceConnection xsi:type="zenta:Connection"
                               id="0b1decde-8b36-48c9-8c93-ad5ed623ba29"
                               source="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
                               target="5e325f21-c925-43f4-8174-38f79d497dd5"
@@ -1976,7 +1956,7 @@ for $conn in (
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="48b523e2-1e13-44cd-89af-538a3395f9b2"
-                targetConnections="2f1ba6cf-848f-45a5-aa49-4b0bad31c09d 266ba68e-899b-43be-9c3f-7b7bc2bfaa43"
+                targetConnections="2f1ba6cf-848f-45a5-aa49-4b0bad31c09d"
                 fillColor="#ffffff"
                 elementShape="emptyShape"
                 zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">

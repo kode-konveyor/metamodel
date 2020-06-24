@@ -2631,7 +2631,143 @@ In a model view it is a good practice to grey out elements which are outside of 
       </element>
    </folder>
    <folder name="0. deprecation" id="23fb97f5-0b38-40ce-9653-8cfaa7ec1076">
-      <folder name="Deprecated objects" id="94b88447-b75b-4f3b-97ec-a957028960be"/>
+      <folder name="Deprecated objects" id="94b88447-b75b-4f3b-97ec-a957028960be">
+         <element xsi:type="zenta:BasicRelationship"
+                  name="fills in deprecated"
+                  id="d51f6cea-67c1-416a-b111-d0134f83795c"
+                  ancestor="aaea75b0-b480-4f6c-a884-1cb5547d2514"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="contains deprecated"
+                  id="e542d690-c5ef-48c6-a6e1-1a25c9cc6b2f"
+                  ancestor="basicrelation"
+                  source="44d3e3c7-5434-4b39-ad2f-b6157804f83b"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="contains deprecated"
+                  id="0170d58d-60e9-49a8-888e-f2c61e1ad4a0"
+                  ancestor="basicrelation"
+                  source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
+                  target="44d3e3c7-5434-4b39-ad2f-b6157804f83b">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="employs deprecated"
+                  id="68af7a16-90c5-4c96-8f86-f6d70edfb0a2"
+                  ancestor="basicrelation"
+                  source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="has deprecated"
+                  id="f3d4422b-2b19-4a30-922b-1af0890504a3"
+                  ancestor="basicrelation"
+                  source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+                  target="44d3e3c7-5434-4b39-ad2f-b6157804f83b">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="operates on/is operated by deprecated"
+                  id="bf4763eb-8b85-44d9-90b9-f44135263e89"
+                  ancestor="basicrelation"
+                  source="service"
+                  target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="sets/is set by deprecated"
+                  id="59eb6d0a-e58e-49bd-9c9e-8fe872845784"
+                  ancestor="basicrelation"
+                  source="service"
+                  target="44d3e3c7-5434-4b39-ad2f-b6157804f83b">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="triggers deprecated"
+                  id="8130dc45-33bb-4914-b1f9-7b0a4ce50cce"
+                  ancestor="basicrelation"
+                  source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+                  target="service">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicObject"
+                  name="state deprecated"
+                  id="44d3e3c7-5434-4b39-ad2f-b6157804f83b"
+                  ancestor="thing">
+            <property key="fillColor" value="#fffff"/>
+            <property key="elementShape" value="roundedRectangleShape"/>
+            <property key="textAlignment" value="2"/>
+            <property key="fontColor" value="#ffffff"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="parametrizes template with/is used as template parameter by deprecated"
+                  id="1b194939-2048-46eb-b6b0-2ab83ed71d1f"
+                  ancestor="basicrelation"
+                  source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+                  target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="uses/is used by deprecated"
+                  id="957fd3b6-6f76-4621-9408-ef43272f6763"
+                  ancestor="basicrelation"
+                  source="service"
+                  target="44d3e3c7-5434-4b39-ad2f-b6157804f83b">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+      </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="deprecation"
                id="af42470b-0e22-47a2-89ba-1d6df8daa398">
@@ -2732,13 +2868,5 @@ return
             source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
             target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
       <property key="lineDecoration" value=" BigArrowSourceDecoration"/>
-   </element>
-   <element xsi:type="zenta:BasicRelationship"
-            name="parametrizes template with/is used as template parameter by deprecated"
-            id="1b194939-2048-46eb-b6b0-2ab83ed71d1f"
-            ancestor="basicrelation"
-            source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
-            target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
-      <property key="lineDecoration" value="DashedLineDecoration"/>
    </element>
 </folder>
