@@ -2767,6 +2767,33 @@ In a model view it is a good practice to grey out elements which are outside of 
             <property key="lineWidth" value="1"/>
             <property key="font"/>
          </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="reduces deprecated"
+                  id="fb28f9dc-9029-4a00-bebc-62930796ccef"
+                  ancestor="basicrelation"
+                  source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+                  target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration" value="DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="triggers deprecated"
+                  id="74d5b0e6-511a-4c2c-ac7c-bc2fb90e7499"
+                  ancestor="basicrelation"
+                  source="ce463be5-f361-41a2-8316-23093e59bfe6"
+                  target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+            <property key="textPosition" value="1"/>
+            <property key="lineDecoration"
+                      value="SmallEndArrowDecoration DottedLineDecoration"/>
+            <property key="lineColor"/>
+            <property key="fontColor"/>
+            <property key="lineWidth" value="1"/>
+            <property key="font"/>
+         </element>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="deprecation"
