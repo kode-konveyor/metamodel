@@ -2072,6 +2072,11 @@ else string-join(zenta:neighbours($doc,$element,'is initialized by/initializes,1
                 elementShape="roundedRectangleShape"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="378" y="272" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="e3a7399a-b14a-45cf-8ff2-0a2f69b75793"
+                              source="60005ade-f1f4-4732-ac75-89fde794e9e0"
+                              target="cd9070ad-6b72-4a5b-b43f-13dc0e5c9f75"
+                              relationship="0317b5b8-7cf5-482c-9d54-eeda475b644e"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="c663a906-e0b7-43f9-9071-88a0971c7f02"
@@ -2134,6 +2139,12 @@ else string-join(zenta:neighbours($doc,$element,'is initialized by/initializes,1
                               source="b7e1729e-203d-4a77-b248-50866b1b0d23"
                               target="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
                               relationship="570c55c8-ce7b-4dd9-9c6b-e368b953e934"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="cd9070ad-6b72-4a5b-b43f-13dc0e5c9f75"
+                targetConnections="e3a7399a-b14a-45cf-8ff2-0a2f69b75793"
+                zentaElement="ebc74a50-0298-4c43-8830-d93ede22576b">
+            <bounds x="483" y="428" width="-1" height="-1"/>
          </child>
          <property key="Template"/>
       </element>
@@ -2283,6 +2294,19 @@ A role is assigned to human(s).
                ancestor="basicrelation"
                source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
                target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="uses"
+               id="0317b5b8-7cf5-482c-9d54-eeda475b644e"
+               ancestor="basicrelation"
+               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+               target="ebc74a50-0298-4c43-8830-d93ede22576b">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"/>
          <property key="lineColor"/>

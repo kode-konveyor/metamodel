@@ -2039,6 +2039,7 @@ zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Constant']</documentatio
 zenta:exactlyOne(
 	zenta:neighbours($doc,$element,'contains,2')[
 		@xsi:type='Constant Provider' or
+		@xsi:type='Configuration Provider' or
 		@xsi:type='Test Data' or
 		@xsi:type='Enum'],
 	'no Constant Provider found') </documentation>
@@ -2155,6 +2156,11 @@ zenta:exactlyOne(
                 elementShape="ellipseShape"
                 zentaElement="ebc74a50-0298-4c43-8830-d93ede22576b">
             <bounds x="432" y="324" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="8bb4a923-f54b-411d-ac5a-6ab0db573bcb"
+                              source="a76bb1f0-63dd-4498-bb6e-bf15fa90bec5"
+                              target="f023b215-6715-4dbc-8524-682085a3d690"
+                              relationship="d4dcd639-bdb4-45d7-a344-c63e6c6b324d"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="01aa2887-b225-41e2-b5e6-89871d7e2b95"
@@ -2181,6 +2187,13 @@ zenta:exactlyOne(
                 elementShape="meaningShape"
                 zentaElement="833d959e-228d-4954-a74f-90c355ac36a3">
             <bounds x="588" y="204" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="f023b215-6715-4dbc-8524-682085a3d690"
+                targetConnections="8bb4a923-f54b-411d-ac5a-6ab0db573bcb"
+                fillColor="#729fcf"
+                zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <bounds x="450" y="486" width="127" height="67"/>
          </child>
          <property key="Template"/>
       </element>
@@ -2241,6 +2254,19 @@ Example:
          <property key="elementShape" value="ellipseShape"/>
          <property key="textAlignment" value="2"/>
          <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is a"
+               id="d4dcd639-bdb4-45d7-a344-c63e6c6b324d"
+               ancestor="basicrelation"
+               source="ebc74a50-0298-4c43-8830-d93ede22576b"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
    </folder>
