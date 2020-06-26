@@ -165,23 +165,46 @@ for $implemented in zenta:neighbours($doc,$element,'implements,1')
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>milestones|
 if(
-        zenta:neighbours($doc,$element,'implements,2'),
-        zenta:neighbours($doc,$element,'contains,2;implements,2'),
-        zenta:neighbours($doc,$element,'iterates,2;implements,2'),
-        zenta:neighbours($doc,$element,'contains,2;contains,2;implements,2'),
-        zenta:neighbours($doc,$element,'iterates,2;contains,2;implements,2'),
-        zenta:neighbours($doc,$element,'iterates,2;iterates,2;implements,2'),
-        zenta:neighbours($doc,$element,'contains,2;iterates,2;implements,2'),
-
-        zenta:neighbours($doc,$element,'contains,2;contains,2;contains,2;implements,2'),
-        zenta:neighbours($doc,$element,'contains,2;iterates,2;contains,2;implements,2'),
-        zenta:neighbours($doc,$element,'contains,2;iterates,2;iterates,2;implements,2'),
-        zenta:neighbours($doc,$element,'contains,2;contains,2;iterates,2;implements,2'),
-
-        zenta:neighbours($doc,$element,'iterates,2;contains,2;contains,2;implements,2'),
-        zenta:neighbours($doc,$element,'iterates,2;iterates,2;contains,2;implements,2'),
-        zenta:neighbours($doc,$element,'iterates,2;iterates,2;iterates,2;implements,2'),
-        zenta:neighbours($doc,$element,'iterates,2;contains,2;iterates,2;implements,2')
+zenta:neighbours($doc,$element,'implements,2')|
+zenta:neighbours($doc,$element,'contains,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;contains,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;contains,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;contains,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;iterates,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;iterates,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;iterates,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;depends on,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;depends on,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;depends on,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;contains,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;contains,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;contains,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;iterates,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;iterates,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;iterates,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;depends on,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;depends on,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;depends on,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;contains,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;contains,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;contains,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;iterates,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;iterates,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;iterates,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;depends on,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;depends on,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;depends on,2;depends on,2;implements,2')
 )
 then ()
 else 'no milestone'
@@ -1137,7 +1160,7 @@ else
 			'(
 				zenta:neighbours($doc,$element,''has,2''),
 				zenta:neighbours($doc,$element,''aggregates,2'')
-			)',
+			)[@xsi:type=''Business Object'']',
 			'if($parent)
 				then if(
 						(for $p in $parent return contains($element/../@name,$p/@name))=true()
@@ -1292,16 +1315,21 @@ else
 	)</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="modifies state, fills in UI element, makes decision, orchestrates a process or effectuate side effect"
+                  name="done by a user using a UI element, modifies state, orchestrates a process or effectuate side effect"
                   id="8c949a6c-39ed-43e5-839f-39e9518fc42a"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-if (
+if ( 
+       zenta:neighbours($doc,$element,'is done by/does,1') |
+       zenta:neighbours($doc,$element,'contains,1;is done by/does,1') 
+)
+then if ( zenta:neighbours($doc,$element,'uses,1') | zenta:neighbours($doc,$element,'contains,1;uses,1'))
+  then ()
+  else 'done by a user but does not use UI element'
+else if (
     zenta:neighbours($doc,$element,'modifies,1') or
     zenta:neighbours($doc,$element,'effectuate,1') or
-    zenta:neighbours($doc,$element,'preceeds,1') or
-    zenta:neighbours($doc,$element,'depends on,1') or
-    zenta:neighbours($doc,$element,'fills in,1')
+    zenta:neighbours($doc,$element,'depends on,1')
 )
 then ()
 else 'does not modify'
@@ -1353,7 +1381,7 @@ if (
     zenta:neighbours($doc,$element,'reads,1')[@xsi:type='Business Object'] or
     zenta:neighbours($doc,$element,'is done by/does,1')[@xsi:type='Role'] or
     zenta:neighbours($doc,$element,'effectuate,1') or
-    zenta:neighbours($doc,$element,'uses,2')[@xsi:type='Process Step'] 
+    zenta:neighbours($doc,$element,'depends on,2')[@xsi:type='Process Step'] 
 )
 then ()
 else 'does not read'
