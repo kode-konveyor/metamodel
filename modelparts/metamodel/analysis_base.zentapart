@@ -164,7 +164,9 @@ for $implemented in zenta:neighbours($doc,$element,'implements,1')
                id="70b42ec0-f6e0-42de-bf86-5cbffd43e41c"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>milestones|
-if(
+if(zenta:neighbours($doc,$element,'is initialized by/initializes,2'))
+then ()
+else if(
 zenta:neighbours($doc,$element,'implements,2')|
 zenta:neighbours($doc,$element,'contains,2;implements,2')|
 zenta:neighbours($doc,$element,'iterates,2;implements,2')|
@@ -1147,9 +1149,7 @@ zentatools:let(
                   id="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-if($element/ancestor::folder[@name='Frontend framework'])
-then ()
-else if(matches($element/@name,'^[A-Z]'))
+if(matches($element/@name,'^[A-Z]'))
 then
 	if (matches($element/../@name,$element/@name))
 	then ()
@@ -1277,7 +1277,7 @@ else
                   id="8019b11c-e5fc-47df-b103-82a913cf409a"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-if($element/ancestor::folder[@name='2. Business Objects'] or $element/ancestor::folder[@name='Frontend framework'])
+if($element/ancestor::folder[@name='2. Business Objects'] )
 	then ()
 	else string-join($element/ancestor::folder/concat(@name,':',@id),'/')
 </documentation>
@@ -1458,9 +1458,7 @@ else 'not in folder view'
                   id="24e9ea84-415c-4aaf-aa92-b45eb7c33c8c"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-if($element/ancestor::folder[@name='Frontend framework'])
-then ()
-else if(matches($element/@name,'^[A-Z]'))
+if(matches($element/@name,'^[A-Z]'))
 then
 	zentatools:let(
 		'view',
@@ -1792,6 +1790,22 @@ if($element/ancestor::folder[@name='4. User Interface'])
                                  target="19c7799d-6d58-4520-9c1e-e171364362ba"
                                  relationship="e7e06bec-502b-40e8-be66-caa6389d6639"/>
             </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="68044f4e-b089-464c-840f-1304af6a1a6e"
+                   targetConnections="1b0d15e4-e163-4c8f-a50c-ab4859659168"
+                   zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
+               <bounds x="1479" y="417" width="-1" height="-1"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="e62c64a8-bdd3-409b-999a-570312d08ea0"
+                   zentaElement="076a46da-abc4-4913-a31a-6e8e9fab115c">
+               <bounds x="1559" y="569" width="266" height="116"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="1b0d15e4-e163-4c8f-a50c-ab4859659168"
+                                 source="e62c64a8-bdd3-409b-999a-570312d08ea0"
+                                 target="68044f4e-b089-464c-840f-1304af6a1a6e"
+                                 relationship="4e04510f-7fa3-4a85-bfe4-00d11bea79b5"/>
+            </child>
          </element>
          <element xsi:type="zenta:BasicObject"
                   name="No flow between steps in different stories"
@@ -1931,12 +1945,31 @@ for $conn in (
                   ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                   source="ff848335-3f6c-478e-8323-9f92f4f93d84"
                   target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="There is at most one process initializing the project"
+                  id="076a46da-abc4-4913-a31a-6e8e9fab115c"
+                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <documentation>user_journey|
+if(count(
+	zenta:neighbours($doc,$element,'is initialized by/initializes,1')
+ )&lt;2)
+then ()
+else string-join(zenta:neighbours($doc,$element,'is initialized by/initializes,1')/@name,' and ')
+
+</documentation>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  id="4e04510f-7fa3-4a85-bfe4-00d11bea79b5"
+                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+                  source="076a46da-abc4-4913-a31a-6e8e9fab115c"
+                  target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="User Journey"
                id="4c99f33a-33fd-4e30-a279-be256457cb16">
          <child xsi:type="zenta:DiagramObject"
                 id="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
+                targetConnections="1ea14489-ef0b-48a5-ab96-3fdd8fa0aa68"
                 fillColor="#729fcf"
                 elementShape="roundedRectangleShape"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
@@ -2090,6 +2123,18 @@ for $conn in (
                               lineDecoration="DiamondSourceDecoration"
                               relationship="edd27181-eaa2-4f2f-9079-51e2c22fbb34"/>
          </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="b7e1729e-203d-4a77-b248-50866b1b0d23"
+                fillColor="#fcaf3e"
+                elementShape="deliverableShape"
+                zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
+            <bounds x="42" y="26" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="1ea14489-ef0b-48a5-ab96-3fdd8fa0aa68"
+                              source="b7e1729e-203d-4a77-b248-50866b1b0d23"
+                              target="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
+                              relationship="570c55c8-ce7b-4dd9-9c6b-e368b953e934"/>
+         </child>
          <property key="Template"/>
       </element>
       <element xsi:type="zenta:BasicObject"
@@ -2227,6 +2272,19 @@ A role is assigned to human(s).
                target="c2f93d99-8bbd-4742-9f73-15937394173d">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration" value="DiamondSourceDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is initialized by/initializes"
+               id="570c55c8-ce7b-4dd9-9c6b-e368b953e934"
+               ancestor="basicrelation"
+               source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>

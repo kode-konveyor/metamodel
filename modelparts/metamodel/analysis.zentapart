@@ -352,6 +352,11 @@
                                  source="53f767cc-eb83-4689-b090-24906ce082f3"
                                  target="8d02eb4b-c2d1-4322-bee0-0e68018d17c1"
                                  relationship="7cf32ef2-a930-40c2-9f58-9f0aeba115bb"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="8ecddb6a-aa3b-4c1f-9257-4a762390bd87"
+                                 source="53f767cc-eb83-4689-b090-24906ce082f3"
+                                 target="5fbd2a7e-5a1a-46e5-95bd-30102beb9a35"
+                                 relationship="b7ed0bc7-405a-4414-bea2-344069bd994e"/>
             </child>
             <child xsi:type="zenta:DiagramObject"
                    id="5c96d786-e436-441b-8e53-e7c02af3b970"
@@ -569,6 +574,12 @@
                    zentaElement="4d15738c-09e8-4971-820d-c254a5e99d06">
                <bounds x="1164" y="27" width="145" height="64"/>
             </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="5fbd2a7e-5a1a-46e5-95bd-30102beb9a35"
+                   targetConnections="8ecddb6a-aa3b-4c1f-9257-4a762390bd87"
+                   zentaElement="076a46da-abc4-4913-a31a-6e8e9fab115c">
+               <bounds x="1249" y="787" width="264" height="90"/>
+            </child>
          </element>
          <element xsi:type="zenta:BasicRelationship"
                   id="f8097106-9012-4356-a0fc-481bf834c9f2"
@@ -705,6 +716,11 @@
                   ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
                   source="96bf31ef-da6e-43a9-9b47-9a2bbf8d1147"
                   target="4d15738c-09e8-4971-820d-c254a5e99d06"/>
+         <element xsi:type="zenta:BasicRelationship"
+                  id="b7ed0bc7-405a-4414-bea2-344069bd994e"
+                  ancestor="04ce9a45-2873-4e6b-abea-6f04ce048123"
+                  source="96bf31ef-da6e-43a9-9b47-9a2bbf8d1147"
+                  target="076a46da-abc4-4913-a31a-6e8e9fab115c"/>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="analysis shunt"
