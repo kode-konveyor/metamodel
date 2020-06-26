@@ -659,6 +659,7 @@
                   source="8e0a1110-8c1a-4f84-8ea7-b4866da74a7d"
                   target="562ebf73-dc6d-4cb0-a4bf-d43c5eb4490d"/>
       </folder>
+      <folder name="label" id="1cd1e680-fffe-4013-9131-71fc8d0492bf"/>
       <element xsi:type="zenta:BasicRelationship"
                id="f6ec7546-3c30-4137-92ce-bb7af676f162"
                ancestor="7d169f7b-5f22-457f-b063-622f0617b771"
