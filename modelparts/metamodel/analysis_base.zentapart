@@ -165,46 +165,23 @@ for $implemented in zenta:neighbours($doc,$element,'implements,1')
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>milestones|
 if(
-zenta:neighbours($doc,$element,'implements,2')|
-zenta:neighbours($doc,$element,'contains,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;contains,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;contains,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;contains,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;iterates,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;iterates,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;iterates,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;depends on,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;depends on,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'contains,2;depends on,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;contains,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;contains,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;contains,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;iterates,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;iterates,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;iterates,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;depends on,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;depends on,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'iterates,2;depends on,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;contains,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;contains,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;contains,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;iterates,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;iterates,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;iterates,2;depends on,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;depends on,2;contains,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;depends on,2;iterates,2;implements,2')|
-zenta:neighbours($doc,$element,'depends on,2;depends on,2;depends on,2;implements,2')
+        zenta:neighbours($doc,$element,'implements,2'),
+        zenta:neighbours($doc,$element,'contains,2;implements,2'),
+        zenta:neighbours($doc,$element,'iterates,2;implements,2'),
+        zenta:neighbours($doc,$element,'contains,2;contains,2;implements,2'),
+        zenta:neighbours($doc,$element,'iterates,2;contains,2;implements,2'),
+        zenta:neighbours($doc,$element,'iterates,2;iterates,2;implements,2'),
+        zenta:neighbours($doc,$element,'contains,2;iterates,2;implements,2'),
+
+        zenta:neighbours($doc,$element,'contains,2;contains,2;contains,2;implements,2'),
+        zenta:neighbours($doc,$element,'contains,2;iterates,2;contains,2;implements,2'),
+        zenta:neighbours($doc,$element,'contains,2;iterates,2;iterates,2;implements,2'),
+        zenta:neighbours($doc,$element,'contains,2;contains,2;iterates,2;implements,2'),
+
+        zenta:neighbours($doc,$element,'iterates,2;contains,2;contains,2;implements,2'),
+        zenta:neighbours($doc,$element,'iterates,2;iterates,2;contains,2;implements,2'),
+        zenta:neighbours($doc,$element,'iterates,2;iterates,2;iterates,2;implements,2'),
+        zenta:neighbours($doc,$element,'iterates,2;contains,2;iterates,2;implements,2')
 )
 then ()
 else 'no milestone'
@@ -1315,20 +1292,14 @@ else
 	)</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="done by a user and uses an UI element, or modifies state, fills in UI element, orchestrates a process or effectuate side effect"
+                  name="modifies state, fills in UI element, makes decision, orchestrates a process or effectuate side effect"
                   id="8c949a6c-39ed-43e5-839f-39e9518fc42a"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-if ( 
-	zenta:neighbours($doc,$element,'is done by/does,1') |
-	zenta:neighbours($doc,$element,'contains,1;is done by/does,1') 
-)
-then if ( zenta:neighbours($doc,$element,'uses,1') | zenta:neighbours($doc,$element,'contains,1;uses,1'))
-  then ()
-  else 'done by a user but does not use UI element'
-else if (
+if (
     zenta:neighbours($doc,$element,'modifies,1') or
     zenta:neighbours($doc,$element,'effectuate,1') or
+    zenta:neighbours($doc,$element,'preceeds,1') or
     zenta:neighbours($doc,$element,'depends on,1') or
     zenta:neighbours($doc,$element,'fills in,1')
 )
@@ -1382,7 +1353,7 @@ if (
     zenta:neighbours($doc,$element,'reads,1')[@xsi:type='Business Object'] or
     zenta:neighbours($doc,$element,'is done by/does,1')[@xsi:type='Role'] or
     zenta:neighbours($doc,$element,'effectuate,1') or
-    zenta:neighbours($doc,$element,'depends on,2')[@xsi:type='Process Step'] 
+    zenta:neighbours($doc,$element,'uses,2')[@xsi:type='Process Step'] 
 )
 then ()
 else 'does not read'
@@ -2040,11 +2011,6 @@ for $conn in (
                 elementShape="roundedRectangleShape"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="378" y="272" width="-1" height="-1"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="27bc6721-364a-4211-bfd2-4754ae0291f1"
-                              source="60005ade-f1f4-4732-ac75-89fde794e9e0"
-                              target="05e623a7-2b2c-46f7-b1f8-a11dc1f6f10f"
-                              relationship="74d173e4-0fbf-4968-b0f2-b6d5e4ce3a86"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="c663a906-e0b7-43f9-9071-88a0971c7f02"
@@ -2095,14 +2061,6 @@ for $conn in (
                               target="067abdce-df93-45db-98ee-414122e331ff"
                               lineDecoration="DiamondSourceDecoration"
                               relationship="edd27181-eaa2-4f2f-9079-51e2c22fbb34"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="05e623a7-2b2c-46f7-b1f8-a11dc1f6f10f"
-                targetConnections="27bc6721-364a-4211-bfd2-4754ae0291f1"
-                fillColor="#d3d7cf"
-                elementShape="ellipseShape"
-                zentaElement="ebc74a50-0298-4c43-8830-d93ede22576b">
-            <bounds x="524" y="389" width="-1" height="-1"/>
          </child>
          <property key="Template"/>
       </element>
@@ -2241,19 +2199,6 @@ A role is assigned to human(s).
                target="c2f93d99-8bbd-4742-9f73-15937394173d">
          <property key="textPosition" value="1"/>
          <property key="lineDecoration" value="DiamondSourceDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="uses"
-               id="74d173e4-0fbf-4968-b0f2-b6d5e4ce3a86"
-               ancestor="basicrelation"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="ebc74a50-0298-4c43-8830-d93ede22576b">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
