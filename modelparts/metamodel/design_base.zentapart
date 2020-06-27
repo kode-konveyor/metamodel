@@ -807,7 +807,7 @@ for $chunk in tokenize($element/documentation,'\{')[contains(.,'}')]
 return
 	if(zenta:neighbours($doc,$element,'contains,1')/value[
 			@direction=2 and
-			@ancestorName='reads' and
+			@ancestorName='contains' and
 			contains(@relationName,tokenize($chunk,'}')[1])
 		]
 	)
