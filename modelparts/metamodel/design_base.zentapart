@@ -2050,6 +2050,7 @@ zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Constant']</documentatio
 zenta:exactlyOne(
 	zenta:neighbours($doc,$element,'contains,2')[
 		@xsi:type='Constant Provider' or
+		@xsi:type='Configuration Provider' or
 		@xsi:type='Test Data' or
 		@xsi:type='Enum'],
 	'no Constant Provider found') </documentation>
@@ -2196,7 +2197,7 @@ zenta:exactlyOne(
          <property key="Template"/>
       </element>
       <element xsi:type="zenta:BasicObject"
-               name="Configuration provider"
+               name="Configuration Provider"
                id="804cfcd0-5c82-4776-8f40-d16c3d5b870e"
                ancestor="constantProvider">
          <documentation>A set of constants provided by the user to parametrize the behaviour of the product.
