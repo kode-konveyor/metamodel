@@ -398,7 +398,7 @@
                 fillColor="#ffffff"
                 elementShape="roundedRectangleShape"
                 zentaElement="callable">
-            <bounds x="137" y="82" width="-1" height="-1"/>
+            <bounds x="24" y="84" width="-1" height="-1"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="2819ec82-753e-47b1-84b5-f281dc011563"
@@ -435,6 +435,11 @@
                               source="de436e15-876a-49df-a649-379e5b4f1392"
                               target="cbc49edc-cbf1-49c6-916a-39922b871bbd"
                               relationship="3dd7b0b1-bd9f-4a13-b5d9-9db0200af5b8"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="5c80817f-3a7a-4c2f-9f88-3e44c0bed421"
+                              source="de436e15-876a-49df-a649-379e5b4f1392"
+                              target="3b69f786-6460-4e87-8dad-ccca731a7bdd"
+                              relationship="54da2470-41ef-40fb-9d35-0523a3aecb0d"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="d200d697-57b4-40df-81a9-05f5ee1f29ec"
@@ -464,6 +469,12 @@
                 fillColor="#729fcf"
                 zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
             <bounds x="44" y="497" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="3b69f786-6460-4e87-8dad-ccca731a7bdd"
+                targetConnections="5c80817f-3a7a-4c2f-9f88-3e44c0bed421"
+                zentaElement="ebc74a50-0298-4c43-8830-d93ede22576b">
+            <bounds x="228" y="84" width="-1" height="-1"/>
          </child>
          <property key="Template"/>
       </element>
@@ -807,7 +818,7 @@ for $chunk in tokenize($element/documentation,'\{')[contains(.,'}')]
 return
 	if(zenta:neighbours($doc,$element,'contains,1')/value[
 			@direction=2 and
-			@ancestorName='reads' and
+			@ancestorName='contains' and
 			contains(@relationName,tokenize($chunk,'}')[1])
 		]
 	)
@@ -2198,7 +2209,7 @@ zenta:exactlyOne(
          <property key="Template"/>
       </element>
       <element xsi:type="zenta:BasicObject"
-               name="Configuration provider"
+               name="Configuration Provider"
                id="804cfcd0-5c82-4776-8f40-d16c3d5b870e"
                ancestor="constantProvider">
          <documentation>A set of constants provided by the user to parametrize the behaviour of the product.
