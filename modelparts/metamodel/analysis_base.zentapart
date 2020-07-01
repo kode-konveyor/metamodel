@@ -3,6 +3,19 @@
         name="0. Analysis metamodel base"
         id="analysisFolder">
    <folder name="3. Milestone" id="59754629-93c7-4f4d-bc97-79f579465409">
+      <element xsi:type="zenta:BasicObject"
+               name="Constant"
+               id="ebc74a50-0298-4c43-8830-d93ede22576b"
+               ancestor="thing">
+         <documentation>Constant is a special property. Its value is predetermined and never changes.
+</documentation>
+         <property key="fillColor" value="#d3d7cf"/>
+         <property key="elementShape" value="ellipseShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
+
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Milestone"
                id="15154133-7738-44db-8e84-1ad03b1c9589">

@@ -2276,18 +2276,6 @@ Example:
          <property key="fontColor"/>
          <property key="font"/>
       </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Constant"
-               id="ebc74a50-0298-4c43-8830-d93ede22576b"
-               ancestor="thing">
-         <documentation>Constant is a special property. Its value is predetermined and never changes.
-</documentation>
-         <property key="fillColor" value="#d3d7cf"/>
-         <property key="elementShape" value="ellipseShape"/>
-         <property key="textAlignment" value="2"/>
-         <property key="fontColor"/>
-         <property key="font"/>
-      </element>
       <element xsi:type="zenta:BasicRelationship"
                name="is a"
                id="d4dcd639-bdb4-45d7-a344-c63e6c6b324d"
