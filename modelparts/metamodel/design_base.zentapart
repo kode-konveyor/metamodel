@@ -54,6 +54,10 @@
                   name="Any"
                   id="e6942112-d548-4bf8-8c7e-0925e876b96b"
                   ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="Instant"
+                  id="22f6d214-25b4-4c40-baf0-b9ff36384988"
+                  ancestor="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="Constants"
@@ -117,6 +121,11 @@
                 id="25e8d23a-de0c-46c0-a918-e1b073d6e5b4"
                 zentaElement="e6942112-d548-4bf8-8c7e-0925e876b96b">
             <bounds x="970" y="718" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="7b4ebfb7-03cb-4931-9b93-4acffc86bf9f"
+                zentaElement="22f6d214-25b4-4c40-baf0-b9ff36384988">
+            <bounds x="980" y="836" width="-1" height="-1"/>
          </child>
       </element>
    </folder>
@@ -895,7 +904,7 @@ zenta:exactlyOne(
          <child xsi:type="zenta:DiagramObject"
                 id="8c87bf27-52e1-4e79-ad28-a0a1eba808ca"
                 zentaElement="24c89149-0040-426d-9104-ffcf2cd3aedf">
-            <bounds x="168" y="192" width="148" height="89"/>
+            <bounds x="168" y="192" width="148" height="121"/>
             <sourceConnection xsi:type="zenta:Connection"
                               id="13fb26d8-e826-4cc0-a46b-ba4a6a99b27f"
                               source="8c87bf27-52e1-4e79-ad28-a0a1eba808ca"
@@ -924,7 +933,12 @@ zenta:exactlyOne(
                id="24c89149-0040-426d-9104-ffcf2cd3aedf"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>clarifications|
-if (count(
+if ( 
+       zenta:neighbours($doc,$element,'is done by/does,1') |
+       zenta:neighbours($doc,$element,'contains,1;is done by/does,1') 
+)
+then ()
+else if (count(
 	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Behaviour' or @xsi:type='Process Step']
    ) &gt; 0 or
    $element/documentation/text())
@@ -937,7 +951,12 @@ else 'no behaviour or substep found'
                id="0c6daa63-b33e-482c-8610-d9c56a516cdb"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>clarifications|
-if (
+if ( 
+       zenta:neighbours($doc,$element,'is done by/does,1') |
+       zenta:neighbours($doc,$element,'contains,1;is done by/does,1') 
+)
+then ()
+else if (
     count(zenta:neighbours($doc,$element,'preceeds,2')[@xsi:type='Process Step']) &gt; 0 and 
     count(
        zenta:neighbours($doc,$element,'clicks when/does not input from,2')|
@@ -1020,7 +1039,7 @@ else
          <child xsi:type="zenta:DiagramObject"
                 id="6f609e09-fd49-410a-b9a6-022ccb965070"
                 zentaElement="865a75be-ee52-4d44-98a3-6f413c70f1fb">
-            <bounds x="677" y="415" width="200" height="138"/>
+            <bounds x="677" y="415" width="308" height="162"/>
             <sourceConnection xsi:type="zenta:Connection"
                               id="f237f0f5-fab0-4660-94ea-349521758979"
                               source="6f609e09-fd49-410a-b9a6-022ccb965070"
@@ -1092,7 +1111,9 @@ else ()</documentation>
          <documentation>clarifications|
 (for $bo in $element/value[not(@derived='true') and (@ancestorName='has' or @ancestorName='aggregates') and @direction=1]
 	return
-		zenta:checkBoToBoName($doc,$bo)
+		if(matches($bo/@name,'^[a-z ]*$'))
+		then ()
+		else zenta:checkBoToBoName($doc,$bo)
 	)[.!='pass']
 </documentation>
       </element>
@@ -2053,7 +2074,7 @@ zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Constant']</documentatio
 zenta:exactlyOne(
 	zenta:neighbours($doc,$element,'contains,2')[
 		@xsi:type='Constant Provider' or
-		@xsi:type='Configuration Provider' or
+		@xsi:type='Configuration provider' or
 		@xsi:type='Test Data' or
 		@xsi:type='Enum'],
 	'no Constant Provider found') </documentation>
@@ -2171,6 +2192,11 @@ zenta:exactlyOne(
                 elementShape="ellipseShape"
                 zentaElement="ebc74a50-0298-4c43-8830-d93ede22576b">
             <bounds x="432" y="324" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="8bb4a923-f54b-411d-ac5a-6ab0db573bcb"
+                              source="a76bb1f0-63dd-4498-bb6e-bf15fa90bec5"
+                              target="f023b215-6715-4dbc-8524-682085a3d690"
+                              relationship="d4dcd639-bdb4-45d7-a344-c63e6c6b324d"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="01aa2887-b225-41e2-b5e6-89871d7e2b95"
@@ -2197,6 +2223,13 @@ zenta:exactlyOne(
                 elementShape="meaningShape"
                 zentaElement="833d959e-228d-4954-a74f-90c355ac36a3">
             <bounds x="588" y="204" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="f023b215-6715-4dbc-8524-682085a3d690"
+                targetConnections="8bb4a923-f54b-411d-ac5a-6ab0db573bcb"
+                fillColor="#729fcf"
+                zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+            <bounds x="450" y="486" width="127" height="67"/>
          </child>
          <property key="Template"/>
       </element>
@@ -2247,16 +2280,17 @@ Example:
          <property key="fontColor"/>
          <property key="font"/>
       </element>
-      <element xsi:type="zenta:BasicObject"
-               name="Constant"
-               id="ebc74a50-0298-4c43-8830-d93ede22576b"
-               ancestor="thing">
-         <documentation>Constant is a special property. Its value is predetermined and never changes.
-</documentation>
-         <property key="fillColor" value="#d3d7cf"/>
-         <property key="elementShape" value="ellipseShape"/>
-         <property key="textAlignment" value="2"/>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is a"
+               id="d4dcd639-bdb4-45d7-a344-c63e6c6b324d"
+               ancestor="basicrelation"
+               source="ebc74a50-0298-4c43-8830-d93ede22576b"
+               target="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
          <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
    </folder>
