@@ -1637,12 +1637,13 @@ Test artifacts are actual data in case of Business Objects, and actual data or m
                id="bace4199-1f09-47f6-91ad-d374b6acecbc"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>data_structures|
-if(
+for $folderName in replace($element/@name, 's?TestData', ' (design)')
+return if(
 	$element/..[
-		@name=$element/@name and 
+		@name=$folderName and 
 		ancestor::folder[@name='7. Low Level Design'] and
        ../@name=zenta:neighbours($doc,$element,'contains,2')/@name
-	]/element[@name=$element/@name]//@zentaElement=$element/@id
+	]/element[@name=$folderName]//@zentaElement=$element/@id
 )
 then for $artifact in (
 		zenta:neighbours($doc,$element,'contains,1'),
@@ -1650,7 +1651,7 @@ then for $artifact in (
 		zenta:neighbours($doc,$element,'contains,1;has an example as/is an example of,2;is a/is the type of,1'),
 		zenta:neighbours($doc,$element,'contains,1;has an example as/is an example of,2')
 	)
-	return if ($element/../element[@name=$element/@name]//@zentaElement = $artifact/@id)
+	return if ($element/../element[@name=$folderName]//@zentaElement = $artifact/@id)
 		then ()
 		else concat(' not in the view: ',$artifact/@name,'; ') 
 else concat('folder: ',string-join($element/ancestor::folder/@name,'/'))
@@ -1677,7 +1678,7 @@ for $artifact in (
 			zenta:neighbours($doc,$artifact,'aggregates references to,1'),
 			zenta:neighbours($doc,$artifact,'aggregates,1')
 	)
-	return if ($element/../element[@name=$element/@name]//@zentaElement = $dependent/@id)
+	return if ($element/../element[@name=replace($element/@name, 's?TestData', ' (design)')]//@zentaElement = $dependent/@id)
 		then ()
 		else concat(' not in the view: ',$dependent/@name,'; ') 
 </documentation>
@@ -1692,7 +1693,7 @@ for $artifact in (
                id="871e8704-32b1-4c9a-b9ed-972852185088"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>data_structures|
-if ($element/../element[@name=$element/@name]//@zentaElement = zenta:neighbours($doc,$element,'contains,2')/@id)
+if ($element/../element[@name=replace($element/@name, 'TestData', ' (design)')]//@zentaElement = zenta:neighbours($doc,$element,'contains,2')/@id)
 then ()
 else concat('not in view ', $element/@name,': ', string-join(zenta:neighbours($doc,$element,'contains,2')/@name,', '))</documentation>
       </element>
@@ -1817,7 +1818,9 @@ if ( matches($element/@name,'^[a-z ]*$'))
 	then ()
 		else concat('no test artifact named ', zenta:capitalSneakCase($element/@name))
 else if(
-		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Data' and @name=zenta:testDataName($element/@name)]
+		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Data' and
+                                   @name=zenta:testDataName($element/@name) or
+                                   @name=zenta:testDataName(replace($element/@name, 's$', ''))]
 	)
 	then ()
 	else concat('no test data', zenta:testDataName($element/@name))
@@ -2099,17 +2102,18 @@ else 'no constants'
                   id="9993c34d-65a2-4e3e-8ad4-998e5fc78f78"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>data_structures|
-if(
+for $folderName in replace($element/@name, 's?TestData', ' (design)')
+return if(
 	$element/..[
-		@name=$element/@name and 
+		@name=$folderName and 
 		ancestor::folder[@name='7. Low Level Design'] and
        ../@name=zenta:neighbours($doc,$element,'contains,2')/@name
-	]/element[@name=$element/@name]//@zentaElement=$element/@id
+	]/element[@name=$folderName]//@zentaElement=$element/@id
 )
 then for $artifact in (
 		zenta:neighbours($doc,$element,'contains,1')
 	)
-	return if ($element/../element[@name=$element/@name]//@zentaElement = $artifact/@id)
+	return if ($element/../element[@name=$folderName]//@zentaElement = $artifact/@id)
 		then if($element/../element/@id = $artifact/@id)
 			then ()
 			else concat(' not in the folder: ',$artifact/@name,'; ') 
