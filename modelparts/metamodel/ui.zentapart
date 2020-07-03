@@ -1116,9 +1116,9 @@
                      source="c20200ab-9d77-44d4-a373-bb8d07dbe14e"
                      target="db3c6ee3-943a-4192-b0f9-f0cb7c94fea1"/>
          </folder>
-         <folder name="ObjectTestData" id="0724c57a-11b2-40ad-8f88-0d04f5dd77c0">
+         <folder name="Object (design)" id="0724c57a-11b2-40ad-8f88-0d04f5dd77c0">
             <element xsi:type="zenta:ZentaDiagramModel"
-                     name="ObjectTestData"
+                     name="Object (design)"
                      id="20502c42-4f9b-43c8-9aeb-4413fcd4ceae">
                <child xsi:type="zenta:DiagramObject"
                       id="16a14fa5-5ac0-44f0-b3ee-50613c276359"
@@ -1184,56 +1184,9 @@
 }</documentation>
             </element>
          </folder>
-         <folder name="SelectionsTestData" id="c8833543-d8d7-4b00-9bc4-d17774b4a31d">
+         <folder name="Selection (design)" id="073dff7d-0a94-4aed-9ca1-9d3259ae8816">
             <element xsi:type="zenta:ZentaDiagramModel"
-                     name="SelectionsTestData"
-                     id="6dc00280-f663-4a13-a5b6-ac44c15930ff">
-               <child xsi:type="zenta:DiagramObject"
-                      id="b5ade798-e79a-4deb-aee8-0aedcd42a4a0"
-                      targetConnections="d194c9eb-0b19-44ca-afaf-36f0d4d49a95 2b5adc71-d7bc-4db5-980a-4e544e4d06ed"
-                      zentaElement="1676121f-ea35-4c89-a1fd-11e2cc45490e">
-                  <bounds x="978" y="217" width="211"/>
-               </child>
-               <child xsi:type="zenta:DiagramObject"
-                      id="371126ed-0f0b-40a2-a356-57152438cf8e"
-                      zentaElement="c20200ab-9d77-44d4-a373-bb8d07dbe14e">
-                  <bounds x="578" y="55" width="311"/>
-                  <sourceConnection xsi:type="zenta:Connection"
-                                    id="d194c9eb-0b19-44ca-afaf-36f0d4d49a95"
-                                    source="371126ed-0f0b-40a2-a356-57152438cf8e"
-                                    target="b5ade798-e79a-4deb-aee8-0aedcd42a4a0"
-                                    relationship="cb3107ba-15b0-4e8d-9679-1bccb505fe80"/>
-               </child>
-               <child xsi:type="zenta:DiagramObject"
-                      id="09aa9590-2fa6-44ec-9d19-34be8dca4c68"
-                      zentaElement="71ff3b18-7962-4178-b299-06bbc3ea1499">
-                  <bounds x="322" y="210" width="-1" height="-1"/>
-                  <sourceConnection xsi:type="zenta:Connection"
-                                    id="2b5adc71-d7bc-4db5-980a-4e544e4d06ed"
-                                    source="09aa9590-2fa6-44ec-9d19-34be8dca4c68"
-                                    target="b5ade798-e79a-4deb-aee8-0aedcd42a4a0"
-                                    relationship="c96847f9-ede5-4573-82da-7e3ba4acdf32"/>
-                  <sourceConnection xsi:type="zenta:Connection"
-                                    id="3751da43-597e-43cd-9a01-13a133678c10"
-                                    source="09aa9590-2fa6-44ec-9d19-34be8dca4c68"
-                                    target="dd6b37a5-fd00-4a1b-a396-da012f399f14"
-                                    relationship="42c46105-dbb5-4a33-9067-49803de11dce"/>
-               </child>
-               <child xsi:type="zenta:DiagramObject"
-                      id="dd6b37a5-fd00-4a1b-a396-da012f399f14"
-                      targetConnections="3751da43-597e-43cd-9a01-13a133678c10"
-                      zentaElement="22f70400-4ce8-4b5f-8c97-abb580f897ba">
-                  <bounds x="322" y="360" width="-1" height="-1"/>
-               </child>
-            </element>
-            <element xsi:type="zenta:BasicObject"
-                     name="SelectionsTestData"
-                     id="1676121f-ea35-4c89-a1fd-11e2cc45490e"
-                     ancestor="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
-         </folder>
-         <folder name="SelectionTestData" id="073dff7d-0a94-4aed-9ca1-9d3259ae8816">
-            <element xsi:type="zenta:ZentaDiagramModel"
-                     name="SelectionTestData"
+                     name="Selection (design)"
                      id="dab6c8cd-52ff-4e5f-9f49-4de6ece2426e"
                      connectionRouterType="1">
                <child xsi:type="zenta:DiagramObject"
@@ -1255,15 +1208,21 @@
                <child xsi:type="zenta:DiagramObject"
                       id="69d9abf2-6ef5-4025-ba40-6d4283279623"
                       zentaElement="c20200ab-9d77-44d4-a373-bb8d07dbe14e">
-                  <bounds x="612" y="126" width="349"/>
+                  <bounds x="456" y="36" width="349"/>
                   <sourceConnection xsi:type="zenta:Connection"
                                     id="3546df28-3b3c-4508-a239-71180afbba84"
                                     source="69d9abf2-6ef5-4025-ba40-6d4283279623"
                                     target="ce262548-6d36-483b-8e2f-e1c6fcf8088d"
                                     relationship="8edd63ac-ff2a-44d2-9d23-2e47b5251e0f"/>
+                  <sourceConnection xsi:type="zenta:Connection"
+                                    id="e09dccbc-f241-4093-8dc7-07fb5e73e5dc"
+                                    source="69d9abf2-6ef5-4025-ba40-6d4283279623"
+                                    target="301daa68-658b-4792-b774-8122c3069060"
+                                    relationship="cb3107ba-15b0-4e8d-9679-1bccb505fe80"/>
                </child>
                <child xsi:type="zenta:DiagramObject"
                       id="c4826c22-045f-4195-8533-cc9b0fb7301e"
+                      targetConnections="bbdb31f7-134f-40ba-a589-118c1587ac58"
                       zentaElement="22f70400-4ce8-4b5f-8c97-abb580f897ba">
                   <bounds x="197" y="281" width="-1" height="-1"/>
                   <sourceConnection xsi:type="zenta:Connection"
@@ -1332,6 +1291,27 @@
                       zentaElement="b0b9e3d0-389f-4989-941a-e97aeb77bdbc">
                   <bounds x="21" y="483" width="-1" height="-1"/>
                </child>
+               <child xsi:type="zenta:DiagramObject"
+                      id="301daa68-658b-4792-b774-8122c3069060"
+                      targetConnections="e09dccbc-f241-4093-8dc7-07fb5e73e5dc 85748c34-1a50-4dc4-b3c1-9f1838c8c937"
+                      zentaElement="1676121f-ea35-4c89-a1fd-11e2cc45490e">
+                  <bounds x="842" y="180" width="395"/>
+               </child>
+               <child xsi:type="zenta:DiagramObject"
+                      id="f63445a8-29db-49a4-bf2c-2a5d177ad46f"
+                      zentaElement="71ff3b18-7962-4178-b299-06bbc3ea1499">
+                  <bounds x="197" y="180" width="-1" height="-1"/>
+                  <sourceConnection xsi:type="zenta:Connection"
+                                    id="85748c34-1a50-4dc4-b3c1-9f1838c8c937"
+                                    source="f63445a8-29db-49a4-bf2c-2a5d177ad46f"
+                                    target="301daa68-658b-4792-b774-8122c3069060"
+                                    relationship="c96847f9-ede5-4573-82da-7e3ba4acdf32"/>
+                  <sourceConnection xsi:type="zenta:Connection"
+                                    id="bbdb31f7-134f-40ba-a589-118c1587ac58"
+                                    source="f63445a8-29db-49a4-bf2c-2a5d177ad46f"
+                                    target="c4826c22-045f-4195-8533-cc9b0fb7301e"
+                                    relationship="42c46105-dbb5-4a33-9067-49803de11dce"/>
+               </child>
             </element>
             <element xsi:type="zenta:BasicObject"
                      name="SelectionTestData"
@@ -1349,6 +1329,10 @@
                      ancestor="ffbe5058-5089-4c5a-965d-e996df089f8e">
                <documentation>'Value 1'</documentation>
             </element>
+            <element xsi:type="zenta:BasicObject"
+                     name="SelectionsTestData"
+                     id="1676121f-ea35-4c89-a1fd-11e2cc45490e"
+                     ancestor="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
          </folder>
          <element xsi:type="zenta:ZentaDiagramModel"
                   name="com.kodekonveyor.frontendframework"
