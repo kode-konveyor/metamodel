@@ -1702,7 +1702,7 @@ for $artifact in (
 			zenta:neighbours($doc,$artifact,'aggregates references to,1'),
 			zenta:neighbours($doc,$artifact,'aggregates,1')
 	)
-	return if ($element/../element[@name=replace($element/@name, 's?TestData', ' (design)')]//@zentaElement = $dependent/@id)
+	return if ($element/..//@zentaElement = $dependent/@id)
 		then ()
 		else concat(' not in the view: ',$dependent/@name,'; ') 
 </documentation>
@@ -1717,7 +1717,7 @@ for $artifact in (
                id="871e8704-32b1-4c9a-b9ed-972852185088"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>data_structures|
-if ($element/../element[@name=replace($element/@name, 's?TestData', ' (design)')]//@zentaElement = zenta:neighbours($doc,$element,'contains,2')/@id)
+if ($element/..//@zentaElement = zenta:neighbours($doc,$element,'contains,2')/@id)
 then ()
 else concat('not in view ', $element/@name,': ', string-join(zenta:neighbours($doc,$element,'contains,2')/@name,', '))</documentation>
       </element>
@@ -2140,7 +2140,7 @@ if(
 then for $artifact in (
 		zenta:neighbours($doc,$element,'contains,1')
 	)
-	return if ($element/../element[@name=$element/../@name]//@zentaElement = $artifact/@id)
+	return if ($element/..//@zentaElement = $artifact/@id)
 		then if($element/../element/@id = $artifact/@id)
 			then ()
 			else concat(' not in the folder: ',$artifact/@name,'; ') 
