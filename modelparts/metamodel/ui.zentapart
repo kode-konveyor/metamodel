@@ -582,6 +582,12 @@
                   ancestor="90ea88fb-2beb-4e11-a541-a6209ea03510"
                   source="8e0a1110-8c1a-4f84-8ea7-b4866da74a7d"
                   target="562ebf73-dc6d-4cb0-a4bf-d43c5eb4490d"/>
+         <element xsi:type="zenta:BasicRelationship"
+                  name="choices"
+                  id="0d03cf50-b1f1-4096-b8ca-3ed793901248"
+                  ancestor="e4834eed-4c4a-4791-89b7-db9b4de87daf"
+                  source="8e0a1110-8c1a-4f84-8ea7-b4866da74a7d"
+                  target="0ff97b63-4d45-4d50-8b3c-cf0e55a3bbf3"/>
       </folder>
       <folder name="label" id="154480e5-363a-49c7-9347-513735f6afc4">
          <element xsi:type="zenta:ZentaDiagramModel"
