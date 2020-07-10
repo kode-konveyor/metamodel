@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="LABEL"
+         id="fd9891a3-124d-43b1-a0c4-a49a0f594751"
+         ancestor="ffbe5058-5089-4c5a-965d-e996df089f8e">
+   <documentation>'Label 1'</documentation>
+</element>
