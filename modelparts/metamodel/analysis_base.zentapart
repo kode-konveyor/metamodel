@@ -131,8 +131,7 @@
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>milestones|
 if(
-	$element/ancestor::folder[@name='1. Analysis'] and
-	$element/ancestor::folder[@name='5. Milestones']
+	$element/ancestor::folder[@name='6. Milestones']
 )
 then ()
 else string-join($element/ancestor::folder/@name,'/')
@@ -150,7 +149,7 @@ else string-join($element/ancestor::folder/@name,'/')
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>milestones|
 for $implemented in zenta:neighbours($doc,$element,'implements,1')
-	return if ($element/ancestor::folder[@name='5. Milestones']//*[.//@zentaElement=$element/@id]//@zentaElement=$implemented/@id)
+	return if ($element/ancestor::folder[@name='6. Milestones']//*[.//@zentaElement=$element/@id]//@zentaElement=$implemented/@id)
 		then ()
 		else concat($implemented/@name, ' not in a view with its milestone ')
 </documentation>
@@ -165,7 +164,50 @@ for $implemented in zenta:neighbours($doc,$element,'implements,1')
                id="70b42ec0-f6e0-42de-bf86-5cbffd43e41c"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>milestones|
-if(zenta:neighbours($doc,$element,'implements,2'))
+if(zenta:neighbours($doc,$element,'is initialized by/initializes,2'))
+then ()
+else if(
+zenta:neighbours($doc,$element,'implements,2')|
+zenta:neighbours($doc,$element,'contains,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;contains,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;contains,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;contains,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;iterates,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;iterates,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;iterates,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;depends on,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;depends on,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'contains,2;depends on,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;contains,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;contains,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;contains,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;iterates,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;iterates,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;iterates,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;depends on,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;depends on,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'iterates,2;depends on,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;contains,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;contains,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;contains,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;iterates,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;iterates,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;iterates,2;depends on,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;depends on,2;contains,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;depends on,2;iterates,2;implements,2')|
+zenta:neighbours($doc,$element,'depends on,2;depends on,2;depends on,2;implements,2')
+)
 then ()
 else 'no milestone'
 </documentation>
@@ -180,7 +222,7 @@ else 'no milestone'
                id="4d15738c-09e8-4971-820d-c254a5e99d06"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>milestones|
-if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$element/@id)
+if($doc//folder[@name='6. Milestones']//*[@name='Milestones']//@zentaElement=$element/@id)
 		then ()
 		else 'not in Milestones view'
 </documentation>
@@ -365,19 +407,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="clicks when/does not input from"
-               id="0d91630c-d35b-41fa-8066-fee32e155fd2"
-               ancestor="basicrelation"
-               source="c2f93d99-8bbd-4742-9f73-15937394173d"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="DotTargetDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="is done by/does"
                id="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"
                ancestor="basicrelation"
@@ -386,32 +415,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="textPosition" value="1"/>
          <property key="lineDecoration"
                    value="DottedLineDecoration DotTargetDecoration DotSourceDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="is informed when/informs"
-               id="35cd050a-d4ec-4d56-8c7c-dd46cdb4b486"
-               ancestor="basicrelation"
-               source="c2f93d99-8bbd-4742-9f73-15937394173d"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
-               name="provides data in/inputs from"
-               id="dade9df1-08e7-45f0-9ac7-458729815864"
-               ancestor="basicrelation"
-               source="c2f93d99-8bbd-4742-9f73-15937394173d"
-               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="SmallEndArrowDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
@@ -509,27 +512,14 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
          <property key="font"/>
       </element>
       <element xsi:type="zenta:BasicRelationship"
-               name="fills in"
-               id="d51f6cea-67c1-416a-b111-d0134f83795c"
-               ancestor="aaea75b0-b480-4f6c-a884-1cb5547d2514"
-               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
-               target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
-         <property key="textPosition" value="1"/>
-         <property key="lineDecoration"
-                   value="SmallEndArrowDecoration SparseDashedLineDecoration"/>
-         <property key="lineColor"/>
-         <property key="fontColor"/>
-         <property key="lineWidth" value="1"/>
-         <property key="font"/>
-      </element>
-      <element xsi:type="zenta:BasicRelationship"
                name="uses"
                id="aaea75b0-b480-4f6c-a884-1cb5547d2514"
                ancestor="basicrelation"
                source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
                target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
          <property key="textPosition" value="1"/>
-         <property key="lineDecoration" value="SparseDashedLineDecoration"/>
+         <property key="lineDecoration"
+                   value="DashedLineDecoration SmallEndArrowDecoration"/>
          <property key="lineColor"/>
          <property key="fontColor"/>
          <property key="lineWidth" value="1"/>
@@ -584,11 +574,6 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
                id="eaa00f6e-5141-45e7-bd66-3eb0dd6993a9"
                ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                source="7599475e-f3aa-4309-b118-48b7f2dfc92d"
-               target="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
-      <element xsi:type="zenta:BasicRelationship"
-               id="7ab221b3-6aca-4d79-838f-9e1d213a0c72"
-               ancestor="64981f96-11a3-4631-b4f8-dd38993cec60"
-               source="031ce31e-1b4b-499d-8f91-fd06d311ccb0"
                target="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
       <element xsi:type="zenta:BasicRelationship"
                id="eb7ccd36-c0dc-4395-8d19-15e6d4b8944c"
@@ -871,7 +856,7 @@ if($doc//folder[@name='5. Milestones']//*[@name='Milestones']//@zentaElement=$el
                name="Policies are inside the high level requirement folder"
                id="2bd3b516-7b67-46c2-95f7-6a6d3a8e0c90"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/ancestor::folder[@name='1. High level requirements'])
 	then ()
 	else concat($element/@name, ' is in ', string-join($element/ancestor::folder/@name, '/'))
@@ -881,7 +866,7 @@ if($element/ancestor::folder[@name='1. High level requirements'])
                name="Policies are in the High level requirements view"
                id="cd2a10f5-5a5b-4e45-b427-d9c97180423d"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($doc//element[@name='High level requirements' and @xsi:type='zenta:ZentaDiagramModel']//@zentaElement = $element/@id)
 	then ()
 	else concat($element/@name, ' is not in the High level requirements view')
@@ -921,7 +906,7 @@ Projects can contain packages.
                name="Supports a project"
                id="dac92ee6-2f6d-4e4c-977d-118f2d83d9b3"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if(not(zenta:neighbours($doc,$element,'is supported by,2')))
 then concat($element/@name, ' does not support any project')
 else ()
@@ -931,7 +916,7 @@ else ()
                name="The analysis contains High level requirements folder"
                id="5863abc4-16f0-4980-a6c2-1fcb47ddc4c6"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 zenta:exactlyOne(
 	$doc//folder[@name='1. Analysis']/folder[@name='1. High level requirements'],
 	'no policies and objectives folder'
@@ -941,7 +926,7 @@ zenta:exactlyOne(
                name="The high level requirements folder contains a 'High level requirements' view"
                id="a9e4282e-ea93-44fd-a5bd-12c17fd6f9c1"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/..[@name='1. High level requirements']/element[@name='High level requirements' and @xsi:type='zenta:ZentaDiagramModel'])
 	then ()
 	else 'no High level requirements view in the high level requirements folder'
@@ -951,7 +936,7 @@ if($element/..[@name='1. High level requirements']/element[@name='High level req
                name="The project is in the High level requirements folder"
                id="b91e12e3-10bd-4e4f-b826-1645a8a4f6e5"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/../@name='1. High level requirements')
 then ()
 else concat($element/@name, ' in ', string-join($element/ancestor::folder/@name, '/'))
@@ -963,7 +948,7 @@ else concat($element/@name, ' in ', string-join($element/ancestor::folder/@name,
                name="The project is in the high level requirements view"
                id="276f83f9-d734-42db-926e-9670d4773509"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 if($element/../element[@name='High level requirements' and @xsi:type='zenta:ZentaDiagramModel']//@zentaElement=$element/@id)
 	then ()
 	else concat($element/@name, ' is not in the High level requirements view')
@@ -973,7 +958,7 @@ if($element/../element[@name='High level requirements' and @xsi:type='zenta:Zent
                name="There is business analysis in the model"
                id="d827c3f9-b093-4ea3-bc9d-fc4a0d18d5ee"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>policies|
 zenta:exactlyOne(
 	$doc//folder[@name='1. Analysis'],
 	'no analysis folder'
@@ -997,7 +982,7 @@ if($doc//folder[@name='1. High level requirements']/folder[contains(@name,$eleme
                name="The policy is in its policy view"
                id="33411319-451d-4e1d-9d24-b6758dec786a"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
-         <documentation>high_level_requirements|
+         <documentation>hugh_level_requirements|
 if($doc//element[@name=$element/@name and @xsi:type='zenta:ZentaDiagramModel']//@zentaElement=$element/@id)
 	then ()
 	else concat($element/@name, ' is not in its policy view')</documentation>
@@ -1175,7 +1160,7 @@ else
 			'(
 				zenta:neighbours($doc,$element,''has,2''),
 				zenta:neighbours($doc,$element,''aggregates,2'')
-			)',
+			)[@xsi:type=''Business Object'']',
 			'if($parent)
 				then if(
 						(for $p in $parent return contains($element/../@name,$p/@name))=true()
@@ -1292,7 +1277,7 @@ else
                   id="8019b11c-e5fc-47df-b103-82a913cf409a"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-if($element/ancestor::folder[@name='2. Business Objects'])
+if($element/ancestor::folder[@name='2. Business Objects'] )
 	then ()
 	else string-join($element/ancestor::folder/concat(@name,':',@id),'/')
 </documentation>
@@ -1330,14 +1315,21 @@ else
 	)</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="modifies Business Object, fills in UI element or effectuate side effect"
+                  name="done by a user using a UI element, modifies state, orchestrates a process or effectuate side effect"
                   id="8c949a6c-39ed-43e5-839f-39e9518fc42a"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-if (
-    zenta:neighbours($doc,$element,'modifies,1')[@xsi:type='Business Object'] or
+if ( 
+       zenta:neighbours($doc,$element,'is done by/does,1') |
+       zenta:neighbours($doc,$element,'contains,1;is done by/does,1') 
+)
+then if ( zenta:neighbours($doc,$element,'uses,1') | zenta:neighbours($doc,$element,'contains,1;uses,1'))
+  then ()
+  else 'done by a user but does not use UI element'
+else if (
+    zenta:neighbours($doc,$element,'modifies,1') or
     zenta:neighbours($doc,$element,'effectuate,1') or
-    zenta:neighbours($doc,$element,'fills in,1')[@xsi:type='UI element'] 
+    zenta:neighbours($doc,$element,'depends on,1')
 )
 then ()
 else 'does not modify'
@@ -1381,14 +1373,16 @@ else
 	</documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="reads a Business Oject, done by a role or used by another step"
+                  name="reads a Business Oject, done by a role, have a side effect, employed by an UI element or used by another step"
                   id="a6f28a9d-1957-41f8-8009-e2589b15aa3f"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
 if (
     zenta:neighbours($doc,$element,'reads,1')[@xsi:type='Business Object'] or
     zenta:neighbours($doc,$element,'is done by/does,1')[@xsi:type='Role'] or
-    zenta:neighbours($doc,$element,'uses,2')[@xsi:type='Process Step'] 
+    zenta:neighbours($doc,$element,'effectuate,1') or
+    zenta:neighbours($doc,$element,'employs,2') or
+    zenta:neighbours($doc,$element,'depends on,2')[@xsi:type='Process Step'] 
 )
 then ()
 else 'does not read'
@@ -1501,7 +1495,8 @@ if($element/ancestor::folder[@name='4. User Interface'])
 	then if(
 		contains($element/../@name,$element/@name) or
 		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2')/@name) or
-		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2;contains,2')/@name)
+		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2;contains,2')/@name) or
+		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2;contains,2;contains,2')/@name)
 	)
 		then ()
 		else concat('not in its own or parents folder ', string-join($element/ancestor::folder/concat(@name,':',@id),'/'))
@@ -1543,7 +1538,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="5e568596-6e2b-46a8-93a9-b7f79f2e999a"
                    zentaElement="c91c92da-78ea-47b2-9db8-10fc10e0274f">
-               <bounds x="864" y="264" width="191" height="158"/>
+               <bounds x="864" y="264" width="191" height="181"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="9d7791fe-0394-4695-abaf-b16316ed2a11"
                                  source="5e568596-6e2b-46a8-93a9-b7f79f2e999a"
@@ -1603,7 +1598,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="98fcf55d-de0e-4526-b905-d27e7d449153"
                    zentaElement="89163bc3-1a7e-4d0a-9963-d765ea90d643">
-               <bounds x="191" y="492" width="194" height="166"/>
+               <bounds x="191" y="492" width="194" height="193"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="b05b84cc-b4ed-4a7a-a70b-890104cbb585"
                                  source="98fcf55d-de0e-4526-b905-d27e7d449153"
@@ -1613,7 +1608,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="ebcee676-0313-4021-9c60-3f9319057a9c"
                    zentaElement="a6f28a9d-1957-41f8-8009-e2589b15aa3f">
-               <bounds x="24" y="264" width="301" height="64"/>
+               <bounds x="60" y="798" width="301" height="91"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="4f2ddf3d-6da1-48db-9f18-de8527a31f47"
                                  source="ebcee676-0313-4021-9c60-3f9319057a9c"
@@ -1653,7 +1648,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="e889874c-509c-4ee4-b644-43ad78a9e1b2"
                    zentaElement="8c949a6c-39ed-43e5-839f-39e9518fc42a">
-               <bounds x="348" y="265" width="237" height="83"/>
+               <bounds x="348" y="240" width="325" height="108"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="43cfbad2-ef92-43aa-981b-1a6014aeafa8"
                                  source="e889874c-509c-4ee4-b644-43ad78a9e1b2"
@@ -1693,7 +1688,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="3fe38dc9-92f5-4f97-b3b8-7c6101f1b2ff"
                    zentaElement="eb88fe97-984c-4fd8-b44e-2964f3654fde">
-               <bounds x="1368" y="180" width="145" height="145"/>
+               <bounds x="1368" y="180" width="145" height="168"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="7b334d8d-0b6c-41e9-b0b3-a16062deb5d6"
                                  source="3fe38dc9-92f5-4f97-b3b8-7c6101f1b2ff"
@@ -1749,7 +1744,7 @@ if($element/ancestor::folder[@name='4. User Interface'])
             <child xsi:type="zenta:DiagramObject"
                    id="b64fa056-eaf0-4896-a19b-d809864779d8"
                    zentaElement="b11c8827-dd17-42e7-bc28-02cd1b5bccca">
-               <bounds x="942" y="730" height="99"/>
+               <bounds x="942" y="730" width="139" height="123"/>
                <sourceConnection xsi:type="zenta:Connection"
                                  id="2976cd8f-e067-4abb-ad0d-dcce98d901c3"
                                  source="b64fa056-eaf0-4896-a19b-d809864779d8"
@@ -1796,6 +1791,22 @@ if($element/ancestor::folder[@name='4. User Interface'])
                                  target="19c7799d-6d58-4520-9c1e-e171364362ba"
                                  relationship="e7e06bec-502b-40e8-be66-caa6389d6639"/>
             </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="68044f4e-b089-464c-840f-1304af6a1a6e"
+                   targetConnections="1b0d15e4-e163-4c8f-a50c-ab4859659168"
+                   zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
+               <bounds x="1479" y="417" width="-1" height="-1"/>
+            </child>
+            <child xsi:type="zenta:DiagramObject"
+                   id="e62c64a8-bdd3-409b-999a-570312d08ea0"
+                   zentaElement="076a46da-abc4-4913-a31a-6e8e9fab115c">
+               <bounds x="1559" y="569" width="266" height="116"/>
+               <sourceConnection xsi:type="zenta:Connection"
+                                 id="1b0d15e4-e163-4c8f-a50c-ab4859659168"
+                                 source="e62c64a8-bdd3-409b-999a-570312d08ea0"
+                                 target="68044f4e-b089-464c-840f-1304af6a1a6e"
+                                 relationship="4e04510f-7fa3-4a85-bfe4-00d11bea79b5"/>
+            </child>
          </element>
          <element xsi:type="zenta:BasicObject"
                   name="No flow between steps in different stories"
@@ -1820,15 +1831,16 @@ else ()
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="Each role have its own view"
+                  name="Each role have its own folder and view"
                   id="c4acc242-a0ae-4550-a82e-d606471a2fa7"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
 if(
-	$element/../*[.//@zentaElement=$element/@id and @name=$element/@name]
+	$element/../*[.//@zentaElement=$element/@id and @name=$element/@name] and
+   contains($element/../@name,$element/@name)
 )
 	then ()
-	else 'have no view'
+	else 'have no view and/or folder'
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
@@ -1845,11 +1857,14 @@ if(
 </documentation>
          </element>
          <element xsi:type="zenta:BasicObject"
-                  name="the role view contains all steps done by the role"
+                  name="the role view contains all neighbours of the role"
                   id="df5e5857-45f4-450d-8c05-0b002b7e41c8"
                   ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
             <documentation>user_journey|
-for $step in zenta:neighbours($doc,$element,'is done by/does,2')
+for $step in (
+	zenta:neighbours($doc,$element,'is done by/does,2')|
+	zenta:neighbours($doc,$element,'contains,2')
+   )
 return
 	if(
 		$element/../*[@name = $element/@name]//@zentaElement = $step/@id
@@ -1868,8 +1883,7 @@ if(
   count(
     (
        zenta:neighbours($doc,$element,'is done by/does,2')|
-       zenta:neighbours($doc,$element,'clicks when/does not input from,1')|
-       zenta:neighbours($doc,$element,'provides data in/inputs from,1')
+       zenta:neighbours($doc,$element,'contains,2;is done by/does,2')
      )[@xsi:type='Process Step']
   ) &gt;0)
 then ()
@@ -1884,7 +1898,7 @@ else 'no process step found'
 for $conn in (
 	$element/value[(@ancestorName='has' or @ancestorName='aggregates') and @direction=1]
 ) return
-	if($doc//connection[@id=$conn/@id]/..[@name=$element/@name])
+	if($doc//connection[@id=$conn/@id]/..[@name=$element/ancestor::folder/@name])
 	then ()
 	else concat(
 		$conn/@relationName,
@@ -1932,12 +1946,31 @@ for $conn in (
                   ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
                   source="ff848335-3f6c-478e-8323-9f92f4f93d84"
                   target="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+         <element xsi:type="zenta:BasicObject"
+                  name="There is at most one process initializing the project"
+                  id="076a46da-abc4-4913-a31a-6e8e9fab115c"
+                  ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+            <documentation>user_journey|
+if(count(
+	zenta:neighbours($doc,$element,'is initialized by/initializes,1')
+ )&lt;2)
+then ()
+else string-join(zenta:neighbours($doc,$element,'is initialized by/initializes,1')/@name,' and ')
+
+</documentation>
+         </element>
+         <element xsi:type="zenta:BasicRelationship"
+                  id="4e04510f-7fa3-4a85-bfe4-00d11bea79b5"
+                  ancestor="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"
+                  source="076a46da-abc4-4913-a31a-6e8e9fab115c"
+                  target="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
       </folder>
       <element xsi:type="zenta:ZentaDiagramModel"
                name="User Journey"
                id="4c99f33a-33fd-4e30-a279-be256457cb16">
          <child xsi:type="zenta:DiagramObject"
                 id="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
+                targetConnections="1ea14489-ef0b-48a5-ab96-3fdd8fa0aa68"
                 fillColor="#729fcf"
                 elementShape="roundedRectangleShape"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
@@ -1975,12 +2008,6 @@ for $conn in (
                               lineDecoration="DottedLineDecoration DotTargetDecoration DotSourceDecoration"
                               relationship="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"/>
             <sourceConnection xsi:type="zenta:Connection"
-                              id="266ba68e-899b-43be-9c3f-7b7bc2bfaa43"
-                              source="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
-                              target="48b523e2-1e13-44cd-89af-538a3395f9b2"
-                              lineDecoration="SmallEndArrowDecoration SparseDashedLineDecoration"
-                              relationship="d51f6cea-67c1-416a-b111-d0134f83795c"/>
-            <sourceConnection xsi:type="zenta:Connection"
                               id="0b1decde-8b36-48c9-8c93-ad5ed623ba29"
                               source="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
                               target="5e325f21-c925-43f4-8174-38f79d497dd5"
@@ -1996,7 +2023,7 @@ for $conn in (
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="48b523e2-1e13-44cd-89af-538a3395f9b2"
-                targetConnections="2f1ba6cf-848f-45a5-aa49-4b0bad31c09d 266ba68e-899b-43be-9c3f-7b7bc2bfaa43"
+                targetConnections="2f1ba6cf-848f-45a5-aa49-4b0bad31c09d"
                 fillColor="#ffffff"
                 elementShape="emptyShape"
                 zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
@@ -2046,6 +2073,11 @@ for $conn in (
                 elementShape="roundedRectangleShape"
                 zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
             <bounds x="378" y="272" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="e3a7399a-b14a-45cf-8ff2-0a2f69b75793"
+                              source="60005ade-f1f4-4732-ac75-89fde794e9e0"
+                              target="cd9070ad-6b72-4a5b-b43f-13dc0e5c9f75"
+                              relationship="0317b5b8-7cf5-482c-9d54-eeda475b644e"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="c663a906-e0b7-43f9-9071-88a0971c7f02"
@@ -2056,7 +2088,9 @@ for $conn in (
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="067abdce-df93-45db-98ee-414122e331ff"
-                targetConnections="ced474f9-b46a-4489-ba8f-ca439742186d"
+                targetConnections="ced474f9-b46a-4489-ba8f-ca439742186d 2c2275bd-e496-44df-9718-782b544ec98f"
+                fillColor="#729fcf"
+                elementShape="serviceShape"
                 zentaElement="c2f93d99-8bbd-4742-9f73-15937394173d">
             <bounds x="767" y="56" width="-1" height="-1"/>
          </child>
@@ -2082,6 +2116,36 @@ for $conn in (
                 targetConnections="15e7b7bd-1d8e-4fed-a977-db8d24cff194 9d5d7579-c30b-41f8-8821-ce7f8698aa08"
                 zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
             <bounds x="1116" y="156" width="-1" height="-1"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="9ded5ff9-6a5e-4406-8422-f3f2fbf8d87a"
+                fillColor="#729fcf"
+                zentaElement="c2f93d99-8bbd-4742-9f73-15937394173d">
+            <bounds x="1320" y="56" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="2c2275bd-e496-44df-9718-782b544ec98f"
+                              source="9ded5ff9-6a5e-4406-8422-f3f2fbf8d87a"
+                              target="067abdce-df93-45db-98ee-414122e331ff"
+                              lineDecoration="DiamondSourceDecoration"
+                              relationship="edd27181-eaa2-4f2f-9079-51e2c22fbb34"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="b7e1729e-203d-4a77-b248-50866b1b0d23"
+                fillColor="#fcaf3e"
+                elementShape="deliverableShape"
+                zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
+            <bounds x="42" y="26" width="-1" height="-1"/>
+            <sourceConnection xsi:type="zenta:Connection"
+                              id="1ea14489-ef0b-48a5-ab96-3fdd8fa0aa68"
+                              source="b7e1729e-203d-4a77-b248-50866b1b0d23"
+                              target="8eb8c575-7408-4a5b-bc13-e6ea8ab95922"
+                              relationship="570c55c8-ce7b-4dd9-9c6b-e368b953e934"/>
+         </child>
+         <child xsi:type="zenta:DiagramObject"
+                id="cd9070ad-6b72-4a5b-b43f-13dc0e5c9f75"
+                targetConnections="e3a7399a-b14a-45cf-8ff2-0a2f69b75793"
+                zentaElement="ebc74a50-0298-4c43-8830-d93ede22576b">
+            <bounds x="483" y="428" width="-1" height="-1"/>
          </child>
          <property key="Template"/>
       </element>
@@ -2212,6 +2276,57 @@ A role is assigned to human(s).
          <property key="lineWidth" value="1"/>
          <property key="font"/>
       </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="contains"
+               id="edd27181-eaa2-4f2f-9079-51e2c22fbb34"
+               ancestor="basicrelation"
+               source="c2f93d99-8bbd-4742-9f73-15937394173d"
+               target="c2f93d99-8bbd-4742-9f73-15937394173d">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration" value="DiamondSourceDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="is initialized by/initializes"
+               id="570c55c8-ce7b-4dd9-9c6b-e368b953e934"
+               ancestor="basicrelation"
+               source="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
+               target="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicRelationship"
+               name="uses"
+               id="0317b5b8-7cf5-482c-9d54-eeda475b644e"
+               ancestor="basicrelation"
+               source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+               target="ebc74a50-0298-4c43-8830-d93ede22576b">
+         <property key="textPosition" value="1"/>
+         <property key="lineDecoration"/>
+         <property key="lineColor"/>
+         <property key="fontColor"/>
+         <property key="lineWidth" value="1"/>
+         <property key="font"/>
+      </element>
+      <element xsi:type="zenta:BasicObject"
+               name="Constant"
+               id="ebc74a50-0298-4c43-8830-d93ede22576b"
+               ancestor="thing">
+         <documentation>Constant is a special property. Its value is predetermined and never changes.
+</documentation>
+         <property key="fillColor" value="#d3d7cf"/>
+         <property key="elementShape" value="ellipseShape"/>
+         <property key="textAlignment" value="2"/>
+         <property key="fontColor"/>
+         <property key="font"/>
+      </element>
    </folder>
    <folder name="4. Low level requirements"
            id="8be8472c-ea68-4fb2-b274-676917399d03">
@@ -2266,29 +2381,19 @@ A role is assigned to human(s).
                connectionRouterType="1">
          <child xsi:type="zenta:DiagramObject"
                 id="35a7c83b-269b-4efb-b7c9-0ca8ba6f7f51"
-                targetConnections="6df6dd95-1941-4408-8881-bb929012b5d9 a34aad25-5bdc-450a-882e-759c74c11d3a 705be7ab-ef43-48d5-b360-fb8f9deb7c38 1984f96e-c07f-4c09-8c60-a09b97873643"
+                targetConnections="6df6dd95-1941-4408-8881-bb929012b5d9 705be7ab-ef43-48d5-b360-fb8f9deb7c38 1984f96e-c07f-4c09-8c60-a09b97873643"
                 zentaElement="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c">
             <bounds x="155" y="56" width="-1" height="-1"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="206f7530-bcb8-4b9e-bdf6-49877c6a282f"
                 zentaElement="e836d822-8a95-4482-bcf9-215e752f57d9">
-            <bounds x="155" y="156" width="134" height="97"/>
+            <bounds x="132" y="156" width="157" height="121"/>
             <sourceConnection xsi:type="zenta:Connection"
                               id="6df6dd95-1941-4408-8881-bb929012b5d9"
                               source="206f7530-bcb8-4b9e-bdf6-49877c6a282f"
                               target="35a7c83b-269b-4efb-b7c9-0ca8ba6f7f51"
                               relationship="a0ca8660-3629-45f3-a016-8a5e95efbda1"/>
-         </child>
-         <child xsi:type="zenta:DiagramObject"
-                id="4ce908c1-0484-4621-a70c-b4b5a2ac8f03"
-                zentaElement="031ce31e-1b4b-499d-8f91-fd06d311ccb0">
-            <bounds x="334" y="182" width="-1" height="-1"/>
-            <sourceConnection xsi:type="zenta:Connection"
-                              id="a34aad25-5bdc-450a-882e-759c74c11d3a"
-                              source="4ce908c1-0484-4621-a70c-b4b5a2ac8f03"
-                              target="35a7c83b-269b-4efb-b7c9-0ca8ba6f7f51"
-                              relationship="7ab221b3-6aca-4d79-838f-9e1d213a0c72"/>
          </child>
          <child xsi:type="zenta:DiagramObject"
                 id="2372791f-8787-4172-938a-d9602eb885b6"
@@ -2303,7 +2408,7 @@ A role is assigned to human(s).
          <child xsi:type="zenta:DiagramObject"
                 id="c1bf56a3-b2b8-424f-9981-8e163a291e82"
                 zentaElement="3e0acbce-d984-4b4a-b7b6-97556134c9f5">
-            <bounds x="504" y="327" width="205" height="130"/>
+            <bounds x="504" y="327" width="229" height="154"/>
             <sourceConnection xsi:type="zenta:Connection"
                               id="1984f96e-c07f-4c09-8c60-a09b97873643"
                               source="c1bf56a3-b2b8-424f-9981-8e163a291e82"
@@ -2349,7 +2454,7 @@ A role is assigned to human(s).
          <child xsi:type="zenta:DiagramObject"
                 id="5100cc4b-32e0-4664-862c-39fc1119ebe5"
                 zentaElement="0f884e27-f833-4ddf-9972-5e6e0d8bf96a">
-            <bounds x="1175" y="60" width="-1" height="-1"/>
+            <bounds x="1175" y="60" width="194" height="73"/>
             <sourceConnection xsi:type="zenta:Connection"
                               id="d5eec7e8-aa22-4729-a360-277e08be6e1e"
                               source="5100cc4b-32e0-4664-862c-39fc1119ebe5"
@@ -2362,7 +2467,8 @@ A role is assigned to human(s).
                id="3f83e7d7-ee81-4c28-8790-6663655a59a7"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>low_level_requirements|
-if ($doc//folder[@name='5. Low level requirements']//element[@name=$element/@name and .//@zentaElement=$element/@id])
+if ($element/@xsi:type!='Objective' or 
+    $doc//folder[@name='5. Low level requirements']//element[@name=$element/@name and .//@zentaElement=$element/@id])
 then ()
 else 'no view found or the Objective is not in it'
 </documentation>
@@ -2415,10 +2521,14 @@ else
                id="64549231-bb38-44ff-89c4-224ed36d6d20"
                ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
          <documentation>low_level_requirements|
-if(count(
-	(zenta:neighbours($doc,$element,'determines,2')[@xsi:type='Objective' or @xsi:type='External Objective'], 
-	zenta:neighbours($doc,$element,'contains,2;determines,2')[@xsi:type='Objective'])
-) &gt; 0)
+if(
+(
+                        zenta:neighbours($doc,$element,'determines,2'),
+        zenta:neighbours($doc,$element,'contains,1;determines,2'),
+        zenta:neighbours($doc,$element,'iterates,1;determines,2'),
+       zenta:neighbours($doc,$element,'iterates,1;contains,1;determines,2')
+        )[@xsi:type='Objective' or @xsi:type='External Objective']
+)
 then ()
 else 'no objective found'
 </documentation>
@@ -2460,13 +2570,6 @@ then
 	zenta:neighboursRun1($doc,$element,'contains,2;is implemented by/implements,1') )
 else
 	()</documentation>
-      </element>
-      <element xsi:type="zenta:BasicObject"
-               name="determines"
-               id="031ce31e-1b4b-499d-8f91-fd06d311ccb0"
-               ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
-         <documentation>1|
-zenta:neighbours($doc,$element,'determines,1;contains,2')[@xsi:type='Behaviour' or @xsi:type='Process Step']</documentation>
       </element>
       <element xsi:type="zenta:BasicObject"
                name="determines at least one behaviour or Process Step"
