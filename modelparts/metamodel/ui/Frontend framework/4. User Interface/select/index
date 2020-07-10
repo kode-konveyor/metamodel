@@ -1,14 +1,14 @@
 <index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:zenta="http://magwas.rulez.org/zenta">
-   <entry id="b1ff89b6-7203-4ab9-ab4d-0ab128bd8991" name="select"/>
-   <entry id="d5b4aaaa-cb13-4628-95f6-40fa6db36929" name="onSelect"/>
-   <entry id="8e0a1110-8c1a-4f84-8ea7-b4866da74a7d" name="select"/>
-   <entry id="53a9ac38-94c4-4be7-b4f9-5474733bccc2" name=""/>
-   <entry id="6c48cf93-7b60-4b43-8a70-c8581f718912" name=""/>
-   <entry id="bfaa9477-b6f1-41bd-a290-2e80686ffeac" name=""/>
-   <entry id="f43437a5-c724-427e-a1c7-3f378b37d956" name=""/>
-   <entry id="a08379eb-2c89-40bf-af6e-fde00bca27c1" name=""/>
-   <entry id="f1083d0d-1441-4a87-b6f2-61bfce3f9057" name=""/>
-   <entry id="388b1fa0-1d5c-4ca6-9dc1-de9c26fe0f25" name=""/>
-   <entry id="0d03cf50-b1f1-4096-b8ca-3ed793901248" name="choices"/>
+   <entry name="select" id="b1ff89b6-7203-4ab9-ab4d-0ab128bd8991"/>
+   <entry name="onSelect" id="d5b4aaaa-cb13-4628-95f6-40fa6db36929"/>
+   <entry name="select" id="8e0a1110-8c1a-4f84-8ea7-b4866da74a7d"/>
+   <entry id="53a9ac38-94c4-4be7-b4f9-5474733bccc2"/>
+   <entry id="6c48cf93-7b60-4b43-8a70-c8581f718912"/>
+   <entry id="bfaa9477-b6f1-41bd-a290-2e80686ffeac"/>
+   <entry id="f43437a5-c724-427e-a1c7-3f378b37d956"/>
+   <entry id="a08379eb-2c89-40bf-af6e-fde00bca27c1"/>
+   <entry id="f1083d0d-1441-4a87-b6f2-61bfce3f9057"/>
+   <entry id="388b1fa0-1d5c-4ca6-9dc1-de9c26fe0f25"/>
+   <entry name="choices" id="0d03cf50-b1f1-4096-b8ca-3ed793901248"/>
 </index>

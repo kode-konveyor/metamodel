@@ -1,55 +1,55 @@
 <index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:zenta="http://magwas.rulez.org/zenta">
-   <entry id="27ec890f-6d60-4382-9e43-af7c7383418b"
-          name="a process either have all paralell steps%2C or at most one beginning and end"/>
-   <entry id="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf"
-          name="Complex business objects have their own folder%2C and their fields are also there. Simple objects without parent go to others folder."/>
-   <entry id="d7a693ab-91c9-4f57-9706-330b87c71faa" name="effectuate"/>
-   <entry id="7e333bfa-2109-42d6-bcfc-e17b0d4a5d39" name="fills in"/>
-   <entry id="89163bc3-1a7e-4d0a-9963-d765ea90d643"
-          name="if its a frontend story%2C then it is in its own folder%2C otherwise in the folder of the story%2C backend steps are in the backend folder"/>
-   <entry id="8019b11c-e5fc-47df-b103-82a913cf409a"
-          name="inside the folder for business objects"/>
-   <entry id="519c2ea9-eb09-463b-9001-c2eeb01a3d72"
-          name="is inside the process folder"/>
-   <entry id="1bca023f-1096-44b3-8546-4d679c93f491" name="modifies"/>
-   <entry id="8c949a6c-39ed-43e5-839f-39e9518fc42a"
-          name="done by a user using a UI element%2C modifies state%2C orchestrates a process or effectuate side effect"/>
-   <entry id="e09a95b5-33ae-4140-897b-0517a29c1431"
-          name="process flows in stories"/>
-   <entry id="e25feaf4-0e78-440a-ae79-165699040278" name="reads"/>
-   <entry id="a6f28a9d-1957-41f8-8009-e2589b15aa3f"
-          name="reads a Business Oject%2C done by a role%2C have a side effect%2C employed by an UI element or used by another step"/>
-   <entry id="c91c92da-78ea-47b2-9db8-10fc10e0274f"
-          name="simple business objects are named with small letters%2C complex business objects are named with capital starting letter"/>
-   <entry id="c9cf70f0-7448-4799-92a2-e2a4c8cc026c"
-          name="there is an others view in the others business object folder containing all business objects in the folder"/>
-   <entry id="2cd672d4-8692-4c4c-aa01-6aa4dd05aec2"
-          name="The story view contains all the story steps"/>
-   <entry id="24e9ea84-415c-4aaf-aa92-b45eb7c33c8c"
-          name="The view for complex business object contains all of the fields"/>
-   <entry id="82be22d1-371b-4b89-bf2c-16de9c516a48"
-          name="UI elements are in the view of the folder they are in"/>
-   <entry id="eb88fe97-984c-4fd8-b44e-2964f3654fde"
-          name="UI views are in their own folder in the User Interface folder with their children"/>
-   <entry id="87f8f964-4896-4f63-b46c-b1a9af028b68"
-          name="User Journey constraints"/>
-   <entry id="dcc137b8-7b0e-4e47-9d1c-265d3684e4cd"
-          name="No flow between steps in different stories"/>
-   <entry id="c4acc242-a0ae-4550-a82e-d606471a2fa7"
-          name="Each role have its own folder and view"/>
-   <entry id="b11c8827-dd17-42e7-bc28-02cd1b5bccca"
-          name="In the Roles folder in the process folder"/>
-   <entry id="df5e5857-45f4-450d-8c05-0b002b7e41c8"
-          name="the role view contains all neighbours of the role"/>
-   <entry id="58b908ce-ae0d-4226-ac0c-cd1c3c67f159" name="does Process Steps"/>
-   <entry id="2d96da36-b6d1-4a31-988d-e45ba0ea3c03"
-          name="business object relations in the folder of business object"/>
-   <entry id="d61f4cba-a79c-4aa5-8c49-8baf15ccaeda" name=""/>
-   <entry id="ff848335-3f6c-478e-8323-9f92f4f93d84"
-          name="process step business object relations should be in the folder of process step"/>
-   <entry id="e7e06bec-502b-40e8-be66-caa6389d6639" name=""/>
-   <entry id="076a46da-abc4-4913-a31a-6e8e9fab115c"
-          name="There is at most one process initializing the project"/>
-   <entry id="4e04510f-7fa3-4a85-bfe4-00d11bea79b5" name=""/>
+   <entry name="a process either have all paralell steps, or at most one beginning and end"
+          id="27ec890f-6d60-4382-9e43-af7c7383418b"/>
+   <entry name="Complex business objects have their own folder, and their fields are also there. Simple objects without parent go to others folder."
+          id="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf"/>
+   <entry name="effectuate" id="d7a693ab-91c9-4f57-9706-330b87c71faa"/>
+   <entry name="fills in" id="7e333bfa-2109-42d6-bcfc-e17b0d4a5d39"/>
+   <entry name="if its a frontend story, then it is in its own folder, otherwise in the folder of the story, backend steps are in the backend folder"
+          id="89163bc3-1a7e-4d0a-9963-d765ea90d643"/>
+   <entry name="inside the folder for business objects"
+          id="8019b11c-e5fc-47df-b103-82a913cf409a"/>
+   <entry name="is inside the process folder"
+          id="519c2ea9-eb09-463b-9001-c2eeb01a3d72"/>
+   <entry name="modifies" id="1bca023f-1096-44b3-8546-4d679c93f491"/>
+   <entry name="done by a user using a UI element, modifies state, orchestrates a process or effectuate side effect"
+          id="8c949a6c-39ed-43e5-839f-39e9518fc42a"/>
+   <entry name="process flows in stories"
+          id="e09a95b5-33ae-4140-897b-0517a29c1431"/>
+   <entry name="reads" id="e25feaf4-0e78-440a-ae79-165699040278"/>
+   <entry name="reads a Business Oject, done by a role, have a side effect, employed by an UI element or used by another step"
+          id="a6f28a9d-1957-41f8-8009-e2589b15aa3f"/>
+   <entry name="simple business objects are named with small letters, complex business objects are named with capital starting letter"
+          id="c91c92da-78ea-47b2-9db8-10fc10e0274f"/>
+   <entry name="there is an others view in the others business object folder containing all business objects in the folder"
+          id="c9cf70f0-7448-4799-92a2-e2a4c8cc026c"/>
+   <entry name="The story view contains all the story steps"
+          id="2cd672d4-8692-4c4c-aa01-6aa4dd05aec2"/>
+   <entry name="The view for complex business object contains all of the fields"
+          id="24e9ea84-415c-4aaf-aa92-b45eb7c33c8c"/>
+   <entry name="UI elements are in the view of the folder they are in"
+          id="82be22d1-371b-4b89-bf2c-16de9c516a48"/>
+   <entry name="UI views are in their own folder in the User Interface folder with their children"
+          id="eb88fe97-984c-4fd8-b44e-2964f3654fde"/>
+   <entry name="User Journey constraints"
+          id="87f8f964-4896-4f63-b46c-b1a9af028b68"/>
+   <entry name="No flow between steps in different stories"
+          id="dcc137b8-7b0e-4e47-9d1c-265d3684e4cd"/>
+   <entry name="Each role have its own folder and view"
+          id="c4acc242-a0ae-4550-a82e-d606471a2fa7"/>
+   <entry name="In the Roles folder in the process folder"
+          id="b11c8827-dd17-42e7-bc28-02cd1b5bccca"/>
+   <entry name="the role view contains all neighbours of the role"
+          id="df5e5857-45f4-450d-8c05-0b002b7e41c8"/>
+   <entry name="does Process Steps" id="58b908ce-ae0d-4226-ac0c-cd1c3c67f159"/>
+   <entry name="business object relations in the folder of business object"
+          id="2d96da36-b6d1-4a31-988d-e45ba0ea3c03"/>
+   <entry id="d61f4cba-a79c-4aa5-8c49-8baf15ccaeda"/>
+   <entry name="process step business object relations should be in the folder of process step"
+          id="ff848335-3f6c-478e-8323-9f92f4f93d84"/>
+   <entry id="e7e06bec-502b-40e8-be66-caa6389d6639"/>
+   <entry name="There is at most one process initializing the project"
+          id="076a46da-abc4-4913-a31a-6e8e9fab115c"/>
+   <entry id="4e04510f-7fa3-4a85-bfe4-00d11bea79b5"/>
 </index>

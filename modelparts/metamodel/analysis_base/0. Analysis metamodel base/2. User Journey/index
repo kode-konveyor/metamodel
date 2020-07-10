@@ -1,22 +1,22 @@
 <index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:zenta="http://magwas.rulez.org/zenta">
-   <folder id="b2367860-7b2a-4984-9dd8-a6613700a07b" name="constraints"/>
-   <entry id="4c99f33a-33fd-4e30-a279-be256457cb16" name="User Journey"/>
-   <entry id="bc81820d-6987-4d9b-918a-cf132a2c7bfb" name="side effect"/>
-   <entry id="ce48c832-65e0-456b-a0c1-8f6cd62fd74b" name="exception"/>
-   <entry id="4753b1bb-fc45-4aa1-821d-f08baf8a1766" name="UI element"/>
-   <entry id="267f4d47-e1e6-4af4-8677-3cf65fc8db86" name="Business Object"/>
-   <entry id="83af8497-bfef-451b-9bc6-f00d58c8df6a" name="Process Step"/>
-   <entry id="c2f93d99-8bbd-4742-9f73-15937394173d" name="Role"/>
-   <entry id="42a91f60-d3fb-42f4-8aeb-84980e4368ba" name=""/>
-   <entry id="65927e54-e6d8-4e4c-8dfd-69e780045110" name=""/>
-   <entry id="73e97986-eebf-4a85-8433-fa205118dec7" name=""/>
-   <entry id="a0371f87-301a-4ba0-a9a8-716bd16c6762" name="aggregates"/>
-   <entry id="e8aaca73-c4e6-4698-a16d-7df79fbe62ab" name="contains"/>
-   <entry id="d9f4a80e-d07b-4767-ad0a-aa86988783f8" name="reads"/>
-   <entry id="edd27181-eaa2-4f2f-9079-51e2c22fbb34" name="contains"/>
-   <entry id="570c55c8-ce7b-4dd9-9c6b-e368b953e934"
-          name="is initialized by%2Finitializes"/>
-   <entry id="0317b5b8-7cf5-482c-9d54-eeda475b644e" name="uses"/>
-   <entry id="ebc74a50-0298-4c43-8830-d93ede22576b" name="Constant"/>
+   <folder name="constraints" id="b2367860-7b2a-4984-9dd8-a6613700a07b"/>
+   <entry name="User Journey" id="4c99f33a-33fd-4e30-a279-be256457cb16"/>
+   <entry name="side effect" id="bc81820d-6987-4d9b-918a-cf132a2c7bfb"/>
+   <entry name="exception" id="ce48c832-65e0-456b-a0c1-8f6cd62fd74b"/>
+   <entry name="UI element" id="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
+   <entry name="Business Object" id="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>
+   <entry name="Process Step" id="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>
+   <entry name="Role" id="c2f93d99-8bbd-4742-9f73-15937394173d"/>
+   <entry id="42a91f60-d3fb-42f4-8aeb-84980e4368ba"/>
+   <entry id="65927e54-e6d8-4e4c-8dfd-69e780045110"/>
+   <entry id="73e97986-eebf-4a85-8433-fa205118dec7"/>
+   <entry name="aggregates" id="a0371f87-301a-4ba0-a9a8-716bd16c6762"/>
+   <entry name="contains" id="e8aaca73-c4e6-4698-a16d-7df79fbe62ab"/>
+   <entry name="reads" id="d9f4a80e-d07b-4767-ad0a-aa86988783f8"/>
+   <entry name="contains" id="edd27181-eaa2-4f2f-9079-51e2c22fbb34"/>
+   <entry name="is initialized by/initializes"
+          id="570c55c8-ce7b-4dd9-9c6b-e368b953e934"/>
+   <entry name="uses" id="0317b5b8-7cf5-482c-9d54-eeda475b644e"/>
+   <entry name="Constant" id="ebc74a50-0298-4c43-8830-d93ede22576b"/>
 </index>
