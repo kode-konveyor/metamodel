@@ -1,0 +1,20 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="elements in views have enough area to show text"
+         id="39c0eefe-c1e8-41b8-b30f-d8d3bbcf3e71"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>high_level_requirements|
+for
+	$stuff in $doc//element[@xsi:type!='zenta:ZentaDiagramModel'],
+	$child in $doc//child[@zentaElement=$stuff/@id]
+return
+	for
+		$x in if($child/bounds/@width=-1) then 130 else $child/bounds/@width,
+		$y in if($child/bounds/@height=-1) then 60 else $child/bounds/@height
+	return
+		if(string-length($stuff/@name) &lt; 25 or ($x - 10) * ($y - 10) div string-length($stuff/@name) &gt; 200 )
+		then ()
+		else concat($stuff/@name,' in ', $child/ancestor::element/@name, ' is too small ', ($x - 10)*($y - 10) div string-length($stuff/@name), codepoints-to-string(10))
+</documentation>
+</element>

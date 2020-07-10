@@ -1,0 +1,16 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="documents the contents of the artifact or constructable based on the Business Object"
+         id="189dbb19-8dd0-41be-b596-4e29c9210ff9"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+if (
+   string-length($element/documentation) &gt; 0 or
+   zenta:neighbours($doc,$element,'has an example as/is an example of,2')[
+		(@xsi:type='Business Object' and matches(@name,'[A-Z]')) or @xsi:type='Parameter'] 
+)
+then ()
+else 'cannot construct it'
+</documentation>
+</element>

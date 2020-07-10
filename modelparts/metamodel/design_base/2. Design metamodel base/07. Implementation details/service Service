@@ -1,0 +1,24 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Service"
+         id="service"
+         ancestor="callable">
+   <documentation>A service is a unit implementing some logic which is testable with unit tests.
+
+A service does not have any state.
+
+A service does one thing. Therefore it either has one public function, or more public functions with different types of parameters where those functions do the same.
+
+In polymorphic languages all the functions of the service therefore have to have the same name (“call”) as a rule. An exception of the rule when the compiler/interpreter cannot reliably determine the correct function to use.
+
+A service references its dependencies in an abstract way, using dependency inversion. If there is a dependency injection mechanism for the language, that mechanism should be used. In java by default we use Spring, which means that the class is marked as @Service, and the dependencies are fields referencing the interface of the dependent service using @Autowired. In Python by default we use winterboot. Python services are marked with the @Service annotation, and referenced as serviceName = Autowired(‘servicename’). When the wider framework uses other DI mechanisms, their use should be modelled after this as closely as possible. 
+
+In java and python Services should not have static methods except when the needs of a Delegate dictate it.
+</documentation>
+   <property key="fillColor" value="#fcaf3e"/>
+   <property key="elementShape" value="roundedRectangleShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

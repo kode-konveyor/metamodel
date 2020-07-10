@@ -1,0 +1,23 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="has a type"
+         id="b9deedbc-997d-417d-8282-4da0f08107b7"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+if ($element/@xsi:type='External type')
+then
+  ()
+else
+  if(count((
+		  zenta:neighbours($doc,$element,'is a/is the type of,1'),
+		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;has,1'),
+		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;aggregates,1'),
+		  zenta:neighbours($doc,$element,'has an example as/is an example of,2;is a/is the type of,1')
+        )) &gt; 0)
+   then
+        ()
+   else
+		'no type found'
+</documentation>
+</element>

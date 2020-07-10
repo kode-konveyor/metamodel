@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Has a type"
+         id="3d7efa2f-a0c5-4568-b100-196bb6a671e3"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+zenta:exactlyOne(
+    zenta:neighbours($doc,$element,'is a/is the type of,1'),
+    'no type found')
+</documentation>
+</element>

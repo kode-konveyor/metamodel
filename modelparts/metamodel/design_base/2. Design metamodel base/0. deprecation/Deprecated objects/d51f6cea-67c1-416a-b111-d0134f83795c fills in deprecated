@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicRelationship"
+         name="fills in deprecated"
+         id="d51f6cea-67c1-416a-b111-d0134f83795c"
+         ancestor="aaea75b0-b480-4f6c-a884-1cb5547d2514"
+         source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+         target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+   <property key="textPosition" value="1"/>
+   <property key="lineDecoration" value="DottedLineDecoration"/>
+   <property key="lineColor"/>
+   <property key="fontColor"/>
+   <property key="lineWidth" value="1"/>
+   <property key="font"/>
+</element>

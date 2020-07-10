@@ -1,0 +1,13 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Deprecated objects should not be in any view"
+         id="952a7b72-30f1-484d-84dc-fb246309d058"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')],
+	$view in $doc//element[.//@zentaElement=$deprecated/@id or .//@relationship=$deprecated/@id]
+return
+	concat($view/@name,'(',$view/@id,'):',$deprecated/@name,' in ', string-join($view/ancestor::folder/@name,'/'),codepoints-to-string(10))
+</documentation>
+</element>

@@ -1,0 +1,47 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="Low level requirements"
+         id="8476af8f-539d-43e6-ae28-e6e4e64ebe04">
+   <child xsi:type="zenta:DiagramObject"
+          id="d0a8f1b3-d1f4-4fc1-a6cf-4bcc523e915e"
+          targetConnections="42595285-b2be-474e-9604-49e98ea56e1e"
+          fillColor="#fce94f"
+          elementShape="meaningShape"
+          zentaElement="behaviour">
+      <bounds x="150" y="146" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="0d53491f-7a44-431e-9a9c-b35392e76dab"
+                        source="d0a8f1b3-d1f4-4fc1-a6cf-4bcc523e915e"
+                        target="d8a01c01-51e2-4eb5-96fb-52ecec6d9b57"
+                        relationship="b6f9974a-1393-4848-a6f1-febcd90c0de1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="1f1e1679-8db6-4693-adab-ec976d3581ea"
+                        source="d0a8f1b3-d1f4-4fc1-a6cf-4bcc523e915e"
+                        target="d8a01c01-51e2-4eb5-96fb-52ecec6d9b57"
+                        relationship="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a">
+         <bendpoint startX="-68" startY="64" endX="-68" endY="-66"/>
+      </sourceConnection>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="076b1b59-8502-4134-930d-32bda2ef9057"
+          fillColor="#fce94f"
+          elementShape="ellipseShape"
+          zentaElement="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c">
+      <bounds x="150" y="24" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="42595285-b2be-474e-9604-49e98ea56e1e"
+                        source="076b1b59-8502-4134-930d-32bda2ef9057"
+                        target="d0a8f1b3-d1f4-4fc1-a6cf-4bcc523e915e"
+                        relationship="04ce9a45-2873-4e6b-abea-6f04ce048123"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="d8a01c01-51e2-4eb5-96fb-52ecec6d9b57"
+          targetConnections="0d53491f-7a44-431e-9a9c-b35392e76dab 1f1e1679-8db6-4693-adab-ec976d3581ea"
+          fillColor="#fce94f"
+          elementShape="meaningShape"
+          zentaElement="behaviour">
+      <bounds x="150" y="276" width="-1" height="-1"/>
+   </child>
+   <property key="Template"/>
+</element>

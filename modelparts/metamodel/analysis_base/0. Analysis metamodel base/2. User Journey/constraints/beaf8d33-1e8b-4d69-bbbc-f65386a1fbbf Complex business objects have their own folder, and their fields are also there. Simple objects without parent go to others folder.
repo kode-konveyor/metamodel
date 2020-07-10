@@ -1,0 +1,31 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Complex business objects have their own folder, and their fields are also there. Simple objects without parent go to others folder."
+         id="beaf8d33-1e8b-4d69-bbbc-f65386a1fbbf"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if(matches($element/@name,'^[A-Z]'))
+then
+	if (matches($element/../@name,$element/@name))
+	then ()
+	else concat($element/@name,' is not in its folder')
+else
+	zentatools:let(
+			'parent',
+			'(
+				zenta:neighbours($doc,$element,''has,2''),
+				zenta:neighbours($doc,$element,''aggregates,2'')
+			)[@xsi:type=''Business Object'']',
+			'if($parent)
+				then if(
+						(for $p in $parent return contains($element/../@name,$p/@name))=true()
+					)
+					then ()
+					else concat($element/@name,''('',$element/../@name,'') is not in folder for any of '', string-join($parent/@name,'',''))
+				else if($element/../@name=''others'')
+					then ()
+					else concat($element/@name, ''is not in others folder'')
+			'
+	)	</documentation>
+</element>

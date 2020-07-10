@@ -1,0 +1,16 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Process Step"
+         id="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+         ancestor="behaviour">
+   <documentation>A behaviour which is carried out by either a role or a service.
+Process steps can contain other process steps, behaviours, Services or Controllers
+
+</documentation>
+   <property key="fillColor" value="#729fcf"/>
+   <property key="elementShape" value="roundedRectangleShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

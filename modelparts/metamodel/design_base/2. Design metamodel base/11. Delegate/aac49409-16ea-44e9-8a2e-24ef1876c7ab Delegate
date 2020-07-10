@@ -1,0 +1,19 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Delegate"
+         id="aac49409-16ea-44e9-8a2e-24ef1876c7ab"
+         ancestor="type">
+   <documentation>Delegates are to implement classes containing both state and business logic, and/or when the DI framework needs to be manually bootstrapped.
+
+The state is delegated to a DTO (modeled by a Business Object)
+
+The business logic is delegated to Services
+
+</documentation>
+   <property key="fillColor" value="#fcaf3e"/>
+   <property key="elementShape" value="applicationShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

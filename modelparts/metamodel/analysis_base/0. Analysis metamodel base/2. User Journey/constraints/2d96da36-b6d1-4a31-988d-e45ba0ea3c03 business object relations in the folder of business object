@@ -1,0 +1,25 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="business object relations in the folder of business object"
+         id="2d96da36-b6d1-4a31-988d-e45ba0ea3c03"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+for $conn in (
+	$element/value[(@ancestorName='has' or @ancestorName='aggregates') and @direction=1]
+) return
+	if($doc//connection[@id=$conn/@id]/..[@name=$element/ancestor::folder/@name])
+	then ()
+	else concat(
+		$conn/@relationName,
+		'(',
+		$conn/@ancestorName,
+		' ',
+		$doc//element[@id=$conn/@target]/@name,
+		') should be at ',
+		string-join($element/ancestor::folder/@name,'/'),
+		codepoints-to-string(10)
+	)
+
+</documentation>
+</element>

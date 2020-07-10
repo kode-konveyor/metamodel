@@ -1,0 +1,42 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="Delegate"
+         id="16b7434d-819a-4498-880f-f36d69b1cc5b"
+         connectionRouterType="1">
+   <child xsi:type="zenta:DiagramObject"
+          id="25cb26fe-4fb0-4b9c-90fa-ab033ac9cb2c"
+          targetConnections="96791044-1046-4c2d-a407-73a0a44992ec"
+          fillColor="#fcaf3e"
+          elementShape="applicationShape"
+          zentaElement="aac49409-16ea-44e9-8a2e-24ef1876c7ab">
+      <bounds x="144" y="60" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="079898b0-df86-4ae4-b19c-a79a94ab558c"
+                        source="25cb26fe-4fb0-4b9c-90fa-ab033ac9cb2c"
+                        target="9e2bbb16-c4e7-4062-881c-a95c70724a12"
+                        lineDecoration="BigArrowTargetDecoration"
+                        relationship="174c404c-c84a-4edd-bdf8-bf0efb674e87"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="0bb181ce-9677-448b-9e39-425d15b04be8"
+          fillColor="#fcaf3e"
+          elementShape="roundedRectangleShape"
+          zentaElement="service">
+      <bounds x="60" y="228" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="96791044-1046-4c2d-a407-73a0a44992ec"
+                        source="0bb181ce-9677-448b-9e39-425d15b04be8"
+                        target="25cb26fe-4fb0-4b9c-90fa-ab033ac9cb2c"
+                        lineDecoration="BigArrowSourceDecoration"
+                        relationship="fcf8ccf8-a98d-456f-8479-0cd2bb491b1e"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="9e2bbb16-c4e7-4062-881c-a95c70724a12"
+          targetConnections="079898b0-df86-4ae4-b19c-a79a94ab558c"
+          fillColor="#729fcf"
+          zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+      <bounds x="410" y="234" width="-1" height="-1"/>
+   </child>
+   <property key="Template"/>
+</element>

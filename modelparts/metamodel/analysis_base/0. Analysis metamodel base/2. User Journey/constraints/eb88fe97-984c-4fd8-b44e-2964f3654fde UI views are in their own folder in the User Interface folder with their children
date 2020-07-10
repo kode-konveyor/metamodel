@@ -1,0 +1,19 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="UI views are in their own folder in the User Interface folder with their children"
+         id="eb88fe97-984c-4fd8-b44e-2964f3654fde"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if($element/ancestor::folder[@name='4. User Interface'])
+	then if(
+		contains($element/../@name,$element/@name) or
+		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2')/@name) or
+		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2;contains,2')/@name) or
+		contains($element/../@name,zenta:neighbours($doc,$element,'contains,2;contains,2;contains,2')/@name)
+	)
+		then ()
+		else concat('not in its own or parents folder ', string-join($element/ancestor::folder/concat(@name,':',@id),'/'))
+	else concat('not in User Interface folder ', string-join($element/ancestor::folder/concat(@name,':',@id),'/'))
+</documentation>
+</element>

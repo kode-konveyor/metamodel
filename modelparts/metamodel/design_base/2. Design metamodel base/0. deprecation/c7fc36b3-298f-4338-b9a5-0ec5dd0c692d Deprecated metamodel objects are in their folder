@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Deprecated metamodel objects are in their folder"
+         id="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>deprecation|
+for $deprecated in $doc//(element|connection)[contains(@name,'deprecated')]
+return
+	if ($deprecated/../@name='Deprecated objects')
+	then ()
+	else concat($deprecated/@name,codepoints-to-string(10))
+</documentation>
+</element>

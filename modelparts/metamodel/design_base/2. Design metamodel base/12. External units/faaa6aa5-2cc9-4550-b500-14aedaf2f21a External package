@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="External package"
+         id="faaa6aa5-2cc9-4550-b500-14aedaf2f21a"
+         ancestor="d3d4e39d-09a6-4a0f-a985-be922245d850">
+   <property key="fillColor" value="#babdb6"/>
+   <property key="elementShape" value="applicationShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="SelectionTestData"
+         id="db3c6ee3-943a-4192-b0f9-f0cb7c94fea1"
+         ancestor="9ec42823-7056-4e73-b1f4-600a066c8d88"/>

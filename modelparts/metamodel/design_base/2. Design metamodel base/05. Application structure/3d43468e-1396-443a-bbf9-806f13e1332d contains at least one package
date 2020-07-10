@@ -1,0 +1,20 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="contains at least one package"
+         id="3d43468e-1396-443a-bbf9-806f13e1332d"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>application_structure|
+if(count(
+	zenta:neighbours($doc,$element,'contains,1')[@xsi:type='Package']
+) = 0)
+then 'no package found'
+else ()
+</documentation>
+   <property key="fillColor"/>
+   <property key="elementShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+   <property key="documentationMarkup" value="verbatim"/>
+</element>

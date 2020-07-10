@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Entity"
+         id="a0f1be62-ca29-4616-9f16-91e29b7896fb"
+         ancestor="667bcbac-7d99-40ca-a8b0-1135806d041e">
+   <documentation>An Entity is a DTO which is persisted
+
+</documentation>
+   <property key="fillColor" value="#f57900"/>
+   <property key="elementShape" value="emptyShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor" value="#ffffff"/>
+   <property key="font"/>
+</element>
