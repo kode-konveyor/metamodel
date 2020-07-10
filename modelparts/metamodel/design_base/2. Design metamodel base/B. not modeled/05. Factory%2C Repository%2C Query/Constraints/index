@@ -1,8 +1,0 @@
-<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:zenta="http://magwas.rulez.org/zenta">
-   <entry name="Constraints" id="05b91807-f65c-490f-bdab-461b578d9a91"/>
-   <entry name="creates a Delegate or external type"
-          id="dd7546bf-3454-416e-881c-ef56be07560a"/>
-   <entry name="results a Business Object"
-          id="6e700f59-386b-45f2-9c53-6ba14db35f62"/>
-</index>
