@@ -2,7 +2,7 @@
        xmlns:zenta="http://magwas.rulez.org/zenta">
    <folder id="bde2b59f-2ca7-4b70-8440-503f679c52bf" name="Constraints"/>
    <entry id="3d5ed673-d225-4588-be2a-84640efa5c8d"
-          name="Enum, Configuration Provider"/>
+          name="Enum%2C Configuration Provider"/>
    <entry id="804cfcd0-5c82-4776-8f40-d16c3d5b870e" name="Configuration Provider"/>
    <entry id="constantProvider" name="Constant Provider"/>
    <entry id="833d959e-228d-4954-a74f-90c355ac36a3" name="Enum"/>

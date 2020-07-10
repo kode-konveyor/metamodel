@@ -6,7 +6,7 @@
           name="High level requirements"/>
    <entry id="68dc449b-5dfc-48fd-8a95-bdf6acb30c36"
           name="Provide ui elements for the usual use cases"/>
-   <entry id="923eb381-59ee-4666-8847-efcd77d1c64f"/>
-   <entry id="ef0bf7d0-5548-46d4-8aa6-a60742045e5b"/>
+   <entry id="923eb381-59ee-4666-8847-efcd77d1c64f" name=""/>
+   <entry id="ef0bf7d0-5548-46d4-8aa6-a60742045e5b" name=""/>
    <entry id="56fafdc9-0ab9-4772-87c6-2d017694b872" name="frontend framework"/>
 </index>

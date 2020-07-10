@@ -2,6 +2,6 @@
        xmlns:zenta="http://magwas.rulez.org/zenta">
    <entry id="0ff97b63-4d45-4d50-8b3c-cf0e55a3bbf3" name="object"/>
    <entry id="5b95d571-d4db-4538-ab21-e410a239ec8f" name="others"/>
-   <entry id="3bcd3401-a5bf-44b4-8ffb-9b75e5da94ea"/>
-   <entry id="0df0753f-5986-4291-84d9-1f44ebe6682f"/>
+   <entry id="3bcd3401-a5bf-44b4-8ffb-9b75e5da94ea" name=""/>
+   <entry id="0df0753f-5986-4291-84d9-1f44ebe6682f" name=""/>
 </index>

@@ -5,7 +5,7 @@
    <entry id="70d320ee-d0df-4b6e-a7a5-4e21484c8201"
           name="Application structure constraints"/>
    <entry id="da5669f6-b6a4-4008-8cf7-22ea95ec5eff" name="contains"/>
-   <entry id="ba7db1d5-9bab-4f02-a507-05e283b64740"/>
+   <entry id="ba7db1d5-9bab-4f02-a507-05e283b64740" name=""/>
    <entry id="c9346e32-c89b-4eae-8fd5-549682b2df3e" name="contained in a Package"/>
    <entry id="3d43468e-1396-443a-bbf9-806f13e1332d"
           name="contains at least one package"/>
@@ -13,9 +13,9 @@
           name="In exactly one Project or Package"/>
    <entry id="6549c67a-dd03-40b7-bfe7-bed4e631d323"
           name="appears in Application Structure view"/>
-   <entry id="efa8795e-2b62-49df-a4a7-df98d3ae9fea"/>
+   <entry id="efa8795e-2b62-49df-a4a7-df98d3ae9fea" name=""/>
    <entry id="768e7503-e491-4d74-827c-198eb4bfe40d"
           name="In its view in its folder within 7. Low Level Design with all its contents"/>
-   <entry id="37bb96fc-dac5-48cb-be1b-7285e3f283a4"/>
-   <entry id="0ced1bc4-6efc-4b70-849a-f131f242faac"/>
+   <entry id="37bb96fc-dac5-48cb-be1b-7285e3f283a4" name=""/>
+   <entry id="0ced1bc4-6efc-4b70-849a-f131f242faac" name=""/>
 </index>

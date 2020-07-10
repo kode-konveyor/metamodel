@@ -2,7 +2,7 @@
        xmlns:zenta="http://magwas.rulez.org/zenta">
    <folder id="6a1af9fe-c8aa-4648-beca-2e47c5b6b45b" name="Constraints"/>
    <entry id="3fef4988-756f-4fd6-a6c5-8870130e2819"
-          name="Factory, Repository, Query"/>
+          name="Factory%2C Repository%2C Query"/>
    <entry id="c5f0762f-8e64-4005-afbc-dfd30b91926a" name="Factory"/>
    <entry id="2bbbf382-654f-48ce-954d-38c6821e67dd" name="Query"/>
    <entry id="ff41556c-9dff-435c-8870-09733ed86067" name="Repository"/>
