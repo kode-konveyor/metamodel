@@ -1,0 +1,11 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Thing and Constraint" id="5c552d2e-6871-4ab8-88e3-41a127bffc0b"/>
+   <entry name="Thing" id="thing"/>
+   <entry name="Constraint" id="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f"/>
+   <entry name="Derived Relation" id="188f9954-0501-432b-8022-6a49fd1cc83c"/>
+   <entry name="Note" id="35ade6d3-e52e-449c-bfc5-3a5a6f4e4f58"/>
+   <entry name="relates to/is marked with note"
+          id="4da47d8e-6cb9-4985-b393-84bfa09c742e"/>
+   <entry name="is a/is the type of" id="4b948721-228b-4152-8e7d-f01be2c7bbc8"/>
+</index>

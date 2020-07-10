@@ -1,0 +1,11 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="Constraints" id="6a1af9fe-c8aa-4648-beca-2e47c5b6b45b"/>
+   <entry name="Factory, Repository, Query"
+          id="3fef4988-756f-4fd6-a6c5-8870130e2819"/>
+   <entry name="Factory" id="c5f0762f-8e64-4005-afbc-dfd30b91926a"/>
+   <entry name="Query" id="2bbbf382-654f-48ce-954d-38c6821e67dd"/>
+   <entry name="Repository" id="ff41556c-9dff-435c-8870-09733ed86067"/>
+   <entry name="DTO" id="667bcbac-7d99-40ca-a8b0-1135806d041e"/>
+   <entry name="Entity" id="a0f1be62-ca29-4616-9f16-91e29b7896fb"/>
+</index>

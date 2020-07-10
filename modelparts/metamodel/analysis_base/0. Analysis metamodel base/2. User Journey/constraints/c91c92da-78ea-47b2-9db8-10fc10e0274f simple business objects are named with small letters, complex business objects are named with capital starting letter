@@ -1,0 +1,39 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="simple business objects are named with small letters, complex business objects are named with capital starting letter"
+         id="c91c92da-78ea-47b2-9db8-10fc10e0274f"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if ($element/@template='true')
+then ()
+else if(matches($element/@name,'^[a-z ]*$'))
+then
+	if (  
+		count((
+			zenta:neighbours($doc,$element,'has,1'),
+			zenta:neighbours($doc,$element,'aggregates,1'),
+			zenta:neighbours($doc,$element,'lists,1'),
+			zenta:neighbours($doc,$element,'references,1'),
+			zenta:neighbours($doc,$element,'lists references to,1'),
+			zenta:neighbours($doc,$element,'aggregates references to,1')
+		)) &gt; 0 
+	)
+	then concat('complex business object with simple name: ', $element/@name)
+	else ()
+else if(matches($element/@name,'^[A-Z]'))
+	then if (
+				count((
+			zenta:neighbours($doc,$element,'has,1'),
+			zenta:neighbours($doc,$element,'aggregates,1'),
+			zenta:neighbours($doc,$element,'lists,1'),
+			zenta:neighbours($doc,$element,'references,1'),
+			zenta:neighbours($doc,$element,'lists references to,1'),
+			zenta:neighbours($doc,$element,'aggregates references to,1')
+				)) = 0 
+			)
+			then concat('simple business object with complex name: ', $element/@name)
+			else ()
+else concat('business object with strange name: ', $element/@name)
+</documentation>
+</element>

@@ -1,0 +1,8 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Selection (design)" id="dab6c8cd-52ff-4e5f-9f49-4de6ece2426e"/>
+   <entry name="SelectionTestData" id="db3c6ee3-943a-4192-b0f9-f0cb7c94fea1"/>
+   <entry name="LABEL" id="fd9891a3-124d-43b1-a0c4-a49a0f594751"/>
+   <entry name="VALUE" id="73903b3d-7fa5-4763-ba2d-c4c2398f8258"/>
+   <entry name="SelectionsTestData" id="1676121f-ea35-4c89-a1fd-11e2cc45490e"/>
+</index>

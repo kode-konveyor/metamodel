@@ -1,0 +1,23 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="done by a user using a UI element, modifies state, orchestrates a process or effectuate side effect"
+         id="8c949a6c-39ed-43e5-839f-39e9518fc42a"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if ( 
+       zenta:neighbours($doc,$element,'is done by/does,1') |
+       zenta:neighbours($doc,$element,'contains,1;is done by/does,1') 
+)
+then if ( zenta:neighbours($doc,$element,'uses,1') | zenta:neighbours($doc,$element,'contains,1;uses,1'))
+  then ()
+  else 'done by a user but does not use UI element'
+else if (
+    zenta:neighbours($doc,$element,'modifies,1') or
+    zenta:neighbours($doc,$element,'effectuate,1') or
+    zenta:neighbours($doc,$element,'depends on,1')
+)
+then ()
+else 'does not modify'
+</documentation>
+</element>

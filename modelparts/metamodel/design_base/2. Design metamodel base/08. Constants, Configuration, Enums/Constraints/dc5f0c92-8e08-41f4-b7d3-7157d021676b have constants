@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="have constants"
+         id="dc5f0c92-8e08-41f4-b7d3-7157d021676b"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+if(zenta:neighbours($doc,$element,'contains,1'))
+then ()
+else 'no constants'
+</documentation>
+</element>

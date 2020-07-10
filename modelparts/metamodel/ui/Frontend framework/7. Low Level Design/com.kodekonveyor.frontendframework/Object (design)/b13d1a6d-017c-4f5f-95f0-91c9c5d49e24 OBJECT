@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="OBJECT"
+         id="b13d1a6d-017c-4f5f-95f0-91c9c5d49e24"
+         ancestor="ffbe5058-5089-4c5a-965d-e996df089f8e">
+   <documentation>{
+  stuff: [
+    ['Label 1','Value 1']
+  ]
+}</documentation>
+</element>
