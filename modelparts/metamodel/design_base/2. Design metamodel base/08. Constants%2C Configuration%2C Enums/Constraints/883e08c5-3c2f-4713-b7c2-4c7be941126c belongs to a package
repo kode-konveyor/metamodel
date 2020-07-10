@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="belongs to a package"
+         id="883e08c5-3c2f-4713-b7c2-4c7be941126c"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Package'],
+	'no package found')
+</documentation>
+</element>
