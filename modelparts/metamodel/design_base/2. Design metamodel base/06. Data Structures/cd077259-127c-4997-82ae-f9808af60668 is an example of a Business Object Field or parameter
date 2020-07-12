@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="is an example of a Business Object Field or parameter"
+         id="cd077259-127c-4997-82ae-f9808af60668"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+if ( count(zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='Business Object'  or @xsi:type='Field' or @xsi:type='Parameter' or @xsi:type='Path parameter'])  &gt; 0)
+then ()
+else 'no reason found'
+</documentation>
+</element>

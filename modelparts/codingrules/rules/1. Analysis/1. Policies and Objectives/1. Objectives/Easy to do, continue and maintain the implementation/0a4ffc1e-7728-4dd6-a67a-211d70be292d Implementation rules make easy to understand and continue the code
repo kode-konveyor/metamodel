@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Implementation rules make easy to understand and continue the code"
+         id="0a4ffc1e-7728-4dd6-a67a-211d70be292d"
+         ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>

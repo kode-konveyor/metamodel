@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="behaviour design"
+         id="324c032c-b3d6-4d4e-abac-94c1af1d751f"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+   <documentation>come up with behaviour descriptions
+break down big behaviours to smaller ones
+add objectives and policies if needed
+</documentation>
+</element>

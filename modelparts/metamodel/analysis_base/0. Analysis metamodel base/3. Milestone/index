@@ -1,0 +1,18 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Milestone" id="15154133-7738-44db-8e84-1ad03b1c9589"/>
+   <entry name="Milestone" id="36a15a23-a4a0-40b5-901b-310f3a1df0c7"/>
+   <entry name="Milestone constraints" id="22372699-de40-486a-a7dd-6b98ca358ce9"/>
+   <entry name="Is inside the Milestones folder"
+          id="547ac126-f0f0-44c3-9bf7-c48fd2a05739"/>
+   <entry id="7c86926b-726c-46e7-ace5-2d4ef30e97bb"/>
+   <entry name="have a view in Milestones folder with all implemented elements"
+          id="48094876-de5a-45f0-b0f9-401b9503029f"/>
+   <entry id="e725e61c-7e02-4620-9dd3-dc01158d344c"/>
+   <entry name="belongs to a milestone" id="70b42ec0-f6e0-42de-bf86-5cbffd43e41c"/>
+   <entry id="4df731ee-4100-4408-a35f-bd3537b6bbfc"/>
+   <entry name="Is in the Milestones view"
+          id="4d15738c-09e8-4971-820d-c254a5e99d06"/>
+   <entry id="913d03bb-5d62-46c4-b3d4-42fb2f217e7b"/>
+   <entry name="contains" id="f062189d-e43e-4f83-98a8-9f013b94756c"/>
+</index>

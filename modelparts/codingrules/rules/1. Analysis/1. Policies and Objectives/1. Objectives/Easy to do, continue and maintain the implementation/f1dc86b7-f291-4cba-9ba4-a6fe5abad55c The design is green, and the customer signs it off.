@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="The design is green, and the customer signs it off."
+         id="f1dc86b7-f291-4cba-9ba4-a6fe5abad55c"
+         ancestor="behaviour"/>

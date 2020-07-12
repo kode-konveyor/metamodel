@@ -1,0 +1,10 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicRelationship"
+         name="provides"
+         id="1b4be796-8ba6-488b-8a83-2d661f22d6d1"
+         ancestor="basicrelation"
+         source="aa336975-ca1f-4934-b7c7-5f8bce07cb64"
+         target="a3e4bccf-f291-4f40-a503-e767191bd51b">
+   <property key="lineDecoration" value=" DiamondSourceDecoration"/>
+</element>

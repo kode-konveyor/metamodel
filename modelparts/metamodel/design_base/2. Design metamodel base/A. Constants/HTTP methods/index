@@ -1,0 +1,7 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="DELETE" id="5e07dc7d-e8a1-40f8-86c2-f9e1aab2e6df"/>
+   <entry name="GET" id="3b92647b-c7c1-4569-8f09-89605bc16d1e"/>
+   <entry name="POST" id="85e42d36-5e7e-4f51-8322-b08e048bb7d2"/>
+   <entry name="PUT" id="9f8c7496-7e2b-4b33-9d32-f4cdd40aab86"/>
+</index>

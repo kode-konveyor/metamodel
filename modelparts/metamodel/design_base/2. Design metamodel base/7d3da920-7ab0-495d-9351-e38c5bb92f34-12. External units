@@ -1,0 +1,11 @@
+<folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:zenta="http://magwas.rulez.org/zenta"
+        name="12. External units"
+        id="7d3da920-7ab0-495d-9351-e38c5bb92f34">
+   <documentation>External units are implemented outside of the project, hence they are all grey.
+Configuration provider is shown earlier, and it is also an external unit.
+
+In a model view it is a good practice to grey out elements which are outside of the scope of implementation for the view, even if they are implemented elsewhere inside the project.
+
+</documentation>
+</folder>

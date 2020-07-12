@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="there is an others view in the others business object folder containing all business objects in the folder"
+         id="c9cf70f0-7448-4799-92a2-e2a4c8cc026c"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if(
+	$element/../@name='others' and
+	not($element/../element[@name='others']//@zentaElement=$element/@id)
+)
+then 'not in others view'
+else ()
+</documentation>
+</element>

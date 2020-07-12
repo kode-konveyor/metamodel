@@ -1,0 +1,9 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Unit test" id="5ddc8bbe-ac16-45d5-b9ba-5d86201c11c2"/>
+   <entry name="Test Case" id="f77378e6-2ef5-4e91-8a94-47ca7fc25c27"/>
+   <entry name="Test" id="bde80e23-f840-49c8-b167-ec430e7d9800"/>
+   <entry name="Test Helper" id="975c6b8d-ea09-4095-81df-9fda225ced95"/>
+   <entry name="Stub Provider" id="a65fe384-2ef4-4f98-b51d-4e6eadb55055"/>
+   <entry name="Test Base" id="66218839-41bf-442d-b629-32e4e1ad2076"/>
+</index>

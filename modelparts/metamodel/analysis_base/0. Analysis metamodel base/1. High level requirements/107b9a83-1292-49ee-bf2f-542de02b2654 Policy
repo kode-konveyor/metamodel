@@ -1,0 +1,17 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Policy"
+         id="107b9a83-1292-49ee-bf2f-542de02b2654"
+         ancestor="thing">
+   <documentation>A policy is a management level statement about what the software should do, should not do, or the perceived threats and constraints to avoid.
+
+Policy, Threat, and Assumption of Common Criteria are modeled with a Policy.
+
+</documentation>
+   <property key="fillColor" value="#729fcf"/>
+   <property key="elementShape" value="ellipseShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

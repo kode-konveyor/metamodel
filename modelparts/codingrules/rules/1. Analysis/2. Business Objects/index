@@ -1,0 +1,9 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="Metamodel" id="efd686c2-0fe1-4a6a-8634-618c16ed3277"/>
+   <folder name="Toolchain" id="e689577b-a1a8-4771-b9ed-28af7b28820b"/>
+   <folder name="others" id="65dc53a8-1013-403d-80d3-2ca900d12354"/>
+   <folder name="Code" id="b5911455-4811-434f-9455-b736de6cd644"/>
+   <folder name="Business architecture" id="1cfbbf24-b102-4d5c-b632-3e58042d1b38"/>
+   <folder name="Design" id="65617349-d2c2-48bd-97ff-7ef2882b03fc"/>
+</index>

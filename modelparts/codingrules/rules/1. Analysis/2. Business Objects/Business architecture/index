@@ -1,0 +1,10 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Business architecture" id="b0682e9f-782f-4ecf-a922-73859b262bbb"/>
+   <entry name="Business architecture" id="50aecd61-1338-4576-b217-774c4d182030"/>
+   <entry name="objectives" id="2c49d545-a27a-4140-8ea9-43901285dca6"/>
+   <entry name="process steps" id="27ab8d32-76ea-44b4-ab90-b7273de987a1"/>
+   <entry name="requirements" id="741aa2c1-fbbf-4bfd-9f7a-ded2a7311832"/>
+   <entry name="ui elements" id="474af1da-c619-49de-870e-3916c12878ae"/>
+   <entry name="views" id="6cd69f56-5d6f-4ae6-a2d8-cc1f6ca55271"/>
+</index>

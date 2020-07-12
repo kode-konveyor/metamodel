@@ -1,0 +1,12 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="3. Milestone" id="59754629-93c7-4f4d-bc97-79f579465409"/>
+   <folder name="00. Analysis relations" id="23dea549-9ef0-4512-9430-5d6fe364dbde"/>
+   <folder name="1. High level requirements"
+           id="559708d6-7e81-4730-b2f3-ec53879dbf4f"/>
+   <folder name="2. User Journey" id="2b0094fe-0e69-477e-9835-fb17a6ab8bd2"/>
+   <folder name="4. Low level requirements"
+           id="8be8472c-ea68-4fb2-b274-676917399d03"/>
+   <folder name="0. dependencies" id="d5feb861-2fb6-44a4-ad63-937985d514b9"/>
+   <entry name="constraints needed" id="f37dc171-abb3-415f-bdf6-16fac0e91a13"/>
+</index>

@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Model checks"
+         id="c47ff395-04f5-4380-b229-81c84910a328"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>

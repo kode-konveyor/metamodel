@@ -1,0 +1,24 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Low level requirements" id="8476af8f-539d-43e6-ae28-e6e4e64ebe04"/>
+   <entry name="Low level requirement constraints"
+          id="d2737cbe-0ea6-4022-a659-7a443bb49aca"/>
+   <entry name="have a view in the low level requirements folder"
+          id="3f83e7d7-ee81-4c28-8790-6663655a59a7"/>
+   <entry id="eab33d4d-eca2-461a-acd8-20b249a96ae7"/>
+   <entry name="the low level requirements view contains the behaviours and process steps determined"
+          id="3e0acbce-d984-4b4a-b7b6-97556134c9f5"/>
+   <entry id="e064f9da-845c-459e-89a3-380132f34d85"/>
+   <entry name="belongs to a Process Step, contains or supports other behaviours"
+          id="c823a5fc-8adb-4649-a149-26549b0fd7da"/>
+   <entry name="determined by at least one Objective"
+          id="64549231-bb38-44ff-89c4-224ed36d6d20"/>
+   <entry name="Behaviours are in the same folder as the view for their most important objective"
+          id="e2b9113d-6051-4b65-9b68-f859bc0aff33"/>
+   <entry id="41c56cf6-5924-4b88-9ece-ba8b9753328f"/>
+   <entry name="is implemented by/implements"
+          id="0f884e27-f833-4ddf-9972-5e6e0d8bf96a"/>
+   <entry name="determines at least one behaviour or Process Step"
+          id="e836d822-8a95-4482-bcf9-215e752f57d9"/>
+   <entry name="depends on" id="b6f9974a-1393-4848-a6f1-febcd90c0de1"/>
+</index>

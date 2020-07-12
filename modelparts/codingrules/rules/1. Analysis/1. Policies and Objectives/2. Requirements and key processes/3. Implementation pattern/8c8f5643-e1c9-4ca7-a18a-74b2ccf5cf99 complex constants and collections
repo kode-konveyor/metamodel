@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="complex constants and collections"
+         id="8c8f5643-e1c9-4ca7-a18a-74b2ccf5cf99"
+         ancestor="behaviour">
+   <documentation>* constants with complex structures (test Entity and DTO instances and mocks for legacy objects) and constant collections of constants are created by methods without parameters
+* these methods create a new instance of the constant every time they are called, using their constructor (not the factory)
+* the name of a method creating a complex constant should start with 'get'
+* the name of the method creating a collection of constants should start with the type of the collection, e.g. 'list'
+* the name of the method giving back a default instance ( a fully built instance meant to be used in the positive test case) is 'get()'
+* the name of the method giving back a collection containing only the default instance should be the name of the collection type, e.g. 'list()'
+* other methods must directly or indirectly use the get() method to deliver other instances by modifying the default instance.
+* the non-default methods must contain the name of the (most important) field modified right after the 'get' part. For example the method giving back an Entity with a zero id would be called getIdUninitialized()</documentation>
+</element>

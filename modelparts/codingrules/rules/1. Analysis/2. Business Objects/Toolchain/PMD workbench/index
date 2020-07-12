@@ -1,0 +1,7 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="Rule" id="5cc21799-148a-4152-9378-163bb97e87df"/>
+   <entry name="PMD workbench" id="93ad3e36-9607-48c2-aa98-b99a64fa1ef5"/>
+   <entry id="2595f277-d809-4d3f-a10e-7827db4644af"/>
+   <entry name="PMD workbench" id="c064d1ab-6536-45ec-a63e-291dbb923dea"/>
+</index>

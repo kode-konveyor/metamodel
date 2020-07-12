@@ -1,0 +1,7 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="Production code" id="7e5eaf14-7ff9-4773-ae3c-a864564a1fe5"/>
+   <folder name="Test code" id="372b0a58-4706-4e5e-9eb2-5c36e80d2368"/>
+   <entry name="Code" id="8b506188-aa02-4ce9-8aef-8a9afede9c33"/>
+   <entry name="Code" id="cbf84f8e-1037-42bd-9a08-81550eb48ee7"/>
+</index>

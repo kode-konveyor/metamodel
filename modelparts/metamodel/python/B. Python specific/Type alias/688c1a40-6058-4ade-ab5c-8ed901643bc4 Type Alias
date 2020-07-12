@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Type Alias"
+         id="688c1a40-6058-4ade-ab5c-8ed901643bc4"
+         ancestor="type">
+   <documentation>A class descending from types in the typing package.
+
+It is technically needed when a complex type annotation cannot be carried out using an external type.
+
+The only content of the class is:
+
+  __slots__ = ()
+</documentation>
+</element>

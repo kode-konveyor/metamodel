@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="make testcases for corner cases"
+         id="72dfe527-8daf-4bf5-9696-dff2c069caa9"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+   <documentation>some branches not covered by testcases. e.g what if there is an empty result for a repository query?
+</documentation>
+</element>

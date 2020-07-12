@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="is in the same folder as its test data"
+         id="735b2b89-6ec4-42e9-b7e4-8548a9048b2e"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+if($element/../element/@id = zenta:neighbours($doc,$element,'contains,2')/@id)
+then ()
+else concat('in ',string-join($element/ancestor::folder/@name,'/'))</documentation>
+</element>

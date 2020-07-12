@@ -1,0 +1,23 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Behaviours are in the same folder as the view for their most important objective"
+         id="e2b9113d-6051-4b65-9b68-f859bc0aff33"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>low_level_requirements|
+	if(
+		$element/@xsi:type != 'Behaviour' or 
+		zenta:neighbours($doc,$element,'determines,2')/@xsi:type != 'Objective' or
+		count(zenta:neighbours($doc,$element,'determines,2')) = 0 or
+		$element/../*[@name=zenta:neighbours($doc,$element,'determines,2')/@name]
+	)
+	then ()
+	else concat(
+		string-join($element/../@name,','),
+		'---',
+		string-join(
+			$doc//element[@id=zenta:neighbours($doc,$element,'determines,2')/@id]/../@name,','),
+		'aaa'
+)
+</documentation>
+</element>

@@ -1,0 +1,24 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="No flow between steps in different stories"
+         id="dcc137b8-7b0e-4e47-9d1c-265d3684e4cd"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if(zenta:neighbours(
+		$doc,
+		zenta:neighbours($doc,$element,'preceeds,1'),
+		'contains,2')[@xsi:type='Process Step']/@id
+	!=
+	zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Process Step']/@id
+)
+then concat('continued in another story:', string-join(
+	for $next in zenta:neighbours($doc,$element,'preceeds,1')
+		return
+			for $story in  zenta:neighbours($doc,$next,'contains,2')
+			return concat('through ', $next/@name, ' to ', $story/@name)
+	,
+	', '))
+else ()
+</documentation>
+</element>

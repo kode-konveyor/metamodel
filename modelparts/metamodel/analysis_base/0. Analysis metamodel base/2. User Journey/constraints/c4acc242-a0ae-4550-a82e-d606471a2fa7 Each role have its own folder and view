@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Each role have its own folder and view"
+         id="c4acc242-a0ae-4550-a82e-d606471a2fa7"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if(
+	$element/../*[.//@zentaElement=$element/@id and @name=$element/@name] and
+   contains($element/../@name,$element/@name)
+)
+	then ()
+	else 'have no view and/or folder'
+</documentation>
+</element>

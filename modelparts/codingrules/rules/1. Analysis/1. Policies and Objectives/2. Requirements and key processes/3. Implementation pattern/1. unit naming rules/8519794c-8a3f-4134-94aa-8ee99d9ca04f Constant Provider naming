@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Constant Provider naming"
+         id="8519794c-8a3f-4134-94aa-8ee99d9ca04f"
+         ancestor="behaviour">
+   <documentation>* Constant providers are nouns + 'Constants', mandated by the design. E.g. WorkSpaceConstants</documentation>
+</element>

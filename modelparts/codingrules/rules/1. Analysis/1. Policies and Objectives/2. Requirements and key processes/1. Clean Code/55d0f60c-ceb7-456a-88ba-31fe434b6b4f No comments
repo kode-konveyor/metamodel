@@ -1,0 +1,10 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="No comments"
+         id="55d0f60c-ceb7-456a-88ba-31fe434b6b4f"
+         ancestor="behaviour">
+   <documentation>* If you need to write comments to explain your code, it means you need to put it in a new method.
+* Do not comment out code. Remove it.
+* The //NOPMD comment counts as annotatiion disabling code check</documentation>
+</element>

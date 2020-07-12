@@ -1,0 +1,56 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="A. Java implementation rules"
+           id="2b1464e9-451e-4474-81d0-10333b66d0b4"/>
+   <folder name="B. python implementation rules"
+           id="29bc92ca-ca89-4544-bba2-a28dfc02cda3"/>
+   <folder name="1. unit naming rules" id="4b9236bf-5d1c-4083-804d-5765cbb2eca3"/>
+   <entry name="Implementation pattern" id="221f0c88-ab0d-408b-a4f3-361809b80e6b"/>
+   <entry name="ancillary unit" id="75d5962e-721a-497b-932e-9a6dbe058d81"/>
+   <entry name="based on Test Base" id="b0dfa46a-2e3f-4745-af13-3df7567c678a"/>
+   <entry name="basic naming conventions"
+          id="059291b1-c79f-464a-8433-bb7a83f1fb79"/>
+   <entry name="code unit" id="478609a9-ef96-4d4b-b328-f982f1d0860d"/>
+   <entry name="complex constants and collections"
+          id="8c8f5643-e1c9-4ca7-a18a-74b2ccf5cf99"/>
+   <entry name="constant provider" id="861fcab2-587d-45f1-8587-1979180ee4f6"/>
+   <entry name="data structure unit" id="b585a667-63bb-4bb8-8a20-2e574b874ed0"/>
+   <entry name="framework specific" id="6cd0ac90-c94f-4779-afe5-c704590846d8"/>
+   <entry name="generated" id="35eddd23-6029-42b8-9bb9-b763e46976e3"/>
+   <entry name="helper" id="a83b3a77-8854-44b0-977e-037c7864d052"/>
+   <entry name="interface class" id="2a9d2132-6761-4332-90ef-5867fc9d6096"/>
+   <entry name="Java implementation rules"
+          id="90c9ea7a-fbdb-486f-8bb2-414ae673ba49"/>
+   <entry name="modeled placement" id="6a6a5f4e-be42-4cad-bf72-be0116b8817e"/>
+   <entry name="No reference to production code constants"
+          id="5397f74e-8346-4361-a715-1118727df296"/>
+   <entry name="not modeled" id="24a87938-be71-4bc5-b7af-a6613caad024"/>
+   <entry name="production code" id="a5e21cdb-a5ec-47a6-a520-9fa3e8f825d8"/>
+   <entry name="Python implementation rules"
+          id="a075cf36-a702-4ec4-9921-7df4e66b12df"/>
+   <entry name="separation of test concerns"
+          id="5b588fe9-1aea-46d3-b8d6-2e6e8d276dc1"/>
+   <entry name="stub methods" id="09e6371f-a016-4564-bb13-e2738204933f"/>
+   <entry name="Test approach and scope"
+          id="5f45a4b2-9963-41ab-807d-5fb5aeec823b"/>
+   <entry name="Test case descriptions" id="51c84caa-de59-4851-8821-705803797a4f"/>
+   <entry name="test code" id="1278c3f4-2609-4490-876c-95ea4cf2b811"/>
+   <entry name="Test Data fields and methods"
+          id="26320259-ca58-4f0d-8ab5-c98641585f12"/>
+   <entry name="Unit naming" id="26b4d7af-073d-426b-8d83-13d989d00602"/>
+   <entry name="Implementation pattern" id="eee962ae-e529-4297-9a0f-28e31dbc0f45"/>
+   <entry id="cf538a40-78ca-48e3-b5ac-78042d0ec175"/>
+   <entry id="5b4ce8b4-caad-4171-8b11-3c1dca86acb0"/>
+   <entry id="afcf3204-1bb1-4d6f-b959-dd2299727d86"/>
+   <entry id="9834e7c3-45e0-424f-8a8d-0e9189fba105"/>
+   <entry id="3dab623f-3851-438d-9362-1d4d7661951c"/>
+   <entry id="093bc8a1-b9f3-465f-9325-81226143212c"/>
+   <entry id="5ef43651-10bd-48a2-b249-a7d35f895906"/>
+   <entry id="634ed949-17a4-4fd5-8269-5980d344f22c"/>
+   <entry id="bdca2a57-9906-4a2d-8c4f-f80bffb0b059"/>
+   <entry id="ec8f5c76-ee85-4809-8b5c-6f13391fda9b"/>
+   <entry id="5820604f-4184-471d-9651-dd5c24734837"/>
+   <entry id="944fd567-ee8f-42cf-bf23-860ba280898d"/>
+   <entry id="dfdb0979-fb8c-4f3c-a2c9-e2d6789b159e"/>
+   <entry id="fb46ec67-355d-4a1e-8222-2f6a6ecf5dde"/>
+</index>

@@ -1,0 +1,9 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="contains" id="985f067c-945f-4443-8ff1-174f5410bfe2"/>
+   <entry name="uses" id="53ccffc5-831f-4605-8766-37c3d41d9d1f"/>
+   <entry name="uses" id="31be804c-b9ba-4edc-8035-27e20217dac1"/>
+   <entry name="uses" id="0d4055eb-a9a1-4694-a14a-dc15a0289f4c"/>
+   <entry name="uses" id="44801b30-bd93-4598-953c-10798a4ab445"/>
+   <entry name="is tested by/tests" id="48b250d4-4518-40d3-8815-0f80dfa3de3a"/>
+</index>

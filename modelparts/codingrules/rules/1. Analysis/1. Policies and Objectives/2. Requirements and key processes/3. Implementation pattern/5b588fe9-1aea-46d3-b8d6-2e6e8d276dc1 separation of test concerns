@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="separation of test concerns"
+         id="5b588fe9-1aea-46d3-b8d6-2e6e8d276dc1"
+         ancestor="behaviour">
+   <documentation>Test code, test artifacts, stubs and test helper methods should be strictly separated.
+
+* The Test units must contain only test functions, and possibly setUp and tearDown methods with setup and teardown of locally used mechanisms.
+* Stub Providers must contain only stubs describing behaviour of production code or external dependencies
+* Test Data units must contain only Test Artifacts, including mocks describing behaviour of parameters
+* Test Helpers must contain only helper functions supporting the test cases
+* Test Bases must contain only constructs building the unit under test, injecting the mocks of its dependencies, and calls to behaviour stubs of the dependencies
+</documentation>
+</element>

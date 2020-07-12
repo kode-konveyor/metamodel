@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="The automated checks for the analysis are green, and the customer sign off the business architecture"
+         id="3dd51002-45f5-4cb3-8be4-c8d276c1bf1c"
+         ancestor="behaviour"/>

@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="code unit"
+         id="478609a9-ef96-4d4b-b328-f982f1d0860d"
+         ancestor="behaviour">
+   <documentation>code units do not contain data structures and constants
+those are in data structure and constant units</documentation>
+</element>

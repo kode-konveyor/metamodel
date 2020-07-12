@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicRelationship"
+         name="uses"
+         id="b1ae238b-8c08-4eb1-b9a1-c6d13903300e"
+         ancestor="basicrelation"
+         source="5491f72b-93ec-4ad5-b6a9-2653fe808a03"
+         target="5f361cfb-f5bf-4f2e-8ef3-1abdf181f1d8">
+   <property key="textPosition" value="1"/>
+   <property key="lineDecoration"/>
+   <property key="lineColor"/>
+   <property key="fontColor"/>
+   <property key="lineWidth" value="1"/>
+   <property key="font"/>
+</element>

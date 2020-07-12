@@ -1,0 +1,16 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicRelationship"
+         name="is done by/does"
+         id="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"
+         ancestor="basicrelation"
+         source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+         target="c2f93d99-8bbd-4742-9f73-15937394173d">
+   <property key="textPosition" value="1"/>
+   <property key="lineDecoration"
+             value="DottedLineDecoration DotTargetDecoration DotSourceDecoration"/>
+   <property key="lineColor"/>
+   <property key="fontColor"/>
+   <property key="lineWidth" value="1"/>
+   <property key="font"/>
+</element>

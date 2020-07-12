@@ -1,0 +1,9 @@
+<folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:zenta="http://magwas.rulez.org/zenta"
+        name="00. python specific relations"
+        id="eaab3376-3b6a-4d6a-a336-9fddad0300b8">
+   <property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:zenta="http://magwas.rulez.org/zenta"
+             key="display"
+             value="hidden"/>
+</folder>

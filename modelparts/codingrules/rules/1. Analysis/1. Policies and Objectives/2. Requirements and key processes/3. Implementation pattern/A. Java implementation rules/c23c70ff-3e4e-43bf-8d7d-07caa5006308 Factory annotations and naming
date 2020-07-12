@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Factory annotations and naming"
+         id="c23c70ff-3e4e-43bf-8d7d-07caa5006308"
+         ancestor="behaviour">
+   <documentation>In java a Factory is a class annotated as @Service extending FactoryBean.</documentation>
+</element>

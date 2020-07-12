@@ -1,0 +1,12 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Metamodel" id="8eae3a30-58c5-472a-9aa1-53c03ad6c938"/>
+   <entry name="analysis rules" id="3b8419f5-c79f-493a-8570-468476642ff2"/>
+   <entry id="6f2d1b88-a8f4-4674-a2e3-8dd46aa76de5"/>
+   <entry name="design rules" id="0b6e3944-e07b-4753-8100-a6d275ccc163"/>
+   <entry id="4d3adbac-2223-4eba-8e26-73636ac19965"/>
+   <entry name="ui" id="90165e40-542a-4622-b1e7-73b9b1bdb35f"/>
+   <entry id="a6918573-a0f5-4b97-8f65-e8bfd0eb07fe"/>
+   <entry name="coding rules" id="6576254f-2540-4e97-88db-c1b601d53332"/>
+   <entry name="Metamodel" id="a32fc97e-2872-40d1-afcd-d8dc6421a528"/>
+</index>

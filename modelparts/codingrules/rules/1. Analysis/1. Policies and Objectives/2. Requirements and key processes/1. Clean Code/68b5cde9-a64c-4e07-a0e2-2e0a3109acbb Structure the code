@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Structure the code"
+         id="68b5cde9-a64c-4e07-a0e2-2e0a3109acbb"
+         ancestor="behaviour">
+   <documentation>Structure the code well. Separate concepts vertically.
+* Declare variables close to their usage.
+* Dependent functions should be close.
+* Similar functions should be close.
+* Place supporting functions below supported ones.
+* Use white space to associate related things and disassociate weakly related.
+                                     
+                                  </documentation>
+</element>

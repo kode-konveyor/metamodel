@@ -1,0 +1,17 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Project"
+         id="1fd2be20-d3ab-4f28-9171-73ef55961bd5"
+         ancestor="thing">
+   <documentation>A set of code and documentation which is bundled together as a shippable unit useable for its intended audience (also known as product),
+or the complete procedure of software development from requirement gathering to testing and maintenance, carried out according to the execution methodologies, in a specified period of time to deliver the product.
+
+Projects can contain packages.
+</documentation>
+   <property key="fillColor" value="#fcaf3e"/>
+   <property key="elementShape" value="deliverableShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

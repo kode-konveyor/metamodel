@@ -1,0 +1,21 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Package" id="d3d4e39d-09a6-4a0f-a985-be922245d850"/>
+   <entry name="Application structure" id="a4c81223-25e1-41e3-b633-5e11b3e005ff"/>
+   <entry name="Application structure constraints"
+          id="70d320ee-d0df-4b6e-a7a5-4e21484c8201"/>
+   <entry name="contains" id="da5669f6-b6a4-4008-8cf7-22ea95ec5eff"/>
+   <entry id="ba7db1d5-9bab-4f02-a507-05e283b64740"/>
+   <entry name="contained in a Package" id="c9346e32-c89b-4eae-8fd5-549682b2df3e"/>
+   <entry name="contains at least one package"
+          id="3d43468e-1396-443a-bbf9-806f13e1332d"/>
+   <entry name="In exactly one Project or Package"
+          id="1a095374-c532-44de-86a7-917a1a011ec9"/>
+   <entry name="appears in Application Structure view"
+          id="6549c67a-dd03-40b7-bfe7-bed4e631d323"/>
+   <entry id="efa8795e-2b62-49df-a4a7-df98d3ae9fea"/>
+   <entry name="In its view in its folder within 7. Low Level Design with all its contents"
+          id="768e7503-e491-4d74-827c-198eb4bfe40d"/>
+   <entry id="37bb96fc-dac5-48cb-be1b-7285e3f283a4"/>
+   <entry id="0ced1bc4-6efc-4b70-849a-f131f242faac"/>
+</index>

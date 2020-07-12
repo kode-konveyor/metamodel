@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="its view contains its neighbourhood"
+         id="875f18f3-6284-4fcf-a9fa-2ab06e2bfb24"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>services|
+for $bo in  $doc//element[@id=$element//value[not(@derived="true")]/@target]
+return
+	if ( $doc//element[@name=$element/@name]//@zentaElement=$bo/@id )
+		then ()
+		else concat('not in view: ',$bo/@name)
+</documentation>
+</element>

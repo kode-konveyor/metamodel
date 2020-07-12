@@ -1,0 +1,18 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Consistent naming"
+         id="be86a014-b791-4827-8ed4-206a72f3a4d2"
+         ancestor="behaviour">
+   <documentation>* Be consistent in naming. With the rest of the project and yourself.
+* Choose descriptive and unambiguous names.
+* Make meaningful distinction.
+* Use pronounceable names.
+* Use searchable names.
+* Avoid encodings. Don't append prefixes or type information.
+* Don't use abbreviations.
+* The most specific the use of something, the longer its name.
+* Do not be redundant.
+
+</documentation>
+</element>

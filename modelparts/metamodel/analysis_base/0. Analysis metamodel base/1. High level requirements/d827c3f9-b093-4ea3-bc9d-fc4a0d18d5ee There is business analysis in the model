@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="There is business analysis in the model"
+         id="d827c3f9-b093-4ea3-bc9d-fc4a0d18d5ee"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>policies|
+zenta:exactlyOne(
+	$doc//folder[@name='1. Analysis'],
+	'no analysis folder'
+)</documentation>
+</element>

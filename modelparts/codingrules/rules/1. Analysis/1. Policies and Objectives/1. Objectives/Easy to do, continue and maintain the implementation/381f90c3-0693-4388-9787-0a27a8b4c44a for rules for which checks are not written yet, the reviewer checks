@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="for rules for which checks are not written yet, the reviewer checks"
+         id="381f90c3-0693-4388-9787-0a27a8b4c44a"
+         ancestor="behaviour"/>

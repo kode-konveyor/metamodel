@@ -1,0 +1,21 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Utility Class"
+         id="3c4d5358-9776-4954-a912-5d8c45183628"
+         ancestor="thing">
+   <documentation>A utility class holds code implementing behaviour, which is either
+
+* overflown from Service or Controller units due to code complexity constraints, or
+* used by more Controllers, Services ot Utility classes, and
+* can be tested through the interface of Controller and Service units, therefore no need to crete their own Service.
+
+If the utility class is for input validation logic, it should be placed in the same package as the validated DTO.
+
+</documentation>
+   <property key="fillColor" value="#fcaf3e"/>
+   <property key="elementShape" value="rectangleElementShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

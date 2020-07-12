@@ -1,0 +1,18 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Business object to business object connections"
+         id="d6dbc559-2d93-4f37-bf3c-e6474c7919cc"
+         ancestor="35ade6d3-e52e-449c-bfc5-3a5a6f4e4f58">
+   <documentation>A business object can have or aggregate other business objects.
+Those connections can have qualifiers in their name after a ';' separated by ',':
+Must have one of 'Reference' or 'Direct'
+aggregate must have one of  'Ordered' or 'Unordered'
+can have 'Virtual:'&lt;name&gt;, meaning that the corresponding field is only in Entities, and it is volatile: not stored, but computed from the reverse connection named.
+</documentation>
+   <property key="fillColor"/>
+   <property key="elementShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

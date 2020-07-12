@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Is in the Milestones view"
+         id="4d15738c-09e8-4971-820d-c254a5e99d06"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>milestones|
+if($doc//folder[@name='6. Milestones']//*[@name='Milestones']//@zentaElement=$element/@id)
+		then ()
+		else 'not in Milestones view'
+</documentation>
+</element>

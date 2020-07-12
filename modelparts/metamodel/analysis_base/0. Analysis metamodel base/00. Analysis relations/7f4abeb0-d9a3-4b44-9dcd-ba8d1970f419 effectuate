@@ -1,0 +1,16 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicRelationship"
+         name="effectuate"
+         id="7f4abeb0-d9a3-4b44-9dcd-ba8d1970f419"
+         ancestor="basicrelation"
+         source="83af8497-bfef-451b-9bc6-f00d58c8df6a"
+         target="bc81820d-6987-4d9b-918a-cf132a2c7bfb">
+   <property key="textPosition" value="1"/>
+   <property key="lineDecoration"
+             value="SmallEndArrowDecoration DashedLineDecoration"/>
+   <property key="lineColor"/>
+   <property key="fontColor"/>
+   <property key="lineWidth" value="1"/>
+   <property key="font"/>
+</element>

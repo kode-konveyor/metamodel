@@ -1,0 +1,22 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="CI" id="b9bb2ffe-82cd-4159-b319-c03f1f5cd829"/>
+   <entry name="analysis check" id="437c355f-1105-49f1-9d23-b046cfdb90dc"/>
+   <entry name="code duplication check" id="e1ea51a2-9a65-43ad-a6dc-dd1eba355bd9"/>
+   <entry name="code generation" id="1affbc0f-330c-41e0-b35a-1cb7eda7afd3"/>
+   <entry name="Coverage check" id="4036775e-ce64-4df4-aba4-a0da4e514a60"/>
+   <entry name="design check" id="0b15aedc-6e6e-4b79-8486-293e739d5b89"/>
+   <entry name="Java code generation" id="7fa88fb1-5a5c-4740-b911-d15e051f532c"/>
+   <entry name="JavaScript code generation"
+          id="9212ff41-9614-47b9-9d94-404c5ca1f89b"/>
+   <entry name="JavaScript static code analysis"
+          id="e8880b27-1018-43a7-88b1-4c1bfe6789ad"/>
+   <entry name="Java static code analysis"
+          id="5149809c-0e87-4d51-9bb8-7ef974f770d4"/>
+   <entry name="Model checks" id="c47ff395-04f5-4380-b229-81c84910a328"/>
+   <entry name="python code generation" id="91bb8a73-0420-4543-b569-d4b70d8e26b4"/>
+   <entry name="Python static code analysis"
+          id="de6dca96-efd5-412c-8242-827cb3ee8954"/>
+   <entry name="static code analysis" id="dbe47f33-a46a-4165-aa22-c32364bb17bf"/>
+   <entry name="CI" id="d4c671a4-cd9f-40cb-89f8-91e3b83c2ca8"/>
+</index>

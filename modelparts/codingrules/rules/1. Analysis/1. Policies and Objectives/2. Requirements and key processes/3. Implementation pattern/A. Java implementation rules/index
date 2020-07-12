@@ -1,0 +1,26 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Java implementation rules"
+          id="039962ab-8f6e-42a1-9cbe-c55b82945feb"/>
+   <entry name="class" id="6a2e8d68-a732-4bc4-b833-b0bded3be810"/>
+   <entry name="Controller annotations and naming"
+          id="adc7c595-d583-4ec1-b75b-6a5bb378da81"/>
+   <entry name="Delegate rules" id="fe319972-e893-4bad-bc83-71532ff015ac"/>
+   <entry name="DTO annotations and naming"
+          id="8f57cca4-c506-4800-95c5-642258d5b2f7"/>
+   <entry name="Entity annotations and naming"
+          id="b2541c3c-8b1d-4fdb-be03-22b2975b4216"/>
+   <entry name="enum" id="92500fdd-fc33-404e-9ad8-f9749be34f86"/>
+   <entry name="Factory annotations and naming"
+          id="c23c70ff-3e4e-43bf-8d7d-07caa5006308"/>
+   <entry name="Public interface and dependencies"
+          id="f6b8267f-7210-4b56-ae96-383a6dc022f7"/>
+   <entry name="repository" id="64212f41-f899-4fd7-be73-e15d12dd3f0a"/>
+   <entry name="Service annotations and naming"
+          id="ee85f5ad-0c1f-419e-bf2d-f35643363494"/>
+   <entry name="static class" id="3ee0f35c-5723-4ae7-958d-f8351e1d023f"/>
+   <entry name="Test Base annotations and naming"
+          id="5925e94d-c59e-4269-a096-0e18ff743961"/>
+   <entry name="Unit test annotations and naming"
+          id="98e905d4-8282-4ae7-bf1a-5d7eaa5f29fa"/>
+</index>

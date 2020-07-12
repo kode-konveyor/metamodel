@@ -1,0 +1,44 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Data Structures constraints"
+          id="7722981f-5617-47a3-939c-9dcf810f1057"/>
+   <entry name="Data Structures" id="fb2053ff-806b-47a3-a996-e9bed7978e75"/>
+   <entry name="Test Data" id="9ec42823-7056-4e73-b1f4-600a066c8d88"/>
+   <entry name="has an example as/is an example of"
+          id="d44a66e2-43d7-4016-8971-1ca2873b76b8"/>
+   <entry id="f1764cb5-9a75-4efd-8b78-a288afeb033c"/>
+   <entry name="Have its folder with view in 7. Low Level Design, containing it. its test artifacts, supported Business Objects and their type"
+          id="bace4199-1f09-47f6-91ad-d374b6acecbc"/>
+   <entry id="d9f8c2a9-91c8-4e50-8794-4e3a6a789aee"/>
+   <entry name="its view contains all dependents of its Business Object"
+          id="061e0984-74fa-4df0-8ed1-07337c95fbab"/>
+   <entry id="f3e918f6-7d1f-4660-9a95-22677d76b9ff"/>
+   <entry name="Its view contains the package of it"
+          id="871e8704-32b1-4c9a-b9ed-972852185088"/>
+   <entry id="bd0a9eaf-25c1-4896-9b17-6733a4011d27"/>
+   <entry name="is in the same folder as its test data"
+          id="735b2b89-6ec4-42e9-b7e4-8548a9048b2e"/>
+   <entry id="96bb8157-ebf1-43db-a7e7-0998366a1453"/>
+   <entry name="is a/is the type of" id="05f5c95a-6781-4d95-a90b-9e9aede97472"/>
+   <entry name="has a type" id="b9deedbc-997d-417d-8282-4da0f08107b7"/>
+   <entry name="belongs to a TestData" id="1dec51d2-ac56-4384-aae3-94d4fc1d8e35"/>
+   <entry name="documents the contents of the artifact or constructable based on the Business Object"
+          id="189dbb19-8dd0-41be-b596-4e29c9210ff9"/>
+   <entry name="has an example as/is an example of"
+          id="bcc57284-8ee7-4c8b-be30-2c47d0773dde"/>
+   <entry name="Has a test artifact or test data with name derived from the Business Object name"
+          id="0c9d9b82-d935-42cc-a70e-1090814374f1"/>
+   <entry name="Has a type" id="3d7efa2f-a0c5-4568-b100-196bb6a671e3"/>
+   <entry name="is a/is the type of" id="6a695c67-0831-40a7-9efa-513c1524f3ca"/>
+   <entry name="is an example of a Business Object Field or parameter"
+          id="cd077259-127c-4997-82ae-f9808af60668"/>
+   <entry name="contains only Test Artifacts"
+          id="fc553e5a-f627-4e67-8aab-ced929767da8"/>
+   <entry id="e1c0d1c5-0c94-4d1d-a3af-0979a56c382f"/>
+   <entry id="2019bf48-1c8b-4d4b-bd1c-8e7a189b05f8"/>
+   <entry name="has an example as/is an example of"
+          id="d422da0f-0a3c-4bee-a969-37260d27808d"/>
+   <entry name="is a/is the type of" id="553f01d7-aebb-45b2-98cf-566b7868c606"/>
+   <entry name="Test Artifact" id="ffbe5058-5089-4c5a-965d-e996df089f8e"/>
+   <entry name="Type" id="type"/>
+</index>

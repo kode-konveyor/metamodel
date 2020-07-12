@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="CTO"
+         id="e0fbddf2-cf3e-4e51-a64e-b0e155586573"
+         ancestor="c2f93d99-8bbd-4742-9f73-15937394173d"/>

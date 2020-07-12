@@ -1,0 +1,46 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="others"
+         id="51c95df7-bf2b-4539-bd32-1d8d3c712bfa">
+   <child xsi:type="zenta:DiagramObject"
+          id="f539bbbe-b9c1-442c-98dd-de9e2c06fe74"
+          zentaElement="50aecd61-1338-4576-b217-774c4d182030">
+      <bounds x="267" y="103" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="328b0988-29f9-49a0-b166-3c90e407172e"
+          zentaElement="6d33cca5-6ee1-4dde-942f-8af1296edff0">
+      <bounds x="567" y="103" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="100d2802-bb64-4fd6-a9c7-f8ab338bc0e6"
+          zentaElement="510b9de7-6f22-40c6-b44b-07d3b6817794">
+      <bounds x="267" y="203" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="d0be10e1-7c51-4afe-a5d8-a7ab7dde1e9f"
+          zentaElement="b78bba40-caa8-4e86-9abd-199856cdd6f1">
+      <bounds x="417" y="203" width="160"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="3f294944-0860-4c6e-b053-0513aa46862e"
+          zentaElement="dc77ae7d-6c3a-4440-8122-c965619bbcea">
+      <bounds x="273" y="308" width="244"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="a27b337e-5ffe-4981-9815-089e4acf3387"
+          zentaElement="7746fe96-947a-40c3-85c8-b2c5d13d3283">
+      <bounds x="267" y="440" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="f3967123-72c9-41fd-8f2e-3c06d83873d2"
+          zentaElement="0f0a6947-743a-43d4-acce-76befdc85a03">
+      <bounds x="632" y="344" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="a26bbd43-e931-42eb-9621-48a91eebd60d"
+          zentaElement="23900871-d5a6-45b2-aef9-62cbbeb53419">
+      <bounds x="932" y="344" width="-1" height="-1"/>
+   </child>
+</element>

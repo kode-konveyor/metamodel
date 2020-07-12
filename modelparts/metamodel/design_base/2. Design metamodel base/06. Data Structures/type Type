@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Type"
+         id="type"
+         ancestor="thing">
+   <documentation>This is an abstract entity used for anything which is either usually implemented as a class, or have some kind of property.
+</documentation>
+   <property key="fillColor" value="#ffffff"/>
+   <property key="elementShape" value="emptyShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

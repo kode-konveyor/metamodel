@@ -1,0 +1,34 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="rule updating process" id="fdfb8222-9de4-4765-ae34-0ce98eedbe25"/>
+   <entry name="Need arises for a new rule"
+          id="3ac80513-64e3-4f16-9cdb-4754a892b077"/>
+   <entry name="Discuss the rule and come up with a solution"
+          id="485db0f2-ff94-438f-9817-e84fc0f333bd"/>
+   <entry name="Model the solution near and in the metamodel"
+          id="f33f5f36-2838-4930-b81f-62516b0924bc"/>
+   <entry name="Modify rule implementation"
+          id="e1301868-2613-4b26-a292-98532b3dfae1"/>
+   <entry name="Generate new version of rule document"
+          id="c41c53fb-e8f0-461a-9f34-6126665c264d"/>
+   <entry name="Write test cases" id="60d7b698-1d27-40f3-895e-0e62d29af9c3"/>
+   <entry name="Rule change process" id="82c4b529-2c95-44cd-8b33-35615b5ca3e7"/>
+   <entry name="rules" id="23bbbc57-c1c6-4928-ac1f-80ec59502cf9"/>
+   <entry name="Anyone" id="d412df16-9894-4eb8-a336-7503c0e685b9"/>
+   <entry name="Community" id="13df28b8-0878-41d5-aae4-4ba22df73e79"/>
+   <entry name="CTO" id="e0fbddf2-cf3e-4e51-a64e-b0e155586573"/>
+   <entry name="DevOps" id="e03727ee-65df-4381-99f4-fc83cf2f9658"/>
+   <entry name="rule doc generator" id="6f125c8a-3909-428b-85b6-4bdd87e196f6"/>
+   <entry id="ee1f6efc-7ed6-4ec3-941f-194320e1f7ae"/>
+   <entry id="9c99d484-b70b-4069-8022-881b259a9099"/>
+   <entry id="b2f22670-3172-4ecb-93c8-a1a2962b4c88"/>
+   <entry id="109f24d1-f588-4b0c-8837-a0ba6fcb635b"/>
+   <entry id="8baf3ca2-2100-4acf-87ac-de97ab0219fa"/>
+   <entry id="31ae7ab3-41f2-4016-8b58-87bed2b18778"/>
+   <entry id="ff8e7236-0897-4ca0-8b63-c711aa7a02a5"/>
+   <entry id="c4026789-b645-4089-a416-5c1c4c089355"/>
+   <entry id="734025c8-f290-44d8-a7fe-c9b54a7cc879"/>
+   <entry id="00e654aa-cccb-415d-9959-3592895d4b34"/>
+   <entry id="c2a70a75-4968-46ff-9c42-e912541992f0"/>
+   <entry id="62631c64-8e72-4dbf-9922-8dd61d102c14"/>
+</index>

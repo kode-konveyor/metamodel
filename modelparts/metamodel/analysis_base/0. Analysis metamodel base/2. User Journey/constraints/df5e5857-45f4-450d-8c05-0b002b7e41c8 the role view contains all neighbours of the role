@@ -1,0 +1,20 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="the role view contains all neighbours of the role"
+         id="df5e5857-45f4-450d-8c05-0b002b7e41c8"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+for $step in (
+	zenta:neighbours($doc,$element,'is done by/does,2')|
+	zenta:neighbours($doc,$element,'contains,2')
+   )
+return
+	if(
+		$element/../*[@name = $element/@name]//@zentaElement = $step/@id
+	)
+	then ()
+	else string($step/@name)
+
+</documentation>
+</element>

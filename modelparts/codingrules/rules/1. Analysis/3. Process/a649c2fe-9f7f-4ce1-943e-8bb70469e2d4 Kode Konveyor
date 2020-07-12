@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Kode Konveyor"
+         id="a649c2fe-9f7f-4ce1-943e-8bb70469e2d4"
+         ancestor="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>

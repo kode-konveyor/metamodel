@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="is inside the process folder"
+         id="519c2ea9-eb09-463b-9001-c2eeb01a3d72"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if($element/ancestor::folder[@name='3. Process'])
+	then ()
+	else string-join($element/ancestor::folder/@name,' , ')
+</documentation>
+</element>

@@ -1,0 +1,13 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="based on Test Base"
+         id="b0dfa46a-2e3f-4745-af13-3df7567c678a"
+         ancestor="behaviour">
+   <documentation>* Unit test of a Service/Controller must be children of the Test Base unit orresponding to the tested Service/Controller.
+* In case of legacy objects a Test Base unit may be created, based on the decision of the coder.
+* If a Test Base object is created, it should be used by all the corresponding unit tests.
+* The setUp method of unit tests (if exist) must call the setUp method of the superclass as its first instruction.
+* unit tests can reference the tested code unit, as it is brought into the namespace by the Test base
+</documentation>
+</element>

@@ -1,0 +1,22 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Has a test artifact or test data with name derived from the Business Object name"
+         id="0c9d9b82-d935-42cc-a70e-1090814374f1"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+if ( matches($element/@name,'^[a-z ]*$'))
+	then if(
+		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Artifact' and @name=zenta:capitalSneakCase($element/@name)]
+	)
+	then ()
+		else concat('no test artifact named ', zenta:capitalSneakCase($element/@name))
+else if(
+		zenta:neighbours($doc,$element,'has an example as/is an example of,1')[@xsi:type='Test Data' and
+                                   @name=zenta:testDataName($element/@name) or
+                                   @name=zenta:testDataName(replace($element/@name, 's$', ''))]
+	)
+	then ()
+	else concat('no test data', zenta:testDataName($element/@name))
+</documentation>
+</element>

@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test Artifact"
+         id="ffbe5058-5089-4c5a-965d-e996df089f8e"
+         ancestor="ebc74a50-0298-4c43-8830-d93ede22576b">
+   <property key="fillColor" value="#8ae234"/>
+   <property key="elementShape" value="deliverableShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

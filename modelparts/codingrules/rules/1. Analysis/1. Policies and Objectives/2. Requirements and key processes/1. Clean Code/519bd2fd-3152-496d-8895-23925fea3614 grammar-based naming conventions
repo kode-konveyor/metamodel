@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="grammar-based naming conventions"
+         id="519bd2fd-3152-496d-8895-23925fea3614"
+         ancestor="behaviour">
+   <documentation>All names are descriptive.
+
+* module, unit, parameter, field, and local variable names are nouns
+* code unit names refer to the activity/process they support
+* method names are verbs, except context stub method names, see below
+* context stub method names are sentences describing the state
+* the non-default methods of Test Data must contain the name of the (most important) field modified right after the 'get' part, and the way of the modification. For example the method giving back an Entity with a zero id would be called getIdUninitialized()</documentation>
+</element>

@@ -1,0 +1,25 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="is done by a user or implemented by a Callable"
+         id="47d08121-4031-4c7a-b6de-1f70c0bb8095"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>services|
+if(
+	zenta:neighbours($doc,$element,'is done by/does,1'), 
+	zenta:neighbours($doc,$element,'contains,2;is done by/does,1')	,
+	zenta:neighbours($doc,$element,'iterates,2;is done by/does,1')	
+) then
+	if (zenta:neighbours($doc,$element,'is implemented by/implements,1'))
+	then "both done by user and implemented by callable"
+    else ()
+else if (zenta:neighbours($doc,$element,'is implemented by/implements,1'))
+	then ()
+    else "not done by user nor implemented by callable"
+</documentation>
+   <property key="fillColor"/>
+   <property key="elementShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

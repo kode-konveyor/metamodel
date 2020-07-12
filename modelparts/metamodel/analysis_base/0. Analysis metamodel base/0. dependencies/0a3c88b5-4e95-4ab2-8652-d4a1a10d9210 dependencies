@@ -1,0 +1,34 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="dependencies"
+         id="0a3c88b5-4e95-4ab2-8652-d4a1a10d9210">
+   <child xsi:type="zenta:DiagramObject"
+          id="5e56bdd2-9577-49a4-a096-e945449df623"
+          fillColor="#fce94f"
+          elementShape="meaningShape"
+          zentaElement="behaviour">
+      <bounds x="30" y="80" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="8013415c-c4aa-480e-8cd8-20305d106026"
+                        source="5e56bdd2-9577-49a4-a096-e945449df623"
+                        target="b0cabc49-f5de-42d6-afe7-31839c2f4c64"
+                        lineDecoration=" DiamondSourceDecoration"
+                        relationship="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="b0cabc49-f5de-42d6-afe7-31839c2f4c64"
+          targetConnections="8013415c-c4aa-480e-8cd8-20305d106026"
+          fillColor="#fce94f"
+          elementShape="meaningShape"
+          zentaElement="behaviour">
+      <bounds x="30" y="242" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="d53b80a9-a3ef-4b17-8fd5-56a2b69d97e9"
+          elementShape="ellipseShape"
+          zentaElement="09407896-919e-4388-9e20-427696f9fbbc">
+      <bounds x="235" y="90" width="-1" height="-1"/>
+   </child>
+   <property key="Template"/>
+</element>

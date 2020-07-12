@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="The metamodel repo is modified to show the new rules"
+         id="7e691345-2b20-4371-b5ab-76749ec18bb8"
+         ancestor="behaviour"/>

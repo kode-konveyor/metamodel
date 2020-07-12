@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Process step to business object connections should specify whether interface or repo, cardinality, and representation"
+         id="2a22742e-fba4-4c39-abff-73c2debab480"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>clarifications|
+if (zenta:neighbours($doc,$element,'is implemented by/implements,1'))
+then
+	(for $bo in $element/value[not(@derived='true') and (@ancestorName='reads' or @ancestorName='modifies')]
+		return
+			zenta:checkStepToBoName($doc,$bo)
+	)[.!='pass']
+else ()</documentation>
+</element>

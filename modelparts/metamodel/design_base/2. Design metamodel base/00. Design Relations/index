@@ -1,0 +1,35 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="uses" id="54da2470-41ef-40fb-9d35-0523a3aecb0d"/>
+   <entry id="621351f7-336b-4ec8-ae35-e147b9eea0a1"/>
+   <entry id="ead4086e-af11-4f08-9c78-deb3625e9ea6"/>
+   <entry name="contains" id="8e65d98a-577b-419b-863b-e023eb12d940"/>
+   <entry name="contains" id="bbe8d388-6c76-4351-8e81-83f144f7bc9e"/>
+   <entry name="contains" id="036814e0-4424-44e3-8e3b-da8b69e78423"/>
+   <entry id="aec8fbe0-3e7a-43b6-8694-c14d964ddfed"/>
+   <entry id="336b4a9f-d027-4bd7-b5b7-4a7fd01f48a3"/>
+   <entry id="3efc9817-fc16-4497-a86f-f14648b478f9"/>
+   <entry id="e091dd37-2018-4740-891d-c43bb9d5bd38"/>
+   <entry id="1e5284b6-e21c-448f-8e39-db47dbee0dca"/>
+   <entry id="b7704924-d377-479e-a6d0-18a53679c1c2"/>
+   <entry name="is a/is the type of" id="2c93b411-5f2f-4488-a34b-1b7d60e67b32"/>
+   <entry id="c1b4b1e9-d0bc-4421-8b14-3ace892f0351"/>
+   <entry id="6ad6d5ca-3f9c-4faa-ad75-87bc1b6cacf9"/>
+   <entry name="contains" id="07abb5cc-2ae6-4184-82a9-1ea3a680187c"/>
+   <entry name="contains" id="9c5ed771-8533-43a9-ba8f-22e6437dcef1"/>
+   <entry id="bf046a28-973a-4093-9080-58984d8b3d96"/>
+   <entry id="397fa938-034f-4b98-8bcb-bfe97f469d70"/>
+   <entry id="a8bbfa72-0f57-4023-be37-a9759d99bbd2"/>
+   <entry id="06a34ddc-b9a7-439c-aee3-3f99b93492b7"/>
+   <entry name="contains" id="94c0a421-ffbe-458d-8f6f-46a669b10549"/>
+   <entry name="uses" id="01dfbf60-b584-4c46-9d1b-c7c88dc040f5"/>
+   <entry id="79028f8e-ed0e-4246-bb44-3eb3b3519016"/>
+   <entry id="d9c269ce-ce35-4c75-be1a-a3e639f24441"/>
+   <entry name="published at" id="1de45c0c-e1d7-4a8c-b095-909b248b5f34"/>
+   <entry name="uses" id="b1ae238b-8c08-4eb1-b9a1-c6d13903300e"/>
+   <entry id="7581e1c1-5685-4cef-9f62-4ca9d8242850"/>
+   <entry id="4b1d9cc2-97a4-4185-8056-a02491b9a3ac"/>
+   <entry id="cc90f181-c0e5-430f-a5b7-3ee635d95687"/>
+   <entry name="contributes to/uses" id="fcf8ccf8-a98d-456f-8479-0cd2bb491b1e"/>
+   <entry name="results" id="5771c318-786f-45df-bf1c-04137f464a22"/>
+</index>

@@ -1,0 +1,8 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="1. Policies and Objectives"
+           id="87f340bf-f11f-4043-9520-f890030dbc6f"/>
+   <folder name="0. relations" id="b9f38a9f-0914-4bc0-b22c-5ac821253d4c"/>
+   <folder name="3. Process" id="b7fb5398-da58-43cc-88cd-1a9761b80d14"/>
+   <folder name="2. Business Objects" id="e1551c89-eb9c-4983-b6e5-195f45787487"/>
+</index>

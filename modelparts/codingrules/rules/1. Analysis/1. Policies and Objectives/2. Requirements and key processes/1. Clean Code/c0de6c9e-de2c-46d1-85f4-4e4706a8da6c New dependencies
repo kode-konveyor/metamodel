@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="New dependencies"
+         id="c0de6c9e-de2c-46d1-85f4-4e4706a8da6c"
+         ancestor="behaviour">
+   <documentation>* New external dependencies should not be added lightly
+* While writing functionality someone else have already written is waste of effort, a dependency should be good quality and with appropriate licence.
+* Introducing a new dependency should only be done with the approval of the designer.
+                                  </documentation>
+</element>

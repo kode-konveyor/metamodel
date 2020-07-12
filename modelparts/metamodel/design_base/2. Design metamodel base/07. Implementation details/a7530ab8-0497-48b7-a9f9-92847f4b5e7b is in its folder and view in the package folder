@@ -1,0 +1,22 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="is in its folder and view in the package folder"
+         id="a7530ab8-0497-48b7-a9f9-92847f4b5e7b"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>services|
+if(
+	$doc//
+		folder[@name=zenta:neighbours($doc,$element,'is implemented by/implements,2;contains,2')/@name]/
+		folder[@name=$element/@name]//@zentaElement=$element/@id
+)
+then ()
+else 
+	concat(
+		'at ', 
+		string-join($element/ancestor::folder/@name,'/'),
+		' should be at ', 
+		zenta:neighbours($doc,$element,'is implemented by/implements,2;contains,2')[@xsi:type='Package']/@name
+	)
+</documentation>
+</element>
