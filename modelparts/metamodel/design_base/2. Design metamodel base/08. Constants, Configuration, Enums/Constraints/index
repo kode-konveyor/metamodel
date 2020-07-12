@@ -1,0 +1,19 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Enum, Configuration Provider Constraints"
+          id="1914d145-5cb0-46e4-a1de-545501bb9461"/>
+   <entry name="can contain only constants"
+          id="c2098a4f-3068-4d87-b7f5-9235ae887455"/>
+   <entry name="is in a Constant Provider" id="isInAConstantProvider"/>
+   <entry name="used by at least one behaviour"
+          id="73d62603-8090-48bb-aaf0-e007cd8c678c"/>
+   <entry name="have constants" id="dc5f0c92-8e08-41f4-b7d3-7157d021676b"/>
+   <entry id="3daf9097-c3ba-4165-8291-fb3583e980fc"/>
+   <entry id="9a14c217-93c3-4a95-a0e0-7dd602e61e8b"/>
+   <entry name="Have its folder with view in 7. Low Level Design, containing it, its constants and package"
+          id="9993c34d-65a2-4e3e-8ad4-998e5fc78f78"/>
+   <entry id="26bc8b4b-fb65-4e5a-9ba7-2c7b65439b4e"/>
+   <entry id="daf45575-3a75-4c8b-9419-b5732b9352a7"/>
+   <entry id="b51e5dc2-5311-406f-a436-cd6d147d5cc9"/>
+   <entry name="belongs to a package" id="883e08c5-3c2f-4713-b7c2-4c7be941126c"/>
+</index>

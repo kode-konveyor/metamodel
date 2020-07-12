@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="not modeled"
+         id="24a87938-be71-4bc5-b7af-a6613caad024"
+         ancestor="behaviour">
+   <documentation>Ancillary units which do not need additional design decisions (already available from the model) are not modeled.
+</documentation>
+</element>

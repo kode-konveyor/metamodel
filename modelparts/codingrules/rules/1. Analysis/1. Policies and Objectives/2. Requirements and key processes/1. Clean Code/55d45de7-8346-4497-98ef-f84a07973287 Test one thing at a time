@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test one thing at a time"
+         id="55d45de7-8346-4497-98ef-f84a07973287"
+         ancestor="behaviour">
+   <documentation>Tests should test exactly one thing
+Therefore there should be exactly one assertion in one test.</documentation>
+</element>

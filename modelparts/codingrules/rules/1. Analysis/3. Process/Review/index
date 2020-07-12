@@ -1,0 +1,17 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Review" id="09aee017-dc81-47c0-b583-bd9044cc2ff1"/>
+   <entry name="Review" id="3d926f54-d9a6-4cf4-b89d-a96ba68f1144"/>
+   <entry name="Check that all relevant parts of the behaviour are tested"
+          id="74a7824a-23a1-4826-a24c-8668d4d55e2d"/>
+   <entry name="check that all test cases test according to the description"
+          id="e44a3524-22e8-4921-996c-2e010677c888"/>
+   <entry name="Check that all test descriptions are understandable for the end user"
+          id="56d9f1e1-addc-4dd2-a91f-6d03d47344c6"/>
+   <entry name="Check things in JavaScript which will be checked automatically later"
+          id="bf9753a6-c633-4d4a-93b4-88cd325f0763"/>
+   <entry name="check things in java which will be checked automatically later"
+          id="46f3192d-8e38-438b-a9dc-4163f0f6cf59"/>
+   <entry name="Check things in python which will be checked automatically later"
+          id="f85915de-11f0-4334-a127-6fca87de67a7"/>
+</index>

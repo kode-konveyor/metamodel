@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="There is at most one process initializing the project"
+         id="076a46da-abc4-4913-a31a-6e8e9fab115c"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if(count(
+	zenta:neighbours($doc,$element,'is initialized by/initializes,1')
+ )&lt;2)
+then ()
+else string-join(zenta:neighbours($doc,$element,'is initialized by/initializes,1')/@name,' and ')
+
+</documentation>
+</element>

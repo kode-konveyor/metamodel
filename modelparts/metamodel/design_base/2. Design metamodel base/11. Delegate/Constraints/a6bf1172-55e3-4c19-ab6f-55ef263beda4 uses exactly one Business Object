@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="uses exactly one Business Object"
+         id="a6bf1172-55e3-4c19-ab6f-55ef263beda4"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>services|
+zenta:exactlyOne(
+	zenta:neighbours($doc,$element,'uses,1')[@xsi:type='Business Object'],
+	'no Business Object found') 
+</documentation>
+</element>

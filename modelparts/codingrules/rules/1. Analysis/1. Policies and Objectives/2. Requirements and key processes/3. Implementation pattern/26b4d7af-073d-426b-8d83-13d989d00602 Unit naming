@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Unit naming"
+         id="26b4d7af-073d-426b-8d83-13d989d00602"
+         ancestor="behaviour">
+   <documentation>* Units have CamelCase names with postfixes describing the type of unit
+
+
+  </documentation>
+</element>

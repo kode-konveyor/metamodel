@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="contract"
+         id="6d33cca5-6ee1-4dde-942f-8af1296edff0"
+         ancestor="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>

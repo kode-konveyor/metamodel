@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="class"
+         id="6a2e8d68-a732-4bc4-b833-b0bded3be810"
+         ancestor="behaviour">
+   <documentation>The java implementation of the unit is a class
+</documentation>
+</element>

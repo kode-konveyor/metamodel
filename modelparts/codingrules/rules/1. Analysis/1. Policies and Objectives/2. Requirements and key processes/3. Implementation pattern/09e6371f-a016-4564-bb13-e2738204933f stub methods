@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="stub methods"
+         id="09e6371f-a016-4564-bb13-e2738204933f"
+         ancestor="behaviour">
+   <documentation>* there are zero or one behaviour stubs in a stub provider, implemented as a method named 'behaviour' with the Service/Controller/Legacy object as the parameter, without return value.
+* there are zero or more context stubs in a stub provider without parameter and return value. </documentation>
+</element>

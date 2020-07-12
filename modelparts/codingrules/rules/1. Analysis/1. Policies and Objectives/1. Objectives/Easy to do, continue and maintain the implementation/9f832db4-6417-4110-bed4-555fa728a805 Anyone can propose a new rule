@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Anyone can propose a new rule"
+         id="9f832db4-6417-4110-bed4-555fa728a805"
+         ancestor="behaviour"/>

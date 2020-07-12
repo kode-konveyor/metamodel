@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Factory naming"
+         id="48e093d1-5c11-4660-bb48-1d943d48d74a"
+         ancestor="behaviour">
+   <documentation>* Factory names are the name of the DTO without the postfix + 'Factory'. E.g. WorkItemFactory</documentation>
+</element>

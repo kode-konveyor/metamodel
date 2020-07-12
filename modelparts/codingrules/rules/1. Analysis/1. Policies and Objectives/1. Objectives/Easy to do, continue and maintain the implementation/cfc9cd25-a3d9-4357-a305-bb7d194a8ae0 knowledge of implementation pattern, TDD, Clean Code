@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="knowledge of implementation pattern, TDD, Clean Code"
+         id="cfc9cd25-a3d9-4357-a305-bb7d194a8ae0"
+         ancestor="behaviour"/>

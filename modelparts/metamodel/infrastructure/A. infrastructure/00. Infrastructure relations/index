@@ -1,0 +1,13 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="configures" id="f5d11b05-3ea7-4fd2-8c6a-8811061c07f0"/>
+   <entry name="contains" id="15629728-dcb6-43db-bc30-6aa9f253c4b2"/>
+   <entry name="contains" id="0dca3222-e66b-4a45-99dd-2e6a05f61cf6"/>
+   <entry name="contains" id="cefa7aaa-8c69-4806-8b78-5dc45fe6fde7"/>
+   <entry name="contains" id="29fe0561-f656-4bba-bc3f-7e6331d92f9d"/>
+   <entry name="contains" id="21c0a115-e534-4e3f-89a7-ebeeca67985d"/>
+   <entry name="is configured by/configures"
+          id="5de25f0f-fd51-4195-97d8-43409da90141"/>
+   <entry name="provides" id="1b4be796-8ba6-488b-8a83-2d661f22d6d1"/>
+   <entry name="uses" id="4e25804f-1f14-400b-bafe-c7f9eee91e79"/>
+</index>

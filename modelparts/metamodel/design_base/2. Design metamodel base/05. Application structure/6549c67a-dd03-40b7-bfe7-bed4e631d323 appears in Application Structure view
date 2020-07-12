@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="appears in Application Structure view"
+         id="6549c67a-dd03-40b7-bfe7-bed4e631d323"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>application_structure|
+if($doc//folder[@name='7. Low Level Design']/element[@name='Application Structure']//@zentaElement=$element/@id)
+then ()
+else 'not in the view'</documentation>
+</element>

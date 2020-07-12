@@ -1,0 +1,24 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="fills in"
+         id="7e333bfa-2109-42d6-bcfc-e17b0d4a5d39"
+         ancestor="188f9954-0501-432b-8022-6a49fd1cc83c">
+   <documentation>1|
+if (
+	zenta:neighboursRun1($doc,$element,'contains,1;fills in,1'),
+	zenta:neighboursRun1($doc,$element,'iterates,1;fills in,1')
+)
+then 
+	(
+		zenta:neighboursRun1($doc,$element,'contains,1;fills in,1'),
+		zenta:neighboursRun1($doc,$element,'iterates,1;fills in,1')
+	)
+else 	
+	(
+		zenta:neighboursRun1($doc,$element,'contains,1;contains,1;fills in,1'),
+		zenta:neighboursRun1($doc,$element,'contains,1;iterates,1;fills in,1'),
+		zenta:neighboursRun1($doc,$element,'iterates,1;contains,1;fills in,1'),
+		zenta:neighboursRun1($doc,$element,'iterates,1;iterates,1;fills in,1')
+	)</documentation>
+</element>

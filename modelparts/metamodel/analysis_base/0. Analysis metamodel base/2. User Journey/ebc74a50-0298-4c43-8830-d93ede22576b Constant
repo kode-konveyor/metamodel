@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Constant"
+         id="ebc74a50-0298-4c43-8830-d93ede22576b"
+         ancestor="thing">
+   <documentation>Constant is a special property. Its value is predetermined and never changes.
+</documentation>
+   <property key="fillColor" value="#d3d7cf"/>
+   <property key="elementShape" value="ellipseShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

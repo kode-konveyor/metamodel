@@ -1,0 +1,7 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="Constraints" id="fe856463-7bbb-45e1-b259-43d2e75f122e"/>
+   <entry name="Delegate" id="16b7434d-819a-4498-880f-f36d69b1cc5b"/>
+   <entry name="Delegate" id="aac49409-16ea-44e9-8a2e-24ef1876c7ab"/>
+   <entry name="uses" id="174c404c-c84a-4edd-bdf8-bf0efb674e87"/>
+</index>

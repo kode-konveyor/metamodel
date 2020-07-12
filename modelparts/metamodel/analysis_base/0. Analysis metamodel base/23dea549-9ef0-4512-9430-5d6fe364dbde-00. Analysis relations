@@ -1,0 +1,9 @@
+<folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:zenta="http://magwas.rulez.org/zenta"
+        name="00. Analysis relations"
+        id="23dea549-9ef0-4512-9430-5d6fe364dbde">
+   <property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:zenta="http://magwas.rulez.org/zenta"
+             key="display"
+             value="hidden"/>
+</folder>

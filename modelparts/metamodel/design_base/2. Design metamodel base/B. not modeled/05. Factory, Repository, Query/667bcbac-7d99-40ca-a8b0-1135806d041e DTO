@@ -1,0 +1,13 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="DTO"
+         id="667bcbac-7d99-40ca-a8b0-1135806d041e"
+         ancestor="type">
+   <documentation>DTO is used to hold a data object. It is transparent and have no business logic.</documentation>
+   <property key="fillColor" value="#fcaf3e"/>
+   <property key="elementShape" value="emptyShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

@@ -1,0 +1,40 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Entity annotations and naming"
+         id="b2541c3c-8b1d-4fdb-be03-22b2975b4216"
+         ancestor="behaviour">
+   <documentation>In java
+
+* the class must have an @Entity annotation
+* the class must have a @Data annotation
+* the class may have a @Table annotation with the name of the sql table
+* the id field is of type Long, and must have   @Id and  @GeneratedValue(strategy = GenerationType.IDENTITY) annotations
+* the fields may have @Column annotations denoting the sql column
+* the fields referencing aggregates of other entities have the following annotations in the side marked as "owning" the relation
+
+    @ManyToMany(
+      fetch = FetchType.LAZY,
+      cascade = {
+          CascadeType.ALL
+      }
+    )
+   @JoinTable(
+      name = "&lt;name of join table&gt;",
+      joinColumns = {
+          @JoinColumn(name = "&lt;name of column  referring to this entity in the join table&gt;")
+      },
+      inverseJoinColumns = {
+          @JoinColumn(name = "&lt;name of column referring to the other entity in the join table&gt;")
+      }
+   )
+   @EqualsAndHashCode.Exclude
+
+* the fields referencing aggregates of other entities have the following annotation in the "slave" side:
+
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "&lt;name of the table of the owning entity&gt;")
+    @EqualsAndHashCode.Exclude
+
+* the fields referencing the aggregate of other entities are initialized using 'new HashSet&lt;&gt;()'
+</documentation>
+</element>

@@ -1,0 +1,9 @@
+<folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:zenta="http://magwas.rulez.org/zenta"
+        name="00. Meta Meta relations"
+        id="2d6a9e3c-3df4-4114-9a3b-7b23bc0aa7b0">
+   <property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:zenta="http://magwas.rulez.org/zenta"
+             key="display"
+             value="hidden"/>
+</folder>

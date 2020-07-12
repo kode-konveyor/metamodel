@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="DTO naming"
+         id="95c34373-d3ba-4975-8d0f-893a4d952f5d"
+         ancestor="behaviour">
+   <documentation>* DTO names are nouns + 'DTO', mandated by the design. E.g. WorkItemDTO</documentation>
+</element>

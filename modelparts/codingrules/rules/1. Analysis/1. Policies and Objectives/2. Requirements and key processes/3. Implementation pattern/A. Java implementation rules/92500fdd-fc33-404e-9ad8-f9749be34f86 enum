@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="enum"
+         id="92500fdd-fc33-404e-9ad8-f9749be34f86"
+         ancestor="behaviour">
+   <documentation>The java implementation of an Enum is an enum, with SCREAMING_SNEAK_CASE constant names
+</documentation>
+</element>

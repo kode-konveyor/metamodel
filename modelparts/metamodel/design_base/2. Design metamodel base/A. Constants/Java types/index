@@ -1,0 +1,12 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Double" id="e1a0ec93-9f03-48e7-bca5-8aef8c851acc"/>
+   <entry name="Integer" id="4f3f2228-4c09-4876-aabb-722db7b7fd4d"/>
+   <entry name="Long" id="81320af1-db53-4357-98e8-b11c7248e2be"/>
+   <entry name="Array" id="6cd2b009-714f-485d-ae14-6b2e081daf18"/>
+   <entry name="Boolean" id="faa5e1b5-f0f6-4930-a0f9-cb17ff08ce4d"/>
+   <entry name="String" id="b0b9e3d0-389f-4989-941a-e97aeb77bdbc"/>
+   <entry name="Object" id="fb9d813f-9900-455a-bfa5-5448fd383251"/>
+   <entry name="Any" id="e6942112-d548-4bf8-8c7e-0925e876b96b"/>
+   <entry name="Instant" id="22f6d214-25b4-4c40-baf0-b9ff36384988"/>
+</index>

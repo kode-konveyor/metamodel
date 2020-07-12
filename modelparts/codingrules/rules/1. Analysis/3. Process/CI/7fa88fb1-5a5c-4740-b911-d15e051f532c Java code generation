@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Java code generation"
+         id="7fa88fb1-5a5c-4740-b911-d15e051f532c"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>

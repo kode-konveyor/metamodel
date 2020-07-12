@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="constant provider"
+         id="861fcab2-587d-45f1-8587-1979180ee4f6"
+         ancestor="behaviour">
+   <documentation>* constants can only be in constant provider units; move them there from other units
+** if there is a modeled constant provider for the purpose, then use that
+** otherwise use the constant provider for the package
+* configuration provider and TestData units are special constant providers
+* simple constants are public static final fields in SCREAMING_SNAKE_CASE
+* in the production code there are no constants with complex structures
+</documentation>
+</element>

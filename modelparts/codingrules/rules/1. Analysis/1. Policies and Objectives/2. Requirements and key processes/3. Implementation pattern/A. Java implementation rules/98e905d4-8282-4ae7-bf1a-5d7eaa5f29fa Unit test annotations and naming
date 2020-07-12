@@ -1,0 +1,27 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Unit test annotations and naming"
+         id="98e905d4-8282-4ae7-bf1a-5d7eaa5f29fa"
+         ancestor="behaviour">
+   <documentation>Java implementations of unit Test units have the following annotations on the test class:
+
+* basic annotations:
+** @ExtendWith(MockitoExtension.class)
+** @MockitoSettings(strictness = Strictness.LENIENT)
+** @RunWith(MockitoJUnitRunner.class)
+* @TestedBehaviour and @TestedService annotations mandated by the task description, denoting the behaviour and code unit under test.
+
+if there is a setUp and/or tearDown method, they should be called such, and have the corresponding Junit 5 annotations: @BeforeEach and @AfterEach
+
+test cases have the following annotations:
+
+* @Test
+* @Displayname
+
+the parameter of the @Displayname annotation contains the test description
+
+The test case method names must start with 'test', and the rest of the name do not matter as the @Displayname annotation conveys the information about their function.
+
+All of the methods and fields of the unit test are package protected.</documentation>
+</element>

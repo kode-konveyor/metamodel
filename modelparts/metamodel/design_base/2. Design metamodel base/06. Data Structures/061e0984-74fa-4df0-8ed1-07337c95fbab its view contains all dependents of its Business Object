@@ -1,0 +1,23 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="its view contains all dependents of its Business Object"
+         id="061e0984-74fa-4df0-8ed1-07337c95fbab"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+for $artifact in (
+		zenta:neighbours($doc,$element,'has an example as/is an example of,2')[@xsi:type='Business Object']
+	), 
+	$dependent in (
+			zenta:neighbours($doc,$artifact,'has,1'),
+			zenta:neighbours($doc,$artifact,'references,1'),
+			zenta:neighbours($doc,$artifact,'lists,1'),
+			zenta:neighbours($doc,$artifact,'lists references to,1'),
+			zenta:neighbours($doc,$artifact,'aggregates references to,1'),
+			zenta:neighbours($doc,$artifact,'aggregates,1')
+	)
+	return if ($element/..//@zentaElement = $dependent/@id)
+		then ()
+		else concat(' not in the view: ',$dependent/@name,'; ') 
+</documentation>
+</element>

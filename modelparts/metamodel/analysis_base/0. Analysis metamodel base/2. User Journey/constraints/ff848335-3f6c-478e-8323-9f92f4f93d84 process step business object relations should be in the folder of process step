@@ -1,0 +1,25 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="process step business object relations should be in the folder of process step"
+         id="ff848335-3f6c-478e-8323-9f92f4f93d84"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+for $conn in (
+	$element/value[(@ancestorName='reads' or @ancestorName='modifies') and @direction=1 and not(@derived='true')]
+) return
+	if($doc//connection[@id=$conn/@id]/../element[@name=$element/@name])
+	then ()
+	else concat(
+		$conn/@relationName,
+		'(',
+		$conn/@ancestorName,
+		' ',
+		$doc//element[@id=$conn/@target]/@name,
+		') should be at ',
+		string-join($element/ancestor::folder/@name,'/'),
+		codepoints-to-string(10)
+	)
+
+</documentation>
+</element>

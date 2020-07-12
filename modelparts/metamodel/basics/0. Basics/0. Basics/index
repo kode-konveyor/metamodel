@@ -1,0 +1,7 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Basic Object" id="basicobject"/>
+   <entry name="Basic Relation" id="basicrelation"/>
+   <entry name="constrains" id="306ff791-4afd-4ccf-b09f-b9ee0db6b1a2"/>
+   <entry name="expands" id="64981f96-11a3-4631-b4f8-dd38993cec60"/>
+</index>

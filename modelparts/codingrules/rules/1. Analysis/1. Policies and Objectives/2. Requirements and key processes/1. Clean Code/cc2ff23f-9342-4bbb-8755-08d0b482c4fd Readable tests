@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Readable tests"
+         id="cc2ff23f-9342-4bbb-8755-08d0b482c4fd"
+         ancestor="behaviour">
+   <documentation>Tests should be readable
+* adhere to clean code rules here as well
+* separate setup, exercise, verify, and teardown optically
+* do as much as you can do in setup and teardown methods, optimally leaving out those steps from the tests themselves
+* complicated things should be organised out into test helper classes
+*  in end-to-end testing, think in processes and steps
+                                     
+                                  </documentation>
+</element>

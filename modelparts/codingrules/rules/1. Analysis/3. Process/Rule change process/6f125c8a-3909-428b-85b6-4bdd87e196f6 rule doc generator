@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="rule doc generator"
+         id="6f125c8a-3909-428b-85b6-4bdd87e196f6"
+         ancestor="service"/>

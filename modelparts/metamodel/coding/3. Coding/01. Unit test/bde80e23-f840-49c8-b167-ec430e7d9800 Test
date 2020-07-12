@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test"
+         id="bde80e23-f840-49c8-b167-ec430e7d9800"
+         ancestor="thing">
+   <documentation>A unit test is a code testing (a part of) the implementation of a Service or Controller, or a legacy class. If there is a TCDD (temporary name) framework for the given language, that should be used instead of unit tests.
+</documentation>
+   <property key="fillColor" value="#8ae234"/>
+   <property key="elementShape" value="emptyShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

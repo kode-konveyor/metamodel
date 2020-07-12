@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="DELETE"
+         id="5e07dc7d-e8a1-40f8-86c2-f9e1aab2e6df"
+         ancestor="5f361cfb-f5bf-4f2e-8ef3-1abdf181f1d8"/>

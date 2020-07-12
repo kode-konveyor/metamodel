@@ -1,0 +1,9 @@
+<folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:zenta="http://magwas.rulez.org/zenta"
+        name="Analysis shunt"
+        id="6c04bf8b-bd67-491d-8323-ad929b72ae62">
+   <property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:zenta="http://magwas.rulez.org/zenta"
+             key="modelDependency"
+             value="metamodel/analysis_base"/>
+</folder>

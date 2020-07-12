@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Controller annotations and naming"
+         id="adc7c595-d583-4ec1-b75b-6a5bb378da81"
+         ancestor="behaviour">
+   <documentation>In java
+
+* the class must have a @RestController annotation
+* the interface methods must be annotated with @GetMapping or @PostMapping annotations according to the HTTP method and url path associated with the controller
+* the interface parameters should be annotated with @RequestBody annotation if that is mandated by the design and the request type is not x-www-form-urlencoded
+* the parameters according to path parameters should be annotated with @PathParam
+</documentation>
+</element>

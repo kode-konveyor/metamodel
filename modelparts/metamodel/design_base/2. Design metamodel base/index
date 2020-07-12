@@ -1,0 +1,18 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="A. Constants" id="72da7aad-cb5e-46f0-a0fa-503d86cd360c"/>
+   <folder name="00. Design Relations" id="a5482d8b-bb08-446e-b13f-a18d5b2da553"/>
+   <folder name="07. Implementation details"
+           id="9081c37a-9645-4bbf-8b44-6fba90e72eb0"/>
+   <folder name="09. Clarifications" id="4a539546-237d-4637-a4a0-e13de8d1777a"/>
+   <folder name="05. Application structure"
+           id="d5f34b2e-b7d9-4350-8a51-c95350fd683b"/>
+   <folder name="06. Data Structures" id="34ea2275-855f-470e-b479-baf6738ddb0a"/>
+   <folder name="08. Constants, Configuration, Enums"
+           id="7354c7b5-79dc-4bec-90cd-365255f74f2e"/>
+   <folder name="B. not modeled" id="2e3e6f5c-8894-46a2-b3ae-014c049af964"/>
+   <folder name="11. Delegate" id="cc2165d5-18ad-4983-bd0a-8d68383f71b9"/>
+   <folder name="12. External units" id="7d3da920-7ab0-495d-9351-e38c5bb92f34"/>
+   <folder name="0. deprecation" id="23fb97f5-0b38-40ce-9653-8cfaa7ec1076"/>
+   <entry name="is a/is a template for" id="299a71b1-61d7-4be0-aa8d-f5994a6c9e5e"/>
+</index>

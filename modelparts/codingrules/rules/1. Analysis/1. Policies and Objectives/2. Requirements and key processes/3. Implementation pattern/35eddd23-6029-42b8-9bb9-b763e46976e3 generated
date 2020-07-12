@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="generated"
+         id="35eddd23-6029-42b8-9bb9-b763e46976e3"
+         ancestor="behaviour">
+   <documentation>* Where all the information necessary to write a unit exists in the model, the unit will be generated in the long term
+* If such a unit is missing, it is the responsibility of the coder to create it.
+
+</documentation>
+</element>

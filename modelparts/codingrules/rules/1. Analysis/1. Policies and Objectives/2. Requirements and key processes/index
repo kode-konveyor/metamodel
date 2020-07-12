@@ -1,0 +1,12 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="1. Clean Code" id="3bbcac26-1e6f-4bf1-90ab-b3d93871b6d6"/>
+   <folder name="2. TDD" id="08ac6f46-b80a-44eb-b6de-cb418780b342"/>
+   <folder name="3. Implementation pattern"
+           id="262672f3-f9ce-4529-b897-182e7cbe849e"/>
+   <folder name="4. Kode Konveyor process"
+           id="c3c443f2-cda3-4b9f-a06d-afde4f6582d3"/>
+   <folder name="5. Agile architecture" id="ada0f8d2-d957-457c-896a-c60426fdf6e6"/>
+   <folder name="6. Implementation rules make easy to understand, maintain and continue the code"
+           id="bc0c74f2-ec26-4a36-9bef-2b314a840c52"/>
+</index>

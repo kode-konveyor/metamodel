@@ -1,0 +1,28 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Clean Code" id="4f2f46c6-db44-4857-be87-4aa86352bc68"/>
+   <entry name="Do not repeat yourself" id="b48917ec-b3fa-4266-b836-47f1b9188b58"/>
+   <entry name="Consistent naming" id="be86a014-b791-4827-8ed4-206a72f3a4d2"/>
+   <entry name="Focus on API" id="906e0159-1ab7-4ec0-b0a5-858519ab1f37"/>
+   <entry name="No comments" id="55d0f60c-ceb7-456a-88ba-31fe434b6b4f"/>
+   <entry name="Disable checks only if you must"
+          id="793c9f63-3124-4059-8223-35820b5371fc"/>
+   <entry name="polymorphism" id="ff23e5db-5fae-4191-963c-83a556a74b5e"/>
+   <entry name="Structure the code" id="68b5cde9-a64c-4e07-a0e2-2e0a3109acbb"/>
+   <entry name="KISS" id="a554b350-a076-44e8-96bb-083ca197c1fd"/>
+   <entry name="Boy Scout rule" id="4d6144af-6f0c-4f0e-8adc-5e6dfdd99f9c"/>
+   <entry name="Readable tests" id="cc2ff23f-9342-4bbb-8755-08d0b482c4fd"/>
+   <entry name="Test independency" id="50f8531a-d8da-4360-99b7-b3c899e7c07a"/>
+   <entry name="Test behaviours" id="e1557de0-91d3-4134-8e60-0ab9b1f838e4"/>
+   <entry name="Test one thing at a time"
+          id="55d45de7-8346-4497-98ef-f84a07973287"/>
+   <entry name="Pull requests" id="f6951ef3-0ef2-46c2-9859-f9ee9f84b94a"/>
+   <entry name="framework modifications"
+          id="3287d1a8-c265-4a2c-9efd-1754ddcfafec"/>
+   <entry name="CI is for CI" id="4c79a2cf-4a32-4290-a359-76f112f207f3"/>
+   <entry name="New dependencies" id="c0de6c9e-de2c-46d1-85f4-4e4706a8da6c"/>
+   <entry name="git-flow" id="1bab363b-0980-48ca-9506-d1b07bed44f2"/>
+   <entry name="grammar-based naming conventions"
+          id="519bd2fd-3152-496d-8895-23925fea3614"/>
+   <entry name="Clean Code" id="1b229fa2-addd-493f-b20c-783f40ac52fa"/>
+</index>

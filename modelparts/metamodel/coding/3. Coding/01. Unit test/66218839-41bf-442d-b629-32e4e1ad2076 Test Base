@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test Base"
+         id="66218839-41bf-442d-b629-32e4e1ad2076"
+         ancestor="thing">
+   <documentation>A Test Base contains constructs building the unit under test, injecting the mocks of its dependencies, and calls to behaviour stubs of the dependencies
+</documentation>
+   <property key="fillColor" value="#8ae234"/>
+   <property key="elementShape" value="nodeShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

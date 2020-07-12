@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="exception"
+         id="ce48c832-65e0-456b-a0c1-8f6cd62fd74b"
+         ancestor="bc81820d-6987-4d9b-918a-cf132a2c7bfb">
+   <property key="fillColor" value="#ef2929"/>
+   <property key="elementShape" value="deliverableShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor" value="#ffffff"/>
+   <property key="font"/>
+</element>

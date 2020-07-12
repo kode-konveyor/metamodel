@@ -1,0 +1,9 @@
+<folder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:zenta="http://magwas.rulez.org/zenta"
+        name="0. Basics"
+        id="fd8eac3c-3983-4fae-b86f-7ce35213bc23">
+   <property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:zenta="http://magwas.rulez.org/zenta"
+             key="display"
+             value="hidden"/>
+</folder>

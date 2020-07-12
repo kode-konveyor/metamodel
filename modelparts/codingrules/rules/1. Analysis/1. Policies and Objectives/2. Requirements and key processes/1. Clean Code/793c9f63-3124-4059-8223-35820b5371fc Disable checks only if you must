@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Disable checks only if you must"
+         id="793c9f63-3124-4059-8223-35820b5371fc"
+         ancestor="behaviour">
+   <documentation>* The annotations disabling code checks should be rare and explained
+* Exceptions of rules should always be thought out, explained and be available later.
+* The right place to explain is right in the annotation (or near it if there is no other way: this is an exception of the "No comments" rule).
+* If there are many exceptions, then either you do something wrong, or the rules should be changed: raise the issue so we can solve it
+                                  </documentation>
+</element>

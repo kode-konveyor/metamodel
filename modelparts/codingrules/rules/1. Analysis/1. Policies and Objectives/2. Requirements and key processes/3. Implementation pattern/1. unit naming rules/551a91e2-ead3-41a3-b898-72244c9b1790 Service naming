@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Service naming"
+         id="551a91e2-ead3-41a3-b898-72244c9b1790"
+         ancestor="behaviour">
+   <documentation>* Service names are adjective + 'Service', mandated by the design. E.g. RegistrationService</documentation>
+</element>

@@ -1,0 +1,10 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="design signoff"
+         id="82838a4a-99cd-40dc-8d3b-0954425ef2f6"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+   <documentation>The changed policies, objectives, behaviours and user journey elements are signed off by the customer.
+The task descriptions are signed off by the coders.
+</documentation>
+</element>

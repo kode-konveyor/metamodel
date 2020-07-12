@@ -1,0 +1,7 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="dependencies" id="0a3c88b5-4e95-4ab2-8652-d4a1a10d9210"/>
+   <entry name="Behaviour" id="behaviour"/>
+   <entry name="contains" id="f72b01f0-7ff9-48ba-9cd8-b4453fa00c0a"/>
+   <entry name="External Objective" id="09407896-919e-4388-9e20-427696f9fbbc"/>
+</index>

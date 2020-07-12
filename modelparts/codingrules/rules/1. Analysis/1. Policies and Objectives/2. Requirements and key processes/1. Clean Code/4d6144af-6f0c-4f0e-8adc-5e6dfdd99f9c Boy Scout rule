@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Boy Scout rule"
+         id="4d6144af-6f0c-4f0e-8adc-5e6dfdd99f9c"
+         ancestor="behaviour">
+   <documentation>* If you touched a code, you should leave it cleaner than you found it.
+* Therefore it is your responsibility to fix any problems in a unit you modify.
+
+                                     
+                                  </documentation>
+</element>

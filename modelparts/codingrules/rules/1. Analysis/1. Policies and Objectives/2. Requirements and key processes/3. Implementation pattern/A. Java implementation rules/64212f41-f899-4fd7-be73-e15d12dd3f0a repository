@@ -1,0 +1,16 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="repository"
+         id="64212f41-f899-4fd7-be73-e15d12dd3f0a"
+         ancestor="behaviour">
+   <documentation>* The java implementation of a repository is an interface extending PagingAndSortingRepository&lt;EntityType, Long&gt;, where EntityType is the name of the Entity unit it handles.
+* A method name of the Repository can start with find. It returns List&lt;EntityType&gt;
+* A method name of the repository can start with get. It returns Optional&lt;EntityType&gt;
+* A method name of the repository can start with delete. It returns void
+* A method name of the repository can start with count. It returns long
+* A method name of the repository can start with exist. It returns boolean
+* The repository have the methods defined as Queryes contained by the repository. All the method names directly define a query as described in https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.details
+* The default repository methods can be used as prescribed in the model
+ </documentation>
+</element>

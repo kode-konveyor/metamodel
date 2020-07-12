@@ -1,0 +1,21 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="used by at least one behaviour"
+         id="73d62603-8090-48bb-aaf0-e007cd8c678c"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+if(
+	count(
+		(
+			zenta:neighbours($doc,$element,'uses,2'),
+			zenta:neighbours($doc,$element,'has an example as/is an example of,2'),
+			zenta:neighbours($doc,$element,'published at,2'),
+			zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Enum']/value[@ancestorName='is a/is the type of' and @direction=2]
+		)
+	) = 0
+) 
+then 'no behaviour found'
+else ()
+</documentation>
+</element>

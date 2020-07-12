@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test independency"
+         id="50f8531a-d8da-4360-99b7-b3c899e7c07a"
+         ancestor="behaviour">
+   <documentation>* The tests should organize actions on actual states.
+* Do not wait a specific amount of time:
+** use callbacks instead of polling
+** if the only way is polling, set the poll frequency low, and time out after a reasonable number of attempts.
+*  If the test needs an interface for observing the actual state then create an interface for it.
+* If the behaviour is time-dependent, then dependency inject a mocked clock
+</documentation>
+</element>

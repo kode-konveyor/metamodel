@@ -1,0 +1,13 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="DTO annotations and naming"
+         id="8f57cca4-c506-4800-95c5-642258d5b2f7"
+         ancestor="behaviour">
+   <documentation>In Java
+
+* a DTO have a @Data annotation and private non-static fields.
+* no methods, and no explicit constructors
+
+</documentation>
+</element>

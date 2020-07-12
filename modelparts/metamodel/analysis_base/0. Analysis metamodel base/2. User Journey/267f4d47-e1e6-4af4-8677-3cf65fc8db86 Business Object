@@ -1,0 +1,16 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Business Object"
+         id="267f4d47-e1e6-4af4-8677-3cf65fc8db86"
+         ancestor="thing">
+   <documentation>A Business Object is an object which have meaning in the context of certain steps of a process.
+It is in most cases carries the business meaning of something which is result of one service and input of another one.
+It does not have implementation, but tightly coupled with a type which has.
+</documentation>
+   <property key="fillColor" value="#729fcf"/>
+   <property key="elementShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

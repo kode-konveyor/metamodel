@@ -1,0 +1,10 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="CI is for CI"
+         id="4c79a2cf-4a32-4290-a359-76f112f207f3"
+         ancestor="behaviour">
+   <documentation>CI mechanisms should be used only for CI
+using the CI mechanisms for gaining unauthorized access, or for any other purpose than building and quality checking the project is strictly forbidden
+</documentation>
+</element>

@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Coding is paralellizable"
+         id="7ffccec8-4951-41e7-b548-f68b34ec3c16"
+         ancestor="107b9a83-1292-49ee-bf2f-542de02b2654"/>

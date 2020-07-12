@@ -1,0 +1,9 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="External units" id="0f95e93a-4cdf-4619-ab76-1db6d90e8ef8"/>
+   <entry name="External Service under DI framework"
+          id="aca75b0b-3d33-4083-a72d-e853a0cada97"/>
+   <entry name="External type" id="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d"/>
+   <entry name="External Project" id="ff90721c-3f44-44e6-8697-f50c4117c051"/>
+   <entry name="External package" id="faaa6aa5-2cc9-4550-b500-14aedaf2f21a"/>
+</index>

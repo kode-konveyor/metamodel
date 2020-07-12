@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Public interface and dependencies"
+         id="f6b8267f-7210-4b56-ae96-383a6dc022f7"
+         ancestor="behaviour">
+   <documentation>in Java
+
+* The public interface is a public function named 'call'
+* It may have other entry points, provided that it does the same thing with different kind of parameters. The name of the other entry points must also be 'call' in polimorphic languages as long as the paameters can differrentiate between the different versions. In other cases the name of other entry points should start with 'call'
+* all other methods should be private
+* The services it depends on should be referenced with private fields with @Autowired annotation
+</documentation>
+</element>

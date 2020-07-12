@@ -1,0 +1,39 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Implementation details" id="ba5f4fe6-4bf2-4571-a790-5a7e194f33d2"/>
+   <entry name="Implementation details constraints"
+          id="ec785bf8-86bd-4eca-ab5c-d473d4a93dd5"/>
+   <entry name="implements" id="539c6e8a-27b1-46a5-8906-bf1c4225e905"/>
+   <entry name="is done by a user or implemented by a Callable"
+          id="47d08121-4031-4c7a-b6de-1f70c0bb8095"/>
+   <entry id="6fcfe29e-79a0-47bf-9153-2f884186ad1b"/>
+   <entry id="137c7e37-e684-43ac-be8c-5d1037a742b3"/>
+   <entry id="dd1680ef-99be-48e7-9a3e-77d3cfefc91f"/>
+   <entry name="is implemented by/implements"
+          id="3dd7b0b1-bd9f-4a13-b5d9-9db0200af5b8"/>
+   <entry name="is in its folder and view in the package folder"
+          id="a7530ab8-0497-48b7-a9f9-92847f4b5e7b"/>
+   <entry id="eec192ca-e7b5-4d38-9f60-ee0cfaca1dcd"/>
+   <entry name="Its view contains the process step and its neighbourhood"
+          id="210d8d73-81ca-40e1-ad53-659345d80518"/>
+   <entry id="076a9195-64ac-42fd-a9a9-156f6a6a312f"/>
+   <entry name="Callable" id="callable"/>
+   <entry name="Service" id="service"/>
+   <entry name="Controller" id="5491f72b-93ec-4ad5-b6a9-2653fe808a03"/>
+   <entry name="HTTP method" id="5f361cfb-f5bf-4f2e-8ef3-1abdf181f1d8"/>
+   <entry name="Path" id="2cb904ef-0cda-422b-82f6-0509c595b8fd"/>
+   <entry id="0e757478-c7e6-4497-90a3-63627d5108fe"/>
+   <entry name="its view contains its neighbourhood"
+          id="875f18f3-6284-4fcf-a9fa-2ab06e2bfb24"/>
+   <entry id="ad1f0b88-54e1-4395-8294-a4f4fbddf46f"/>
+   <entry name="if there are path variables, the path contains them"
+          id="ff6d4084-4dd3-417d-859d-4275dec9f6fa"/>
+   <entry id="07e71bfe-d19e-4b86-b3f0-fd8a4ffc1165"/>
+   <entry name="has path" id="0ec99e0e-e766-47ec-8e20-1c94a0a662a4"/>
+   <entry name="implements a Process Step"
+          id="dfa48e70-73bc-41ec-9d59-fa14ae908411"/>
+   <entry name="uses HTTP method" id="07fcd486-def7-42ba-8395-806d8721c758"/>
+   <entry name="Implements a Process Step"
+          id="c5831b41-a8f7-4f8e-ac46-8913914adfc7"/>
+   <entry name="contains" id="2acdcaf1-8d2d-4444-94ed-69e0d0050e9b"/>
+</index>

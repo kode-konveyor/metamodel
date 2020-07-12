@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Fewer bugs"
+         id="04cdc949-057c-4f02-aef7-2883d64f3c0f"
+         ancestor="107b9a83-1292-49ee-bf2f-542de02b2654"/>

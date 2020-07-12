@@ -1,0 +1,17 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="ancillary unit"
+         id="75d5962e-721a-497b-932e-9a6dbe058d81"
+         ancestor="behaviour">
+   <documentation>Ancillary units are put to the same package as the unit they support.
+
+* If the design or needs of testing mandates it, a DTO may have a Factory
+* an Entity must have a Repository
+* all DTO, Entity, Service and Controller units must have a Test Data
+* all Service and Controller units must have a Test Base
+* all Service and Controller units must have a Stub Provider
+* a legacy object may have a Factory and/or a Stub Provider and/or a Test Data. Those should be put in a package named 'legacy' under the main package of the project.
+
+</documentation>
+</element>

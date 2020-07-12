@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Integrator"
+         id="b0142c14-63e1-4c42-b90c-ef6874c2af9a"
+         ancestor="c2f93d99-8bbd-4742-9f73-15937394173d"/>

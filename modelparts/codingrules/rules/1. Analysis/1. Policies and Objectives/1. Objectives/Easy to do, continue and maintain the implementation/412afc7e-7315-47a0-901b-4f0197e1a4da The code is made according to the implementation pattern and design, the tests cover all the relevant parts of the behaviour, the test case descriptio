@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="The code is made according to the implementation pattern and design, the tests cover all the relevant parts of the behaviour, the test case descriptions describe the test case in wording understandable for the end user."
+         id="412afc7e-7315-47a0-901b-4f0197e1a4da"
+         ancestor="behaviour"/>

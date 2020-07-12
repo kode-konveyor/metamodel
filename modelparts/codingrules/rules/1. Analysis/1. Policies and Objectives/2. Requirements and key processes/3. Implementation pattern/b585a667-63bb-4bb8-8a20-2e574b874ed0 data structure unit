@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="data structure unit"
+         id="b585a667-63bb-4bb8-8a20-2e574b874ed0"
+         ancestor="behaviour">
+   <documentation>data structures are defined in DTOs. And Entity is a special kind of DTO.
+data structure units do not have behaviours (no methods)
+
+</documentation>
+</element>

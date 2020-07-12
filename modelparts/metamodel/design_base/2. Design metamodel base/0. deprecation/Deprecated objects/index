@@ -1,0 +1,18 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="fills in deprecated" id="d51f6cea-67c1-416a-b111-d0134f83795c"/>
+   <entry name="contains deprecated" id="e542d690-c5ef-48c6-a6e1-1a25c9cc6b2f"/>
+   <entry name="contains deprecated" id="0170d58d-60e9-49a8-888e-f2c61e1ad4a0"/>
+   <entry name="employs deprecated" id="68af7a16-90c5-4c96-8f86-f6d70edfb0a2"/>
+   <entry name="has deprecated" id="f3d4422b-2b19-4a30-922b-1af0890504a3"/>
+   <entry name="operates on/is operated by deprecated"
+          id="bf4763eb-8b85-44d9-90b9-f44135263e89"/>
+   <entry name="sets/is set by deprecated"
+          id="59eb6d0a-e58e-49bd-9c9e-8fe872845784"/>
+   <entry name="state deprecated" id="44d3e3c7-5434-4b39-ad2f-b6157804f83b"/>
+   <entry name="parametrizes template with/is used as template parameter by deprecated"
+          id="1b194939-2048-46eb-b6b0-2ab83ed71d1f"/>
+   <entry name="uses/is used by deprecated"
+          id="957fd3b6-6f76-4621-9408-ef43272f6763"/>
+   <entry name="reduces deprecated" id="fb28f9dc-9029-4a00-bebc-62930796ccef"/>
+</index>

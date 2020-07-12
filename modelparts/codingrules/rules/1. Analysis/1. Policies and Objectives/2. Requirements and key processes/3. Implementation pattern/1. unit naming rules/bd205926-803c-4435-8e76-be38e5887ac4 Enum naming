@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Enum naming"
+         id="bd205926-803c-4435-8e76-be38e5887ac4"
+         ancestor="behaviour">
+   <documentation>* Enum names are nouns + 'Enum', mandated by the design. E.g. WorkTypeEnum</documentation>
+</element>

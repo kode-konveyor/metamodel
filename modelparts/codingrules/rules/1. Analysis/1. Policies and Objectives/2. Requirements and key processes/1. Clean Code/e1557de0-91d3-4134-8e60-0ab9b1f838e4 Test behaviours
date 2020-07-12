@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test behaviours"
+         id="e1557de0-91d3-4134-8e60-0ab9b1f838e4"
+         ancestor="behaviour">
+   <documentation>* tests should test behaviour, and not module internals
+* If you take time to write the test description first, it is easier to write the test.
+* There should not be unnecessary tests (tests which are not mandated by the other rules) 
+</documentation>
+</element>

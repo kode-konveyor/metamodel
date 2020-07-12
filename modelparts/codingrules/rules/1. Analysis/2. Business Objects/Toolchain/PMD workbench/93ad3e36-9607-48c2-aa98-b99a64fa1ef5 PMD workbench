@@ -1,0 +1,22 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="PMD workbench"
+         id="93ad3e36-9607-48c2-aa98-b99a64fa1ef5">
+   <child xsi:type="zenta:DiagramObject"
+          id="4dbd1258-8ab1-47b7-b9a4-0c2c1d2e7656"
+          zentaElement="c064d1ab-6536-45ec-a63e-291dbb923dea">
+      <bounds x="410" y="65" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="41b9ed7d-ab82-4ef1-b547-72c280d0a995"
+                        source="4dbd1258-8ab1-47b7-b9a4-0c2c1d2e7656"
+                        target="b24f0024-a2b4-4f9f-8910-a073f570bc48"
+                        relationship="2595f277-d809-4d3f-a10e-7827db4644af"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="b24f0024-a2b4-4f9f-8910-a073f570bc48"
+          targetConnections="41b9ed7d-ab82-4ef1-b547-72c280d0a995"
+          zentaElement="e9e727a4-a121-4c8e-8c5f-bf48d5688035">
+      <bounds x="410" y="204" width="-1" height="-1"/>
+   </child>
+</element>

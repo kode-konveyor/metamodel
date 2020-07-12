@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Process Step to Business Object Connections"
+         id="90dc2514-fbd3-464e-a959-cbc305756493"
+         ancestor="35ade6d3-e52e-449c-bfc5-3a5a6f4e4f58">
+   <documentation>A process step can read or modify business objects.
+Those connections can have modifiers in their name after ';', separated using ','
+must have one of 'Interface' or 'Repo'
+if not Repo:
+	must have one of 'Reference', 'Entity' or 'DTO'
+	must have one of 'One', 'Ordered' or 'Unordered'
+
+</documentation>
+</element>

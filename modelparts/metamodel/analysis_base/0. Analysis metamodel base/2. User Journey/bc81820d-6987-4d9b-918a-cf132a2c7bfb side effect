@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="side effect"
+         id="bc81820d-6987-4d9b-918a-cf132a2c7bfb"
+         ancestor="thing">
+   <property key="fillColor" value="#729fcf"/>
+   <property key="elementShape" value="deliverableShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor" value="#000000"/>
+   <property key="font"/>
+</element>

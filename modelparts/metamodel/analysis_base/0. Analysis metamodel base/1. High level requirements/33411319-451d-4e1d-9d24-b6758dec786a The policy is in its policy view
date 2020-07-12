@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="The policy is in its policy view"
+         id="33411319-451d-4e1d-9d24-b6758dec786a"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>hugh_level_requirements|
+if($doc//element[@name=$element/@name and @xsi:type='zenta:ZentaDiagramModel']//@zentaElement=$element/@id)
+	then ()
+	else concat($element/@name, ' is not in its policy view')</documentation>
+</element>

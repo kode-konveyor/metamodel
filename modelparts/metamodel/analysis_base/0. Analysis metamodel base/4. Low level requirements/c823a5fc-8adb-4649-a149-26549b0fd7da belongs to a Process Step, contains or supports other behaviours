@@ -1,0 +1,23 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="belongs to a Process Step, contains or supports other behaviours"
+         id="c823a5fc-8adb-4649-a149-26549b0fd7da"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>analysis|
+if (
+	$element/@xsi:type = 'Behaviour' and 
+	not(count((
+		zenta:neighbours($doc,$element,'contains,1'),
+		zenta:neighbours($doc,$element,'depends on,2')
+	))&gt;0)
+)
+then
+	if(count(
+		zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Process Step'] 
+	)=0)
+	then 'no process step or sub-behaviour found'
+	else ()
+else
+   ()</documentation>
+</element>

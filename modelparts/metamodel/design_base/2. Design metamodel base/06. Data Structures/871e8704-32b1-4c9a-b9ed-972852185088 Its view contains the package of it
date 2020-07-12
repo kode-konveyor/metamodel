@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Its view contains the package of it"
+         id="871e8704-32b1-4c9a-b9ed-972852185088"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>data_structures|
+if ($element/..//@zentaElement = zenta:neighbours($doc,$element,'contains,2')/@id)
+then ()
+else concat('not in view ', $element/@name,': ', string-join(zenta:neighbours($doc,$element,'contains,2')/@name,', '))</documentation>
+</element>
