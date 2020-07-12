@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="selectionMap"
+         id="996b8887-8ede-4b29-b3d9-55c9780df7cf">
+   <child xsi:type="zenta:DiagramObject"
+          id="94618bb8-e5ff-41c7-a102-c8d76943db01"
+          zentaElement="562ebf73-dc6d-4cb0-a4bf-d43c5eb4490d">
+      <bounds x="258" y="156" width="187"/>
+   </child>
+</element>

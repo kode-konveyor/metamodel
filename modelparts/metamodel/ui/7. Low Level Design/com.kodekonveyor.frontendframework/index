@@ -1,0 +1,10 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="SelectionMapService" id="e51dbccb-b973-4a78-887b-f6cab7b018a4"/>
+   <folder name="Object (design)" id="0724c57a-11b2-40ad-8f88-0d04f5dd77c0"/>
+   <folder name="Selection (design)" id="073dff7d-0a94-4aed-9ca1-9d3259ae8816"/>
+   <entry name="com.kodekonveyor.frontendframework"
+          id="52ebc7e1-96c3-48f5-a167-449abfa2690e"/>
+   <entry name="com.kodekonveyor.frontendframework"
+          id="c20200ab-9d77-44d4-a373-bb8d07dbe14e"/>
+</index>

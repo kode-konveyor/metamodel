@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Reducer"
+         id="2ec274bd-a0ee-403e-8154-9e19ea0fa378"
+         ancestor="service">
+   <property key="fillColor" value="#e9b96e"/>
+   <property key="elementShape" value="roundedRectangleShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>
