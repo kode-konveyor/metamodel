@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="others"
+         id="5b95d571-d4db-4538-ab21-e410a239ec8f">
+   <child xsi:type="zenta:DiagramObject"
+          id="dfed4241-559d-403c-88d8-b8f83e9b5f5d"
+          zentaElement="0ff97b63-4d45-4d50-8b3c-cf0e55a3bbf3">
+      <bounds x="312" y="140" width="-1" height="-1"/>
+   </child>
+</element>

@@ -1,0 +1,9 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="button" id="819d4507-fbf5-41b9-a687-9ca0a33bf724"/>
+   <entry name="button" id="94d6f057-5da5-461d-af0f-1571494c090e"/>
+   <entry name="onClick" id="12868e25-44bd-40b4-90cd-b80b00352802"/>
+   <entry id="22c0d603-4a40-403c-83bd-9a3b4ca9dd9f"/>
+   <entry name="value" id="0812ee56-af88-4c97-9940-c309cc0fc1a3"/>
+   <entry name="value" id="acd4b671-1abf-4698-b65b-8c9b3fc7550e"/>
+</index>

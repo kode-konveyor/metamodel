@@ -1,0 +1,133 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="frontend meta"
+         id="5b79cc2d-260f-42b3-8e7d-63272b432135">
+   <child xsi:type="zenta:DiagramObject"
+          id="f3ca1e82-023d-4613-b294-65339c002211"
+          targetConnections="50c77a00-987e-48d4-bf08-93840a64a2a6"
+          fillColor="#ffffff"
+          elementShape="emptyShape"
+          zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+      <bounds x="132" y="168" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="f3b55ab1-271e-41fe-a4b3-079cc166fb31"
+                        source="f3ca1e82-023d-4613-b294-65339c002211"
+                        target="9eeab5aa-a556-4add-b5cf-e63cbd45f76d"
+                        relationship="a0371f87-301a-4ba0-a9a8-716bd16c6762"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="0fb5b416-7807-45b4-8132-7f6419a25782"
+                        source="f3ca1e82-023d-4613-b294-65339c002211"
+                        target="9eeab5aa-a556-4add-b5cf-e63cbd45f76d"
+                        relationship="e8aaca73-c4e6-4698-a16d-7df79fbe62ab">
+         <bendpoint startX="-98" startY="292" endX="-98" endY="-248"/>
+      </sourceConnection>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="c9381b3b-0cf5-4b3b-b91a-7e38be10932b"
+                        source="f3ca1e82-023d-4613-b294-65339c002211"
+                        target="9eeab5aa-a556-4add-b5cf-e63cbd45f76d"
+                        relationship="299a71b1-61d7-4be0-aa8d-f5994a6c9e5e">
+         <bendpoint startX="83" startY="135" endX="83" endY="-405"/>
+      </sourceConnection>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="ca16dbea-31ef-41ed-a773-b24b005afa05"
+                        source="f3ca1e82-023d-4613-b294-65339c002211"
+                        target="78772f55-3fac-4ace-aa64-356a05d2236d"
+                        relationship="6978cd3c-ed21-492c-9428-d13ef0d8a1a9"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="6223d6d9-cfc2-4b59-b775-c1e54e70a464"
+                        source="f3ca1e82-023d-4613-b294-65339c002211"
+                        target="cca5f40f-1d29-4b7e-bc7d-d9c23c9bcff9"
+                        lineDecoration="SmallEndArrowDecoration"
+                        relationship="90ea88fb-2beb-4e11-a541-a6209ea03510"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="6e103d60-f7d8-4d5c-ac86-e3649d000343"
+                        source="f3ca1e82-023d-4613-b294-65339c002211"
+                        target="af70d275-939c-4922-aded-8b18bd08ed66"
+                        lineDecoration="SmallEndArrowDecoration"
+                        relationship="7a4c6e7c-6069-4cd0-ae97-04418c0c5d82">
+         <bendpoint startX="298" startY="273" endX="-332" endY="18"/>
+      </sourceConnection>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="74408189-e284-4a49-828a-d1b49a6b78a4"
+          fontColor="#ffffff"
+          targetConnections="7b89f995-e5af-4b82-a324-b501dbae1a94"
+          fillColor="#8f5902"
+          elementShape="ellipseShape"
+          zentaElement="ce463be5-f361-41a2-8316-23093e59bfe6">
+      <bounds x="460" y="276" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="f4ab5f45-5be0-4b52-bab1-d4b1ace10e28"
+                        source="74408189-e284-4a49-828a-d1b49a6b78a4"
+                        target="af70d275-939c-4922-aded-8b18bd08ed66"
+                        lineDecoration="DiamondSourceDecoration"
+                        relationship="9d4f4a38-99f5-4beb-9354-32f56b22b6f4"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="cca5f40f-1d29-4b7e-bc7d-d9c23c9bcff9"
+          targetConnections="6223d6d9-cfc2-4b59-b775-c1e54e70a464"
+          fillColor="#729fcf"
+          elementShape="roundedRectangleShape"
+          zentaElement="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+      <bounds x="341" y="57" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="50c77a00-987e-48d4-bf08-93840a64a2a6"
+                        source="cca5f40f-1d29-4b7e-bc7d-d9c23c9bcff9"
+                        target="f3ca1e82-023d-4613-b294-65339c002211"
+                        lineDecoration="DashedLineDecoration SmallEndArrowDecoration"
+                        relationship="aaea75b0-b480-4f6c-a884-1cb5547d2514">
+         <bendpoint startX="-260" startY="-16" endX="-51" endY="-127"/>
+      </sourceConnection>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="af70d275-939c-4922-aded-8b18bd08ed66"
+          targetConnections="4cd58ddb-1144-48eb-9609-eae3697cd856 f4ab5f45-5be0-4b52-bab1-d4b1ace10e28 d2a5c114-cc3a-429e-9116-5fca2ef0fc4c 6e103d60-f7d8-4d5c-ac86-e3649d000343"
+          fillColor="#729fcf"
+          zentaElement="267f4d47-e1e6-4af4-8677-3cf65fc8db86">
+      <bounds x="756" y="420" width="133" height="61"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="e0f4f957-17c8-42a7-9193-4c993bec929d"
+          zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
+      <bounds x="713" y="46" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="d2a5c114-cc3a-429e-9116-5fca2ef0fc4c"
+                        source="e0f4f957-17c8-42a7-9193-4c993bec929d"
+                        target="af70d275-939c-4922-aded-8b18bd08ed66"
+                        lineDecoration="DiamondSourceDecoration"
+                        relationship="6e918170-c642-4024-8d2c-60325fa3f8a1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="9eeab5aa-a556-4add-b5cf-e63cbd45f76d"
+          targetConnections="f3b55ab1-271e-41fe-a4b3-079cc166fb31 0fb5b416-7807-45b4-8132-7f6419a25782 c9381b3b-0cf5-4b3b-b91a-7e38be10932b"
+          zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+      <bounds x="132" y="708" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="7b89f995-e5af-4b82-a324-b501dbae1a94"
+                        source="9eeab5aa-a556-4add-b5cf-e63cbd45f76d"
+                        target="74408189-e284-4a49-828a-d1b49a6b78a4"
+                        lineDecoration="SmallEndArrowDecoration"
+                        relationship="7d169f7b-5f22-457f-b063-622f0617b771"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="4cd58ddb-1144-48eb-9609-eae3697cd856"
+                        source="9eeab5aa-a556-4add-b5cf-e63cbd45f76d"
+                        target="af70d275-939c-4922-aded-8b18bd08ed66"
+                        lineDecoration="SmallStartArrowDecoration"
+                        relationship="e4834eed-4c4a-4791-89b7-db9b4de87daf"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="78772f55-3fac-4ace-aa64-356a05d2236d"
+          targetConnections="ca16dbea-31ef-41ed-a773-b24b005afa05"
+          zentaElement="2cb904ef-0cda-422b-82f6-0509c595b8fd">
+      <bounds x="303" y="228" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="36f92e29-f594-4ae0-8268-189f2b5646ac"
+          fillColor="#e9b96e"
+          elementShape="roundedRectangleShape"
+          zentaElement="2ec274bd-a0ee-403e-8154-9e19ea0fa378">
+      <bounds x="974" y="202" width="-1" height="-1"/>
+   </child>
+   <property key="Template" value="true"/>
+</element>

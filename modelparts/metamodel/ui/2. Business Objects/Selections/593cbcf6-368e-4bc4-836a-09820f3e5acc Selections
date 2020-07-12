@@ -1,0 +1,22 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="Selections"
+         id="593cbcf6-368e-4bc4-836a-09820f3e5acc">
+   <child xsi:type="zenta:DiagramObject"
+          id="c6307835-414d-4354-a1b8-9e2f4e60d22c"
+          zentaElement="71ff3b18-7962-4178-b299-06bbc3ea1499">
+      <bounds x="195" y="102" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="0b10d327-f665-43bd-a8cb-73f01f0aa54e"
+                        source="c6307835-414d-4354-a1b8-9e2f4e60d22c"
+                        target="1105a70b-8a3b-4ce4-bbac-a68d15344afa"
+                        relationship="42c46105-dbb5-4a33-9067-49803de11dce"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="1105a70b-8a3b-4ce4-bbac-a68d15344afa"
+          targetConnections="0b10d327-f665-43bd-a8cb-73f01f0aa54e"
+          zentaElement="22f70400-4ce8-4b5f-8c97-abb580f897ba">
+      <bounds x="195" y="252" width="-1" height="-1"/>
+   </child>
+</element>

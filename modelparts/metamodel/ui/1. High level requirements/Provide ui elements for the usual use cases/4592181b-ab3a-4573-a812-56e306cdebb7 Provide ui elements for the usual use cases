@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Provide ui elements for the usual use cases"
+         id="4592181b-ab3a-4573-a812-56e306cdebb7"
+         ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>

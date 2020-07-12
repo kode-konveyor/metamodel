@@ -1,0 +1,12 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="Provide ui elements for the usual use cases"
+           id="c9455031-df20-48e3-bddd-5e0364d2c15a"/>
+   <entry name="High level requirements"
+          id="239cfa60-7cfa-46a4-83e1-12b171648d1b"/>
+   <entry name="Provide ui elements for the usual use cases"
+          id="68dc449b-5dfc-48fd-8a95-bdf6acb30c36"/>
+   <entry id="923eb381-59ee-4666-8847-efcd77d1c64f"/>
+   <entry id="ef0bf7d0-5548-46d4-8aa6-a60742045e5b"/>
+   <entry name="frontend framework" id="56fafdc9-0ab9-4772-87c6-2d017694b872"/>
+</index>

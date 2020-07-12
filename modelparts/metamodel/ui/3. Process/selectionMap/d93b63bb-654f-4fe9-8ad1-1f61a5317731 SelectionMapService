@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="SelectionMapService"
+         id="d93b63bb-654f-4fe9-8ad1-1f61a5317731"
+         ancestor="service"/>

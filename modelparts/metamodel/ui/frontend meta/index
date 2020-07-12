@@ -1,0 +1,13 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="frontend meta" id="5b79cc2d-260f-42b3-8e7d-63272b432135"/>
+   <entry name="Event" id="ce463be5-f361-41a2-8316-23093e59bfe6"/>
+   <entry name="fires" id="7d169f7b-5f22-457f-b063-622f0617b771"/>
+   <entry name="uses" id="e4834eed-4c4a-4791-89b7-db9b4de87daf"/>
+   <entry name="has" id="9d4f4a38-99f5-4beb-9354-32f56b22b6f4"/>
+   <entry name="contains" id="6e918170-c642-4024-8d2c-60325fa3f8a1"/>
+   <entry name="is at" id="6978cd3c-ed21-492c-9428-d13ef0d8a1a9"/>
+   <entry name="employs" id="90ea88fb-2beb-4e11-a541-a6209ea03510"/>
+   <entry name="Reducer" id="2ec274bd-a0ee-403e-8154-9e19ea0fa378"/>
+   <entry name="writes" id="7a4c6e7c-6069-4cd0-ae97-04418c0c5d82"/>
+</index>
