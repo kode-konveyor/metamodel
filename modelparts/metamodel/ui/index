@@ -1,0 +1,13 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="frontend meta" id="bff38f45-22e8-403b-97e3-041174c5bbb3"/>
+   <folder name="4. User Interface" id="538a2878-0fdc-4b17-b6ab-d48b4190b6da"/>
+   <folder name="1. High level requirements"
+           id="9cf57eda-448b-4ed2-8f70-6f2b7e39be5c"/>
+   <folder name="5. Low level requirements"
+           id="8a0a97c9-30ce-4735-b16a-047f30b619f2"/>
+   <folder name="3. Process" id="2e77036d-4b92-4d98-857b-c978d732ffa2"/>
+   <folder name="6. Milestones" id="7da83117-e2fb-43a1-b543-b6015a5e3b4b"/>
+   <folder name="7. Low Level Design" id="d4eb96e3-9af5-49d3-8d9b-9fd8e3bb8cb3"/>
+   <folder name="2. Business Objects" id="98f9f950-a037-4ff2-92c0-62e44b8cd091"/>
+</index>

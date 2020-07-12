@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="onSelect"
+         id="f44285e4-2324-4887-9d2b-9934832a5361"
+         ancestor="ce463be5-f361-41a2-8316-23093e59bfe6"/>

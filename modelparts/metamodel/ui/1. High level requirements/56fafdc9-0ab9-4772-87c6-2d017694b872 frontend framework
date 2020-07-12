@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="frontend framework"
+         id="56fafdc9-0ab9-4772-87c6-2d017694b872"
+         ancestor="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
