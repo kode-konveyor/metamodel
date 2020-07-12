@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="test case design (moved)"
+         id="1d51bc6e-3f06-4c12-87be-107e98f69265"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+   <documentation>identify test cases for each tasks
+</documentation>
+</element>

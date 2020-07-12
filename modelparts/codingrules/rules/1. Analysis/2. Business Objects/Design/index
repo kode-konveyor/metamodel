@@ -1,0 +1,8 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Design" id="ad8147b2-8613-4904-806e-e8b503114686"/>
+   <entry name="Design" id="510b9de7-6f22-40c6-b44b-07d3b6817794"/>
+   <entry name="behaviours" id="23f4aaef-ec98-4bad-8998-7ff52e1efd9c"/>
+   <entry name="service" id="17e5a4c7-5311-4b57-831a-54d871e9eb00"/>
+   <entry name="test case" id="1e1db211-8bd0-49e1-a05c-3e5fc73fff20"/>
+</index>

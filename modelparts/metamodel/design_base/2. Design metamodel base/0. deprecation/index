@@ -1,0 +1,14 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="Deprecated objects" id="94b88447-b75b-4f3b-97ec-a957028960be"/>
+   <entry name="deprecation" id="af42470b-0e22-47a2-89ba-1d6df8daa398"/>
+   <entry name="Deprecated metamodel objects are in their folder"
+          id="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d"/>
+   <entry id="e1e7b150-a8e3-40a2-96d4-b3ceb451ee1b"/>
+   <entry name="no elements should be inherited from Deprecated ones"
+          id="58c88955-d879-44ec-aa28-f1c2698a37ea"/>
+   <entry name="Deprecated objects should not be in any view"
+          id="952a7b72-30f1-484d-84dc-fb246309d058"/>
+   <entry id="4dfbd43b-5aa0-4e4a-85a0-9217a7821eb1"/>
+   <entry id="0a3fc59b-e39c-4229-ba22-e6a1e35734ea"/>
+</index>

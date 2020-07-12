@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Xslt script"
+         id="41d8aa5d-1afd-40f4-ac6d-2ef378bb08f6"
+         ancestor="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>

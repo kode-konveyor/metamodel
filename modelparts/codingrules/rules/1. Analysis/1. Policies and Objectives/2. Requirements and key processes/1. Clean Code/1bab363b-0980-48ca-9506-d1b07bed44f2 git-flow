@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="git-flow"
+         id="1bab363b-0980-48ca-9506-d1b07bed44f2"
+         ancestor="behaviour">
+   <documentation>Use git-flow. See https://nvie.com/posts/a-successful-git-branching-model/
+                                     
+* The code should be based in latest development branch, and the pull request should go into the same. Create feature branches for all your tasks.
+</documentation>
+</element>

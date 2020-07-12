@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Delegate rules"
+         id="fe319972-e893-4bad-bc83-71532ff015ac"
+         ancestor="behaviour">
+   <documentation>In Java:
+
+* The DI bootstrapping is delegated to a static void method with sole parameter of this in an interface of the underlying service.
+* The state of a delegate is stored in a DTO, referenced in a field annotated with @Delegate and if the integration tests need it, @Getter annotation.
+* The underlying services are referenced using @Autowire -d fields using the interface
+* The methods use the delegate pattern, with this as an extra parameter in the delegated call.
+
+</documentation>
+</element>

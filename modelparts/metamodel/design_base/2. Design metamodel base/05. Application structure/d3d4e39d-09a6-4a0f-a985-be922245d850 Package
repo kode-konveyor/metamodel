@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Package"
+         id="d3d4e39d-09a6-4a0f-a985-be922245d850"
+         ancestor="thing">
+   <documentation>A set of code contributing to a functionality of a product.
+Packages contain process steps, and the code units (Services, Controllers, and other packages) implementing those process steps.
+</documentation>
+   <property key="fillColor" value="#fcaf3e"/>
+   <property key="elementShape" value="applicationShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

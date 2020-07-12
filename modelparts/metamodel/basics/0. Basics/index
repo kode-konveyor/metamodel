@@ -1,0 +1,6 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="0. Basics" id="fd8eac3c-3983-4fae-b86f-7ce35213bc23"/>
+   <folder name="1. Thing, Constraint and Derived Relation"
+           id="946a1207-2823-4f26-99be-885337df20bc"/>
+</index>

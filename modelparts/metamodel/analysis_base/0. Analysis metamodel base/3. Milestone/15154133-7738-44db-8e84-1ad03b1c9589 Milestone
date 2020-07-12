@@ -1,0 +1,52 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="Milestone"
+         id="15154133-7738-44db-8e84-1ad03b1c9589">
+   <child xsi:type="zenta:DiagramObject"
+          id="f77767ac-7418-4c6e-ade3-e312452f5200"
+          targetConnections="2f5eef10-1f0c-4c33-819c-cb84842c1221"
+          fillColor="#e9b96e"
+          elementShape="nodeShape"
+          zentaElement="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
+      <bounds x="209" y="171" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="cc12d7eb-fdb0-40e1-8383-734956f3d48c"
+                        source="f77767ac-7418-4c6e-ade3-e312452f5200"
+                        target="1d07476a-4297-4041-bb85-b0ebcce77fc6"
+                        relationship="f0d0d4a5-201b-41b4-a047-70308c99bdb7"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="5abd0f66-a657-4b23-b2f7-77894b385335"
+                        source="f77767ac-7418-4c6e-ade3-e312452f5200"
+                        target="4b6ef5d4-ff17-43ee-9fe5-91bf42abd662"
+                        relationship="f9bf6994-4d9c-4c50-b9ad-e2e11b94ff2e"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="1d07476a-4297-4041-bb85-b0ebcce77fc6"
+          targetConnections="cc12d7eb-fdb0-40e1-8383-734956f3d48c"
+          zentaElement="thing">
+      <bounds x="516" y="171" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="4b6ef5d4-ff17-43ee-9fe5-91bf42abd662"
+          targetConnections="5abd0f66-a657-4b23-b2f7-77894b385335"
+          fillColor="#e9b96e"
+          elementShape="nodeShape"
+          zentaElement="36a15a23-a4a0-40b5-901b-310f3a1df0c7">
+      <bounds x="209" y="324" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="a9f209b6-777e-4ce5-8fdf-cca63a8ceebf"
+          fillColor="#fcaf3e"
+          elementShape="deliverableShape"
+          zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
+      <bounds x="209" y="72" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="2f5eef10-1f0c-4c33-819c-cb84842c1221"
+                        source="a9f209b6-777e-4ce5-8fdf-cca63a8ceebf"
+                        target="f77767ac-7418-4c6e-ade3-e312452f5200"
+                        lineDecoration="DiamondSourceDecoration"
+                        relationship="f062189d-e43e-4f83-98a8-9f013b94756c"/>
+   </child>
+   <property key="Template"/>
+</element>

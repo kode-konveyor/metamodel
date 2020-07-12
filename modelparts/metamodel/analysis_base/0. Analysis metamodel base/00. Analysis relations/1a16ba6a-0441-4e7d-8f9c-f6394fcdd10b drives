@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicRelationship"
+         name="drives"
+         id="1a16ba6a-0441-4e7d-8f9c-f6394fcdd10b"
+         ancestor="basicrelation"
+         source="107b9a83-1292-49ee-bf2f-542de02b2654"
+         target="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c">
+   <property key="textPosition" value="1"/>
+   <property key="lineDecoration" value="SmallEndArrowDecoration"/>
+   <property key="lineColor"/>
+   <property key="fontColor"/>
+   <property key="lineWidth" value="1"/>
+   <property key="font"/>
+</element>

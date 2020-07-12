@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="helper"
+         id="a83b3a77-8854-44b0-977e-037c7864d052"
+         ancestor="behaviour">
+   <documentation>* Helpers are put to the same package as the code they support.
+* If the supported units are in different packages, then the helper is put to the lowest common superpackage.
+* A helper unit is created by the coder if code complexity constraints or duplicate avoidance makes it necessary.
+
+</documentation>
+</element>

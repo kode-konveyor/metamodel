@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="design services"
+         id="917f5c35-060e-4318-a1a9-f94741e00dfe"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+   <documentation>services include controllers and other types of services
+identify service attributes
+identify behaviours in the description level
+break down complex technical tasks to technical process steps and the corresponding services
+add objectives and policies coming out of this
+
+</documentation>
+</element>

@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="inside the folder for business objects"
+         id="8019b11c-e5fc-47df-b103-82a913cf409a"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if($element/ancestor::folder[@name='2. Business Objects'] )
+	then ()
+	else string-join($element/ancestor::folder/concat(@name,':',@id),'/')
+</documentation>
+</element>

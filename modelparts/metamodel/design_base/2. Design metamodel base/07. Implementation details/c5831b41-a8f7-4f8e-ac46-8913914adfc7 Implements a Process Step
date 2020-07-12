@@ -1,0 +1,18 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Implements a Process Step"
+         id="c5831b41-a8f7-4f8e-ac46-8913914adfc7"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>services|
+zenta:exactlyOne(
+    zenta:neighbours($doc,$element,'is implemented by/implements,2')[@xsi:type='Process Step'],
+    'no Process Step found')
+</documentation>
+   <property key="fillColor"/>
+   <property key="elementShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+   <property key="documentationMarkup" value="verbatim"/>
+</element>

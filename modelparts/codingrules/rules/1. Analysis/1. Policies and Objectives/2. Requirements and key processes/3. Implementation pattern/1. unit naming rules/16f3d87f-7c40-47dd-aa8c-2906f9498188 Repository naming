@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Repository naming"
+         id="16f3d87f-7c40-47dd-aa8c-2906f9498188"
+         ancestor="behaviour">
+   <documentation>* Repository names are the name of the Entity without the postfix + 'Repository'. E.g. WorkItemRepository
+</documentation>
+</element>

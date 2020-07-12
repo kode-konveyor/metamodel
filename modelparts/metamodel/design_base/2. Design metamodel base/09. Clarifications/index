@@ -1,0 +1,24 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Clarifications" id="b64d15b6-4f9c-404d-93f2-ac9609782a6b"/>
+   <entry name="have description, behaviour or substep"
+          id="24c89149-0040-426d-9104-ffcf2cd3aedf"/>
+   <entry name="uses the Business Objects from preceeding steps"
+          id="0c6daa63-b33e-482c-8610-d9c56a516cdb"/>
+   <entry id="dcd3590e-06b4-42b5-9864-37de50d422ce"/>
+   <entry id="9e77deec-88d0-4544-85d7-c142594dbcb4"/>
+   <entry name="Clarification constraints"
+          id="41280d46-b2d3-435a-8d55-2cd78e913eb0"/>
+   <entry id="97d1bbc1-5ec0-4ee6-ad61-e5170956e20f"/>
+   <entry name="Process Step to Business Object Connections"
+          id="90dc2514-fbd3-464e-a959-cbc305756493"/>
+   <entry id="6f36f539-5cd7-44f5-82aa-314419636818"/>
+   <entry name="Business object to business object connections"
+          id="d6dbc559-2d93-4f37-bf3c-e6474c7919cc"/>
+   <entry name="Process step to business object connections should specify whether interface or repo, cardinality, and representation"
+          id="2a22742e-fba4-4c39-abff-73c2debab480"/>
+   <entry id="c37f84d8-d6a4-4632-b966-6cdf7f597b99"/>
+   <entry name="Business object to business object connections should specify representation, and for aggregates orderedness"
+          id="865a75be-ee52-4d44-98a3-6f413c70f1fb"/>
+   <entry id="8572b538-c7ec-45e4-83c8-1dd645d4c2ee"/>
+</index>

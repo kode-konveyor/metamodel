@@ -1,0 +1,16 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="python implementation rules"
+         id="1dcaa852-2cda-49c0-a126-3849e1cfbe3e">
+   <child xsi:type="zenta:DiagramObject"
+          id="c5dbedc7-d618-4d27-8b4c-7c1203e71c45"
+          zentaElement="a075cf36-a702-4ec4-9921-7df4e66b12df">
+      <bounds x="126" y="133" width="211" height="60"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="7de8b923-a406-4c1c-a44f-3f926df46572"
+          zentaElement="1b11b59b-e6eb-4b64-a208-b3a5db8d7c12">
+      <bounds x="228" y="326" width="-1" height="-1"/>
+   </child>
+</element>

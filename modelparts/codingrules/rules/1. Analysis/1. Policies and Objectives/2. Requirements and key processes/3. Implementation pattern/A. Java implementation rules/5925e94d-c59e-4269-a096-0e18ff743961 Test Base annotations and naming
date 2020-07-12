@@ -1,0 +1,19 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test Base annotations and naming"
+         id="5925e94d-c59e-4269-a096-0e18ff743961"
+         ancestor="behaviour">
+   <documentation>The test Base have fields for the code unit under test and its dependencies, and a setUp method.
+
+All the fields and methods are package protected.
+
+The field for the code unit under test is annotated with @InjectMocks
+
+The fields for dependencies are annotated with @Mock
+
+The setUp method is annotated with @BeforeEach
+
+There are no other fields or methods.
+</documentation>
+</element>

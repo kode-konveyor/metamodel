@@ -1,0 +1,51 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="High level requirements"
+          id="407a7560-eef3-4434-8a0e-b793d3f857a6"/>
+   <entry name="High level requirements constraints"
+          id="d627d60f-a3e8-4969-a4e4-bb2783d2101e"/>
+   <entry id="7c804bbd-91b4-407e-bde5-561996077352"/>
+   <entry id="c2cf3741-d3cf-4bc3-98c3-11d8586660b3"/>
+   <entry id="890846a5-c07d-4597-90bb-60b836a76f21"/>
+   <entry id="73148c03-258c-462f-bc26-01aec5ce238f"/>
+   <entry id="a97df245-a76e-4ace-8de8-c7fa73f22d3a"/>
+   <entry id="e85d39b6-ec65-43bd-a7bf-e313f9306259"/>
+   <entry id="08aa645d-aa93-47a7-9976-d2589c6b813c"/>
+   <entry id="a1de0cf3-262b-4108-a0de-3511200c9d60"/>
+   <entry name="Policies are inside the high level requirement folder"
+          id="2bd3b516-7b67-46c2-95f7-6a6d3a8e0c90"/>
+   <entry name="Policies are in the High level requirements view"
+          id="cd2a10f5-5a5b-4e45-b427-d9c97180423d"/>
+   <entry name="Policy" id="107b9a83-1292-49ee-bf2f-542de02b2654"/>
+   <entry name="Project" id="1fd2be20-d3ab-4f28-9171-73ef55961bd5"/>
+   <entry name="Supports a project" id="dac92ee6-2f6d-4e4c-977d-118f2d83d9b3"/>
+   <entry name="The analysis contains High level requirements folder"
+          id="5863abc4-16f0-4980-a6c2-1fcb47ddc4c6"/>
+   <entry name="The high level requirements folder contains a 'High level requirements' view"
+          id="a9e4282e-ea93-44fd-a5bd-12c17fd6f9c1"/>
+   <entry name="The project is in the High level requirements folder"
+          id="b91e12e3-10bd-4e4f-b826-1645a8a4f6e5"/>
+   <entry name="The project is in the high level requirements view"
+          id="276f83f9-d734-42db-926e-9670d4773509"/>
+   <entry name="There is business analysis in the model"
+          id="d827c3f9-b093-4ea3-bc9d-fc4a0d18d5ee"/>
+   <entry name="Policies have a folder in the high level requirements folder, which contains a view with the name of the policy"
+          id="c93f82ab-f93f-4141-a50a-745da78f0fa7"/>
+   <entry id="5e745094-0092-4ee6-a097-f3593dfd0ed2"/>
+   <entry name="The policy is in its policy view"
+          id="33411319-451d-4e1d-9d24-b6758dec786a"/>
+   <entry id="64b1a781-6cdb-4c1e-a2e4-70a890063458"/>
+   <entry name="Objectives are in the view of their policies"
+          id="c7c58f8d-58d5-49eb-8435-81dffd1c6c21"/>
+   <entry id="2a863e0f-e0bb-4f8e-97a0-7e40201b1780"/>
+   <entry name="elements in views have enough area to show text"
+          id="39c0eefe-c1e8-41b8-b30f-d8d3bbcf3e71"/>
+   <entry id="106c56be-ed2e-472d-9b60-9568ba061a4b"/>
+   <entry name="driven by at least one Policy"
+          id="7599475e-f3aa-4309-b118-48b7f2dfc92d"/>
+   <entry name="drives Objectives" id="6fc0b9df-cfd4-4c18-b3c2-4f5ae70da11f"/>
+   <entry name="Objectives are inside the folder for their most important policy"
+          id="d5b2fb34-85b5-4ffa-8ecf-44e278d5d279"/>
+   <entry name="Objective" id="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>
+   <entry name="is supported by" id="22eea5e8-d46b-4ac4-9621-7bbf22994de4"/>
+</index>

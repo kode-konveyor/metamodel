@@ -1,0 +1,10 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test unit naming"
+         id="85a08f7e-f553-4286-902c-568356cf9bed"
+         ancestor="behaviour">
+   <documentation>* Unit Test names are the combination of the name of the unit they test, the tested behaviour and 'Test'. E.g. RegistrationServiceValidationTest
+* Integration test names are the combination of the controller they test, the tested behaviour and 'IT". E.g. RegistratorControllerValidationIT
+* End-to-end test names are the name of the process and the circumstances they test, and 'E2E'. E.g. RegistrationThroughGitHubE2E</documentation>
+</element>

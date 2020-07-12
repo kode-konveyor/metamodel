@@ -1,0 +1,42 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="deprecation"
+         id="af42470b-0e22-47a2-89ba-1d6df8daa398">
+   <child xsi:type="zenta:DiagramObject"
+          id="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+          targetConnections="1488eb7a-deee-4232-ab5f-f7a13d62bfae 02ea5ac8-aa1e-40a9-8bcc-057790088e5d 498ee8de-68f1-4250-8694-779ffddf7dc5"
+          zentaElement="1fd2be20-d3ab-4f28-9171-73ef55961bd5">
+      <bounds x="240" y="48" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="033b866a-8c31-407a-a6f7-cc4dee1b01fa"
+          zentaElement="c7fc36b3-298f-4338-b9a5-0ec5dd0c692d">
+      <bounds x="301" y="188" width="241" height="84"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="1488eb7a-deee-4232-ab5f-f7a13d62bfae"
+                        source="033b866a-8c31-407a-a6f7-cc4dee1b01fa"
+                        target="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                        relationship="e1e7b150-a8e3-40a2-96d4-b3ceb451ee1b"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="ac4de418-1cde-4f85-a311-ddbf09216cde"
+          zentaElement="58c88955-d879-44ec-aa28-f1c2698a37ea">
+      <bounds x="614" y="151" width="192" height="121"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="498ee8de-68f1-4250-8694-779ffddf7dc5"
+                        source="ac4de418-1cde-4f85-a311-ddbf09216cde"
+                        target="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                        relationship="0a3fc59b-e39c-4229-ba22-e6a1e35734ea"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="8a5389b6-61a1-40ed-b72d-2d4bf8e71fb5"
+          zentaElement="952a7b72-30f1-484d-84dc-fb246309d058">
+      <bounds x="106" y="188" width="160" height="96"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="02ea5ac8-aa1e-40a9-8bcc-057790088e5d"
+                        source="8a5389b6-61a1-40ed-b72d-2d4bf8e71fb5"
+                        target="21139821-ee50-4eaf-b2dc-1c6b843e5838"
+                        relationship="4dfbd43b-5aa0-4e4a-85a0-9217a7821eb1"/>
+   </child>
+</element>

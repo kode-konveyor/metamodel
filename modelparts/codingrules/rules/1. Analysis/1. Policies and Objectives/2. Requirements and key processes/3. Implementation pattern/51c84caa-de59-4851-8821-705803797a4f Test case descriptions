@@ -1,0 +1,13 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test case descriptions"
+         id="51c84caa-de59-4851-8821-705803797a4f"
+         ancestor="behaviour">
+   <documentation>Test cases are methods of the Test unit.
+
+The tests descriptions are used to generate low level documentation of the project. Therefore they should be a full declarative sentence.
+
+Checking that the description is indeed covers the functionality checked by the unit test is a central element of the review process.
+</documentation>
+</element>

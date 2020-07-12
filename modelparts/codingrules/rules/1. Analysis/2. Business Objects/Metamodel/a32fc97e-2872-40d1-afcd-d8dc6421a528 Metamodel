@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Metamodel"
+         id="a32fc97e-2872-40d1-afcd-d8dc6421a528"
+         ancestor="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>

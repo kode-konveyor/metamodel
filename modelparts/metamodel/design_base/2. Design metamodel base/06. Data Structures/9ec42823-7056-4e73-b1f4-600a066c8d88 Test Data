@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test Data"
+         id="9ec42823-7056-4e73-b1f4-600a066c8d88"
+         ancestor="constantProvider">
+   <documentation>Test data contains the test artifacts. This is the set of inputs and corresponding outputs which pins the contract of the services.
+Test artifacts are actual data in case of Business Objects, and actual data or mocks describing the behaviour in case of legacy objects.
+</documentation>
+   <property key="fillColor" value="#8ae234"/>
+   <property key="elementShape" value="meaningShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

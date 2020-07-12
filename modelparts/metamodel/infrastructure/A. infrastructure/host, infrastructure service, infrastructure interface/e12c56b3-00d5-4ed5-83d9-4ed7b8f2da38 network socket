@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="network socket"
+         id="e12c56b3-00d5-4ed5-83d9-4ed7b8f2da38"
+         ancestor="a3e4bccf-f291-4f40-a503-e767191bd51b">
+   <property key="fillColor" value="#19c6f2"/>
+   <property key="elementShape" value="serviceShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

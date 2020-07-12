@@ -1,0 +1,13 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Callable"
+         id="callable"
+         ancestor="thing">
+   <documentation>A Callable is an abstraction for anything which can be called.</documentation>
+   <property key="fillColor"/>
+   <property key="elementShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

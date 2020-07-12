@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="PMD workbench"
+         id="c064d1ab-6536-45ec-a63e-291dbb923dea"
+         ancestor="267f4d47-e1e6-4af4-8677-3cf65fc8db86"/>

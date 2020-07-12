@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Utility Class naming"
+         id="b250f756-e5cc-4a8b-941f-c4da3dfb1b77"
+         ancestor="behaviour">
+   <documentation>* Utility Class names are adjectives + 'Util'. The adjective should reflect the concern the Utility Class implements, e.g. RegistratorValidatorUtil</documentation>
+</element>

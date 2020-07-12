@@ -1,0 +1,7 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="01. Unit test" id="3d00aaaf-948a-4bf0-a7d7-0bacbd7f50f2"/>
+   <folder name="02. Utility class" id="9b75631d-3911-4e18-ac17-c3284d007ca2"/>
+   <folder name="00. Coding relations" id="c2f44023-041d-4237-9709-c875b3a02175"/>
+   <folder name="0. behaviour and code" id="bfea60a7-3460-49c5-b413-193fb2441bcc"/>
+</index>

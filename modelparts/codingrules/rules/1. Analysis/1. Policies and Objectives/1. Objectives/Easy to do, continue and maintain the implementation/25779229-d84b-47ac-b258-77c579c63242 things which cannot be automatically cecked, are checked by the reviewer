@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="things which cannot be automatically cecked, are checked by the reviewer"
+         id="25779229-d84b-47ac-b258-77c579c63242"
+         ancestor="behaviour"/>

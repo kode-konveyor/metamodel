@@ -1,0 +1,19 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="contract" id="6d33cca5-6ee1-4dde-942f-8af1296edff0"/>
+   <entry name="documentation" id="b78bba40-caa8-4e86-9abd-199856cdd6f1"/>
+   <entry name="rule change ticket in the metamodel project"
+          id="dc77ae7d-6c3a-4440-8122-c965619bbcea"/>
+   <entry name="others" id="51c95df7-bf2b-4539-bd32-1d8d3c712bfa"/>
+   <entry name="grabbed task" id="7746fe96-947a-40c3-85c8-b2c5d13d3283"/>
+   <entry name="task" id="0f0a6947-743a-43d4-acce-76befdc85a03"/>
+   <entry name="task waiting for review"
+          id="23900871-d5a6-45b2-aef9-62cbbeb53419"/>
+   <entry id="b81fe369-387d-45cf-a784-48a83437988a"/>
+   <entry id="9878b3e5-ffb2-4ad5-83da-96b4c3cd9e17"/>
+   <entry id="cd4d6043-b6d8-4c00-bc2d-8c3f183f0882"/>
+   <entry id="40863995-3382-4aea-bdb1-9ec0183b34d7"/>
+   <entry id="e1f6e13f-e5d1-40bf-a266-415612ca8ad8"/>
+   <entry name="customer input" id="bbf21084-7efb-40f3-8e84-1855c4371f21"/>
+   <entry name="review comment" id="a89fd928-d8ef-429a-81c4-5b1e57fe3cca"/>
+</index>

@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="DevOps"
+         id="e03727ee-65df-4381-99f4-fc83cf2f9658"
+         ancestor="c2f93d99-8bbd-4742-9f73-15937394173d"/>

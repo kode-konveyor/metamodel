@@ -1,0 +1,9 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="PMD workbench" id="91dfdbb1-6b3d-40a0-966e-942a6397d1f8"/>
+   <folder name="Zenta Tools" id="1c54f295-d9ea-40b0-a797-777ee2ac1deb"/>
+   <folder name="Zenta" id="e1cadc7b-6ec7-4b48-901d-c770496affaa"/>
+   <folder name="CI scripts" id="7da07de3-8a2c-4371-ae2a-cb9d5ea5b41f"/>
+   <entry name="Toolchain" id="0c383726-bc50-4888-a32c-3b642bb5656a"/>
+   <entry name="Toolchain" id="192a4b25-d944-4b10-8825-c8e38e46a28e"/>
+</index>

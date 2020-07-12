@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="In the Roles folder in the process folder"
+         id="b11c8827-dd17-42e7-bc28-02cd1b5bccca"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if(
+	$element/ancestor::folder[@name='3. Process'] and
+	$element/ancestor::folder[@name='0. Roles']
+)
+	then ()
+	else string-join($element/ancestor::folder/concat(@name,':',@id),'/')
+</documentation>
+</element>

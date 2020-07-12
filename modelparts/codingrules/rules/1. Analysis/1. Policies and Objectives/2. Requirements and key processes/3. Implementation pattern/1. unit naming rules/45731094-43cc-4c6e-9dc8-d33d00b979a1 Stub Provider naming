@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Stub Provider naming"
+         id="45731094-43cc-4c6e-9dc8-d33d00b979a1"
+         ancestor="behaviour">
+   <documentation>* Stub Provider names are the name of the Service/Controller they implement without the postfix, and 'Stubs'. E.g. RegistratorStubs</documentation>
+</element>

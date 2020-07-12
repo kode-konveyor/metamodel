@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="The project is in the High level requirements folder"
+         id="b91e12e3-10bd-4e4f-b826-1645a8a4f6e5"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>policies|
+if($element/../@name='1. High level requirements')
+then ()
+else concat($element/@name, ' in ', string-join($element/ancestor::folder/@name, '/'))
+
+
+</documentation>
+</element>

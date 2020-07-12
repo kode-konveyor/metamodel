@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Is inside the Milestones folder"
+         id="547ac126-f0f0-44c3-9bf7-c48fd2a05739"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>milestones|
+if(
+	$element/ancestor::folder[@name='6. Milestones']
+)
+then ()
+else string-join($element/ancestor::folder/@name,'/')
+
+</documentation>
+</element>

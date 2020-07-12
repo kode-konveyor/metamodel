@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="basic naming conventions"
+         id="059291b1-c79f-464a-8433-bb7a83f1fb79"
+         ancestor="behaviour">
+   <documentation>* modules are files named with CamelCase, with the language-specific extension (e.g. RegistrationController.java or RegistrationController.py)
+* non-module units (classes, interfaces and enums) are named with CamelCase. There is only one unit in a module.
+* methods are named with lowerCaseCamelCase
+* parameters, fields and local variables are named with lowerCaseCamelCase
+* constants are named with SNEAK_CASE
+* references to code units must be named after the name of the code unit with the first letter in lowercase, eg registrationController
+</documentation>
+</element>

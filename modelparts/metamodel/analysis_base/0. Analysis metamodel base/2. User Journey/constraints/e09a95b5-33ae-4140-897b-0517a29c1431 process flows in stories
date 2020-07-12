@@ -1,0 +1,16 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="process flows in stories"
+         id="e09a95b5-33ae-4140-897b-0517a29c1431"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if(
+	( zenta:neighbours($doc,$element,'preceeds,1') or
+	  zenta:neighbours($doc,$element,'preceeds,2') ) and
+	not(zenta:neighbours($doc,$element,'contains,2'))
+)
+then 'flow step outside any story'
+else ()
+</documentation>
+</element>

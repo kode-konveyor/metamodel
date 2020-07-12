@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="commit and push"
+         id="d3394153-b2c1-4965-8ea4-2b96d6c23c5a"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+   <documentation>the first commit message is the name of the task with the id of the issue (the same you see in the heading of the issue)
+</documentation>
+</element>

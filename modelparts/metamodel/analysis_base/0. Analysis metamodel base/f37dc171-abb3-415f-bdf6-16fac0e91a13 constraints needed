@@ -1,0 +1,68 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="constraints needed"
+         id="f37dc171-abb3-415f-bdf6-16fac0e91a13"
+         ancestor="35ade6d3-e52e-449c-bfc5-3a5a6f4e4f58">
+   <documentation>- unused Business Object
+- a behaviour brings in a constraint for the service/controller (like
+-- Logging behaviour brings in Logging callable, )
+-- roles brings in authenticateduserservice and the path parameter starts with /member
+- a model structure mandates a behaviour, like
+-- if a service/controller returns, we should include the "compile output" behaviour
+- uses in the level of process step, not in service
+- process step uses process step is also a task
+- the story view contains all the steps of the story, and all ui elements used by any of the steps of the story
+- the ui elements in '4. UI'
+- the views have their own folder
+- all ui elements belonging to a view are in the same folder
+- the ui view contains all the elements contained in a views
+- the milestones are in '5. Milestones'
+- the milestones view contains all the stories
+- all stories have a milestone assigned
+- packages are under '2. Backend Design'
+- each package have its own folder
+- the package view contains all objects in the package
+- all objects in a package are within the package folder
+- all Test Data are in a folder named by the BO it is test data for
+- the test data view is called '&lt;BO&gt; (design)'
+- the test data view contains the BO and all its fields
+- the test data view contani all the test artifacts of the test data
+- the test datta folder contains all the test artifacs of the test data
+- each service and controller have its own folder
+- the service/controller view contains
+-- the service/controller
+-- its process step
+-- the package, objectives and behaviours of the process step
+-- the business objects related to the process step in any way
+-- path, path parameters and http method of controller, with the business object for the path parameters
+
+------- code correspondence
+- the DTO, Entity, Service Controller, TestData, Repository, Enum, modelled Constant provider and stubs should be in the right package
+- process step reads/modifies BO -&gt; BOEnttyRepository is autowired in service
+- process step reads/modifies BO -&gt; BOEntity and repository exists with all fields (should be generated)
+- service/controller frame should be generated
+- process step returns BO -&gt; BODTO is returned by controller, BOEntity is returned by service
+- process step inputs BO -&gt; BODTO is parameter of controller , BOentity is parameter for service
+- cotrollers should have at most one DTO as input when PUT or POST, and it is @requestBody. with GET all parameters should be fields, with DELETE, only one parameter: id of entity
+- mapping annotation corresponds to http method
+- mapping path corresponds to path parameter
+- path parameters are parameters of the controller with @pathVariable annotation
+- Enums have the right constuctor, getter, setter. should be generated
+
+----- others
+look at REST maturity model to figure out if something have to be changed
+DTOs are generated in the way that complex fields become Long/Set(Long), and need the id of the entity.
+deeper table of contents
+ordering of folders
+the implemented AddtoRoleController is actually addrole to project controller
+MarketUserCompilerService, PaymentUpdateController, ShowUserController does not look like as it should have
+registrationinfodto-&gt;marketuserdto
+modelexcerptdto-&gt;projectmodeldto
+LoginController to be moved
+userlegalinfoentity -&gt; marketuserentity
+updateTaskscontroller -&gt; updatetaskservice
+
+pull request name = issue name + issue number
+</documentation>
+</element>

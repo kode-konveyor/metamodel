@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Each steps have standards for its deliverables"
+         id="58ed3b1d-6619-4674-a36c-e70b89250f2d"
+         ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>

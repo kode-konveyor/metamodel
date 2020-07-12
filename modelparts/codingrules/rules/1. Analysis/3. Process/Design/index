@@ -1,0 +1,11 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Design" id="b4f47f6a-7149-4643-ab36-f2f594143769"/>
+   <entry name="design services" id="917f5c35-060e-4318-a1a9-f94741e00dfe"/>
+   <entry name="behaviour design" id="324c032c-b3d6-4d4e-abac-94c1af1d751f"/>
+   <entry name="test case design (moved)"
+          id="1d51bc6e-3f06-4c12-87be-107e98f69265"/>
+   <entry name="design refactor" id="edcc1855-a7a4-4841-9f6f-f3aadbfa8daf"/>
+   <entry name="design signoff" id="82838a4a-99cd-40dc-8d3b-0954425ef2f6"/>
+   <entry name="Design" id="158fc359-0f88-4e55-97fe-0c8313f6f8c8"/>
+</index>

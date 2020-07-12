@@ -1,0 +1,10 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test approach and scope"
+         id="5f45a4b2-9963-41ab-807d-5fb5aeec823b"
+         ancestor="behaviour">
+   <documentation>* Unit tests must test public interfaces of Service and Controller units and legacy objects. They must not call Utility Class functions.
+* The unit tests together must provide full unit- and mutation test coverage for all of the Service, Controller and Utility Class units.
+</documentation>
+</element>

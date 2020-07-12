@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="test code"
+         id="1278c3f4-2609-4490-876c-95ea4cf2b811"
+         ancestor="behaviour">
+   <documentation>units used for test are put into the test hierarchy</documentation>
+</element>

@@ -1,0 +1,36 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="External units"
+         id="0f95e93a-4cdf-4619-ab76-1db6d90e8ef8"
+         connectionRouterType="1">
+   <child xsi:type="zenta:DiagramObject"
+          id="bf9aa4d0-fb16-4514-92f6-2ff52f5e2f6e"
+          fillColor="#babdb6"
+          elementShape="roundedRectangleShape"
+          zentaElement="aca75b0b-3d33-4083-a72d-e853a0cada97">
+      <bounds x="468" y="204" height="79"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="f2fada60-d184-47c1-b544-0d5a50956524"
+          fillColor="#babdb6"
+          elementShape="emptyShape"
+          zentaElement="36ff5aca-f5cf-4e04-8d74-39cbb035cc2d">
+      <bounds x="648" y="204" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="a85b982d-3162-452a-9d9a-24cf34c821c7"
+          fillColor="#babdb6"
+          elementShape="deliverableShape"
+          zentaElement="ff90721c-3f44-44e6-8697-f50c4117c051">
+      <bounds x="529" y="12" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="763f62a9-130e-4020-91d0-549c603274a8"
+          fillColor="#babdb6"
+          elementShape="applicationShape"
+          zentaElement="faaa6aa5-2cc9-4550-b500-14aedaf2f21a">
+      <bounds x="529" y="96" width="-1" height="-1"/>
+   </child>
+   <property key="Template"/>
+</element>

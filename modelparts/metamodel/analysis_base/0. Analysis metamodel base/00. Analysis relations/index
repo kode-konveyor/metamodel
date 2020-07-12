@@ -1,0 +1,45 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry id="a0ca8660-3629-45f3-a016-8a5e95efbda1"/>
+   <entry id="de3cf624-e330-42a5-b9ad-ec81d3eb6600"/>
+   <entry id="a567beb4-c613-4ef1-8ba1-e984dbf013a4"/>
+   <entry name="determines" id="04ce9a45-2873-4e6b-abea-6f04ce048123"/>
+   <entry name="drives" id="1a16ba6a-0441-4e7d-8f9c-f6394fcdd10b"/>
+   <entry name="drives" id="1c7d4046-af8d-43c4-851f-7568075fc36d"/>
+   <entry id="739a99ec-e3a5-4a71-a1ef-e05d1a166d19"/>
+   <entry id="687407fc-8a65-4d32-b423-98b5dd3bab3f"/>
+   <entry name="aggregates" id="c8c86cdc-63e3-434a-b04a-0c950867855b"/>
+   <entry name="has" id="8aa62b50-ef2a-41ed-99b8-4d853a945d86"/>
+   <entry name="iterates" id="81dfb065-1d6a-4ee5-8385-14cf7c6ed956"/>
+   <entry name="modifies" id="64fbbfdf-420d-4756-821b-54fab6e7a8d2"/>
+   <entry name="preceeds" id="f53d0fd7-db6a-4b40-886b-55c0b3e7a8dd"/>
+   <entry name="contains" id="f9bf6994-4d9c-4c50-b9ad-e2e11b94ff2e"/>
+   <entry name="implements" id="f0d0d4a5-201b-41b4-a047-70308c99bdb7"/>
+   <entry name="is done by/does" id="2bfa7d6a-a8a3-422a-8c65-ac62aba19957"/>
+   <entry name="represented by" id="8561c513-fa8c-4087-87fb-a4d6a460a00d"/>
+   <entry name="validated by" id="6de4df6c-5b7c-4bf0-80b5-42a5fa3d4868"/>
+   <entry id="642f76a2-b8c1-4286-8aab-9cbdc1fd2b9d"/>
+   <entry id="8de9a79b-5997-482e-8772-ba4060b85245"/>
+   <entry id="017a8253-7991-4270-bbdc-0d685c55ebdf"/>
+   <entry id="26cf7a57-5045-4e98-9063-b53608e87a43"/>
+   <entry id="4e2fdea3-47b4-4318-9c13-8627443e31b2"/>
+   <entry id="5197ebb9-85fe-47bb-963f-9982f22b7698"/>
+   <entry id="89633c29-eb3e-4da7-8b11-67032026be10"/>
+   <entry id="a8195710-8cb2-4f6d-94ec-8fb91f2e5d1a"/>
+   <entry id="ee646bcf-4d6e-4870-b523-85582ff3a39d"/>
+   <entry id="6a362021-eb2f-4335-bd9f-28c288588074"/>
+   <entry name="effectuate" id="7f4abeb0-d9a3-4b44-9dcd-ba8d1970f419"/>
+   <entry name="uses" id="aaea75b0-b480-4f6c-a884-1cb5547d2514"/>
+   <entry id="991dccd9-3d86-447d-b587-4331ea33c1b8"/>
+   <entry id="73a55cbe-2e24-4ac8-a468-94b173dcbca9"/>
+   <entry id="a62c45c5-de0c-4e1e-81b5-95060ad51b62"/>
+   <entry id="35459633-bc9a-4f8f-95a3-bab3136380e3"/>
+   <entry id="14722e1f-d2a1-4745-867d-bf45c64a21f0"/>
+   <entry id="746ea1d3-a49b-4b61-ba32-3f97e43600b2"/>
+   <entry id="97841cbe-cf9a-4ea3-ac05-dfd7652344e2"/>
+   <entry id="07d5cbcd-8425-407c-9228-79b487a87b35"/>
+   <entry id="ab3cf1ff-0b92-450f-a9a7-f9b73cc2ba8f"/>
+   <entry id="eaa00f6e-5141-45e7-bd66-3eb0dd6993a9"/>
+   <entry id="eb7ccd36-c0dc-4395-8d19-15e6d4b8944c"/>
+   <entry id="ba89e9ab-be1a-458c-9377-ec800f1ed34e"/>
+</index>

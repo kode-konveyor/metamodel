@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="playbook"
+         id="8010d82c-933a-463b-8609-007939bd74e1"
+         ancestor="thing">
+   <property key="fillColor" value="#e9b96e"/>
+   <property key="elementShape" value="deliverableShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

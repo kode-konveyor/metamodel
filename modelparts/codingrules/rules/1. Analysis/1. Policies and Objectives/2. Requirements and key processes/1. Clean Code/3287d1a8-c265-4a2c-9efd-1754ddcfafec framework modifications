@@ -1,0 +1,10 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="framework modifications"
+         id="3287d1a8-c265-4a2c-9efd-1754ddcfafec"
+         ancestor="behaviour">
+   <documentation>* The CI configuration/scripts should not be changed lightly
+*  modifying the configuration and scripts determining the working of the CI should only be done with clear indication of the reasons in the pull request, and should not result in less stringent quality checks
+</documentation>
+</element>

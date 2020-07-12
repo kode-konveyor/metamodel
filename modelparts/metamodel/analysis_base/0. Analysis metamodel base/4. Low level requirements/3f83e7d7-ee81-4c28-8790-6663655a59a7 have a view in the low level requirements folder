@@ -1,0 +1,13 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="have a view in the low level requirements folder"
+         id="3f83e7d7-ee81-4c28-8790-6663655a59a7"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>low_level_requirements|
+if ($element/@xsi:type!='Objective' or 
+    $doc//folder[@name='5. Low level requirements']//element[@name=$element/@name and .//@zentaElement=$element/@id])
+then ()
+else 'no view found or the Objective is not in it'
+</documentation>
+</element>

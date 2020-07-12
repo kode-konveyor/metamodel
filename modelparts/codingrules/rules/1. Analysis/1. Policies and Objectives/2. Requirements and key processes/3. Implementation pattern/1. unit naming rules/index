@@ -1,0 +1,19 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Constant Provider naming"
+          id="8519794c-8a3f-4134-94aa-8ee99d9ca04f"/>
+   <entry name="Controller naming" id="2a8e998b-78a8-45af-b88e-c3f2f2b2a336"/>
+   <entry name="DTO naming" id="95c34373-d3ba-4975-8d0f-893a4d952f5d"/>
+   <entry name="Entity naming" id="8cebe997-598b-44d4-8eb1-8d8ee8e2fcab"/>
+   <entry name="Enum naming" id="bd205926-803c-4435-8e76-be38e5887ac4"/>
+   <entry name="Factory naming" id="48e093d1-5c11-4660-bb48-1d943d48d74a"/>
+   <entry name="Repository naming" id="16f3d87f-7c40-47dd-aa8c-2906f9498188"/>
+   <entry name="Service naming" id="551a91e2-ead3-41a3-b898-72244c9b1790"/>
+   <entry name="Stub Provider naming" id="45731094-43cc-4c6e-9dc8-d33d00b979a1"/>
+   <entry name="Test Base naming" id="1f1c51f9-fddf-4182-9828-8624b84e3fc3"/>
+   <entry name="Test data naming" id="2b56f616-f0db-4fd8-aeeb-af5b9176bb6d"/>
+   <entry name="Test Helper naming" id="254e7abd-0336-479d-a585-8a725124fcb3"/>
+   <entry name="Test unit naming" id="85a08f7e-f553-4286-902c-568356cf9bed"/>
+   <entry name="Unit naming" id="e96ff1b6-8216-4f4f-9aa3-b277f710cab0"/>
+   <entry name="Utility Class naming" id="b250f756-e5cc-4a8b-941f-c4da3dfb1b77"/>
+</index>

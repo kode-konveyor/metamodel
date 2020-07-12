@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="backend analysis refactor"
+         id="0815345c-190f-4869-ad7b-bdd6ed362825"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+   <documentation>bring the requirements and user journey to an easily comprehensible form
+
+satisfy the view constraints of analysis
+make sure that all views are clean</documentation>
+</element>

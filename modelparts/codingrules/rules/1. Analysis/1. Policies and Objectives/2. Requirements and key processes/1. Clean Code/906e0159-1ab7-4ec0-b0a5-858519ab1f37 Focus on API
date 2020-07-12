@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Focus on API"
+         id="906e0159-1ab7-4ec0-b0a5-858519ab1f37"
+         ancestor="behaviour">
+   <documentation>* Focus on API rather than patterns.
+* First, write down the API for perfect scenario, observe how it feels, then jump to coding and make it work.
+* If it helps understanding, extract expressions to local variables and/or methods.
+* Tell, don't ask. As Uncle Bob puts it: "Tell-Don't-Ask is a principle that helps people remember that object-orientation is about bundling data with the functions that operate on that data. It reminds us that rather than asking an object for data and acting on that data, we should instead tell an object what to do. This encourages to move behavior into an object to go with the data." see https://martinfowler.com/bliki/TellDontAsk.html for more details</documentation>
+</element>

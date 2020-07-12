@@ -1,0 +1,18 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="does Process Steps"
+         id="58b908ce-ae0d-4226-ac0c-cd1c3c67f159"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if(
+  count(
+    (
+       zenta:neighbours($doc,$element,'is done by/does,2')|
+       zenta:neighbours($doc,$element,'contains,2;is done by/does,2')
+     )[@xsi:type='Process Step']
+  ) &gt;0)
+then ()
+else 'no process step found'
+</documentation>
+</element>

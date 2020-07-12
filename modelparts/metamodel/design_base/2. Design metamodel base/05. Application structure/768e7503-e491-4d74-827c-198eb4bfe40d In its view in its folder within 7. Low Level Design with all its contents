@@ -1,0 +1,17 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="In its view in its folder within 7. Low Level Design with all its contents"
+         id="768e7503-e491-4d74-827c-198eb4bfe40d"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>application_structure|
+if(
+	$doc//folder[@name='7. Low Level Design']//folder[@name=$element/@name and element/@id=$element/@id]//@zentaElement = $element/@id
+)
+then for $content in zenta:neighbours($doc,$element,'contains,1')
+	return
+		if ($doc//folder[@name='7. Low Level Design']//element[@name=$element/@name]//@zentaElement=$content/@id)
+		then ()
+		else concat($content/@name,' not in the view ')
+else 'not in its folder'</documentation>
+</element>

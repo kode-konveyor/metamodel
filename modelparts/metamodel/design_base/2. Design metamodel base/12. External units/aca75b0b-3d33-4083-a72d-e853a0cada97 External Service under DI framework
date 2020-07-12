@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="External Service under DI framework"
+         id="aca75b0b-3d33-4083-a72d-e853a0cada97"
+         ancestor="callable">
+   <documentation>A service which can be used by the DI framework of the project as an internal one, but implemented outside of the project.
+</documentation>
+   <property key="fillColor" value="#babdb6"/>
+   <property key="elementShape" value="roundedRectangleShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

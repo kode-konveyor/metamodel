@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Analysis signoff"
+         id="745136a4-9955-4ab4-8aa9-d01ba3dc7c00"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+   <documentation>sign off the whole analysis
+- policies, objectives, behaviours
+- user journey
+- backend processes</documentation>
+</element>

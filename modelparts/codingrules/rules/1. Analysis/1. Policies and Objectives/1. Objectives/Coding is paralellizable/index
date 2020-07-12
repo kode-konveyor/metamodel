@@ -1,0 +1,14 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Coding is paralellizable"
+          id="30924327-5fbd-40fc-9581-d13054826e1c"/>
+   <entry name="Dependencies are decoupled and/or minimized"
+          id="d22f46d5-4d4f-4d88-a3ad-e3ba516a07d7"/>
+   <entry name="Coding is paralellizable"
+          id="7ffccec8-4951-41e7-b548-f68b34ec3c16"/>
+   <entry name="No one can block others"
+          id="d31f4f69-b720-4fd3-a17b-ea42d62e2590"/>
+   <entry id="54f98f95-7320-4488-a463-8ae42ca8e266"/>
+   <entry name="1 task at a time" id="791d2739-d27d-4fd4-bec3-d3c3ff046701"/>
+   <entry id="ba0bf669-dae0-4876-83f3-e3ec0a28dd54"/>
+</index>

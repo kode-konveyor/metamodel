@@ -1,0 +1,19 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Behaviour"
+         id="behaviour"
+         ancestor="thing">
+   <documentation>A specific, implementable, testable statement about the behaviour of the software.
+The set of behaviours should fully define the workings of the callable (in most cases Service) implementing them.
+
+The behaviour is the work unit offered for coding.
+
+This is the same as Requirement in Common Criteria.
+</documentation>
+   <property key="fillColor" value="#fce94f"/>
+   <property key="elementShape" value="meaningShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

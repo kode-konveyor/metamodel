@@ -1,0 +1,27 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="behaviour and code"
+         id="a169aa86-eb07-4ff9-988f-2971ec5db481">
+   <child xsi:type="zenta:DiagramObject"
+          id="76668b40-fd75-4418-8a28-97ea81e1dc11"
+          fillColor="#fce94f"
+          elementShape="meaningShape"
+          zentaElement="behaviour">
+      <bounds x="274" y="175" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="97bc2c8e-15d0-4053-99b6-0ae22c57f3c0"
+                        source="76668b40-fd75-4418-8a28-97ea81e1dc11"
+                        target="ae907e81-c017-4ac5-ae8e-a0524052e43c"
+                        relationship="48b250d4-4518-40d3-8815-0f80dfa3de3a"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="ae907e81-c017-4ac5-ae8e-a0524052e43c"
+          targetConnections="97bc2c8e-15d0-4053-99b6-0ae22c57f3c0"
+          fillColor="#8ae234"
+          elementShape="deviceShape"
+          zentaElement="f77378e6-2ef5-4e91-8a94-47ca7fc25c27">
+      <bounds x="240" y="312" width="-1" height="-1"/>
+   </child>
+   <property key="Template"/>
+</element>

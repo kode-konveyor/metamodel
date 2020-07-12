@@ -1,0 +1,16 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Stub Provider"
+         id="a65fe384-2ef4-4f98-b51d-4e6eadb55055"
+         ancestor="thing">
+   <documentation>stub providers provide the stubs describing the service behaviours using the test artifacts. There are two kinds of stubs:
+* stubs describing the behaviour of the service with respect to some external state (e.g. the role of the logged in user). These are context stubs.
+* stubs describing the service behaviour which is independent of external states: behaviour stubs
+</documentation>
+   <property key="fillColor" value="#8ae234"/>
+   <property key="elementShape" value="deliverableShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor"/>
+   <property key="font"/>
+</element>

@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="The contract provided by Kode Konveyor, which includes the sales comission is signed by all parties."
+         id="d36f2a1b-6695-4741-802e-f7d388e20cf0"
+         ancestor="behaviour">
+   <documentation>This gives an opportunity for the customer to continue development at others, and gives us opportunity to give a correct price.
+</documentation>
+</element>

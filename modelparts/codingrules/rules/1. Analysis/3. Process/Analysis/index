@@ -1,0 +1,24 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Analysis" id="25a950a9-6b49-439c-8602-8ad14a862ead"/>
+   <entry name="High level requirement analysis"
+          id="5d7dfd0d-db4b-4804-a1c2-a3c9b2450c72"/>
+   <entry name="User journey discussion"
+          id="5a9cb1a7-5f25-4411-8d67-bfe5ecfe801e"/>
+   <entry name="User journey analysis" id="18b69c49-6f5c-4e36-9090-9872a39b9cba"/>
+   <entry name="User journey signoff" id="d4f5b10e-3ce3-4977-a79b-34838cf85743"/>
+   <entry name="user journey refactor" id="70d83235-dc61-4dab-9c66-5af1c8efabfc"/>
+   <entry name="Backend analysis" id="1d939cff-17b0-48e2-a7e2-9d428a04fa9a"/>
+   <entry name="backend analysis refactor"
+          id="0815345c-190f-4869-ad7b-bdd6ed362825"/>
+   <entry name="Analysis signoff" id="745136a4-9955-4ab4-8aa9-d01ba3dc7c00"/>
+   <entry name="Analysis" id="66d497cf-b433-4b28-bc99-9130750ca98a"/>
+   <entry id="51a28de4-b390-4644-970a-658aa4b19278"/>
+   <entry id="8a7f2aa0-3426-48c6-a1c3-25407fbf7501"/>
+   <entry id="46423ca1-891c-48a2-97bb-65ad87fc93de"/>
+   <entry id="54c60b16-fcf4-42f2-8569-5d217aaeebac"/>
+   <entry id="bd4684dd-fd2f-425b-993b-159fad0e6f2c"/>
+   <entry id="8e111ecf-a591-4c2c-9012-7a72b15b5d00"/>
+   <entry id="8131114e-2347-46e3-a71a-06abe1f394b3"/>
+   <entry id="73578793-4fcb-4cf3-8d72-fba20552d383"/>
+</index>

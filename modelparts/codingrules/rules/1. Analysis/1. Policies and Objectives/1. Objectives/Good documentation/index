@@ -1,0 +1,9 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Good documentation" id="41c1d332-cb2d-4853-91c3-fa3848f6894d"/>
+   <entry name="Architecture and design are modeled"
+          id="6979a857-21aa-481f-9072-dc297fa14e33"/>
+   <entry name="Documentation is generated"
+          id="1e3ccc1b-d7fb-4565-a13e-9a11214247b6"/>
+   <entry name="Good documentation" id="d5e36c57-9d40-46a0-8c2f-748d5cc13ee4"/>
+</index>

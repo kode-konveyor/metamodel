@@ -1,0 +1,10 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicRelationship"
+         name="is a/is a template for"
+         id="299a71b1-61d7-4be0-aa8d-f5994a6c9e5e"
+         ancestor="basicrelation"
+         source="4753b1bb-fc45-4aa1-821d-f08baf8a1766"
+         target="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
+   <property key="lineDecoration" value=" BigArrowSourceDecoration"/>
+</element>

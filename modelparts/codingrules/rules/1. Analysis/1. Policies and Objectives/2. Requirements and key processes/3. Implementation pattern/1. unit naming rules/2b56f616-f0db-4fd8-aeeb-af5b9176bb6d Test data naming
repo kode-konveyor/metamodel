@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test data naming"
+         id="2b56f616-f0db-4fd8-aeeb-af5b9176bb6d"
+         ancestor="behaviour">
+   <documentation>* Test Data names are the name of the DTO/Entity they provide + 'TestData'. E.g. WorkItemDTOTestData</documentation>
+</element>

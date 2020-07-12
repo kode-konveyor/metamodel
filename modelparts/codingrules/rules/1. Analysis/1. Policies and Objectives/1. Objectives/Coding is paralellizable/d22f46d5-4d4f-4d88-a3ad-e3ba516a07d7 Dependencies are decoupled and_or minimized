@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Dependencies are decoupled and/or minimized"
+         id="d22f46d5-4d4f-4d88-a3ad-e3ba516a07d7"
+         ancestor="e7c7a3b9-cc91-4d99-854a-d5eab68efd7c"/>

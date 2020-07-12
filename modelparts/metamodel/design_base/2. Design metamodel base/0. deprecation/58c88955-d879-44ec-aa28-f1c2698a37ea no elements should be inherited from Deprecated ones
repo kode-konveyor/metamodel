@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="no elements should be inherited from Deprecated ones"
+         id="58c88955-d879-44ec-aa28-f1c2698a37ea"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>deprecation|
+for $deprecated in $doc//*[contains(@name,'deprecated')],
+	$child in $doc//*[(name()='connection' or name()='element') and @ancestor=$deprecated/@id]
+return
+	if ($child/..[@name!='Deprecated objects'])
+	then concat($child/@name,'(',$child/@id,':',$doc//element[@id=$child/@source]/@name,'-}',$doc//element[@id=$child/@target]/@name, '):',$deprecated/@name,' in ', string-join($child/ancestor::folder/@name,'/'),codepoints-to-string(10))
+	else ()
+</documentation>
+</element>

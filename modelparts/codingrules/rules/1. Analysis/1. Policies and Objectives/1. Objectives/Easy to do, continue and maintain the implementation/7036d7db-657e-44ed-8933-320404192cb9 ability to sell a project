@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="ability to sell a project"
+         id="7036d7db-657e-44ed-8933-320404192cb9"
+         ancestor="behaviour"/>

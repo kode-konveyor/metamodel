@@ -1,0 +1,13 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="have a view in Milestones folder with all implemented elements"
+         id="48094876-de5a-45f0-b0f9-401b9503029f"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>milestones|
+for $implemented in zenta:neighbours($doc,$element,'implements,1')
+	return if ($element/ancestor::folder[@name='6. Milestones']//*[.//@zentaElement=$element/@id]//@zentaElement=$implemented/@id)
+		then ()
+		else concat($implemented/@name, ' not in a view with its milestone ')
+</documentation>
+</element>

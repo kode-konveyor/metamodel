@@ -1,0 +1,20 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Its view contains the process step and its neighbourhood"
+         id="210d8d73-81ca-40e1-ad53-659345d80518"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>services|
+for $step in zenta:neighbours($doc,$element,'is implemented by/implements,2')
+	return
+		if ($doc//element[@name=$element/@name]//@zentaElement=$step/@id)
+		then 
+			for $bo in  $doc//element[@id=$step//value[not(@derived="true")]/@target]
+			return
+				if ( $doc//element[@name=$element/@name]//@zentaElement=$bo/@id )
+					then ()
+					else concat('not in view: ',$bo/@name)
+			
+			else concat('not in view: ',$step/@name)
+</documentation>
+</element>

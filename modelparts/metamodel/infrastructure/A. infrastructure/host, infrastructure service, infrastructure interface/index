@@ -1,0 +1,12 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="host, infrastructure service, interface"
+          id="06cd9d34-5f04-47f8-a51e-fe851425d8d1"/>
+   <entry name="Host" id="ce1942e1-cf73-4110-9577-48911af86da3"/>
+   <entry name="infrastructure service" id="aa336975-ca1f-4934-b7c7-5f8bce07cb64"/>
+   <entry name="infrastructure interface"
+          id="a3e4bccf-f291-4f40-a503-e767191bd51b"/>
+   <entry name="network socket" id="e12c56b3-00d5-4ed5-83d9-4ed7b8f2da38"/>
+   <entry name="playbook" id="8010d82c-933a-463b-8609-007939bd74e1"/>
+   <entry name="host group" id="84402662-bc22-46eb-ae2b-57a24f62efae"/>
+</index>

@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="state deprecated"
+         id="44d3e3c7-5434-4b39-ad2f-b6157804f83b"
+         ancestor="thing">
+   <property key="fillColor" value="#fffff"/>
+   <property key="elementShape" value="roundedRectangleShape"/>
+   <property key="textAlignment" value="2"/>
+   <property key="fontColor" value="#ffffff"/>
+   <property key="font"/>
+</element>

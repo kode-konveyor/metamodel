@@ -1,0 +1,14 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="Utility Class"
+         id="fc75aa8d-dfb2-40d4-9fa4-9df78e6d4c37">
+   <child xsi:type="zenta:DiagramObject"
+          id="e7f49bac-e5d5-4d89-aa4d-f1076f3e0c65"
+          fillColor="#fcaf3e"
+          elementShape="rectangleElementShape"
+          zentaElement="3c4d5358-9776-4954-a912-5d8c45183628">
+      <bounds x="342" y="313" width="-1" height="-1"/>
+   </child>
+   <property key="Template"/>
+</element>

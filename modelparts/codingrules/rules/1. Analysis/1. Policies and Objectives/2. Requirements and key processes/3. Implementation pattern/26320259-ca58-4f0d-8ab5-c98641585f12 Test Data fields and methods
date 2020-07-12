@@ -1,0 +1,10 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="Test Data fields and methods"
+         id="26320259-ca58-4f0d-8ab5-c98641585f12"
+         ancestor="behaviour">
+   <documentation>* test artifacts for fields go to the Test Data of the corresponding Entity or DTO as a constant. In case of a field belonging to both an Entity and DTO, the Test Data of the Entity contains the artifacts.
+* other simple test artifacts of legacy or primitive objects without behaviour go to the Test Data of the corresponding Controller or Entity as constant.
+* complex test data or test data mocks (with behaviour) of legacy objects go to the test Data of the corresponding legacy object</documentation>
+</element>

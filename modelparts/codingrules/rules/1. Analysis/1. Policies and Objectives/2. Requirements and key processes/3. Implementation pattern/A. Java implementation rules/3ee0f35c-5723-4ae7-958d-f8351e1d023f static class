@@ -1,0 +1,9 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="static class"
+         id="3ee0f35c-5723-4ae7-958d-f8351e1d023f"
+         ancestor="behaviour">
+   <documentation>The java implementation of units which do not need instantiation contain only public static final fields and public static methods.
+</documentation>
+</element>

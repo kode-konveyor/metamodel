@@ -1,0 +1,35 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="High level requirement analysis"
+         id="5d7dfd0d-db4b-4804-a1c2-a3c9b2450c72"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a">
+   <documentation>Inputs:
+* Product design outputs
+  * mockups
+  * product roadmap
+  * ...
+* business model description
+   * business design canvas
+   * pitch deck
+   * ...
+* corporate and state policies and regulations
+* relevant standards
+* ...
+
+Methods:
+
+Obtained through interview(s) with the customer.
+
+In a mature settings (e.g. enterprise customer with lot of stakeholders), a SWOT analysis followed by a Nominal Group Method results in the threats, assumptions and policies.
+
+In a less mature settings, a simple interview can be adequate
+
+Output:
+* policies
+* some objectives
+
+Threaths, assumptions and policies can all be expressed as policies, or we can extend our metamodel.
+
+</documentation>
+</element>

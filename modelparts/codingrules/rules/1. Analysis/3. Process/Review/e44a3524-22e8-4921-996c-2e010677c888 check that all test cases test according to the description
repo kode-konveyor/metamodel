@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="check that all test cases test according to the description"
+         id="e44a3524-22e8-4921-996c-2e010677c888"
+         ancestor="83af8497-bfef-451b-9bc6-f00d58c8df6a"/>

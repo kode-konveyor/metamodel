@@ -1,0 +1,12 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <folder name="Rule change process" id="8cb3d5f2-5f11-45a1-82a0-8e7cfc4bf550"/>
+   <folder name="development process" id="44a9a2af-47f7-4d57-8b8a-1d5fbf4c2a4a"/>
+   <folder name="Analysis" id="cd6090ba-6308-4781-accc-b3c1e03ab936"/>
+   <folder name="Design" id="577e6313-e6b6-48d4-852a-4793bca38424"/>
+   <folder name="Coding" id="1fd35c52-8c2e-4391-bebd-40592d4acab3"/>
+   <folder name="CI" id="b682af94-7a6c-49f6-a67c-7d5bbbba8aec"/>
+   <folder name="Review" id="5ee23bde-430e-4a3b-9406-a3ef68fe55b7"/>
+   <entry name="Kode Konveyor" id="a649c2fe-9f7f-4ce1-943e-8bb70469e2d4"/>
+   <entry name="Processes" id="b3e7d359-3863-4d01-9d6a-4e0059d5958c"/>
+</index>

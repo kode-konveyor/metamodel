@@ -1,0 +1,8 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="module"
+         id="1b11b59b-e6eb-4b64-a208-b3a5db8d7c12"
+         ancestor="behaviour">
+   <documentation>The python implementation of the unit is a module directly containing the methods/constants.</documentation>
+</element>

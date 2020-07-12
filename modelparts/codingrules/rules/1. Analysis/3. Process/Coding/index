@@ -1,0 +1,21 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="Coding" id="4c18cc80-fdb1-43a4-90ba-c04472794497"/>
+   <entry name="make testcase for defined descriptions"
+          id="ce71edd9-00f6-40ef-9083-1f2f75366035"/>
+   <entry name="write production code for testcase"
+          id="d55f584f-b378-4f86-bc70-eb19220a8f4c"/>
+   <entry name="refactor" id="0338d94c-4cb6-4379-bccd-ea2e7e7b1d4d"/>
+   <entry name="make testcases for corner cases"
+          id="72dfe527-8daf-4bf5-9696-dff2c069caa9"/>
+   <entry name="commit and push" id="d3394153-b2c1-4965-8ea4-2b96d6c23c5a"/>
+   <entry name="fix any build failures or review comments"
+          id="e68b0c8b-3cb3-47e2-80be-9c544dd5af5d"/>
+   <entry name="grab a task" id="2cf46f77-1db8-4439-92ab-3c025860ad6f"/>
+   <entry name="Coding" id="5b506ba7-968e-4b14-aa06-b71dd1702643"/>
+   <entry id="d7a03b11-4de3-4744-afac-421b197be1ef"/>
+   <entry id="b1755660-8c34-403a-87a8-46a61c4675be"/>
+   <entry id="c377f6d7-0d0c-48ac-a904-670167db1409"/>
+   <entry id="72620e02-4eaf-4b9e-aeff-05da069f7786"/>
+   <entry id="62acfa51-cb91-4546-84b1-6f8471f37cf7"/>
+</index>

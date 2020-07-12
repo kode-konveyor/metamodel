@@ -1,0 +1,18 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="reads a Business Oject, done by a role, have a side effect, employed by an UI element or used by another step"
+         id="a6f28a9d-1957-41f8-8009-e2589b15aa3f"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>user_journey|
+if (
+    zenta:neighbours($doc,$element,'reads,1')[@xsi:type='Business Object'] or
+    zenta:neighbours($doc,$element,'is done by/does,1')[@xsi:type='Role'] or
+    zenta:neighbours($doc,$element,'effectuate,1') or
+    zenta:neighbours($doc,$element,'employs,2') or
+    zenta:neighbours($doc,$element,'depends on,2')[@xsi:type='Process Step'] 
+)
+then ()
+else 'does not read'
+</documentation>
+</element>

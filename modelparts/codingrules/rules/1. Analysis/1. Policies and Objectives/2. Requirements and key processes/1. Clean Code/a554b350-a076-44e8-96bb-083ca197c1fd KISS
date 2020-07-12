@@ -1,0 +1,16 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="KISS"
+         id="a554b350-a076-44e8-96bb-083ca197c1fd"
+         ancestor="behaviour">
+   <documentation>Keep it simple, stupid.
+* Extract the complex logic to other method.
+* Avoid the use of else. (see https://softwareengineering.stackexchange.com/questions/206816/clarification-of-avoid-if-else-advice ) for clarifications.
+* Return early
+* Throw exception
+* One method should do one thing and one thing well
+* Use short methods
+* Use classes with only a few methods
+* Keep number of fields low.</documentation>
+</element>
