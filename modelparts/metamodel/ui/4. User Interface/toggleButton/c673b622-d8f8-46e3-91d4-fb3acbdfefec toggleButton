@@ -1,0 +1,22 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="toggleButton"
+         id="c673b622-d8f8-46e3-91d4-fb3acbdfefec">
+   <child xsi:type="zenta:DiagramObject"
+          id="1d535360-04c4-482a-a887-af90622289d7"
+          zentaElement="dd547023-c8f8-477f-8b9c-f98d73acf09d">
+      <bounds x="634" y="341" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="0b39cbf3-6c77-4d51-b124-21422e5ddb63"
+                        source="1d535360-04c4-482a-a887-af90622289d7"
+                        target="bf549dc4-af83-4ee6-9767-332629b97ded"
+                        relationship="10cd5221-e38f-444b-a0fd-7abab80e8889"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="bf549dc4-af83-4ee6-9767-332629b97ded"
+          targetConnections="0b39cbf3-6c77-4d51-b124-21422e5ddb63"
+          zentaElement="ad00cc12-c946-4cda-b752-59f5e04bee9b">
+      <bounds x="890" y="287" width="-1" height="-1"/>
+   </child>
+</element>

@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="staticLabel"
+         id="93a68a38-a550-46b9-8f5f-182c87e4c692"
+         ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>
