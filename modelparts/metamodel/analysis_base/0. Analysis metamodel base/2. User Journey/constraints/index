@@ -18,7 +18,7 @@
    <entry name="process flows in stories"
           id="e09a95b5-33ae-4140-897b-0517a29c1431"/>
    <entry name="reads" id="e25feaf4-0e78-440a-ae79-165699040278"/>
-   <entry name="reads a Business Oject, done by a role, have a side effect, employed by an UI element or used by another step"
+   <entry name="reads a Business Oject, done by a role, have a side effect or used by another step"
           id="a6f28a9d-1957-41f8-8009-e2589b15aa3f"/>
    <entry name="simple business objects are named with small letters, complex business objects are named with capital starting letter"
           id="c91c92da-78ea-47b2-9db8-10fc10e0274f"/>
