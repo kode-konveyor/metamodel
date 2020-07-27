@@ -1,0 +1,6 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="googleLogin"
+         id="b078f22a-66ef-4423-8008-30ccb8200023"
+         ancestor="4753b1bb-fc45-4aa1-821d-f08baf8a1766"/>

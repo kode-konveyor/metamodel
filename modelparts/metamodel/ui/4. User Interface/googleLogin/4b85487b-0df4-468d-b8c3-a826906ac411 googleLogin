@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="googleLogin"
+         id="4b85487b-0df4-468d-b8c3-a826906ac411">
+   <child xsi:type="zenta:DiagramObject"
+          id="5673fa5b-3a60-4298-9894-a1e8ae2153a1"
+          zentaElement="b078f22a-66ef-4423-8008-30ccb8200023">
+      <bounds x="482" y="212" width="-1" height="-1"/>
+   </child>
+</element>

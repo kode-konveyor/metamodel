@@ -7,6 +7,8 @@
    <folder name="textentry" id="987c40ee-3fd8-4e86-8f38-f9593bef288e"/>
    <folder name="select" id="67197dfa-4d0e-4422-ae48-075e95c5e7e0"/>
    <folder name="label" id="154480e5-363a-49c7-9347-513735f6afc4"/>
+   <folder name="googleLogin" id="614d06b9-1edc-4c7b-85c7-728d2a1947ea"/>
+   <folder name="area" id="0e308de6-3518-4439-991c-00ca70b7f09c"/>
    <entry id="f6ec7546-3c30-4137-92ce-bb7af676f162"/>
    <entry name="UI element templates" id="f4c1f74c-9d4c-4a2f-b209-f5f2315aca29"/>
 </index>
