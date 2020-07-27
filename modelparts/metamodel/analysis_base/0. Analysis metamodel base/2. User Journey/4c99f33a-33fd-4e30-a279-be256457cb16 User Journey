@@ -77,6 +77,13 @@
                         relationship="e8aaca73-c4e6-4698-a16d-7df79fbe62ab">
          <bendpoint startX="144" startY="40" endX="-288" endY="40"/>
       </sourceConnection>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="0170deb9-54b0-4da5-a319-94c48656cf1e"
+                        source="48b523e2-1e13-44cd-89af-538a3395f9b2"
+                        target="876ce595-bfdd-40b6-b06b-5113796fde88"
+                        relationship="30ce7f82-030b-44b6-ac39-fc59fc05acb3">
+         <bendpoint startX="204" startY="-36" endX="-228" endY="-36"/>
+      </sourceConnection>
    </child>
    <child xsi:type="zenta:DiagramObject"
           id="24682047-e093-4311-80b8-8caa007d6595"
@@ -148,7 +155,7 @@
    </child>
    <child xsi:type="zenta:DiagramObject"
           id="876ce595-bfdd-40b6-b06b-5113796fde88"
-          targetConnections="15e7b7bd-1d8e-4fed-a977-db8d24cff194 9d5d7579-c30b-41f8-8821-ce7f8698aa08"
+          targetConnections="15e7b7bd-1d8e-4fed-a977-db8d24cff194 9d5d7579-c30b-41f8-8821-ce7f8698aa08 0170deb9-54b0-4da5-a319-94c48656cf1e"
           zentaElement="4753b1bb-fc45-4aa1-821d-f08baf8a1766">
       <bounds x="1116" y="156" width="-1" height="-1"/>
    </child>

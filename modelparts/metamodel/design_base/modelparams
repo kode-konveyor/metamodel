@@ -1,7 +1,7 @@
 <modelpart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:zenta="http://magwas.rulez.org/zenta"
            name="metamodel/design_base"
-           id="d33e579">
+           id="d471e2">
    <property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xmlns:zenta="http://magwas.rulez.org/zenta"
              key="source"
