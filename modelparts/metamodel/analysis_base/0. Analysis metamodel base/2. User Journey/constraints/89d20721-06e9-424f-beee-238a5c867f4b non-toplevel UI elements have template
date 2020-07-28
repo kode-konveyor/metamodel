@@ -1,0 +1,15 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="non-toplevel UI elements have template"
+         id="89d20721-06e9-424f-beee-238a5c867f4b"
+         ancestor="bb3cdf1a-0bc1-4772-8913-d0567ef7ab1f">
+   <documentation>ui_design|
+if(
+        $element/../@name != $element/@name and
+    not(zenta:neighbours($doc,$element,'is a/is a template for,1'))
+)
+        then ('top level elements should be in their own folder, non top level elements should have a template', zenta:neighbours($doc,$element,'is a/is a template for,1'))
+        else ()
+</documentation>
+</element>

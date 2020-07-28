@@ -52,4 +52,7 @@
    <entry name="There is at most one process initializing the project"
           id="076a46da-abc4-4913-a31a-6e8e9fab115c"/>
    <entry id="4e04510f-7fa3-4a85-bfe4-00d11bea79b5"/>
+   <entry name="non-toplevel UI elements have template"
+          id="89d20721-06e9-424f-beee-238a5c867f4b"/>
+   <entry id="48168c30-2dcb-4d3c-997c-2ff46b9c0453"/>
 </index>
