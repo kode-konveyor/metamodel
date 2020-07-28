@@ -12,11 +12,22 @@
                         source="b30ed408-522c-4224-85c8-190de5587cc8"
                         target="de0ad5e6-1b15-49f1-ba05-a17415054ed6"
                         relationship="6a96263f-76f0-4541-8c83-18b57f1a6326"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="76344bdc-fc4f-4563-9a73-a8536c698910"
+                        source="b30ed408-522c-4224-85c8-190de5587cc8"
+                        target="1c1a81dc-d4ce-4485-86e1-681869aa4d1f"
+                        relationship="4056b261-78ba-412f-9563-fd5bcf9bc04d"/>
    </child>
    <child xsi:type="zenta:DiagramObject"
           id="de0ad5e6-1b15-49f1-ba05-a17415054ed6"
           targetConnections="5a7d052c-4e63-4c34-9500-2af0c17c8324"
           zentaElement="0f7d9943-6db3-464e-8ed7-4e759d563002">
       <bounds x="931" y="228" width="-1" height="-1"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="1c1a81dc-d4ce-4485-86e1-681869aa4d1f"
+          targetConnections="76344bdc-fc4f-4563-9a73-a8536c698910"
+          zentaElement="28316124-1194-46bf-ab1a-0e9d8b947f59">
+      <bounds x="891" y="380" width="154" height="65"/>
    </child>
 </element>

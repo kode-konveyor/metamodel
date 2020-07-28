@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="googleLogin template"
+         id="4037836b-1cc8-4490-8a50-c535fb34bafe"
+         ancestor="81a22d57-7286-4ea2-8318-1c1f56cc288f">
+   <documentation>&lt;div class="g-signin2" data-onsuccess="onSignIn"&gt;
+	&lt;x:copy-of select="@id"/&gt;
+&lt;/div&gt;
+</documentation>
+</element>

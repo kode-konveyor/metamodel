@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="label template"
+         id="28316124-1194-46bf-ab1a-0e9d8b947f59"
+         ancestor="81a22d57-7286-4ea2-8318-1c1f56cc288f">
+   <documentation>&lt;label&gt;
+	&lt;x:copy-of select="@id"/&gt;
+	&lt;x:attribute name="class" select="concat($classes, ' label ', zenta:camelCase(@name))"/&gt;
+	&lt;x:value-of select="@name"/&gt;
+&lt;/label&gt;</documentation>
+</element>

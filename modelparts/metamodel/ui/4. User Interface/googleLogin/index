@@ -2,4 +2,6 @@
        xmlns:zenta="http://magwas.rulez.org/zenta">
    <entry name="googleLogin" id="4b85487b-0df4-468d-b8c3-a826906ac411"/>
    <entry name="googleLogin" id="b078f22a-66ef-4423-8008-30ccb8200023"/>
+   <entry name="googleLogin template" id="4037836b-1cc8-4490-8a50-c535fb34bafe"/>
+   <entry id="dda8c730-ff5a-416c-a94a-096b2a495b7b"/>
 </index>

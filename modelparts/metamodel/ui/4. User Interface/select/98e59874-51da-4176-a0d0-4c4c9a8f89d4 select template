@@ -1,0 +1,19 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="select template"
+         id="98e59874-51da-4176-a0d0-4c4c9a8f89d4"
+         ancestor="81a22d57-7286-4ea2-8318-1c1f56cc288f">
+   <documentation>&lt;select name="cars" id="cars"&gt;
+	&lt;x:copy-of select="@id"/&gt;
+	&lt;x:attribute name="class" select="concat($classes, ' select ', zenta:camelCase(@name))"/&gt;
+	&lt;x:attribute name="name" select="@name"/&gt;
+  &lt;option value="1"&gt;Option 1&lt;/option&gt;
+  &lt;option value="2"&gt;Option 2&lt;/option&gt;
+  &lt;option value="3"&gt;Option 3&lt;/option&gt;
+  &lt;option value="4"&gt;Option 4&lt;/option&gt;
+&lt;/select&gt;
+&lt;div&gt;
+&lt;/div&gt;
+</documentation>
+</element>

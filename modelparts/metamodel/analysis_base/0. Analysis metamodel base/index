@@ -8,5 +8,6 @@
    <folder name="4. Low level requirements"
            id="8be8472c-ea68-4fb2-b274-676917399d03"/>
    <folder name="0. dependencies" id="d5feb861-2fb6-44a4-ad63-937985d514b9"/>
+   <folder name="0. deprecation" id="dc0e5364-f998-4b24-9113-7968df39cb55"/>
    <entry name="constraints needed" id="f37dc171-abb3-415f-bdf6-16fac0e91a13"/>
 </index>

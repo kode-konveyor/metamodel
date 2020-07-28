@@ -1,0 +1,26 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="tabledlist template"
+         id="61d7bfce-f245-4c1e-90e4-55c91d3f9ab2"
+         ancestor="81a22d57-7286-4ea2-8318-1c1f56cc288f">
+   <documentation>&lt;table&gt;
+	&lt;x:copy-of select="@id"/&gt;
+	&lt;x:attribute name="class" select="concat($classes, ' TabledList ', zenta:camelCase(@name))"/&gt;
+	&lt;x:attribute name="name" select="@name"/&gt;
+      &lt;x:variable name="usedId" select="$rich//element[@id=current()/@id]/value[@direction=1 and @ancestorName='uses']/@target"/&gt;
+      &lt;x:variable name="dump"&gt;
+      &lt;x:apply-templates select="$rich//element[@id=$usedId]" mode="dumpView"&gt;
+          &lt;x:with-param name="classes" select="concat($classes,' TabledList ', zenta:camelCase(@name))"/&gt;
+      &lt;/x:apply-templates&gt;
+      &lt;/x:variable&gt;
+	&lt;tr index="1"&gt;&lt;td&gt;
+      &lt;x:apply-templates select="$dump" mode="toHtml"/&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr index="2"&gt;&lt;td&gt;
+      &lt;x:apply-templates select="$dump" mode="toHtml"/&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr index="3"&gt;&lt;td&gt;
+      &lt;x:apply-templates select="$dump" mode="toHtml"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+
+&lt;/table&gt;</documentation>
+</element>

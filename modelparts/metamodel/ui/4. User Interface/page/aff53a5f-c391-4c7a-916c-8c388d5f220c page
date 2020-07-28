@@ -7,5 +7,16 @@
           id="a2baf073-1e3e-4ab7-805c-c512f8a0a594"
           zentaElement="af1a9693-a9ef-4d5d-886f-08d9d12e8c6b">
       <bounds x="282" y="149" width="-1" height="-1"/>
+      <sourceConnection xsi:type="zenta:Connection"
+                        id="5a1d7493-aebe-49d5-8f0b-3a9145710c2c"
+                        source="a2baf073-1e3e-4ab7-805c-c512f8a0a594"
+                        target="704b8e8c-481f-4e69-a447-da659bbbe23f"
+                        relationship="9c9ddb4c-8d95-4a21-a1fe-13d54b936de8"/>
+   </child>
+   <child xsi:type="zenta:DiagramObject"
+          id="704b8e8c-481f-4e69-a447-da659bbbe23f"
+          targetConnections="5a1d7493-aebe-49d5-8f0b-3a9145710c2c"
+          zentaElement="d6f33d70-9a0c-45fb-b596-93324c92d90d">
+      <bounds x="545" y="182" width="-1" height="-1"/>
    </child>
 </element>

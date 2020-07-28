@@ -5,7 +5,11 @@
          id="358d41da-403a-4b9e-85d7-6d53e901e258"
          ancestor="81a22d57-7286-4ea2-8318-1c1f56cc288f">
    <documentation>&lt;div&gt;
-	&lt;xsl:attribute name="class" select="$obj/@classes"/&gt;
-	&lt;xsl:value-of select="$obj/@name"/&gt;
+	&lt;x:copy-of select="@id"/&gt;
+	&lt;x:variable name="allClasses" select="concat($classes,' Area ', zenta:camelCase(@name))"/&gt;
+	&lt;x:attribute name="class" select="$allClasses"/&gt;
+    &lt;x:apply-templates select="*" mode="toHtml"&gt;
+      &lt;x:with-param name="classes" select="$allClasses"/&gt;
+    &lt;/x:apply-templates&gt;
 &lt;/div&gt;</documentation>
 </element>

@@ -1,0 +1,12 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:BasicObject"
+         name="button template"
+         id="0d4c0142-15ac-42be-a9b9-7a1486ac9775"
+         ancestor="81a22d57-7286-4ea2-8318-1c1f56cc288f">
+   <documentation>&lt;button type="button"&gt;
+	&lt;x:copy-of select="@id"/&gt;
+	&lt;x:attribute name="class" select="concat($classes, ' button ', zenta:camelCase(@name))"/&gt;
+	&lt;x:value-of select="@name"/&gt;
+&lt;/button&gt;</documentation>
+</element>
