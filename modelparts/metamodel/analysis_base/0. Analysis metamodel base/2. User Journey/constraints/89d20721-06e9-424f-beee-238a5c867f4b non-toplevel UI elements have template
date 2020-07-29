@@ -7,7 +7,8 @@
    <documentation>ui_design|
 if(
         $element/../@name != $element/@name and
-    not(zenta:neighbours($doc,$element,'is a/is a template for,1'))
+    not(zenta:neighbours($doc,$element,'is a/is a template for,1')) and
+   not(zenta:neighbours($doc,$element,'uses,2'))
 )
         then ('top level elements should be in their own folder, non top level elements should have a template', zenta:neighbours($doc,$element,'is a/is a template for,1'))
         else ()
