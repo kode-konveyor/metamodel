@@ -1,0 +1,12 @@
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:zenta="http://magwas.rulez.org/zenta">
+   <entry name="selectionMap" id="562ebf73-dc6d-4cb0-a4bf-d43c5eb4490d"/>
+   <entry name="object;Interface,DTO,One"
+          id="16b331be-574c-409b-9715-7abd49236927"/>
+   <entry name=";Interface,DTO,One" id="be74ecf2-c318-4650-8dd7-275326dce1cb"/>
+   <entry name="SelectionMapService" id="d93b63bb-654f-4fe9-8ad1-1f61a5317731"/>
+   <entry id="6cd087a0-bc65-4dd6-b346-1ba0970f9311"/>
+   <entry id="56fc26c9-aa96-4a84-b06c-b93105948461"/>
+   <entry name="selectionMap" id="996b8887-8ede-4b29-b3d9-55c9780df7cf"/>
+   <entry id="ed7527a1-26ef-49a3-acb1-3c429f2d4bd2"/>
+</index>

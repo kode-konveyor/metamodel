@@ -1,0 +1,11 @@
+<element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:zenta="http://magwas.rulez.org/zenta"
+         xsi:type="zenta:ZentaDiagramModel"
+         name="Form"
+         id="d169ff40-e790-49f0-8adc-d56a97371619">
+   <child xsi:type="zenta:DiagramObject"
+          id="a1bfbb39-2ca3-4fa0-9a78-30c80ba15f34"
+          zentaElement="27d97202-87a4-47ca-bde4-1c96ff39dc7e">
+      <bounds x="304" y="173" width="-1" height="-1"/>
+   </child>
+</element>
