@@ -10,10 +10,16 @@ then ()
 else
 	if(count(zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Process Step']) &gt; 0)
 	then 
-		if(contains(
+		if(
+          contains(
 			$element/../@name,
 			$doc//element[@id=zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Process Step']/@id]/../@name
-		))
+		  ) or
+            contains(
+			$element/../../@name,
+			$doc//element[@id=zenta:neighbours($doc,$element,'contains,2')[@xsi:type='Process Step']/@id]/../@name
+		  ) 
+        )
 		then ()
 		else if(
 			zenta:neighbours($doc,$element,'contains,1') and 
